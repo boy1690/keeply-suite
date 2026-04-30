@@ -5,31 +5,34 @@
  * Output: JSON to stdout. Each site key contains current + previous 7-day
  * windows so the report can show week-over-week deltas.
  *
- * Auth: GOOGLE_SERVICE_ACCOUNT_JSON env var (full JSON of the service account
- * key). The service account must be granted "Restricted" or higher on each
- * GSC property.
+ * Auth: GOOGLE_ADC_JSON env var. Expected format is the JSON written by
+ * `gcloud auth application-default login` — i.e. an OAuth2 user credential
+ * with client_id, client_secret, refresh_token. The credential's user
+ * must have at least Restricted access to the GSC properties below.
+ *
+ * Switched from service account to user-OAuth because GSC has no
+ * programmatic API for permission management; the UI silently rejects
+ * service account emails without raising an error, leaving the SA
+ * unauthorised. User-OAuth borrows the property owner's permissions
+ * directly.
  *
  * Properties queried:
  *   - sc-domain:keeply.work       (covers keeply.work + all subdomains)
  *   - https://blog.keeply.work/   (URL-prefix property, narrower)
- *
- * The two overlap on blog.keeply.work URLs. We keep both because each
- * surfaces slightly different metrics in their own dashboard reports.
  */
 'use strict';
 
 const { google } = require('googleapis');
 
-const SVC_JSON = process.env.GOOGLE_SERVICE_ACCOUNT_JSON;
-if (!SVC_JSON) {
-  console.error('GOOGLE_SERVICE_ACCOUNT_JSON env not set');
+const ADC_JSON = process.env.GOOGLE_ADC_JSON;
+if (!ADC_JSON) {
+  console.error('GOOGLE_ADC_JSON env not set');
   process.exit(1);
 }
 
-const auth = new google.auth.GoogleAuth({
-  credentials: JSON.parse(SVC_JSON),
-  scopes: ['https://www.googleapis.com/auth/webmasters.readonly'],
-});
+const adc = JSON.parse(ADC_JSON);
+const auth = new google.auth.OAuth2(adc.client_id, adc.client_secret);
+auth.setCredentials({ refresh_token: adc.refresh_token });
 
 const SITES = [
   { url: 'sc-domain:keeply.work', label: 'main' },

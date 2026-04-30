@@ -35,7 +35,7 @@ jobs:
 
       - name: Fetch Google Search Console
         env:
-          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          GOOGLE_ADC_JSON: ${{ secrets.GOOGLE_ADC_JSON }}
         run: node _dev/seo/fetch-gsc.js > "$SEO_DATA_DIR/gsc.json" || echo '{"error":"fetch-gsc failed"}' > "$SEO_DATA_DIR/gsc.json"
 
       - name: Fetch Bing Webmaster
@@ -50,7 +50,7 @@ jobs:
 
       - name: Fetch GA4
         env:
-          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          GOOGLE_ADC_JSON: ${{ secrets.GOOGLE_ADC_JSON }}
         run: node _dev/seo/fetch-ga4.js > "$SEO_DATA_DIR/ga4.json" || echo '{"error":"fetch-ga4 failed"}' > "$SEO_DATA_DIR/ga4.json"
 
       - name: External health check

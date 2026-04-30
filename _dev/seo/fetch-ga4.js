@@ -7,8 +7,12 @@
  * the `hostName` dimension to attribute back to each site.
  *
  * Output: JSON to stdout.
- * Auth: GOOGLE_SERVICE_ACCOUNT_JSON (same as GSC). The service account
- * must be added as a Viewer on the GA4 property.
+ * Auth: GOOGLE_ADC_JSON (same as fetch-gsc; OAuth user credential).
+ *
+ * Switched from service account because GA4's "Property access management"
+ * UI hard-blocks service account email addresses with a "this email is
+ * not associated with a Google account" modal. User-OAuth uses the
+ * property admin's existing permissions directly.
  *
  * Property: GA4_PROPERTY_ID env var (numeric).
  */
@@ -16,17 +20,16 @@
 
 const { google } = require('googleapis');
 
-const SVC_JSON = process.env.GOOGLE_SERVICE_ACCOUNT_JSON;
+const ADC_JSON = process.env.GOOGLE_ADC_JSON;
 const PROPERTY_ID = process.env.GA4_PROPERTY_ID;
-if (!SVC_JSON || !PROPERTY_ID) {
-  console.error('GOOGLE_SERVICE_ACCOUNT_JSON / GA4_PROPERTY_ID env not set');
+if (!ADC_JSON || !PROPERTY_ID) {
+  console.error('GOOGLE_ADC_JSON / GA4_PROPERTY_ID env not set');
   process.exit(1);
 }
 
-const auth = new google.auth.GoogleAuth({
-  credentials: JSON.parse(SVC_JSON),
-  scopes: ['https://www.googleapis.com/auth/analytics.readonly'],
-});
+const adc = JSON.parse(ADC_JSON);
+const auth = new google.auth.OAuth2(adc.client_id, adc.client_secret);
+auth.setCredentials({ refresh_token: adc.refresh_token });
 
 const today = new Date();
 const fmt = (d) => d.toISOString().split('T')[0];
@@ -53,7 +56,6 @@ async function main() {
     }
   };
 
-  // Sessions / users by host, current vs previous (week-over-week)
   await safe('byHost', () =>
     runReport(ad, {
       dateRanges: [
@@ -70,7 +72,6 @@ async function main() {
     })
   );
 
-  // Organic Search sessions only, by host
   await safe('organic', () =>
     runReport(ad, {
       dateRanges: [
@@ -91,7 +92,6 @@ async function main() {
     })
   );
 
-  // Top pages — current week
   await safe('topPages', () =>
     runReport(ad, {
       dateRanges: [CURRENT],
@@ -102,7 +102,6 @@ async function main() {
     })
   );
 
-  // Country distribution
   await safe('byCountry', () =>
     runReport(ad, {
       dateRanges: [CURRENT],
@@ -113,7 +112,6 @@ async function main() {
     })
   );
 
-  // Source / medium for organic discovery
   await safe('sourceMedium', () =>
     runReport(ad, {
       dateRanges: [CURRENT],
