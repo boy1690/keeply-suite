@@ -1,0 +1,80 @@
+name: SEO Weekly Report
+
+on:
+  schedule:
+    # Mondays 01:00 UTC = 09:00 Asia/Taipei. Public-runner queue may delay
+    # by ~30 min on busy mornings; acceptable for a weekly report.
+    - cron: "0 1 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    env:
+      SEO_DATA_DIR: /tmp/seo-data
+      GA4_PROPERTY_ID: "534326745"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Prepare data dir
+        run: mkdir -p "$SEO_DATA_DIR"
+
+      - name: Fetch Google Search Console
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+        run: node _dev/seo/fetch-gsc.js > "$SEO_DATA_DIR/gsc.json" || echo '{"error":"fetch-gsc failed"}' > "$SEO_DATA_DIR/gsc.json"
+
+      - name: Fetch Bing Webmaster
+        env:
+          BWT_API_KEY: ${{ secrets.BWT_API_KEY }}
+        run: node _dev/seo/fetch-bwt.js > "$SEO_DATA_DIR/bwt.json" || echo '{"error":"fetch-bwt failed"}' > "$SEO_DATA_DIR/bwt.json"
+
+      - name: Fetch Yandex Webmaster
+        env:
+          YANDEX_OAUTH_TOKEN: ${{ secrets.YANDEX_OAUTH_TOKEN }}
+        run: node _dev/seo/fetch-yandex.js > "$SEO_DATA_DIR/yandex.json" || echo '{"error":"fetch-yandex failed"}' > "$SEO_DATA_DIR/yandex.json"
+
+      - name: Fetch GA4
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+        run: node _dev/seo/fetch-ga4.js > "$SEO_DATA_DIR/ga4.json" || echo '{"error":"fetch-ga4 failed"}' > "$SEO_DATA_DIR/ga4.json"
+
+      - name: External health check
+        run: node _dev/seo/health-check.js > "$SEO_DATA_DIR/health.json"
+
+      - name: Build markdown report
+        run: node _dev/seo/build-report.js > report.md
+
+      - name: Upload report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-weekly-report
+          path: |
+            report.md
+            ${{ env.SEO_DATA_DIR }}/*.json
+
+      - name: Open GitHub Issue with the report
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          DATE=$(date -u +%Y-%m-%d)
+          gh issue create \
+            --title "SEO weekly — $DATE" \
+            --body-file report.md \
+            --label seo-weekly \
+            --repo "${{ github.repository }}" \
+            || echo "Issue creation failed (label may not exist; create label 'seo-weekly' once)"
