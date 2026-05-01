@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
-  <title id="title">macOS Gatekeeper 確認對話框，「Open」按鈕被框選</title>
-  <desc id="desc">示意圖：macOS 系統對話框詢問是否Open Keeply，下方有「Open」「Cancel」兩顆按鈕，amber 圈出「Open」。</desc>
+  <title id="title">macOS Gatekeeper confirmation dialog, the "Open" button is highlighted</title>
+  <desc id="desc">Illustration: macOS system dialog asking whether to open Keeply, with "Open" and "Cancel" buttons; an amber circle highlights "Open".</desc>
   <defs>
     <style>
       .bg { fill: #f0f1f5; }

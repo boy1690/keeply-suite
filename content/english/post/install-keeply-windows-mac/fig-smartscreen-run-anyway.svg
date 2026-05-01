@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
-  <title id="title">點完「More info」後出現「Run anyway」按鈕</title>
-  <desc id="desc">示意圖：藍色 SmartScreen 警告下半部，amber 圓圈框出「Run anyway」按鈕。兩顆按鈕同款式，靠右下對齊。</desc>
+  <title id="title">After clicking "More info", the "Run anyway" button appears</title>
+  <desc id="desc">Illustration: lower half of the blue SmartScreen warning, with an amber circle highlighting the "Run anyway" button. Two same-style buttons aligned to the bottom right.</desc>
   <defs>
     <style>
       .bg { fill: #f7f8fb; }

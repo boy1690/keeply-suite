@@ -1,6 +1,6 @@
 <!-- Image 6: 4 種使用情境決策樹 + Keeply 落點 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" fill="none"
-     font-family="'Inter','Noto Sans TC',system-ui,sans-serif">
+     font-family="'Inter','Noto Sans SC','PingFang SC',system-ui,sans-serif">
   <defs>
     <linearGradient id="g-indigo" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#4338CA"/>
@@ -20,12 +20,12 @@
   <rect width="1200" height="600" fill="url(#g-paper)"/>
   <rect width="1200" height="600" fill="url(#grid)"/>
 
-  <text x="600" y="40" font-size="13" font-weight="800" fill="#312E81" text-anchor="middle" letter-spacing="3">你的需求 · 對應的工具 · KEEPLY 不爭所有場景</text>
+  <text x="600" y="40" font-size="13" font-weight="800" fill="#312E81" text-anchor="middle" letter-spacing="3">你的需求 · 对应的工具 · KEEPLY 不争所有场景</text>
 
   <!-- 中央 question -->
   <g transform="translate(600, 110)">
     <rect x="-150" y="0" width="300" height="60" rx="30" fill="url(#g-indigo)" filter="url(#shadow)"/>
-    <text x="0" y="38" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="system-ui,sans-serif">你的需求是什麼？</text>
+    <text x="0" y="38" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="system-ui,sans-serif">你的需求是什么？</text>
   </g>
 
   <!-- 4 連線 -->
@@ -44,17 +44,17 @@
     <rect y="30" width="240" height="14" fill="#6F6AF0"/>
     <text x="120" y="28" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="system-ui,sans-serif">情境 1</text>
 
-    <text x="120" y="82" font-size="15" font-weight="800" fill="#312E81" text-anchor="middle">跨裝置雲端同步</text>
+    <text x="120" y="82" font-size="15" font-weight="800" fill="#312E81" text-anchor="middle">跨设备云端同步</text>
 
     <g transform="translate(20, 110)">
-      <text x="0" y="14" font-size="12" font-weight="700" fill="#4338CA" opacity="0.7">建議</text>
+      <text x="0" y="14" font-size="12" font-weight="700" fill="#4338CA" opacity="0.7">建议</text>
       <text x="0" y="38" font-size="14" font-weight="800" fill="#312E81">IDrive</text>
       <text x="0" y="58" font-size="12" font-weight="500" fill="#4338CA" opacity="0.6">Backblaze</text>
     </g>
 
     <g transform="translate(20, 190)">
-      <text x="0" y="14" font-size="11" font-weight="700" fill="#DC2626" opacity="0.65">Keeply 不適合</text>
-      <text x="0" y="32" font-size="11" font-weight="500" fill="#6F6AF0" opacity="0.7">local-first，不是雲端原生</text>
+      <text x="0" y="14" font-size="11" font-weight="700" fill="#DC2626" opacity="0.65">Keeply 不适合</text>
+      <text x="0" y="32" font-size="11" font-weight="500" fill="#6F6AF0" opacity="0.7">local-first，不是云端原生</text>
     </g>
   </g>
 
@@ -65,16 +65,16 @@
     <rect y="30" width="240" height="14" fill="#6F6AF0"/>
     <text x="120" y="28" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="system-ui,sans-serif">情境 2</text>
 
-    <text x="120" y="82" font-size="15" font-weight="800" fill="#312E81" text-anchor="middle">系統還原 / 整顆磁碟</text>
+    <text x="120" y="82" font-size="15" font-weight="800" fill="#312E81" text-anchor="middle">系统还原 / 整颗磁盘</text>
 
     <g transform="translate(20, 110)">
-      <text x="0" y="14" font-size="12" font-weight="700" fill="#4338CA" opacity="0.7">建議</text>
+      <text x="0" y="14" font-size="12" font-weight="700" fill="#4338CA" opacity="0.7">建议</text>
       <text x="0" y="38" font-size="14" font-weight="800" fill="#312E81">Acronis True Image</text>
     </g>
 
     <g transform="translate(20, 190)">
-      <text x="0" y="14" font-size="11" font-weight="700" fill="#DC2626" opacity="0.65">Keeply 不適合</text>
-      <text x="0" y="32" font-size="11" font-weight="500" fill="#6F6AF0" opacity="0.7">不做整顆磁碟備份</text>
+      <text x="0" y="14" font-size="11" font-weight="700" fill="#DC2626" opacity="0.65">Keeply 不适合</text>
+      <text x="0" y="32" font-size="11" font-weight="500" fill="#6F6AF0" opacity="0.7">不做整颗磁盘备份</text>
     </g>
   </g>
 
@@ -85,16 +85,16 @@
     <rect y="30" width="240" height="14" fill="#6F6AF0"/>
     <text x="120" y="28" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="system-ui,sans-serif">情境 3</text>
 
-    <text x="120" y="82" font-size="15" font-weight="800" fill="#312E81" text-anchor="middle">IT 管 50+ 台機器</text>
+    <text x="120" y="82" font-size="15" font-weight="800" fill="#312E81" text-anchor="middle">IT 管 50+ 台机器</text>
 
     <g transform="translate(20, 110)">
-      <text x="0" y="14" font-size="12" font-weight="700" fill="#4338CA" opacity="0.7">建議</text>
+      <text x="0" y="14" font-size="12" font-weight="700" fill="#4338CA" opacity="0.7">建议</text>
       <text x="0" y="38" font-size="14" font-weight="800" fill="#312E81">MSP360</text>
     </g>
 
     <g transform="translate(20, 190)">
-      <text x="0" y="14" font-size="11" font-weight="700" fill="#DC2626" opacity="0.65">Keeply 不適合</text>
-      <text x="0" y="32" font-size="11" font-weight="500" fill="#6F6AF0" opacity="0.7">給個人 / 小團隊用</text>
+      <text x="0" y="14" font-size="11" font-weight="700" fill="#DC2626" opacity="0.65">Keeply 不适合</text>
+      <text x="0" y="32" font-size="11" font-weight="500" fill="#6F6AF0" opacity="0.7">给个人 / 小团队用</text>
     </g>
   </g>
 
@@ -105,21 +105,21 @@
     <rect y="30" width="240" height="14" fill="url(#g-amber)"/>
     <text x="120" y="28" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="system-ui,sans-serif">情境 4 ★</text>
 
-    <text x="120" y="82" font-size="15" font-weight="800" fill="#312E81" text-anchor="middle">個人 / 小團隊版本記事</text>
+    <text x="120" y="82" font-size="15" font-weight="800" fill="#312E81" text-anchor="middle">个人 / 小团队版本记事</text>
 
     <g transform="translate(20, 110)">
-      <text x="0" y="14" font-size="12" font-weight="700" fill="url(#g-amber)" opacity="0.85">建議</text>
+      <text x="0" y="14" font-size="12" font-weight="700" fill="url(#g-amber)" opacity="0.85">建议</text>
       <text x="0" y="38" font-size="16" font-weight="900" fill="url(#g-amber)">Keeply</text>
       <text x="0" y="58" font-size="12" font-weight="500" fill="#4338CA" opacity="0.7">或 Windows File History</text>
     </g>
 
     <g transform="translate(20, 190)">
-      <text x="0" y="14" font-size="11" font-weight="700" fill="url(#g-amber)" opacity="0.85">Keeply 適合</text>
+      <text x="0" y="14" font-size="11" font-weight="700" fill="url(#g-amber)" opacity="0.85">Keeply 适合</text>
       <text x="0" y="32" font-size="11" font-weight="500" fill="#312E81" opacity="0.85">第 1 天就上手</text>
     </g>
   </g>
 
   <!-- Bottom caption -->
-  <text x="600" y="568" font-size="14" font-weight="700" fill="#312E81" text-anchor="middle" letter-spacing="2">選工具像選同事 · 每個有它擅長的場景</text>
+  <text x="600" y="568" font-size="14" font-weight="700" fill="#312E81" text-anchor="middle" letter-spacing="2">选工具像选同事 · 每个有它擅长的场景</text>
 
 </svg>

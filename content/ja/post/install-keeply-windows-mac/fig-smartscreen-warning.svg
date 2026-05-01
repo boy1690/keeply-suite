@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
-  <title id="title">Windows SmartScreen 警告畫面，箭頭指向「詳細情報」クリック</title>
-  <desc id="desc">示意圖：藍色 SmartScreen 警告，下方藍色按鈕為「実行しない」，左下方有「詳細情報」クリック，amber 箭頭指出位置。</desc>
+  <title id="title">Windows SmartScreen の警告画面、矢印が「詳細情報」の小さなリンクを指している</title>
+  <desc id="desc">図解：青い SmartScreen 警告。下部の青いボタンは「実行しない」、左下に小さく「詳細情報」リンク、amber の矢印で位置を示している。</desc>
   <defs>
     <style>
       .bg { fill: #f7f8fb; }

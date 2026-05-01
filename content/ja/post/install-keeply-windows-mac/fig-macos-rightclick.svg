@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
-  <title id="title">macOS Finder 右鍵選單，「開く」項目被框選</title>
-  <desc id="desc">示意圖：macOS Finder 視窗中，使用者右鍵點 Keeply 圖示，跳出選單，第一項「開く」被 amber 框出。</desc>
+  <title id="title">macOS Finder の右クリックメニュー、「開く」項目が強調されている</title>
+  <desc id="desc">図解：macOS の Finder ウィンドウで、ユーザーが Keeply アイコンを右クリックするとメニューが表示され、最初の項目「開く」が amber で囲まれている。</desc>
   <defs>
     <style>
       .bg { fill: #f0f1f5; }
