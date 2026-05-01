@@ -4,7 +4,7 @@
      Recipe: 對比視覺——30 vs 2 motif 載點
      Layout: 兩欄 split + amber divider
      用到零件: #keeply-lockup
-     設計核心: 左欄堆疊 30 個功能勾選格(faded)；右欄 2 個簡潔動作；
+     設計核心: 左欄堆疊 30  features勾選格(faded)；右欄 2 個簡潔動作；
               中間 amber chevron 分隔；底部標題 + lockup
      ============================================================= -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none"
@@ -57,17 +57,17 @@
   <g transform="translate(120, 88)">
     <rect x="0" y="2" width="14" height="14" fill="url(#grad-amber)"/>
     <text x="28" y="14" font-size="17" font-weight="800" fill="#312E81" letter-spacing="4">GETTING STARTED · BRANDED PILLAR</text>
-    <text x="28" y="40" font-size="14" font-weight="600" fill="#4338CA" opacity="0.72" letter-spacing="2">PILLAR · KEEPLY 入門</text>
+    <text x="28" y="40" font-size="14" font-weight="600" fill="#4338CA" opacity="0.72" letter-spacing="2">PILLAR · KEEPLY GETTING STARTED</text>
   </g>
 
-  <!-- ============ LEFT COLUMN: 30 個功能 (faded) ============ -->
+  <!-- ============ LEFT COLUMN: 30  features (faded) ============ -->
   <g transform="translate(160, 220)">
     <!-- 巨型 "30" -->
     <text x="0" y="120" font-size="240" font-weight="900" fill="#312E81" opacity="0.18" font-family="'Inter',system-ui,sans-serif">30</text>
-    <text x="280" y="80" font-size="22" font-weight="700" fill="#312E81" opacity="0.55" letter-spacing="2">個功能</text>
-    <text x="280" y="110" font-size="14" font-weight="500" fill="#4338CA" opacity="0.45" letter-spacing="1">不用學</text>
+    <text x="280" y="80" font-size="22" font-weight="700" fill="#312E81" opacity="0.55" letter-spacing="2"> features</text>
+    <text x="280" y="110" font-size="14" font-weight="500" fill="#4338CA" opacity="0.45" letter-spacing="1">no learning</text>
 
-    <!-- 堆疊 checklist (faded grey-out 表示「不用學」) -->
+    <!-- 堆疊 checklist (faded grey-out 表示「no learning」) -->
     <g transform="translate(20, 200)" font-family="'JetBrains Mono',ui-monospace,monospace" opacity="0.42">
       <g>
         <rect x="0" y="0" width="20" height="20" rx="3" fill="none" stroke="#6F6AF0" stroke-width="2"/>
@@ -102,7 +102,7 @@
     <!-- "VS" badge 14 天 stamp 效果 -->
     <g transform="translate(160, 510)" opacity="0.55">
       <rect x="0" y="0" width="180" height="36" rx="6" fill="#EEF2FF" stroke="#6F6AF0" stroke-width="1.5"/>
-      <text x="90" y="24" font-size="13" font-weight="700" fill="#4338CA" text-anchor="middle" letter-spacing="2">14 天才有 VALUE</text>
+      <text x="90" y="24" font-size="13" font-weight="700" fill="#4338CA" text-anchor="middle" letter-spacing="2">14 DAYS BEFORE VALUE</text>
     </g>
   </g>
 
@@ -116,29 +116,29 @@
     </g>
   </g>
 
-  <!-- ============ RIGHT COLUMN: 2 個動作 (vivid) ============ -->
+  <!-- ============ RIGHT COLUMN: 2  actions (vivid) ============ -->
   <g transform="translate(900, 220)">
     <!-- 巨型 "2" -->
     <text x="0" y="120" font-size="240" font-weight="900" fill="url(#grad-indigo)" font-family="'Inter',system-ui,sans-serif">2</text>
-    <text x="160" y="80" font-size="22" font-weight="700" fill="#312E81" letter-spacing="2">個動作</text>
-    <text x="160" y="110" font-size="14" font-weight="600" fill="url(#grad-amber)" letter-spacing="1">就上手</text>
+    <text x="160" y="80" font-size="22" font-weight="700" fill="#312E81" letter-spacing="2"> actions</text>
+    <text x="160" y="110" font-size="14" font-weight="600" fill="url(#grad-amber)" letter-spacing="1"> on board</text>
 
-    <!-- 動作 1: 拖資料夾 -->
+    <!-- Action 1: 拖資料夾 -->
     <g transform="translate(20, 220)" filter="url(#soft-shadow)">
       <rect x="0" y="0" width="540" height="84" rx="10" fill="#ffffff"/>
       <g transform="translate(20, 18)">
         <!-- 資料夾 icon -->
         <path d="M0 12 Q0 6 6 6 L24 6 L32 16 L60 16 Q66 16 66 22 L66 44 Q66 50 60 50 L6 50 Q0 50 0 44 Z" fill="url(#grad-amber)"/>
       </g>
-      <text x="110" y="36" font-size="20" font-weight="700" fill="#312E81">動作 1</text>
-      <text x="110" y="62" font-size="15" font-weight="500" fill="#4338CA">把一個資料夾拖進 Keeply</text>
+      <text x="110" y="36" font-size="20" font-weight="700" fill="#312E81">Action 1</text>
+      <text x="110" y="62" font-size="15" font-weight="500" fill="#4338CA">Drag one folder into Keeply</text>
       <!-- arrow -->
       <g transform="translate(485, 36)" opacity="0.6">
         <path d="M0 0 L20 8 L0 16 L4 8 Z" fill="url(#grad-amber)"/>
       </g>
     </g>
 
-    <!-- 動作 2: 繼續工作 -->
+    <!-- Action 2: 繼續工作 -->
     <g transform="translate(20, 320)" filter="url(#soft-shadow)">
       <rect x="0" y="0" width="540" height="84" rx="10" fill="#ffffff"/>
       <g transform="translate(20, 18)">
@@ -146,8 +146,8 @@
         <rect x="0" y="20" width="50" height="14" rx="2" fill="url(#grad-indigo)"/>
         <path d="M50 20 L62 27 L50 34 Z" fill="url(#grad-amber)"/>
       </g>
-      <text x="110" y="36" font-size="20" font-weight="700" fill="#312E81">動作 2</text>
-      <text x="110" y="62" font-size="15" font-weight="500" fill="#4338CA">繼續做今天的事</text>
+      <text x="110" y="36" font-size="20" font-weight="700" fill="#312E81">Action 2</text>
+      <text x="110" y="62" font-size="15" font-weight="500" fill="#4338CA">Keep doing today's work</text>
       <!-- check -->
       <g transform="translate(485, 36)" opacity="0.85">
         <circle cx="0" cy="0" r="14" fill="url(#grad-indigo)"/>
@@ -155,17 +155,17 @@
       </g>
     </g>
 
-    <!-- 第 1 天就上手 stamp -->
+    <!-- On board on day 1 stamp -->
     <g transform="translate(160, 510)">
       <rect x="0" y="0" width="220" height="36" rx="6" fill="url(#grad-amber)" filter="url(#soft-shadow)"/>
-      <text x="110" y="24" font-size="14" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="2">第 1 天就上手</text>
+      <text x="110" y="24" font-size="14" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="2">On board on day 1</text>
     </g>
   </g>
 
   <!-- ============ Title (bottom) ============ -->
   <g transform="translate(120, 800)">
-    <text x="0" y="0" font-size="36" font-weight="800" fill="#312E81" letter-spacing="1">不用學 <tspan fill="url(#grad-indigo)">30</tspan> 個功能，<tspan fill="url(#grad-amber)">2</tspan> 個動作就<tspan fill="url(#grad-amber)">上手</tspan></text>
-    <text x="0" y="32" font-size="15" font-weight="500" fill="#4338CA" opacity="0.72" letter-spacing="1">Keeply 怎麼用 — 不必先變專家</text>
+    <text x="0" y="0" font-size="36" font-weight="800" fill="#312E81" letter-spacing="1">no learning <tspan fill="url(#grad-indigo)">30</tspan>  features,<tspan fill="url(#grad-amber)">2</tspan>  actions to <tspan fill="url(#grad-amber)">On board</tspan></text>
+    <text x="0" y="32" font-size="15" font-weight="500" fill="#4338CA" opacity="0.72" letter-spacing="1">How to use Keeply — no need to be an expert first</text>
   </g>
 
   <!-- ============ Keeply lockup (bottom right) ============ -->
