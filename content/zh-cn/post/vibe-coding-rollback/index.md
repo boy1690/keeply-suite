@@ -5,7 +5,7 @@ date: 2026-04-30T09:00:00+08:00
 slug: vibe-coding-rollback
 locale: zh-CN
 primary_keyword: "vibe coding 失控"
-locales: [zh-TW, en, zh-CN, ja]
+locales: [zh-TW, en, zh-CN, ja, ko]
 tags: [Keeply 教程, vibe coding, AI coding, 版本管理, 救回文件]
 categories: [Keeply 应用场景]
 template: T1-cluster

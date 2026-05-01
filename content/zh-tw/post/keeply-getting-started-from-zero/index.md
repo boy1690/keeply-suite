@@ -5,7 +5,7 @@ date: 2026-04-30T09:00:00+08:00
 slug: keeply-getting-started-from-zero
 locale: zh-TW
 primary_keyword: "Keeply 怎麼用"
-locales: [zh-TW, en, zh-CN, ja]
+locales: [zh-TW, en, zh-CN, ja, ko]
 tags: [Keeply 教學, 入門指南, 檔案記事軟體, 版本管理, 檔案備份]
 categories: [Keeply 入門]
 template: T1

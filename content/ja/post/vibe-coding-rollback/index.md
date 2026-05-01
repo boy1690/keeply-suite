@@ -5,7 +5,7 @@ date: 2026-04-30T09:00:00+08:00
 slug: vibe-coding-rollback
 locale: ja
 primary_keyword: "Vibe Coding 暴走"
-locales: [zh-TW, en, zh-CN, ja]
+locales: [zh-TW, en, zh-CN, ja, ko]
 tags: [Keeply 使い方, Vibe Coding, AI コーディング, バージョン管理, ファイル復元]
 categories: [Keeply 活用シーン]
 template: T1-cluster

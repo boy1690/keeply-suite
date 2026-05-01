@@ -5,7 +5,7 @@ date: 2026-04-30T09:00:00+08:00
 slug: keeply-getting-started-from-zero
 locale: en
 primary_keyword: "how to use Keeply"
-locales: [zh-TW, en, zh-CN, ja]
+locales: [zh-TW, en, zh-CN, ja, ko]
 tags: [Keeply tutorial, getting started, file-note software, version management, file backup]
 categories: [Keeply Getting Started]
 template: T1

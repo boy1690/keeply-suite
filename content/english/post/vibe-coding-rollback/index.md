@@ -5,7 +5,7 @@ date: 2026-04-30T09:00:00+08:00
 slug: vibe-coding-rollback
 locale: en
 primary_keyword: "vibe coding rollback"
-locales: [zh-TW, en, zh-CN, ja]
+locales: [zh-TW, en, zh-CN, ja, ko]
 tags: [Keeply tutorial, vibe coding, AI coding, version management, file recovery]
 categories: [Keeply use cases]
 template: T1-cluster

@@ -5,7 +5,7 @@ date: 2026-04-30T09:00:00+08:00
 slug: keeply-getting-started-from-zero
 locale: ja
 primary_keyword: "Keeply 使い方"
-locales: [zh-TW, en, zh-CN, ja]
+locales: [zh-TW, en, zh-CN, ja, ko]
 tags: [Keeply 使い方, 入門ガイド, ファイル記録ソフト, バージョン管理, ファイルバックアップ]
 categories: [Keeply 入門]
 template: T1

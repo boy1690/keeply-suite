@@ -5,7 +5,7 @@ date: 2026-04-30T09:00:00+08:00
 slug: what-keeply-saves-vs-backup-cloud
 locale: zh-TW
 primary_keyword: "Keeply 跟備份"
-locales: [zh-TW, en, zh-CN, ja]
+locales: [zh-TW, en, zh-CN, ja, ko]
 tags: [Keeply 教學, 備份比較, 雲端比較, 版本管理, 工具差異]
 categories: [Keeply 應用情境]
 template: T1-cluster

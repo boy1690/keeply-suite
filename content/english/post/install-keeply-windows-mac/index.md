@@ -6,7 +6,7 @@ draft: false
 tags: ["install", "tutorial", "Windows", "macOS", "winget"]
 categories: ["tutorial"]
 primary_keyword: "install Keeply"
-locales: ["en", "zh-TW", "zh-CN", "ja"]
+locales: ["en", "zh-TW", "zh-CN", "ja", "ko"]
 slug: install-keeply-windows-mac
 image: cover.svg
 og_image: cover.png

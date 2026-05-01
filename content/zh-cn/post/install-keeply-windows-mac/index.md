@@ -6,7 +6,7 @@ draft: false
 tags: ["安装", "教程", "Windows", "macOS", "winget"]
 categories: ["教程"]
 primary_keyword: "Keeply 安装"
-locales: ["en", "zh-TW", "zh-CN", "ja"]
+locales: ["en", "zh-TW", "zh-CN", "ja", "ko"]
 slug: install-keeply-windows-mac
 image: cover.svg
 og_image: cover.png
