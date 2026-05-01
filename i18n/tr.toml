@@ -1,0 +1,48 @@
+# Turkish i18n strings (flat format for Hugo go-i18n v2)
+
+nav_posts = "Yazılar"
+nav_categories = "Kategoriler"
+nav_search = "Ara"
+nav_download = "Ücretsiz indir"
+
+hero_badge = "Keeply Blog · haftalık güncellemeler"
+hero_title_1 = "Dosya yönetiminin"
+hero_title_2 = "gerçek hikâyeleri."
+hero_subtitle = "Proje yönetim ekipleri için tasarlanmış dosya yönetim yazılımı. Jargon yok, iş akışı değişikliği yok — sadece her gün karşılaştığın ofis sorunlarına çözüm."
+
+section_featured = "Öne çıkan"
+section_latest = "Son yazılar"
+section_browse = "Kategoriye göre"
+section_related = "Bunlar da ilgini çekebilir"
+section_tags = "Etiketler"
+
+see_all = "Tümünü gör"
+read_more = "Devamını oku"
+reading_time = "{{ .count }} dk okuma"
+posts_count = "{{ .count }} makale"
+
+page_previous = "Önceki"
+page_next = "Sonraki"
+
+toc_title = "İçindekiler"
+
+cta_title = "Keeply'i denemeye hazır mısın?"
+cta_subtitle = "Ücretsiz indir. 30 saniyede başla."
+cta_button = "Keeply'i indir"
+cta_sidebar_label = "Keeply'i dene"
+cta_sidebar_title = "Dosyalarına bir zaman makinesi hediye et"
+
+footer_site = "Ana site"
+footer_rss = "RSS akışı"
+footer_all_categories = "Tüm kategoriler"
+footer_privacy = "Gizlilik"
+footer_buy = "Ömür boyu lisans satın al"
+footer_tagline = "Dosyalarının bir hikâyesi var."
+
+empty_no_posts = "Yazılar yolda"
+empty_no_posts_sub = "Aktif olarak yazıyoruz. Birazdan tekrar uğra veya "
+empty_try_keeply = "Keeply'i dene"
+empty_no_posts_end = "."
+
+breadcrumb_home = "Ana sayfa"
+by_author = "Yazar:"

@@ -1,0 +1,48 @@
+# Indonesian i18n strings (flat format for Hugo go-i18n v2)
+
+nav_posts = "Artikel"
+nav_categories = "Kategori"
+nav_search = "Cari"
+nav_download = "Unduh gratis"
+
+hero_badge = "Keeply Blog · pembaruan mingguan"
+hero_title_1 = "Kisah nyata tentang"
+hero_title_2 = "manajemen berkas."
+hero_subtitle = "Perangkat lunak manajemen berkas yang dirancang untuk tim proyek. Tanpa jargon, tanpa mengubah alur kerja — hanya menyelesaikan masalah kantor yang Anda hadapi setiap hari."
+
+section_featured = "Pilihan"
+section_latest = "Artikel terbaru"
+section_browse = "Telusuri menurut kategori"
+section_related = "Mungkin Anda juga suka"
+section_tags = "Tag"
+
+see_all = "Lihat semua"
+read_more = "Baca selengkapnya"
+reading_time = "{{ .count }} menit baca"
+posts_count = "{{ .count }} artikel"
+
+page_previous = "Sebelumnya"
+page_next = "Berikutnya"
+
+toc_title = "Daftar isi"
+
+cta_title = "Siap mencoba Keeply?"
+cta_subtitle = "Unduh gratis. Mulai dalam 30 detik."
+cta_button = "Unduh Keeply"
+cta_sidebar_label = "Coba Keeply"
+cta_sidebar_title = "Beri berkas Anda mesin waktu"
+
+footer_site = "Situs utama"
+footer_rss = "Umpan RSS"
+footer_all_categories = "Semua kategori"
+footer_privacy = "Privasi"
+footer_buy = "Beli lisensi seumur hidup"
+footer_tagline = "Berkas Anda punya cerita."
+
+empty_no_posts = "Artikel sedang dalam perjalanan"
+empty_no_posts_sub = "Kami sedang aktif menulis. Mampir lagi nanti, atau "
+empty_try_keeply = "coba Keeply"
+empty_no_posts_end = " sementara itu."
+
+breadcrumb_home = "Beranda"
+by_author = "Oleh"

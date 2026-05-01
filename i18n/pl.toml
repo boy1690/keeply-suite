@@ -1,0 +1,48 @@
+# Polish i18n strings (flat format for Hugo go-i18n v2)
+
+nav_posts = "Wpisy"
+nav_categories = "Kategorie"
+nav_search = "Szukaj"
+nav_download = "Pobierz za darmo"
+
+hero_badge = "Blog Keeply · cotygodniowe aktualizacje"
+hero_title_1 = "Prawdziwe historie"
+hero_title_2 = "zarządzania plikami."
+hero_subtitle = "Oprogramowanie do zarządzania plikami stworzone z myślą o zespołach projektowych. Bez żargonu, bez zmian w workflow — po prostu rozwiązuje codzienne biurowe problemy."
+
+section_featured = "Polecane"
+section_latest = "Najnowsze wpisy"
+section_browse = "Według kategorii"
+section_related = "Może Cię też zainteresować"
+section_tags = "Tagi"
+
+see_all = "Zobacz wszystkie"
+read_more = "Czytaj dalej"
+reading_time = "{{ .count }} min czytania"
+posts_count = "{{ .count }} artykułów"
+
+page_previous = "Poprzedni"
+page_next = "Następny"
+
+toc_title = "Spis treści"
+
+cta_title = "Gotowy, żeby spróbować Keeply?"
+cta_subtitle = "Pobierz za darmo. Start w 30 sekund."
+cta_button = "Pobierz Keeply"
+cta_sidebar_label = "Wypróbuj Keeply"
+cta_sidebar_title = "Daj swoim plikom wehikuł czasu"
+
+footer_site = "Strona główna"
+footer_rss = "Kanał RSS"
+footer_all_categories = "Wszystkie kategorie"
+footer_privacy = "Prywatność"
+footer_buy = "Kup licencję dożywotnią"
+footer_tagline = "Twoje pliki mają swoją historię."
+
+empty_no_posts = "Wpisy są w drodze"
+empty_no_posts_sub = "Aktywnie piszemy. Wpadnij wkrótce, lub "
+empty_try_keeply = "wypróbuj Keeply"
+empty_no_posts_end = " w międzyczasie."
+
+breadcrumb_home = "Strona główna"
+by_author = "Autor:"

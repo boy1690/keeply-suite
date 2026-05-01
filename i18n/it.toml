@@ -1,0 +1,48 @@
+# Italian i18n strings (flat format for Hugo go-i18n v2)
+
+nav_posts = "Articoli"
+nav_categories = "Categorie"
+nav_search = "Cerca"
+nav_download = "Scarica gratis"
+
+hero_badge = "Keeply Blog · aggiornamenti settimanali"
+hero_title_1 = "Storie vere di"
+hero_title_2 = "gestione file."
+hero_subtitle = "Software di gestione file pensato per i team di progetto. Niente gergo, niente cambi al tuo flusso di lavoro — solo soluzioni ai problemi d'ufficio di tutti i giorni."
+
+section_featured = "In evidenza"
+section_latest = "Ultimi articoli"
+section_browse = "Sfoglia per categoria"
+section_related = "Potrebbe interessarti"
+section_tags = "Tag"
+
+see_all = "Vedi tutto"
+read_more = "Continua a leggere"
+reading_time = "{{ .count }} min di lettura"
+posts_count = "{{ .count }} articoli"
+
+page_previous = "Precedente"
+page_next = "Successivo"
+
+toc_title = "Indice"
+
+cta_title = "Pronto a provare Keeply?"
+cta_subtitle = "Download gratuito. Pronto in 30 secondi."
+cta_button = "Scarica Keeply"
+cta_sidebar_label = "Prova Keeply"
+cta_sidebar_title = "Regala ai tuoi file una macchina del tempo"
+
+footer_site = "Sito principale"
+footer_rss = "Feed RSS"
+footer_all_categories = "Tutte le categorie"
+footer_privacy = "Privacy"
+footer_buy = "Acquista licenza a vita"
+footer_tagline = "I tuoi file hanno una storia."
+
+empty_no_posts = "Gli articoli sono in arrivo"
+empty_no_posts_sub = "Stiamo scrivendo. Torna presto, oppure "
+empty_try_keeply = "prova Keeply"
+empty_no_posts_end = " nel frattempo."
+
+breadcrumb_home = "Home"
+by_author = "Di"
