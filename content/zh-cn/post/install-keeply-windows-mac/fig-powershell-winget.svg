@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
-  <title id="title">PowerShell 視窗執行 winget install Boy1690.Keeply 指令</title>
-  <desc id="desc">示意圖：Windows Terminal 深灰黑背景，輸入 winget install Boy1690.Keeply，輸出顯示找到 Keeply、彩虹進度條下載、安裝成功。</desc>
+  <title id="title">PowerShell 窗口执行 winget install Boy1690.Keeply 命令</title>
+  <desc id="desc">示意图：Windows Terminal 深灰黑背景，输入 winget install Boy1690.Keeply，输出显示找到 Keeply、彩虹进度条下载、安装成功。</desc>
   <defs>
     <linearGradient id="rainbow" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#e74c3c"/>

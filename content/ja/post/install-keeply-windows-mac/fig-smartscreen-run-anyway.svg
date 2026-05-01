@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
-  <title id="title">點完「詳細情報」後出現「実行」按鈕</title>
-  <desc id="desc">示意圖：藍色 SmartScreen 警告下半部，amber 圓圈框出「実行」按鈕。兩顆按鈕同款式，靠右下對齊。</desc>
+  <title id="title">「詳細情報」をクリックした後、「実行」ボタンが表示される</title>
+  <desc id="desc">図解：青い SmartScreen 警告の下半分、amber の円で「実行」ボタンを強調。同じデザインのボタン 2 つが右下に揃っている。</desc>
   <defs>
     <style>
       .bg { fill: #f7f8fb; }

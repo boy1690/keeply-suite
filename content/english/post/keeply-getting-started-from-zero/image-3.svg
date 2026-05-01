@@ -1,6 +1,6 @@
 <!-- Image 3: 拖資料夾進 Keeply 3 步動作示意 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" fill="none"
-     font-family="'Inter','Noto Sans TC',system-ui,sans-serif">
+     font-family="'Inter','SF Pro Display',-apple-system,system-ui,sans-serif">
   <defs>
     <linearGradient id="g-indigo" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#4338CA"/>
@@ -20,14 +20,14 @@
   <rect width="1200" height="600" fill="url(#g-paper)"/>
   <rect width="1200" height="600" fill="url(#grid)"/>
 
-  <text x="600" y="48" font-size="13" font-weight="800" fill="#312E81" text-anchor="middle" letter-spacing="3">動作 1 · 把資料夾拖進 KEEPLY · 3 秒</text>
+  <text x="600" y="48" font-size="13" font-weight="800" fill="#312E81" text-anchor="middle" letter-spacing="3">Action 1 · drag the folder into KEEPLY · 3 seconds</text>
 
   <!-- Frame 1: 桌面上的資料夾 + cursor -->
   <g transform="translate(40, 110)" filter="url(#shadow)">
     <rect width="320" height="380" rx="10" fill="#ffffff"/>
     <rect width="320" height="36" rx="10" fill="#312E81"/>
     <rect y="22" width="320" height="14" fill="#312E81"/>
-    <text x="20" y="24" font-size="13" font-weight="600" fill="#ffffff">桌面 / Desktop</text>
+    <text x="20" y="24" font-size="13" font-weight="600" fill="#ffffff">Desktop</text>
 
     <!-- 資料夾 icon (大) -->
     <g transform="translate(108, 130)" filter="url(#shadow)">
@@ -44,8 +44,8 @@
     <g transform="translate(20, 320)">
       <circle cx="20" cy="20" r="20" fill="url(#g-indigo)"/>
       <text x="20" y="26" font-size="18" font-weight="900" fill="#ffffff" text-anchor="middle">1</text>
-      <text x="56" y="20" font-size="14" font-weight="700" fill="#312E81">點選資料夾</text>
-      <text x="56" y="38" font-size="12" font-weight="500" fill="#4338CA" opacity="0.7">桌面上 my-project</text>
+      <text x="56" y="20" font-size="14" font-weight="700" fill="#312E81">Select the folder</text>
+      <text x="56" y="38" font-size="12" font-weight="500" fill="#4338CA" opacity="0.7">my-project on desktop</text>
     </g>
   </g>
 
@@ -59,7 +59,7 @@
     <rect width="320" height="380" rx="10" fill="#ffffff"/>
     <rect width="320" height="36" rx="10" fill="#312E81"/>
     <rect y="22" width="320" height="14" fill="#312E81"/>
-    <text x="20" y="24" font-size="13" font-weight="600" fill="#ffffff">拖移中 / Dragging</text>
+    <text x="20" y="24" font-size="13" font-weight="600" fill="#ffffff">Dragging</text>
 
     <!-- 拖移軌跡 -->
     <g opacity="0.5">
@@ -80,8 +80,8 @@
     <g transform="translate(20, 320)">
       <circle cx="20" cy="20" r="20" fill="url(#g-indigo)"/>
       <text x="20" y="26" font-size="18" font-weight="900" fill="#ffffff" text-anchor="middle">2</text>
-      <text x="56" y="20" font-size="14" font-weight="700" fill="#312E81">拖進 Keeply 視窗</text>
-      <text x="56" y="38" font-size="12" font-weight="500" fill="#4338CA" opacity="0.7">不思考結構，直接拖</text>
+      <text x="56" y="20" font-size="14" font-weight="700" fill="#312E81">Drag into the Keeply window</text>
+      <text x="56" y="38" font-size="12" font-weight="500" fill="#4338CA" opacity="0.7">Don't think structure, just drag</text>
     </g>
   </g>
 
@@ -112,12 +112,12 @@
     <g transform="translate(20, 320)">
       <circle cx="20" cy="20" r="20" fill="url(#g-indigo)"/>
       <text x="20" y="26" font-size="18" font-weight="900" fill="#ffffff" text-anchor="middle">3</text>
-      <text x="56" y="20" font-size="14" font-weight="700" fill="#312E81">完成</text>
-      <text x="56" y="38" font-size="12" font-weight="500" fill="url(#g-amber)" opacity="0.9">保險網生效</text>
+      <text x="56" y="20" font-size="14" font-weight="700" fill="#312E81">Done</text>
+      <text x="56" y="38" font-size="12" font-weight="500" fill="url(#g-amber)" opacity="0.9">Safety net active</text>
     </g>
   </g>
 
   <!-- Bottom caption -->
-  <text x="600" y="568" font-size="14" font-weight="700" fill="#312E81" text-anchor="middle" letter-spacing="2">3 秒 · 不改命名 · 不分類 · 不思考結構</text>
+  <text x="600" y="568" font-size="14" font-weight="700" fill="#312E81" text-anchor="middle" letter-spacing="2">3 seconds · no renaming · no categorizing · no structuring</text>
 
 </svg>

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
-  <title id="title">點完「其他信息」後出現「仍要运行」按鈕</title>
-  <desc id="desc">示意圖：藍色 SmartScreen 警告下半部，amber 圓圈框出「仍要运行」按鈕。兩顆按鈕同款式，靠右下對齊。</desc>
+  <title id="title">点完「其他信息」后出现「仍要运行」按钮</title>
+  <desc id="desc">示意图：蓝色 SmartScreen 警告下半部，amber 圆圈框出「仍要运行」按钮。两颗按钮同款式，靠右下对齐。</desc>
   <defs>
     <style>
       .bg { fill: #f7f8fb; }

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
-  <title id="title">macOS Finder 右鍵選單，「打开」項目被框選</title>
-  <desc id="desc">示意圖：macOS Finder 視窗中，使用者右鍵點 Keeply 圖示，跳出選單，第一項「打开」被 amber 框出。</desc>
+  <title id="title">macOS Finder 右键选单，「打开」项目被框选</title>
+  <desc id="desc">示意图：macOS Finder 视窗中，使用者右键点 Keeply 图示，跳出选单，第一项「打开」被 amber 框出。</desc>
   <defs>
     <style>
       .bg { fill: #f0f1f5; }

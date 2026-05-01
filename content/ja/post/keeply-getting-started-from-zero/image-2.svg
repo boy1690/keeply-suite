@@ -1,6 +1,6 @@
-<!-- Image 2: SaaS onboarding 文件 50 頁 vs Keeply Day 1 上手 對比 -->
+<!-- Image 2: SaaS onboarding 文件 50 ページ vs Keeply Day 1 使いこなせる 對比 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" fill="none"
-     font-family="'Inter','Noto Sans TC',system-ui,sans-serif">
+     font-family="'Inter','Noto Sans JP','Hiragino Sans',system-ui,sans-serif">
   <defs>
     <linearGradient id="g-indigo" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#4338CA"/>
@@ -20,11 +20,11 @@
   <rect width="1200" height="600" fill="url(#g-paper)"/>
   <rect width="1200" height="600" fill="url(#grid)"/>
 
-  <text x="600" y="48" font-size="13" font-weight="800" fill="#312E81" text-anchor="middle" letter-spacing="3">學完才能用 · vs · 用了才會學</text>
+  <text x="600" y="48" font-size="13" font-weight="800" fill="#312E81" text-anchor="middle" letter-spacing="3">学んでから使う · vs · 使いながら学ぶ</text>
 
-  <!-- LEFT: 50 頁 onboarding 文件 stack -->
+  <!-- LEFT: 50 ページ onboarding 文件 stack -->
   <g transform="translate(140, 100)" filter="url(#shadow)">
-    <text x="20" y="-10" font-size="13" font-weight="800" fill="#DC2626" letter-spacing="2">▪ 傳統 SaaS</text>
+    <text x="20" y="-10" font-size="13" font-weight="800" fill="#DC2626" letter-spacing="2">▪ 従来の SaaS</text>
 
     <!-- 紙張堆疊（5 層） -->
     <g transform="translate(0, 20)">
@@ -54,11 +54,11 @@
         <line x1="0" y1="300" x2="240" y2="300" stroke="#4338CA" stroke-width="1.5"/>
       </g>
 
-      <!-- 50 頁 stamp -->
+      <!-- 50 ページ stamp -->
       <g transform="translate(180, 320)">
         <rect width="120" height="40" rx="6" fill="#FEE2E2" stroke="#DC2626" stroke-width="1.5"/>
-        <text x="60" y="20" font-size="11" font-weight="700" fill="#DC2626" text-anchor="middle" letter-spacing="1">總頁數</text>
-        <text x="60" y="36" font-size="16" font-weight="900" fill="#DC2626" text-anchor="middle">50 頁</text>
+        <text x="60" y="20" font-size="11" font-weight="700" fill="#DC2626" text-anchor="middle" letter-spacing="1">総ページ数</text>
+        <text x="60" y="36" font-size="16" font-weight="900" fill="#DC2626" text-anchor="middle">50 ページ</text>
       </g>
 
       <!-- scrollbar (hint at length) -->
@@ -72,7 +72,7 @@
     <path d="M0 30 L40 30 L40 18 L72 38 L40 58 L40 46 L0 46 Z" fill="url(#g-amber)" filter="url(#shadow)"/>
   </g>
 
-  <!-- RIGHT: Day 1 直接上手 -->
+  <!-- RIGHT: Day 1 直接使いこなせる -->
   <g transform="translate(720, 100)" filter="url(#shadow)">
     <text x="20" y="-10" font-size="13" font-weight="800" fill="url(#g-amber)" letter-spacing="2">▪ KEEPLY</text>
 
@@ -81,7 +81,7 @@
 
       <!-- Day 1 大字 -->
       <text x="170" y="100" font-size="64" font-weight="900" fill="url(#g-indigo)" text-anchor="middle" font-family="system-ui,sans-serif">DAY 1</text>
-      <text x="170" y="130" font-size="14" font-weight="600" fill="#4338CA" text-anchor="middle" opacity="0.7" letter-spacing="2">第一天</text>
+      <text x="170" y="130" font-size="14" font-weight="600" fill="#4338CA" text-anchor="middle" opacity="0.7" letter-spacing="2">1 日目</text>
 
       <!-- check mark -->
       <g transform="translate(170, 200)">
@@ -90,18 +90,18 @@
       </g>
 
       <!-- 狀態 -->
-      <text x="170" y="280" font-size="20" font-weight="800" fill="#312E81" text-anchor="middle" font-family="system-ui,sans-serif">已上手</text>
-      <text x="170" y="306" font-size="13" font-weight="500" fill="#4338CA" text-anchor="middle" opacity="0.7" font-family="system-ui,sans-serif">沒讀任何文件 · 沒看影片</text>
+      <text x="170" y="280" font-size="20" font-weight="800" fill="#312E81" text-anchor="middle" font-family="system-ui,sans-serif">使いこなせる</text>
+      <text x="170" y="306" font-size="13" font-weight="500" fill="#4338CA" text-anchor="middle" opacity="0.7" font-family="system-ui,sans-serif">ドキュメント未読 · 動画も見ていない</text>
 
       <!-- 第 1 天 stamp -->
       <g transform="translate(110, 332)">
         <rect width="120" height="36" rx="6" fill="#FFFBEB" stroke="url(#g-amber)" stroke-width="1.5"/>
-        <text x="60" y="22" font-size="13" font-weight="800" fill="url(#g-amber)" text-anchor="middle" letter-spacing="1">第 1 天就有 value</text>
+        <text x="60" y="22" font-size="13" font-weight="800" fill="url(#g-amber)" text-anchor="middle" letter-spacing="1">1 日目で value</text>
       </g>
     </g>
   </g>
 
   <!-- Bottom caption -->
-  <text x="600" y="568" font-size="14" font-weight="700" fill="#312E81" text-anchor="middle" letter-spacing="2">14 天 · 對比 · 第 1 天</text>
+  <text x="600" y="568" font-size="14" font-weight="700" fill="#312E81" text-anchor="middle" letter-spacing="2">14 日 · 対比 · 1 日目</text>
 
 </svg>

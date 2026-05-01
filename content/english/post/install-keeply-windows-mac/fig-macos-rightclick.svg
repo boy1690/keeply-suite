@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
-  <title id="title">macOS Finder 右鍵選單，「Open」項目被框選</title>
-  <desc id="desc">示意圖：macOS Finder 視窗中，使用者右鍵點 Keeply 圖示，跳出選單，第一項「Open」被 amber 框出。</desc>
+  <title id="title">macOS Finder right-click menu, the "Open" item is highlighted</title>
+  <desc id="desc">Illustration: in a macOS Finder window, the user right-clicks the Keeply icon; a context menu appears, with "Open" as the first item highlighted by an amber outline.</desc>
   <defs>
     <style>
       .bg { fill: #f0f1f5; }

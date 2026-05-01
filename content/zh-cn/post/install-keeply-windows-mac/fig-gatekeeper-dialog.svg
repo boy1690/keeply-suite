@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
-  <title id="title">macOS Gatekeeper 確認對話框，「打开」按鈕被框選</title>
-  <desc id="desc">示意圖：macOS 系統對話框詢問是否打开 Keeply，下方有「打开」「取消」兩顆按鈕，amber 圈出「打开」。</desc>
+  <title id="title">macOS Gatekeeper 确认对话框，「打开」按钮被框选</title>
+  <desc id="desc">示意图：macOS 系统对话框询问是否打开 Keeply，下方有「打开」「取消」两颗按钮，amber 圈出「打开」。</desc>
   <defs>
     <style>
       .bg { fill: #f0f1f5; }

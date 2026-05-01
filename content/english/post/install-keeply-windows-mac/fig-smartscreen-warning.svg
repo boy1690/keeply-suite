@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
-  <title id="title">Windows SmartScreen 警告畫面，箭頭指向「More info」tiny link</title>
-  <desc id="desc">示意圖：藍色 SmartScreen 警告，下方藍色按鈕為「Don't run」，左下方有「More info」tiny link，amber 箭頭指出位置。</desc>
+  <title id="title">Windows SmartScreen warning screen, an arrow points at the "More info" tiny link</title>
+  <desc id="desc">Illustration: blue SmartScreen warning, with a blue "Don't run" button below; in the lower left, a tiny "More info" link, with an amber arrow pointing at it.</desc>
   <defs>
     <style>
       .bg { fill: #f7f8fb; }

@@ -1,6 +1,6 @@
 <!-- Image 3: 還原前 vs 還原後對比：檔案樹 + 跑測試指令的綠燈 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" fill="none"
-     font-family="'Inter','Noto Sans TC',system-ui,sans-serif">
+     font-family="'Inter','Noto Sans JP','Hiragino Sans',system-ui,sans-serif">
   <defs>
     <linearGradient id="g-indigo" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#4338CA"/>
@@ -26,14 +26,14 @@
   <rect width="1200" height="600" fill="url(#g-paper)"/>
   <rect width="1200" height="600" fill="url(#grid)"/>
 
-  <text x="600" y="48" font-size="13" font-weight="800" fill="#312E81" text-anchor="middle" letter-spacing="3">還原前 · 30 秒 · 還原後</text>
+  <text x="600" y="48" font-size="13" font-weight="800" fill="#312E81" text-anchor="middle" letter-spacing="3">復元前 · 30 秒 · 復元後</text>
 
   <!-- BEFORE: 失控狀態 -->
   <g transform="translate(60, 90)" filter="url(#shadow)">
     <rect width="460" height="430" rx="10" fill="#ffffff" stroke="url(#g-red)" stroke-width="2"/>
     <rect width="460" height="42" rx="10" fill="url(#g-red)"/>
     <rect y="28" width="460" height="14" fill="url(#g-red)"/>
-    <text x="20" y="28" font-size="14" font-weight="700" fill="#ffffff" font-family="system-ui,sans-serif">還原前 · 14:23</text>
+    <text x="20" y="28" font-size="14" font-weight="700" fill="#ffffff" font-family="system-ui,sans-serif">復元前 · 14:23</text>
 
     <!-- file tree -->
     <g font-family="'JetBrains Mono',ui-monospace,monospace" transform="translate(20, 70)">
@@ -76,7 +76,7 @@
   <g transform="translate(560, 290)">
     <path d="M0 30 L40 30 L40 14 L80 38 L40 62 L40 46 L0 46 Z" fill="url(#g-amber)" filter="url(#shadow)"/>
     <text x="40" y="-8" font-size="12" font-weight="800" fill="#312E81" text-anchor="middle" letter-spacing="2" font-family="system-ui,sans-serif">30 秒</text>
-    <text x="40" y="98" font-size="11" font-weight="600" fill="#4338CA" text-anchor="middle" font-family="system-ui,sans-serif" opacity="0.7">右鍵 → 還原</text>
+    <text x="40" y="98" font-size="11" font-weight="600" fill="#4338CA" text-anchor="middle" font-family="system-ui,sans-serif" opacity="0.7">右クリック → 復元</text>
   </g>
 
   <!-- AFTER: 還原回 13:00 狀態 -->
@@ -84,7 +84,7 @@
     <rect width="460" height="430" rx="10" fill="#ffffff" stroke="url(#g-green)" stroke-width="2"/>
     <rect width="460" height="42" rx="10" fill="url(#g-green)"/>
     <rect y="28" width="460" height="14" fill="url(#g-green)"/>
-    <text x="20" y="28" font-size="14" font-weight="700" fill="#ffffff" font-family="system-ui,sans-serif">還原後 · 回到 13:00</text>
+    <text x="20" y="28" font-size="14" font-weight="700" fill="#ffffff" font-family="system-ui,sans-serif">復元後 · 13:00 に戻る</text>
 
     <!-- file tree (clean) -->
     <g font-family="'JetBrains Mono',ui-monospace,monospace" transform="translate(20, 70)">
@@ -105,8 +105,8 @@
       <!-- explicit gone files -->
       <g opacity="0.55">
         <text x="20" y="138" font-size="10" fill="#6F6AF0">─────────────────</text>
-        <text x="20" y="156" font-size="10" font-style="italic" fill="#6F6AF0">helper.ts (AI 偷加的) → 沒了</text>
-        <text x="20" y="172" font-size="10" font-style="italic" fill="#6F6AF0">config.ts (AI 改的) → 復原</text>
+        <text x="20" y="156" font-size="10" font-style="italic" fill="#6F6AF0">helper.ts（AI が勝手に追加）→ 消えた</text>
+        <text x="20" y="172" font-size="10" font-style="italic" fill="#6F6AF0">config.ts（AI が変更）→ 復元</text>
       </g>
     </g>
 
@@ -126,6 +126,6 @@
     </g>
   </g>
 
-  <text x="600" y="568" font-size="14" font-weight="700" fill="#312E81" text-anchor="middle" letter-spacing="2">所有檔案 · 所有結構 · 所有 config 全部一起回去</text>
+  <text x="600" y="568" font-size="14" font-weight="700" fill="#312E81" text-anchor="middle" letter-spacing="2">全ファイル · 全構造 · 全 config まとめて戻る</text>
 
 </svg>
