@@ -1,0 +1,139 @@
+---
+title: "Perché la tua squadra continua ad aprire il disegno AutoCAD della settimana scorsa"
+description: "Sono le 9:40 del mattino, passi dall'ufficio e il PM tira fuori la revisione di giovedì scorso — la specifica del telaio è cambiata. Sei stato in cantiere ogni giorno, nessuno te l'ha detto. Il calcestruzzo è già stato gettato. La guida pratica di un capocantiere al controllo versioni dei disegni: nessun nuovo strumento per la squadra, nessuna rivoluzione del flusso di lavoro, solo un modo per far sì che ogni revisione lasci la sua traccia."
+slug: "autocad-wrong-version-crew"
+date: 2026-04-24
+image: cover.svg
+og_image: cover.png
+categories:
+  - Gestione file
+tags:
+  - AutoCAD
+  - Edilizia
+  - Controllo versioni
+  - Gestione di cantiere
+---
+
+Sono le 9:40 del mattino. Passi finalmente dall'ufficio e fai scorrere con disinvoltura le foto del cantiere di ieri davanti al PM — la sezione di drenaggio acque piovane dove è stato gettato il calcestruzzo, i telai a getto pieno tutti annegati nella soletta, pronti per le griglie.
+
+Il PM non dice nulla. Apre un file sulla sua scrivania: `A-05_drain_0422_issued.dwg`.
+
+"Il telaio è sbagliato. L'architetto l'ha rivisto di nuovo giovedì scorso."
+
+Senti quel tuffo al petto. La revisione di giovedì scorso è arrivata in ufficio — Mike l'ha ricevuta, l'ha archiviata sul server, non ha avvisato nessuno. Tu sei stato in cantiere ogni giorno. Nessuno l'ha menzionata alla riunione del lunedì. Non avevi modo di saperlo.
+
+Quella sezione è già stata gettata. Specifica del telaio cambiata — significa scalpellare il calcestruzzo indurito per estrarre i vecchi telai, posare i nuovi telai con le dimensioni corrette, ricolare i bordi, lasciar maturare. Due giorni in più sul cronoprogramma. Le altre maestranze accodate dietro di te, tutte in attesa.
+
+Non hai mandato il file sbagliato alla squadra. Semplicemente non sapevi che il file fosse cambiato.
+
+## Indice
+
+- ["È quella la revisione di giovedì scorso?"](#h2-1)
+- [Prima dell'"emesso per costruzione" ci sono molte bozze. Poi l'architetto torna indietro su una](#h2-2)
+- [L'ufficio sa. Il cantiere no](#h2-3)
+- [Dai ai tuoi disegni la loro cronologia](#h2-4)
+- [Le uniche persone che non ne hanno bisogno: la squadra che installa dai fogli stampati](#h2-5)
+
+---
+
+## "È quella la revisione di giovedì scorso?" {#h2-1}
+
+È la domanda con cui il PM torna su qualcosa quando qualcosa non quadra. Anche la squadra la fa. Non vogliono dire nulla con questo — vogliono solo confermare. Il problema è che metà delle volte non sai rispondere subito nemmeno tu.
+
+Apri il portatile. La cartella del progetto contiene `A-05_drain_0418.dwg`, `A-05_drain_0422_issued.dwg`, `A-05_drain_0422_issued_revframe.dwg`. C'è anche `A-05_drain_0420_avoidutility.dwg` che qualcuno ha buttato nel gruppo WhatsApp. E quello di inizio marzo, `A-05_drain_0315.dwg`, che non hai mai cancellato perché l'architetto a volte torna a un layout precedente quando un cambio non funziona.
+
+Cinque nomi di file. Sai che uno di loro è quello da cui la squadra sta effettivamente costruendo. Ma non ricordi quale.
+
+Non è pigrizia, né da parte tua né da parte di Mike. È che il divario tra "un nuovo disegno arriva in ufficio" e "il cantiere lo viene a sapere" non ha nessuno assegnato. Ti capita di essere la persona che sta su entrambi i lati di quel divario.
+
+---
+
+## Prima dell'"emesso per costruzione" ci sono molte bozze. Poi l'architetto torna indietro su una {#h2-2}
+
+Potresti pensare: "Va bene, ricontrollerò ogni volta che sono in ufficio." In teoria, certo. In pratica si sfalda perché **le bozze continuano ad accumularsi prima che qualcosa venga emesso ufficialmente**.
+
+Un dettaglio, dal primo schema all'emesso per costruzione, passa per molte versioni. Il committente aggiunge un commento — revisione. Un sopralluogo trova un conflitto con i sottoservizi — revisione. L'ingegnere strutturista revisiona — revisione. **Poi l'architetto arriva alla rev 5 e il committente dice "in realtà il dettaglio del bordo della rev 2 era più pulito", così si torna indietro**. Apri la cartella e vedi sei file, due dei quali quasi identici — ma non riesci a capire quale sia quello che conta in questo momento.
+
+Se aspettassi che l'architetto "finalizzi" completamente prima di lasciar partire la squadra, il cronoprogramma ti schiaccerebbe. Tre maestranze sono accodate dietro questa sezione. Ogni giorno che trattieni, bruci manodopera, attrezzature e margine. Quindi l'impresa generale prende il rischio calcolato — **procede sull'ultima versione vista**, scommettendo che la prossima revisione non sarà drastica.
+
+Il più delle volte la scommessa paga. A volte no. È questa settimana.
+
+---
+
+## L'ufficio sa. Il cantiere no {#h2-3}
+
+Il vero punto di rottura è qui: **un nuovo disegno arriva in ufficio, il cantiere non lo viene a sapere e nessuno porta il messaggio attraverso il divario**.
+
+Sul lato ufficio, la persona che riceve l'email può essere un assistente PM, un addetto amministrativo o un altro capocantiere. Il loro istinto quando arriva un file è "archiviarlo bene" — cartella, denominazione, archivio. Non sempre sanno esattamente cosa stia facendo il cantiere questa settimana, e non sempre riescono a capire a colpo d'occhio se questa revisione è di quelle che vanno segnalate immediatamente. Per loro, archiviato è fatto.
+
+Sul lato cantiere, sei fuori ogni giorno. Anche se passi in ufficio ogni venerdì per sincronizzarti, tra l'ultimo controllo e il successivo l'architetto potrebbe aver emesso due revisioni e averne ribaltata una. Puoi trovarla se vai a cercarla — ma **solo se sei abbastanza disciplinato da rifare attivamente il giro**. Non tutti i capocantiere lo fanno, ogni volta.
+
+Sul lato squadra, costruiscono da quello che hai consegnato loro l'ultima volta. Non sanno se in ufficio ci sia un file più nuovo. E non dovrebbero averne bisogno — il loro lavoro è installare secondo il disegno, non tracciare le versioni.
+
+Di quei tre fili, **quello tra ufficio e cantiere è il più facile da perdere**. Non perché qualcuno stia scansando il lavoro. Perché nessun processo costringe quella linea a restare aperta. Un messaggio "nuova versione caricata" in un thread di gruppo che viene perso, è perso per sempre.
+
+---
+
+## Dai ai tuoi disegni la loro cronologia {#h2-4}
+
+Non c'è molto da fare. Quattro passaggi.
+
+**1. Nel momento in cui un nuovo file arriva in ufficio, avvisa il cantiere — e aspetta un "ricevuto" di ritorno.** Non "archiviato e fatto." **Lo scambio è completo solo quando la persona del cantiere conferma esplicitamente**. Può essere WhatsApp, può essere Slack, può essere una telefonata. La regola è: il cantiere deve confermare per iscritto. Senza conferma, il passaggio non è completo.
+
+**2. Prima che una nuova revisione sovrascriva la precedente, conserva la precedente separatamente.** Chiamala `A-05_drain_0418_architect_rev3.dwg`, `A-05_drain_0422_architect_rev4.dwg`. Questo è **per quando l'architetto torna indietro** — puoi ancora tirare fuori esattamente com'era la rev 3.
+
+**3. Lascia che lo strumento registri ogni revisione automaticamente, e rendila visibile a tutti.** Qui gli strumenti subentrano nelle parti che la disciplina non riesce a sostenere. [Keeply](https://keeply.work) è costruito esattamente per questo. Ogni salvataggio registra automaticamente una versione. I file restano dove sono — nella tua cartella di progetto, proprio dove la tua squadra già guarda. **Finché tutti aprono lo stesso archivio condiviso (di solito il NAS aziendale), tutti vedono la stessa cronologia** — nel momento in cui l'ufficio carica un nuovo file, il capocantiere apre Keeply in cantiere e la cronologia mostra "oggi alle 15:30, l'architetto ha rivisto di nuovo." Nota onesta: se devi confrontare due disegni `.dwg` riga per riga, devi comunque aprire AutoCAD e farlo da solo — Keeply non fa il confronto tra disegni CAD. Ma "è arrivata una nuova versione, chi l'ha mandata, quando, e l'hai aperta?" — questo smetti di perderlo. Il PM chiede "Hai visto la rev di giovedì scorso?" e la cronologia risponde.
+
+Ecco grosso modo come si presenta sullo schermo:
+
+```text
+A-05_drain.dwg
+Archivio: Z:\Projects\MapleSt_Drainage\
+─────────────────────────────────────────────
+
+ Descrizione versione                   Tag     Quando
+─────────────────────────────────────────────
+ ●  Specifica telaio rivista                    Oggi
+ ●  Reinstradato per evitare sottoservizi       04/20
+ ●  Emesso dopo revisione committente  ⭐Emesso  04/18
+ ●  Profilo aggiustato                          04/15
+
+─────────────────────────────────────────────
+ Membri dell'archivio (NAS condiviso)
+   Mike (ufficio) · Tu (cantiere) · Chen (caposquadra)
+
+   Tutti aprono la stessa cartella, tutti vedono
+   la stessa cronologia. Nel momento in cui arriva
+   una nuova versione, compare per tutti.
+   Passa il mouse su una riga → ripristino con un click.
+```
+
+**4. Almeno una copia che non sia su questa macchina e non sul NAS di cantiere.** Hard disk esterno, cloud, slot di backup — qualunque cosa. Il punto è **almeno una copia fuori sede**. I dischi NAS dell'ufficio si rompono, vengono cancellati, vengono riutilizzati per il prossimo progetto. Il backup fuori sede è l'assicurazione più economica che ti comprerai mai.
+
+I passaggi 1 e 2 possono funzionare con la sola disciplina, ma onestamente — tre mesi dopo ne mancherai metà. Il passaggio 3 è come lo strumento prende l'altra metà.
+
+---
+
+## Le uniche persone che non ne hanno bisogno: la squadra che installa dai fogli stampati {#h2-5}
+
+Siamo onesti — non è per tutti nell'edilizia. Ma la lista delle esclusioni è più corta di quanto pensi.
+
+**Le uniche persone che davvero non ne hanno bisogno sono le squadre che installano dal disegno che hanno davanti.** Il loro lavoro è costruire secondo il foglio che è stato consegnato loro, non rincorrere le versioni. Rincorrere le versioni è il tuo lavoro.
+
+**I lavori pubblici ne hanno bisogno di più, non di meno.** Potresti pensare che i grandi progetti pubblici o governativi siano coperti perché hanno già una piattaforma di collaborazione BIM. È il contrario. I lavori pubblici producono più carta dei lavori privati, di gran lunga, le richieste di variante si trascinano per mesi, il turnover dei dirigenti è più alto, la pila di documenti cresce più veloce e la memoria istituzionale si rompe più facilmente. Le piattaforme BIM risolvono il consegnabile finale. Non risolvono i documenti di pianificazione, i file condivisi e le note di revisione che i disegni di progetto accumulano in corso d'opera — e quelle sono le cose che effettivamente crescono, giorno dopo giorno.
+
+**Anche i singoli professionisti ne hanno bisogno.** Potresti pensare: "Sono solo io su questo progetto dall'inizio alla fine, ho davvero bisogno del controllo versioni?" Sì. Perché tra tre mesi, guardando lo stesso file, **dimenticherai perché il tu di prima ha fatto quel cambio**. Una cronologia conserva più del file stesso — conserva il motivo nel momento. Il tu del futuro ringrazierà il tu del presente per aver lasciato la traccia.
+
+Tutti gli altri — residenziale piccolo e medio, commerciale, finiture d'interni, drenaggi, paesaggio, strade, lavori di campus, lavori pubblici, progetti BIM, designer singoli, studi di progettazione — **se il tuo lavoro coinvolge un file che viene cambiato e riaperto in seguito da qualcun altro o dal tu del futuro, hai bisogno di una cronologia.** Ogni volta che quella linea si rompe, tempo e denaro escono dalla tua tasca.
+
+---
+
+Un `.dwg` non è solo un disegno. È un'istantanea di ciò su cui progettazione, ufficio e cantiere si sono accordati in un momento specifico. Quel momento continua a cambiare, continua a passare di mano, continua a essere costruito dalla versione sbagliata.
+
+Vale la pena dare a ciascuno dei tuoi progetti la sua cronologia?
+
+---
+
+Ricordi quel momento delle 9:40 — il PM che tira fuori la revisione di giovedì e quel tuffo al petto? Non devi più essere il responsabile delle versioni. **Keeply: la memoria custode dei tuoi file.** Ricorda ogni salvataggio, ogni versione emessa, ogni istantanea prima che la vecchia venga sovrascritta. Vive dentro la tua cartella di progetto esistente — nessun nuovo strumento, nessuna nuova abitudine per la squadra. L'edilizia ci si adatta particolarmente bene, perché la linea tra ufficio e cantiere si rompe in ogni singolo progetto.
+
+[Conosci Keeply →](https://keeply.work)

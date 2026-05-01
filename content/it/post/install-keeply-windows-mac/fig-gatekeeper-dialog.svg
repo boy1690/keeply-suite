@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">macOS Gatekeeper 確認對話框，「Open」按鈕被框選</title>
+  <desc id="desc">示意圖：macOS 系統對話框詢問是否Open Keeply，下方有「Open」「Cancel」兩顆按鈕，amber 圈出「Open」。</desc>
+  <defs>
+    <style>
+      .bg { fill: #f0f1f5; }
+      .dialog-bg { fill: #ffffff; stroke: #c5c5c8; stroke-width: 1; }
+      .dialog-shadow { fill: rgba(0,0,0,0.08); }
+      .icon-bg { fill: #4f46e5; }
+      .icon-text { fill: #ffffff; font: 700 28px -apple-system, system-ui, sans-serif; }
+      .dialog-title { fill: #1f1f1f; font: 600 15px -apple-system, 'SF Pro', system-ui, sans-serif; }
+      .dialog-body { fill: #4a4a4d; font: 12px -apple-system, 'SF Pro', system-ui, sans-serif; }
+      .btn-default { fill: #007aff; rx: 6; ry: 6; }
+      .btn-default-text { fill: #ffffff; font: 600 13px -apple-system, 'SF Pro', system-ui, sans-serif; }
+      .btn-secondary { fill: #ffffff; stroke: #c5c5c8; stroke-width: 1; rx: 6; ry: 6; }
+      .btn-secondary-text { fill: #1f1f1f; font: 13px -apple-system, 'SF Pro', system-ui, sans-serif; }
+      .annotation { fill: #f59e0b; font: 600 16px 'Noto Sans TC', system-ui, sans-serif; }
+      .highlight-rect { fill: none; stroke: #f59e0b; stroke-width: 3; rx: 8; ry: 8; }
+      .arrow { stroke: #f59e0b; stroke-width: 2.5; fill: none; }
+      .arrow-head { fill: #f59e0b; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="800" height="500"/>
+
+  <!-- Dialog shadow -->
+  <rect class="dialog-shadow" x="208" y="98" width="404" height="294" rx="14" ry="14"/>
+  <!-- Dialog -->
+  <rect class="dialog-bg" x="200" y="90" width="400" height="290" rx="12" ry="12"/>
+
+  <!-- Keeply icon -->
+  <rect class="icon-bg" x="240" y="120" width="56" height="56" rx="14" ry="14"/>
+  <text class="icon-text" x="268" y="161" text-anchor="middle">K</text>
+
+  <!-- Title -->
+  <text class="dialog-title" x="320" y="142">macOS cannot verify the developer of "Keeply".</text>
+  <text class="dialog-title" x="320" y="162">Are you sure you want to open it?</text>
+
+  <!-- Body -->
+  <text class="dialog-body" x="240" y="210">Opening this app will skip the system's security settings, which</text>
+  <text class="dialog-body" x="240" y="228">could expose your computer and personal data.</text>
+
+  <text class="dialog-body" x="240" y="265">"Keeply" is in your Downloads folder. Safari downloaded</text>
+  <text class="dialog-body" x="240" y="283">it from keeply.work today at 14:32.</text>
+
+  <!-- Buttons -->
+  <rect class="btn-secondary" x="270" y="320" width="100" height="34"/>
+  <text class="btn-secondary-text" x="320" y="342" text-anchor="middle">Cancel</text>
+
+  <rect class="btn-default" x="430" y="320" width="100" height="34"/>
+  <text class="btn-default-text" x="480" y="342" text-anchor="middle">Open</text>
+
+  <!-- Highlight on Open -->
+  <rect class="highlight-rect" x="425" y="315" width="110" height="44"/>
+
+  <!-- Annotation -->
+  <path class="arrow" d="M 480 420 L 480 372" />
+  <polygon class="arrow-head" points="480,372 474,382 486,382" />
+  <text class="annotation" x="480" y="450" text-anchor="middle">Click "Open" — done</text>
+</svg>

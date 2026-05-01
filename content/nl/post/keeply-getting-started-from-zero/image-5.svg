@@ -1,0 +1,92 @@
+<!-- Image 5: 第一週 mental model 變化時間軸 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" fill="none"
+     font-family="'Inter','Noto Sans TC',system-ui,sans-serif">
+  <defs>
+    <linearGradient id="g-indigo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#4338CA"/>
+    </linearGradient>
+    <linearGradient id="g-amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFB300"/><stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="g-paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8F7FF"/><stop offset="1" stop-color="#EEF2FF"/>
+    </linearGradient>
+    <pattern id="grid" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#4338CA" stroke-width="1" opacity="0.05"/>
+    </pattern>
+    <filter id="shadow"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#312E81" flood-opacity="0.14"/></filter>
+  </defs>
+
+  <rect width="1200" height="600" fill="url(#g-paper)"/>
+  <rect width="1200" height="600" fill="url(#grid)"/>
+
+  <text x="600" y="48" font-size="13" font-weight="800" fill="#312E81" text-anchor="middle" letter-spacing="3">第一週 · 你會經歷什麼</text>
+
+  <!-- 時間軸主線 -->
+  <line x1="160" y1="290" x2="1040" y2="290" stroke="url(#g-indigo)" stroke-width="3"/>
+
+  <!-- Day 1 -->
+  <g transform="translate(220, 290)">
+    <circle cx="0" cy="0" r="14" fill="url(#g-indigo)" stroke="#ffffff" stroke-width="3"/>
+    <text x="0" y="-44" font-size="32" font-weight="900" fill="url(#g-indigo)" text-anchor="middle" font-family="system-ui,sans-serif">DAY 1</text>
+
+    <g transform="translate(-130, 50)" filter="url(#shadow)">
+      <rect width="260" height="180" rx="10" fill="#ffffff" stroke="#E0E7FF"/>
+      <rect width="260" height="36" rx="10" fill="url(#g-indigo)"/>
+      <rect y="22" width="260" height="14" fill="url(#g-indigo)"/>
+      <text x="130" y="24" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="system-ui,sans-serif" letter-spacing="1">第 1 天</text>
+
+      <text x="20" y="68" font-size="14" font-weight="700" fill="#312E81">動作</text>
+      <text x="20" y="90" font-size="13" font-weight="500" fill="#4338CA">拖一個專案 → 存檔</text>
+
+      <text x="20" y="124" font-size="14" font-weight="700" fill="#312E81">內心狀態</text>
+      <text x="20" y="146" font-size="13" font-weight="500" fill="#4338CA" opacity="0.8">「沒感覺有差」</text>
+      <text x="20" y="164" font-size="11" font-weight="500" fill="#6F6AF0" opacity="0.6">這就是對的感覺</text>
+    </g>
+  </g>
+
+  <!-- Day 3 -->
+  <g transform="translate(600, 290)">
+    <circle cx="0" cy="0" r="14" fill="url(#g-amber)" stroke="#ffffff" stroke-width="3"/>
+    <text x="0" y="-44" font-size="32" font-weight="900" fill="url(#g-amber)" text-anchor="middle" font-family="system-ui,sans-serif">DAY 3</text>
+
+    <g transform="translate(-130, 50)" filter="url(#shadow)">
+      <rect width="260" height="180" rx="10" fill="#ffffff" stroke="url(#g-amber)" stroke-width="2"/>
+      <rect width="260" height="36" rx="10" fill="url(#g-amber)"/>
+      <rect y="22" width="260" height="14" fill="url(#g-amber)"/>
+      <text x="130" y="24" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="system-ui,sans-serif" letter-spacing="1">第 2-3 天</text>
+
+      <text x="20" y="68" font-size="14" font-weight="700" fill="#312E81">動作</text>
+      <text x="20" y="90" font-size="13" font-weight="500" fill="#4338CA">改 200 字 → 存檔</text>
+
+      <text x="20" y="124" font-size="14" font-weight="700" fill="#312E81">內心狀態</text>
+      <text x="20" y="146" font-size="13" font-weight="500" fill="#4338CA" opacity="0.8">「咦，可以回頭」</text>
+      <text x="20" y="164" font-size="11" font-weight="500" fill="url(#g-amber)" opacity="0.85">點時間軸看到自己的筆記</text>
+    </g>
+  </g>
+
+  <!-- Day 7 -->
+  <g transform="translate(980, 290)">
+    <circle cx="0" cy="0" r="16" fill="url(#g-amber)" stroke="#ffffff" stroke-width="3"/>
+    <path d="M-7 0 L-2 5 L8 -6" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <text x="0" y="-44" font-size="32" font-weight="900" fill="url(#g-amber)" text-anchor="middle" font-family="system-ui,sans-serif">DAY 7</text>
+
+    <g transform="translate(-130, 50)" filter="url(#shadow)">
+      <rect width="260" height="180" rx="10" fill="#ffffff" stroke="url(#g-amber)" stroke-width="2"/>
+      <rect width="260" height="36" rx="10" fill="url(#g-amber)"/>
+      <rect y="22" width="260" height="14" fill="url(#g-amber)"/>
+      <text x="130" y="24" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="system-ui,sans-serif" letter-spacing="1">第 4-7 天</text>
+
+      <text x="20" y="68" font-size="14" font-weight="700" fill="#312E81">動作</text>
+      <text x="20" y="90" font-size="13" font-weight="500" fill="#4338CA">越存越多檔案筆記</text>
+
+      <text x="20" y="124" font-size="14" font-weight="700" fill="#312E81">內心狀態</text>
+      <text x="20" y="146" font-size="14" font-weight="800" fill="url(#g-amber)">「真好」</text>
+      <text x="20" y="166" font-size="11" font-weight="500" fill="#6F6AF0" opacity="0.7">你沒讀任何文件</text>
+    </g>
+  </g>
+
+  <!-- Bottom caption -->
+  <text x="600" y="568" font-size="14" font-weight="700" fill="#312E81" text-anchor="middle" letter-spacing="2">不必先變專家 · 直覺性使用 · 第 1 天就上手</text>
+
+</svg>

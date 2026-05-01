@@ -1,0 +1,141 @@
+<!-- Image 3: 雲端「最新版同步」vs Keeply「歷史保留無上限」對比 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" fill="none"
+     font-family="'Inter','Noto Sans TC',system-ui,sans-serif">
+  <defs>
+    <linearGradient id="g-indigo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#4338CA"/>
+    </linearGradient>
+    <linearGradient id="g-amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFB300"/><stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="g-teal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5EEAD4"/><stop offset="1" stop-color="#14B8A6"/>
+    </linearGradient>
+    <linearGradient id="g-paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8F7FF"/><stop offset="1" stop-color="#EEF2FF"/>
+    </linearGradient>
+    <pattern id="grid" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#4338CA" stroke-width="1" opacity="0.05"/>
+    </pattern>
+    <filter id="shadow"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#312E81" flood-opacity="0.14"/></filter>
+  </defs>
+
+  <rect width="1200" height="600" fill="url(#g-paper)"/>
+  <rect width="1200" height="600" fill="url(#grid)"/>
+
+  <text x="600" y="48" font-size="13" font-weight="800" fill="#312E81" text-anchor="middle" letter-spacing="3">雲端 · vs · KEEPLY · 歷史長度差別</text>
+
+  <!-- LEFT: 雲端 30-day history -->
+  <g transform="translate(80, 100)" filter="url(#shadow)">
+    <rect width="500" height="430" rx="10" fill="#ffffff" stroke="url(#g-teal)" stroke-width="2"/>
+    <rect width="500" height="42" rx="10" fill="url(#g-teal)"/>
+    <rect y="28" width="500" height="14" fill="url(#g-teal)"/>
+    <text x="20" y="28" font-size="14" font-weight="700" fill="#ffffff" font-family="system-ui,sans-serif">雲端工具 — 最新版 + 30 天歷史</text>
+
+    <text x="250" y="84" font-size="14" font-weight="700" fill="#14B8A6" text-anchor="middle" letter-spacing="2">Dropbox / iCloud / OneDrive / Google Drive</text>
+
+    <!-- 30-day timeline -->
+    <g transform="translate(60, 120)" font-family="system-ui,sans-serif">
+      <!-- timeline bar -->
+      <rect x="0" y="40" width="380" height="40" rx="4" fill="#F0FDFA" stroke="#14B8A6"/>
+
+      <!-- 標今天 -->
+      <g transform="translate(360, 60)">
+        <line x1="0" y1="-26" x2="0" y2="-4" stroke="#14B8A6" stroke-width="2"/>
+        <circle cx="0" cy="-30" r="4" fill="#14B8A6"/>
+        <text x="0" y="-38" font-size="11" font-weight="700" fill="#14B8A6" text-anchor="middle">今天</text>
+      </g>
+
+      <!-- 30 days ago -->
+      <g transform="translate(20, 60)">
+        <line x1="0" y1="26" x2="0" y2="50" stroke="#DC2626" stroke-width="2" stroke-dasharray="3 3"/>
+        <text x="0" y="68" font-size="11" font-weight="700" fill="#DC2626" text-anchor="middle">30 天前</text>
+        <text x="0" y="84" font-size="10" font-weight="500" fill="#DC2626" text-anchor="middle">↑ 切斷</text>
+      </g>
+
+      <!-- 30 days marker fade -->
+      <g font-size="10" font-weight="500" fill="#312E81" opacity="0.55">
+        <text x="120" y="56" text-anchor="middle">3 週前</text>
+        <text x="220" y="56" text-anchor="middle">2 週前</text>
+        <text x="300" y="56" text-anchor="middle">1 週前</text>
+      </g>
+
+      <!-- 之前的歷史 (chopped off) -->
+      <g transform="translate(0, 110)">
+        <rect width="380" height="100" rx="6" fill="#FEE2E2" opacity="0.4"/>
+        <text x="190" y="38" font-size="13" font-weight="700" fill="#DC2626" text-anchor="middle">3 個月前的版本？</text>
+        <text x="190" y="64" font-size="14" font-weight="900" fill="#DC2626" text-anchor="middle">已 自 動 刪 除</text>
+        <text x="190" y="86" font-size="11" font-weight="500" fill="#DC2626" text-anchor="middle" opacity="0.85">超過 30 天的歷史不保留</text>
+      </g>
+
+      <!-- 跨裝置 sync hint -->
+      <text x="190" y="248" font-size="12" font-weight="600" fill="#14B8A6" text-anchor="middle">最新版 · 同步 · 多裝置</text>
+      <text x="190" y="272" font-size="11" font-weight="500" fill="#312E81" opacity="0.7" text-anchor="middle">這是雲端工具的工作</text>
+    </g>
+
+    <text x="250" y="412" font-size="12" font-weight="600" fill="#312E81" text-anchor="middle">多裝置間同步最新版</text>
+  </g>
+
+  <!-- VS divider -->
+  <g transform="translate(595, 320)">
+    <circle cx="0" cy="0" r="32" fill="url(#g-amber)" filter="url(#shadow)"/>
+    <text x="0" y="6" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="1">VS</text>
+  </g>
+
+  <!-- RIGHT: Keeply 無上限歷史 -->
+  <g transform="translate(620, 100)" filter="url(#shadow)">
+    <rect width="500" height="430" rx="10" fill="#ffffff" stroke="url(#g-amber)" stroke-width="2"/>
+    <rect width="500" height="42" rx="10" fill="url(#g-amber)"/>
+    <rect y="28" width="500" height="14" fill="url(#g-amber)"/>
+    <text x="20" y="28" font-size="14" font-weight="700" fill="#ffffff" font-family="system-ui,sans-serif">Keeply — 歷史長度無上限</text>
+
+    <text x="250" y="84" font-size="14" font-weight="700" fill="url(#g-amber)" text-anchor="middle" letter-spacing="2">每次變動 · 全部留著</text>
+
+    <!-- timeline 無上限 -->
+    <g transform="translate(60, 120)" font-family="system-ui,sans-serif">
+      <rect x="0" y="40" width="380" height="40" rx="4" fill="#FFFBEB" stroke="url(#g-amber)" stroke-width="1.5"/>
+
+      <!-- 標今天 -->
+      <g transform="translate(360, 60)">
+        <line x1="0" y1="-26" x2="0" y2="-4" stroke="url(#g-amber)" stroke-width="2"/>
+        <circle cx="0" cy="-30" r="4" fill="url(#g-amber)"/>
+        <text x="0" y="-38" font-size="11" font-weight="700" fill="url(#g-amber)" text-anchor="middle">今天</text>
+      </g>
+
+      <!-- 半年前 -->
+      <g transform="translate(140, 60)">
+        <circle cx="0" cy="20" r="3" fill="url(#g-amber)" opacity="0.85"/>
+        <text x="0" y="50" font-size="10" font-weight="600" fill="#312E81" text-anchor="middle" opacity="0.85">半年前</text>
+      </g>
+
+      <!-- 1 年前 -->
+      <g transform="translate(60, 60)">
+        <circle cx="0" cy="20" r="3" fill="url(#g-amber)" opacity="0.7"/>
+        <text x="0" y="50" font-size="10" font-weight="600" fill="#312E81" text-anchor="middle" opacity="0.7">1 年前</text>
+      </g>
+
+      <!-- 起點 -->
+      <g transform="translate(20, 60)">
+        <line x1="0" y1="-26" x2="0" y2="-4" stroke="url(#g-amber)" stroke-width="2" stroke-dasharray="3 3"/>
+        <text x="0" y="-30" font-size="10" font-weight="700" fill="url(#g-amber)" text-anchor="middle">起點</text>
+      </g>
+
+      <!-- 之前的歷史（保留） -->
+      <g transform="translate(0, 110)">
+        <rect width="380" height="100" rx="6" fill="#D1FAE5" opacity="0.5"/>
+        <text x="190" y="38" font-size="13" font-weight="700" fill="#059669" text-anchor="middle">3 個月前的版本？</text>
+        <text x="190" y="64" font-size="14" font-weight="900" fill="#059669" text-anchor="middle">還 在</text>
+        <text x="190" y="86" font-size="11" font-weight="500" fill="#059669" text-anchor="middle" opacity="0.85">不會自動刪 · 直到你手動刪</text>
+      </g>
+
+      <!-- 主功能 hint -->
+      <text x="190" y="248" font-size="12" font-weight="600" fill="url(#g-amber)" text-anchor="middle">每個版本 · 永久保留</text>
+      <text x="190" y="272" font-size="11" font-weight="500" fill="#312E81" opacity="0.7" text-anchor="middle">本機儲存 · 你掌控</text>
+    </g>
+
+    <text x="250" y="412" font-size="12" font-weight="600" fill="#312E81" text-anchor="middle">想找回 3 個月前的舊版</text>
+  </g>
+
+  <text x="600" y="568" font-size="14" font-weight="700" fill="#312E81" text-anchor="middle" letter-spacing="2">雲端顧最新版 · KEEPLY 顧歷史 · 兩個一起最完整</text>
+
+</svg>

@@ -1,0 +1,116 @@
+<!-- Image 2: Time Machine 整顆磁碟 snapshot vs Keeply 單檔時間軸概念對比 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" fill="none"
+     font-family="'Inter','Noto Sans TC',system-ui,sans-serif">
+  <defs>
+    <linearGradient id="g-indigo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#4338CA"/>
+    </linearGradient>
+    <linearGradient id="g-amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFB300"/><stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="g-blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#60A5FA"/><stop offset="1" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="g-paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8F7FF"/><stop offset="1" stop-color="#EEF2FF"/>
+    </linearGradient>
+    <pattern id="grid" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#4338CA" stroke-width="1" opacity="0.05"/>
+    </pattern>
+    <filter id="shadow"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#312E81" flood-opacity="0.14"/></filter>
+  </defs>
+
+  <rect width="1200" height="600" fill="url(#g-paper)"/>
+  <rect width="1200" height="600" fill="url(#grid)"/>
+
+  <text x="600" y="48" font-size="13" font-weight="800" fill="#312E81" text-anchor="middle" letter-spacing="3">備份工具 · vs · KEEPLY · 工作不一樣</text>
+
+  <!-- LEFT: Time Machine snapshot -->
+  <g transform="translate(80, 100)" filter="url(#shadow)">
+    <rect width="500" height="430" rx="10" fill="#ffffff" stroke="url(#g-blue)" stroke-width="2"/>
+    <rect width="500" height="42" rx="10" fill="url(#g-blue)"/>
+    <rect y="28" width="500" height="14" fill="url(#g-blue)"/>
+    <text x="20" y="28" font-size="14" font-weight="700" fill="#ffffff" font-family="system-ui,sans-serif">Time Machine — 整顆磁碟 snapshot</text>
+
+    <text x="250" y="84" font-size="14" font-weight="700" fill="#3B82F6" text-anchor="middle" letter-spacing="2">2026-04-30 14:00 那一刻整台電腦</text>
+
+    <!-- 整台電腦的內容 visualization -->
+    <g transform="translate(60, 110)" font-family="system-ui,sans-serif">
+      <rect width="380" height="280" rx="6" fill="#EFF6FF" stroke="#BFDBFE"/>
+
+      <text x="20" y="28" font-size="13" font-weight="800" fill="#1E40AF" letter-spacing="1">整顆磁碟內容（全部一起存）</text>
+      <line x1="20" y1="40" x2="360" y2="40" stroke="#BFDBFE"/>
+
+      <g transform="translate(20, 60)" font-size="12" fill="#1E3A8A" font-weight="500">
+        <text x="0" y="0">📁 macOS 系統檔案</text>
+        <text x="0" y="22">📁 應用程式（Photoshop / Cursor / Slack...）</text>
+        <text x="0" y="44">📁 系統偏好設定</text>
+        <text x="0" y="66">📁 ~/Documents/ proposal.docx</text>
+        <text x="0" y="88">📁 ~/Documents/ design.psd</text>
+        <text x="0" y="110">📁 ~/Pictures/ 4 萬張照片</text>
+        <text x="0" y="132">📁 ~/Library/ 應用程式快取</text>
+        <text x="0" y="154">📁 ~/.config/ 開發環境</text>
+        <text x="0" y="176">📁 (...其他 50 萬個檔案)</text>
+      </g>
+
+      <text x="190" y="270" font-size="12" font-weight="700" fill="#3B82F6" text-anchor="middle" letter-spacing="1" opacity="0.85">≈ 500 GB · 整台電腦的樣子</text>
+    </g>
+
+    <text x="250" y="412" font-size="12" font-weight="600" fill="#312E81" text-anchor="middle">硬碟壞了能還原一切</text>
+  </g>
+
+  <!-- VS divider -->
+  <g transform="translate(595, 320)">
+    <circle cx="0" cy="0" r="32" fill="url(#g-amber)" filter="url(#shadow)"/>
+    <text x="0" y="6" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="1">VS</text>
+  </g>
+
+  <!-- RIGHT: Keeply 單檔 timeline -->
+  <g transform="translate(620, 100)" filter="url(#shadow)">
+    <rect width="500" height="430" rx="10" fill="#ffffff" stroke="url(#g-amber)" stroke-width="2"/>
+    <rect width="500" height="42" rx="10" fill="url(#g-amber)"/>
+    <rect y="28" width="500" height="14" fill="url(#g-amber)"/>
+    <text x="20" y="28" font-size="14" font-weight="700" fill="#ffffff" font-family="system-ui,sans-serif">Keeply — 單檔的時間軸</text>
+
+    <text x="250" y="84" font-size="14" font-weight="700" fill="url(#g-amber)" text-anchor="middle" letter-spacing="2">proposal.docx 在不同時間點的版本</text>
+
+    <!-- timeline of single file -->
+    <g transform="translate(80, 120)" font-family="system-ui,sans-serif">
+      <line x1="20" y1="0" x2="20" y2="220" stroke="url(#g-amber)" stroke-width="3"/>
+
+      <g>
+        <circle cx="20" cy="20" r="9" fill="url(#g-amber)"/>
+        <text x="42" y="14" font-size="13" font-weight="700" fill="#312E81" font-family="'JetBrains Mono',ui-monospace,monospace">14:23</text>
+        <text x="42" y="32" font-size="11" font-weight="500" fill="#4338CA">客戶反饋版</text>
+      </g>
+      <g transform="translate(0, 70)">
+        <circle cx="20" cy="20" r="8" fill="url(#g-amber)" opacity="0.85"/>
+        <text x="42" y="14" font-size="13" font-weight="700" fill="#312E81" font-family="'JetBrains Mono',ui-monospace,monospace">11:50</text>
+        <text x="42" y="32" font-size="11" font-weight="500" fill="#4338CA">加附錄 B</text>
+      </g>
+      <g transform="translate(0, 140)">
+        <circle cx="20" cy="20" r="8" fill="url(#g-amber)" opacity="0.7"/>
+        <text x="42" y="14" font-size="13" font-weight="700" fill="#312E81" font-family="'JetBrains Mono',ui-monospace,monospace">10:12</text>
+        <text x="42" y="32" font-size="11" font-weight="500" fill="#4338CA">第一次寫</text>
+      </g>
+      <g transform="translate(0, 210)">
+        <circle cx="20" cy="20" r="7" fill="#9C98FF"/>
+        <text x="42" y="14" font-size="13" font-weight="700" fill="#312E81" opacity="0.7" font-family="'JetBrains Mono',ui-monospace,monospace">昨天 19:08</text>
+      </g>
+    </g>
+
+    <!-- 「只有這一個檔案」note -->
+    <g transform="translate(280, 120)">
+      <rect width="180" height="120" rx="8" fill="#FFFBEB" stroke="url(#g-amber)" stroke-width="1.5"/>
+      <text x="90" y="32" font-size="12" font-weight="800" fill="#312E81" text-anchor="middle" font-family="system-ui,sans-serif">不存什麼？</text>
+      <text x="14" y="58" font-size="11" font-weight="500" fill="#4338CA" font-family="system-ui,sans-serif">✗ 不存 OS</text>
+      <text x="14" y="78" font-size="11" font-weight="500" fill="#4338CA" font-family="system-ui,sans-serif">✗ 不存應用程式</text>
+      <text x="14" y="98" font-size="11" font-weight="500" fill="#4338CA" font-family="system-ui,sans-serif">✗ 不存其他人的檔</text>
+    </g>
+
+    <text x="250" y="412" font-size="12" font-weight="600" fill="#312E81" text-anchor="middle">想找回某個檔案的舊版本</text>
+  </g>
+
+  <text x="600" y="568" font-size="14" font-weight="700" fill="#312E81" text-anchor="middle" letter-spacing="2">備份顧整台電腦 · KEEPLY 顧每個檔案 · 不衝突</text>
+
+</svg>
