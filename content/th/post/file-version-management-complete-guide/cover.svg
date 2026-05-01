@@ -185,13 +185,13 @@
 
   <!-- ============ Subtitle（universal English） ============ -->
   <g transform="translate(220, 740)">
-    <text x="0" y="0" font-size="28" font-weight="700" fill="#312E81">Why every shared-folder user invents</text>
-    <text x="0" y="38" font-size="28" font-weight="700" fill="#312E81">their own <tspan fill="#F59E0B">naming scheme</tspan></text>
+    <text x="0" y="0" font-size="28" font-weight="700" fill="#312E81">ทำไมทุกคนที่ใช้โฟลเดอร์แชร์</text>
+    <text x="0" y="38" font-size="28" font-weight="700" fill="#312E81">ถึงคิดค้น <tspan fill="#F59E0B">กฎตั้งชื่อ ของตัวเอง</tspan></text>
   </g>
 
   <!-- ============ Bottom note ============ -->
   <g transform="translate(220, 832)">
-    <text x="0" y="0" font-size="14" font-weight="600" fill="#4338CA" opacity="0.65" letter-spacing="2">4 STRUCTURAL REASONS YOUR TOOL WASN'T DESIGNED FOR THIS</text>
+    <text x="0" y="0" font-size="14" font-weight="600" fill="#4338CA" opacity="0.65" letter-spacing="2">4 เหตุผลโครงสร้าง · เครื่องมือไม่ได้ถูกออกแบบมาเพื่อสิ่งนี้</text>
   </g>
 
   <!-- ============ 右下：Keeply lockup ============ -->

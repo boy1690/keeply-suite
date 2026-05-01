@@ -1,0 +1,48 @@
+# Arabic i18n strings (flat format for Hugo go-i18n v2)
+
+nav_posts = "المقالات"
+nav_categories = "التصنيفات"
+nav_search = "بحث"
+nav_download = "تنزيل مجاني"
+
+hero_badge = "مدونة Keeply · تحديثات أسبوعية"
+hero_title_1 = "قصص حقيقية عن"
+hero_title_2 = "إدارة الملفات."
+hero_subtitle = "برنامج لإدارة الملفات صُمم لفِرَق المشاريع. لا مصطلحات تقنية، ولا تغيير في سير العمل — فقط حلول للمشكلات المكتبية التي تواجهها كل يوم."
+
+section_featured = "مميز"
+section_latest = "أحدث المقالات"
+section_browse = "تصفح حسب التصنيف"
+section_related = "قد يعجبك أيضًا"
+section_tags = "الوسوم"
+
+see_all = "عرض الكل"
+read_more = "اقرأ المزيد"
+reading_time = "{{ .count }} دقيقة قراءة"
+posts_count = "{{ .count }} مقالة"
+
+page_previous = "السابق"
+page_next = "التالي"
+
+toc_title = "المحتويات"
+
+cta_title = "هل أنت مستعد لتجربة Keeply؟"
+cta_subtitle = "تنزيل مجاني. ابدأ في 30 ثانية."
+cta_button = "تنزيل Keeply"
+cta_sidebar_label = "جرّب Keeply"
+cta_sidebar_title = "امنح ملفاتك آلة زمن"
+
+footer_site = "الموقع الرئيسي"
+footer_rss = "خلاصة RSS"
+footer_all_categories = "جميع التصنيفات"
+footer_privacy = "الخصوصية"
+footer_buy = "شراء ترخيص مدى الحياة"
+footer_tagline = "ملفاتك تحكي قصة."
+
+empty_no_posts = "المقالات في الطريق"
+empty_no_posts_sub = "نحن نكتب باستمرار. عُد قريبًا، أو "
+empty_try_keeply = "جرّب Keeply"
+empty_no_posts_end = " في هذه الأثناء."
+
+breadcrumb_home = "الرئيسية"
+by_author = "بقلم"

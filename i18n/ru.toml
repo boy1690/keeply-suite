@@ -1,0 +1,48 @@
+# Russian i18n strings (flat format for Hugo go-i18n v2)
+
+nav_posts = "Статьи"
+nav_categories = "Категории"
+nav_search = "Поиск"
+nav_download = "Скачать бесплатно"
+
+hero_badge = "Блог Keeply · еженедельные обновления"
+hero_title_1 = "Настоящие истории об"
+hero_title_2 = "управлении файлами."
+hero_subtitle = "Программа управления файлами, созданная для проектных команд. Никакого жаргона, никаких изменений рабочего процесса — только решение офисных задач, с которыми вы сталкиваетесь каждый день."
+
+section_featured = "Избранное"
+section_latest = "Последние статьи"
+section_browse = "По категориям"
+section_related = "Вам также может понравиться"
+section_tags = "Метки"
+
+see_all = "Все статьи"
+read_more = "Читать дальше"
+reading_time = "{{ .count }} мин чтения"
+posts_count = "{{ .count }} статей"
+
+page_previous = "Назад"
+page_next = "Вперёд"
+
+toc_title = "Содержание"
+
+cta_title = "Готовы попробовать Keeply?"
+cta_subtitle = "Бесплатная загрузка. Начните за 30 секунд."
+cta_button = "Скачать Keeply"
+cta_sidebar_label = "Попробовать Keeply"
+cta_sidebar_title = "Подарите своим файлам машину времени"
+
+footer_site = "Главный сайт"
+footer_rss = "RSS-лента"
+footer_all_categories = "Все категории"
+footer_privacy = "Конфиденциальность"
+footer_buy = "Купить пожизненную лицензию"
+footer_tagline = "У ваших файлов есть история."
+
+empty_no_posts = "Статьи скоро появятся"
+empty_no_posts_sub = "Мы активно пишем. Заходите позже или "
+empty_try_keeply = "попробуйте Keeply"
+empty_no_posts_end = " прямо сейчас."
+
+breadcrumb_home = "Главная"
+by_author = "Автор:"

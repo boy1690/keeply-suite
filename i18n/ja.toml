@@ -1,0 +1,48 @@
+# Japanese i18n strings (flat format for Hugo go-i18n v2)
+
+nav_posts = "記事"
+nav_categories = "カテゴリ"
+nav_search = "検索"
+nav_download = "無料ダウンロード"
+
+hero_badge = "Keeply ブログ · 毎週更新"
+hero_title_1 = "ファイル管理の"
+hero_title_2 = "リアルストーリー。"
+hero_subtitle = "プロジェクトマネジメントチームのために設計されたファイル管理ソフト。専門用語も、ワークフローの変更も不要——毎日のオフィスの課題を解決します。"
+
+section_featured = "注目記事"
+section_latest = "最新記事"
+section_browse = "カテゴリで探す"
+section_related = "こちらもおすすめ"
+section_tags = "タグ"
+
+see_all = "すべて見る"
+read_more = "続きを読む"
+reading_time = "{{ .count }} 分で読める"
+posts_count = "{{ .count }} 件の記事"
+
+page_previous = "前へ"
+page_next = "次へ"
+
+toc_title = "目次"
+
+cta_title = "Keeply を試してみませんか？"
+cta_subtitle = "無料ダウンロード。30 秒で始められます。"
+cta_button = "Keeply をダウンロード"
+cta_sidebar_label = "Keeply を試す"
+cta_sidebar_title = "ファイルにタイムマシンを"
+
+footer_site = "メインサイト"
+footer_rss = "RSS フィード"
+footer_all_categories = "すべてのカテゴリ"
+footer_privacy = "プライバシーポリシー"
+footer_buy = "永久ライセンスを購入"
+footer_tagline = "あなたのファイルには物語がある。"
+
+empty_no_posts = "記事はもうすぐ公開されます"
+empty_no_posts_sub = "現在執筆中です。また見に来てください、または "
+empty_try_keeply = "Keeply を試す"
+empty_no_posts_end = " のもおすすめです。"
+
+breadcrumb_home = "ホーム"
+by_author = "著者："
