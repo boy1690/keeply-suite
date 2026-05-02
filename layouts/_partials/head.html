@@ -132,9 +132,14 @@
   <script defer src="{{ $clarityInit.RelPermalink }}" integrity="{{ $clarityInit.Data.Integrity }}" crossorigin="anonymous"></script>
 {{- end -}}
 
-{{- /* Stylesheet (SRI via Hugo fingerprint) */ -}}
-{{- $css := resources.Get "css/style.css" | resources.Fingerprint "sha384" -}}
-<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous" />
+{{- /* Inline stylesheet (Round B-1.2): eliminates the render-blocking
+       network round-trip for CSS. Tailwind purged output is ~5.5KB
+       gzipped — small enough to inline without significant HTML bloat,
+       gain is one fewer round-trip on the critical render path. CSP
+       `style-src 'self' 'unsafe-inline'` already allows inline style.
+       SRI is not applicable to inline content (no fetch happens). */ -}}
+{{- $css := resources.Get "css/style.css" -}}
+<style>{{ $css.Content | safeCSS }}</style>
 
 {{- /* JSON-LD (article / website).
        NOTE: Go html/template applies JS-string escaping to anything inside
