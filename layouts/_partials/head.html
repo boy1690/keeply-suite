@@ -93,6 +93,15 @@
   <link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ $.Site.Title }}" />
 {{- end -}}
 
+{{- /* Preload LCP cover image on single posts (T2.2.2 + T2.2.5: fetchpriority
+       + early discovery; firefox ignores fetchpriority silently). */ -}}
+{{- if and .IsPage .Params.image -}}
+  {{- $res := .Resources.GetMatch .Params.image -}}
+  {{- $src := .Params.image | absURL -}}
+  {{- if $res -}}{{- $src = $res.RelPermalink -}}{{- end -}}
+  <link rel="preload" as="image" href="{{ $src }}" fetchpriority="high" />
+{{- end -}}
+
 {{- /* Preload fonts */ -}}
 <link rel="preload" href="{{ "fonts/MPLUSRounded1c-Regular.woff2" | absURL }}" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="{{ "fonts/MPLUSRounded1c-Bold.woff2" | absURL }}" as="font" type="font/woff2" crossorigin />
