@@ -177,6 +177,13 @@ Pushing organizational memory onto human discipline is a known-broken design.
 **The question isn't how to enforce naming conventions better.
 It's whether your tool can do that job for you.**
 
+## Related articles
+
+- **[Shared folder version problems: the 83-hour micro-panic tax](/en/post/hidden-cost-shared-folders/)** —— The real cost of shared folders isn't lost files — it's the daily defensive-naming tax everyone pays.
+- **[Masters Thesis Version Control: The Diff You Forgot](/en/post/thesis-single-point-of-failure/)** —— Your thesis is one drive failure away from being gone, if you only have one copy.
+- **[Why your crew keeps opening last week's AutoCAD drawing](/en/post/autocad-wrong-version-crew/)** —— The crew keeps getting the old CAD because the office got the new version and didn't tell the field.
+- **[What the 3-2-1 backup rule doesn't cover in 2026](/en/post/3-2-1-backup-rule/)** —— 3-2-1 protects against disaster, not operator-error. Keeply builds 3-2-1 + version history into one tool.
+
 ---
 
 > About the author: Ting-Wei Tsao, founder of Keeply.

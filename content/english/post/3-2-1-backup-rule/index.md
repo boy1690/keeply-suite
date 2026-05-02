@@ -115,6 +115,10 @@ Yes. Keeply builds 3-2-1 into its location layer (local work copy + canonical + 
 
 Depends on how much your files matter. If losing them would hurt, yes. The criterion is "would losing this hurt." It has nothing to do with whether you're an individual or an enterprise.
 
+## See also
+
+The full pillar [file version management complete guide](/en/post/file-version-management-complete-guide/) breaks down 4 structural reasons your tool wasn't designed for keeping file history.
+
 ---
 
 In 2005, Peter Krogh designed 3-2-1 to protect against hard drives that drop on the floor.

@@ -122,6 +122,10 @@ Remember Wednesday, 3 p.m., the half-finished Americano at the coffee shop? You 
 
 [Get to know Keeply →](https://keeply.work)
 
+## See also
+
+The full pillar [file version management complete guide](/en/post/file-version-management-complete-guide/) breaks down 4 structural reasons your tool wasn't designed for keeping file history.
+
 ---
 
 ## Sources

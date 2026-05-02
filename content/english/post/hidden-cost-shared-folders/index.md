@@ -70,6 +70,10 @@ Remember that Thursday at 5:30 pm, hand hovering over a filename? You don't have
 
 [Meet your guardian →](https://keeply.work)
 
+## See also
+
+The full pillar [file version management complete guide](/en/post/file-version-management-complete-guide/) breaks down 4 structural reasons your tool wasn't designed for keeping file history.
+
 ---
 
 ## Sources

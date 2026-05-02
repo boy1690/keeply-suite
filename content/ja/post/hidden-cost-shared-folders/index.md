@@ -70,6 +70,10 @@ tags:
 
 [守り神に会う →](https://keeply.work)
 
+## 関連記事
+
+全体像は [ファイルバージョン管理 完全ガイド](/ja/post/file-version-management-complete-guide/) で 4 つの構造的理由を分解しています。
+
 ---
 
 ## 参考文献

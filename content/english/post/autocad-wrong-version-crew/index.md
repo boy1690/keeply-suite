@@ -132,6 +132,10 @@ A `.dwg` is not just a drawing. It's a snapshot of what design, the office, and 
 
 Worth giving each of your projects its own timeline?
 
+## See also
+
+The full pillar [file version management complete guide](/en/post/file-version-management-complete-guide/) breaks down 4 structural reasons your tool wasn't designed for keeping file history.
+
 ---
 
 Remember that 9:40 AM moment — the PM pulling up Thursday's revision, and your chest dropping? You don't have to be the version manager anymore. **Keeply: your file's guardian memory.** Remembers every save, every issued version, every snapshot before the old one gets overwritten. Lives inside your existing project folder — no new tools, no new habits for the crew. Construction fits especially well, because the line between office and field breaks on every single project.

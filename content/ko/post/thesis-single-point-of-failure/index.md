@@ -122,6 +122,10 @@ PDF는 결과예요. 타임라인은 과정이에요.
 
 [Keeply 만나러 가기 →](https://keeply.work)
 
+## 더 읽기
+
+전체 그림은 [파일 버전 관리 완전 가이드](/ko/post/file-version-management-complete-guide/)에서 4 가지 구조적 이유로 풀어냅니다.
+
 ---
 
 ## 참고 자료

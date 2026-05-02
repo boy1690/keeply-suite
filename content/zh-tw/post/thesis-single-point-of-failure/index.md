@@ -122,6 +122,10 @@ PDF 是結果。時間線是過程。
 
 [好好認識 Keeply →](https://keeply.work)
 
+## 延伸閱讀
+
+主篇 [檔案版本管理完整指南](/zh-tw/post/file-version-management-complete-guide/) 拆解 4 個結構性原因——為什麼工具就是沒設計給你這件事。
+
 ---
 
 ## 研究來源
