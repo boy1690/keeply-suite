@@ -1,7 +1,11 @@
 # Keeply Blog robots.txt
-# Explicit allowlist for social-media link-preview bots so OG cards
-# render on FB / Twitter / LinkedIn / LINE shares. AI training bots
-# are still disallowed.
+# Policy (split AI bot policy adopted 2026-05-02, per BWF audit T2.1):
+# - Allow search-engine indexing (default *)
+# - Allow social-media link-preview scrapers (OG cards on shares)
+# - Allow AI citation / live-retrieval bots (ChatGPT Search, Claude,
+#   Perplexity live citations) — these bring traffic via AI answers
+# - Disallow AI training bots (GPTBot, ClaudeBot, CCBot, Google-Extended,
+#   etc.) — content shouldn't enter model training corpora
 
 # --- Default: allow indexing for search engines ---
 User-agent: *
@@ -44,7 +48,30 @@ Allow: /
 User-agent: Pinterestbot
 Allow: /
 
+# --- AI citation / live-retrieval bots (explicitly welcomed) ---
+# These crawlers fetch live pages to cite in AI search answers — they
+# bring traffic; blocking them removes Keeply from AI-search visibility.
+# Distinct from training crawlers which absorb content into model weights.
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
 # --- AI training bots (disallowed) ---
+# These crawlers absorb content for model training. Blocking does NOT
+# affect AI search citation (different bots — see above).
+
 User-agent: GPTBot
 Disallow: /
 
@@ -72,6 +99,8 @@ Disallow: /
 User-agent: meta-externalagent
 Disallow: /
 
+# PerplexityBot is hybrid (training + live retrieval). Block the hybrid;
+# Perplexity-User handles live citation cleanly above.
 User-agent: PerplexityBot
 Disallow: /
 
