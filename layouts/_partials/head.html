@@ -106,11 +106,14 @@
   {{- end -}}
 {{- end -}}
 
-{{- /* Preload fonts — Regular only. Bold/Medium load via CSS @font-face when
-       needed; font-display: swap ensures fallback paints immediately and
-       swaps to webfont when ready, so dropping Bold preload doesn't delay
-       FCP. Frees bandwidth for LCP image on the critical render path. */ -}}
+{{- /* Preload Regular + Bold fonts. After Round B-1.3 inlined cover SVG,
+       there's no longer image-bandwidth competition; Bold preload restored
+       because H1 (LCP element on single posts after SVG inline) renders in
+       Bold weight. Without Bold preload, Lighthouse's LCP measurement was
+       waiting on the font path in the network dependency tree even with
+       font-display: swap. Medium weight stays lazy via CSS @font-face. */ -}}
 <link rel="preload" href="{{ "fonts/MPLUSRounded1c-Regular.woff2" | absURL }}" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="{{ "fonts/MPLUSRounded1c-Bold.woff2" | absURL }}" as="font" type="font/woff2" crossorigin />
 
 {{- /* Content Security Policy fallback (defence-in-depth; Cloudflare header
        CSP is authoritative). frame-ancestors / HSTS / Permissions-Policy are
