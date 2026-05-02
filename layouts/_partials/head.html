@@ -102,9 +102,11 @@
   <link rel="preload" as="image" href="{{ $src }}" fetchpriority="high" />
 {{- end -}}
 
-{{- /* Preload fonts */ -}}
+{{- /* Preload fonts — Regular only. Bold/Medium load via CSS @font-face when
+       needed; font-display: swap ensures fallback paints immediately and
+       swaps to webfont when ready, so dropping Bold preload doesn't delay
+       FCP. Frees bandwidth for LCP image on the critical render path. */ -}}
 <link rel="preload" href="{{ "fonts/MPLUSRounded1c-Regular.woff2" | absURL }}" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="{{ "fonts/MPLUSRounded1c-Bold.woff2" | absURL }}" as="font" type="font/woff2" crossorigin />
 
 {{- /* Content Security Policy fallback (defence-in-depth; Cloudflare header
        CSP is authoritative). frame-ancestors / HSTS / Permissions-Policy are
@@ -113,19 +115,21 @@
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 
 {{- /* Google Analytics 4 — externalised init (avoids 'unsafe-inline' in script-src).
-       Loader is async; init is a separate fingerprinted asset with SRI. */ -}}
+       Loader is async; init is `defer` so it executes after parse but before
+       DOMContentLoaded (analytics doesn't need to fire mid-parse). Removes
+       the init script from the render-blocking critical path. */ -}}
 {{- with site.Config.Services.GoogleAnalytics.ID -}}
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
   {{- $gaInit := resources.Get "js/ga-init.js" | resources.ExecuteAsTemplate "js/ga-init.js" . | resources.Fingerprint "sha384" -}}
-  <script src="{{ $gaInit.RelPermalink }}" integrity="{{ $gaInit.Data.Integrity }}" crossorigin="anonymous"></script>
+  <script defer src="{{ $gaInit.RelPermalink }}" integrity="{{ $gaInit.Data.Integrity }}" crossorigin="anonymous"></script>
 {{- end -}}
 
-{{- /* Microsoft Clarity — externalised init (mirrors GA pattern; SRI'd).
+{{- /* Microsoft Clarity — externalised init (mirrors GA pattern; defer'd).
        The IIFE injects www.clarity.ms/tag/{id}.js dynamically — no separate
        loader tag needed. */ -}}
 {{- with .Site.Params.clarityProjectID -}}
   {{- $clarityInit := resources.Get "js/clarity-init.js" | resources.ExecuteAsTemplate "js/clarity-init.js" . | resources.Fingerprint "sha384" -}}
-  <script src="{{ $clarityInit.RelPermalink }}" integrity="{{ $clarityInit.Data.Integrity }}" crossorigin="anonymous"></script>
+  <script defer src="{{ $clarityInit.RelPermalink }}" integrity="{{ $clarityInit.Data.Integrity }}" crossorigin="anonymous"></script>
 {{- end -}}
 
 {{- /* Stylesheet (SRI via Hugo fingerprint) */ -}}
