@@ -30,6 +30,26 @@ enableEmoji = true
   rssFullContent = true
   clarityProjectID = "wknecyjli8"
 
+  # Author identity for JSON-LD Person schema (BWF P1.13: real human + E-E-A-T).
+  # url: prefer /about page when it exists; falls back to GitHub for now.
+  # sameAs: append every owned profile (LinkedIn, X, etc.) as you create them.
+  [params.author]
+    name = "曹庭維"
+    jobTitle = "Founder"
+    url = "https://github.com/boy1690"
+    sameAs = ["https://github.com/boy1690"]
+
+  # Organization identity for JSON-LD Organization sameAs (Knowledge Graph).
+  # Append every owned brand-level URL: main site, social pages, LinkedIn
+  # company, X brand handle, etc. Personal accounts go in [params.author].
+  [params.organization]
+    name = "Keeply"
+    url = "https://keeply.work"
+    sameAs = [
+      "https://keeply.work",
+      "https://blog.keeply.work"
+    ]
+
   [params.footer]
     since = 2026
     customText = "Keeply — Your files have a story."
