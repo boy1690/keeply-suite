@@ -43,3 +43,4 @@ assets/jsconfig.json
 # Python bytecode (BWF lint scripts)
 __pycache__/
 *.pyc
+static/fonts/_full-backup/
