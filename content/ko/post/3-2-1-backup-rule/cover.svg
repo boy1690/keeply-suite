@@ -4,12 +4,12 @@
      Recipe: cost-hero — hero number + ironic file cards
      Layout: 左 hero「3-2-1」+ 右 3 張同名 file card（3 backups, all wrong）
      設計核心: 1985 → 2005 校正後，hero 數字 3-2-1 + tagline
-              「20 YEARS UNCHANGED. YOUR PAIN MOVED.」
+              「20 년 그대로. YOUR PAIN MOVED.」
               右側 3 張 file card 全是 proposal_v7_FINAL.psd
               視覺諷刺：3 份備份保護了同一個錯版。
      ============================================================= -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none"
-     font-family="'Inter','Noto Sans TC','PingFang TC','Microsoft JhengHei',system-ui,sans-serif">
+     font-family="'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif">
 
   <defs>
     <linearGradient id="grad-indigo" x1="0" y1="0" x2="1" y2="1">
@@ -46,7 +46,7 @@
 
   <!-- Eyebrow top -->
   <g transform="translate(120, 100)">
-    <text x="0" y="0" font-size="15" font-weight="700" fill="#4338CA" letter-spacing="3">BACKUP STRATEGY · EDITORIAL</text>
+    <text x="0" y="0" font-size="15" font-weight="700" fill="#4338CA" letter-spacing="3">백업 전략 · EDITORIAL</text>
   </g>
 
   <!-- Hero number "3-2-1" -->
@@ -56,8 +56,8 @@
 
   <!-- Hero subtitle (amber accent on "PAIN MOVED") -->
   <g transform="translate(120, 480)">
-    <text x="0" y="0" font-size="34" font-weight="800" fill="#312E81" letter-spacing="0.5">20 YEARS UNCHANGED.</text>
-    <text x="0" y="48" font-size="34" font-weight="800" fill="#312E81" letter-spacing="0.5">YOUR <tspan fill="#F59E0B">PAIN MOVED</tspan>.</text>
+    <text x="0" y="0" font-size="34" font-weight="800" fill="#312E81" letter-spacing="0.5">20 년 그대로.</text>
+    <text x="0" y="48" font-size="34" font-weight="800" fill="#312E81" letter-spacing="0.5">고민은 <tspan fill="#F59E0B">바뀌었다</tspan>.</text>
   </g>
 
   <!-- Right side: 3 file cards (visual irony) -->
@@ -68,7 +68,7 @@
       <rect x="0" y="0" width="6" height="70" fill="url(#grad-amber)" rx="2"/>
       <use href="#doc-icon-amber" x="24" y="17" width="32" height="36"/>
       <text x="72" y="44" font-size="20" font-weight="700" fill="#312E81" font-family="'JetBrains Mono','Fira Code',ui-monospace,monospace">proposal_v7_FINAL.psd</text>
-      <text x="430" y="44" font-size="13" font-weight="700" fill="#F59E0B" letter-spacing="1.5">LATEST</text>
+      <text x="430" y="44" font-size="13" font-weight="700" fill="#F59E0B" letter-spacing="1.5">최신</text>
     </g>
     <!-- Card 2 -->
     <g transform="translate(0, 90)" filter="url(#soft-shadow)">
@@ -76,7 +76,7 @@
       <rect x="0" y="0" width="6" height="70" fill="url(#grad-amber)" rx="2"/>
       <use href="#doc-icon-amber" x="24" y="17" width="32" height="36"/>
       <text x="72" y="44" font-size="20" font-weight="700" fill="#312E81" font-family="'JetBrains Mono','Fira Code',ui-monospace,monospace">proposal_v7_FINAL.psd</text>
-      <text x="430" y="44" font-size="13" font-weight="700" fill="#F59E0B" letter-spacing="1.5">LATEST</text>
+      <text x="430" y="44" font-size="13" font-weight="700" fill="#F59E0B" letter-spacing="1.5">최신</text>
     </g>
     <!-- Card 3 -->
     <g transform="translate(0, 180)" filter="url(#soft-shadow)">
@@ -84,24 +84,24 @@
       <rect x="0" y="0" width="6" height="70" fill="url(#grad-amber)" rx="2"/>
       <use href="#doc-icon-amber" x="24" y="17" width="32" height="36"/>
       <text x="72" y="44" font-size="20" font-weight="700" fill="#312E81" font-family="'JetBrains Mono','Fira Code',ui-monospace,monospace">proposal_v7_FINAL.psd</text>
-      <text x="430" y="44" font-size="13" font-weight="700" fill="#F59E0B" letter-spacing="1.5">LATEST</text>
+      <text x="430" y="44" font-size="13" font-weight="700" fill="#F59E0B" letter-spacing="1.5">최신</text>
     </g>
 
     <!-- Card group annotation -->
     <g transform="translate(0, 290)">
-      <text x="0" y="0" font-size="16" font-weight="600" fill="#4338CA" opacity="0.7" letter-spacing="0.5">3 backups · all the wrong version</text>
+      <text x="0" y="0" font-size="16" font-weight="600" fill="#4338CA" opacity="0.7" letter-spacing="0.5">백업 3 개 · 모두 잘못된 버전</text>
     </g>
   </g>
 
   <!-- Bottom subtitle (universal English) -->
   <g transform="translate(120, 720)">
-    <text x="0" y="0" font-size="30" font-weight="700" fill="#312E81">What it covers,</text>
-    <text x="0" y="42" font-size="30" font-weight="700" fill="#312E81">what it <tspan fill="#F59E0B">misses</tspan>.</text>
+    <text x="0" y="0" font-size="30" font-weight="700" fill="#312E81">막을 수 있는 것,</text>
+    <text x="0" y="42" font-size="30" font-weight="700" fill="#312E81"><tspan fill="#F59E0B">막지 못하는</tspan> 것.</text>
   </g>
 
   <!-- Bottom note (metadata, all caps tracking) -->
   <g transform="translate(120, 845)">
-    <text x="0" y="0" font-size="13" font-weight="600" fill="#4338CA" opacity="0.6" letter-spacing="2">PETER KROGH · 2005 → 2026 · BACKUP RULE EXPLAINED</text>
+    <text x="0" y="0" font-size="13" font-weight="600" fill="#4338CA" opacity="0.6" letter-spacing="2">PETER KROGH · 2005 → 2026 · 백업 원칙 풀어보기</text>
   </g>
 
   <!-- Keeply lockup bottom-right -->

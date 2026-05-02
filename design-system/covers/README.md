@@ -30,7 +30,32 @@ design-system/covers/
 
 5. 跑 `bash design-system/covers/generate-png.sh {slug}` 產 PNG（headless Chrome）
    - 全站批次：`bash design-system/covers/generate-png.sh`
-6. 多語言：每個 locale 各自一份 cover.svg（共用符號，文字各自在地化）
+6. **多語言（強制）**：每個 launch locale 各自一份 cover.svg，**文字翻成當地語言** + font-family 換成該 locale 對應字型鏈
+
+## ⚠️ Per-locale 翻譯強制規則（2026-05-02）
+
+**禁止 universal English cover**（早期 file-version-management-complete-guide
+是反例，待補翻）。每個 launch locale `content/{locale}/post/{slug}/cover.svg`
+**必須** 是該 locale 的翻譯版本：
+
+| 元素 | 規則 |
+| --- | --- |
+| eyebrow（含 EDITORIAL）| 前綴翻譯，「EDITORIAL」可保留作品牌錨 |
+| Hero subtitle | 翻譯（含 amber highlight 子字串） |
+| File card 標籤（如 LATEST / 最新）| 翻譯 |
+| Cards caption | 翻譯 |
+| Bottom subtitle（含 amber）| 翻譯 |
+| Bottom note（PETER KROGH · 2005 → 2026 · X）| 末段「X」翻譯 |
+| 內部 metadata（P1 CLUSTER / 5 LOCALES）| 可保留 universal English |
+| Filename strings（proposal_v7_FINAL.psd）| 保留 universal——檔名跨文化都認得 |
+| font-family | 換成 locale 對應字型鏈（zh-TW: Noto Sans TC / zh-CN: Noto Sans SC / ja: Noto Sans JP / ko: Noto Sans KR / en: Inter） |
+
+**為什麼**：讀者打開 zh-TW 頁面看到全英文 cover = 認知裂縫，覺得文章是翻譯的。
+記憶 `feedback_cover_per_locale.md` 由 user 2026-05-02 觀察 3-2-1-backup-rule
+zh-TW 上線後留存。
+
+**實作建議**：用 Python 腳本（`design-system/covers/i18n-apply.py` 既有 pattern
+為參考）讀 zh-TW master + 套 i18n 字串產 4 locale variant，避免 5 份 SVG 手寫。
 
 ## 零件清單
 
