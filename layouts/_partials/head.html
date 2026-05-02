@@ -140,6 +140,7 @@
     "author": {
       "@type": "Person",
       "name": {{ .Site.Params.author.name | jsonify | safeJS }},
+      "alternateName": {{ .Site.Params.author.alternateName | jsonify | safeJS }},
       "jobTitle": {{ .Site.Params.author.jobTitle | jsonify | safeJS }},
       "url": {{ .Site.Params.author.url | jsonify | safeJS }},
       "sameAs": {{ .Site.Params.author.sameAs | jsonify | safeJS }}

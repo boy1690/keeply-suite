@@ -34,7 +34,8 @@ enableEmoji = true
   # url: prefer /about page when it exists; falls back to GitHub for now.
   # sameAs: append every owned profile (LinkedIn, X, etc.) as you create them.
   [params.author]
-    name = "曹庭維"
+    name = "Tsao Ting Wei"
+    alternateName = "曹庭維"
     jobTitle = "Founder"
     url = "https://github.com/boy1690"
     sameAs = ["https://github.com/boy1690"]
