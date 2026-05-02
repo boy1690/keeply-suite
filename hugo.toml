@@ -28,6 +28,7 @@ enableEmoji = true
   mainSections = ["post"]
   featuredImageField = "image"
   rssFullContent = true
+  clarityProjectID = "wknecyjli8"
 
   [params.footer]
     since = 2026

@@ -100,7 +100,7 @@
 {{- /* Content Security Policy fallback (defence-in-depth; Cloudflare header
        CSP is authoritative). frame-ancestors / HSTS / Permissions-Policy are
        header-only and live in the Cloudflare Transform Rule. */ -}}
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com; font-src 'self'; connect-src 'self' https://docs.google.com https://*.google-analytics.com https://*.analytics.google.com https://cloudflareinsights.com; form-action 'self' https://docs.google.com; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://static.cloudflareinsights.com https://www.clarity.ms; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com https://*.clarity.ms; font-src 'self'; connect-src 'self' https://docs.google.com https://*.google-analytics.com https://*.analytics.google.com https://cloudflareinsights.com https://*.clarity.ms; form-action 'self' https://docs.google.com; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 
 {{- /* Google Analytics 4 — externalised init (avoids 'unsafe-inline' in script-src).
@@ -109,6 +109,14 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
   {{- $gaInit := resources.Get "js/ga-init.js" | resources.ExecuteAsTemplate "js/ga-init.js" . | resources.Fingerprint "sha384" -}}
   <script src="{{ $gaInit.RelPermalink }}" integrity="{{ $gaInit.Data.Integrity }}" crossorigin="anonymous"></script>
+{{- end -}}
+
+{{- /* Microsoft Clarity — externalised init (mirrors GA pattern; SRI'd).
+       The IIFE injects www.clarity.ms/tag/{id}.js dynamically — no separate
+       loader tag needed. */ -}}
+{{- with .Site.Params.clarityProjectID -}}
+  {{- $clarityInit := resources.Get "js/clarity-init.js" | resources.ExecuteAsTemplate "js/clarity-init.js" . | resources.Fingerprint "sha384" -}}
+  <script src="{{ $clarityInit.RelPermalink }}" integrity="{{ $clarityInit.Data.Integrity }}" crossorigin="anonymous"></script>
 {{- end -}}
 
 {{- /* Stylesheet (SRI via Hugo fingerprint) */ -}}
