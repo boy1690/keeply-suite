@@ -14,6 +14,7 @@ image: cover.svg
 og_image: cover.png
 draft: false
 status: approved
+cta_topic: install
 ---
 
 # Wie du Keeply nutzt: 30 Funktionen überspringen, mit 2 Aktionen einsteigen

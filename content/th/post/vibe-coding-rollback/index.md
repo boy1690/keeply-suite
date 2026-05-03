@@ -17,6 +17,7 @@ draft: false
 status: approved
 bwf_version_at_draft: v0.2.11
 flow: v0.3 4-step (auto draft)
+cta_topic: versioning
 ---
 
 # Vibe Coding หลุดราง? หนึ่งการกระทำเพื่อกู้คืนเวอร์ชันที่ทำงานได้

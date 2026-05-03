@@ -15,6 +15,7 @@ image: cover.svg
 og_image: cover.png
 draft: false
 status: approved
+cta_topic: versioning
 ---
 
 # ¿Vibe Coding descarrilado? Una acción para volver a una versión que funciona

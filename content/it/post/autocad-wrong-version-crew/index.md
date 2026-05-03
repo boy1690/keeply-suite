@@ -12,6 +12,7 @@ tags:
   - Edilizia
   - Controllo versioni
   - Gestione di cantiere
+cta_topic: versioning
 ---
 
 Sono le 9:40 del mattino. Passi finalmente dall'ufficio e fai scorrere con disinvoltura le foto del cantiere di ieri davanti al PM — la sezione di drenaggio acque piovane dove è stato gettato il calcestruzzo, i telai a getto pieno tutti annegati nella soletta, pronti per le griglie.

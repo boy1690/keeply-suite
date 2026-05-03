@@ -12,6 +12,7 @@ tags:
   - Construcción
   - Control de versiones
   - Gestión de obra
+cta_topic: versioning
 ---
 
 Son las 9:40 de la mañana. Por fin pasas por la oficina y le enseñas al PM las fotos de obra de ayer mientras desplazas con el dedo: el tramo del colector pluvial donde ya se hormigonó, los marcos embebidos en la losa, listos para las rejillas.

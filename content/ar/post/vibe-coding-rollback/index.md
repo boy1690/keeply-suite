@@ -17,6 +17,7 @@ draft: false
 status: approved
 bwf_version_at_draft: v0.2.11
 flow: v0.3 4-step (auto draft)
+cta_topic: versioning
 ---
 
 # Vibe Coding خرج عن المسار؟ حركة واحدة للعودة إلى نسخة تعمل

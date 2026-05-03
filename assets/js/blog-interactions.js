@@ -33,4 +33,65 @@
     window.addEventListener('scroll', onTocScroll, { passive: true });
     onTocScroll();
   }
+
+  // Sticky bottom CTA (mobile only). Hidden by default via translate-y-full
+  // class in the partial; shown when scrolled past 30% AND bottom CTA section
+  // is not currently in viewport. Dismissable via X button, persisted 7 days.
+  var stickyBar = document.getElementById('sticky-cta-mobile');
+  var stickyDismiss = document.getElementById('sticky-cta-dismiss');
+  if (stickyBar && stickyDismiss) {
+    var DISMISS_KEY = 'keeply_sticky_cta_dismissed_v1';
+    var DISMISS_TTL_MS = 7 * 86400 * 1000;
+    var SHOW_AFTER_PCT = 0.30;
+    var dismissed = false;
+    try {
+      var raw = localStorage.getItem(DISMISS_KEY);
+      if (raw) {
+        var ts = parseInt(raw, 10);
+        if (!isNaN(ts) && (Date.now() - ts) < DISMISS_TTL_MS) dismissed = true;
+      }
+    } catch (e) { /* private mode, treat as not dismissed */ }
+
+    if (!dismissed) {
+      var bottomVisible = false;
+      var bottomCta = document.querySelector('section.cta-bottom');
+      if ('IntersectionObserver' in window && bottomCta) {
+        new IntersectionObserver(function (entries) {
+          bottomVisible = entries[0].isIntersecting;
+          updateSticky();
+        }, { threshold: 0.1 }).observe(bottomCta);
+      }
+
+      var stickyShown = false;
+      function showSticky() {
+        if (stickyShown) return;
+        stickyBar.classList.remove('translate-y-full');
+        stickyBar.classList.add('translate-y-0');
+        stickyShown = true;
+      }
+      function hideSticky() {
+        if (!stickyShown) return;
+        stickyBar.classList.add('translate-y-full');
+        stickyBar.classList.remove('translate-y-0');
+        stickyShown = false;
+      }
+      function updateSticky() {
+        var scrolled = window.scrollY || document.documentElement.scrollTop;
+        var docH = document.documentElement.scrollHeight - window.innerHeight;
+        var pct = docH > 0 ? scrolled / docH : 0;
+        if (bottomVisible || pct < SHOW_AFTER_PCT) hideSticky();
+        else showSticky();
+      }
+
+      stickyDismiss.addEventListener('click', function () {
+        hideSticky();
+        stickyBar.style.display = 'none';
+        try { localStorage.setItem(DISMISS_KEY, String(Date.now())); } catch (e) { /* ignore */ }
+      });
+
+      window.addEventListener('scroll', updateSticky, { passive: true });
+      window.addEventListener('resize', updateSticky, { passive: true });
+      updateSticky();
+    }
+  }
 })();

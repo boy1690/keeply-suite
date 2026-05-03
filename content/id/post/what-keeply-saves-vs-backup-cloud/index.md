@@ -15,6 +15,7 @@ image: cover.svg
 og_image: cover.png
 draft: false
 status: approved
+cta_topic: backup
 ---
 
 # Apa yang sebenarnya disimpan Keeply? Bedanya dengan alat backup dan cloud

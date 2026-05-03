@@ -10,6 +10,7 @@ locales: ["en", "zh-TW", "zh-CN", "ja", "pt"]
 slug: install-keeply-windows-mac
 image: cover.svg
 og_image: cover.png
+cta_topic: install
 ---
 
 > "Cliquei duas vezes, apareceu a tela azul, e eu achei que era vírus e fechei."

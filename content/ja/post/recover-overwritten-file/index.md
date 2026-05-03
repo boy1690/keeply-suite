@@ -13,6 +13,7 @@ og_image: cover.png
 locales_required: [en, zh-TW, zh-CN, ja, ko]
 market_strategy: single-market-ja-primary
 ranking_locales: [ja, ko]
+cta_topic: recovery
 ---
 
 # 上書き 復元の限界：AutoRecover が消えた後でも間に合う方法

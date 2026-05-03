@@ -18,6 +18,7 @@ status: approved
 bwf_version_at_draft: v0.2.11
 flow: v0.3 4-step (auto draft)
 derived_from: zh-TW
+cta_topic: versioning
 ---
 
 # Vibe Coding 失控了？1 个动作回到上一个能跑的版本

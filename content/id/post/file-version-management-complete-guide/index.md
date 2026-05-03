@@ -14,6 +14,7 @@ tags:
   - pekerja pengetahuan
 image: cover.svg
 og_image: cover.png
+cta_topic: versioning
 ---
 
 > Bukan kamu yang kurang disiplin. Alatmu memang tidak dirancang untuk ini.

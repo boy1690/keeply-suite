@@ -15,6 +15,7 @@ tags:
   - 知識工作者
 image: cover.svg
 og_image: cover.png
+cta_topic: versioning
 ---
 
 > 不是你不夠紀律。是你的工具沒設計這個功能。

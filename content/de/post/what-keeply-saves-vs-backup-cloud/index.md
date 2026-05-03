@@ -16,6 +16,7 @@ og_image: cover.png
 draft: false
 status: approved
 pillar_parent: keeply-getting-started-from-zero
+cta_topic: backup
 ---
 
 # Was speichert Keeply eigentlich? Wie es sich von Backup- und Cloud-Tools unterscheidet

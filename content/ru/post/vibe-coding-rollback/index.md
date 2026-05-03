@@ -14,6 +14,7 @@ motif: "AI рвётся вперёд vs ты можешь его вернуть"
 image: cover.svg
 og_image: cover.png
 draft: false
+cta_topic: versioning
 ---
 
 # Vibe coding пошёл не туда? Одно действие — и ты в рабочей версии

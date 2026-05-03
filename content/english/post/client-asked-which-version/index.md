@@ -13,6 +13,7 @@ og_image: cover.png
 locales_required: [en, zh-TW, zh-CN, ja, ko]
 market_strategy: hybrid
 ranking_locales: [en, ko]
+cta_topic: versioning
 ---
 
 # Word's version history doesn't cover deliveries 3 months ago

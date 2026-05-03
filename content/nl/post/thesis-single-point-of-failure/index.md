@@ -12,6 +12,7 @@ tags:
   - Versiebeheer
   - Promovendi
   - Bestandsback-up
+cta_topic: recovery
 ---
 
 Woensdag, 15:00. Je zit in een koffietentje; je americano is half vol. Een bericht van je begeleider verschijnt: „Je vorige versie van Hoofdstuk 3 had het sterkere argument — waar is die gebleven?"

@@ -11,6 +11,7 @@ tags:
   - thư mục dùng chung
   - lịch sử phiên bản
   - cộng tác
+cta_topic: versioning
 ---
 
 Thứ Năm, 17:30. Văn phòng dần yên tĩnh. Bạn đã vẽ xong mặt bằng atrium. Bạn có thể về đúng giờ, ăn một bữa tối tử tế. Nhưng tay bạn treo lơ lửng trên chuột, nhìn chằm chằm vào thư mục.

@@ -11,6 +11,7 @@ tags:
   - gedeelde mappen
   - versiegeschiedenis
   - samenwerking
+cta_topic: versioning
 ---
 
 Het is donderdagmiddag 17:30. Het kantoor wordt stiller. Je hebt de plattegrond van het atrium af. Je zou op tijd kunnen vertrekken, een fatsoenlijk diner pakken. Maar je hand blijft hangen boven de muis, starend naar de map.

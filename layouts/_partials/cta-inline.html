@@ -1,0 +1,55 @@
+{{- /* Inline mid-article CTA partial (shared by manual shortcode + auto render-hook).
+       Caller passes:
+         .Page          — the page context
+         .position      — 1-indexed CTA position (1 = first inline, 2 = second, ...)
+         .pitchOverride — optional, from shortcode `pitch=` arg
+       Pitch resolution priority (first match wins):
+         1. shortcode arg `pitch`              (per-call manual override)
+         2. frontmatter `cta_inline_pitch`     (single override for whole article)
+         3. data/cta-pools.yml[topic][locale][variant]   (content-aware pool)
+         4. data/cta-pools.yml[default][locale][variant] (catch-all pool)
+         5. i18n cta_inline_pitch_{soft,medium,hard}     (last resort)
+       Variant cycles soft → medium → hard by H2 position.
+       Visual: yellow left-border with white CTA button (CSS override in input.css
+       defeats .prose-keeply <a> rule). */ -}}
+{{- $position := .position | default 1 -}}
+{{- $variantIdx := mod (sub $position 1) 3 -}}
+{{- $variantNames := slice "soft" "medium" "hard" -}}
+{{- $variant := index $variantNames $variantIdx -}}
+
+{{- /* Locale lookup key — match keys in data/cta-pools.yml */ -}}
+{{- $locale := .Page.Language.Lang -}}
+{{- $localeKey := $locale -}}
+{{- if eq $locale "zh-tw" -}}{{- $localeKey = "zh-TW" -}}{{- end -}}
+{{- if eq $locale "zh-cn" -}}{{- $localeKey = "zh-CN" -}}{{- end -}}
+
+{{- /* Resolve from data/cta-pools.yml[topic][locale][variant] with fallbacks */ -}}
+{{- $topic := .Page.Params.cta_topic | default "default" -}}
+{{- $pools := index site.Data "cta-pools" -}}
+{{- $topicPool := index $pools $topic -}}
+{{- if not $topicPool -}}{{- $topicPool = index $pools "default" -}}{{- end -}}
+{{- $localePool := index $topicPool $localeKey -}}
+{{- if not $localePool -}}{{- $localePool = index $topicPool "en" -}}{{- end -}}
+{{- $poolPitch := index $localePool $variant -}}
+
+{{- /* Final i18n fallback if data lookup somehow missed */ -}}
+{{- if not $poolPitch -}}
+  {{- $i18nKey := printf "cta_inline_pitch_%s" $variant -}}
+  {{- $poolPitch = i18n $i18nKey -}}
+  {{- if not $poolPitch -}}{{- $poolPitch = i18n "cta_inline_pitch" -}}{{- end -}}
+{{- end -}}
+
+{{- $pitch := or .pitchOverride .Page.Params.cta_inline_pitch $poolPitch -}}
+{{- $subtitle := i18n "cta_inline_subtitle" -}}
+{{- $cta := i18n "nav_download" -}}
+<aside class="my-10 not-prose" data-cta="inline" data-cta-variant="{{ $variant }}" data-cta-topic="{{ $topic }}">
+  <div class="bg-gradient-to-r from-brand-50 to-amber-50/40 border-l-4 border-amber-400 rounded-r-2xl p-5 md:p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+    <div class="flex-1 min-w-0">
+      <p class="text-base font-semibold text-gray-900 leading-snug">{{ $pitch }}</p>
+      <p class="text-sm text-gray-500 mt-1">{{ $subtitle }}</p>
+    </div>
+    <a href="https://keeply.work/" class="flex-shrink-0 bg-brand-600 hover:bg-brand-700 text-white font-bold px-5 py-2.5 rounded-full text-sm whitespace-nowrap transition-all hover:shadow-lg hover:shadow-brand-600/25">
+      {{ $cta }} →
+    </a>
+  </div>
+</aside>

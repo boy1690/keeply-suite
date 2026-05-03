@@ -11,6 +11,7 @@ tags: ["cronologia versioni", "AutoRecover", "OneDrive", "delivery-note", "opera
 image: cover.svg
 og_image: cover.png
 locales_required: [en, zh-TW, zh-CN, ja, ko, it]
+cta_topic: versioning
 ---
 
 # La cronologia versioni di Word non copre le consegne di 3 mesi fa

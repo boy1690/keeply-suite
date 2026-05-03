@@ -14,6 +14,7 @@ tags:
   - kenniswerkers
 image: cover.svg
 og_image: cover.png
+cta_topic: versioning
 ---
 
 > Het ligt niet aan jou. Je tool is hier gewoon nooit voor ontworpen.

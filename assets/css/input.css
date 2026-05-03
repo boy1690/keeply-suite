@@ -160,6 +160,19 @@
     font-weight: 700;
   }
 
+  /* Inline CTA inside prose body — override .prose-keeply a defaults
+     (which color all <a> brand-600 + add underline; collides with our
+     CTA button's brand-600 background → invisible button text). */
+  .prose-keeply [data-cta="inline"] a,
+  .article-content [data-cta="inline"] a {
+    color: white;
+    text-decoration: none;
+  }
+  .prose-keeply [data-cta="inline"] a:hover,
+  .article-content [data-cta="inline"] a:hover {
+    text-decoration: none;
+  }
+
   /* Sidebar TOC */
   .toc-fixed { position: sticky; top: 6rem; }
   .toc-fixed a {

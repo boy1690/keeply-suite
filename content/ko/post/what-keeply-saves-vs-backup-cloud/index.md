@@ -22,6 +22,7 @@ strategic_fit:
   product_fit: "★★★★★ Distinguishes Keeply from backup vs cloud"
   icp_fit: "★★★★ Most common newcomer evaluation question"
   conversion_path: "★★★★★ Reader walks away knowing why Keeply doesn't duplicate Time Machine"
+cta_topic: backup
 ---
 
 # Keeply는 실제로 무엇을 보관하나요? 백업·클라우드 도구와 어떻게 다른가요

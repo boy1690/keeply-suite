@@ -10,6 +10,7 @@ locales: ["en", "zh-TW", "zh-CN", "ja", "id"]
 slug: install-keeply-windows-mac
 image: cover.svg
 og_image: cover.png
+cta_topic: install
 ---
 
 > "Aku double-click, layar biru muncul, lalu kupikir itu virus dan langsung kututup."

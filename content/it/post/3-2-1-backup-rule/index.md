@@ -11,6 +11,7 @@ tags: ["3-2-1 backup", "backup dati", "controllo versione", "operator-error"]
 image: cover.svg
 og_image: cover.png
 locales_required: [en, zh-TW, zh-CN, ja, ko, it]
+cta_topic: backup
 ---
 
 # La regola 3-2-1 del backup: 20 anni dopo, basta ancora nel 2026?

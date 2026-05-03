@@ -10,6 +10,7 @@ locales: ["en", "zh-TW", "zh-CN", "ja"]
 slug: install-keeply-windows-mac
 image: cover.svg
 og_image: cover.png
+cta_topic: install
 ---
 
 > "मैंने डबल-क्लिक किया, ब्लू स्क्रीन आ गई, मैंने सोचा यह वायरस है और बंद कर दिया।"

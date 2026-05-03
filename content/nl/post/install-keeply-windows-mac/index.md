@@ -10,6 +10,7 @@ locales: ["en", "zh-TW", "zh-CN", "ja", "nl"]
 slug: install-keeply-windows-mac
 image: cover.svg
 og_image: cover.png
+cta_topic: install
 ---
 
 > „Ik heb dubbelgeklikt, het blauwe scherm verscheen, en ik dacht dat het een virus was en sloot het."

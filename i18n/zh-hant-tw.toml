@@ -44,3 +44,10 @@ empty_no_posts_end = "。"
 
 breadcrumb_home = "首頁"
 by_author = "作者："
+
+cta_inline_pitch = "讓 Keeply 替你保留每個版本，免得下次又找不到。"
+cta_inline_subtitle = "免費 · 30 秒裝好"
+
+cta_inline_pitch_soft = "如果今天只能做一件事，就是讓工具替你記下每個版本。"
+cta_inline_pitch_medium = "免費 + 30 秒裝好。沒理由不試一次。"
+cta_inline_pitch_hard = "還在覆蓋舊版？這 30 秒可省你下次的找檔時間。"

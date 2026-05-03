@@ -16,6 +16,7 @@ draft: false
 status: approved
 bwf_version_at_draft: v0.2.10
 voice_calibration_round: "user round 2 套用 + UI-grounded walk-through"
+cta_topic: install
 ---
 
 # 檔案記事軟體 Keeply 怎麼用：不用學 30 個功能，2 個動作就上手

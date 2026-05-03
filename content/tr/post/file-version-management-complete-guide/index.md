@@ -14,6 +14,7 @@ tags:
   - bilgi çalışanları
 image: cover.svg
 og_image: cover.png
+cta_topic: versioning
 ---
 
 > Sorun senin disiplinsizliğin değil. Kullandığın araç bu iş için tasarlanmamış.

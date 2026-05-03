@@ -11,6 +11,7 @@ tags:
   - dossiers partagés
   - historique de versions
   - collaboration
+cta_topic: versioning
 ---
 
 Il est 17h30 un jeudi. Le bureau se vide doucement. Vous avez terminé le plan de l'atrium. Vous pourriez partir à l'heure, profiter d'un vrai dîner. Mais votre main reste suspendue sur la souris, les yeux fixés sur le dossier.

@@ -14,6 +14,7 @@ tags:
   - knowledge work
 image: cover.svg
 og_image: cover.png
+cta_topic: versioning
 ---
 
 > Non è colpa tua se non sei abbastanza disciplinato. Il tuo strumento non è stato progettato per questo.

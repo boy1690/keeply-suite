@@ -15,6 +15,7 @@ draft: false
 status: approved
 bwf_version_at_draft: v0.2.11
 voice_calibration_round: "user round 1+2+3 applied + UI-grounded walk-through"
+cta_topic: install
 ---
 
 # Keeply कैसे इस्तेमाल करें: 30 features छोड़िए, 2 actions से शुरू कीजिए

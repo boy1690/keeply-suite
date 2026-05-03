@@ -10,6 +10,7 @@ categories: ["백업 전략"]
 tags: ["3-2-1 백업", "데이터 백업", "버전 관리", "operator-error"]
 image: cover.svg
 og_image: cover.png
+cta_topic: backup
 ---
 
 # 2026년, 3-2-1 백업이 다루지 못하는 것

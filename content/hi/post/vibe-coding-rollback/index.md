@@ -16,6 +16,7 @@ draft: false
 status: approved
 bwf_version_at_draft: v0.2.11
 flow: v0.3 4-step (auto draft)
+cta_topic: versioning
 ---
 
 # Vibe Coding पटरी से उतर गया? एक action में चलते हुए वर्शन पर रिस्टोर कीजिए

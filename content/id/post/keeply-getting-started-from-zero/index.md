@@ -14,6 +14,7 @@ image: cover.svg
 og_image: cover.png
 draft: false
 status: approved
+cta_topic: install
 ---
 
 # Cara pakai Keeply: lewati 30 fitur, mulai dengan 2 aksi

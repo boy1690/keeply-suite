@@ -12,6 +12,7 @@ tags:
   - Bouw
   - Versiebeheer
   - Bouwplaatsmanagement
+cta_topic: versioning
 ---
 
 Het is 9:40 uur. Je komt eindelijk langs het kantoor en swipet terloops door de foto's van de bouwplaats van gisteren voor de PM — het stuk regenwaterafvoer waar het beton al is gestort, de inbetonneerde frames netjes in de plaat, klaar voor de roosters.

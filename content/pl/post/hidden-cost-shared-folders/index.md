@@ -11,6 +11,7 @@ tags:
   - foldery współdzielone
   - kontrola wersji
   - współpraca
+cta_topic: versioning
 ---
 
 Czwartek, 17:30. Biuro powoli cichnie. Rzut atrium już skończony. Mógłbyś wyjść punktualnie, zjeść porządną kolację. Ale twoja ręka zawisła nad myszką, wpatrzona w folder.

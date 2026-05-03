@@ -10,6 +10,7 @@ locales: ["en", "zh-TW", "zh-CN", "ja", "tr"]
 slug: install-keeply-windows-mac
 image: cover.svg
 og_image: cover.png
+cta_topic: install
 ---
 
 > "Çift tıkladım, mavi ekran çıktı, virüs sandım ve kapattım."

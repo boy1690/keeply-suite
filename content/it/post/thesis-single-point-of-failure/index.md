@@ -12,6 +12,7 @@ tags:
   - Controllo versioni
   - Studenti universitari
   - Backup file
+cta_topic: recovery
 ---
 
 Mercoledì, ore 15. Sei in un bar; il tuo americano è mezzo pieno. Salta fuori un messaggio del tuo relatore: "La tua versione precedente del Capitolo 3 aveva l'argomentazione più forte — dov'è finita?"

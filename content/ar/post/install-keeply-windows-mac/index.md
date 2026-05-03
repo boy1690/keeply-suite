@@ -10,6 +10,7 @@ locales: ["en", "zh-TW", "zh-CN", "ja"]
 slug: install-keeply-windows-mac
 image: cover.svg
 og_image: cover.png
+cta_topic: install
 ---
 
 > «نقرت نقرتين، ظهرت الشاشة الزرقاء، فظننت أنه فيروس وأغلقته.»

@@ -14,6 +14,7 @@ tags:
   - работа с знаниями
 image: cover.svg
 og_image: cover.png
+cta_topic: versioning
 ---
 
 > Дело не в твоей дисциплине. Твой инструмент просто не был рассчитан на это.

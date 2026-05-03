@@ -14,6 +14,7 @@ tags:
   - العمل المعرفي
 image: cover.svg
 og_image: cover.png
+cta_topic: versioning
 ---
 
 > ليس المشكلة في انضباطك. أداتك لم تُصمَّم لهذا الغرض أصلاً.

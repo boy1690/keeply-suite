@@ -17,6 +17,7 @@ draft: false
 status: approved
 bwf_version_at_draft: v0.2.11
 flow: v0.3 4-step (auto draft)
+cta_topic: versioning
 ---
 
 # Vibe Coding이 궤도를 이탈했나요? 동작 한 번으로 작동하던 버전으로 복원

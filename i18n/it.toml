@@ -46,3 +46,10 @@ empty_no_posts_end = " nel frattempo."
 
 breadcrumb_home = "Home"
 by_author = "Di"
+
+cta_inline_pitch = "Lascia che Keeply conservi ogni versione, così non dovrai più cercarla."
+cta_inline_subtitle = "Gratis · 30 secondi per iniziare"
+
+cta_inline_pitch_soft = "Se oggi fai una sola cosa, lascia che uno strumento conservi ogni versione per te."
+cta_inline_pitch_medium = "Gratis + 30 secondi per iniziare. Nessuna ragione per non provare."
+cta_inline_pitch_hard = "Ancora sovrascrivi i vecchi file? Questi 30 secondi ti risparmiano la prossima caccia."

@@ -12,6 +12,7 @@ tags:
   - Budownictwo
   - Kontrola wersji
   - Zarządzanie budową
+cta_topic: versioning
 ---
 
 9:40 rano. W końcu wpadasz do biura i swobodnie przewijasz wczorajsze zdjęcia z budowy dla kierownika projektu — odcinek odpływu burzowego, gdzie wylano beton, wszystkie ramy zalewane na miejscu osadzone w płycie, gotowe pod kraty.

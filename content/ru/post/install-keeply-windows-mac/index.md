@@ -10,6 +10,7 @@ locales: ["en", "zh-TW", "zh-CN", "ja", "ru"]
 slug: install-keeply-windows-mac
 image: cover.svg
 og_image: cover.png
+cta_topic: install
 ---
 
 > «Я дважды кликнул, выскочил синий экран, я подумал — вирус, и закрыл.»

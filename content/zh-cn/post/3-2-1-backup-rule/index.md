@@ -10,6 +10,7 @@ categories: ["备份策略"]
 tags: ["3-2-1 备份", "数据备份", "版本管理", "operator-error"]
 image: cover.svg
 og_image: cover.png
+cta_topic: backup
 ---
 
 # 数据备份的 3-2-1 原则：20 年了，2026 还够用吗？

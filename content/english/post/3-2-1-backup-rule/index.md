@@ -10,6 +10,7 @@ categories: ["Backup Strategy"]
 tags: ["3-2-1 backup", "data backup", "version control", "operator-error"]
 image: cover.svg
 og_image: cover.png
+cta_topic: backup
 ---
 
 # What the 3-2-1 backup rule doesn't cover in 2026

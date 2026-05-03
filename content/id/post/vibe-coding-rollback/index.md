@@ -15,6 +15,7 @@ image: cover.svg
 og_image: cover.png
 draft: false
 status: approved
+cta_topic: versioning
 ---
 
 # Vibe coding lepas kendali? Satu aksi untuk kembalikan ke versi yang masih jalan

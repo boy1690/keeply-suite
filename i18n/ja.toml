@@ -46,3 +46,10 @@ empty_no_posts_end = " のもおすすめです。"
 
 breadcrumb_home = "ホーム"
 by_author = "著者："
+
+cta_inline_pitch = "次もまた同じファイルを探さないために、Keeply に全てのバージョンを残させましょう。"
+cta_inline_subtitle = "無料 · 30 秒で開始"
+
+cta_inline_pitch_soft = "今日できる一つのことがあるとすれば、ツールに全てのバージョンを残させることです。"
+cta_inline_pitch_medium = "無料 + 30 秒でセットアップ。試さない理由はありません。"
+cta_inline_pitch_hard = "まだ古いファイルを上書きしていますか? この 30 秒が次のファイル探しを救います。"

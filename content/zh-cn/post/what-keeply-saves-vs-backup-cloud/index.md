@@ -23,6 +23,7 @@ strategic_fit:
   product_fit: "★★★★★ 区辨 Keeply 工作 vs backup vs cloud"
   icp_fit: "★★★★ newcomer 评估期最常问的问题"
   conversion_path: "★★★★★ 答完 reader 知道为什么装 Keeply 不重复 Time Machine"
+cta_topic: backup
 ---
 
 # Keeply 到底存什么？跟备份、云端工具有什么不一样

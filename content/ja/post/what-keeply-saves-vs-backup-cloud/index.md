@@ -22,6 +22,7 @@ strategic_fit:
   product_fit: "★★★★★ Keeply と backup と cloud の役割を区別"
   icp_fit: "★★★★ newcomer が評価期に最もよく聞く質問"
   conversion_path: "★★★★★ 読み終えると Time Machine と重複しない理由が分かる"
+cta_topic: backup
 ---
 
 # Keeply は何を保存する？バックアップ・クラウドとの違い

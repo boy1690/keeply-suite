@@ -17,6 +17,7 @@ status: approved
 bwf_version_at_draft: v0.2.11
 voice_calibration_round: "user round 1+2+3 套用 + UI-grounded walk-through"
 derived_from: zh-TW
+cta_topic: install
 ---
 
 # 文件笔记软件 Keeply 怎么用：不用学 30 个功能，2 个动作就上手

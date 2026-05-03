@@ -16,6 +16,7 @@ og_image: cover.png
 draft: false
 status: approved
 pillar_parent: keeply-getting-started-from-zero
+cta_topic: backup
 ---
 
 # Wat slaat Keeply eigenlijk op? Hoe het verschilt van back-up- en cloudtools

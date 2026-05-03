@@ -14,6 +14,7 @@ image: cover.svg
 og_image: cover.png
 draft: false
 status: approved
+cta_topic: install
 ---
 
 # Cómo usar Keeply: olvídate de 30 funciones, súbete a bordo con 2 acciones

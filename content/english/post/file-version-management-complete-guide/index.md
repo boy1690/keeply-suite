@@ -14,6 +14,7 @@ tags:
   - knowledge work
 image: cover.svg
 og_image: cover.png
+cta_topic: versioning
 ---
 
 > It's not your discipline. Your tool wasn't designed for this.

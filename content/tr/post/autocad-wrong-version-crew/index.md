@@ -12,6 +12,7 @@ tags:
   - İnşaat
   - Sürüm yönetimi
   - Saha yönetimi
+cta_topic: versioning
 ---
 
 Saat 09:40. Sonunda ofise uğruyorsun ve PM'e dünkü saha fotoğraflarını gösteriyorsun — yağmur suyu drenajının betonu dökülmüş kısmı, yerine sabitlenmiş döküm çerçeveler, ızgaralara hazır.

@@ -12,6 +12,7 @@ tags:
   - Construction
   - Gestion des versions
   - Gestion de chantier
+cta_topic: versioning
 ---
 
 Il est 9h40. Tu passes enfin au bureau et tu fais défiler tranquillement les photos de chantier d'hier pour le PM — la section du caniveau d'orage où le béton vient d'être coulé, les cadres encastrés tous calés dans la dalle, prêts à recevoir les grilles.

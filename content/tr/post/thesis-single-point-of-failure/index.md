@@ -12,6 +12,7 @@ tags:
   - Sürüm kontrolü
   - Lisansüstü öğrenciler
   - Dosya yedekleme
+cta_topic: recovery
 ---
 
 Çarşamba, öğleden sonra 3. Bir kafedesin; Americano'n yarı dolu. Danışmanından mesaj geliyor: "Bölüm 3'ün önceki sürümü daha güçlü argümana sahipti — nereye gitti?"

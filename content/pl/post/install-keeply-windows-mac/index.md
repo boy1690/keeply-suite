@@ -10,6 +10,7 @@ locales: ["en", "zh-TW", "zh-CN", "ja", "pl"]
 slug: install-keeply-windows-mac
 image: cover.svg
 og_image: cover.png
+cta_topic: install
 ---
 
 > „Kliknąłem dwa razy, wyskoczył niebieski ekran, uznałem, że to wirus i zamknąłem."

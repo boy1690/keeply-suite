@@ -15,6 +15,7 @@ image: cover.svg
 og_image: cover.png
 draft: false
 status: approved
+cta_topic: versioning
 ---
 
 # Vibe Coding chệch đường? Một hành động để khôi phục về phiên bản chạy được

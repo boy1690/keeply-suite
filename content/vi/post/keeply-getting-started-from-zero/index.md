@@ -14,6 +14,7 @@ image: cover.svg
 og_image: cover.png
 draft: false
 status: approved
+cta_topic: install
 ---
 
 # Cách dùng Keeply: bỏ qua 30 tính năng, lên thuyền với 2 hành động

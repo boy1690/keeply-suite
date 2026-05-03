@@ -14,6 +14,7 @@ motif: "Три разные задачи: история vs диск vs посл
 image: cover.svg
 og_image: cover.png
 draft: false
+cta_topic: backup
 ---
 
 # Что именно сохраняет Keeply? Чем он отличается от инструментов резервного копирования и облака

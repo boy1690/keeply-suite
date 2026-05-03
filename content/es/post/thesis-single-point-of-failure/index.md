@@ -12,6 +12,7 @@ tags:
   - Control de versiones
   - Estudiantes de posgrado
   - Copia de archivos
+cta_topic: recovery
 ---
 
 Miércoles, 3 de la tarde. Estás en una cafetería; tu americano está a la mitad. Salta un mensaje de tu director: "Tu versión anterior del Capítulo 3 tenía el argumento más fuerte — ¿dónde está?"

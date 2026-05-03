@@ -15,6 +15,7 @@ tags:
   - नॉलेज वर्कर
 image: cover.svg
 og_image: cover.png
+cta_topic: versioning
 ---
 
 > यह आपका अनुशासन नहीं है। आपके टूल को यह काम करने के लिए बनाया ही नहीं गया था।

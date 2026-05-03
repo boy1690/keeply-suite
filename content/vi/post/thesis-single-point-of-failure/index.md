@@ -12,6 +12,7 @@ tags:
   - Quản lý phiên bản
   - Nghiên cứu sinh
   - Sao lưu tệp
+cta_topic: recovery
 ---
 
 Thứ Tư, 3 giờ chiều. Bạn đang ở quán cà phê; ly Americano đã uống nửa. Một tin nhắn từ giáo sư hướng dẫn hiện ra: "Phiên bản trước của Chương 3 có lập luận mạnh hơn — nó đâu rồi?"

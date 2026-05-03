@@ -15,6 +15,7 @@ image: cover.svg
 og_image: cover.png
 draft: false
 status: approved
+cta_topic: versioning
 ---
 
 # Vibe coding wymknęło się spod kontroli? Jedna czynność, by wrócić do działającej wersji

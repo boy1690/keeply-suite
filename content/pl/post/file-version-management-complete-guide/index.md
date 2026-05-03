@@ -14,6 +14,7 @@ tags:
   - praca z wiedzą
 image: cover.svg
 og_image: cover.png
+cta_topic: versioning
 ---
 
 > To nie twoja wina. Twoje narzędzie po prostu nigdy nie zostało zaprojektowane do tej pracy.

@@ -12,6 +12,7 @@ tags:
   - version history
   - collaboration
   - file management
+cta_topic: versioning
 ---
 
 It's 5:30 on a Thursday. The office is winding down. You've finished the atrium floor plan. You could leave on time, grab a decent dinner. But your hand hovers over the mouse, staring at the folder.

@@ -10,6 +10,7 @@ locales: ["en", "zh-TW", "zh-CN", "ja", "it"]
 slug: install-keeply-windows-mac
 image: cover.svg
 og_image: cover.png
+cta_topic: install
 ---
 
 > "Ho fatto doppio click, è apparsa la schermata blu e ho pensato che fosse un virus, così l'ho chiusa."

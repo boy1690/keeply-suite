@@ -12,6 +12,7 @@ tags:
   - Bauwesen
   - Versionskontrolle
   - Bauleitung
+cta_topic: versioning
 ---
 
 Es ist 9:40 Uhr. Du schaust endlich kurz im Büro vorbei und wischst dem PM beiläufig durch die gestrigen Baustellenfotos — den Abschnitt der Regenentwässerung, in dem der Beton schon gegossen ist, die einbetonierten Rahmen alle in der Platte sitzen, bereit für die Roste.

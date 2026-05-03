@@ -13,6 +13,7 @@ og_image: cover.png
 locales_required: [en, zh-TW, zh-CN, ja, ko, it]
 market_strategy: single-market-ja-primary
 ranking_locales: [ja, ko]
+cta_topic: recovery
 ---
 
 # Il limite del recupero file sovrascritto: dove AutoRecover non arriva

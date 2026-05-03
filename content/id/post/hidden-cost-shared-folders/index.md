@@ -11,6 +11,7 @@ tags:
   - folder bersama
   - riwayat versi
   - kolaborasi
+cta_topic: versioning
 ---
 
 Jumat pukul 17:30. Kantor mulai sepi. Kamu sudah menyelesaikan denah atrium. Seharusnya bisa pulang tepat waktu, makan malam yang layak. Tapi tanganmu menggantung di atas mouse, menatap folder.

@@ -10,6 +10,7 @@ locales: ["en", "zh-TW", "zh-CN", "ja", "th"]
 slug: install-keeply-windows-mac
 image: cover.svg
 og_image: cover.png
+cta_topic: install
 ---
 
 > "ผมดับเบิลคลิก หน้าจอน้ำเงินเด้งขึ้น ก็คิดว่าน่าจะเป็นไวรัสเลยปิดทิ้ง"

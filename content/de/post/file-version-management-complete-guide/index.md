@@ -14,6 +14,7 @@ tags:
   - Wissensarbeit
 image: cover.svg
 og_image: cover.png
+cta_topic: versioning
 ---
 
 > Es liegt nicht an deiner Disziplin. Dein Tool wurde nie dafür entworfen.

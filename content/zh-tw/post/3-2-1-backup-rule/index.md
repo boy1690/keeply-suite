@@ -11,6 +11,7 @@ tags: ["3-2-1 備份", "資料備份", "版本管理", "operator-error"]
 image: cover.svg
 og_image: cover.png
 locales_required: [en, zh-TW, zh-CN, ja, ko]
+cta_topic: backup
 ---
 
 # 資料備份的 3-2-1 原則：20 年了，2026 還夠用嗎？

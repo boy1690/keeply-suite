@@ -11,6 +11,7 @@ tags:
   - paylaşılan klasörler
   - sürüm kontrolü
   - işbirliği
+cta_topic: versioning
 ---
 
 Perşembe günü saat 17:30. Ofis yavaş yavaş sessizleşiyor. Atriumun planını bitirdin. Zamanında çıkıp düzgün bir akşam yemeği yiyebilirdin. Ama elin farenin üzerinde kaldı, klasöre dik dik bakıyorsun.

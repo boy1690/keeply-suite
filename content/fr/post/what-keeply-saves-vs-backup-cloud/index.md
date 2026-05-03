@@ -22,6 +22,7 @@ strategic_fit:
   product_fit: "★★★★★ Distingue Keeply des sauvegardes vs cloud"
   icp_fit: "★★★★ Question d'évaluation la plus fréquente des nouveaux"
   conversion_path: "★★★★★ Le lecteur repart en sachant pourquoi Keeply ne double pas Time Machine"
+cta_topic: backup
 ---
 
 # Qu'est-ce que Keeply enregistre vraiment ? En quoi c'est différent des outils de sauvegarde et du cloud

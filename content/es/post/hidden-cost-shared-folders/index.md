@@ -11,6 +11,7 @@ tags:
   - carpetas compartidas
   - control de versiones
   - colaboración
+cta_topic: versioning
 ---
 
 Son las 17:30 del jueves. La oficina se va quedando en silencio. Ya has terminado el plano del atrio. Podrías irte a tiempo, cenar algo decente. Pero tu mano sigue sobre el ratón, mirando fijamente la carpeta.

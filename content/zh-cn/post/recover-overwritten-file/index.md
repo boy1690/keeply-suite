@@ -13,6 +13,7 @@ og_image: cover.png
 locales_required: [en, zh-TW, zh-CN, ja, ko]
 market_strategy: single-market-ja-primary
 ranking_locales: [ja, ko]
+cta_topic: recovery
 ---
 
 # 找回被覆盖文件的极限：AutoRecover 救不到的地方

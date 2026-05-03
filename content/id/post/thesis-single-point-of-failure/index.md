@@ -12,6 +12,7 @@ tags:
   - Kontrol versi
   - Mahasiswa pascasarjana
   - Backup file
+cta_topic: recovery
 ---
 
 Rabu, jam 3 sore. Kamu di kafe; Americano-mu setengah penuh. Pesan dari pembimbingmu muncul: "Versi sebelumnya dari Bab 3 punya argumen yang lebih kuat — ke mana perginya?"

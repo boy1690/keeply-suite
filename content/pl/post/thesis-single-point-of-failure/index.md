@@ -12,6 +12,7 @@ tags:
   - Kontrola wersji
   - Doktoranci
   - Kopia zapasowa plików
+cta_topic: recovery
 ---
 
 Środa, 15:00. Siedzisz w kawiarni; twoja kawa jest w połowie wypita. Pojawia się wiadomość od promotora: „Twoja poprzednia wersja Rozdziału 3 miała mocniejszy argument — gdzie ona poszła?"

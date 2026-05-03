@@ -22,6 +22,7 @@ strategic_fit:
   product_fit: "★★★★★ Keeply'yi yedekleme vs bulut'tan ayırır"
   icp_fit: "★★★★ En yaygın yeni gelen değerlendirme sorusu"
   conversion_path: "★★★★★ Okuyucu Keeply'nin Time Machine'i neden çoğaltmadığını bilerek ayrılır"
+cta_topic: backup
 ---
 
 # Keeply Aslında Neyi Kaydediyor? Yedekleme ve Bulut Araçlarından Farkı

@@ -12,6 +12,7 @@ tags:
   - Xây dựng
   - Quản lý phiên bản
   - Quản lý hiện trường
+cta_topic: versioning
 ---
 
 9:40 sáng. Bạn cuối cùng cũng tạt qua văn phòng và thoải mái lướt ảnh công trường hôm qua cho PM xem — đoạn cống thoát nước đã đổ bê tông xong, các khung đúc tại chỗ đã đặt trong bản sàn, chuẩn bị lắp lưới chắn.

@@ -13,6 +13,7 @@ og_image: cover.png
 locales_required: [en, zh-TW, zh-CN, ja, ko]
 market_strategy: hybrid
 ranking_locales: [en, ko]
+cta_topic: versioning
 ---
 
 # 3 ヶ月後、クライアントが「あの版を」と聞いてきたとき：Word の版数履歴では救えない

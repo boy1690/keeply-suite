@@ -10,6 +10,7 @@ locales: ["en", "zh-TW", "zh-CN", "ja", "ko"]
 slug: install-keeply-windows-mac
 image: cover.svg
 og_image: cover.png
+cta_topic: install
 ---
 
 > 「ダブルクリックしたら青い画面が出て、ウイルスかと思って閉じました。」

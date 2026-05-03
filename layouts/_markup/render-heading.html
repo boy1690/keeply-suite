@@ -1,0 +1,25 @@
+{{- /* Heading render hook with auto-CTA injection + position-based pitch rotation.
+       Rule: insert an inline CTA BEFORE every odd-positioned h2 starting from #3
+       (so CTAs appear after h2 #2's section, after h2 #4's section, etc.).
+       Variant cycles soft → medium → hard → soft → ... per industry research:
+         h2 #3 → soft  (low commitment, value reminder)
+         h2 #5 → medium (friction-reducer + low cost)
+         h2 #7 → hard  (objection-handler + urgency)
+         h2 #9+ → cycles back to soft
+       Skipped when:
+         - heading is not h2
+         - article frontmatter `cta_inline_auto: false`
+       Counter persists across invocations via .Page.Scratch. */ -}}
+{{- if eq .Level 2 -}}
+  {{- $count := add (.Page.Scratch.Get "h2_count" | default 0) 1 -}}
+  {{- .Page.Scratch.Set "h2_count" $count -}}
+  {{- if and (ge $count 3) (eq (mod $count 2) 1) -}}
+    {{- $auto := .Page.Params.cta_inline_auto -}}
+    {{- if ne $auto false -}}
+      {{- /* position is 1-indexed: h2 #3 → pos 1, h2 #5 → pos 2, h2 #7 → pos 3, ... */ -}}
+      {{- $position := div (sub $count 1) 2 -}}
+      {{ partial "cta-inline.html" (dict "Page" .Page "position" $position) }}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+<h{{ .Level }} id="{{ .Anchor | safeURL }}">{{- .Text | safeHTML -}}</h{{ .Level }}>

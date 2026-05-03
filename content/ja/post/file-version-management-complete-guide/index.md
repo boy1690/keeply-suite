@@ -15,6 +15,7 @@ tags:
   - ナレッジワーカー
 image: cover.svg
 og_image: cover.png
+cta_topic: versioning
 ---
 
 > あなたが規律不足なのではない。あなたのツールが、そう設計されていないだけ。

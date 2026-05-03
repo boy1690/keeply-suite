@@ -10,6 +10,7 @@ locales: ["en", "zh-TW", "zh-CN", "ja", "ko"]
 slug: install-keeply-windows-mac
 image: cover.svg
 og_image: cover.png
+cta_topic: install
 ---
 
 > "더블클릭했더니 파란 화면이 떠서, 바이러스인 줄 알고 그냥 닫아버렸어요."

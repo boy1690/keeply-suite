@@ -19,7 +19,13 @@
 
 {{- partial "footer.html" . -}}
 
-{{- /* Reading progress bar + TOC active link — external so CSP can drop 'unsafe-inline'. */ -}}
+{{- /* Sticky bottom CTA (mobile only) — only on single article pages */ -}}
+{{- if .IsPage -}}
+  {{- partial "cta-sticky-mobile.html" . -}}
+{{- end -}}
+
+{{- /* Reading progress bar + TOC active link + sticky CTA show/hide logic
+       — external so CSP can drop 'unsafe-inline'. */ -}}
 {{- if .IsPage -}}
   {{- $js := resources.Get "js/blog-interactions.js" | resources.Fingerprint "sha384" -}}
   <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" crossorigin="anonymous" defer></script>

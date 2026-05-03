@@ -15,6 +15,7 @@ og_image: cover.png
 draft: false
 status: approved
 bwf_version_at_draft: v0.2.11
+cta_topic: install
 ---
 
 # Keeply nasıl kullanılır: 30 özelliği atla, 2 hareketle başla

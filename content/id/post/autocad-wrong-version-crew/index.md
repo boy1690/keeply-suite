@@ -12,6 +12,7 @@ tags:
   - Konstruksi
   - Kontrol versi
   - Manajemen lapangan
+cta_topic: versioning
 ---
 
 Pukul 09.40. Kamu akhirnya mampir ke kantor dan dengan santai menggeser foto-foto lapangan kemarin untuk PM — bagian saluran air hujan tempat beton sudah dicor, rangka cor-di-tempat sudah duduk di slab, siap dipasangi grates.

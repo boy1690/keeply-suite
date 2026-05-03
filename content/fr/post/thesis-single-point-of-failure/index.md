@@ -12,6 +12,7 @@ tags:
   - Gestion des versions
   - Étudiants en master
   - Sauvegarde de fichiers
+cta_topic: recovery
 ---
 
 Mercredi, 15 h. Tu es dans un café ; ton americano est à moitié plein. Un message de ton directeur surgit : « Ta version précédente du chapitre 3 avait l'argument plus solide — où est-elle passée ? »

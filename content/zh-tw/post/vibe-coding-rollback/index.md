@@ -17,6 +17,7 @@ draft: false
 status: approved
 bwf_version_at_draft: v0.2.11
 flow: v0.3 4-step (auto draft)
+cta_topic: versioning
 ---
 
 # Vibe Coding 失控了？1 個動作回到上一個能跑的版本

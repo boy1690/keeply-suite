@@ -14,6 +14,7 @@ tags:
   - trabajo del conocimiento
 image: cover.svg
 og_image: cover.png
+cta_topic: versioning
 ---
 
 > No es falta de disciplina. Es que tu herramienta no fue diseñada para esto.

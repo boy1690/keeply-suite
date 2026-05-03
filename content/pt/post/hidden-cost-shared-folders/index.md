@@ -11,6 +11,7 @@ tags:
   - pastas compartilhadas
   - controle de versão
   - colaboração
+cta_topic: versioning
 ---
 
 São 17h30 de uma quinta-feira. O escritório está esvaziando. Você já terminou a planta do átrio. Podia sair no horário, fazer um jantar decente. Mas sua mão fica parada sobre o mouse, encarando a pasta.

@@ -10,6 +10,7 @@ locales: ["en", "zh-TW", "zh-CN", "ja", "vi"]
 slug: install-keeply-windows-mac
 image: cover.svg
 og_image: cover.png
+cta_topic: install
 ---
 
 > "Tôi nhấp đúp, màn hình xanh hiện ra, và tôi nghĩ đó là virus nên đóng lại."

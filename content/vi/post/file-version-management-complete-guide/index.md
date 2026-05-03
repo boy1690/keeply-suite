@@ -14,6 +14,7 @@ tags:
   - công việc tri thức
 image: cover.svg
 og_image: cover.png
+cta_topic: versioning
 ---
 
 > Không phải bạn thiếu kỷ luật. Công cụ của bạn chưa bao giờ được thiết kế cho chuyện này.

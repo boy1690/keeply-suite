@@ -16,6 +16,7 @@ draft: false
 status: approved
 bwf_version_at_draft: v0.2.11
 voice_calibration_round: "user round 1+2+3 套用 + UI-grounded walk-through"
+cta_topic: install
 ---
 
 # ファイル記録ソフト Keeply の使い方：30機能を学ばず、2アクションで使いこなせる

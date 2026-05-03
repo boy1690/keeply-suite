@@ -10,6 +10,7 @@ locales: ["en", "zh-TW", "zh-CN", "ja"]
 slug: install-keeply-windows-mac
 image: cover.svg
 og_image: cover.png
+cta_topic: install
 ---
 
 > « J'ai double-cliqué, l'écran bleu est apparu, j'ai supposé que c'était un virus et j'ai fermé. »

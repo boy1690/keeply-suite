@@ -46,3 +46,10 @@ empty_no_posts_end = "도 좋습니다."
 
 breadcrumb_home = "홈"
 by_author = "작성자:"
+
+cta_inline_pitch = "다음에 다시 찾을 필요가 없도록, Keeply에 모든 버전을 맡기세요."
+cta_inline_subtitle = "무료 · 30 초면 시작"
+
+cta_inline_pitch_soft = "오늘 한 가지만 한다면, 도구에 모든 버전을 맡기세요."
+cta_inline_pitch_medium = "무료 + 30 초면 설정 완료. 시도하지 않을 이유가 없습니다."
+cta_inline_pitch_hard = "아직도 옛 파일을 덮어쓰고 있나요? 이 30 초가 다음 파일 찾기 시간을 아껴줍니다."

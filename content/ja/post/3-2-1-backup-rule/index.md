@@ -10,6 +10,7 @@ categories: ["バックアップ戦略"]
 tags: ["3-2-1 バックアップ", "データバックアップ", "バージョン管理", "operator-error"]
 image: cover.svg
 og_image: cover.png
+cta_topic: backup
 ---
 
 # 2026年、3-2-1 バックアップでは足りないもの

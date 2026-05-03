@@ -12,6 +12,7 @@ tags:
   - Construction
   - Version Control
   - Field Management
+cta_topic: versioning
 ---
 
 It's 9:40 AM. You finally swing by the office and casually swipe through yesterday's site photos for the PM — the section of storm drain where the concrete has been poured, the cast-in-place frames all set in the slab, ready for the grates.

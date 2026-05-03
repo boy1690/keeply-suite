@@ -10,6 +10,7 @@ locales: ["en", "zh-TW", "zh-CN", "ja", "ko"]
 slug: install-keeply-windows-mac
 image: cover.svg
 og_image: cover.png
+cta_topic: install
 ---
 
 > 「我雙擊跳出藍屏，以為是病毒就關了。」

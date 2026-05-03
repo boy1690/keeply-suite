@@ -13,6 +13,7 @@ voice: B-Emotional-StoryBrand
 image: cover.svg
 og_image: cover.png
 draft: false
+cta_topic: install
 ---
 
 # Как пользоваться Keeply: пропусти 30 функций, освойся за 2 действия

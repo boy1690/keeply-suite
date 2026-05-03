@@ -12,6 +12,7 @@ tags:
   - Controle de versão
   - Mestrandos
   - Backup de arquivos
+cta_topic: recovery
 ---
 
 Quarta-feira, 15h. Você está num café; seu Americano está pela metade. Uma mensagem do seu orientador aparece: "A versão anterior do seu Capítulo 3 tinha o argumento mais forte — para onde foi?"

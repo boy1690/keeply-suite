@@ -12,6 +12,7 @@ tags:
   - Version control
   - Grad students
   - File backup
+cta_topic: recovery
 ---
 
 Wednesday, 3 p.m. You're at a coffee shop; your Americano is half full. A message from your advisor pops up: "Your previous version of Chapter 3 had the stronger argument—where did it go?"

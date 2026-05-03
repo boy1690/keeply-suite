@@ -15,6 +15,7 @@ image: cover.svg
 og_image: cover.png
 draft: false
 status: approved
+cta_topic: versioning
 ---
 
 # Vibe Coding ontspoord? Eén actie om terug te keren naar een werkende versie

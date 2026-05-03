@@ -13,6 +13,7 @@ og_image: cover.png
 locales_required: [en, zh-TW, zh-CN, ja, ko]
 market_strategy: hybrid
 ranking_locales: [en, ko]
+cta_topic: versioning
 ---
 
 # 3 个月后客户问你那版：Word 内置版本历史救不了你

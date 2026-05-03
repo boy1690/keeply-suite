@@ -11,6 +11,7 @@ tags:
   - geteilter Ordner
   - Versionshistorie
   - Zusammenarbeit
+cta_topic: versioning
 ---
 
 Donnerstag, 17:30. Das Büro wird leise. Sie haben den Atrium-Grundriss fertig. Sie könnten pünktlich gehen, ein anständiges Abendessen haben. Aber Ihre Hand schwebt über der Maus und starrt den Ordner an.

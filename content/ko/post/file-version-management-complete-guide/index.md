@@ -14,6 +14,7 @@ tags:
   - 지식 노동자
 image: cover.svg
 og_image: cover.png
+cta_topic: versioning
 ---
 
 > 당신의 문제가 아니에요. 도구가 원래 그렇게 설계된 거예요.

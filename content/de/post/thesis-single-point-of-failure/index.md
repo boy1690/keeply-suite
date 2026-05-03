@@ -12,6 +12,7 @@ tags:
   - Versionskontrolle
   - Doktoranden
   - Datei-Backup
+cta_topic: recovery
 ---
 
 Mittwoch, 15 Uhr. Du sitzt in einem Café; dein Americano ist halb voll. Eine Nachricht von deiner Betreuerin ploppt auf: „Deine vorige Version von Kapitel 3 hatte das stärkere Argument — wo ist sie hin?"

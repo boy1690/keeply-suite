@@ -11,6 +11,7 @@ tags:
   - cartelle condivise
   - versionamento
   - collaborazione
+cta_topic: versioning
 ---
 
 Sono le 17:30 di giovedì. L'ufficio si svuota. Hai finito la planimetria dell'atrio. Potresti uscire in orario, concederti una cena decente. Ma la tua mano resta sospesa sul mouse, fissando la cartella.

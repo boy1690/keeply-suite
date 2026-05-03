@@ -12,6 +12,7 @@ tags:
   - Construção
   - Controle de versão
   - Gestão de obra
+cta_topic: versioning
 ---
 
 São 9h40 da manhã. Você finalmente passa pelo escritório e mostra rapidamente as fotos de ontem da obra para o gerente — o trecho da galeria pluvial onde o concreto já foi lançado, os quadros pré-moldados todos posicionados na laje, prontos para receber as grelhas.

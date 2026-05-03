@@ -13,6 +13,7 @@ og_image: cover.png
 locales_required: [en, zh-TW, zh-CN, ja, ko]
 market_strategy: single-market-ja-primary
 ranking_locales: [ja, ko]
+cta_topic: recovery
 ---
 
 # 덮어쓴 파일 복구의 한계: AutoRecover로는 닿지 못하는 곳

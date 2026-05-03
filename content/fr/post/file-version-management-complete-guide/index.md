@@ -14,6 +14,7 @@ tags:
   - travail de la connaissance
 image: cover.svg
 og_image: cover.png
+cta_topic: versioning
 ---
 
 > Ce n'est pas toi qui manques de discipline. Ton outil n'a jamais été conçu pour ça.
