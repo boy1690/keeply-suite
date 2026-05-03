@@ -1,0 +1,118 @@
+---
+title: "找回被覆盖文件的极限：AutoRecover 救不到的地方"
+description: "AutoRecover 为崩溃救援设计，数据恢复软件成功率以覆盖后几分钟为胜负——这些工具都救不了「正常关闭后才发现覆盖」的场景。事后救援不是答案，事前防御才是——工具层的 always-on 版本历史，让覆盖保存不再是破坏性动作。"
+date: 2026-05-02T18:00:00+08:00
+draft: false
+slug: "recover-overwritten-file"
+primary_keyword: "找回被覆盖的文件"
+locale: zh-CN
+categories: ["文件版本管理"]
+tags: ["覆盖恢复", "AutoRecover", "OneDrive", "always-on 版本历史", "operator-error"]
+image: cover.svg
+og_image: cover.png
+locales_required: [en, zh-TW, zh-CN, ja, ko]
+market_strategy: single-market-ja-primary
+ranking_locales: [ja, ko]
+---
+
+# 找回被覆盖文件的极限：AutoRecover 救不到的地方
+
+> AutoRecover 是为崩溃救援设计的。覆盖保存后你需要的是事前防御。
+
+周五晚上 19:30，月底结算文件用 Excel 编辑中，不小心把前一张工作表覆盖掉了。
+
+Ctrl+Z 已经没用（刚才关闭了）。AutoRecover 文件也消失了。
+
+周一早上前要恢复。但来得及吗？
+
+## 重点
+
+搜索「**找回被覆盖的文件**」的人多数在求事后救援。但 Microsoft AutoRecover 是为崩溃设计的，数据恢复软件的成功率以覆盖后几分钟为胜负——这些工具都不适用于「正常关闭后才发现覆盖」的场景。**事后救援不是答案，事前防御才是**。在工具层放一份 always-on 版本历史，覆盖保存就不再是破坏性动作。
+
+## 本文目录
+
+1. AutoRecover 到底是为什么设计的？
+2. AutoRecover / 以前的版本 / 恢复软件：各自能救什么？
+3. 为什么「覆盖保存后」就来不及了？
+4. 事后救援之外：always-on 版本历史的选项
+5. 常见问题
+
+---
+
+## AutoRecover 到底是为什么设计的？
+
+Microsoft Office 内置有 3 种「**版本还原**」机制：
+
+- **AutoRecover**：崩溃时救回未保存内容。默认每 10 分钟自动暂存一份。**文件正常关闭后就清除**。
+- **以前的版本**（Windows）：通过卷影副本功能还原到过去快照。需要事前设置。
+- **OneDrive 版本历史**：每次保存的版本快照。[Microsoft 官方文档](https://support.microsoft.com/en-us/office/restore-a-previous-version-of-a-file-stored-in-onedrive-159cad6d-d76e-4981-88ef-de6e96c93893)指出默认保留约 500 个主要版本。
+
+设计目的明确：这 3 个机制是给「**崩溃救援**」、「**最近的保存事故**」使用的。「**正常关闭后才发现覆盖错**」这种场景不在设计目标内。
+
+## AutoRecover / 以前的版本 / 恢复软件：各自能救什么？
+
+要看每个机制的边界，并列对比：
+
+| 机制 | 救得到的场景 | 救不到的场景 | 注意事项 |
+| --- | --- | --- | --- |
+| AutoRecover | 编辑中崩溃 | 正常关闭后的覆盖错 | 文件关闭即清除 |
+| OneDrive [版本历史](https://support.microsoft.com/en-us/office/enable-and-configure-versioning-for-a-list-or-library-1555d642-23ee-446a-990a-bcab618c7a37) | 过去 500 版以内 | 超过 500 版的旧版、纯本地文件 | 需云端保存 |
+| Windows 以前的版本 | 有卷影副本的话 | 没设置、SSD 环境 | 需事前设置 |
+| 数据恢复软件 | 覆盖直后、扇区未被新写入 | 过了一段时间、SSD TRIM 后 | 成功率视环境而定 |
+| Mac [Time Machine](https://support.apple.com/en-us/HT201250) | 最近的快照 | 快照间隔之外 | 需另外设置 |
+
+对啊，这就是让人烦的地方。没有一个机制能结构性地触及「正常关闭后覆盖错」这种典型场景。
+
+## 为什么「覆盖保存后」就来不及了？
+
+这里要拆一个没人明讲的差别：**保存层** vs **工具层**。
+
+这些机制活在**保存层**。设计目标是「最近一次写入失败就回滚」，所以 retention 设得短。500 版、30 天这些数字，参考的是「平均使用者一个月内回头找的次数」。3 个月以上不在设计目标内，prune 掉是合理。
+
+A 先生是会计。周五晚上 19:30，他不小心把月底结算 Excel 覆盖掉了。他找 AutoRecover 文件，找不到。试了数据恢复软件，跳出「扇区已被覆写」消息。周一早上前还剩 60 小时。
+
+这里是真正的问题。A 先生事后想到，如果是周五白天覆盖的，AutoRecover 30 分钟间隔可能有抓到。**但他「发现的时间点」已经太晚。事后救援依赖「发现的时机」。事前防御不依赖发现——每次保存早就留下版本了。**
+
+## 事后救援之外：always-on 版本历史的选项
+
+要超越事后救援的极限，靠的是**事前防御**。在工具层放一份 always-on 版本历史。
+
+每次保存 = 一个版本被保留。不会 prune。不依赖 Word 或 OneDrive 的 retention policy。
+
+[Keeply](https://keeply.work) 用 git 引擎在每次保存时自动 commit。「覆盖保存」就**不再是破坏性动作**。前一个版本永远留着。
+
+B 小姐用 Keeply 半年。周一早上发现月底结算被覆盖成前一张表。她打开 Keeply——周五 19:00 的表、19:15 的表、19:30 的覆盖后表，全部以版本保留。她点「回到 19:00 的版本」，3 秒后 Excel 开启那个版本。
+
+不过 Keeply 不取代 AutoRecover。编辑中崩溃的救援还是 AutoRecover 的第一道线。Keeply 也不能溯及既往：必须在覆盖发生时已经启动。Keeply 启用前的覆盖，本文救不了你。但从今天开始的每次保存，都救得了。
+
+对啊，这就是让人松一口气的部分。
+
+## 常见问题
+
+**Q1: AutoRecover 默认是开的吗？**
+
+是。设置路径：「文件 → 选项 → 保存 → 保存自动恢复信息每 10 分钟」。但 AutoRecover 在文件正常关闭后会清除，不算长期保留。
+
+**Q2: 数据恢复软件的成功率多高？**
+
+覆盖直后几分钟内有成功率，但 SSD（多数现代电脑）由于 TRIM 指令会立即清除被覆盖的扇区，成功率比 HDD 低。HDD 过几天后成功率也急遽下降。
+
+**Q3: OneDrive 个人版跟商务版版本历史保留一样多吗？**
+
+不完全一样。OneDrive 个人默认约 500 版。商务版（Microsoft 365）也默认 500 版但管理员可调整。到上限就 prune 最旧。
+
+**Q4: Time Machine 有用吗？**
+
+Mac 的 Time Machine 是系统级备份。在快照间隔（默认 1 小时）内发生覆盖就救不到。它也不是文件级的版本管理，要从 Time Machine 救单文件特定版本很麻烦。
+
+**Q5: Keeply 是 AutoRecover 的替代吗？**
+
+不是。AutoRecover 处理崩溃救援，Keeply 处理正常保存后的版本保留。两者是互补关系。Keeply 必须事前启动（不能溯及既往）。
+
+---
+
+「啊，覆盖掉了」的 19:30 那个瞬间，未来还会出现。你不知道什么时候。
+
+但有一件事要知道：事后救援有极限。事前防御不依赖发现的时机。
+
+从今天开始的每次保存，能让工具替你保留版本吗？
