@@ -26,6 +26,12 @@ specs/
 # Local PRD drafts and brainstorming
 0.idea/
 
+# Local debug notes (per-incident scratch, not for commit)
+debug/
+
+# Playwright MCP cache
+.playwright-mcp/
+
 # Hugo build output
 public/
 resources/_gen/
