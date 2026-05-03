@@ -279,7 +279,7 @@ curl -s -o /dev/null -w "%{http_code}" "https://blog.keeply.work/{locale}/post/{
 
 期望輸出：`200`。
 
-**5-locale × N-article 矩陣腳本**（bash）：
+**6-locale × N-article 矩陣腳本**（bash）：
 
 ```bash
 SLUGS=(hidden-cost-shared-folders install-keeply-windows-mac thesis-single-point-of-failure autocad-wrong-version-crew file-version-management-complete-guide keeply-getting-started-from-zero vibe-coding-rollback what-keeply-saves-vs-backup-cloud)

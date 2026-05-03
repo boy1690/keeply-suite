@@ -22,7 +22,7 @@
 set -euo pipefail
 
 BASE_URL="${BASE_URL:-https://blog.keeply.work}"
-LOCALES=(en zh-tw zh-cn ja)
+LOCALES=(en zh-tw zh-cn ja ko it)
 
 PROJECT_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 LOCALE_DIR_FOR() {
