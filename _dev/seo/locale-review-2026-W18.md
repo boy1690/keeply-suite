@@ -19,7 +19,7 @@
 | **zh-CN** | T3 (core, default) | — | 1 GA4 session, no GSC traction | Hold; under-indexed, monitor |
 | **ja** | T3 (core, default) | — | Not in top-pages report | Hold; no signal yet |
 | **ko** | T3 (core, default) | — | Not in top-pages report | Hold; no signal yet |
-| **it** | T1 | — | **4 GSC impressions** on `/it/post/file-version-management-complete-guide/` + 1 native query "cronologia versioni" pos 10 | **🔍 WATCH** — strongest candidate for T1→T2 promotion if signal sustains |
+| **it** | **T3** ⬆️ | T1 (default) | **4 GSC impressions** on `/it/post/file-version-management-complete-guide/` + native query "cronologia versioni" pos 10 (3 impressions) | **PROMOTED T1 → T3 (manual override)** via strong-signal override criterion (native top-10 query + multi-impression content). User decision 2026-05-03. See updated framework section §2. |
 | pl | T1 | — | 1 GSC impression (single point = noise) | Hold |
 | da | T1 | — | 1 GSC impression on `/da/privacy.html` (legal page, not content) | Hold |
 | de | T1 | — | 1 GSC impression on `/de/` homepage | Hold; no content traction |
@@ -29,7 +29,11 @@
 
 ## Promotions executed this cycle
 
-None. First cycle establishes baseline; promotion requires 2 consecutive cycles confirming signal.
+**1 promotion via strong-signal override (manual)**:
+
+- **`it` (Italian): T1 → core T3** — manual override using newly-added strong-signal criterion (native-language top-10 GSC query + multi-impression auto-translated content). User decision 2026-05-03 to invest in Italian as a 6th core locale alongside en/zh-tw/zh-cn/ja/ko. Backfill of 9 existing articles' Italian polish queued as separate task; new articles from this point ship with full it human-quality from launch.
+
+This is the first ever strong-signal-override promotion. Memory `project_locale_core_5.md` updated to reflect 6 cores. CLAUDE.md updated for 6-locale parity check + URL matrix expansion. BWF framework `locale-investment-tiers.md` updated with override criterion documented for future cycles.
 
 ---
 
@@ -60,11 +64,13 @@ Articles to monitor:
 
 ✅ DO:
 - Continue planned BWF article cadence (write-on-completion per `feedback_publish_cadence_ship_on_completion.md`)
+- **NEW articles**: ship in 6 locales now (en/zh-tw/zh-cn/ja/ko/it). Italian gets human-quality from launch, not auto-translated.
 - Prioritise English content (Western market is where signal currently centres)
 - If a how-to article fits the roadmap, give it precedence (zh-TW signal validates this format)
+- **Italian backfill**: 9 existing articles need Italian human polish (priority: file-version-management-complete-guide first, since it's the one already getting impressions)
 
 ⏸ HOLD:
-- Do NOT pre-emptively rewrite any auto-translated locale content. Wait for sustained signal.
+- Do NOT pre-emptively rewrite any other auto-translated locale content. Wait for sustained signal.
 - Do NOT add new locales beyond current 19. Capacity should focus on graduating existing locales up the tier ladder, not horizontal expansion.
 
 ❌ DO NOT:

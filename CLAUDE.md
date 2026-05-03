@@ -98,8 +98,8 @@ Note：`Z:\keeply-blog\` 需要 `git config --global --add safe.directory '%(pre
 
 ## Locale Policy
 
-**發布時必有**（核心 5 locale）：en, zh-TW, zh-CN, ja, ko
-**自動翻譯**：es, pt (pt-BR 翻譯後映射), de, fr, it, vi, th, id, tr, ar, ru, nl, pl, hi（共 19 語言）
+**發布時必有**（核心 6 locale）：en, zh-TW, zh-CN, ja, ko, **it**（2026-05-03 從 auto 升核心 — SEO 監測累積真實義大利搜尋訊號 + native query 位置 10 雙重證據）
+**自動翻譯**：es, pt (pt-BR 翻譯後映射), de, fr, vi, th, id, tr, ar, ru, nl, pl, hi（共 13 語言；it 已升為核心）
 **特殊處理**：
 
 - 阿拉伯文（ar）需要 RTL 審查
@@ -155,7 +155,7 @@ v0.1 最小可跑版。已實作：T1 Pillar 模板、4 個 GATE、TRAP 列表�
 
 **權威方向**：spec 為內容權威，keeply-blog content/ 向 spec 對齊（**Alignment Direction**，不可反向）。
 
-**路徑映射規則**（5 必要 locale 同步全上線）：
+**路徑映射規則**（6 必要 locale 同步全上線）：
 
 | Spec source（authoritative）            | keeply-blog content target                            | Hugo URL                                       |
 | --------------------------------------- | ----------------------------------------------------- | ---------------------------------------------- |
@@ -164,10 +164,11 @@ v0.1 最小可跑版。已實作：T1 Pillar 模板、4 個 GATE、TRAP 列表�
 | `apps/blog/specs/{slug}/final.zh-CN.md` | `../keeply-blog/content/zh-cn/post/{slug}/index.md`   | `https://blog.keeply.work/zh-cn/post/{slug}/`  |
 | `apps/blog/specs/{slug}/final.ja.md`    | `../keeply-blog/content/ja/post/{slug}/index.md`      | `https://blog.keeply.work/ja/post/{slug}/`     |
 | `apps/blog/specs/{slug}/final.ko.md`    | `../keeply-blog/content/ko/post/{slug}/index.md`      | `https://blog.keeply.work/ko/post/{slug}/`     |
+| `apps/blog/specs/{slug}/final.it.md`    | `../keeply-blog/content/it/post/{slug}/index.md`      | `https://blog.keeply.work/it/post/{slug}/`     |
 
 **注意 quirk**：
 
-- `en` locale 的 contentDir 為 `content/english/`（**非** `content/en/`），但 URL prefix 為 `/en/`（hugo.toml `defaultContentLanguageInSubdir = true` + `[languages.en] contentDir = "content/english"`）。其他 4 個核心 locale 的目錄名與 URL prefix 一致（zh-tw / zh-cn / ja / ko）。
+- `en` locale 的 contentDir 為 `content/english/`（**非** `content/en/`），但 URL prefix 為 `/en/`（hugo.toml `defaultContentLanguageInSubdir = true` + `[languages.en] contentDir = "content/english"`）。其他 5 個核心 locale 的目錄名與 URL prefix 一致（zh-tw / zh-cn / ja / ko / it）。
 - 每個 post 為 Hugo **page bundle**：`{slug}/index.md` + `{slug}/cover.svg` + `{slug}/cover.png` 三檔同目錄。
 - 內容 byte-identical：`final.{locale}.md` 文章本體 = `index.md` 文章本體（轉檔時只動 frontmatter，**不改文字**）。
 
@@ -180,7 +181,7 @@ v0.1 最小可跑版。已實作：T1 Pillar 模板、4 個 GATE、TRAP 列表�
 | `title`               | spec frontmatter（必有，BWF GATE-2）                          |
 | `description`         | spec frontmatter（必有，BWF P1.10）                           |
 | `slug`                | spec 目錄名（kebab-case）                                     |
-| `date`                | spec frontmatter（DELIVER 時填寫，**5 locale 同 timestamp**） |
+| `date`                | spec frontmatter（DELIVER 時填寫，**6 locale 同 timestamp**） |
 | `image: cover.svg`    | DELIVER step 8 cover 必有                                     |
 | `og_image: cover.png` | DELIVER step 8 cover 必有                                     |
 | `categories`          | spec frontmatter（locale-specific 翻譯）                      |
@@ -191,7 +192,7 @@ v0.1 最小可跑版。已實作：T1 Pillar 模板、4 個 GATE、TRAP 列表�
 
 1. **Spec 缺欄位 → 回填 spec**（authoritative direction）。**禁止**只在 keeply-blog `index.md` 加欄位而不同步回 `apps/blog/specs/{slug}/final.{locale}.md`。
 2. **不雙寫**：avoid 在兩處各自維護一套 frontmatter；轉檔（spec → content）為單向 sync，spec 為唯一 source of truth。
-3. **5 locale frontmatter 必齊**：5 個 `final.{locale}.md` 同時更新後再一次 sync 到 5 個 content target；不允許單 locale 偷跑。
+3. **6 locale frontmatter 必齊**：6 個 `final.{locale}.md` 同時更新後再一次 sync 到 6 個 content target；不允許單 locale 偷跑。
 
 ### c. Hugo build 本機驗證
 
@@ -206,7 +207,7 @@ hugo --gc --minify
 
 **Exit 條件**：必須 exit 0（DELIVER step 10 hard rule）。
 
-**5 必要 locale 完整性檢查**（build 後本機驗證 public/ 產出齊全）：
+**6 必要 locale 完整性檢查**（build 後本機驗證 public/ 產出齊全）：
 
 ```bash
 # build 完成後：
@@ -215,7 +216,8 @@ test -f public/en/post/{slug}/index.html && \
 test -f public/zh-cn/post/{slug}/index.html && \
 test -f public/ja/post/{slug}/index.html && \
 test -f public/ko/post/{slug}/index.html && \
-echo "5-locale local build OK" || echo "MISSING locale build"
+test -f public/it/post/{slug}/index.html && \
+echo "6-locale local build OK" || echo "MISSING locale build"
 ```
 
 任一 locale 缺檔 → halt，不要 push；先回頭檢查該 locale 的 content/ 子目錄是否齊備。
@@ -257,7 +259,7 @@ GitHub Actions: Deploy Hugo site to Pages
 
 **push 權限**：已在 user settings 解鎖；**但** sub-agent 預設 `sub_agent_git_capability=read_only`，sub-agent 不得自行 git push（必經使用者授權；參考 global policy `~/.claude/CLAUDE.md`「Every git push requires explicit user authorization」）。
 
-### e. N×5 URL HTTP 200 完整性檢查 procedure
+### e. N×6 URL HTTP 200 完整性檢查 procedure
 
 **Trigger 時機**：deploy job 完成後（GitHub Actions 顯示綠勾）→ 等 GitHub Pages CDN propagation（通常 < 60 sec）→ 跑下列 curl 矩陣。
 
@@ -267,7 +269,7 @@ GitHub Actions: Deploy Hugo site to Pages
 https://blog.keeply.work/{locale}/post/{slug}/
 ```
 
-其中 `{locale}` ∈ `{zh-tw, en, zh-cn, ja, ko}`（5 必要 locale；其餘 14 自動翻譯 locale 為 v0.2_deferred）。
+其中 `{locale}` ∈ `{zh-tw, en, zh-cn, ja, ko, it}`（6 必要 locale；其餘 13 自動翻譯 locale 為 v0.2_deferred）。
 
 **curl 模板**（單一 URL）：
 
@@ -281,7 +283,7 @@ curl -s -o /dev/null -w "%{http_code}" "https://blog.keeply.work/{locale}/post/{
 
 ```bash
 SLUGS=(hidden-cost-shared-folders install-keeply-windows-mac thesis-single-point-of-failure autocad-wrong-version-crew file-version-management-complete-guide keeply-getting-started-from-zero vibe-coding-rollback what-keeply-saves-vs-backup-cloud)
-LOCALES=(zh-tw en zh-cn ja ko)
+LOCALES=(zh-tw en zh-cn ja ko it)
 PASS=0; FAIL=0
 for slug in "${SLUGS[@]}"; do
   for loc in "${LOCALES[@]}"; do
@@ -296,9 +298,10 @@ done
 echo "Result: ${PASS}/$((${#SLUGS[@]}*${#LOCALES[@]}))"
 ```
 
-**Pass 條件**：N articles × 5 locales 全部 200。任一 URL 非 200 → halt，回頭檢查 content/ 該 locale 子目錄是否 push 進 main、Actions log 該次 build 是否該 locale build 出 `public/{locale}/post/{slug}/index.html`。
+**Pass 條件**：N articles × 6 locales 全部 200。任一 URL 非 200 → halt，回頭檢查 content/ 該 locale 子目錄是否 push 進 main、Actions log 該次 build 是否該 locale build 出 `public/{locale}/post/{slug}/index.html`。
 
 **Baseline reference**：
 - 2026-04-28: 4 articles × 4 locales = 16/16 URL HTTP 200 ✅ (hidden-cost-shared-folders / install-keeply-windows-mac / thesis-single-point-of-failure / autocad-wrong-version-crew × zh-tw/en/zh-cn/ja).
 - 2026-05-01: 5-locale 升級 — 8 articles × 5 locales (en/zh-tw/zh-cn/ja/ko) = 40/40 為新 baseline 目標。
 - **2026-05-03: 9 articles × 5 locales = 45/45 URL HTTP 200 ✅ confirmed via curl** — 修復 Cloudflare cross-zone redirect bug 後重驗。9 個 slug：上述 8 + `client-asked-which-version`。RSS feeds 5/5 同步恢復 200（`/{locale}/index.xml`）。後續新文章 slug 加入上述 `SLUGS` 陣列即可。
+- **2026-05-03 it 升核心後新 baseline 目標：9 articles × 6 locales = 54/54**（既有 9 篇 it 版本是 auto-translated baseline，URL HTTP 200 應已成立；human polish backfill 為獨立 quality 任務、不影響 URL completeness check）。
