@@ -9,7 +9,7 @@
               file_FINAL 用 amber 強調 = 諷刺核心。
      ============================================================= -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none"
-     font-family="'Inter','Noto Sans TC','PingFang TC','Microsoft JhengHei',system-ui,sans-serif">
+     font-family="'Inter','Noto Sans','SF Pro Display',-apple-system,system-ui,sans-serif">
 
   <defs>
     <linearGradient id="grad-indigo" x1="0" y1="0" x2="1" y2="1">
@@ -82,7 +82,7 @@
   <!-- ============ Eyebrow ============ -->
   <g transform="translate(120, 96)">
     <rect x="0" y="2" width="14" height="14" fill="url(#grad-amber)"/>
-    <text x="28" y="14" font-size="17" font-weight="800" fill="#312E81" letter-spacing="4">FILE VERSION MANAGEMENT</text>
+    <text x="28" y="14" font-size="17" font-weight="800" fill="#312E81" letter-spacing="4">GESTIONE VERSIONI FILE</text>
     <text x="28" y="40" font-size="14" font-weight="600" fill="#4338CA" opacity="0.72" letter-spacing="2">PILLAR · EDITORIAL</text>
   </g>
 
@@ -110,9 +110,9 @@
 
     <!-- Column header -->
     <rect x="0" y="60" width="1160" height="40" fill="#F8F7FF"/>
-    <text x="32" y="86" font-size="13" font-weight="700" fill="#4338CA" letter-spacing="2" opacity="0.85">NAME</text>
-    <text x="800" y="86" font-size="13" font-weight="700" fill="#4338CA" letter-spacing="2" opacity="0.85">DATE MODIFIED</text>
-    <text x="1020" y="86" font-size="13" font-weight="700" fill="#4338CA" letter-spacing="2" opacity="0.85">SIZE</text>
+    <text x="32" y="86" font-size="13" font-weight="700" fill="#4338CA" letter-spacing="2" opacity="0.85">NOME</text>
+    <text x="800" y="86" font-size="13" font-weight="700" fill="#4338CA" letter-spacing="2" opacity="0.85">DATA MODIFICA</text>
+    <text x="1020" y="86" font-size="13" font-weight="700" fill="#4338CA" letter-spacing="2" opacity="0.85">DIMENSIONE</text>
     <line x1="0" y1="100" x2="1160" y2="100" stroke="#E0E7FF" stroke-width="1"/>
 
     <!-- File rows (6 個版本演化) -->
@@ -185,13 +185,13 @@
 
   <!-- ============ Subtitle（universal English） ============ -->
   <g transform="translate(220, 740)">
-    <text x="0" y="0" font-size="28" font-weight="700" fill="#312E81">Perché chi usa cartelle condivise</text>
-    <text x="0" y="38" font-size="28" font-weight="700" fill="#312E81">inventa le proprie <tspan fill="#F59E0B">regole di nome</tspan></text>
+    <text x="0" y="0" font-size="28" font-weight="700" fill="#312E81">Perché ogni utente di cartella condivisa inventa</text>
+    <text x="0" y="38" font-size="28" font-weight="700" fill="#312E81">il proprio <tspan fill="#F59E0B">schema di nomi</tspan></text>
   </g>
 
   <!-- ============ Bottom note ============ -->
   <g transform="translate(220, 832)">
-    <text x="0" y="0" font-size="14" font-weight="600" fill="#4338CA" opacity="0.65" letter-spacing="2">4 RAGIONI STRUTTURALI · IL TUO TOOL NON È STATO PROGETTATO PER QUESTO</text>
+    <text x="0" y="0" font-size="14" font-weight="600" fill="#4338CA" opacity="0.65" letter-spacing="2">4 RAGIONI STRUTTURALI: IL TUO STRUMENTO NON È STATO PROGETTATO PER QUESTO</text>
   </g>
 
   <!-- ============ 右下：Keeply lockup ============ -->
