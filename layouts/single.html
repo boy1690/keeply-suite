@@ -101,6 +101,12 @@
   </div>
 </article>
 
+<!-- PRIMARY CTA — placed immediately after article body to capture peak reading intent.
+     Order rationale: user finishes reading → conversion intent peaks → CTA visible without
+     having to scroll past tags/author/related-posts distractors. Tags + author + related
+     follow AFTER the CTA for users who need more context but don't want to convert. -->
+{{ partial "cta-download.html" . }}
+
 <!-- TAGS & AUTHOR CARD -->
 <section class="max-w-3xl mx-auto px-6 mt-12 pt-8 border-t border-gray-100">
   {{- with .Params.tags -}}
@@ -146,7 +152,7 @@
 {{- end -}}
 {{- $related = first 3 $related -}}
 {{- if $related -}}
-<section class="max-w-6xl mx-auto px-6 mt-16 pt-12 border-t border-gray-100">
+<section class="max-w-6xl mx-auto px-6 mt-16 pt-12 border-t border-gray-100 mb-16">
   <h2 class="text-2xl font-bold text-gray-900 mb-6">{{ i18n "section_related" }}</h2>
   <div class="grid md:grid-cols-3 gap-6">
     {{- range $related -}}
@@ -155,6 +161,4 @@
   </div>
 </section>
 {{- end -}}
-
-{{ partial "cta-download.html" . }}
 {{ end }}
