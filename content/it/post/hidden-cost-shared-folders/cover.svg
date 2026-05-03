@@ -7,7 +7,7 @@
               #folder-shared, #keeply-lockup
      ============================================================= -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none"
-     font-family="'Inter','Segoe UI',system-ui,sans-serif">
+     font-family="'Inter','Noto Sans','SF Pro Display',-apple-system,system-ui,sans-serif">
 
   <!-- ============ INLINED LIBRARY ============ -->
   <defs>
@@ -126,7 +126,7 @@
   <!-- Eyebrow -->
   <g transform="translate(120, 120)">
     <rect x="0" y="2" width="14" height="14" fill="url(#grad-amber)"/>
-    <text x="28" y="14" font-size="17" font-weight="800" fill="#312E81" letter-spacing="4">THE HIDDEN COST</text>
+    <text x="28" y="14" font-size="17" font-weight="800" fill="#312E81" letter-spacing="4">IL COSTO NASCOSTO</text>
     <text x="28" y="40" font-size="14" font-weight="600" fill="#4338CA" opacity="0.72" letter-spacing="2">TASSA DI MICRO-PANICO · EDITORIAL</text>
   </g>
 
@@ -140,13 +140,13 @@
   <!-- 數字下方標籤 -->
   <g transform="translate(120, 580)">
     <text x="0" y="0" font-size="32" font-weight="800" fill="#312E81">ORE / ANNO</text>
-    <text x="0" y="38" font-size="17" font-weight="500" fill="#4338CA" opacity="0.75">PERSE IN ANSIA</text>
+    <text x="0" y="38" font-size="17" font-weight="500" fill="#4338CA" opacity="0.75">PERSE PER ANSIA DA FILE</text>
   </g>
 
   <!-- 左欄副標（解釋 83 是什麼） -->
   <g transform="translate(120, 680)">
-    <text x="0" y="0" font-size="20" font-weight="700" fill="#312E81">La tassa che paghi ogni giorno chiedendoti:</text>
-    <text x="0" y="30" font-size="20" font-weight="700" fill="#312E81">"avrò  il file di un collega?"<tspan fill="#F59E0B">sovrascritto</tspan></text>
+    <text x="0" y="0" font-size="20" font-weight="700" fill="#312E81">La tassa che paghi per chiederti,</text>
+    <text x="0" y="30" font-size="20" font-weight="700" fill="#312E81">"did I  someone's work?"<tspan fill="#F59E0B">overwrite</tspan></text>
   </g>
 
   <!-- 左下：Keeply lockup -->
@@ -185,7 +185,7 @@
       <rect x="-3" y="-3" width="366" height="46" rx="10" fill="none" stroke="url(#grad-amber)" stroke-width="3"/>
       <rect width="360" height="40" rx="7" fill="#ffffff"/>
       <rect x="14" y="13" width="10" height="14" fill="url(#grad-amber)"/>
-      <text x="36" y="26" font-size="14" font-weight="700" fill="#312E81" font-family="'JetBrains Mono',monospace">Floorplan_v7_FINAL_NON_TOCCARE.dwg</text>
+      <text x="36" y="26" font-size="14" font-weight="700" fill="#312E81" font-family="'JetBrains Mono',monospace">Floorplan_v7_FINAL_DO_NOT_TOUCH.dwg</text>
     </g>
   </g>
 
@@ -202,7 +202,7 @@
 
   <!-- 右下：場景註解（小字，不與 lockup 爭） -->
   <g transform="translate(760, 800)">
-    <text x="0" y="0" font-size="14" font-weight="600" fill="#4338CA" opacity="0.72" letter-spacing="1">4 designer  ·  1 cartella  ·  1,6 h/sett difendendo</text>
+    <text x="0" y="0" font-size="14" font-weight="600" fill="#4338CA" opacity="0.72" letter-spacing="1">4 designer  ·  1 cartella  ·  1,6 ore / settimana in difesa</text>
   </g>
 
 </svg>

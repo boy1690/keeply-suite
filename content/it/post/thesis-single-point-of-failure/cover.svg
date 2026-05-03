@@ -4,7 +4,7 @@
      Recipe: solo-dilemma variant (single figure + file-card cluster + big struck-through label)
      ============================================================= -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none"
-     font-family="'Inter','SF Pro Display',-apple-system,system-ui,sans-serif">
+     font-family="'Inter','Noto Sans','SF Pro Display',-apple-system,system-ui,sans-serif">
 
   <defs>
     <linearGradient id="grad-indigo" x1="0" y1="0" x2="1" y2="1">
@@ -78,8 +78,8 @@
 
   <g transform="translate(120, 120)">
     <rect x="0" y="2" width="14" height="14" fill="url(#grad-amber)"/>
-    <text x="28" y="14" font-size="17" font-weight="800" fill="#312E81" letter-spacing="4">SINGLE POINT OF FAILURE</text>
-    <text x="28" y="40" font-size="14" font-weight="600" fill="#4338CA" opacity="0.72" letter-spacing="2">MASTERS THESIS · DIFF AMNESIA · EDITORIAL</text>
+    <text x="28" y="14" font-size="17" font-weight="800" fill="#312E81" letter-spacing="4">PUNTO UNICO DI GUASTO</text>
+    <text x="28" y="40" font-size="14" font-weight="600" fill="#4338CA" opacity="0.72" letter-spacing="2">TESI MAGISTRALE · AMNESIA DEL DIFF · EDITORIAL</text>
   </g>
 
   <g transform="translate(120, 210)">
@@ -88,13 +88,13 @@
   </g>
 
   <g transform="translate(120, 580)">
-    <text x="0" y="0" font-size="32" font-weight="800" fill="#312E81">The diff you forgot</text>
-    <text x="0" y="38" font-size="17" font-weight="500" fill="#4338CA" opacity="0.75">THE VERSION YOU CAN'T FIND</text>
+    <text x="0" y="0" font-size="32" font-weight="800" fill="#312E81">Il diff che hai dimenticato</text>
+    <text x="0" y="38" font-size="17" font-weight="500" fill="#4338CA" opacity="0.75">LA VERSIONE CHE NON TROVI</text>
   </g>
 
   <g transform="translate(120, 680)">
-    <text x="0" y="0" font-size="20" font-weight="700" fill="#312E81">Your thesis's real risk isn't the deadline.</text>
-    <text x="0" y="30" font-size="20" font-weight="700" fill="#312E81">It's <tspan fill="#F59E0B">forgetting the diff</tspan>.</text>
+    <text x="0" y="0" font-size="20" font-weight="700" fill="#312E81">Il vero rischio della tua tesi non è la scadenza.</text>
+    <text x="0" y="30" font-size="20" font-weight="700" fill="#312E81">It's <tspan fill="#F59E0B">dimenticare il diff</tspan>.</text>
   </g>
 
   <use href="#keeply-lockup" x="120" y="780" width="200" height="50"/>
@@ -134,7 +134,7 @@
   <line x1="800" y1="790" x2="1520" y2="790" stroke="#C7D2FE" stroke-width="1.5" opacity="0.55"/>
 
   <g transform="translate(820, 830)">
-    <text x="0" y="0" font-size="14" font-weight="600" fill="#4338CA" opacity="0.72" letter-spacing="1">ONE LAPTOP  ·  TWO YEARS OF WORK  ·  v? MISSING</text>
+    <text x="0" y="0" font-size="14" font-weight="600" fill="#4338CA" opacity="0.72" letter-spacing="1">UN PORTATILE  ·  DUE ANNI DI LAVORO  ·  v? MANCANTE</text>
   </g>
 
 </svg>
