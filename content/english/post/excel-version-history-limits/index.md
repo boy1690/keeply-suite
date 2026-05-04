@@ -1,7 +1,7 @@
 ---
 title: "Excel Version History Only Goes Back 1-2 Versions? 4 Microsoft Limits Nobody Tells You"
 description: "Excel version history only goes back 1-2 versions isn't a bug—it's Microsoft designing AutoSave as cloud subscription bait."
-date: 2026-05-05T09:10:00+08:00
+date: 2026-05-04T20:00:00+08:00
 draft: false
 slug: excel-version-history-limits
 primary_keyword: "version history excel"

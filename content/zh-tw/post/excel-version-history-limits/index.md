@@ -1,7 +1,7 @@
 ---
 title: "Excel 還原版本只回 1-2 版？4 個 Microsoft AutoSave 沒講的限制"
 description: "Excel 版本史只回 1-2 版不是 bug，是 Microsoft 把 AutoSave 當 cloud bait 設計的後果。"
-date: 2026-05-05T09:10:00+08:00
+date: 2026-05-04T20:00:00+08:00
 draft: false
 slug: excel-version-history-limits
 primary_keyword: "excel 還原版本"

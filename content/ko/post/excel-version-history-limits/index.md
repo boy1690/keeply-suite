@@ -1,7 +1,7 @@
 ---
 title: "엑셀 이전 버전 복원이 1-2 개밖에 안 돌아간다? Microsoft 가 말 안 하는 4 가지 제한"
 description: "엑셀 이전 버전이 1-2 개만 돌아가는 건 버그가 아닙니다. Microsoft 가 AutoSave 를 클라우드 구독 미끼로 설계한 결과입니다."
-date: 2026-05-05T09:10:00+08:00
+date: 2026-05-04T20:00:00+08:00
 draft: false
 slug: excel-version-history-limits
 primary_keyword: "엑셀 이전 버전 복원"

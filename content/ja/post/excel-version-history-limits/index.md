@@ -1,7 +1,7 @@
 ---
 title: "エクセル バージョン履歴が 1-2 個しか戻れない？Microsoft が言わない 4 つの制限"
 description: "エクセル バージョン履歴が 1-2 個しか戻れないのはバグじゃない。Microsoft が AutoSave をクラウド購読の餌として設計した結果です。"
-date: 2026-05-05T09:10:00+08:00
+date: 2026-05-04T20:00:00+08:00
 draft: false
 slug: excel-version-history-limits
 primary_keyword: "エクセル バージョン 履歴"

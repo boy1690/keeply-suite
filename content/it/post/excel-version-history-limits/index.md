@@ -1,7 +1,7 @@
 ---
 title: "Versioni precedenti file Excel: solo 1-2 versioni indietro? 4 limiti Microsoft che nessuno ti dice"
 description: "Le versioni precedenti di Excel tornano indietro solo di 1-2 versioni: non è un bug, è Microsoft che progetta AutoSave come esca per l'abbonamento cloud."
-date: 2026-05-05T09:10:00+08:00
+date: 2026-05-04T20:00:00+08:00
 draft: false
 slug: excel-version-history-limits
 primary_keyword: "versioni precedenti file excel"
