@@ -1,0 +1,82 @@
+<!-- =============================================================
+     Cover: why-i-built-keeply (T6 founder note, 6 launch locales)
+     Recipe: founder-quote — early tester's question as hero
+     ============================================================= -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none"
+     font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',system-ui,sans-serif">
+
+  <defs>
+    <linearGradient id="grad-indigo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#312E81"/>
+    </linearGradient>
+    <linearGradient id="grad-amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFB300"/><stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="grad-paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F8F7FF"/><stop offset="1" stop-color="#E4E3FF"/>
+    </linearGradient>
+
+    <symbol id="doc-icon-amber" viewBox="0 0 32 36">
+      <path d="M2 0 L20 0 L30 10 L30 36 L2 36 Z" fill="url(#grad-amber)" opacity="0.95"/>
+      <path d="M20 0 L30 10 L20 10 Z" fill="#FFB300" opacity="0.7"/>
+    </symbol>
+
+    <symbol id="keeply-lockup" viewBox="0 0 200 50">
+      <circle cx="22" cy="25" r="16" fill="url(#grad-indigo)"/>
+      <path d="M16 18 L16 32 M16 25 L26 18 M16 25 L26 32" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <text x="48" y="33" font-size="22" font-weight="800" fill="#312E81">Keeply</text>
+    </symbol>
+
+    <filter id="hero-shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="14" stdDeviation="20" flood-color="#312E81" flood-opacity="0.15"/>
+    </filter>
+
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#312E81" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#grad-paper)"/>
+
+  <g transform="translate(120, 100)">
+    <text x="0" y="0" font-size="15" font-weight="700" fill="#4338CA" letter-spacing="3">創辦人筆記 · EDITORIAL</text>
+  </g>
+
+  <g transform="translate(120, 320)" filter="url(#hero-shadow)">
+    <text x="0" y="0" font-size="64" font-weight="900" fill="url(#grad-indigo)" letter-spacing="-1">「我的檔案</text>
+    <text x="0" y="86" font-size="64" font-weight="900" fill="url(#grad-amber)" letter-spacing="-1">到哪去了？」</text>
+    <text x="0" y="172" font-size="64" font-weight="900" fill="url(#grad-indigo)" letter-spacing="-1">— 早期測試者</text>
+  </g>
+
+  <g transform="translate(120, 580)">
+    <text x="0" y="0" font-size="32" font-weight="800" fill="#312E81" letter-spacing="0.5">那一秒我知道</text>
+    <text x="0" y="46" font-size="32" font-weight="800" fill="#312E81" letter-spacing="0.5">做錯了 <tspan fill="#F59E0B">什麼</tspan>。</text>
+  </g>
+
+  <g transform="translate(960, 280)" filter="url(#soft-shadow)">
+    <rect width="500" height="320" fill="#FFFBEB" rx="10" opacity="0.85"/>
+    <rect x="0" y="0" width="6" height="320" fill="url(#grad-amber)" rx="2"/>
+    <text x="32" y="50" font-size="14" font-weight="700" fill="#4338CA" letter-spacing="2">NAS / 我的備份位置</text>
+    <text x="32" y="100" font-size="22" font-weight="700" fill="#312E81" font-family="'JetBrains Mono','Fira Code',ui-monospace,monospace">/Users/me/.../nas/</text>
+    <text x="32" y="140" font-size="18" font-weight="600" fill="#4338CA" font-family="'JetBrains Mono','Fira Code',ui-monospace,monospace">  📂 objects/</text>
+    <text x="32" y="172" font-size="18" font-weight="600" fill="#4338CA" font-family="'JetBrains Mono','Fira Code',ui-monospace,monospace">  📂 refs/</text>
+    <text x="32" y="204" font-size="18" font-weight="600" fill="#4338CA" font-family="'JetBrains Mono','Fira Code',ui-monospace,monospace">  📂 pack/</text>
+    <text x="32" y="236" font-size="18" font-weight="600" fill="#4338CA" font-family="'JetBrains Mono','Fira Code',ui-monospace,monospace">  📄 HEAD</text>
+    <text x="32" y="268" font-size="18" font-weight="600" fill="#F59E0B" font-family="'JetBrains Mono','Fira Code',ui-monospace,monospace">  ❓ 我的檔案在哪？</text>
+  </g>
+
+  <g transform="translate(120, 720)">
+    <text x="0" y="0" font-size="28" font-weight="700" fill="#312E81">Keeply 是讓你看得到自己的檔案而做的，<tspan fill="#F59E0B">不是把你變成 dev</tspan>。</text>
+  </g>
+
+  <g transform="translate(120, 845)">
+    <text x="0" y="0" font-size="13" font-weight="600" fill="#4338CA" opacity="0.6" letter-spacing="2">TING-WEI TSAO · KEEPLY 創辦人 · ADR-001 設計轉折</text>
+  </g>
+
+  <use href="#keeply-lockup" x="1280" y="810" width="200" height="50"/>
+
+  <g transform="translate(1480, 875)">
+    <text x="0" y="0" font-size="11" font-weight="500" fill="#4338CA" opacity="0.45" letter-spacing="1.5" text-anchor="end">FOUNDER NOTE / 6 LOCALES · 2026</text>
+  </g>
+
+</svg>
