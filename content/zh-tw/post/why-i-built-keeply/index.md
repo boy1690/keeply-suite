@@ -1,6 +1,6 @@
 ---
 title: "為什麼我做 Keeply：給每天用共用資料夾出錯的人"
-description: "Keeply 是從共用資料夾失控的場景裡長出來的工具——不是要把你變成 dev。"
+description: "Keeply 是從共用資料夾失控的場景裡長出來的工具——不是要把你變成開發者。"
 date: 2026-05-06T01:00:00+08:00
 draft: false
 slug: why-i-built-keeply
@@ -41,7 +41,7 @@ template: T6
 
 這篇講**初心**。
 
-Keeply 不是要在版本管理工具圈裡贏 git、贏 SVN、贏 Mercurial——那場仗 dev 們贏了二十年。Keeply 是給每天**不打開 git** 但每天**打開資料夾**的人：營建師傅、設計師、律師、會計、學生、接案者。
+Keeply 不是要在版本管理工具圈裡贏 git、贏 SVN、贏 Mercurial——那場仗開發者們贏了二十年。Keeply 是給每天**不打開 git** 但每天**打開資料夾**的人：營建師傅、設計師、律師、會計、學生、接案者。
 
 如果你正是這群人之一，你看 [共用資料夾的檔案版本問題](/zh-tw/post/hidden-cost-shared-folders/) 那篇就會懂：你不是不會整理檔案，是工具把整理檔案的責任全推給你的記憶力。
 
