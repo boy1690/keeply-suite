@@ -1,6 +1,6 @@
 ---
-title: "Why I Built Keeply: Starting from \"Where Did My Files Go?\""
-description: "Keeply is built so you can see your files—not so you'll learn to be a dev."
+title: "Why I Built Keeply: For People Who Lose Files in Shared Folders Every Day"
+description: "Keeply grew out of shared-folder chaos—not to turn you into a dev."
 date: 2026-05-06T01:00:00+08:00
 draft: false
 slug: why-i-built-keeply
@@ -9,45 +9,41 @@ categories:
   - Founder note
 tags:
   - Keeply
-  - Design philosophy
   - Founder
+  - Origin story
 image: cover.svg
 og_image: cover.png
 role: standalone
 template: T6
 ---
 
-The first early tester opened the NAS folder to look at his files. Inside he saw `objects/`, `pack/`, `HEAD`. None of his design files. He messaged me: "Where did my files go?"
+For the past few years I've worked alongside engineers in the construction industry. Many of them are 50, 60 years old. The computer isn't their most comfortable tool, but the daily blueprints, change orders, and contracts all run through it. The shared folder is where they collaborate: one NAS, a group of people, N versions of files, edits all the time.
 
-That second I knew what we got wrong.
-
-We picked "backup" as the core concept. In an engineer's head, backup is fine: compressed, encoded, not directly browsable. But to a user, **the opposite of "backup" isn't "no backup," it's "can't find it."** Open a folder and not see your stuff = trust broken. Tech can say it's safe, but if eyes say not safe, it's not safe.
-
-That was Keeply's first turn. It later became formal [ADR-001](https://github.com/boy1690): drop "backup" as the core metaphor, switch to "project location." One word changed, the whole data structure shifted.
+I've watched [the chaos play out](/en/post/autocad-wrong-version-crew/) too many times. Designers send a new version to the office. Whoever picks up the email saves it to the NAS but doesn't tell the site. The site supervisor that day is working from last week's drawing. The concrete is already poured, the dimensions are wrong, you have to break it out, re-embed the frame, push the schedule back two days. Nobody did anything wrong. But somebody pays.
 
 ## The fork I took
 
-There were two roads. Either teach the user to be a dev (learn that `objects/` is a pack file, `HEAD` is a pointer), or make the tool speak office language ("save version," "version history," "restore").
+I use git fluently. Software engineers do, there are even paid courses for it. When I find a problem I commit, branch, reset—the tool feels like a second hand.
 
-Teaching users is cheaper. Building a real tool is harder. I chose the latter.
+But the moment I said "try git" to a construction site supervisor, I got back a confused face every time. Git isn't built for them: CLI, merge conflict, HEAD pointer—every concept is a wall in the way. I was stuck in the middle: I used the tool fluently, my customers couldn't, the shared folder kept producing weekly stories of concrete getting broken out.
 
-Keeply's [mission](https://github.com/boy1690) became one sentence: "**Let non-technical people manage file versions in office language, with no need to know Git exists.**" The UI doesn't show commit, branch, HEAD, stash—not even as metaphors. Underneath it's a git2 engine, but that's my problem, not yours.
+Teaching them to learn git is cheaper. Building a tool they don't have to learn is harder. I picked the harder one.
 
 ## A mistake I made (one of)
 
-Not every design call is right. Back in April this year I asked a higher-tier model to draft a Free / Team tier differentiation strategy. It came back with 530 lines: 5 use-case quotas, watermark evidence, RFC 3161 timestamps, 5 complex upgrade triggers.
+The first version of Keeply had too many features. I thought: construction needs this, designers need that, accounting firms will use it too. I wanted to catch every case. The result felt like a Swiss Army knife: every feature was there, but no one used it smoothly.
 
-I rejected all of it.
+So I cut. And cut again.
 
-The reasoning: watermarks aren't legal evidence in Taiwan (formal documents are). Multiple folders on one NAS are physically equivalent to multi-vault—a number cap means nothing. RFC 3161 timestamps have no real selling point for Taiwan users (they go to the post office for evidence stamps or to a notary). **Those features serve theory, not real users.**
-
-Now every spec decision goes through three questions: do users want this? Does it have meaning in the actual scenario? Will anyone care if I cut it? Any "no" = don't ship.
+Now every new feature has to pass three questions before it ships in Keeply: will the site actually use this? Will my 60-year-old supervisors open it? Who'll care if I cut it? Any "no" = don't ship. Fewer features isn't a bug. It's a design choice.
 
 ## Why I'm writing this
 
-This isn't marketing. It's **transparency**: my reasons for building this tool, the mistakes I've made, the principles I hold.
+This is about the **founding intent**.
 
-If you're going to hand a tool 5 to 10 years of client data, design files, contracts—you need to know how the person building it thinks. I can't promise Keeply will always be right, but I can promise: every decision is written down, every mistake gets reframed, every over-engineered idea gets killed.
+Keeply isn't trying to win the version-control fight against git, SVN, or Mercurial—devs won that one twenty years ago. Keeply is for people who **don't open git** every day but **do open folders** every day: site supervisors, designers, lawyers, accountants, students, freelancers.
+
+If you're one of those people, read [The hidden cost of shared folders](/en/post/hidden-cost-shared-folders/) and you'll get it: you're not bad at organizing files. The tool just pushed the responsibility for organizing them onto your memory.
 
 See you in the next version.
 

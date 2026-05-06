@@ -1,6 +1,6 @@
 ---
-title: "Perché ho creato Keeply: tutto è iniziato da \"Dove sono finiti i miei file?\""
-description: "Keeply è costruito perché tu possa vedere i tuoi file—non perché tu impari a essere uno sviluppatore."
+title: "Perché ho creato Keeply: per chi perde file nelle cartelle condivise ogni giorno"
+description: "Keeply è cresciuto dal caos delle cartelle condivise—non per farti diventare uno sviluppatore."
 date: 2026-05-06T01:00:00+08:00
 draft: false
 slug: why-i-built-keeply
@@ -9,45 +9,41 @@ categories:
   - Note del fondatore
 tags:
   - Keeply
-  - Filosofia di design
   - Fondatore
+  - Origine
 image: cover.svg
 og_image: cover.png
 role: standalone
 template: T6
 ---
 
-Il primo early tester ha aperto la cartella NAS per guardare i suoi file. Dentro ha trovato `objects/`, `pack/`, `HEAD`. Nessuno dei suoi file di design. Mi ha mandato un messaggio: "Dove sono finiti i miei file?"
+Negli ultimi anni ho lavorato fianco a fianco con ingegneri dell'edilizia. Molti hanno 50, 60 anni. Il computer non è il loro strumento più comodo, ma planimetrie, ordini di variante e contratti passano tutti da lì ogni giorno. La cartella condivisa è il loro campo di collaborazione: un NAS, un gruppo di persone, N versioni di file, modifiche continue.
 
-In quel momento ho capito cosa avevamo sbagliato.
-
-Avevamo scelto "backup" come concetto centrale. Nella testa di un ingegnere il backup va bene: compresso, codificato, non navigabile direttamente. Ma per un utente, **l'opposto di "backup" non è "no backup," è "non lo trovo."** Aprire una cartella e non vedere le proprie cose = fiducia rotta. La tecnica può dire che è sicuro, ma se gli occhi dicono che non è sicuro, non è sicuro.
-
-Quella è stata la prima svolta di Keeply. Poi è diventata l'[ADR-001](https://github.com/boy1690) formale: togliere "backup" come metafora centrale, passare a "posizione del progetto." Una parola di differenza, l'intera struttura dati è cambiata.
+Ho visto [il caos andare in scena](/it/post/autocad-wrong-version-crew/) troppe volte. I designer mandano una nuova versione all'ufficio. Chi raccoglie l'email la salva sul NAS ma non avvisa il cantiere. Il capocantiere quel giorno sta lavorando con il disegno della settimana scorsa. Il calcestruzzo è già colato, le dimensioni non corrispondono, devi rompere il getto, rifare il telaio, spostare il programma di due giorni. Nessuno ha sbagliato. Ma qualcuno paga.
 
 ## Il bivio che ho preso
 
-C'erano due strade. O insegnare all'utente a essere uno sviluppatore (imparare che `objects/` è un pack file, `HEAD` è un puntatore), o fare uno strumento che parla la lingua dell'ufficio ("salva versione," "cronologia versioni," "ripristina").
+Io uso git con scioltezza. Gli sviluppatori lo fanno tutti, esistono perfino corsi a pagamento. Quando trovo un problema faccio commit, branch, reset—lo strumento è come una seconda mano.
 
-Educare gli utenti è più economico. Costruire uno strumento vero è più difficile. Ho scelto la seconda.
+Ma nel momento in cui ho detto "prova git" a un capocantiere, mi è tornata indietro una faccia confusa ogni volta. Git non è fatto per loro: CLI, merge conflict, puntatore HEAD, ogni concetto è un muro che blocca la strada. Ero bloccato in mezzo: io usavo lo strumento con scioltezza, i miei clienti non potevano, la cartella condivisa continuava a generare storie settimanali di calcestruzzo da rompere.
 
-La [missione](https://github.com/boy1690) di Keeply è diventata una frase: "**Permettere a persone non tecniche di gestire le versioni dei file in linguaggio ufficio, senza alcuna necessità di sapere che Git esiste.**" L'UI non mostra commit, branch, HEAD, stash—nemmeno come metafore. Sotto c'è un motore git2, ma è un mio problema, non tuo.
+Insegnare loro git è più economico. Costruire uno strumento che non devono imparare è più difficile. Ho scelto la strada difficile.
 
 ## Un errore che ho fatto (uno tra molti)
 
-Non ogni decisione di design è giusta. Ad aprile di quest'anno ho chiesto a un modello di tier superiore una bozza di strategia di differenziazione Free / Team. È tornato con 530 righe: 5 quote per casi d'uso, watermark come prova, timestamp RFC 3161, 5 trigger complessi di upgrade.
+La prima versione di Keeply aveva troppe funzionalità. Pensavo: serve all'edilizia, ai designer, agli studi commercialisti la useranno anche, volevo prendere ogni caso. Il risultato sembrava un coltellino svizzero: c'erano tutte le funzionalità, ma nessuno le usava con scioltezza.
 
-Ho rifiutato tutto.
+Quindi ho tagliato. E tagliato ancora.
 
-Il ragionamento: i watermark non sono prova legale a Taiwan (lo sono i documenti formali). Più cartelle su un NAS sono fisicamente equivalenti a multi-vault—un limite numerico non significa nulla. I timestamp RFC 3161 non hanno alcun valore di vendita reale per gli utenti taiwanesi (vanno in posta per timbri di evidenza o da un notaio). **Quelle feature servono la teoria, non gli utenti reali.**
-
-Ora ogni decisione di spec passa attraverso tre domande: gli utenti la vogliono? Ha senso nello scenario reale? A qualcuno importerà se la taglio? Qualunque "no" = non spedire.
+Ora ogni nuova funzionalità deve passare tre domande prima di entrare in Keeply: il cantiere la userà davvero? I miei capisquadra di 60 anni la apriranno? A qualcuno importerà se la taglio? Qualunque "no" = non la metto. Meno funzionalità non è un bug, è una scelta di design.
 
 ## Perché lo scrivo
 
-Non è marketing. È **trasparenza**: le mie ragioni per costruire questo strumento, gli errori che ho fatto, i principi che mantengo.
+Questo riguarda l'**origine**.
 
-Se vai ad affidare a uno strumento 5 o 10 anni di dati clienti, file di design, contratti—devi sapere come pensa la persona che lo costruisce. Non posso promettere che Keeply sarà sempre giusto, ma posso promettere: ogni decisione è scritta, ogni errore viene rireframato, ogni idea over-engineered viene uccisa.
+Keeply non sta cercando di vincere la battaglia del controllo versione contro git, SVN o Mercurial—gli sviluppatori l'hanno vinta vent'anni fa. Keeply è per le persone che **non aprono git** ogni giorno ma **aprono cartelle** ogni giorno: capisquadra di cantiere, designer, avvocati, commercialisti, studenti, freelance.
+
+Se sei una di queste persone, leggi [Il costo nascosto delle cartelle condivise](/it/post/hidden-cost-shared-folders/) e capirai: non sei scarso a organizzare i file. Lo strumento ha solo scaricato la responsabilità di organizzarli sulla tua memoria.
 
 Ci vediamo nella prossima versione.
 
