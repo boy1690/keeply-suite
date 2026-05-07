@@ -6,8 +6,8 @@ draft: false
 slug: "client-asked-which-version"
 primary_keyword: "recover previous version of word document mac"
 locale: en
-categories: ["File Version Management"]
-tags: ["version history", "AutoRecover", "OneDrive", "delivery-note", "operator-error"]
+categories: [Use cases]
+tags: [file recovery, operator error]
 image: cover.svg
 og_image: cover.png
 locales_required: [en, zh-TW, zh-CN, ja, ko]

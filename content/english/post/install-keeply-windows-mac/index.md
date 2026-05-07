@@ -3,8 +3,8 @@ title: "How to install Keeply on Windows and macOS in 10 minutes"
 description: "Skip the 'Run anyway' fine print and the guesswork — install Keeply in ten minutes and protect your first project the same day."
 date: 2026-04-26
 draft: false
-tags: ["install", "tutorial", "Windows", "macOS", "winget"]
-categories: ["tutorial"]
+tags: [keeply tutorial]
+categories: [Tutorials]
 primary_keyword: "install Keeply"
 locales: ["en", "zh-TW", "zh-CN", "ja", "ko"]
 slug: install-keeply-windows-mac

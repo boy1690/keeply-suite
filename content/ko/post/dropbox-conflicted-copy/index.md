@@ -6,13 +6,8 @@ draft: false
 slug: dropbox-conflicted-copy
 primary_keyword: "드롭박스 충돌된 사본"
 locales: [zh-TW, en, zh-CN, ja, ko, it]
-categories:
-  - 파일 관리
-tags:
-  - 버전 관리
-  - Dropbox
-  - 클라우드 동기화
-  - 충돌 해결
+categories: [파일 관리]
+tags: [버전 관리, 파일 복구, 클라우드 동기화]
 image: cover.svg
 og_image: cover.png
 role: cluster

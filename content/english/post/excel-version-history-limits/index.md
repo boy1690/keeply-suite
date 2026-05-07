@@ -6,13 +6,8 @@ draft: false
 slug: excel-version-history-limits
 primary_keyword: "version history excel"
 locales: [zh-TW, en, zh-CN, ja, ko, it]
-categories:
-  - File management
-tags:
-  - Version control
-  - Excel
-  - AutoSave
-  - OneDrive
+categories: [File management]
+tags: [version control, file recovery, cloud sync]
 image: cover.svg
 og_image: cover.png
 role: cluster

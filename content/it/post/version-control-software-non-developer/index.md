@@ -6,13 +6,8 @@ draft: false
 slug: version-control-software-non-developer
 primary_keyword: "software di controllo versione"
 locales: [zh-TW, en, zh-CN, ja, ko, it]
-categories:
-  - Gestione file
-tags:
-  - Controllo versione
-  - Confronto strumenti
-  - Non-sviluppatori
-  - Time Machine
+categories: [Gestione file]
+tags: [controllo versione, confronto strumenti]
 image: cover.svg
 og_image: cover.png
 role: cluster

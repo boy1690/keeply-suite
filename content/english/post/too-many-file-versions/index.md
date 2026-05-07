@@ -6,13 +6,8 @@ draft: false
 slug: too-many-file-versions
 primary_keyword: "document version control system"
 locales: [zh-TW, en, zh-CN, ja, ko, it]
-categories:
-  - File management
-tags:
-  - Version control
-  - File naming
-  - File history
-  - Cmd+S
+categories: [File management]
+tags: [version control, operator error]
 image: cover.svg
 og_image: cover.png
 role: cluster

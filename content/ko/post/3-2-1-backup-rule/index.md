@@ -6,8 +6,8 @@ draft: false
 slug: "3-2-1-backup-rule"
 primary_keyword: "3-2-1 백업"
 locale: ko
-categories: ["백업 전략"]
-tags: ["3-2-1 백업", "데이터 백업", "버전 관리", "operator-error"]
+categories: [사용 사례]
+tags: [버전 관리, 작업 오류, 도구 비교]
 image: cover.svg
 og_image: cover.png
 cta_topic: backup

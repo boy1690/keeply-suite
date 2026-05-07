@@ -5,12 +5,8 @@ slug: "hidden-cost-shared-folders"
 date: 2026-04-23
 image: cover.svg
 og_image: cover.png
-categories:
-  - 파일 관리
-tags:
-  - 공유 폴더
-  - 버전 관리
-  - 협업
+categories: [파일 관리]
+tags: [작업 오류, 클라우드 동기화]
 cta_topic: versioning
 ---
 

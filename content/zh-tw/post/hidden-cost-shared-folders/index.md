@@ -5,13 +5,8 @@ slug: "hidden-cost-shared-folders"
 date: 2026-04-23
 image: cover.svg
 og_image: cover.png
-categories:
-  - 檔案管理
-tags:
-  - 共用資料夾
-  - 檔案版本
-  - 版本歷史
-  - 協作
+categories: [檔案管理]
+tags: [操作失誤, 雲端同步]
 cta_topic: versioning
 ---
 

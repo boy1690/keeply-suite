@@ -6,13 +6,8 @@ draft: false
 slug: too-many-file-versions
 primary_keyword: "파일 버전 관리"
 locales: [zh-TW, en, zh-CN, ja, ko, it]
-categories:
-  - 파일 관리
-tags:
-  - 버전 관리
-  - 파일명
-  - 파일 히스토리
-  - Cmd+S
+categories: [파일 관리]
+tags: [버전 관리, 작업 오류]
 image: cover.svg
 og_image: cover.png
 role: cluster

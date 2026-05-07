@@ -6,8 +6,8 @@ slug: what-keeply-saves-vs-backup-cloud
 locale: zh-TW
 primary_keyword: "Keeply 跟備份"
 locales: [zh-TW, en, zh-CN, ja, ko]
-tags: [Keeply 教學, 備份比較, 雲端比較, 版本管理, 工具差異]
-categories: [Keeply 應用情境]
+tags: [Keeply 教學, 工具比較]
+categories: [使用情境]
 template: T1-cluster
 voice: B-Emotional-StoryBrand
 motif: "三件不同事：歷史 vs 磁碟 vs 最新版"

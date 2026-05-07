@@ -6,8 +6,8 @@ slug: vibe-coding-rollback
 locale: it
 primary_keyword: "rollback vibe coding"
 locales: [zh-TW, en, zh-CN, ja, it]
-tags: [tutorial Keeply, vibe coding, AI coding, gestione versioni, recupero file]
-categories: [Casi d'uso Keeply]
+tags: [recupero file, guida Keeply]
+categories: [Casi d'uso]
 template: T1-cluster
 voice: B-Emotional-StoryBrand
 motif: "L'AI corre avanti vs tu puoi farla rientrare"

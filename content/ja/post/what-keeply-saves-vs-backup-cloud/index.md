@@ -6,8 +6,8 @@ slug: what-keeply-saves-vs-backup-cloud
 locale: ja
 primary_keyword: "Keeply バックアップ 違い"
 locales: [zh-TW, en, zh-CN, ja, ko]
-tags: [Keeply 使い方, バックアップ比較, クラウド比較, バージョン管理, ツールの違い]
-categories: [Keeply 活用シーン]
+tags: [Keeply チュートリアル, ツール比較]
+categories: [ユースケース]
 template: T1-cluster
 voice: B-Emotional-StoryBrand
 motif: "三つの別物：履歴 vs ディスク vs 最新版"

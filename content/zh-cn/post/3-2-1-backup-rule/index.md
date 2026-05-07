@@ -6,8 +6,8 @@ draft: false
 slug: "3-2-1-backup-rule"
 primary_keyword: "3-2-1 备份原则"
 locale: zh-CN
-categories: ["备份策略"]
-tags: ["3-2-1 备份", "数据备份", "版本管理", "operator-error"]
+categories: [使用场景]
+tags: [版本控制, 操作失误, 工具对比]
 image: cover.svg
 og_image: cover.png
 cta_topic: backup

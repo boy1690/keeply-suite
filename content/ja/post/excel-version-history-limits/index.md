@@ -6,13 +6,8 @@ draft: false
 slug: excel-version-history-limits
 primary_keyword: "エクセル バージョン 履歴"
 locales: [zh-TW, en, zh-CN, ja, ko, it]
-categories:
-  - ファイル管理
-tags:
-  - バージョン管理
-  - エクセル
-  - AutoSave
-  - OneDrive
+categories: [ファイル管理]
+tags: [バージョン管理, ファイル復元, クラウド同期]
 image: cover.svg
 og_image: cover.png
 role: cluster

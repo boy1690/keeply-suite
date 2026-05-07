@@ -6,8 +6,8 @@ slug: vibe-coding-rollback
 locale: zh-CN
 primary_keyword: "vibe coding 失控"
 locales: [zh-TW, en, zh-CN, ja, ko]
-tags: [Keeply 教程, vibe coding, AI coding, 版本管理, 救回文件]
-categories: [Keeply 应用场景]
+tags: [文件恢复, Keeply 教程]
+categories: [使用场景]
 template: T1-cluster
 voice: B-Emotional-StoryBrand
 motif: "AI 冲太远 vs 你叫得回它"

@@ -5,13 +5,8 @@ slug: "thesis-single-point-of-failure"
 date: 2026-04-23
 image: cover.svg
 og_image: cover.png
-categories:
-  - 파일 관리
-tags:
-  - 논문 작성
-  - 버전 관리
-  - 대학원생
-  - 파일 백업
+categories: [파일 관리]
+tags: [버전 관리]
 cta_topic: recovery
 ---
 

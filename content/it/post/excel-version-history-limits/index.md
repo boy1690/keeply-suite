@@ -6,13 +6,8 @@ draft: false
 slug: excel-version-history-limits
 primary_keyword: "versioni precedenti file excel"
 locales: [zh-TW, en, zh-CN, ja, ko, it]
-categories:
-  - Gestione file
-tags:
-  - Controllo versione
-  - Excel
-  - AutoSave
-  - OneDrive
+categories: [Gestione file]
+tags: [controllo versione, recupero file, sincronizzazione cloud]
 image: cover.svg
 og_image: cover.png
 role: cluster

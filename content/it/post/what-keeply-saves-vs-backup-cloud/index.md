@@ -6,8 +6,8 @@ slug: what-keeply-saves-vs-backup-cloud
 locale: it
 primary_keyword: "Keeply vs backup"
 locales: [zh-TW, en, zh-CN, ja, it]
-tags: [tutorial Keeply, confronto backup, confronto cloud, gestione versioni, differenze tra strumenti]
-categories: [Casi d'uso Keeply]
+tags: [guida Keeply, confronto strumenti]
+categories: [Casi d'uso]
 template: T1-cluster
 voice: B-Emotional-StoryBrand
 motif: "Tre lavori diversi: storia vs disco vs ultima versione"

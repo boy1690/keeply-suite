@@ -5,12 +5,8 @@ date: 2026-05-06T01:00:00+08:00
 draft: false
 slug: why-i-built-keeply
 locales: [zh-TW, en, zh-CN, ja, ko, it]
-categories:
-  - 創業者ノート
-tags:
-  - Keeply
-  - 創業者
-  - 創業の原点
+categories: [創業者ノート]
+tags: []
 image: cover.svg
 og_image: cover.png
 role: standalone

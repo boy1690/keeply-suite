@@ -41,6 +41,28 @@
 {{- /* Canonical */ -}}
 <link rel="canonical" href="{{ .Permalink }}" />
 
+{{- /*
+  Robots meta — indexability gate per spec seo-indexability-l2 FR-003/004/005.
+  noindex,follow when:
+    - locale is auto-translate (not in core 6) — FR-005
+    - page is a listing hub: /post/, /tags/, /categories/ index — FR-003
+    - page is a thin term: tag/category with < 3 posts — FR-003
+  Otherwise default (no robots meta = indexable, follow links).
+  Hreflang block below is unaffected so multilingual graph remains intact.
+*/ -}}
+{{- $coreLocales := slice "en" "zh-tw" "zh-cn" "ja" "ko" "it" -}}
+{{- $thinThreshold := 3 -}}
+{{- $noindex := false -}}
+{{- if not (in $coreLocales .Site.Language.Lang) -}}{{- $noindex = true -}}{{- end -}}
+{{- if eq .Kind "section" -}}{{- $noindex = true -}}{{- end -}}
+{{- if eq .Kind "taxonomy" -}}{{- $noindex = true -}}{{- end -}}
+{{- if eq .Kind "term" -}}
+  {{- if lt (len .Pages) $thinThreshold -}}{{- $noindex = true -}}{{- end -}}
+{{- end -}}
+{{- if $noindex }}
+<meta name="robots" content="noindex,follow" />
+{{- end }}
+
 {{- /* Hreflang for all languages */ -}}
 {{- if .IsTranslated -}}
   {{- range .AllTranslations -}}

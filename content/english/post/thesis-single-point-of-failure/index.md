@@ -5,13 +5,8 @@ slug: "thesis-single-point-of-failure"
 date: 2026-04-23
 image: cover.svg
 og_image: cover.png
-categories:
-  - File management
-tags:
-  - Thesis writing
-  - Version control
-  - Grad students
-  - File backup
+categories: [File management]
+tags: [version control]
 cta_topic: recovery
 ---
 

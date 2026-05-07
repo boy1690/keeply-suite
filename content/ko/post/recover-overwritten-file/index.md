@@ -6,8 +6,8 @@ draft: false
 slug: "recover-overwritten-file"
 primary_keyword: "덮어쓴 파일 복구"
 locale: ko
-categories: ["파일 버전 관리"]
-tags: ["덮어쓴 파일 복구", "AutoRecover", "OneDrive", "always-on 버전 기록", "operator-error"]
+categories: [사용 사례]
+tags: [파일 복구, 작업 오류]
 image: cover.svg
 og_image: cover.png
 locales_required: [en, zh-TW, zh-CN, ja, ko]

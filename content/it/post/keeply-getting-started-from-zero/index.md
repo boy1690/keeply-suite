@@ -6,8 +6,8 @@ slug: keeply-getting-started-from-zero
 locale: it
 primary_keyword: "come usare Keeply"
 locales: [zh-TW, en, zh-CN, ja, it]
-tags: [tutorial Keeply, primi passi, software per note sui file, gestione versioni, backup file]
-categories: [Primi passi con Keeply]
+tags: [guida Keeply]
+categories: [Guide]
 template: T1
 voice: B-Emotional-StoryBrand
 image: cover.svg

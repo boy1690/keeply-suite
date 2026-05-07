@@ -5,13 +5,8 @@ slug: "thesis-single-point-of-failure"
 date: 2026-04-23
 image: cover.svg
 og_image: cover.png
-categories:
-  - 檔案管理
-tags:
-  - 論文寫作
-  - 版本管理
-  - 研究生
-  - 檔案備份
+categories: [檔案管理]
+tags: [版本控制]
 cta_topic: recovery
 ---
 

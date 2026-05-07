@@ -5,12 +5,8 @@ slug: "hidden-cost-shared-folders"
 date: 2026-04-23
 image: cover.svg
 og_image: cover.png
-categories:
-  - Gestione file
-tags:
-  - cartelle condivise
-  - versionamento
-  - collaborazione
+categories: [Gestione file]
+tags: [errore utente, sincronizzazione cloud]
 cta_topic: versioning
 ---
 

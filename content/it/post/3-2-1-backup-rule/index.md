@@ -6,8 +6,8 @@ draft: false
 slug: "3-2-1-backup-rule"
 primary_keyword: "regola 3-2-1 backup"
 locale: it
-categories: ["Strategia di backup"]
-tags: ["3-2-1 backup", "backup dati", "controllo versione", "operator-error"]
+categories: [Casi d'uso]
+tags: [controllo versione, errore utente, confronto strumenti]
 image: cover.svg
 og_image: cover.png
 locales_required: [en, zh-TW, zh-CN, ja, ko, it]

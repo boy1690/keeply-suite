@@ -1,0 +1,19 @@
+{{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{{- /*
+  Multilingual sitemap index. Only emits entries for core 6 locales.
+  Auto-translate 13 locales (de / es / fr / pt / ru / nl / pl / tr / vi / th / id / ar / hi)
+  still build per-locale sitemap.xml files but are not linked here, so Google
+  doesn't crawl them as part of the canonical sitemap submission.
+  Per spec seo-indexability-l2 FR-002.
+*/ -}}
+{{- $coreLocales := slice "en" "zh-tw" "zh-cn" "ja" "ko" "it" -}}
+{{- range . -}}
+  {{- if in $coreLocales .Language.Lang }}
+  <sitemap>
+    <loc>{{ .SitemapAbsURL }}</loc>{{ if not .Lastmod.IsZero }}
+    <lastmod>{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" }}</lastmod>{{ end }}
+  </sitemap>
+  {{- end -}}
+{{- end }}
+</sitemapindex>

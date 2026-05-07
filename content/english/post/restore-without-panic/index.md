@@ -5,12 +5,8 @@ date: 2026-05-06T08:50:00+08:00
 draft: false
 slug: restore-without-panic
 locales: [zh-TW, en, zh-CN, ja, ko, it]
-categories:
-  - File management
-tags:
-  - File recovery
-  - Version history
-  - Keeply
+categories: [File management]
+tags: [file recovery, keeply tutorial]
 image: cover.svg
 og_image: cover.png
 role: cluster

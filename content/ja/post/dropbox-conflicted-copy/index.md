@@ -6,13 +6,8 @@ draft: false
 slug: dropbox-conflicted-copy
 primary_keyword: "dropbox 競合 コピー"
 locales: [zh-TW, en, zh-CN, ja, ko, it]
-categories:
-  - ファイル管理
-tags:
-  - バージョン管理
-  - Dropbox
-  - クラウド同期
-  - 競合解決
+categories: [ファイル管理]
+tags: [バージョン管理, ファイル復元, クラウド同期]
 image: cover.svg
 og_image: cover.png
 role: cluster

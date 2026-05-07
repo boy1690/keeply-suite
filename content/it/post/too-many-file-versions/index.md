@@ -6,13 +6,8 @@ draft: false
 slug: too-many-file-versions
 primary_keyword: "versioni precedenti file excel"
 locales: [zh-TW, en, zh-CN, ja, ko, it]
-categories:
-  - Gestione file
-tags:
-  - Controllo versione
-  - Denominazione file
-  - Cronologia file
-  - Cmd+S
+categories: [Gestione file]
+tags: [controllo versione, errore utente]
 image: cover.svg
 og_image: cover.png
 role: cluster

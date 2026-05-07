@@ -6,8 +6,8 @@ slug: keeply-getting-started-from-zero
 locale: ja
 primary_keyword: "Keeply 使い方"
 locales: [zh-TW, en, zh-CN, ja, ko]
-tags: [Keeply 使い方, 入門ガイド, ファイル記録ソフト, バージョン管理, ファイルバックアップ]
-categories: [Keeply 入門]
+tags: [Keeply チュートリアル]
+categories: [チュートリアル]
 template: T1
 voice: B-Emotional-StoryBrand
 image: cover.svg

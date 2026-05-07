@@ -6,13 +6,8 @@ draft: false
 slug: version-control-software-non-developer
 primary_keyword: "版本管理軟體"
 locales: [zh-TW, en, zh-CN, ja, ko, it]
-categories:
-  - 檔案管理
-tags:
-  - 版本管理
-  - 工具比較
-  - 非開發者
-  - Time Machine
+categories: [檔案管理]
+tags: [版本控制, 工具比較]
 image: cover.svg
 og_image: cover.png
 role: cluster

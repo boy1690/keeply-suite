@@ -4,14 +4,8 @@ description: "Cartelle condivise, Dropbox e NAS non sono stati progettati per ge
 slug: file-version-management-complete-guide
 date: 2026-04-28T09:00:00+08:00
 draft: false
-categories:
-  - Gestione delle versioni dei file
-tags:
-  - gestione delle versioni dei file
-  - cartelle condivise
-  - Dropbox
-  - NAS
-  - knowledge work
+categories: [Gestione file]
+tags: [controllo versione, sincronizzazione cloud]
 image: cover.svg
 og_image: cover.png
 cta_topic: versioning

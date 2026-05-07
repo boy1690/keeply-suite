@@ -5,13 +5,8 @@ slug: "autocad-wrong-version-crew"
 date: 2026-04-24
 image: cover.svg
 og_image: cover.png
-categories:
-  - 文件管理
-tags:
-  - AutoCAD
-  - 建筑施工
-  - 图纸版本
-  - 工地管理
+categories: [文件管理]
+tags: [版本控制, 文件恢复]
 cta_topic: versioning
 ---
 

@@ -6,8 +6,8 @@ slug: vibe-coding-rollback
 locale: ja
 primary_keyword: "Vibe Coding 暴走"
 locales: [zh-TW, en, zh-CN, ja, ko]
-tags: [Keeply 使い方, Vibe Coding, AI コーディング, バージョン管理, ファイル復元]
-categories: [Keeply 活用シーン]
+tags: [ファイル復元, Keeply チュートリアル]
+categories: [ユースケース]
 template: T1-cluster
 voice: B-Emotional-StoryBrand
 motif: "AI が行き過ぎる vs あなたが呼び戻す"

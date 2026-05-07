@@ -3,8 +3,8 @@ title: "Windows와 macOS에 Keeply 10분 만에 설치하기"
 description: "「실행 안 함」 안내 문구와 추측은 그만. 10분 만에 Keeply를 설치하고 당일에 첫 프로젝트를 보호하세요."
 date: 2026-04-26
 draft: false
-tags: ["설치", "튜토리얼", "Windows", "macOS", "winget"]
-categories: ["튜토리얼"]
+tags: [Keeply 튜토리얼]
+categories: [튜토리얼]
 primary_keyword: "Keeply 설치"
 locales: ["en", "zh-TW", "zh-CN", "ja", "ko"]
 slug: install-keeply-windows-mac

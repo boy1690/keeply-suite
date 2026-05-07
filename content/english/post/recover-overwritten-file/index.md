@@ -6,8 +6,8 @@ draft: false
 slug: "recover-overwritten-file"
 primary_keyword: "recover overwritten files"
 locale: en
-categories: ["File Version Management"]
-tags: ["overwritten file recovery", "AutoRecover", "OneDrive", "always-on version history", "operator-error"]
+categories: [Use cases]
+tags: [file recovery, operator error]
 image: cover.svg
 og_image: cover.png
 locales_required: [en, zh-TW, zh-CN, ja, ko]

@@ -6,8 +6,8 @@ draft: false
 slug: "recover-overwritten-file"
 primary_keyword: "上書き 復元"
 locale: ja
-categories: ["ファイル版数管理"]
-tags: ["上書き 復元", "AutoRecover", "OneDrive", "always-on 版数履歴", "operator-error"]
+categories: [ユースケース]
+tags: [ファイル復元, 操作ミス]
 image: cover.svg
 og_image: cover.png
 locales_required: [en, zh-TW, zh-CN, ja, ko]

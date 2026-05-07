@@ -6,8 +6,8 @@ draft: false
 slug: "recover-overwritten-file"
 primary_keyword: "recupero file sovrascritto"
 locale: it
-categories: ["Gestione versioni file"]
-tags: ["recupero file sovrascritto", "AutoRecover", "OneDrive", "always-on cronologia versioni", "operator-error"]
+categories: [Casi d'uso]
+tags: [recupero file, errore utente]
 image: cover.svg
 og_image: cover.png
 locales_required: [en, zh-TW, zh-CN, ja, ko, it]

@@ -6,8 +6,8 @@ draft: false
 slug: "recover-overwritten-file"
 primary_keyword: "找回被覆盖的文件"
 locale: zh-CN
-categories: ["文件版本管理"]
-tags: ["覆盖恢复", "AutoRecover", "OneDrive", "always-on 版本历史", "operator-error"]
+categories: [使用场景]
+tags: [文件恢复, 操作失误]
 image: cover.svg
 og_image: cover.png
 locales_required: [en, zh-TW, zh-CN, ja, ko]

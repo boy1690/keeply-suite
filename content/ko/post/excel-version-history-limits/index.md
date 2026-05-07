@@ -6,13 +6,8 @@ draft: false
 slug: excel-version-history-limits
 primary_keyword: "엑셀 이전 버전 복원"
 locales: [zh-TW, en, zh-CN, ja, ko, it]
-categories:
-  - 파일 관리
-tags:
-  - 버전 관리
-  - 엑셀
-  - AutoSave
-  - OneDrive
+categories: [파일 관리]
+tags: [버전 관리, 파일 복구, 클라우드 동기화]
 image: cover.svg
 og_image: cover.png
 role: cluster

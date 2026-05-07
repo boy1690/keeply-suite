@@ -6,8 +6,8 @@ draft: false
 slug: "client-asked-which-version"
 primary_keyword: "ppt 이전 버전 복구"
 locale: ko
-categories: ["파일 버전 관리"]
-tags: ["버전 기록", "AutoRecover", "OneDrive", "delivery-note", "operator-error"]
+categories: [사용 사례]
+tags: [파일 복구, 작업 오류]
 image: cover.svg
 og_image: cover.png
 locales_required: [en, zh-TW, zh-CN, ja, ko]

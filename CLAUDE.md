@@ -91,6 +91,7 @@ Note：`Z:\keeply-blog\` 需要 `git config --global --add safe.directory '%(pre
 - **P1.13** 每篇文末強制帶作者卡：真名（或一致 pen name）+ Keeply 角色 + 連到 about / LinkedIn / 創辦人公開頁。E-E-A-T Expertise 訊號透明的代價是放棄匿名 PR 寫作的選項——這是有意識的取捨。
 - **P1.14** 每篇至少 1 處 admit limitation：「Keeply 不解決 X」「對 Y 場景 Keeply 不是最佳選擇」。Trustworthiness 訊號 + P0.3 競品承認規則的反向延伸。寫在「For when Keeply isn't the right tool」或「Limitations」小節，明白寫進文章本體，不是腳註。
 - **P1.15** 每篇 `intent.md` 必須宣告 `pillar` / `cluster` / `standalone` 角色 + 對應 pillar slug（若為 cluster）。對應 `specs/_roadmap/2026-q2-content-queue.md`。Cluster 在 Touch 4 DELIVER 必須含 ≥1 in-body link 連回 pillar；pillar 必須含 ≥3 cluster 連結。
+- **P1.16** Tag 必須 reusable，從 `specs/_roadmap/tag-pool-ledger.md` 既有 pool 中選。新增 tag 的條件：當下有 ≥3 篇文章可掛上去；否則該詞下沉進 title / description / 文章本體，不開 tag。Reason：每加一個 1-post tag = Hugo 自動生 19 locale × 1 = 19 個 thin-content URL，稀釋整域 SEO quality signal（2026-05-08 SEO L2 spec）。How to apply：寫 frontmatter 時對照 ledger；要新增 pool 必須同時宣告 ≥3 篇現有 slug + 更新 ledger + GATE-2 通過。
 - Prefer Hugo built-in features over custom code
 - Content in markdown only, no HTML templates unless necessary
 

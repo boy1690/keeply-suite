@@ -4,14 +4,8 @@ description: "Shared folders, Dropbox, and NAS drives weren't designed to manage
 slug: file-version-management-complete-guide
 date: 2026-04-28T09:00:00+08:00
 draft: false
-categories:
-  - File version management
-tags:
-  - file version management
-  - shared folders
-  - Dropbox
-  - NAS
-  - knowledge work
+categories: [File management]
+tags: [version control, cloud sync]
 image: cover.svg
 og_image: cover.png
 cta_topic: versioning

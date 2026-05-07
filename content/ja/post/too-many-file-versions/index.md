@@ -6,13 +6,8 @@ draft: false
 slug: too-many-file-versions
 primary_keyword: "word バージョン 履歴 表示 されない"
 locales: [zh-TW, en, zh-CN, ja, ko, it]
-categories:
-  - ファイル管理
-tags:
-  - バージョン管理
-  - ファイル名
-  - ファイル履歴
-  - Cmd+S
+categories: [ファイル管理]
+tags: [バージョン管理, 操作ミス]
 image: cover.svg
 og_image: cover.png
 role: cluster

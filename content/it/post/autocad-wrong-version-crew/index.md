@@ -5,13 +5,8 @@ slug: "autocad-wrong-version-crew"
 date: 2026-04-24
 image: cover.svg
 og_image: cover.png
-categories:
-  - Gestione file
-tags:
-  - AutoCAD
-  - Edilizia
-  - Controllo versioni
-  - Gestione di cantiere
+categories: [Gestione file]
+tags: [controllo versione, recupero file]
 cta_topic: versioning
 ---
 

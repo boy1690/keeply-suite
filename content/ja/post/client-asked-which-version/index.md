@@ -6,8 +6,8 @@ draft: false
 slug: "client-asked-which-version"
 primary_keyword: "Word 版数履歴"
 locale: ja
-categories: ["ファイル版数管理"]
-tags: ["版数履歴", "AutoRecover", "OneDrive", "delivery-note", "operator-error"]
+categories: [ユースケース]
+tags: [ファイル復元, 操作ミス]
 image: cover.svg
 og_image: cover.png
 locales_required: [en, zh-TW, zh-CN, ja, ko]

@@ -6,13 +6,8 @@ draft: false
 slug: dropbox-conflicted-copy
 primary_keyword: "dropbox 冲突的副本"
 locales: [zh-TW, en, zh-CN, ja, ko, it]
-categories:
-  - 文件管理
-tags:
-  - 版本管理
-  - Dropbox
-  - 云端同步
-  - 冲突解决
+categories: [文件管理]
+tags: [版本控制, 文件恢复, 云端同步]
 image: cover.svg
 og_image: cover.png
 role: cluster

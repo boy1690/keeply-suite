@@ -6,8 +6,8 @@ slug: vibe-coding-rollback
 locale: en
 primary_keyword: "vibe coding rollback"
 locales: [zh-TW, en, zh-CN, ja, ko]
-tags: [Keeply tutorial, vibe coding, AI coding, version management, file recovery]
-categories: [Keeply use cases]
+tags: [file recovery, keeply tutorial]
+categories: [Use cases]
 template: T1-cluster
 voice: B-Emotional-StoryBrand
 motif: "AI races ahead vs you can pull it back"

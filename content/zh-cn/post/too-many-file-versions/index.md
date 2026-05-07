@@ -6,13 +6,8 @@ draft: false
 slug: too-many-file-versions
 primary_keyword: "文件版本管理"
 locales: [zh-TW, en, zh-CN, ja, ko, it]
-categories:
-  - 文件管理
-tags:
-  - 版本管理
-  - 命名规则
-  - 文件历史
-  - Cmd+S
+categories: [文件管理]
+tags: [版本控制, 操作失误]
 image: cover.svg
 og_image: cover.png
 role: cluster

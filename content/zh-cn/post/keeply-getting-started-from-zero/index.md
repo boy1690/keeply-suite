@@ -6,8 +6,8 @@ slug: keeply-getting-started-from-zero
 locale: zh-CN
 primary_keyword: "Keeply 怎么用"
 locales: [zh-TW, en, zh-CN, ja, ko]
-tags: [Keeply 教程, 入门指南, 文件笔记软件, 版本管理, 文件备份]
-categories: [Keeply 入门]
+tags: [Keeply 教程]
+categories: [教程]
 template: T1
 voice: B-Emotional-StoryBrand
 image: cover.svg

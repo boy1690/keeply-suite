@@ -5,12 +5,8 @@ date: 2026-05-06T01:00:00+08:00
 draft: false
 slug: why-i-built-keeply
 locales: [zh-TW, en, zh-CN, ja, ko, it]
-categories:
-  - Note del fondatore
-tags:
-  - Keeply
-  - Fondatore
-  - Origine
+categories: [Note del fondatore]
+tags: []
 image: cover.svg
 og_image: cover.png
 role: standalone

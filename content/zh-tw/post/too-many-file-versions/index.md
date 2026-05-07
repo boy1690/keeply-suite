@@ -6,13 +6,8 @@ draft: false
 slug: too-many-file-versions
 primary_keyword: "檔案 命名 規則"
 locales: [zh-TW, en, zh-CN, ja, ko, it]
-categories:
-  - 檔案管理
-tags:
-  - 版本管理
-  - 命名規則
-  - 檔案歷史
-  - Cmd+S
+categories: [檔案管理]
+tags: [版本控制, 操作失誤]
 image: cover.svg
 og_image: cover.png
 role: cluster

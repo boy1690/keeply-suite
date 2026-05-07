@@ -6,8 +6,8 @@ draft: false
 slug: "client-asked-which-version"
 primary_keyword: "recupero versione precedente word"
 locale: it
-categories: ["Gestione versioni file"]
-tags: ["cronologia versioni", "AutoRecover", "OneDrive", "delivery-note", "operator-error"]
+categories: [Casi d'uso]
+tags: [recupero file, errore utente]
 image: cover.svg
 og_image: cover.png
 locales_required: [en, zh-TW, zh-CN, ja, ko, it]

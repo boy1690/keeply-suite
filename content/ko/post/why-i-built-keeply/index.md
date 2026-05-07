@@ -5,12 +5,8 @@ date: 2026-05-06T01:00:00+08:00
 draft: false
 slug: why-i-built-keeply
 locales: [zh-TW, en, zh-CN, ja, ko, it]
-categories:
-  - 창업자 노트
-tags:
-  - Keeply
-  - 창업자
-  - 창업 초심
+categories: [창업자 노트]
+tags: []
 image: cover.svg
 og_image: cover.png
 role: standalone

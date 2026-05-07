@@ -6,13 +6,8 @@ draft: false
 slug: version-control-software-non-developer
 primary_keyword: "버전 관리 소프트웨어"
 locales: [zh-TW, en, zh-CN, ja, ko, it]
-categories:
-  - 파일 관리
-tags:
-  - 버전 관리
-  - 도구 비교
-  - 비개발자
-  - Time Machine
+categories: [파일 관리]
+tags: [버전 관리, 도구 비교]
 image: cover.svg
 og_image: cover.png
 role: cluster

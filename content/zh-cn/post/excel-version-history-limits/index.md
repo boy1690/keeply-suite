@@ -6,13 +6,8 @@ draft: false
 slug: excel-version-history-limits
 primary_keyword: "excel 历史版本"
 locales: [zh-TW, en, zh-CN, ja, ko, it]
-categories:
-  - 文件管理
-tags:
-  - 版本管理
-  - Excel
-  - AutoSave
-  - OneDrive
+categories: [文件管理]
+tags: [版本控制, 文件恢复, 云端同步]
 image: cover.svg
 og_image: cover.png
 role: cluster

@@ -6,8 +6,8 @@ slug: vibe-coding-rollback
 locale: ko
 primary_keyword: "vibe coding 복원"
 locales: [zh-TW, en, zh-CN, ja, ko]
-tags: [Keeply 튜토리얼, vibe coding, AI coding, 버전 관리, 파일 복원]
-categories: [Keeply 활용 사례]
+tags: [파일 복구, Keeply 튜토리얼]
+categories: [사용 사례]
 template: T1-cluster
 voice: B-Emotional-StoryBrand
 motif: "AI는 앞서 달리고 당신은 끌어올 수 있다"

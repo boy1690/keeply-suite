@@ -3,8 +3,8 @@ title: "Keeply 安装指南（Windows + macOS）：从下载到第一个项目"
 description: "不靠「仍要执行」那颗小字、不靠运气——10 分钟装好 Keeply，当天就能保住第一个项目。"
 date: 2026-04-26
 draft: false
-tags: ["安装", "教程", "Windows", "macOS", "winget"]
-categories: ["教程"]
+tags: [Keeply 教程]
+categories: [教程]
 primary_keyword: "Keeply 安装"
 locales: ["en", "zh-TW", "zh-CN", "ja", "ko"]
 slug: install-keeply-windows-mac

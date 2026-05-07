@@ -6,13 +6,8 @@ draft: false
 slug: excel-version-history-limits
 primary_keyword: "excel 還原版本"
 locales: [zh-TW, en, zh-CN, ja, ko, it]
-categories:
-  - 檔案管理
-tags:
-  - 版本管理
-  - Excel
-  - AutoSave
-  - OneDrive
+categories: [檔案管理]
+tags: [版本控制, 檔案還原, 雲端同步]
 image: cover.svg
 og_image: cover.png
 role: cluster

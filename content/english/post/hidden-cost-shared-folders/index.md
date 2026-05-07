@@ -5,13 +5,8 @@ slug: "hidden-cost-shared-folders"
 date: 2026-04-23
 image: cover.svg
 og_image: cover.png
-categories:
-  - File management
-tags:
-  - shared folders
-  - version history
-  - collaboration
-  - file management
+categories: [File management]
+tags: [operator error, cloud sync]
 cta_topic: versioning
 ---
 

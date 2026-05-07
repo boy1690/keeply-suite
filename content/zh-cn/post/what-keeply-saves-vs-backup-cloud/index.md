@@ -7,8 +7,8 @@ locale: zh-CN
 derived_from: zh-TW
 primary_keyword: "Keeply 跟备份"
 locales: [zh-TW, en, zh-CN, ja, ko]
-tags: [Keeply 教程, 备份比较, 云端比较, 版本管理, 工具差异]
-categories: [Keeply 应用情境]
+tags: [Keeply 教程, 工具对比]
+categories: [使用场景]
 template: T1-cluster
 voice: B-Emotional-StoryBrand
 motif: "三件不同事：历史 vs 磁盘 vs 最新版"

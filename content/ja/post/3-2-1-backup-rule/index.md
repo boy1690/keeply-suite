@@ -6,8 +6,8 @@ draft: false
 slug: "3-2-1-backup-rule"
 primary_keyword: "3-2-1 バックアップ"
 locale: ja
-categories: ["バックアップ戦略"]
-tags: ["3-2-1 バックアップ", "データバックアップ", "バージョン管理", "operator-error"]
+categories: [ユースケース]
+tags: [バージョン管理, 操作ミス, ツール比較]
 image: cover.svg
 og_image: cover.png
 cta_topic: backup

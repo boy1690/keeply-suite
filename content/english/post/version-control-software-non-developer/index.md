@@ -6,13 +6,8 @@ draft: false
 slug: version-control-software-non-developer
 primary_keyword: "version control software"
 locales: [zh-TW, en, zh-CN, ja, ko, it]
-categories:
-  - File management
-tags:
-  - Version control
-  - Tool comparison
-  - Non-developer
-  - Time Machine
+categories: [File management]
+tags: [version control, tool comparison]
 image: cover.svg
 og_image: cover.png
 role: cluster

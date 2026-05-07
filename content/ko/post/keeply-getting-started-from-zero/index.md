@@ -6,8 +6,8 @@ slug: keeply-getting-started-from-zero
 locale: ko
 primary_keyword: "Keeply 사용법"
 locales: [zh-TW, en, zh-CN, ja, ko]
-tags: [Keeply 튜토리얼, 시작하기, 파일 노트 소프트웨어, 버전 관리, 파일 백업]
-categories: [Keeply 시작하기]
+tags: [Keeply 튜토리얼]
+categories: [튜토리얼]
 template: T1
 voice: B-Emotional-StoryBrand
 image: cover.svg

@@ -6,8 +6,8 @@ draft: false
 slug: "client-asked-which-version"
 primary_keyword: "Word 版本历史"
 locale: zh-CN
-categories: ["文件版本管理"]
-tags: ["版本历史", "AutoRecover", "OneDrive", "delivery-note", "operator-error"]
+categories: [使用场景]
+tags: [文件恢复, 操作失误]
 image: cover.svg
 og_image: cover.png
 locales_required: [en, zh-TW, zh-CN, ja, ko]

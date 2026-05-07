@@ -6,13 +6,8 @@ draft: false
 slug: dropbox-conflicted-copy
 primary_keyword: "dropbox conflicted copy"
 locales: [zh-TW, en, zh-CN, ja, ko, it]
-categories:
-  - File management
-tags:
-  - Version control
-  - Dropbox
-  - Cloud sync
-  - Conflict resolution
+categories: [File management]
+tags: [version control, file recovery, cloud sync]
 image: cover.svg
 og_image: cover.png
 role: cluster
