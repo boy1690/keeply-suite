@@ -46,19 +46,25 @@
   noindex,follow when:
     - locale is auto-translate (not in core 6) — FR-005
     - page is a listing hub: /post/, /tags/, /categories/ index — FR-003
-    - page is a thin term: tag/category with < 3 posts — FR-003
+    - page is any term page (tag/category) — FR-003 tightened 2026-05-08:
+      previously only thin terms (< 3 posts) were noindex'd, but indexed
+      terms still rendered empty <meta description> (no .Description /
+      .Summary fallback chain produces meaningful text on a list page),
+      which Yandex flagged as 56 duplicate titles + 93 duplicate descs.
+      Tag pages are navigation, not SERP landing — blanket noindex,follow
+      keeps link graph intact while eliminating dup-metadata signal.
   Otherwise default (no robots meta = indexable, follow links).
   Hreflang block below is unaffected so multilingual graph remains intact.
 */ -}}
 {{- $coreLocales := slice "en" "zh-tw" "zh-cn" "ja" "ko" "it" -}}
-{{- $thinThreshold := 3 -}}
 {{- $noindex := false -}}
 {{- if not (in $coreLocales .Site.Language.Lang) -}}{{- $noindex = true -}}{{- end -}}
 {{- if eq .Kind "section" -}}{{- $noindex = true -}}{{- end -}}
 {{- if eq .Kind "taxonomy" -}}{{- $noindex = true -}}{{- end -}}
-{{- if eq .Kind "term" -}}
-  {{- if lt (len .Pages) $thinThreshold -}}{{- $noindex = true -}}{{- end -}}
-{{- end -}}
+{{- if eq .Kind "term" -}}{{- $noindex = true -}}{{- end -}}
+{{- /* Paginated child pages (/page/N/) are duplicate content of parent. Noindex
+       all of them — including /page/1/ which Hugo emits as a dupe of parent. */ -}}
+{{- if findRE "/page/[0-9]+/" .RelPermalink -}}{{- $noindex = true -}}{{- end -}}
 {{- if $noindex }}
 <meta name="robots" content="noindex,follow" />
 {{- end }}

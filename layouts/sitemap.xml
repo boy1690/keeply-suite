@@ -6,20 +6,19 @@
   Filters:
     - Only emit URLs for core 6 locales (en / zh-tw / zh-cn / ja / ko / it).
     - Skip listing hubs: /post/, /tags/, /categories/ (Kind = section / taxonomy).
-    - Skip thin term pages (Kind = term, len .Pages < 3).
-    - Always emit: home + post bundles + qualified term hubs.
+    - Skip ALL term pages (Kind = term) — tightened 2026-05-08 to match
+      head.html which now noindex's all term pages. Tag/category pages are
+      navigation, not SERP landing; emitting them in sitemap while marking
+      noindex creates a contradicting signal pair.
+    - Always emit: home + post bundles only.
   Per spec seo-indexability-l2 FR-001 / FR-002.
 */ -}}
 {{- $coreLocales := slice "en" "zh-tw" "zh-cn" "ja" "ko" "it" -}}
-{{- $thinThreshold := 3 -}}
 {{- if in $coreLocales .Site.Language.Lang -}}
 {{- range .Data.Pages -}}
   {{- $include := false -}}
   {{- if eq .Kind "page" -}}{{- $include = true -}}{{- end -}}
   {{- if eq .Kind "home" -}}{{- $include = true -}}{{- end -}}
-  {{- if eq .Kind "term" -}}
-    {{- if ge (len .Pages) $thinThreshold -}}{{- $include = true -}}{{- end -}}
-  {{- end -}}
   {{- if $include }}
   <url>
     <loc>{{ .Permalink }}</loc>{{ if not .Lastmod.IsZero }}
