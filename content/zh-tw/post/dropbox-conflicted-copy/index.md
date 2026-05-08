@@ -90,7 +90,7 @@ Keeply 不解所有 Dropbox 場景：
 
 ## 下次看到 `(conflicted copy)` 之前
 
-下次資料夾多出 `(conflicted copy)` filename，你不會再花 1 小時手動合併——你會知道那是 mechanism 問題，且你有別的選項。
+下次資料夾多出 `(conflicted copy)` filename，你不會再花 1 小時手動合併。你會知道那是 mechanism 問題，且你有別的選項。
 
 想看 Keeply 怎麼解 sync 衝突？[繼續閱讀「檔案版本管理完整指南」](/zh-tw/post/file-version-management-complete-guide/)。
 

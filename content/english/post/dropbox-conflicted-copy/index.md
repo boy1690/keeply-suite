@@ -14,7 +14,7 @@ role: cluster
 pillar_parent: file-version-management-complete-guide
 ---
 
-Thursday night, 10:30 PM. You and your colleague Anna are both editing the same proposal in a shared Dropbox folder. She added 3 paragraphs. You added the closing CTA at the same time. You both pressed Cmd+S. Open the folder the next morning—there's an extra file: `Proposal (Anna's conflicted copy 2026-05-02).docx`. Her edits aren't in yours. Yours aren't in hers. You spend an hour merging them by hand and another 30 minutes checking nothing got lost.
+Thursday night, 10:30 PM. You and your colleague Anna are both editing the same proposal in a shared Dropbox folder. She added 3 paragraphs. You added the closing CTA at the same time. You both pressed Cmd+S. Open the folder the next morning, there's an extra file: `Proposal (Anna's conflicted copy 2026-05-02).docx`. Her edits aren't in yours. Yours aren't in hers. You spend an hour merging them by hand and another 30 minutes checking nothing got lost.
 
 This isn't a bug. It's the result of Dropbox having no conflict-detection layer. Let's look at the real mechanism behind conflicted copy, then three sync designs that actually fix it.
 
@@ -67,17 +67,17 @@ Three design patterns sync can use. Each one solves different collision scenario
 
 ### Design A: Detect-and-prompt sync (Git-style merge)
 
-Two ends edit the same file, sync detects collision, UI prompts the user: keep A, keep B, or merge both changes. **Examples**: Git (CLI crowd), **Keeply** spec M3-100 conflict-detection (wrapped in office language—no "merge conflict" jargon). **Solves scenarios #1 + #2.**
+Two ends edit the same file, sync detects collision, UI prompts the user: keep A, keep B, or merge both changes. **Examples**: Git (CLI crowd), **Keeply** spec M3-100 conflict-detection (wrapped in office language, no "merge conflict" jargon). **Solves scenarios #1 + #2.**
 
 ### Design B: File locking (atomic check-out)
 
-You open the file, the tool auto-locks. Your colleague opens it and sees "Anna is editing"—can't change it. **Examples**: SharePoint, Adobe Creative Cloud Files, Bentley ProjectWise. **Solves scenarios #1 + #3 + #4 entirely**, trade-off: colleague has to wait.
+You open the file, the tool auto-locks. Your colleague opens it and sees "Anna is editing", can't change it. **Examples**: SharePoint, Adobe Creative Cloud Files, Bentley ProjectWise. **Solves scenarios #1 + #3 + #4 entirely**, trade-off: colleague has to wait.
 
 ### Design C: Local Clone + manual sync (Keeply's model)
 
 Working copy lives on your machine, sync is an active push (not real-time mirror). Collision is detected on push, UI prompts the user. **Examples**: **Keeply**'s Local Clone Pattern (spec M3-098) + SMB safety layer (M3-095) + conflict-detection (M3-100). **Solves scenarios #1-#4 in full**, trade-off: not as instant as Dropbox.
 
-You'll notice scenario #4 (cross-OS sync delay) is the hardest—it's a pure clock problem. Designs A and C can detect it, but resolution still needs the user.
+You'll notice scenario #4 (cross-OS sync delay) is the hardest, it's a pure clock problem. Designs A and C can detect it, but resolution still needs the user.
 
 ## When this isn't the right tool {#boundaries}
 
@@ -86,7 +86,7 @@ Keeply doesn't solve every Dropbox scenario:
 - **Large-file real-time sync**: Premiere project edit-while-sync, Keeply's Local Clone model isn't a fit (push takes minutes).
 - **Mobile device access**: Keeply is desktop-first, Dropbox app on phone is much smoother.
 - **External share links**: Dropbox's "Share link" has no Keeply equivalent.
-- **Ultra-high collaboration frequency** (multiple edits within an hour): Keeply UX is slower than Dropbox—use Google Docs co-edit for that.
+- **Ultra-high collaboration frequency** (multiple edits within an hour): Keeply UX is slower than Dropbox, use Google Docs co-edit for that.
 
 ## Before you see `(conflicted copy)` next time
 

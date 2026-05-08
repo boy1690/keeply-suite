@@ -19,7 +19,7 @@ Ho visto [il caos andare in scena](/it/post/autocad-wrong-version-crew/) troppe 
 
 ## Il bivio che ho preso
 
-Io uso git con scioltezza. Gli sviluppatori lo fanno tutti, esistono perfino corsi a pagamento. Quando trovo un problema faccio commit, branch, reset—lo strumento è come una seconda mano.
+Io uso git con scioltezza. Gli sviluppatori lo fanno tutti, esistono perfino corsi a pagamento. Quando trovo un problema faccio commit, branch, reset, lo strumento è come una seconda mano.
 
 Ma nel momento in cui ho detto "prova git" a un capocantiere, mi è tornata indietro una faccia confusa ogni volta. Git non è fatto per loro: CLI, merge conflict, puntatore HEAD, ogni concetto è un muro che blocca la strada. Ero bloccato in mezzo: io usavo lo strumento con scioltezza, i miei clienti non potevano, la cartella condivisa continuava a generare storie settimanali di calcestruzzo da rompere.
 
@@ -37,7 +37,7 @@ Ora ogni nuova funzionalità deve passare tre domande prima di entrare in Keeply
 
 Questo riguarda l'**origine**.
 
-Keeply non sta cercando di vincere la battaglia del controllo versione contro git, SVN o Mercurial—gli sviluppatori l'hanno vinta vent'anni fa. Keeply è per le persone che **non aprono git** ogni giorno ma **aprono cartelle** ogni giorno: capisquadra di cantiere, designer, avvocati, commercialisti, studenti, freelance.
+Keeply non sta cercando di vincere la battaglia del controllo versione contro git, SVN o Mercurial, gli sviluppatori l'hanno vinta vent'anni fa. Keeply è per le persone che **non aprono git** ogni giorno ma **aprono cartelle** ogni giorno: capisquadra di cantiere, designer, avvocati, commercialisti, studenti, freelance.
 
 Se sei una di queste persone, leggi [Il costo nascosto delle cartelle condivise](/it/post/hidden-cost-shared-folders/) e capirai: non sei scarso a organizzare i file. Lo strumento ha solo scaricato la responsabilità di organizzarli sulla tua memoria.
 

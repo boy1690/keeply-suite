@@ -64,6 +64,8 @@ To see where each mechanism's boundary lies, compare them side by side:
 
 That's exactly the bind. None of these mechanisms structurally reaches the typical "overwrote after a normal save" scenario.
 
+What we observe at client sites is almost always this exact scenario.
+
 ## Why "after the overwrite save" is too late
 
 Here's a distinction nobody names plainly: **save layer** vs **tool layer**.

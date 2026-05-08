@@ -64,6 +64,8 @@ Per vedere il limite di ogni meccanismo, confrontali fianco a fianco:
 
 Esatto, è proprio il vincolo. Nessuno di questi meccanismi arriva strutturalmente al tipico scenario "sovrascritto dopo un salvataggio normale".
 
+Ciò che osserviamo presso i clienti è quasi sempre questo scenario.
+
 ## Perché "dopo il salvataggio sovrascritto" è già troppo tardi
 
 Ecco una distinzione che nessuno nomina chiaramente: **strato di archiviazione** vs **strato strumentale**.

@@ -14,7 +14,7 @@ role: cluster
 pillar_parent: file-version-management-complete-guide
 ---
 
-Giovedì sera, le 22:30. Tu e la tua collega Anna state entrambi modificando la stessa proposta in una cartella Dropbox condivisa. Lei ha aggiunto 3 paragrafi. Tu hai aggiunto la CTA finale nello stesso momento. Entrambi avete premuto Cmd+S. Apri la cartella la mattina dopo—c'è un file in più: `Proposta (Anna's conflicted copy 2026-05-02).docx`. Le sue modifiche non sono nelle tue. Le tue non sono nelle sue. Spendi un'ora a unirle a mano e altri 30 minuti a verificare che nulla sia andato perso.
+Giovedì sera, le 22:30. Tu e la tua collega Anna state entrambi modificando la stessa proposta in una cartella Dropbox condivisa. Lei ha aggiunto 3 paragrafi. Tu hai aggiunto la CTA finale nello stesso momento. Entrambi avete premuto Cmd+S. Apri la cartella la mattina dopo, c'è un file in più: `Proposta (Anna's conflicted copy 2026-05-02).docx`. Le sue modifiche non sono nelle tue. Le tue non sono nelle sue. Spendi un'ora a unirle a mano e altri 30 minuti a verificare che nulla sia andato perso.
 
 Questo non è un bug. È il risultato di Dropbox senza un livello di rilevazione conflitti. Vediamo prima il vero mechanism dietro la copia in conflitto, poi tre design di sync che lo risolvono davvero.
 
@@ -67,17 +67,17 @@ Tre pattern di design che sync può usare. Ognuno risolve scenari di collisione 
 
 ### Design A: Detect-and-prompt sync (merge stile Git)
 
-Due lati editano lo stesso file, sync rileva collisione, UI chiede all'utente: tieni A, tieni B, o unisci entrambi i cambiamenti. **Esempi**: Git (cerchia CLI), **Keeply** spec M3-100 conflict-detection (incartato in linguaggio ufficio—nessun "merge conflict" gergo). **Risolve scenari #1 + #2.**
+Due lati editano lo stesso file, sync rileva collisione, UI chiede all'utente: tieni A, tieni B, o unisci entrambi i cambiamenti. **Esempi**: Git (cerchia CLI), **Keeply** spec M3-100 conflict-detection (incartato in linguaggio ufficio, nessun "merge conflict" gergo). **Risolve scenari #1 + #2.**
 
 ### Design B: File locking (check-out atomico)
 
-Apri il file, lo strumento auto-blocca. Il collega lo apre e vede "Anna sta editando"—non può cambiare. **Esempi**: SharePoint, Adobe Creative Cloud Files, Bentley ProjectWise. **Risolve scenari #1 + #3 + #4 interamente**, trade-off: il collega deve aspettare.
+Apri il file, lo strumento auto-blocca. Il collega lo apre e vede "Anna sta editando", non può cambiare. **Esempi**: SharePoint, Adobe Creative Cloud Files, Bentley ProjectWise. **Risolve scenari #1 + #3 + #4 interamente**, trade-off: il collega deve aspettare.
 
 ### Design C: Local Clone + sync manuale (modello Keeply)
 
 Working copy vive sulla tua macchina, sync è push attivo (non mirror real-time). Collisione rilevata su push, UI chiede all'utente. **Esempi**: il Local Clone Pattern di **Keeply** (spec M3-098) + SMB safety layer (M3-095) + conflict-detection (M3-100). **Risolve scenari #1-#4 in pieno**, trade-off: non istantaneo come Dropbox.
 
-Noterai che lo scenario #4 (ritardo sync cross-OS) è il più difficile—è puro problema di orologio. Design A e C possono detect, ma la risoluzione richiede ancora l'utente.
+Noterai che lo scenario #4 (ritardo sync cross-OS) è il più difficile, è puro problema di orologio. Design A e C possono detect, ma la risoluzione richiede ancora l'utente.
 
 ## Quando non è lo strumento giusto {#boundaries}
 
@@ -86,7 +86,7 @@ Keeply non risolve ogni scenario Dropbox:
 - **Sync real-time file grandi**: Premiere project edit-mentre-sync, il modello Local Clone di Keeply non è adatto (push richiede minuti).
 - **Accesso da dispositivi mobili**: Keeply è desktop-first, l'app Dropbox sul telefono è molto più fluida.
 - **Link di condivisione esterni**: Il "Share link" di Dropbox non ha equivalente Keeply.
-- **Frequenza di collaborazione altissima** (multiple edit in un'ora): UX di Keeply più lenta di Dropbox—usa Google Docs co-edit per quello.
+- **Frequenza di collaborazione altissima** (multiple edit in un'ora): UX di Keeply più lenta di Dropbox, usa Google Docs co-edit per quello.
 
 ## Prima di vedere `(copia in conflitto)` la prossima volta
 

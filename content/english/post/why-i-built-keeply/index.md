@@ -19,9 +19,9 @@ I've watched [the chaos play out](/en/post/autocad-wrong-version-crew/) too many
 
 ## The fork I took
 
-I use git fluently. Software engineers do, there are even paid courses for it. When I find a problem I commit, branch, reset—the tool feels like a second hand.
+I use git fluently. Software engineers do, there are even paid courses for it. When I find a problem I commit, branch, reset, the tool feels like a second hand.
 
-But the moment I said "try git" to a construction site supervisor, I got back a confused face every time. Git isn't built for them: CLI, merge conflict, HEAD pointer—every concept is a wall in the way. I was stuck in the middle: I used the tool fluently, my customers couldn't, the shared folder kept producing weekly stories of concrete getting broken out.
+But the moment I said "try git" to a construction site supervisor, I got back a confused face every time. Git isn't built for them: CLI, merge conflict, HEAD pointer, every concept is a wall in the way. I was stuck in the middle: I used the tool fluently, my customers couldn't, the shared folder kept producing weekly stories of concrete getting broken out.
 
 Teaching them to learn git is cheaper. Building a tool they don't have to learn is harder. I picked the harder one.
 
@@ -37,7 +37,7 @@ Now every new feature has to pass three questions before it ships in Keeply: wil
 
 This is about the **founding intent**.
 
-Keeply isn't trying to win the version-control fight against git, SVN, or Mercurial—devs won that one twenty years ago. Keeply is for people who **don't open git** every day but **do open folders** every day: site supervisors, designers, lawyers, accountants, students, freelancers.
+Keeply isn't trying to win the version-control fight against git, SVN, or Mercurial, devs won that one twenty years ago. Keeply is for people who **don't open git** every day but **do open folders** every day: site supervisors, designers, lawyers, accountants, students, freelancers.
 
 If you're one of those people, read [The hidden cost of shared folders](/en/post/hidden-cost-shared-folders/) and you'll get it: you're not bad at organizing files. The tool just pushed the responsibility for organizing them onto your memory.
 

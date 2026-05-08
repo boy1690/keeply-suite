@@ -80,7 +80,7 @@ Strumenti come Dropbox, iCloud, OneDrive e Google Drive salvano **l'ultima versi
 
 Modifichi un file sul Computer A, il Computer B scarica automaticamente l'ultima copia. **Il loro lavoro è sincronizzare "l'ultima copia" su tutti i tuoi dispositivi**.
 
-Hanno una cronologia delle versioni. Ma in genere **conservano solo 30 giorni** — il piano standard di Dropbox, Google Drive e OneDrive seguono tutti questa regola. Oltre, è sparita.
+Hanno una cronologia delle versioni. Ma in genere **conservano solo 30 giorni**. Il piano standard di Dropbox, Google Drive e OneDrive seguono tutti questa regola. Oltre, è sparita.
 
 ![Confronto tra "sincronizzazione dell'ultima versione" del cloud e "conservazione illimitata della storia" di Keeply](image-3.svg)
 

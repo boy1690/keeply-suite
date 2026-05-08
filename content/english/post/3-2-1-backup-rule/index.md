@@ -72,6 +72,8 @@ In 2005, drive lifetimes were short and media was fragile. Multiple copies fough
 
 In 2026, drives are reliable and cloud sync is instant. What does the "3" become? It becomes the same mistake replicated to three places, in real time.
 
+This is the scenario we see most often working with clients.
+
 Sam is a designer. Monday morning, 10:32 AM, a client calls asking for the proposal version they signed off three months ago. Sam opens the NAS. 12 versions, three cloud copies all showing the current latest.
 
 But Sam doesn't want the latest. He wants the version from three months ago.

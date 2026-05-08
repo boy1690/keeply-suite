@@ -10,7 +10,7 @@ tags: [version control]
 cta_topic: recovery
 ---
 
-Wednesday, 3 p.m. You're at a coffee shop; your Americano is half full. A message from your advisor pops up: "Your previous version of Chapter 3 had the stronger argument—where did it go?"
+Wednesday, 3 p.m. You're at a coffee shop; your Americano is half full. A message from your advisor pops up: "Your previous version of Chapter 3 had the stronger argument, where did it go?"
 
 You open your laptop. Google Drive has `thesis_final.docx`, `thesis_final_v2.docx`, `thesis_revised_0415.docx`. You open each one, scroll to Chapter 3, and compare it to what's on screen now.
 
@@ -78,7 +78,7 @@ What does evidence buy you? The key thing: **your advisor isn't critiquing your 
 
 Same thing at your defense. A committee member asks, "Why does Chapter 3 have this structure?" If you can trace the history, you're not reciting an answer. You're walking them down a path you've actually walked.
 
-There's a more practical scenario too. If your thesis is ever questioned—citation issues, plagiarism accusations, research-integrity concerns—version history is your defense. Without a timeline, you have only the current PDF. That proves nothing.
+There's a more practical scenario too. If your thesis is ever questioned, citation issues, plagiarism accusations, research-integrity concerns, version history is your defense. Without a timeline, you have only the current PDF. That proves nothing.
 
 So **diff memory** is not a question of "do you have it." It's a question of "active or passive." You can actively rename files every week and back up after every edit. Honestly, few people keep that up. Or you can let a tool do it.
 
@@ -126,7 +126,7 @@ The full pillar [file version management complete guide](/en/post/file-version-m
 
 ## Sources
 
-- [U.S. CISA — Data Backup Options](https://www.cisa.gov/news-events/news/data-backup-options) (3-2-1 backup rule)
+- [U.S. CISA. Data Backup Options](https://www.cisa.gov/news-events/news/data-backup-options) (3-2-1 backup rule)
 
 ---
 

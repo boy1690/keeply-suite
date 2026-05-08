@@ -47,7 +47,7 @@ A 工程师打开 Cursor，让 AI 改一个 bug。AI 改完跑不过。他让 AI
 
 跑跑看，OK。
 
-下一轮，你说「再加一个 feature」。AI 动了 3 个文件。跑——出错。
+下一轮，你说「再加一个 feature」。AI 动了 3 个文件。跑。出错。
 
 你说「修那个 error」。AI 动了 5 个文件，改到 config，加了一个你没问过的 helper function。跑，更多 error。
 

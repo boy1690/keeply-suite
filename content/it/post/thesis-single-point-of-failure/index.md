@@ -10,7 +10,7 @@ tags: [controllo versione]
 cta_topic: recovery
 ---
 
-Mercoledì, ore 15. Sei in un bar; il tuo americano è mezzo pieno. Salta fuori un messaggio del tuo relatore: "La tua versione precedente del Capitolo 3 aveva l'argomentazione più forte — dov'è finita?"
+Mercoledì, ore 15. Sei in un bar; il tuo americano è mezzo pieno. Salta fuori un messaggio del tuo relatore: "La tua versione precedente del Capitolo 3 aveva l'argomentazione più forte. Dov'è finita?"
 
 Apri il portatile. Su Google Drive ci sono `tesi_definitiva.docx`, `tesi_definitiva_v2.docx`, `tesi_revisionata_0415.docx`. Apri ognuno, scorri al Capitolo 3 e lo confronti con quello che hai sullo schermo adesso.
 
@@ -78,7 +78,7 @@ Cosa ti comprano le prove? La cosa fondamentale: **il tuo relatore non sta criti
 
 Stessa cosa alla discussione. Un membro della commissione chiede: "Perché il Capitolo 3 ha questa struttura?" Se riesci a tracciarne la storia, non stai recitando una risposta. Stai accompagnando la commissione lungo un cammino che hai effettivamente percorso.
 
-C'è uno scenario ancora più pratico. Se la tua tesi venisse mai contestata — questioni di citazione, accuse di plagio, dubbi sull'integrità della ricerca — la cronologia delle versioni è la tua difesa. Senza una cronologia, hai solo il PDF attuale. Quello non prova nulla.
+C'è uno scenario ancora più pratico. Se la tua tesi venisse mai contestata. Questioni di citazione, accuse di plagio, dubbi sull'integrità della ricerca. La cronologia delle versioni è la tua difesa. Senza una cronologia, hai solo il PDF attuale. Quello non prova nulla.
 
 Quindi **la memoria delle differenze** non è una questione di "ce l'hai". È una questione di "attiva o passiva". Puoi attivamente rinominare i file ogni settimana e fare il backup dopo ogni modifica. Onestamente, poche persone lo mantengono. Oppure puoi lasciare che lo faccia uno strumento.
 
@@ -122,7 +122,7 @@ Ricordi mercoledì alle 15, l'americano mezzo finito al bar? Non devi essere il 
 
 ## Fonti
 
-- [U.S. CISA — Data Backup Options](https://www.cisa.gov/news-events/news/data-backup-options) (regola di backup 3-2-1)
+- [U.S. CISA. Data Backup Options](https://www.cisa.gov/news-events/news/data-backup-options) (regola di backup 3-2-1)
 
 ---
 

@@ -71,6 +71,8 @@ Nel 2005 le durate dei dischi erano brevi e i supporti fragili. Più copie comba
 
 Nel 2026 i dischi sono affidabili e la sincronizzazione cloud è istantanea. Cosa diventa il "3"? Diventa lo stesso errore replicato in tre posti, in tempo reale.
 
+È lo scenario che osserviamo più spesso lavorando con i clienti.
+
 A è un designer. Lunedì mattina alle 10:32, un cliente chiama chiedendo la versione della proposta firmata tre mesi fa. A apre il NAS. 12 versioni, tre copie cloud che mostrano tutte l'attuale "ultima".
 
 Ma A non vuole l'ultima. Vuole la versione di tre mesi fa.

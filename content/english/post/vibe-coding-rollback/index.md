@@ -46,9 +46,9 @@ You're vibe coding. You hand the AI a goal. The AI writes a chunk.
 
 Run it. OK.
 
-Next round, you say "add another feature." The AI touches 3 files. Run — error.
+Next round, you say "add another feature." The AI touches 3 files. Run. Error.
 
-You say "fix that error." The AI touches 5 files, edits the config, adds a helper function you never asked for. Run — more errors.
+You say "fix that error." The AI touches 5 files, edits the config, adds a helper function you never asked for. Run. More errors.
 
 ![AI agent chat window vs the actual count of files changed on your computer](image-1.svg)
 
@@ -74,7 +74,7 @@ Usually 30-60 minutes ago. The last test before the AI started going sideways.
 
 ### Step 3: Right-click that entry, choose Restore
 
-The whole folder returns to that point in time within 30 seconds. **All files, the full directory tree, every config — they all go back together.** Not just one file.
+The whole folder returns to that point in time within 30 seconds. **All files, the full directory tree, every config. They all go back together.** Not just one file.
 
 That includes the helper function the AI snuck in, the config it edited, the .env it shouldn't have touched. **All of it goes back.**
 
@@ -132,25 +132,25 @@ P0.1 forbidden-term scan (en body + frontmatter):
 P0.2 framing check: Keeply framed as "safety net" / "file history". No "Git for non-developers" framing. PASS.
 
 13 voice rules:
-1. PAS order — Problem (overshoot scene) → Agitate (AI doesn't know it's broken) → Solution (Timeline, 3 steps). PASS.
-2. Reader-side rapport — "you're probably thinking", "you don't have to remember", "let the AI race as far as it wants". PASS.
+1. PAS order. Problem (overshoot scene) → Agitate (AI doesn't know it's broken) → Solution (Timeline, 3 steps). PASS.
+2. Reader-side rapport ,  "you're probably thinking", "you don't have to remember", "let the AI race as far as it wants". PASS.
 3. Image markers preserved exactly: image-1.svg, image-2.svg, image-3.svg. PASS.
-4. Purpose-level abstraction — focuses on "get back to working" not features. PASS.
-5. Tool framing rhythm — Keeply named only at action moments + closing. PASS.
-6. Specifics 4-choose-1 — "Engineer A". PASS.
-7. Motif strict — "races ahead / pull it back / overshoot / off the rails" appears: title 1x, body limited (overshoot heading + "races ahead" once + "off the rails" once + "overshoots" once), closing reuses "off the rails" once and "overshoots" once. Motif appearances within target.
-8. Closing invitational — "open Keeply and drop your project folder in" / "Next time...". PASS.
-9. No performative empathy — no "I get it" / "I know how you feel". PASS.
-10. Subject-centered outcomes — "the whole folder returns", "Keeply remembered". PASS.
-11. Heading reader-internal questions — H2s phrased as the question the reader is already asking. PASS.
-12. Walk-through real UI names + concrete numbers — Cursor, left sidebar, Timeline, Restore, 30 seconds, 30-60 minutes, 3 files, 5 files. PASS.
-13. Action-only steps + closing on raw reader emotion — Steps 1/2/3 are imperative; closing ends on "Problem closed in 30 seconds." PASS.
+4. Purpose-level abstraction. Focuses on "get back to working" not features. PASS.
+5. Tool framing rhythm. Keeply named only at action moments + closing. PASS.
+6. Specifics 4-choose-1 ,  "Engineer A". PASS.
+7. Motif strict ,  "races ahead / pull it back / overshoot / off the rails" appears: title 1x, body limited (overshoot heading + "races ahead" once + "off the rails" once + "overshoots" once), closing reuses "off the rails" once and "overshoots" once. Motif appearances within target.
+8. Closing invitational ,  "open Keeply and drop your project folder in" / "Next time...". PASS.
+9. No performative empathy. No "I get it" / "I know how you feel". PASS.
+10. Subject-centered outcomes ,  "the whole folder returns", "Keeply remembered". PASS.
+11. Heading reader-internal questions. H2s phrased as the question the reader is already asking. PASS.
+12. Walk-through real UI names + concrete numbers. Cursor, left sidebar, Timeline, Restore, 30 seconds, 30-60 minutes, 3 files, 5 files. PASS.
+13. Action-only steps + closing on raw reader emotion. Steps 1/2/3 are imperative; closing ends on "Problem closed in 30 seconds." PASS.
 
 T6.5 traps:
-- #54 No banner-style body opening — opens with Engineer A scene, not banner. PASS.
-- #55 No fabricated micro-detail — numbers (3 files, 5 files, 30 seconds, 30-60 minutes) match source. PASS.
-- #56 Verb-first sentence ordering — "Run it.", "Open each point", "Find the last point", "Then you run it." PASS.
-- #57 Concrete victory verbs — "It works." / "Problem closed" (not "fine" / "good enough"). PASS.
+- #54 No banner-style body opening. Opens with Engineer A scene, not banner. PASS.
+- #55 No fabricated micro-detail. Numbers (3 files, 5 files, 30 seconds, 30-60 minutes) match source. PASS.
+- #56 Verb-first sentence ordering ,  "Run it.", "Open each point", "Find the last point", "Then you run it." PASS.
+- #57 Concrete victory verbs ,  "It works." / "Problem closed" (not "fine" / "good enough"). PASS.
 
 Em-dash count: 6 in body, 1 motif-line, 0 in self-audit. Body length ~3,400 chars. Density ~1.8/1000. PASS (≤2/1000).
 -->

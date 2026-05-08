@@ -46,9 +46,9 @@ Stai facendo vibe coding. Dai all'AI un obiettivo. L'AI scrive un pezzo.
 
 Esegui. OK.
 
-Giro successivo, dici "aggiungi un'altra funzionalità". L'AI tocca 3 file. Esegui — errore.
+Giro successivo, dici "aggiungi un'altra funzionalità". L'AI tocca 3 file. Esegui. Errore.
 
-Dici "sistema quell'errore". L'AI tocca 5 file, modifica la configurazione, aggiunge una funzione di supporto che non avevi mai chiesto. Esegui — altri errori.
+Dici "sistema quell'errore". L'AI tocca 5 file, modifica la configurazione, aggiunge una funzione di supporto che non avevi mai chiesto. Esegui. Altri errori.
 
 ![Finestra di chat dell'agente AI vs il numero effettivo di file cambiati sul tuo computer](image-1.svg)
 
@@ -74,7 +74,7 @@ Di solito 30-60 minuti fa. L'ultimo test prima che l'AI iniziasse ad andare di l
 
 ### Passaggio 3: tasto destro su quella voce, scegli Ripristina
 
-L'intera cartella torna a quel punto nel tempo entro 30 secondi. **Tutti i file, l'intero albero delle directory, ogni configurazione — tornano indietro tutti insieme.** Non solo un file.
+L'intera cartella torna a quel punto nel tempo entro 30 secondi. **Tutti i file, l'intero albero delle directory, ogni configurazione. Tornano indietro tutti insieme.** Non solo un file.
 
 Questo include la funzione di supporto che l'AI ha intrufolato, la configurazione che ha modificato, il .env che non avrebbe dovuto toccare. **Tutto torna indietro.**
 

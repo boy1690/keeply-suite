@@ -80,7 +80,7 @@ Tools like Dropbox, iCloud, OneDrive, and Google Drive save **the latest version
 
 You edit a file on Computer A, Computer B automatically pulls the latest copy. **Their job is to sync "the latest copy" to all your devices**.
 
-They do have version history. But they typically **only keep 30 days**—Dropbox's standard plan, Google Drive, and OneDrive all follow this rule. Past that, it's gone.
+They do have version history. But they typically **only keep 30 days**, Dropbox's standard plan, Google Drive, and OneDrive all follow this rule. Past that, it's gone.
 
 ![Cloud "latest version sync" vs Keeply "unlimited history retention" comparison](image-3.svg)
 
@@ -134,7 +134,7 @@ P0.1 Git terminology check (forbidden words):
 - HEAD: 0
 - diff: 0
 - push: 0
-- pull (version-control sense): 0 (note: "pulls the latest copy" used in cloud-sync sense, not Git sense — refers to file sync action, acceptable per English idiom for sync tools)
+- pull (version-control sense): 0 (note: "pulls the latest copy" used in cloud-sync sense, not Git sense. Refers to file sync action, acceptable per English idiom for sync tools)
 - stash: 0
 - repository: 0
 - checkout: 0
@@ -143,25 +143,25 @@ P0.1 Git terminology check (forbidden words):
 - origin: 0
 Result: PASS (0 forbidden Git-sense uses)
 
-P0.2 check: Keeply not positioned as "Git for non-developers" — PASS (article frames it as third category, not Git derivative)
+P0.2 check: Keeply not positioned as "Git for non-developers". PASS (article frames it as third category, not Git derivative)
 
 13 voice rules:
-- Rule 1 (no AI tells): PASS — no "imagine if", "let's", "in today's world"
-- Rule 2 (sentence rhythm): PASS — short + medium mix
-- Rule 3 (concrete > abstract): PASS — proposal.docx, 10:23 Thursday, 30 seconds, 3 months
-- Rule 4 (no hedging): PASS — direct claims
+- Rule 1 (no AI tells): PASS. No "imagine if", "let's", "in today's world"
+- Rule 2 (sentence rhythm): PASS. Short + medium mix
+- Rule 3 (concrete > abstract): PASS. Proposal.docx, 10:23 Thursday, 30 seconds, 3 months
+- Rule 4 (no hedging): PASS. Direct claims
 - Rule 5 (no nominalization stacks): PASS
 - Rule 6 (active voice default): PASS
-- Rule 7 (no parallelism overdose): PASS — three-jobs motif used sparingly
-- Rule 8 (no false binaries): PASS — explicit "complement, not compete"
-- Rule 9 (no performative empathy): PASS — no "I get it" / "I know how you feel"; uses "you might want to" / observational framing
-- Rule 10 (no listicle bloat): PASS — table is functional, not padded
-- Rule 11 (reader-internal questions as headings): PASS — "What does Keeply save?" / "How many do you need?" preserved as questions
-- Rule 12 (real UI names + concrete numbers): PASS — Timeline, file note, 30 seconds, 30 days, 10:23 Thursday
-- Rule 13 (action-only walk-through, raw emotion close): PASS — closes on Engineer A's direct line "I use both"
-- Rule 14 (cluster motif minimal — title once, body 0-1, closing 0): 
+- Rule 7 (no parallelism overdose): PASS. Three-jobs motif used sparingly
+- Rule 8 (no false binaries): PASS. Explicit "complement, not compete"
+- Rule 9 (no performative empathy): PASS. No "I get it" / "I know how you feel"; uses "you might want to" / observational framing
+- Rule 10 (no listicle bloat): PASS. Table is functional, not padded
+- Rule 11 (reader-internal questions as headings): PASS ,  "What does Keeply save?" / "How many do you need?" preserved as questions
+- Rule 12 (real UI names + concrete numbers): PASS. Timeline, file note, 30 seconds, 30 days, 10:23 Thursday
+- Rule 13 (action-only walk-through, raw emotion close): PASS. Closes on Engineer A's direct line "I use both"
+- Rule 14 (cluster motif minimal. Title once, body 0-1, closing 0): 
   - Motif "three different jobs": title 0, body 2 ("three different jobs" + "Three jobs that complement"), closing 0
-  - NOTE: 2 body uses (intro + table-summary) — slightly above 0-1 target but functionally necessary as the article's structural spine. Acceptable for cluster on differentiation topic.
+  - NOTE: 2 body uses (intro + table-summary). Slightly above 0-1 target but functionally necessary as the article's structural spine. Acceptable for cluster on differentiation topic.
 
 Trap #57 check (concrete victory verbs, not "good enough" / "fine"):
 - Used: "30 seconds and you're there", "click and restore", "restore everything", "I use both"
@@ -169,12 +169,12 @@ Trap #57 check (concrete victory verbs, not "good enough" / "fine"):
 - PASS
 
 Em-dash count: 5
-- "—Dropbox's standard plan..." (em-dash in cloud section)
-- "—look at which scenario you hit most often" (en dash, in if-pick-one paragraph)
-- Wait, recount actual em-dashes (—) in body:
-  1. "Past that, it's gone" — preceded by em-dash in "—Dropbox's standard plan, Google Drive, and OneDrive all follow this rule"
+- ", Dropbox's standard plan..." (em-dash in cloud section)
+- ", look at which scenario you hit most often" (en dash, in if-pick-one paragraph)
+- Wait, recount actual em-dashes (, ) in body:
+  1. "Past that, it's gone". Preceded by em-dash in ", Dropbox's standard plan, Google Drive, and OneDrive all follow this rule"
   Final count: 1 em-dash in body
-- Density: 1 em-dash / ~720 words = 0.14% — well within budget
+- Density: 1 em-dash / ~720 words = 0.14%. Well within budget
 
 Word count (body, excluding frontmatter + audit): ~720 words
 
