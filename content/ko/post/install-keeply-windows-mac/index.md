@@ -146,3 +146,8 @@ Keeply를 열고, **새 프로젝트** 버튼을 누르고, 지금 작업 중인
 **파란 화면은 평결이 아니에요. 아직 쌓이는 중인 평판이에요.**
 
 경고를 우회할 필요가 없어요. winget 경로로 가면 — 경고가 처음부터 나오지 않아요.
+
+---
+
+> 저자 소개: Ting-Wei Tsao, Keeply 창업자.
+> [LinkedIn](https://www.linkedin.com/in/ting-wei-tsao-b57480152/)

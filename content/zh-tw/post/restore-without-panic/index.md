@@ -1,6 +1,6 @@
 ---
 title: "檔案救援軟體不一定救得到：4 種你以為有 trash 但其實沒有的情境"
-description: "你按了 Delete、Recycle Bin 是空的——4 個常見原因讓 OS 沒留任何救援痕跡。"
+description: "你按了 Delete、Recycle Bin 是空的。4 個常見原因讓 OS 沒留任何救援痕跡。"
 date: 2026-05-06T08:50:00+08:00
 draft: false
 slug: restore-without-panic

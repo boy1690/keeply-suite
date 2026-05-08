@@ -154,3 +154,8 @@ T6.5 traps:
 
 Em-dash count: 6 in body, 1 motif-line, 0 in self-audit. Body length ~3,400 chars. Density ~1.8/1000. PASS (≤2/1000).
 -->
+
+---
+
+> About the author: Ting-Wei Tsao, founder of Keeply.
+> [LinkedIn](https://www.linkedin.com/in/ting-wei-tsao-b57480152/)

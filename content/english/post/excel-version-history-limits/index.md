@@ -1,6 +1,6 @@
 ---
 title: "Excel Version History Only Goes Back 1-2 Versions? 4 Microsoft Limits Nobody Tells You"
-description: "Excel version history only goes back 1-2 versions isn't a bug—it's Microsoft designing AutoSave as cloud subscription bait."
+description: "Excel version history only goes back 1-2 versions isn't a bug, it's Microsoft designing AutoSave as cloud subscription bait."
 date: 2026-05-04T20:00:00+08:00
 draft: false
 slug: excel-version-history-limits
@@ -14,7 +14,7 @@ role: cluster
 pillar_parent: file-version-management-complete-guide
 ---
 
-Friday afternoon, 5:47 PM. You're working on the month-end close in Excel. You just deleted a formula to try a different approach—turns out it was wrong. Cmd+Z hits the undo limit. You can't get back. You open File > Info > Version History. Grayed out. Then you realize: this spreadsheet is on your desktop, not OneDrive. Thirty minutes of formula work, gone.
+Friday afternoon, 5:47 PM. You're working on the month-end close in Excel. You just deleted a formula to try a different approach, turns out it was wrong. Cmd+Z hits the undo limit. You can't get back. You open File > Info > Version History. Grayed out. Then you realize: this spreadsheet is on your desktop, not OneDrive. Thirty minutes of formula work, gone.
 
 This isn't a one-off. It happens to everyone working in Excel. It's the result of Microsoft designing version history as cloud subscription bait. Let's look at the four limits you keep hitting, then three tool designs that actually solve them.
 
@@ -30,7 +30,7 @@ This isn't a one-off. It happens to everyone working in Excel. It's the result o
 
 The "File > Info > Version History" button **only works when all four conditions are met**: (1) the file is on OneDrive or SharePoint (2) AutoSave is on (3) you have a commercial license (4) you're on desktop, not web. Miss any one and the button is grayed out.
 
-It's not obvious until you've hit it: your normal workflow probably misses **all four conditions**—saved on the desktop, AutoSave off by default, personal license, switching between desktop and web. So grayed out is the default state, not something you did wrong.
+It's not obvious until you've hit it: your normal workflow probably misses **all four conditions**, saved on the desktop, AutoSave off by default, personal license, switching between desktop and web. So grayed out is the default state, not something you did wrong.
 
 ## Four limits Microsoft AutoSave doesn't mention {#four-limits}
 
@@ -82,7 +82,7 @@ Keeply doesn't solve every Excel scenario:
 
 ## Before you press Cmd+S next time
 
-Next time Excel grays out on you, you won't blame yourself anymore. You'll know it's Microsoft's deliberate design—and you have other options.
+Next time Excel grays out on you, you won't blame yourself anymore. You'll know it's Microsoft's deliberate design, and you have other options.
 
 Want to see how Keeply handles Excel versioning? [Read the complete guide to file version management.](/en/post/file-version-management-complete-guide/)
 

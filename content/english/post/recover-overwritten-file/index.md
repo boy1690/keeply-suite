@@ -1,6 +1,6 @@
 ---
 title: "The limit of overwritten file recovery: when AutoRecover isn't enough"
-description: "AutoRecover is built for crash rescue; data recovery software has only minutes after overwrite. None of them reach 'overwrote after a normal save.' What you need isn't post-event rescue — it's an always-on version history at the tool layer."
+description: "AutoRecover is built for crash rescue; data recovery software has only minutes after overwrite. None of them reach 'overwrote after a normal save.' What you need isn't post-event rescue. It's an always-on version history at the tool layer."
 date: 2026-05-02T18:00:00+08:00
 draft: false
 slug: "recover-overwritten-file"
@@ -28,7 +28,7 @@ You have until Monday morning to restore it. But will you make it in time?
 
 ## TL;DR
 
-Most people searching for "**recover overwritten files**" want post-event rescue. But Microsoft AutoRecover is for crash recovery, and data recovery software's success window is minutes after overwrite. None of these reach the "overwrote after a normal save" scenario. **Post-event rescue isn't the answer — upstream prevention is.** With an always-on version history at the tool layer, an overwrite save stops being a destructive action.
+Most people searching for "**recover overwritten files**" want post-event rescue. But Microsoft AutoRecover is for crash recovery, and data recovery software's success window is minutes after overwrite. None of these reach the "overwrote after a normal save" scenario. **Post-event rescue isn't the answer. Upstream prevention is.** With an always-on version history at the tool layer, an overwrite save stops being a destructive action.
 
 ## Contents
 
@@ -48,7 +48,7 @@ Microsoft Office has three "**version recovery**" mechanisms built in:
 - **Previous Versions** (Windows): rolls back to past snapshots via shadow copies. Requires prior setup.
 - **OneDrive version history**: snapshots of every save. The [Microsoft documentation](https://support.microsoft.com/en-us/office/restore-a-previous-version-of-a-file-stored-in-onedrive-159cad6d-d76e-4981-88ef-de6e96c93893) notes about 500 major versions retained.
 
-The design intent is clear: these three are for "**crash rescue**" or "**recent save mishaps**" — not for the "**realized I overwrote it after closing the file**" scenario.
+The design intent is clear: these three are for "**crash rescue**" or "**recent save mishaps**". Not for the "**realized I overwrote it after closing the file**" scenario.
 
 ## AutoRecover / Previous Versions / recovery software: what each can save
 
@@ -68,21 +68,21 @@ That's exactly the bind. None of these mechanisms structurally reaches the typic
 
 Here's a distinction nobody names plainly: **save layer** vs **tool layer**.
 
-These mechanisms live at the **save layer**. The design goal is "if the most recent write fails, roll back" — so retention runs short. The "500 versions" or "30 days" reference points are based on "how often the average user looks back within a month." Three months past that window isn't in scope; pruning is intentional.
+These mechanisms live at the **save layer**. The design goal is "if the most recent write fails, roll back". So retention runs short. The "500 versions" or "30 days" reference points are based on "how often the average user looks back within a month." Three months past that window isn't in scope; pruning is intentional.
 
 Sam is an accountant. Friday night at 19:30, he saves over the month-end report in Excel by mistake. He goes looking for the AutoRecover file but can't find it. He tries data recovery software; it returns "the sector has already been overwritten." Sixty hours until Monday morning.
 
-Here's the real problem. Sam realizes only afterward — if he had overwritten it earlier in the day, the AutoRecover 30-minute interval might have caught it. **But by the time he noticed, it was already too late. Post-event rescue depends on noticing in time. Upstream prevention doesn't depend on noticing at all — every save already preserves a version.**
+Here's the real problem. Sam realizes only afterward. If he had overwritten it earlier in the day, the AutoRecover 30-minute interval might have caught it. **But by the time he noticed, it was already too late. Post-event rescue depends on noticing in time. Upstream prevention doesn't depend on noticing at all. Every save already preserves a version.**
 
 ## Beyond post-event rescue: the always-on version history option
 
-Surpassing the limit of post-event rescue means **upstream prevention** — placing an always-on version history at the tool layer.
+Surpassing the limit of post-event rescue means **upstream prevention**. Placing an always-on version history at the tool layer.
 
 Every save = one version preserved. No pruning. Independent of Word's or OneDrive's retention policy.
 
 [Keeply](https://keeply.work) auto-commits every save through a Git engine. An "overwrite save" stops being a **destructive action**. The previous version is always preserved.
 
-Lisa has used Keeply for half a year. Monday morning, she notices the month-end report has been overwritten with the previous sheet. She opens Keeply — Friday's 19:00 sheet, 19:15 sheet, the 19:30 overwritten sheet, all retained as versions. She clicks "go to the 19:00 sheet" and three seconds later Excel opens it.
+Lisa has used Keeply for half a year. Monday morning, she notices the month-end report has been overwritten with the previous sheet. She opens Keeply. Friday's 19:00 sheet, 19:15 sheet, the 19:30 overwritten sheet, all retained as versions. She clicks "go to the 19:00 sheet" and three seconds later Excel opens it.
 
 That said, Keeply doesn't replace AutoRecover. Mid-document crash rescue is still AutoRecover's first line. Keeply also can't rewrite history retroactively: it has to be running at the time the overwrite happens. For overwrites before you installed Keeply, this article won't help. For every save from today onward, it can.
 
@@ -92,7 +92,7 @@ That's the part that should let you breathe.
 
 **Q1: Is AutoRecover on by default?**
 
-Yes. Path: "File → Options → Save → Save AutoRecover information every 10 minutes." But AutoRecover clears when the file closes normally — it isn't long-term retention.
+Yes. Path: "File → Options → Save → Save AutoRecover information every 10 minutes." But AutoRecover clears when the file closes normally. It isn't long-term retention.
 
 **Q2: How effective is data recovery software?**
 
@@ -104,7 +104,7 @@ Not exactly. OneDrive Personal defaults to about 500 versions. OneDrive for Busi
 
 **Q4: What about Time Machine?**
 
-Mac's Time Machine is system-level backup. Overwrites that happen between snapshot intervals (default 1 hour) aren't caught. It also isn't per-file version management — recovering a specific point in time of a single file is cumbersome.
+Mac's Time Machine is system-level backup. Overwrites that happen between snapshot intervals (default 1 hour) aren't caught. It also isn't per-file version management. Recovering a specific point in time of a single file is cumbersome.
 
 **Q5: Is Keeply a replacement for AutoRecover?**
 
@@ -116,4 +116,9 @@ The "Oh no, I just overwrote it" moment at 19:30 will come again. You don't know
 
 But here's what you should know: post-event rescue has limits. Upstream prevention doesn't depend on noticing in time.
 
-For every save from today onward — can you let the tool keep that version for you?
+For every save from today onward. Can you let the tool keep that version for you?
+
+---
+
+> About the author: Ting-Wei Tsao, founder of Keeply.
+> [LinkedIn](https://www.linkedin.com/in/ting-wei-tsao-b57480152/)

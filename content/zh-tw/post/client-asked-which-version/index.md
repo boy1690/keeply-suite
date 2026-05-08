@@ -118,3 +118,8 @@ Keeply 用 Git 引擎做版本管理，但不暴露 Git 術語。你看到的詞
 但你知道一件事：你 5 分鐘前的版本和 3 個月前的版本，工具不能不分。
 
 從今天開始的每次交付，能不能讓工具替你記得那一份？
+
+---
+
+> 關於作者：Ting-Wei Tsao，Keeply 創辦人。
+> [LinkedIn](https://www.linkedin.com/in/ting-wei-tsao-b57480152/)

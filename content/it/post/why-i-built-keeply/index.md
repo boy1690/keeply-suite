@@ -1,6 +1,6 @@
 ---
 title: "Perché ho creato Keeply: per chi perde file nelle cartelle condivise ogni giorno"
-description: "Keeply è cresciuto dal caos delle cartelle condivise—non per farti diventare uno sviluppatore."
+description: "Keeply è cresciuto dal caos delle cartelle condivise, non per farti diventare uno sviluppatore."
 date: 2026-05-06T01:00:00+08:00
 draft: false
 slug: why-i-built-keeply

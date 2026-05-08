@@ -1,6 +1,6 @@
 ---
 title: "What the 3-2-1 backup rule doesn't cover in 2026"
-description: "The 3-2-1 backup rule is necessary—but it was never designed to handle operator-error. Here's what it covers, what it misses, and what fills the gap."
+description: "The 3-2-1 backup rule is necessary, but it was never designed to handle operator-error. Here's what it covers, what it misses, and what fills the gap."
 date: 2026-05-02T09:00:00+08:00
 draft: false
 slug: "3-2-1-backup-rule"
@@ -15,17 +15,17 @@ cta_topic: backup
 
 # What the 3-2-1 backup rule doesn't cover in 2026
 
-> The 3-2-1 rule hasn't changed in 20 years—but what you're afraid of has.
+> The 3-2-1 rule hasn't changed in 20 years, but what you're afraid of has.
 
 In 2005, photographer **Peter Krogh** wrote his backup rule into existence: 3 copies, 2 different media, 1 stored offsite. He was protecting against tape decay, dropped hard drives, server-room fires.
 
 Twenty years later, what you're afraid of is **pressing ⌘+S one too many times**.
 
-The 3-2-1 rule never moved—but your real threat did.
+The 3-2-1 rule never moved, but your real threat did.
 
 ## TL;DR
 
-The **3-2-1 backup rule** is necessary: three copies, two media types, one offsite. It protects against hardware failure, fire, ransomware—the disaster scenarios. But it was never designed to handle **operator-error**: you overwriting your own file, a teammate editing the wrong version, cloud sync replicating the broken version to all three copies. This piece breaks down what 3-2-1 covers, what it misses, and what fills the gap.
+The **3-2-1 backup rule** is necessary: three copies, two media types, one offsite. It protects against hardware failure, fire, ransomware, the disaster scenarios. But it was never designed to handle **operator-error**: you overwriting your own file, a teammate editing the wrong version, cloud sync replicating the broken version to all three copies. This piece breaks down what 3-2-1 covers, what it misses, and what fills the gap.
 
 ## Contents
 
@@ -47,7 +47,7 @@ The 3-2-1 rule comes from Peter Krogh's [*The DAM Book* (O'Reilly, 2005)](https:
 
 In 2005, the dominant media were tape, CD/DVD, and mechanical hard drives. Failure rates were high, media aged fast. The rule's design intent was clear: **make sure no single hardware failure, media degradation, or facility disaster can wipe out your files**.
 
-{{IMAGE-1: Visual of 3-2-1 — three stacked file copies, two media icons (local + cloud / NAS + external), arrow to one offsite location.}}
+{{IMAGE-1: Visual of 3-2-1. Three stacked file copies, two media icons (local + cloud / NAS + external), arrow to one offsite location.}}
 
 ## What does 3-2-1 protect against, and what doesn't it?
 
@@ -72,7 +72,7 @@ In 2005, drive lifetimes were short and media was fragile. Multiple copies fough
 
 In 2026, drives are reliable and cloud sync is instant. What does the "3" become? It becomes the same mistake replicated to three places, in real time.
 
-Sam is a designer. Monday morning, 10:32 AM, a client calls asking for the proposal version they signed off three months ago. Sam opens the NAS — 12 versions, three cloud copies all showing the current latest.
+Sam is a designer. Monday morning, 10:32 AM, a client calls asking for the proposal version they signed off three months ago. Sam opens the NAS. 12 versions, three cloud copies all showing the current latest.
 
 But Sam doesn't want the latest. He wants the version from three months ago.
 
@@ -92,7 +92,7 @@ Keeply doesn't decide where your backup location goes. If you keep your machine 
 
 But you don't need two separate tools, one for spatial redundancy and one for version history. One Keeply, from your laptop to your backup, from this second to last week, all visible and all retrievable.
 
-{{IMAGE-2: Three-layer protection diagram — location layer (local + canonical + backup), time layer (version history), freeze layer (release purposes).}}
+{{IMAGE-2: Three-layer protection diagram. Location layer (local + canonical + backup), time layer (version history), freeze layer (release purposes).}}
 
 ## FAQ
 
@@ -126,4 +126,9 @@ In 2005, Peter Krogh designed 3-2-1 to protect against hard drives that drop on 
 
 You're not Peter Krogh in 2005. You're afraid of pressing ⌘+S one too many times.
 
-You don't need two tools—you need one that handles all three layers.
+You don't need two tools, you need one that handles all three layers.
+
+---
+
+> About the author: Ting-Wei Tsao, founder of Keeply.
+> [LinkedIn](https://www.linkedin.com/in/ting-wei-tsao-b57480152/)

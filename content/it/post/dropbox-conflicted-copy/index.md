@@ -1,6 +1,6 @@
 ---
 title: "Dropbox copia in conflitto: perché continua a comparire (3 design di sync che lo risolvono)"
-description: "La copia in conflitto non è un bug—è il risultato di Dropbox che usa last-writer-wins senza un livello di rilevazione conflitti."
+description: "La copia in conflitto non è un bug, è il risultato di Dropbox che usa last-writer-wins senza un livello di rilevazione conflitti."
 date: 2026-05-05T05:55:00+08:00
 draft: false
 slug: dropbox-conflicted-copy

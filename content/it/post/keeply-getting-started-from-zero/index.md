@@ -1,6 +1,6 @@
 ---
 title: "Come usare Keeply: salta 30 funzioni, parti con 2 azioni"
-description: "Non devi diventare prima un esperto. Trascina dentro una cartella, continua a lavorare — la cronologia delle versioni è già attiva."
+description: "Non devi diventare prima un esperto. Trascina dentro una cartella, continua a lavorare. La cronologia delle versioni è già attiva."
 date: 2026-04-30T09:00:00+08:00
 slug: keeply-getting-started-from-zero
 locale: it
@@ -21,7 +21,7 @@ cta_topic: install
 
 # Come usare Keeply: salta 30 funzioni, parti con 2 azioni
 
-> Non devi diventare prima un esperto. Trascina dentro una cartella, continua a lavorare — la cronologia delle versioni è già attiva.
+> Non devi diventare prima un esperto. Trascina dentro una cartella, continua a lavorare. La cronologia delle versioni è già attiva.
 
 ## Indice
 
@@ -63,7 +63,7 @@ A metà di quella fase, la maggior parte delle persone vorrà chiudere la scheda
 
 Prima di costruire Keeply, ho provato io stesso un sacco di nuovi strumenti. Molti mi sono sembrati una rottura il primo giorno, e in silenzio ricadevo nel mio modo vecchio di fare le cose.
 
-Più tardi ho capito: gli strumenti con cui ho effettivamente continuato avevano una cosa in comune — **erano abbastanza intuitivi da poter essere semplicemente usati**.
+Più tardi ho capito: gli strumenti con cui ho effettivamente continuato avevano una cosa in comune ,  **erano abbastanza intuitivi da poter essere semplicemente usati**.
 
 Una volta stavo usando l'AI per scrivere codice e l'AI è andata fuori dai binari. Avevo già perso traccia di dove fosse arrivata. **Per fortuna avevo tenuto note dei file per tutto il tempo.**
 
@@ -119,7 +119,7 @@ Attraverso la Timeline guardi le tue stesse note dei file iniziare ad accumulars
 
 Stai accumulando sempre più note dei file.
 
-Un giorno te ne accorgerai — **che bello avere questo software**.
+Un giorno te ne accorgerai ,  **che bello avere questo software**.
 
 ---
 
@@ -155,3 +155,8 @@ Al giorno 7, apri la Timeline e dai un'occhiata. **Capirai.**
 ---
 
 *Autore: Ting-Wei Tsao, fondatore di Keeply | [LinkedIn](https://www.linkedin.com/in/tingwei-tsao/)*
+
+---
+
+> Sull'autore: Ting-Wei Tsao, fondatore di Keeply.
+> [LinkedIn](https://www.linkedin.com/in/ting-wei-tsao-b57480152/)

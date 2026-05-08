@@ -1,6 +1,6 @@
 ---
 title: "なぜ Keeply を作ったか：共有フォルダで毎日ファイルを失っている人へ"
-description: "Keeply は共有フォルダの混乱から生まれた——あなたを開発者にするためじゃない。"
+description: "Keeply は共有フォルダの混乱から生まれた。あなたを開発者にするためじゃない。"
 date: 2026-05-06T01:00:00+08:00
 draft: false
 slug: why-i-built-keeply

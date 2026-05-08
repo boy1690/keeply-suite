@@ -1,6 +1,6 @@
 ---
 title: "Controllo versioni della tesi magistrale: la differenza che hai dimenticato"
-description: "Mercoledì, ore 15. Il tuo relatore ti scrive: 'La tua versione precedente del Capitolo 3 era più forte — dov'è finita?' Apri tesi_definitiva_v7 e non ricordi cosa diceva la v5 o la v6. Il vero rischio per la tua tesi non è mancare la scadenza. È dimenticare cosa è cambiato — e nemmeno il tuo file system se lo ricorderà. Una guida in quattro passi alla gestione delle versioni per dottorandi e laureandi: nessun cambio di flusso di lavoro, nessun gergo, solo un modo per far sì che due anni di pensiero lascino una traccia."
+description: "Mercoledì, ore 15. Il tuo relatore ti scrive: 'La tua versione precedente del Capitolo 3 era più forte. Dov'è finita?' Apri tesi_definitiva_v7 e non ricordi cosa diceva la v5 o la v6. Il vero rischio per la tua tesi non è mancare la scadenza. È dimenticare cosa è cambiato. E nemmeno il tuo file system se lo ricorderà. Una guida in quattro passi alla gestione delle versioni per dottorandi e laureandi: nessun cambio di flusso di lavoro, nessun gergo, solo un modo per far sì che due anni di pensiero lascino una traccia."
 slug: "thesis-single-point-of-failure"
 date: 2026-04-23
 image: cover.svg
@@ -123,3 +123,8 @@ Ricordi mercoledì alle 15, l'americano mezzo finito al bar? Non devi essere il 
 ## Fonti
 
 - [U.S. CISA — Data Backup Options](https://www.cisa.gov/news-events/news/data-backup-options) (regola di backup 3-2-1)
+
+---
+
+> Sull'autore: Ting-Wei Tsao, fondatore di Keeply.
+> [LinkedIn](https://www.linkedin.com/in/ting-wei-tsao-b57480152/)

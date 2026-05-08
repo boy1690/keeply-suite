@@ -1,6 +1,6 @@
 ---
 title: "Word's version history doesn't cover deliveries 3 months ago"
-description: "Word AutoRecover, OneDrive version history, and Time Machine are all save-layer rescue tools. Retention runs short — from cleared on close to a few hundred versions. Recovering what you delivered 3 months ago takes a tool layer."
+description: "Word AutoRecover, OneDrive version history, and Time Machine are all save-layer rescue tools. Retention runs short. From cleared on close to a few hundred versions. Recovering what you delivered 3 months ago takes a tool layer."
 date: 2026-05-02T15:00:00+08:00
 draft: false
 slug: "client-asked-which-version"
@@ -118,3 +118,8 @@ That 11:23 message will come again. You don't know when.
 But you know this: your version from 5 minutes ago and your version from 3 months ago — the tool can't treat them the same.
 
 For every delivery from today onward, can you let the tool remember that one for you?
+
+---
+
+> About the author: Ting-Wei Tsao, founder of Keeply.
+> [LinkedIn](https://www.linkedin.com/in/ting-wei-tsao-b57480152/)

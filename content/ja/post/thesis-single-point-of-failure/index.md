@@ -127,3 +127,8 @@ PDFは結果。時系列は過程。
 ## 参考文献
 
 - [U.S. CISA — Data Backup Options](https://www.cisa.gov/news-events/news/data-backup-options)（3-2-1 バックアップ原則）
+
+---
+
+> 著者について：Ting-Wei Tsao、Keeply 創業者。
+> [LinkedIn](https://www.linkedin.com/in/ting-wei-tsao-b57480152/)

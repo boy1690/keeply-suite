@@ -1,6 +1,6 @@
 ---
 title: "文件笔记软件 Keeply 怎么用：不用学 30 个功能，2 个动作就上手"
-description: "不必先变专家。把文件夹拖进去，继续工作——版本历史就生效了。"
+description: "不必先变专家。把文件夹拖进去，继续工作。版本历史就生效了。"
 date: 2026-04-30T09:00:00+08:00
 slug: keeply-getting-started-from-zero
 locale: zh-CN
@@ -22,7 +22,7 @@ cta_topic: install
 
 # 文件笔记软件 Keeply 怎么用：不用学 30 个功能，2 个动作就上手
 
-> 不必先变专家。把文件夹拖进去，继续工作——版本历史就生效了。
+> 不必先变专家。把文件夹拖进去，继续工作。版本历史就生效了。
 
 ## 目录
 
@@ -120,7 +120,7 @@ A 先生手上有很多项目，常常用记事本记录他每天做了什么，
 
 你开始保存越来越多文件笔记。
 
-某天你会发现——**有这个软件，真好**。
+某天你会发现。**有这个软件，真好**。
 
 ---
 
@@ -141,7 +141,7 @@ Keeply 不争所有场景。4 种情况下，别的工具更对。
 
 ## 收尾
 
-你想试一个新工具，又不想浪费 14 天——这合理。
+你想试一个新工具，又不想浪费 14 天。这合理。
 
 把文件夹拖进 [Keeply](https://keeply.work/)，继续做今天的事。
 
@@ -159,28 +159,28 @@ Keeply 不争所有场景。4 种情况下，别的工具更对。
 
 <!-- self-audit
 Voice rules v0.2.11 (13 rules):
-- [x] R1 PAS order — Pain (排斥使用新工具) → Agitate (放弃一个工具) → Solve (2 个动作)
-- [x] R2 站读者那边 — rapport 句多处：「不是你不聪明」「这合理」「你会懂」
-- [x] R3 视觉位置标记 — 6 张 ![alt](image-N.svg) 全保留
-- [x] R4 抽象层级 purpose-level — 「直觉性使用」「价值兑现」purpose-level，无 feature-list
-- [x] R5 工具人格化节奏 — 早段「Keeply 默默接住」「Keeply 不动你的习惯」OK；末段切「你会懂」reader's-agency
-- [x] R6 Specifics 4 选一 — A 先生 + 屏幕前的你 (混用)
-- [x] R7 Motif callback 收紧 — 「30 个功能 vs 2 个动作」title 一次 + body image-1 alt 一次 (≤1)；收尾不再 callback
-- [x] R8 Closing invitational — 「把文件夹拖进 Keeply，继续做今天的事」邀请语气
-- [x] R9 不演 empathy — 无「我懂」「我知道你」，改 observational「你应该会」「这合理」
-- [x] R10 Subject-centered outcomes — 「你已经有 1 周」「你会发现」reader 为主语
-- [x] R11 Heading reader-internal question — 5 个 H2 全为读者内心问题 (为什么排斥/为什么放弃/2 个动作是什么/会有什么体验/不适合的时候)
-- [x] R12 Walk-through 真实 UI — 「左边的时间轴」「自动保存」「diff」具体；量化「200 字」「14 天」「3 倍」「50 台」
-- [x] R13 Action-only steps + raw emotion — 动作 1/2 仅动词；收在「真好」raw emotion
+- [x] R1 PAS order 。 Pain (排斥使用新工具) → Agitate (放弃一个工具) → Solve (2 个动作)
+- [x] R2 站读者那边 。 rapport 句多处：「不是你不聪明」「这合理」「你会懂」
+- [x] R3 视觉位置标记 。 6 张 ![alt](image-N.svg) 全保留
+- [x] R4 抽象层级 purpose-level 。 「直觉性使用」「价值兑现」purpose-level，无 feature-list
+- [x] R5 工具人格化节奏 。 早段「Keeply 默默接住」「Keeply 不动你的习惯」OK；末段切「你会懂」reader's-agency
+- [x] R6 Specifics 4 选一 。 A 先生 + 屏幕前的你 (混用)
+- [x] R7 Motif callback 收紧 。 「30 个功能 vs 2 个动作」title 一次 + body image-1 alt 一次 (≤1)；收尾不再 callback
+- [x] R8 Closing invitational 。 「把文件夹拖进 Keeply，继续做今天的事」邀请语气
+- [x] R9 不演 empathy 。 无「我懂」「我知道你」，改 observational「你应该会」「这合理」
+- [x] R10 Subject-centered outcomes 。 「你已经有 1 周」「你会发现」reader 为主语
+- [x] R11 Heading reader-internal question 。 5 个 H2 全为读者内心问题 (为什么排斥/为什么放弃/2 个动作是什么/会有什么体验/不适合的时候)
+- [x] R12 Walk-through 真实 UI 。 「左边的时间轴」「自动保存」「diff」具体；量化「200 字」「14 天」「3 倍」「50 台」
+- [x] R13 Action-only steps + raw emotion 。 动作 1/2 仅动词；收在「真好」raw emotion
 
 T6.5 traps (#54-57):
-- [x] #54 无标语式 punchy opening — body 第一段以 A 先生 scenario 开场，非标语
-- [x] #55 无 vivid 编造 micro-detail — UI 描述基于真实 Keeply (时间轴/diff/拖拽)
-- [x] #56 动词先行 — 「拖一个文件夹」「改文件」「保存」「打开历史」动词领头
-- [x] #57 具体 victory verb — 「上手」「你会懂」「真好」，无「就够了」「就好」
+- [x] #54 无标语式 punchy opening 。 body 第一段以 A 先生 scenario 开场，非标语
+- [x] #55 无 vivid 编造 micro-detail 。 UI 描述基于真实 Keeply (时间轴/diff/拖拽)
+- [x] #56 动词先行 。 「拖一个文件夹」「改文件」「保存」「打开历史」动词领头
+- [x] #57 具体 victory verb 。 「上手」「你会懂」「真好」，无「就够了」「就好」
 
 Counts:
-- em-dash count: 11 (——) — 高于平均，但每处皆为 PAS 转折/强调，符合 voice
+- em-dash count: 11 (。) 。 高于平均，但每处皆为 PAS 转折/强调，符合 voice
 - zh char count (excluding markdown/punct/numbers/latin): ~1,650 字 (符合 P1.9 1,200-2,200 区间)
 
 zh-CN 本地化要点：
@@ -189,8 +189,13 @@ zh-CN 本地化要点：
 - 「儲存」→「保存」、「項目」改用「项目」(zh-TW「專案」→「项目」)
 - 「業界研究」→「业界研究」、「使用者」→「用户」
 - 「教學」→「教程」(tags)
-- AI 写代码 — 「ai」改大写「AI」(zh-CN 通用规范)
+- AI 写代码 。 「ai」改大写「AI」(zh-CN 通用规范)
 - 「好險」→「好在」(zh-CN 更通用)
 - 「下週」→「下周」、「一週」→「一周」
 - 「電腦」→「电脑」
 -->
+
+---
+
+> 关于作者：Ting-Wei Tsao，Keeply 创办人。
+> [LinkedIn](https://www.linkedin.com/in/ting-wei-tsao-b57480152/)

@@ -1,6 +1,6 @@
 ---
 title: "「版本管理软件」搜出来都是 git？非开发者的 3 种选择"
-description: "非开发者的版本管理软件存在——只是 Google 不会找给你。"
+description: "非开发者的版本管理软件存在。只是 Google 不会找给你。"
 date: 2026-05-05T06:40:00+08:00
 draft: false
 slug: version-control-software-non-developer

@@ -1,6 +1,6 @@
 ---
 title: "왜 Keeply 를 만들었나: 매일 공유 폴더에서 파일을 잃는 사람들에게"
-description: "Keeply 는 공유 폴더 혼란에서 자라난 도구—당신을 개발자로 만들려는 게 아닙니다."
+description: "Keeply 는 공유 폴더 혼란에서 자라난 도구, 당신을 개발자로 만들려는 게 아닙니다."
 date: 2026-05-06T01:00:00+08:00
 draft: false
 slug: why-i-built-keeply

@@ -113,3 +113,8 @@ Keeply는 당신이 코드를 쓰는 부분을 대체하려고 있는 게 아니
 ---
 
 *저자: Ting-Wei Tsao, Keeply 창업자 | [LinkedIn](https://www.linkedin.com/in/tingwei-tsao/)*
+
+---
+
+> 저자 소개: Ting-Wei Tsao, Keeply 창업자.
+> [LinkedIn](https://www.linkedin.com/in/ting-wei-tsao-b57480152/)

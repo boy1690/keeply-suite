@@ -23,11 +23,11 @@ Different jobs. Different filenames. **Same symptom**.
 
 Not because they all have OCD. Because if you don't do this, **your files turn into a mess**. And on a NAS, deleted means gone for good. So you end up with an `old/` folder, parking every past edit.
 
-![Three filenames side by side — Person A's .psd / Person B's .docx / you-the-reader's thesis.docx. Caption: Different jo](image-1.svg)
+![Three filenames side by side. Person A's .psd / Person B's .docx / you-the-reader's thesis.docx. Caption: Different jo](image-1.svg)
 
 ---
 
-> **TL;DR** —  Shared folders, Dropbox, and NAS drives **weren't designed to manage file history**. They have 4 structural gaps, and each one pushes the work back onto you. This article unpacks each one — and admits which Keeply solves and which it doesn't.
+> **TL;DR** ,   Shared folders, Dropbox, and NAS drives **weren't designed to manage file history**. They have 4 structural gaps, and each one pushes the work back onto you. This article unpacks each one. And admits which Keeply solves and which it doesn't.
 
 ## Article map
 
@@ -43,11 +43,11 @@ Not because they all have OCD. Because if you don't do this, **your files turn i
 
 You want yesterday's version of that design file.
 
-Open Dropbox or Google Drive — everything's the latest. Version history is hidden three menus deep. You wouldn't know unless someone told you.
+Open Dropbox or Google Drive. Everything's the latest. Version history is hidden three menus deep. You wouldn't know unless someone told you.
 
 ![Dropbox and Google Drive: version history hidden three menus deep in both](image-2.svg)
 
-Open the company NAS — those messy version numbers up there are your version history.
+Open the company NAS. Those messy version numbers up there are your version history.
 
 ![NAS folder screenshot. `_v2.psd` / `_v3.psd` / `_v3_final.psd` / `_v3_final_real.psd` / `_v3_finalfinal.psd` lined up. C](image-4.svg)
 
@@ -74,13 +74,13 @@ Wait. The next bad news is on its way: **a 30-day cap**.
 
 Translate to daily life: you want last quarter's client brief? Unless you're paying enterprise, **it's already gone**.
 
-The 30-day limit isn't a technical constraint, it's a business decision — version history turned into a reason to upgrade.
+The 30-day limit isn't a technical constraint, it's a business decision. Version history turned into a reason to upgrade.
 (Keeply gives you file history that's free, forever.)
 
-> April 2026, Hacker News. User julianozen posts: their dad overwrote a file that hadn't been touched in 2 years. Two days later, he tried to recover it — couldn't. Dropbox's reason: outside the 30-day retention window. julianozen's reaction: "That's not what 30-day history means." A reply from lazide: "Which is bonkers." [Full thread](https://news.ycombinator.com/item?id=47772260)
+> April 2026, Hacker News. User julianozen posts: their dad overwrote a file that hadn't been touched in 2 years. Two days later, he tried to recover it. Couldn't. Dropbox's reason: outside the 30-day retention window. julianozen's reaction: "That's not what 30-day history means." A reply from lazide: "Which is bonkers." [Full thread](https://news.ycombinator.com/item?id=47772260)
 
 The 30-day window was designed for "I accidentally overwrote yesterday's file."
-For "my client wants last quarter's pitch back next week" — **using the wrong tool rarely gets you what you want**.
+For "my client wants last quarter's pitch back next week" ,  **using the wrong tool rarely gets you what you want**.
 
 → Related: [The hidden cost of shared folders](/en/post/hidden-cost-shared-folders/)
 
@@ -100,9 +100,9 @@ For some jobs, that's fine. For others, it's lethal:
 
 - **A designer** changed one layer's opacity to 30%. History says "modified". Doesn't say which layer.
 - **A lawyer** changed a contract clause from "shall" to "may". One word. History says "modified". Doesn't say which word.
-- **A grad student** changed "but this argument has limitations" to "this argument clearly stands" — from cautious to assertive. History says "modified". Doesn't say the meaning's been flipped.
+- **A grad student** changed "but this argument has limitations" to "this argument clearly stands". From cautious to assertive. History says "modified". Doesn't say the meaning's been flipped.
 
-> January 2025, Legal Cheek published an anonymous solicitor story: "I sent the wrong will to the wrong dead person's family as an enclosure as a trainee." The disaster wasn't "no version saved" — it was "didn't know which version was current." [Full story](https://www.legalcheek.com/2025/01/courtroom-etiquette-email-blunders-and-document-mix-ups-lawyers-share-their-most-embarrassing-mistakes/)
+> January 2025, Legal Cheek published an anonymous solicitor story: "I sent the wrong will to the wrong dead person's family as an enclosure as a trainee." The disaster wasn't "no version saved". It was "didn't know which version was current." [Full story](https://www.legalcheek.com/2025/01/courtroom-etiquette-email-blunders-and-document-mix-ups-lawyers-share-their-most-embarrassing-mistakes/)
 
 Here's where most people get it wrong.
 
@@ -120,7 +120,7 @@ Three months later, you open your records and find your own past habits don't ma
 
 ## 4. Naming conventions push memory onto people {#reason-4}
 
-After hitting all three problems above, every company does the same thing — **writes a 14-page naming convention PDF**.
+After hitting all three problems above, every company does the same thing ,  **writes a 14-page naming convention PDF**.
 
 Usually it looks like this:
 
@@ -137,9 +137,9 @@ Then six months later, nobody follows it.
 Not because your coworkers are lazy.
 **It's that we're trying to control a population of uncontrollable creatures, and the ending writes itself.**
 
-> Asana forum, June 2023, a thread on "epic file-naming fails." Becky_Caday: "Multiple versions of the same file because someone didn't know they could open and edit the original — they just changed one word to all caps. `List 2.0` became `LIST 2.0`." Arndt_Dienstbier: "They were using whitespace for versioning" (multiple `Document.docx` files distinguished only by trailing spaces). [Full thread](https://forum.asana.com/t/share-your-epic-file-naming-fails-and-lets-laugh-together/462366)
+> Asana forum, June 2023, a thread on "epic file-naming fails." Becky_Caday: "Multiple versions of the same file because someone didn't know they could open and edit the original. They just changed one word to all caps. `List 2.0` became `LIST 2.0`." Arndt_Dienstbier: "They were using whitespace for versioning" (multiple `Document.docx` files distinguished only by trailing spaces). [Full thread](https://forum.asana.com/t/share-your-epic-file-naming-fails-and-lets-laugh-together/462366)
 
-Every team member, every save, has to remember + agree + have time to follow the rule. Any one of those fails, **congratulations — you've got another mess**.
+Every team member, every save, has to remember + agree + have time to follow the rule. Any one of those fails, **congratulations. You've got another mess**.
 
 Remembering a naming convention is something **a tool should just do**.
 Not something to push onto every individual's discipline.
@@ -157,7 +157,7 @@ But there are scenarios **where Keeply isn't the answer**:
 - **Video footage 50GB+** → use Frame.io / PostHaste. Keeply's version logic (recording differences each save) doesn't scale economically to large binary files.
 - **Cross-organization legal signing** → use DocuSign / Adobe Sign. If a contract goes to 10 outside law firms, Keeply isn't in that compliance framework.
 
-For the other 80% of knowledge-worker scenarios — **designers, paralegals inside law firms, accountants, grad students, PM teams, freelancers** — those 4 structural gaps will hit you.
+For the other 80% of knowledge-worker scenarios ,  **designers, paralegals inside law firms, accountants, grad students, PM teams, freelancers**. Those 4 structural gaps will hit you.
 That's what we're here for.
 
 ---
@@ -174,10 +174,10 @@ It's whether your tool can do that job for you.**
 
 ## Related articles
 
-- **[Shared folder version problems: the 83-hour micro-panic tax](/en/post/hidden-cost-shared-folders/)** —— The real cost of shared folders isn't lost files — it's the daily defensive-naming tax everyone pays.
-- **[Masters Thesis Version Control: The Diff You Forgot](/en/post/thesis-single-point-of-failure/)** —— Your thesis is one drive failure away from being gone, if you only have one copy.
-- **[Why your crew keeps opening last week's AutoCAD drawing](/en/post/autocad-wrong-version-crew/)** —— The crew keeps getting the old CAD because the office got the new version and didn't tell the field.
-- **[What the 3-2-1 backup rule doesn't cover in 2026](/en/post/3-2-1-backup-rule/)** —— 3-2-1 protects against disaster, not operator-error. Keeply builds 3-2-1 + version history into one tool.
+- **[Shared folder version problems: the 83-hour micro-panic tax](/en/post/hidden-cost-shared-folders/)** , , The real cost of shared folders isn't lost files. It's the daily defensive-naming tax everyone pays.
+- **[Masters Thesis Version Control: The Diff You Forgot](/en/post/thesis-single-point-of-failure/)** , , Your thesis is one drive failure away from being gone, if you only have one copy.
+- **[Why your crew keeps opening last week's AutoCAD drawing](/en/post/autocad-wrong-version-crew/)** , , The crew keeps getting the old CAD because the office got the new version and didn't tell the field.
+- **[What the 3-2-1 backup rule doesn't cover in 2026](/en/post/3-2-1-backup-rule/)** , , 3-2-1 protects against disaster, not operator-error. Keeply builds 3-2-1 + version history into one tool.
 
 ---
 

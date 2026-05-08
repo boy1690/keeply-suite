@@ -72,3 +72,8 @@ Ti ricordi quel giovedì alle 17:30, con la mano sospesa su un nome di file? Non
 
 - [Asana, Why Work About Work Is Bad / Anatomy of Work](https://asana.com/resources/why-work-about-work-is-bad)
 - Letture complementari: [IDC, The High Cost of Not Finding Information (2012)](https://computhink.com/wp-content/uploads/2015/10/IDC20on20The20High20Cost20Of20Not20Finding20Information.pdf) · [McKinsey Global Institute, The Social Economy (2012)](https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-social-economy)
+
+---
+
+> Sull'autore: Ting-Wei Tsao, fondatore di Keeply.
+> [LinkedIn](https://www.linkedin.com/in/ting-wei-tsao-b57480152/)

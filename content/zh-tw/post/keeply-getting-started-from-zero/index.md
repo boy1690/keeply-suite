@@ -1,6 +1,6 @@
 ---
 title: "檔案記事軟體 Keeply 怎麼用：不用學 30 個功能，2 個動作就上手"
-description: "不必先變專家。把資料夾拖進去，繼續工作——版本歷史就生效了。"
+description: "不必先變專家。把資料夾拖進去，繼續工作。版本歷史就生效了。"
 date: 2026-04-30T09:00:00+08:00
 slug: keeply-getting-started-from-zero
 locale: zh-TW
@@ -21,7 +21,7 @@ cta_topic: install
 
 # 檔案記事軟體 Keeply 怎麼用：不用學 30 個功能，2 個動作就上手
 
-> 不必先變專家。把資料夾拖進去，繼續工作——版本歷史就生效了。
+> 不必先變專家。把資料夾拖進去，繼續工作。版本歷史就生效了。
 
 ## 目錄
 
@@ -119,7 +119,7 @@ A 先生著手很多專案，常常用記事本記錄他每天做了什麼，剛
 
 你開始存越來越多檔案筆記。
 
-某天你會發現——**有這個軟體，真好**。
+某天你會發現。**有這個軟體，真好**。
 
 ---
 
@@ -140,7 +140,7 @@ Keeply 不爭所有場景。4 種情況下，別的工具更對。
 
 ## 收尾
 
-你想試一個新工具，又不想浪費 14 天——這合理。
+你想試一個新工具，又不想浪費 14 天。這合理。
 
 把資料夾拖進 [Keeply](https://keeply.work/)，繼續做今天的事。
 
@@ -155,3 +155,8 @@ Keeply 不爭所有場景。4 種情況下，別的工具更對。
 ---
 
 *作者：Ting-Wei Tsao，Keeply 創辦人 ｜ [LinkedIn](https://www.linkedin.com/in/tingwei-tsao/)*
+
+---
+
+> 關於作者：Ting-Wei Tsao，Keeply 創辦人。
+> [LinkedIn](https://www.linkedin.com/in/ting-wei-tsao-b57480152/)

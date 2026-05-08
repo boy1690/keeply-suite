@@ -1,6 +1,6 @@
 ---
 title: "How to use Keeply: skip 30 features, get on board with 2 actions"
-description: "You don't need to become an expert first. Drag a folder in, keep working — version history is already running."
+description: "You don't need to become an expert first. Drag a folder in, keep working. Version history is already running."
 date: 2026-04-30T09:00:00+08:00
 slug: keeply-getting-started-from-zero
 locale: en
@@ -21,7 +21,7 @@ cta_topic: install
 
 # How to use Keeply: skip 30 features, get on board with 2 actions
 
-> You don't need to become an expert first. Drag a folder in, keep working — version history is already running.
+> You don't need to become an expert first. Drag a folder in, keep working. Version history is already running.
 
 ## Table of contents
 
@@ -63,7 +63,7 @@ Halfway through that phase, most people will want to close the tab.
 
 Before I built Keeply, I tried plenty of new tools myself. A lot of them felt like a hassle on day 1, and I'd quietly fall back to my old way of doing things.
 
-Later I realized: the tools I actually stuck with had one thing in common — **they were intuitive enough to just use**.
+Later I realized: the tools I actually stuck with had one thing in common ,  **they were intuitive enough to just use**.
 
 One time I was using AI to write code, and the AI went off the rails. I'd already lost track of where it had gotten to. **Thankfully I had been keeping file notes the whole time.**
 
@@ -119,7 +119,7 @@ Through the Timeline you watch your own file notes start piling up. **Click into
 
 You're stacking more and more file notes.
 
-One day you'll notice — **this is great that I have this software**.
+One day you'll notice ,  **this is great that I have this software**.
 
 ---
 
@@ -157,15 +157,20 @@ On day 7, open the Timeline and take a look. **You'll get it.**
 *Author: Ting-Wei Tsao, founder of Keeply | [LinkedIn](https://www.linkedin.com/in/tingwei-tsao/)*
 
 <!-- self-audit
-- [x] Voice rule 9: no performative empathy — 0 instances of "I get it" / "I know how you feel" / "I feel you"
-- [x] Voice rule 10: subject-centered outcomes — "Back to a state I could control" / "You'll get it" / "You're stacking more and more file notes" — reader/I as subject
-- [x] Voice rule 11: reader-internal question headings — "Why do you push back on new tools?" / "Why do you give up on a tool?" / "So what are the 2 actions?" / "Let me tell you what you'll experience" / "When Keeply isn't right for you" — all reader-internal, none tool-blame
+- [x] Voice rule 9: no performative empathy. 0 instances of "I get it" / "I know how you feel" / "I feel you"
+- [x] Voice rule 10: subject-centered outcomes ,  "Back to a state I could control" / "You'll get it" / "You're stacking more and more file notes". Reader/I as subject
+- [x] Voice rule 11: reader-internal question headings ,  "Why do you push back on new tools?" / "Why do you give up on a tool?" / "So what are the 2 actions?" / "Let me tell you what you'll experience" / "When Keeply isn't right for you". All reader-internal, none tool-blame
 - [x] Voice rule 12: real UI names ("Timeline" capitalized, "file note" lowercase) + concrete quantity ("200 words", "50 pages", "30 new terms", "14 days", "3 times")
 - [x] Voice rule 13: action-only Day 1/2-3/4-7 steps + closing on raw emotion ("this is great that I have this software")
 - [x] Trap #54: opening line is specific person/scene ("Mr. A juggles a lot of projects..."), not banner slogan
-- [x] Trap #55: no fabricated micro-detail — founder AI-coding incident is the source-stated event, no invented sensory specifics
+- [x] Trap #55: no fabricated micro-detail. Founder AI-coding incident is the source-stated event, no invented sensory specifics
 - [x] Trap #56: verb-first when applicable ("Drag a folder in", "Edit a file, save", "Open the history", "Pick a tool", "Drag a project in. Save.")
-- [x] Trap #57: concrete victory verbs — "get the hang of", "get on board" (title), "you'll get it" — avoided vague "good enough" except in deliberate dismissive context (Windows File History "built in and good enough" — quoting that it suffices for that scenario, not as victory verb)
-- Em-dash count: 3 total in body (density 0.50/1000 chars — well under ≤2/1000 target)
+- [x] Trap #57: concrete victory verbs ,  "get the hang of", "get on board" (title), "you'll get it". Avoided vague "good enough" except in deliberate dismissive context (Windows File History "built in and good enough". Quoting that it suffices for that scenario, not as victory verb)
+- Em-dash count: 3 total in body (density 0.50/1000 chars. Well under ≤2/1000 target)
 - Word count: 981 words (body, excluding frontmatter and audit comment)
 -->
+
+---
+
+> About the author: Ting-Wei Tsao, founder of Keeply.
+> [LinkedIn](https://www.linkedin.com/in/ting-wei-tsao-b57480152/)

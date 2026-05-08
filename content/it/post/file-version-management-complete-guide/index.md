@@ -23,11 +23,11 @@ Lavori diversi. Nomi di file diversi. **Stessa sintomatologia**.
 
 Non perché abbiano tutti il disturbo ossessivo-compulsivo. Perché se non lo fai così, **i tuoi file diventano un casino**. E su un NAS, quello che cancelli non torna più. Così finisci per avere una cartella `old/` dove parcheggi tutte le versioni precedenti.
 
-![Three filenames side by side — Persona A's .psd / Persona B's .docx / you-the-reader's thesis.docx. Caption: Lavori div](image-1.svg)
+![Three filenames side by side. Persona A's .psd / Persona B's .docx / you-the-reader's thesis.docx. Caption: Lavori div](image-1.svg)
 
 ---
 
-> **TL;DR** —  Cartelle condivise, Dropbox e NAS **non sono stati progettati per gestire la cronologia dei file**. Hanno 4 lacune strutturali, e ognuna scarica il lavoro su di te. Questo articolo le smonta una per una — e ammette cosa risolve Keeply e cosa no.
+> **TL;DR** ,   Cartelle condivise, Dropbox e NAS **non sono stati progettati per gestire la cronologia dei file**. Hanno 4 lacune strutturali, e ognuna scarica il lavoro su di te. Questo articolo le smonta una per una. E ammette cosa risolve Keeply e cosa no.
 
 ## Mappa dell'articolo
 
@@ -43,11 +43,11 @@ Non perché abbiano tutti il disturbo ossessivo-compulsivo. Perché se non lo fa
 
 Vuoi la versione di ieri di quel file di design.
 
-Apri Dropbox o Google Drive — c'è solo la versione più recente. La cronologia delle versioni è sepolta tre livelli di menu in profondità. Non lo sai, se nessuno te lo dice.
+Apri Dropbox o Google Drive. C'è solo la versione più recente. La cronologia delle versioni è sepolta tre livelli di menu in profondità. Non lo sai, se nessuno te lo dice.
 
 ![Dropbox e Google Drive: la cronologia delle versioni sepolta tre livelli di menu in profondità in entrambi](image-2.svg)
 
-Apri il NAS aziendale — quei numeri di versione caotica che ci sono lì *sono* la tua cronologia versioni.
+Apri il NAS aziendale. Quei numeri di versione caotica che ci sono lì *sono* la tua cronologia versioni.
 
 ![NAS folder screenshot. `_v2.psd` / `_v3.psd` / `_v3_final.psd` / `_v3_final_real.psd` / `_v3_finalfinal.psd` lined up. C](image-4.svg)
 
@@ -73,11 +73,11 @@ Aspetta. La prossima brutta notizia è in arrivo: **un limite di 30 giorni**.
 
 Tradotto nella vita quotidiana: vuoi il brief del cliente del trimestre scorso? A meno che tu non stia pagando l'enterprise, **è già sparito**.
 
-Il limite di 30 giorni non è un vincolo tecnico — è una decisione di business. Lo strumento ha trasformato la cronologia dei file in un motivo per fare l'upgrade. (Keeply ti dà una cronologia file gratuita, per sempre.)
+Il limite di 30 giorni non è un vincolo tecnico. È una decisione di business. Lo strumento ha trasformato la cronologia dei file in un motivo per fare l'upgrade. (Keeply ti dà una cronologia file gratuita, per sempre.)
 
-> Aprile 2026, Hacker News. L'utente julianozen posta: suo padre ha sovrascritto un file che non toccava da 2 anni. Due giorni dopo, ha provato a recuperarlo — impossibile. Motivo di Dropbox: fuori dalla finestra di conservazione di 30 giorni. La reazione di julianozen: "Non è questo che significa cronologia a 30 giorni." Una risposta di lazide: "Che roba assurda." [Thread completo](https://news.ycombinator.com/item?id=47772260)
+> Aprile 2026, Hacker News. L'utente julianozen posta: suo padre ha sovrascritto un file che non toccava da 2 anni. Due giorni dopo, ha provato a recuperarlo. Impossibile. Motivo di Dropbox: fuori dalla finestra di conservazione di 30 giorni. La reazione di julianozen: "Non è questo che significa cronologia a 30 giorni." Una risposta di lazide: "Che roba assurda." [Thread completo](https://news.ycombinator.com/item?id=47772260)
 
-La finestra di 30 giorni è stata progettata per "ho accidentalmente sovrascritto il file di ieri". Per "il mio cliente vuole la proposta del trimestre scorso la prossima settimana" — **usare lo strumento sbagliato raramente ti dà quello che vuoi**.
+La finestra di 30 giorni è stata progettata per "ho accidentalmente sovrascritto il file di ieri". Per "il mio cliente vuole la proposta del trimestre scorso la prossima settimana" ,  **usare lo strumento sbagliato raramente ti dà quello che vuoi**.
 
 → Approfondimento: [Il costo nascosto delle cartelle condivise](/en/post/hidden-cost-shared-folders/)
 
@@ -95,9 +95,9 @@ Per alcuni lavori va bene. Per altri è letale:
 
 - **Un designer** ha cambiato l'opacità di un livello al 30%. La cronologia dice "modificato". Non dice quale livello.
 - **Un avvocato** ha cambiato una clausola contrattuale da "deve" a "può". Una parola. La cronologia dice "modificato". Non dice quale parola.
-- **Un dottorando** ha cambiato "ma questo argomento ha dei limiti" in "questo argomento è chiaramente valido" — da cauto ad assertivo. La cronologia dice "modificato". Non dice che il significato si è ribaltato.
+- **Un dottorando** ha cambiato "ma questo argomento ha dei limiti" in "questo argomento è chiaramente valido". Da cauto ad assertivo. La cronologia dice "modificato". Non dice che il significato si è ribaltato.
 
-> Gennaio 2025, Legal Cheek ha pubblicato la storia anonima di un avvocato praticante: "Ho inviato il testamento sbagliato alla famiglia sbagliata del defunto come allegato." Il disastro non era "nessuna versione salvata" — era "non sapevo quale versione fosse quella corrente." [Storia completa](https://www.legalcheek.com/2025/01/courtroom-etiquette-email-blunders-and-document-mix-ups-lawyers-share-their-most-embarrassing-mistakes/)
+> Gennaio 2025, Legal Cheek ha pubblicato la storia anonima di un avvocato praticante: "Ho inviato il testamento sbagliato alla famiglia sbagliata del defunto come allegato." Il disastro non era "nessuna versione salvata". Era "non sapevo quale versione fosse quella corrente." [Storia completa](https://www.legalcheek.com/2025/01/courtroom-etiquette-email-blunders-and-document-mix-ups-lawyers-share-their-most-embarrassing-mistakes/)
 
 Ecco dove la maggior parte delle persone sbaglia.
 
@@ -112,7 +112,7 @@ Quindi cominci a stipare l'intenzione nei nomi dei file: `contratto_v7_su_richie
 
 ## 4. Le convenzioni di denominazione scaricano la memoria sulle persone {#reason-4}
 
-Dopo aver incontrato tutti e tre i problemi sopra, ogni azienda fa la stessa cosa — **scrive un PDF di convenzioni di denominazione di 14 pagine**.
+Dopo aver incontrato tutti e tre i problemi sopra, ogni azienda fa la stessa cosa ,  **scrive un PDF di convenzioni di denominazione di 14 pagine**.
 
 Di solito è così:
 
@@ -128,9 +128,9 @@ Poi sei mesi dopo nessuno lo segue più.
 
 Non perché i tuoi colleghi siano pigri. **È che stiamo cercando di controllare una popolazione di creature incontrollabili, e il finale si scrive da solo.**
 
-> Forum di Asana, giugno 2023, un thread su "epic file-naming fails." Becky_Caday: "Versioni multiple dello stesso file perché qualcuno non sapeva di poter aprire e modificare l'originale — ha solo cambiato una parola in maiuscolo. `Lista 2.0` è diventato `LISTA 2.0`." Arndt_Dienstbier: "Usavano gli spazi bianchi per il versioning" (più file `Documento.docx` distinti solo dagli spazi finali). [Thread completo](https://forum.asana.com/t/share-your-epic-file-naming-fails-and-lets-laugh-together/462366)
+> Forum di Asana, giugno 2023, un thread su "epic file-naming fails." Becky_Caday: "Versioni multiple dello stesso file perché qualcuno non sapeva di poter aprire e modificare l'originale. Ha solo cambiato una parola in maiuscolo. `Lista 2.0` è diventato `LISTA 2.0`." Arndt_Dienstbier: "Usavano gli spazi bianchi per il versioning" (più file `Documento.docx` distinti solo dagli spazi finali). [Thread completo](https://forum.asana.com/t/share-your-epic-file-naming-fails-and-lets-laugh-together/462366)
 
-Ogni membro del team, ad ogni salvataggio, deve ricordare + essere d'accordo + avere il tempo di seguire la regola. Anche solo uno di questi fallisce, **congratulazioni — hai un altro casino**.
+Ogni membro del team, ad ogni salvataggio, deve ricordare + essere d'accordo + avere il tempo di seguire la regola. Anche solo uno di questi fallisce, **congratulazioni. Hai un altro casino**.
 
 Ricordare una convenzione di denominazione è qualcosa che **uno strumento dovrebbe fare da solo**. Non qualcosa da scaricare sulla disciplina di ogni singola persona.
 
@@ -146,7 +146,7 @@ Abbiamo costruito Keeply per colmare queste 4 lacune strutturali. Ma ci sono sce
 - **Filmati video da 50GB+** → usa Frame.io / PostHaste. La logica di versioning di Keeply (registra le differenze ad ogni salvataggio) non scala economicamente per i file binari di grandi dimensioni.
 - **Firma legale cross-organizzativa** → usa DocuSign / Adobe Sign. Se un contratto va a 10 studi legali esterni, Keeply non rientra in quel framework di conformità.
 
-Per l'altro 80% degli scenari dei lavoratori della conoscenza — **designer, paralegali all'interno di studi legali, commercialisti, dottorandi, team di PM, freelance** — quelle 4 lacune strutturali ti colpiranno. È questo che vogliamo risolvere.
+Per l'altro 80% degli scenari dei lavoratori della conoscenza ,  **designer, paralegali all'interno di studi legali, commercialisti, dottorandi, team di PM, freelance**. Quelle 4 lacune strutturali ti colpiranno. È questo che vogliamo risolvere.
 
 ---
 

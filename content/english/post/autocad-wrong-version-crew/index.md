@@ -1,6 +1,6 @@
 ---
 title: "Why your crew keeps opening last week's AutoCAD drawing"
-description: "It's 9:40 AM, you stop by the office, and the PM pulls up last Thursday's revision — the frame spec changed. You've been on site every day, nobody told you. The concrete's already poured. A field supervisor's practical guide to drawing version control: no new tools for the crew, no workflow overhaul, just a way to make every revision leave its own trail."
+description: "It's 9:40 AM, you stop by the office, and the PM pulls up last Thursday's revision. The frame spec changed. You've been on site every day, nobody told you. The concrete's already poured. A field supervisor's practical guide to drawing version control: no new tools for the crew, no workflow overhaul, just a way to make every revision leave its own trail."
 slug: "autocad-wrong-version-crew"
 date: 2026-04-24
 image: cover.svg
@@ -10,15 +10,15 @@ tags: [version control, file recovery]
 cta_topic: versioning
 ---
 
-It's 9:40 AM. You finally swing by the office and casually swipe through yesterday's site photos for the PM — the section of storm drain where the concrete has been poured, the cast-in-place frames all set in the slab, ready for the grates.
+It's 9:40 AM. You finally swing by the office and casually swipe through yesterday's site photos for the PM. The section of storm drain where the concrete has been poured, the cast-in-place frames all set in the slab, ready for the grates.
 
 The PM doesn't say anything. He pulls a file up on his desk: `A-05_drain_0422_issued.dwg`.
 
 "Frame's wrong. The architect revised it again last Thursday."
 
-You feel that drop in your chest. Last Thursday's revision came through the office — Mike received it, filed it to the server, didn't ping anyone. You've been on site every day. Nobody mentioned it on Monday's huddle. You had no reason to know.
+You feel that drop in your chest. Last Thursday's revision came through the office. Mike received it, filed it to the server, didn't ping anyone. You've been on site every day. Nobody mentioned it on Monday's huddle. You had no reason to know.
 
-That section is already poured. Frame spec changed — that means chipping the cured concrete to pull the old frames out, setting new correct-sized frames, re-pouring the edges, letting it cure. Two more days on the schedule. Other trades stacked behind you, all waiting.
+That section is already poured. Frame spec changed. That means chipping the cured concrete to pull the old frames out, setting new correct-sized frames, re-pouring the edges, letting it cure. Two more days on the schedule. Other trades stacked behind you, all waiting.
 
 You didn't send the wrong file to the crew. You just didn't know the file had changed.
 
@@ -34,7 +34,7 @@ You didn't send the wrong file to the crew. You just didn't know the file had ch
 
 ## "Is that last Thursday's revision?" {#h2-1}
 
-It's the question the PM circles back with when something looks off. The crew asks it too. They don't mean anything by it — they just want to confirm. The problem is, half the time you can't answer right away either.
+It's the question the PM circles back with when something looks off. The crew asks it too. They don't mean anything by it. They just want to confirm. The problem is, half the time you can't answer right away either.
 
 You open your laptop. The project folder has `A-05_drain_0418.dwg`, `A-05_drain_0422_issued.dwg`, `A-05_drain_0422_issued_revframe.dwg`. There's also `A-05_drain_0420_avoidutility.dwg` that somebody dropped in the WhatsApp group. And the early March one, `A-05_drain_0315.dwg`, you never deleted because the architect sometimes circles back to an earlier layout when a change doesn't pan out.
 
@@ -48,9 +48,9 @@ This isn't laziness, not on your part and not on Mike's. It's that the gap betwe
 
 You might think, "Fine, I'll just double-check every time I'm in the office." In theory, sure. In practice it falls apart because **drafts keep piling up before anything gets formally issued**.
 
-One detail, from first schematic to issued-for-construction, goes through a lot of versions. Owner adds a comment — revision. Field walk turns up a utility conflict — revision. Structural engineer reviews — revision. **Then the architect goes to rev 5 and the owner says "actually rev 2's edge detail was cleaner," so it flips back**. You open the folder and see six files, two of which are nearly identical — but you can't tell which one is the one that counts right now.
+One detail, from first schematic to issued-for-construction, goes through a lot of versions. Owner adds a comment. Revision. Field walk turns up a utility conflict. Revision. Structural engineer reviews. Revision. **Then the architect goes to rev 5 and the owner says "actually rev 2's edge detail was cleaner," so it flips back**. You open the folder and see six files, two of which are nearly identical. But you can't tell which one is the one that counts right now.
 
-If you waited for the architect to fully "finalize" before you let the crew start, the schedule would crush you. Three trades are stacked up behind this section. Every day you hold, you burn labor, equipment, and float. So the GC takes the calculated risk — **proceeds on the latest seen version**, betting the next revision won't be drastic.
+If you waited for the architect to fully "finalize" before you let the crew start, the schedule would crush you. Three trades are stacked up behind this section. Every day you hold, you burn labor, equipment, and float. So the GC takes the calculated risk ,  **proceeds on the latest seen version**, betting the next revision won't be drastic.
 
 Most of the time the bet pays off. Sometimes it doesn't. That's this week.
 
@@ -60,11 +60,11 @@ Most of the time the bet pays off. Sometimes it doesn't. That's this week.
 
 The real break point is here: **a new drawing arrives at the office, the field doesn't hear about it, and nobody carries the message across the gap**.
 
-On the office side, the person receiving the email might be a PM assistant, admin, or another super. Their instinct when a file lands is "file it properly" — folder, naming, archive. They don't always know exactly what the field is up to this week, and they can't always tell at a glance whether this revision is the kind that has to be flagged immediately. To them, filed is done.
+On the office side, the person receiving the email might be a PM assistant, admin, or another super. Their instinct when a file lands is "file it properly". Folder, naming, archive. They don't always know exactly what the field is up to this week, and they can't always tell at a glance whether this revision is the kind that has to be flagged immediately. To them, filed is done.
 
-On the field side, you're out every day. Even if you hit the office every Friday to sync, between your last check and your next check, the architect might have issued two revisions and flipped one back. You can find it if you go looking — but **only if you're disciplined enough to actively check back in**. Not every super does, every time.
+On the field side, you're out every day. Even if you hit the office every Friday to sync, between your last check and your next check, the architect might have issued two revisions and flipped one back. You can find it if you go looking. But **only if you're disciplined enough to actively check back in**. Not every super does, every time.
 
-On the crew side, they build from whatever you handed them last. They don't know whether there's a newer file at the office. And they shouldn't need to — their job is to install per the drawing, not to track versions.
+On the crew side, they build from whatever you handed them last. They don't know whether there's a newer file at the office. And they shouldn't need to. Their job is to install per the drawing, not to track versions.
 
 Of those three threads, **the one between office and field is the easiest one to drop**. Not because anyone is slacking. Because no process forces that line to stay open. A "new version uploaded" message in a group thread that's missed is missed for good.
 
@@ -74,11 +74,11 @@ Of those three threads, **the one between office and field is the easiest one to
 
 There isn't much to it. Four steps.
 
-**1. The moment a new file lands at the office, ping the field — and wait for a "got it" back.** Not "filed and done." **Handshake completed only when the field person explicitly acknowledges**. Could be WhatsApp, could be Slack, could be a phone call. The rule is: the field has to confirm in writing. No confirmation, the handoff isn't complete.
+**1. The moment a new file lands at the office, ping the field. And wait for a "got it" back.** Not "filed and done." **Handshake completed only when the field person explicitly acknowledges**. Could be WhatsApp, could be Slack, could be a phone call. The rule is: the field has to confirm in writing. No confirmation, the handoff isn't complete.
 
-**2. Before any new revision overwrites the previous one, keep the previous one separately.** Name it `A-05_drain_0418_architect_rev3.dwg`, `A-05_drain_0422_architect_rev4.dwg`. This is **for the time the architect flips back** — you can still pull up exactly what rev 3 looked like.
+**2. Before any new revision overwrites the previous one, keep the previous one separately.** Name it `A-05_drain_0418_architect_rev3.dwg`, `A-05_drain_0422_architect_rev4.dwg`. This is **for the time the architect flips back**. You can still pull up exactly what rev 3 looked like.
 
-**3. Let the tool record every revision automatically, and make it visible to everyone.** This is where tools take over for the parts discipline can't sustain. [Keeply](https://keeply.work) is built for exactly this. Every save auto-records a version. Files stay where they are — in your project folder, right where your team already looks. **As long as everyone opens the same shared vault (typically the company NAS), everyone sees the same timeline** — the moment the office drops a new file in, the field super opens their Keeply on site and the timeline shows "15:30 today, architect revised again." Honest note: if you need to compare two `.dwg` drawings line by line, you still have to open AutoCAD and do it yourself — Keeply doesn't do CAD drawing diffs. But "a new version dropped, who sent it, when, and have you opened it?" — that you stop missing. PM asks "Did you see last Thursday's rev?" and the timeline answers it.
+**3. Let the tool record every revision automatically, and make it visible to everyone.** This is where tools take over for the parts discipline can't sustain. [Keeply](https://keeply.work) is built for exactly this. Every save auto-records a version. Files stay where they are. In your project folder, right where your team already looks. **As long as everyone opens the same shared vault (typically the company NAS), everyone sees the same timeline**. The moment the office drops a new file in, the field super opens their Keeply on site and the timeline shows "15:30 today, architect revised again." Honest note: if you need to compare two `.dwg` drawings line by line, you still have to open AutoCAD and do it yourself. Keeply doesn't do CAD drawing diffs. But "a new version dropped, who sent it, when, and have you opened it?". That you stop missing. PM asks "Did you see last Thursday's rev?" and the timeline answers it.
 
 Here's roughly what that looks like on screen:
 
@@ -104,23 +104,23 @@ Vault: Z:\Projects\MapleSt_Drainage\
    Hover any row → one-click restore.
 ```
 
-**4. At least one copy that's not on this machine and not on the site NAS.** External drive, cloud, backup slot — whatever. The point is **at least one off-site copy**. Office NAS drives fail, get wiped, get repurposed for the next project. The off-site backup is the cheapest insurance you'll ever buy yourself.
+**4. At least one copy that's not on this machine and not on the site NAS.** External drive, cloud, backup slot. Whatever. The point is **at least one off-site copy**. Office NAS drives fail, get wiped, get repurposed for the next project. The off-site backup is the cheapest insurance you'll ever buy yourself.
 
-Steps 1 and 2 can run on discipline alone, but honestly — three months in you'll miss half of them. Step 3 is how the tool catches the other half.
+Steps 1 and 2 can run on discipline alone, but honestly. Three months in you'll miss half of them. Step 3 is how the tool catches the other half.
 
 ---
 
 ## The only people who don't need this: the crew installing from printed sheets {#h2-5}
 
-Let's be honest — this isn't for everyone in construction. But the exclusion list is shorter than you'd think.
+Let's be honest. This isn't for everyone in construction. But the exclusion list is shorter than you'd think.
 
 **The only people who fully don't need this are the crew installing from the drawing in front of them.** Their job is to build per the sheet they were handed, not chase versions. Chasing versions is your job.
 
-**Public works actually need this more, not less.** You might assume large public or government projects are covered because they already have a BIM collaboration platform. It's the opposite. Public works run more paperwork than private jobs by a wide margin, change requests drag across months, management turnover is higher, the document pile grows faster, and the institutional memory breaks more easily. BIM platforms solve the final deliverable. They don't solve planning documents, shared files, and the revision notes that design drawings accumulate in-process — and those are the things that actually grow, day after day.
+**Public works actually need this more, not less.** You might assume large public or government projects are covered because they already have a BIM collaboration platform. It's the opposite. Public works run more paperwork than private jobs by a wide margin, change requests drag across months, management turnover is higher, the document pile grows faster, and the institutional memory breaks more easily. BIM platforms solve the final deliverable. They don't solve planning documents, shared files, and the revision notes that design drawings accumulate in-process. And those are the things that actually grow, day after day.
 
-**One-person shops need it too.** You might think: "It's just me on this project from start to finish, do I really need version control?" You do. Because three months from now, looking at the same file, **you will forget why past-you made the change**. A timeline stores more than the file itself — it stores the reason at the moment. Future-you will thank present-you for leaving the trail.
+**One-person shops need it too.** You might think: "It's just me on this project from start to finish, do I really need version control?" You do. Because three months from now, looking at the same file, **you will forget why past-you made the change**. A timeline stores more than the file itself. It stores the reason at the moment. Future-you will thank present-you for leaving the trail.
 
-Everyone else — small-to-midsize residential, commercial, interior fit-out, drainage, landscape, roads, campus work, public works, BIM projects, solo designers, design firms — **if your work involves a file being changed and reopened later by someone else or by future-you, you need a timeline.** Every time that line breaks, time and money walk out of your pocket.
+Everyone else. Small-to-midsize residential, commercial, interior fit-out, drainage, landscape, roads, campus work, public works, BIM projects, solo designers, design firms ,  **if your work involves a file being changed and reopened later by someone else or by future-you, you need a timeline.** Every time that line breaks, time and money walk out of your pocket.
 
 ---
 
@@ -134,6 +134,11 @@ The full pillar [file version management complete guide](/en/post/file-version-m
 
 ---
 
-Remember that 9:40 AM moment — the PM pulling up Thursday's revision, and your chest dropping? You don't have to be the version manager anymore. **Keeply: your file's guardian memory.** Remembers every save, every issued version, every snapshot before the old one gets overwritten. Lives inside your existing project folder — no new tools, no new habits for the crew. Construction fits especially well, because the line between office and field breaks on every single project.
+Remember that 9:40 AM moment. The PM pulling up Thursday's revision, and your chest dropping? You don't have to be the version manager anymore. **Keeply: your file's guardian memory.** Remembers every save, every issued version, every snapshot before the old one gets overwritten. Lives inside your existing project folder. No new tools, no new habits for the crew. Construction fits especially well, because the line between office and field breaks on every single project.
 
 [Meet Keeply →](https://keeply.work)
+
+---
+
+> About the author: Ting-Wei Tsao, founder of Keeply.
+> [LinkedIn](https://www.linkedin.com/in/ting-wei-tsao-b57480152/)

@@ -1,6 +1,6 @@
 ---
 title: "석사 논문 버전 관리: 당신이 잊어버린 그 변경 내용"
-description: "수요일 오후 3시. 지도교수의 메시지: 「이전 버전의 3장이 더 강했는데, 어디로 갔지?」 thesis_final_v7을 열지만 v5나 v6에 뭐가 있었는지 기억나지 않아요. 논문의 진짜 위험은 마감을 놓치는 게 아니에요. 변경 내용을 잊어버리는 것 — 그리고 당신의 파일 시스템도 그걸 기억해 주지 않는다는 것이에요. 대학원생을 위한 4단계 버전 관리 플레이북: 작업 흐름 변경 없이, 전문 용어 없이, 2년의 사고에 발자국을 남기는 법."
+description: "수요일 오후 3시. 지도교수의 메시지: 「이전 버전의 3장이 더 강했는데, 어디로 갔지?」 thesis_final_v7을 열지만 v5나 v6에 뭐가 있었는지 기억나지 않아요. 논문의 진짜 위험은 마감을 놓치는 게 아니에요. 변경 내용을 잊어버리는 것 ,  그리고 당신의 파일 시스템도 그걸 기억해 주지 않는다는 것이에요. 대학원생을 위한 4단계 버전 관리 플레이북: 작업 흐름 변경 없이, 전문 용어 없이, 2년의 사고에 발자국을 남기는 법."
 slug: "thesis-single-point-of-failure"
 date: 2026-04-23
 image: cover.svg
@@ -127,3 +127,8 @@ PDF는 결과예요. 타임라인은 과정이에요.
 ## 참고 자료
 
 - [U.S. CISA — Data Backup Options](https://www.cisa.gov/news-events/news/data-backup-options) (3-2-1 백업 규칙)
+
+---
+
+> 저자 소개: Ting-Wei Tsao, Keeply 창업자.
+> [LinkedIn](https://www.linkedin.com/in/ting-wei-tsao-b57480152/)

@@ -127,3 +127,8 @@ PDF 是结果。时间线是过程。
 ## 研究来源
 
 - [U.S. CISA — Data Backup Options](https://www.cisa.gov/news-events/news/data-backup-options)（3-2-1 备份原则）
+
+---
+
+> 关于作者：Ting-Wei Tsao，Keeply 创办人。
+> [LinkedIn](https://www.linkedin.com/in/ting-wei-tsao-b57480152/)

@@ -122,3 +122,8 @@ A さんが B さんに返した答えに戻ります。
 ---
 
 *著者：Ting-Wei Tsao、Keeply 創業者 ｜ [LinkedIn](https://www.linkedin.com/in/tingwei-tsao/)*
+
+---
+
+> 著者について：Ting-Wei Tsao、Keeply 創業者。
+> [LinkedIn](https://www.linkedin.com/in/ting-wei-tsao-b57480152/)

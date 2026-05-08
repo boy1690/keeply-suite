@@ -1,5 +1,5 @@
 ---
-title: "Keeply のインストール手順（Windows + macOS）— 10 分で初プロジェクトまで"
+title: "Keeply のインストール手順（Windows + macOS）。 10 分で初プロジェクトまで"
 description: "「実行」のリンクや運に頼らず、10 分で Keeply をインストール。その日のうちに最初のプロジェクトを守れる。"
 date: 2026-04-26
 draft: false
@@ -146,3 +146,8 @@ Keeply を開き、「**新規プロジェクト**」を押し、いま作業中
 **青い画面は判決ではなく、reputation がまだ積み上がっていないだけ。**
 
 警告を回避する必要はない。警告が出ない winget の経路を通るだけでいい。
+
+---
+
+> 著者について：Ting-Wei Tsao、Keeply 創業者。
+> [LinkedIn](https://www.linkedin.com/in/ting-wei-tsao-b57480152/)

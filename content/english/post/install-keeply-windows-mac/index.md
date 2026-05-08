@@ -1,6 +1,6 @@
 ---
 title: "How to install Keeply on Windows and macOS in 10 minutes"
-description: "Skip the 'Run anyway' fine print and the guesswork — install Keeply in ten minutes and protect your first project the same day."
+description: "Skip the 'Run anyway' fine print and the guesswork. Install Keeply in ten minutes and protect your first project the same day."
 date: 2026-04-26
 draft: false
 tags: [keeply tutorial]
@@ -146,3 +146,8 @@ One thing:
 **The blue screen isn't a verdict — it's reputation still being built.**
 
 You don't need to bypass the warning. You just need to take the winget path where the warning never shows up.
+
+---
+
+> About the author: Ting-Wei Tsao, founder of Keeply.
+> [LinkedIn](https://www.linkedin.com/in/ting-wei-tsao-b57480152/)

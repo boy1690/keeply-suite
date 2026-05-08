@@ -14,7 +14,7 @@ role: cluster
 pillar_parent: file-version-management-complete-guide
 ---
 
-Giovedì sera, le 23:47. Sul desktop stai cercando la versione che il cliente ha firmato oggi pomeriggio. Undici file chiamati `Proposta_v*_FINALE.docx` sono lì—quale è la copia firmata, quale ha le tue annotazioni, quale è la revisione ricevuta su WhatsApp. Hai paura di cancellarne uno. Tenerli tutti significa non trovare quello che ti serve.
+Giovedì sera, le 23:47. Sul desktop stai cercando la versione che il cliente ha firmato oggi pomeriggio. Undici file chiamati `Proposta_v*_FINALE.docx` sono lì, quale è la copia firmata, quale ha le tue annotazioni, quale è la revisione ricevuta su WhatsApp. Hai paura di cancellarne uno. Tenerli tutti significa non trovare quello che ti serve.
 
 Non è un caso isolato. Capita a chiunque lavori con Cmd+S (o Ctrl+S). Prima vediamo il perché, poi tre design di strumenti che lo risolvono.
 
@@ -22,13 +22,13 @@ Non è un caso isolato. Capita a chiunque lavori con Cmd+S (o Ctrl+S). Prima ved
 
 - [Perché finisci a chiamare i file `_v3_FINALE`](#why-naming)
 - ["Troppe versioni" sono in realtà 4 dolori diversi](#four-types)
-- [Stai facendo la cosa giusta—lo strumento non ha raccolto il testimone](#tool-side)
+- [Stai facendo la cosa giusta, lo strumento non ha raccolto il testimone](#tool-side)
 - [Tre design di strumento che lo risolvono](#three-designs)
 - [Quando non è lo strumento giusto](#boundaries)
 
 ## Perché finisci a chiamare i file `_v3_FINALE` {#why-naming}
 
-Cmd+S è un'azione permanente. Il momento in cui lo premi, la versione precedente è sovrascritta. Non c'è un pulsante "la versione di mezz'ora fa" che ti aspetta. PSD per i designer, contratti `.docx` per gli avvocati, tesi per i dottorandi—stessa storia ovunque. **Se non lo nomini, lo perdi.** Quindi aggiungi `_v3`, `_FINALE`, `_VERO_FINALE` al nome del file.
+Cmd+S è un'azione permanente. Il momento in cui lo premi, la versione precedente è sovrascritta. Non c'è un pulsante "la versione di mezz'ora fa" che ti aspetta. PSD per i designer, contratti `.docx` per gli avvocati, tesi per i dottorandi, stessa storia ovunque. **Se non lo nomini, lo perdi.** Quindi aggiungi `_v3`, `_FINALE`, `_VERO_FINALE` al nome del file.
 
 Sì, ecco la parte fastidiosa. Quello che fai non è ossessivo. È un riflesso di sopravvivenza contro un OS che non ti ha mai dato un pulsante undo.
 
@@ -59,11 +59,11 @@ Tre pattern di design che lo strumento può usare. Ognuno risolve uno dei quattr
 
 ### Design A: Checkpoint automatici (ogni Cmd+S mantiene la cronologia)
 
-Premi Cmd+S, lo strumento conserva silenziosamente la versione precedente. Non devi nominare niente. **Esempi**: macOS Time Machine, Word AutoSave (torna indietro solo di 1-2 versioni), Dropbox cronologia versioni 30 giorni. **Keeply** usa un motore git per questo—i file di testo usano delta storage, i binari sopra 10MB vanno in LFS (ogni versione preservata per intero). **Risolve Tipo 1.**
+Premi Cmd+S, lo strumento conserva silenziosamente la versione precedente. Non devi nominare niente. **Esempi**: macOS Time Machine, Word AutoSave (torna indietro solo di 1-2 versioni), Dropbox cronologia versioni 30 giorni. **Keeply** usa un motore git per questo, i file di testo usano delta storage, i binari sopra 10MB vanno in LFS (ogni versione preservata per intero). **Risolve Tipo 1.**
 
 ### Design B: Milestone nominati (segni tu "cliente firmato" o "rilasciato")
 
-Marchi attivamente "questa versione è firmata" o "questa versione è andata in produzione"—da quel momento, qualunque cosa cambi, il milestone resta. **Esempi**: Git tag (solo per sviluppatori), GitHub Release. **Keeply** ha Release integrato, senza terminologia git nell'UI. **Risolve Tipo 2.**
+Marchi attivamente "questa versione è firmata" o "questa versione è andata in produzione", da quel momento, qualunque cosa cambi, il milestone resta. **Esempi**: Git tag (solo per sviluppatori), GitHub Release. **Keeply** ha Release integrato, senza terminologia git nell'UI. **Risolve Tipo 2.**
 
 ### Design C: Ripristino singolo file (tira fuori un file dalla cronologia)
 
@@ -82,7 +82,7 @@ Keeply non risolve ogni scenario:
 
 ## Prima di premere Cmd+S la prossima volta
 
-La prossima volta che premi Cmd+S, non avrai paura "e se questa fosse la versione sbagliata"—perché il "se" non esiste più. Ogni versione è ancora lì. Devi solo trovarla.
+La prossima volta che premi Cmd+S, non avrai paura "e se questa fosse la versione sbagliata", perché il "se" non esiste più. Ogni versione è ancora lì. Devi solo trovarla.
 
 Vuoi vedere come Keeply fa questo? [Continua a leggere "Guida completa alla gestione versioni file".](/it/post/file-version-management-complete-guide/)
 

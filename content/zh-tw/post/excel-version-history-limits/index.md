@@ -16,7 +16,7 @@ pillar_parent: file-version-management-complete-guide
 
 週五下午 5:47，你在改月底結算 Excel。剛剛刪了一段公式想試另一個算法，結果改錯了。Cmd+Z hit 到 undo 上限，回不去。打開「檔案 > 資訊 > 版本歷史」，grayed out。你才想到：這份結算表存桌面，沒上 OneDrive。30 分鐘的公式工作沒了。
 
-這不是個案。每個用 Excel 工作的人都會遇到——是 Microsoft 把版本歷史當 cloud subscription bait 設計的後果。我們先看清楚 4 個你撞到的限制，再給你 3 個工具設計怎麼真正解。
+這不是個案。每個用 Excel 工作的人都會遇到。是 Microsoft 把版本歷史當 cloud subscription bait 設計的後果。我們先看清楚 4 個你撞到的限制，再給你 3 個工具設計怎麼真正解。
 
 ## 目錄
 
@@ -82,7 +82,7 @@ Keeply 不解所有 Excel 場景：
 
 ## 下次按 Cmd+S 之前
 
-下次你撞到 Excel grayed out，不會再以為自己沒做對——你會知道那是 Microsoft 故意設計的結果，且你有別的選項。
+下次你撞到 Excel grayed out，不會再以為自己沒做對。你會知道那是 Microsoft 故意設計的結果，且你有別的選項。
 
 想看 Keeply 怎麼處理 Excel 版本？[繼續閱讀「檔案版本管理完整指南」](/zh-tw/post/file-version-management-complete-guide/)。
 

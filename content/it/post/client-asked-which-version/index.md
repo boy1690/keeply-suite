@@ -116,3 +116,8 @@ Quel messaggio delle 23:23 tornerà. Non sai quando.
 Ma sai questo: il salvataggio post-evento ha limiti. La prevenzione a monte non dipende dal notare in tempo.
 
 Per ogni salvataggio da oggi in poi — puoi lasciare che lo strumento conservi quella versione per te?
+
+---
+
+> Sull'autore: Ting-Wei Tsao, fondatore di Keeply.
+> [LinkedIn](https://www.linkedin.com/in/ting-wei-tsao-b57480152/)

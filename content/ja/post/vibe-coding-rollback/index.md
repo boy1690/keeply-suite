@@ -156,3 +156,8 @@ P1.13 author card: present (Ting-Wei Tsao + Keeply ファウンダー + LinkedIn
 P1.14 admit limitation: 「Keeply はあなたに代わってコードを書くものではありません」 — present in §3
 P1.15 cluster role: links back to PILLAR 3 (keeply-getting-started-from-zero) — present in 関連記事
 -->
+
+---
+
+> 著者について：Ting-Wei Tsao、Keeply 創業者。
+> [LinkedIn](https://www.linkedin.com/in/ting-wei-tsao-b57480152/)

@@ -122,3 +122,8 @@ Keeply는 모든 파일의 이력 타임라인을 다뤄요. 백업은 컴퓨터
 ---
 
 *저자: Ting-Wei Tsao, Keeply 창업자 | [LinkedIn](https://www.linkedin.com/in/tingwei-tsao/)*
+
+---
+
+> 저자 소개: Ting-Wei Tsao, Keeply 창업자.
+> [LinkedIn](https://www.linkedin.com/in/ting-wei-tsao-b57480152/)

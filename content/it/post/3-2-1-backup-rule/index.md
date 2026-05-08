@@ -1,6 +1,6 @@
 ---
 title: "La regola 3-2-1 del backup: 20 anni dopo, basta ancora nel 2026?"
-description: "3-2-1 è necessario—ma fin dalla progettazione non gestisce l'operator-error. Questo articolo analizza cosa la regola 3-2-1 protegge, cosa non protegge, e cosa serve per quel livello mancante."
+description: "3-2-1 è necessario, ma fin dalla progettazione non gestisce l'operator-error. Questo articolo analizza cosa la regola 3-2-1 protegge, cosa non protegge, e cosa serve per quel livello mancante."
 date: 2026-05-02T09:00:00+08:00
 draft: false
 slug: "3-2-1-backup-rule"
@@ -22,11 +22,11 @@ Nel 2005, il fotografo **Peter Krogh** definì la sua regola di backup: 3 copie,
 
 Vent'anni dopo, quello che tu temi è **premere ⌘+S una volta di troppo**.
 
-La regola 3-2-1 non si è mai mossa—ma la tua vera minaccia sì.
+La regola 3-2-1 non si è mai mossa, ma la tua vera minaccia sì.
 
 ## Punti chiave
 
-La **regola 3-2-1 del backup** è necessaria: tre copie, due tipi di supporto, una fuori sede. Protegge dai guasti hardware, incendi, ransomware—gli scenari di disastro. Ma fin dalla progettazione non gestisce **operator-error**: tu che sovrascrivi il tuo file, un collega che modifica la versione sbagliata, la sincronizzazione cloud che replica la versione errata in tutte e tre le copie. Questo articolo analizza cosa la 3-2-1 copre, cosa non copre, e cosa serve per quel livello mancante.
+La **regola 3-2-1 del backup** è necessaria: tre copie, due tipi di supporto, una fuori sede. Protegge dai guasti hardware, incendi, ransomware, gli scenari di disastro. Ma fin dalla progettazione non gestisce **operator-error**: tu che sovrascrivi il tuo file, un collega che modifica la versione sbagliata, la sincronizzazione cloud che replica la versione errata in tutte e tre le copie. Questo articolo analizza cosa la 3-2-1 copre, cosa non copre, e cosa serve per quel livello mancante.
 
 ## Indice
 
@@ -71,7 +71,7 @@ Nel 2005 le durate dei dischi erano brevi e i supporti fragili. Più copie comba
 
 Nel 2026 i dischi sono affidabili e la sincronizzazione cloud è istantanea. Cosa diventa il "3"? Diventa lo stesso errore replicato in tre posti, in tempo reale.
 
-A è un designer. Lunedì mattina alle 10:32, un cliente chiama chiedendo la versione della proposta firmata tre mesi fa. A apre il NAS — 12 versioni, tre copie cloud che mostrano tutte l'attuale "ultima".
+A è un designer. Lunedì mattina alle 10:32, un cliente chiama chiedendo la versione della proposta firmata tre mesi fa. A apre il NAS. 12 versioni, tre copie cloud che mostrano tutte l'attuale "ultima".
 
 Ma A non vuole l'ultima. Vuole la versione di tre mesi fa.
 
@@ -111,7 +111,7 @@ Sì. Keeply integra la 3-2-1 nel suo strato di posizione (copia di lavoro locale
 
 **Q5: Anche i lavoratori autonomi hanno bisogno della 3-2-1?**
 
-Dipende da quanto contano i tuoi file. Se perderli farebbe male, sì. Il criterio è "perderlo farebbe male" — non ha nulla a che fare con il fatto che tu sia individuo o azienda.
+Dipende da quanto contano i tuoi file. Se perderli farebbe male, sì. Il criterio è "perderlo farebbe male". Non ha nulla a che fare con il fatto che tu sia individuo o azienda.
 
 ---
 
@@ -119,4 +119,9 @@ Nel 2005 Peter Krogh progettò la 3-2-1 per proteggere da dischi rigidi che cado
 
 Tu non sei Peter Krogh nel 2005. Hai paura di premere ⌘+S una volta di troppo.
 
-Non hai bisogno di due strumenti—ne serve uno che gestisca tutti e tre i livelli.
+Non hai bisogno di due strumenti, ne serve uno che gestisca tutti e tre i livelli.
+
+---
+
+> Sull'autore: Ting-Wei Tsao, fondatore di Keeply.
+> [LinkedIn](https://www.linkedin.com/in/ting-wei-tsao-b57480152/)

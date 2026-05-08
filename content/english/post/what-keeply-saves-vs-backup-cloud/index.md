@@ -182,3 +182,8 @@ Locale: en (US English)
 Title length: 76 chars (≤80 PASS)
 Description length: 130 chars
 -->
+
+---
+
+> About the author: Ting-Wei Tsao, founder of Keeply.
+> [LinkedIn](https://www.linkedin.com/in/ting-wei-tsao-b57480152/)

@@ -1,6 +1,6 @@
 ---
 title: "Keeply 安装指南（Windows + macOS）：从下载到第一个项目"
-description: "不靠「仍要执行」那颗小字、不靠运气——10 分钟装好 Keeply，当天就能保住第一个项目。"
+description: "不靠「仍要执行」那颗小字、不靠运气。10 分钟装好 Keeply，当天就能保住第一个项目。"
 date: 2026-04-26
 draft: false
 tags: [Keeply 教程]
@@ -146,3 +146,8 @@ Mac 不会跳蓝屏。但首次打开不能双击。双击会被 [macOS Gatekeep
 **蓝屏不是判决，是 reputation 还在累积。**
 
 你不需要绕过警告，你只需要走 winget 那条没有警告的路。
+
+---
+
+> 关于作者：Ting-Wei Tsao，Keeply 创办人。
+> [LinkedIn](https://www.linkedin.com/in/ting-wei-tsao-b57480152/)

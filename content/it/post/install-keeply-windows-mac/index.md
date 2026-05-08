@@ -1,6 +1,6 @@
 ---
 title: "Come installare Keeply su Windows e macOS in 10 minuti"
-description: "Salta le righe in piccolo dell'\"Esegui comunque\" e i tentativi a tentoni — installa Keeply in dieci minuti e proteggi il tuo primo progetto in giornata."
+description: "Salta le righe in piccolo dell'\"Esegui comunque\" e i tentativi a tentoni. Installa Keeply in dieci minuti e proteggi il tuo primo progetto in giornata."
 date: 2026-04-26
 draft: false
 tags: [guida Keeply]
@@ -146,3 +146,8 @@ Una cosa:
 **La schermata blu non è un verdetto — è la reputazione che è ancora in costruzione.**
 
 Non devi aggirare l'avviso. Devi solo prendere il percorso winget dove l'avviso non compare mai.
+
+---
+
+> Sull'autore: Ting-Wei Tsao, fondatore di Keeply.
+> [LinkedIn](https://www.linkedin.com/in/ting-wei-tsao-b57480152/)

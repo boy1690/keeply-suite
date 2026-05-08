@@ -14,7 +14,7 @@ role: cluster
 pillar_parent: file-version-management-complete-guide
 ---
 
-Thursday night, 11:47 PM. You're on your desktop looking for the version your client signed off on this afternoon. Eleven files named `Proposal_v*_FINAL.docx` sit there—which one is the signed copy, which one has your annotations, which one is the IM-revised draft. You're afraid to delete any. Keeping them all means you can't find the one you need.
+Thursday night, 11:47 PM. You're on your desktop looking for the version your client signed off on this afternoon. Eleven files named `Proposal_v*_FINAL.docx` sit there, which one is the signed copy, which one has your annotations, which one is the IM-revised draft. You're afraid to delete any. Keeping them all means you can't find the one you need.
 
 This isn't a one-off. It happens to everyone working with Cmd+S (or Ctrl+S). Let's start with why, then look at three tool designs that solve it.
 
@@ -22,13 +22,13 @@ This isn't a one-off. It happens to everyone working with Cmd+S (or Ctrl+S). Let
 
 - [Why you end up naming files `_v3_FINAL`](#why-naming)
 - ["Too many versions" is actually four different pains](#four-types)
-- [You're doing the right thing—the tool just didn't pick up the baton](#tool-side)
+- [You're doing the right thing, the tool just didn't pick up the baton](#tool-side)
 - [Three tool designs that solve this](#three-designs)
 - [When this isn't the right tool](#boundaries)
 
 ## Why you end up naming files `_v3_FINAL` {#why-naming}
 
-Cmd+S is a permanent action. The moment you press it, the previous version is overwritten. There's no "the version from thirty minutes ago" button waiting for you. PSDs for designers, contract `.docx` files for lawyers, dissertations for grad students—same story everywhere. **If you don't name it, you lose it.** So you append `_v3`, `_FINAL`, `_REAL_FINAL` to the filename.
+Cmd+S is a permanent action. The moment you press it, the previous version is overwritten. There's no "the version from thirty minutes ago" button waiting for you. PSDs for designers, contract `.docx` files for lawyers, dissertations for grad students, same story everywhere. **If you don't name it, you lose it.** So you append `_v3`, `_FINAL`, `_REAL_FINAL` to the filename.
 
 Yeah, that's the frustrating part. What you're doing isn't compulsive. It's a survival reflex against an OS that never gave you an undo button.
 
@@ -45,7 +45,7 @@ Pull "too many versions" apart and you find four completely different problems. 
 
 You think you're solving one thing, but it's actually four. Type 1 needs automatic version preservation. Type 2 needs milestone freezing. Type 3 needs sync conflict resolution. Type 4 needs tool training. **Diagnose which one you have before chasing a fix.**
 
-## You're doing the right thing—the tool just didn't pick up the baton {#tool-side}
+## You're doing the right thing, the tool just didn't pick up the baton {#tool-side}
 
 Productivity blogs will tell you to "have a naming convention," circulate a 14-page naming standards PDF, get the team to memorize prefix orders. It sounds reasonable. In practice, it lasts three days.
 
@@ -59,11 +59,11 @@ Three design patterns the tool can use. Each one solves one of the four pain typ
 
 ### Design A: Automatic checkpoints (every Cmd+S keeps history)
 
-You press Cmd+S, the tool quietly preserves the previous version. You don't have to name anything. **Examples**: macOS Time Machine, Word AutoSave (only goes back 1-2 versions), Dropbox 30-day version history. **Keeply** uses a git engine for this—text files use delta storage, binaries above 10MB go into LFS (each version preserved in full). **Solves Type 1.**
+You press Cmd+S, the tool quietly preserves the previous version. You don't have to name anything. **Examples**: macOS Time Machine, Word AutoSave (only goes back 1-2 versions), Dropbox 30-day version history. **Keeply** uses a git engine for this, text files use delta storage, binaries above 10MB go into LFS (each version preserved in full). **Solves Type 1.**
 
 ### Design B: Named milestones (you mark "client signed" or "shipped")
 
-You actively flag "this version got signed" or "this version went live"—from then on, no matter how the file changes, the milestone stays put. **Examples**: Git tags (developer-only), GitHub Releases. **Keeply** has Release built in, with no git terminology in the UI. **Solves Type 2.**
+You actively flag "this version got signed" or "this version went live", from then on, no matter how the file changes, the milestone stays put. **Examples**: Git tags (developer-only), GitHub Releases. **Keeply** has Release built in, with no git terminology in the UI. **Solves Type 2.**
 
 ### Design C: Single-file restore (pull one file out of history)
 
@@ -82,7 +82,7 @@ Keeply doesn't solve every scenario:
 
 ## Before you press Cmd+S next time
 
-Next time you press Cmd+S, you won't worry "what if this is the wrong version"—because the "what if" doesn't exist anymore. Every version is still there. You just need to find it.
+Next time you press Cmd+S, you won't worry "what if this is the wrong version", because the "what if" doesn't exist anymore. Every version is still there. You just need to find it.
 
 Want to see how Keeply does this? [Read the complete guide to file version management.](/en/post/file-version-management-complete-guide/)
 

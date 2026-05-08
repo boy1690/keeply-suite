@@ -122,3 +122,8 @@ Se vuoi anche tu provare Keeply per quella cronologia, trascina una cartella den
 ---
 
 *Autore: Ting-Wei Tsao, Fondatore di Keeply | [LinkedIn](https://www.linkedin.com/in/tingwei-tsao/)*
+
+---
+
+> Sull'autore: Ting-Wei Tsao, fondatore di Keeply.
+> [LinkedIn](https://www.linkedin.com/in/ting-wei-tsao-b57480152/)

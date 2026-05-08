@@ -113,3 +113,8 @@ La prossima volta che sfora, apri la Timeline e clicca l'ultima voce. **Problema
 ---
 
 *A cura di Ting-Wei Tsao, fondatore di Keeply | [LinkedIn](https://www.linkedin.com/in/tingwei-tsao/)*
+
+---
+
+> Sull'autore: Ting-Wei Tsao, fondatore di Keeply.
+> [LinkedIn](https://www.linkedin.com/in/ting-wei-tsao-b57480152/)

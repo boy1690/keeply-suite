@@ -1,6 +1,6 @@
 ---
 title: "Dropbox Conflicted Copy: Why It Keeps Coming Back (And 3 Sync Designs That Actually Fix It)"
-description: "Conflicted copy isn't a bug—it's the result of Dropbox using last-writer-wins without a conflict-detection layer."
+description: "Conflicted copy isn't a bug, it's the result of Dropbox using last-writer-wins without a conflict-detection layer."
 date: 2026-05-05T05:55:00+08:00
 draft: false
 slug: dropbox-conflicted-copy

@@ -1,6 +1,6 @@
 ---
 title: "为什么我做 Keeply：给每天用共用文件夹出错的人"
-description: "Keeply 是从共用文件夹失控的场景里长出来的工具——不是要把你变成开发者。"
+description: "Keeply 是从共用文件夹失控的场景里长出来的工具。不是要把你变成开发者。"
 date: 2026-05-06T01:00:00+08:00
 draft: false
 slug: why-i-built-keeply

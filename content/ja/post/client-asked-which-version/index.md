@@ -118,3 +118,8 @@ Keeply は Git エンジンを使いますが、UI に Git 用語は出しませ
 でもひとつ分かっていること：5 分前の版と 3 ヶ月前の版を、ツールに同じに扱わせてはいけない。
 
 今日からの納品ごとに、ツールにあの一つを覚えてもらうことはできますか？
+
+---
+
+> 著者について：Ting-Wei Tsao、Keeply 創業者。
+> [LinkedIn](https://www.linkedin.com/in/ting-wei-tsao-b57480152/)

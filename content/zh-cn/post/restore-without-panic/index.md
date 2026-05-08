@@ -1,6 +1,6 @@
 ---
 title: "文件恢复软件不一定救得到：4 种你以为有 trash 但其实没有的情境"
-description: "你按了 Delete、回收站是空的——4 个常见原因让 OS 没留任何救援痕迹。"
+description: "你按了 Delete、回收站是空的。4 个常见原因让 OS 没留任何救援痕迹。"
 date: 2026-05-06T08:50:00+08:00
 draft: false
 slug: restore-without-panic

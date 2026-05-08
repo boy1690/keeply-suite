@@ -1,6 +1,6 @@
 ---
 title: "Why I Built Keeply: For People Who Lose Files in Shared Folders Every Day"
-description: "Keeply grew out of shared-folder chaos—not to turn you into a dev."
+description: "Keeply grew out of shared-folder chaos, not to turn you into a dev."
 date: 2026-05-06T01:00:00+08:00
 draft: false
 slug: why-i-built-keeply

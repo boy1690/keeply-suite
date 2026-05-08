@@ -76,3 +76,8 @@ cta_topic: versioning
 
 - [Asana, Why Work About Work Is Bad / Anatomy of Work](https://asana.com/resources/why-work-about-work-is-bad)
 - 추가 자료: [IDC, The High Cost of Not Finding Information (2012)](https://computhink.com/wp-content/uploads/2015/10/IDC20on20The20High20Cost20Of20Not20Finding20Information.pdf) ・[McKinsey Global Institute, The Social Economy (2012)](https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-social-economy)
+
+---
+
+> 저자 소개: Ting-Wei Tsao, Keeply 창업자.
+> [LinkedIn](https://www.linkedin.com/in/ting-wei-tsao-b57480152/)
