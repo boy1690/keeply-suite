@@ -28,7 +28,7 @@ cta_topic: versioning
 
 ## 보이지 않는 청구서는 불안으로 지불된다 {#anxious-bill}
 
-[Asana의 Anatomy of Work 연구](https://asana.com/resources/why-work-about-work-is-bad)에 따르면, 우리는 1년에 83시간을 이런 "방어적 행동"에 쓴다. 하지만 83시간이라는 숫자는 차갑기만 할 뿐, 그 느낌을 설명하지 못한다.
+[Asana의 구조 의 작동 연구](https://asana.com/resources/why-work-about-work-is-bad)에 따르면, 우리는 1년에 83시간을 이런 "방어적 행동"에 쓴다. 하지만 83시간이라는 숫자는 차갑기만 할 뿐, 그 느낌을 설명하지 못한다.
 
 진짜 비용은 **사라지지 않는 마이크로 패닉**이다.
 시공사에게 도면을 보낸 직후, 등줄기가 서늘해지며 급히 폴더를 다시 확인한다: "잠깐, 방금 보낸 게 `v7_FINAL`이었나, `v7_진짜최종`이었나?"
@@ -75,7 +75,7 @@ cta_topic: versioning
 ## 참고 자료
 
 - [Asana, Why Work About Work Is Bad / Anatomy of Work](https://asana.com/resources/why-work-about-work-is-bad)
-- 추가 자료: [IDC, The High Cost of Not Finding Information (2012)](https://computhink.com/wp-content/uploads/2015/10/IDC20on20The20High20Cost20Of20Not20Finding20Information.pdf) ・[McKinsey Global Institute, The Social Economy (2012)](https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-social-economy)
+- 추가 자료: [IDC, The High Cost 의 Not Finding Information (2012)](https://computhink.com/wp-content/uploads/2015/10/IDC20on20The20High20Cost20Of20Not20Finding20Information.pdf) ・[McKinsey Global Institute, The Social Economy (2012)](https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-social-economy)
 
 ---
 

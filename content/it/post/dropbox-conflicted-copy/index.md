@@ -51,6 +51,8 @@ Non è che la rilevazione conflitti sia tecnicamente difficile. È un trade-off 
 
 Sì, ecco la parte fastidiosa. Dropbox spinge quello che lo strumento dovrebbe fare (livello rilevazione conflitti) sulla disciplina dell'utente. E la disciplina non vince mai contro l'automazione.
 
+Prima di creare Keeply, ci sono incappato io stesso con Dropbox centinaia di volte, e solo dopo ho capito che non era questione di essere più attenti: Dropbox è progettato così.
+
 ## Unire manualmente due file è cura del sintomo {#why-manual-merge-fails}
 
 Il fix che Dropbox Help Center insegna: "Apri entrambi i file, confronta differenze, unisci nel principale a mano, cancella la copia in conflitto." Suona ragionevole.

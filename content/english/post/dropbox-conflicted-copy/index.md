@@ -51,6 +51,8 @@ It's not that conflict detection is technically hard. It's a commercial trade-of
 
 Yeah, that's the frustrating part. Dropbox pushes what the tool should be doing (conflict-detection layer) onto the user's discipline. And discipline never wins against automation.
 
+I ran into this with Dropbox hundreds of times myself before building Keeply, and only later did I figure out that it's not a matter of being more careful — Dropbox is just designed that way.
+
 ## Manually merging two files is symptom treatment {#why-manual-merge-fails}
 
 The fix Dropbox Help Center teaches: "Open both files, compare differences, merge into the main file by hand, delete the conflicted copy." Sounds reasonable.

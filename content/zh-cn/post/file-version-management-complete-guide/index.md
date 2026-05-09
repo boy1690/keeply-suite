@@ -73,12 +73,12 @@ B 小姐在律师事务所当助理。她的硬盘有 `合约_v7_客户版_2025-
 
 ![Dropbox 官方版本历史说明页截图。圈出 Basic / Plus / Family: 30 days / Professional: 180 days / Enterprise: 365 days 整张表。标题：「你的版本历史，是](image-5.svg)
 
-换算成日常：你想找 3 个月前那一版客户 brief？除非你付钱，**否则它已经不存在了**。
+换算成日常：你想找 3 个月前那一版客户 简述？除非你付钱，**否则它已经不存在了**。
 
 这个 30 天不是技术做不到，纯粹是商业决定。工具把文件历史变成升级的理由。
 （Keeply 让你的文件历史永远免费。）
 
-> 2026 年 4 月，Hacker News 用户 julianozen 发帖：他爸爸把一个 2 年没动的文件覆盖掉，2 天后想救。救不回。Dropbox 解释：超过 30 天 retention window。julianozen 回：「这不是 30 天 history 的定义。」隔壁网友 lazide 补一句：「Which is bonkers.」 [完整 thread](https://news.ycombinator.com/item?id=47772260)
+> 2026 年 4 月，Hacker News 用户 julianozen 发帖：他爸爸把一个 2 年没动的文件覆盖掉，2 天后想救。救不回。Dropbox 解释：超过 30 天 保留期 window。julianozen 回：「这不是 30 天 记录 的定义。」隔壁网友 lazide 补一句：「Which is bonkers.」 [完整 thread](https://news.ycombinator.com/item?id=47772260)
 
 30 天设计给「我昨天不小心覆盖了」场景。
 对「我下周客户要看上一季提案」，**用错工具往往得不到你要的效果**。
@@ -131,7 +131,7 @@ B 小姐在律师事务所当助理。她的硬盘有 `合约_v7_客户版_2025-
 
 很整齐。
 
-![两张对照。左边：命名惯例 PDF 第一页的整齐规则；右边：隔壁同事桌面真实文件名截图（充满 v2/v3/真的最终/copy of copy）。标题：「规定 vs 现实」](image-7.svg)
+![两张对照。左边：命名惯例 PDF 第一页的整齐规则；右边：隔壁同事桌面真实文件名截图（充满 v2/v3/真的最终/副本 的 副本）。标题：「规定 vs 现实」](image-7.svg)
 
 然后 6 个月后没人遵守。
 

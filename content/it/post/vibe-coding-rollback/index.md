@@ -38,6 +38,8 @@ A questo punto probabilmente stai pensando: stop, tornare allo stato che almeno 
 
 Il problema è questo: **come fai a sapere quale versione era quella che girava?**
 
+Ci sono passato anch'io. Quando l'AI aveva toccato il quinto file, non sapevo più quale versione girasse. Per fortuna la timeline di Keeply ricordava ancora l'ultima che avevo eseguito a mano.
+
 ---
 
 ## Com'è il momento in cui l'AI sfora? {#ai-overshoot}

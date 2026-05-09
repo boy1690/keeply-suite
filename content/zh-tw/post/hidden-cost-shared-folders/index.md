@@ -28,7 +28,7 @@ cta_topic: versioning
 
 ## 看不見的帳單，是用焦慮支付的 {#anxious-bill}
 
-根據 [Asana 的 Anatomy of Work 研究](https://asana.com/resources/why-work-about-work-is-bad)，我們一年花 83 小時在做這些「防禦性動作」。但 83 小時只是個冰冷的數字，它無法描述那種感覺。
+根據 [Asana 的 結構 的 運作 研究](https://asana.com/resources/why-work-about-work-is-bad)，我們一年花 83 小時在做這些「防禦性動作」。但 83 小時只是個冰冷的數字，它無法描述那種感覺。
 
 真正的成本，是那種**揮之不去的微型恐慌**。
 是你把圖紙發給營造廠後，突然背脊發涼，趕緊重新打開資料夾確認：「等等，我剛剛寄的是 `v7_FINAL` 還是 `v7_真的最終`？」
@@ -75,7 +75,7 @@ cta_topic: versioning
 ## 研究來源
 
 - [Asana, Why Work About Work Is Bad / Anatomy of Work](https://asana.com/resources/why-work-about-work-is-bad)
-- 延伸參考：[IDC, The High Cost of Not Finding Information (2012)](https://computhink.com/wp-content/uploads/2015/10/IDC20on20The20High20Cost20Of20Not20Finding20Information.pdf) ・[McKinsey Global Institute, The Social Economy (2012)](https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-social-economy)
+- 延伸參考：[IDC, The High Cost 的 Not Finding Information (2012)](https://computhink.com/wp-content/uploads/2015/10/IDC20on20The20High20Cost20Of20Not20Finding20Information.pdf) ・[McKinsey Global Institute, The Social Economy (2012)](https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-social-economy)
 
 ---
 

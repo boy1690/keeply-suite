@@ -42,6 +42,8 @@ Cinque nomi di file. Sai che uno di loro è quello da cui la squadra sta effetti
 
 Non è pigrizia, né da parte tua né da parte di Mike. È che il divario tra "un nuovo disegno arriva in ufficio" e "il cantiere lo viene a sapere" non ha nessuno assegnato. Ti capita di essere la persona che sta su entrambi i lati di quel divario.
 
+Sono stato anni sui cantieri io stesso e ho visto questa scena troppe volte. Le nuove revisioni arrivano in ufficio, il cantiere non lo sa, e sono sempre due linee che non si connettono.
+
 ---
 
 ## Prima dell'"emesso per costruzione" ci sono molte bozze. Poi l'architetto torna indietro su una {#h2-2}

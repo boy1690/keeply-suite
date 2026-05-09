@@ -42,6 +42,8 @@ Five file names. You know one of them is what the crew's actually building from.
 
 This isn't laziness, not on your part and not on Mike's. It's that the gap between "a new drawing arrives at the office" and "the field knows about it" has nobody assigned to it. You happen to be the person standing on both sides of that gap.
 
+I spent years on construction sites myself and saw this play out too many times. New revisions reach the office, the field doesn't know, and it's always two lines that never connect.
+
 ---
 
 ## Before "issued-for-construction," there are a lot of drafts. Then the architect flips one back {#h2-2}

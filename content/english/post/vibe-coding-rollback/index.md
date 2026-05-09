@@ -38,6 +38,8 @@ At this point you're probably thinking: stop, get back to the state that at leas
 
 The problem is this: **how do you know which version was the one that ran?**
 
+I've hit this myself. By the time the AI had touched the 5th file, I couldn't tell which version still ran. Luckily, Keeply's timeline still had the last one I'd run manually.
+
 ---
 
 ## What does the moment of AI overshoot look like? {#ai-overshoot}

@@ -28,7 +28,7 @@ cta_topic: versioning
 
 ## 見えない請求書は、不安で支払われる {#anxious-bill}
 
-[Asana の Anatomy of Work の調査](https://asana.com/resources/why-work-about-work-is-bad) によれば、私たちは年に83時間をこうした「防御的な動作」に費やしている。でも83時間という冷たい数字は、その感覚を説明しきれない。
+[Asana の 構造 の 動作 の調査](https://asana.com/resources/why-work-about-work-is-bad) によれば、私たちは年に83時間をこうした「防御的な動作」に費やしている。でも83時間という冷たい数字は、その感覚を説明しきれない。
 
 本当のコストは、**消えない小さなパニック**だ。
 施工会社に図面を送った後、背筋がヒヤッとして、急いでフォルダを開き直す：「ちょっと待て、今送ったのは `v7_FINAL`？それとも `v7_真の最終`？」
@@ -75,7 +75,7 @@ cta_topic: versioning
 ## 参考文献
 
 - [Asana, Why Work About Work Is Bad / Anatomy of Work](https://asana.com/resources/why-work-about-work-is-bad)
-- 関連資料：[IDC, The High Cost of Not Finding Information (2012)](https://computhink.com/wp-content/uploads/2015/10/IDC20on20The20High20Cost20Of20Not20Finding20Information.pdf) ・[McKinsey Global Institute, The Social Economy (2012)](https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-social-economy)
+- 関連資料：[IDC, The High Cost の Not Finding Information (2012)](https://computhink.com/wp-content/uploads/2015/10/IDC20on20The20High20Cost20Of20Not20Finding20Information.pdf) ・[McKinsey Global Institute, The Social Economy (2012)](https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-social-economy)
 
 ---
 

@@ -20,13 +20,15 @@ Four common reasons: you emptied the Recycle Bin two days ago, the file was on a
 
 Then Google's first page tells you to download Recoverit, EaseUS, or Disk Drill. Slow down for a second.
 
+The Microsoft Community forum has [user reports of opening Excel and the AutoRecover file simply not being there](https://techcommunity.microsoft.com/discussions/excelgeneral/excel-autorecover-files-disappeared/3937167) — a daily situation. The reality on SSD recovery is sharper: [Hetman Recovery puts it bluntly](https://hetmanrecovery.com/recovery_news/data-recovery-is-impossible-ssd-cloud-and-online-services.htm) — "any data recovery company claiming to recover deleted files from a TRIM-enabled SSD is either incompetent or willfully deceiving customers."
+
 ## Why your Recycle Bin doesn't always have your file
 
 You've probably hit all four of these.
 
 **You emptied the Recycle Bin recently**. As far as the OS is concerned, the delete is final. Nothing tracks it anymore.
 
-**Shared drives bypass your local Recycle Bin**. NAS, SharePoint, and corporate network drives don't route deletes through the bin on your machine ([Microsoft documents](https://learn.microsoft.com/en-us/windows/win32/shell/recycle-bin) the mapped-drive deletion behavior). The story you've heard at work: "I thought I could recover it, but IT said it goes straight off the NAS."
+**Shared drives bypass your local Recycle Bin**. NAS, SharePoint, and corporate network drives don't route deletes through the bin on your machine ([Microsoft documents](https://learn.microsoft.com/en-us/windows/win32/shell/recycle-bin) the mapped-drive deletion behavior). The story you've heard at work: "thought it could be recovered, but IT said it goes straight off the NAS."
 
 **Shift+Del bypasses the Recycle Bin by design**. You hit the shortcut to skip the bin, and the OS honored it.
 
@@ -43,6 +45,8 @@ Recoverit, EaseUS, and Disk Drill do sector scanning: they read raw bytes the OS
 **Write activity**. Windows updates, cloud sync, browser cache—your machine writes sectors every minute. Each hour between the delete and your recovery attempt raises the odds the target sectors got overwritten.
 
 In short: recovery software works in a narrow window (HDD + recent delete + low write activity). Most modern setups fall outside that window.
+
+What we observe at client sites is almost always exactly this scenario.
 
 ## The reliable recovery layer is the file layer
 

@@ -26,6 +26,8 @@ You open OneDrive version history. Only the last week is left. Word AutoRecover 
 
 Three months ago you pressed ⌘+S on that version. The tools didn't remember.
 
+Doing Keeply customer interviews, this 11:23 PM message is the scenario I've heard most often.
+
 ## TL;DR
 
 Microsoft Word's **version history**, AutoRecover, and OneDrive version snapshots are all **save-layer rescue mechanisms**. Designed for "I crashed mid-document" scenarios. Retention runs short: from cleared on file close, up to about 500 versions in cloud history. This is save-layer rescue, not delivery tracking. To recover the version you delivered three months ago, you need an independent always-on version history at the tool layer, plus a metadata stamp at delivery time.
@@ -63,6 +65,8 @@ To see whether these mechanisms hold, look at the retention numbers:
 | Windows File History | Configurable | Configurable | System-level backup |
 
 That's exactly the bind. Each mechanism has a ceiling. From cleared on close to about 500 versions. None of them reach across three months.
+
+I spent years on construction sites myself, and every file version decided what was delivered in the end. Not finding the delivered version meant testing the limits of a manager's memory.
 
 ## Why these mechanisms don't reach 3 months later
 

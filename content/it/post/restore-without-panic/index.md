@@ -20,6 +20,8 @@ Quattro motivi comuni: hai svuotato il Cestino due giorni fa, il file era su un 
 
 Poi la prima pagina di Google ti dice di scaricare Recoverit, EaseUS o Disk Drill. Aspetta un secondo.
 
+Sul forum della Microsoft Community ci sono [segnalazioni di utenti che hanno aperto Excel e non hanno trovato il file salvato da AutoRecover](https://techcommunity.microsoft.com/discussions/excelgeneral/excel-autorecover-files-disappeared/3937167): è una situazione quotidiana. Sulla realtà del recupero SSD, [Hetman Recovery è esplicito](https://hetmanrecovery.com/recovery_news/data-recovery-is-impossible-ssd-cloud-and-online-services.htm): «Un'azienda di recupero dati che afferma di poter recuperare file cancellati da un SSD con TRIM abilitato o è incompetente o sta ingannando il cliente».
+
 ## Perché il Cestino non sempre contiene il tuo file
 
 Probabilmente li hai vissuti tutti e quattro.
@@ -43,6 +45,8 @@ Recoverit, EaseUS e Disk Drill fanno sector scanning: leggono i byte raw che il 
 **Attività di scrittura**. Aggiornamenti Windows, sincronizzazione cloud, cache del browser: la tua macchina scrive sector ogni minuto. Ogni ora tra l'eliminazione e il tentativo di recupero alza la probabilità che i sector target siano stati sovrascritti.
 
 In sintesi: il software di recupero funziona in una finestra stretta (HDD + cancellazione recente + bassa attività di scrittura). La maggior parte delle configurazioni moderne sta fuori da quella finestra.
+
+Quello che osserviamo presso i clienti è quasi sempre questa situazione.
 
 ## Il livello affidabile di recupero è il livello file
 

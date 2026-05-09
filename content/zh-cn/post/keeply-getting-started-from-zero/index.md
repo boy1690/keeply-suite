@@ -48,7 +48,7 @@ A 先生手上有很多项目，常常用记事本记录他每天做了什么，
 
 ![传统软件 30 个功能勾选清单 vs 「拖进去就好」对比视觉](image-1.svg)
 
-多数软件企业把「14 天学完」当成天经地义。[业界研究](https://userpilot.com/blog/time-to-value-benchmark-report-2024/)显示，完成不到一半 onboarding 步骤的用户，14 天内流失率是完成全程的 **3 倍**。
+多数软件企业把「14 天学完」当成天经地义。[业界研究](https://userpilot.com/blog/time-to-value-benchmark-report-2024/)显示，完成不到一半 上手 步骤的用户，14 天内流失率是完成全程的 **3 倍**。
 
 换句话说：软件预设你有 14 天空档。它预设你的工作可以等你学会它。
 
@@ -72,7 +72,7 @@ A 先生手上有很多项目，常常用记事本记录他每天做了什么，
 
 那一刻我才知道：好工具不是「功能多」，是**够简单好上手**。没学任何功能，光是它默默接住了那个文件，这个工具的价值已经兑现。
 
-![传统软件 onboarding 文档 vs Keeply 第 1 天就上手对比](image-2.svg)
+![传统软件 上手 文档 vs Keeply 第 1 天就上手对比](image-2.svg)
 
 不是工具有问题。**而是这类工具本来就不是设计成「学完再用」的**。
 
@@ -92,7 +92,7 @@ A 先生手上有很多项目，常常用记事本记录他每天做了什么，
 
 改文件、保存、改回上一版、删掉重做。**Keeply 自动保存进左边的时间轴，产生一笔文件笔记**。你不用按任何按钮，不用记住任何快捷键。
 
-![Keeply 时间轴视觉：每次保存都是一笔文件笔记，可以随时点进去看 diff](image-4.svg)
+![Keeply 时间轴视觉：每次保存都是一笔文件笔记，可以随时点进去看 比对](image-4.svg)
 
 也不用改文件名。那个 `_v3_真的最终.docx` 还是叫这个名字。Keeply 不动你的习惯。
 
@@ -131,7 +131,7 @@ Keeply 不争所有场景。4 种情况下，别的工具更对。
 - **如果你需要跨设备云端同步**：选 [IDrive](https://www.idrive.com/) 或 [Backblaze](https://www.backblaze.com/)。Keeply 存在你的电脑上，不是云端原生。
 - **如果你需要系统还原 / 整个磁盘备份**：选 [Acronis True Image](https://www.acronis.com/)。Keeply 不做这个。
 - **如果你是 IT pro 管 50 台以上机器**：选 [MSP360](https://www.msp360.com/)。Keeply 是给个人 / 小团队用的。
-- **如果你只是不想丢掉个人文件**，Windows File History 已经内建够用，不必装任何工具。
+- **如果你只是不想丢掉个人文件**，Windows 文件 记录 已经内建够用，不必装任何工具。
 
 ![4 种使用情境的决策树（云端 / 系统还原 / IT pro / 个人）+ Keeply 落点](image-6.svg)
 
@@ -170,12 +170,12 @@ Voice rules v0.2.11 (13 rules):
 - [x] R9 不演 empathy 。 无「我懂」「我知道你」，改 observational「你应该会」「这合理」
 - [x] R10 Subject-centered outcomes 。 「你已经有 1 周」「你会发现」reader 为主语
 - [x] R11 Heading reader-internal question 。 5 个 H2 全为读者内心问题 (为什么排斥/为什么放弃/2 个动作是什么/会有什么体验/不适合的时候)
-- [x] R12 Walk-through 真实 UI 。 「左边的时间轴」「自动保存」「diff」具体；量化「200 字」「14 天」「3 倍」「50 台」
+- [x] R12 操作演示 真实 UI 。 「左边的时间轴」「自动保存」「比对」具体；量化「200 字」「14 天」「3 倍」「50 台」
 - [x] R13 Action-only steps + raw emotion 。 动作 1/2 仅动词；收在「真好」raw emotion
 
 T6.5 traps (#54-57):
-- [x] #54 无标语式 punchy opening 。 body 第一段以 A 先生 scenario 开场，非标语
-- [x] #55 无 vivid 编造 micro-detail 。 UI 描述基于真实 Keeply (时间轴/diff/拖拽)
+- [x] #54 无标语式 punchy opening 。 body 第一段以 A 先生 场景 开场，非标语
+- [x] #55 无 鲜明 编造 micro-detail 。 UI 描述基于真实 Keeply (时间轴/比对/拖拽)
 - [x] #56 动词先行 。 「拖一个文件夹」「改文件」「保存」「打开历史」动词领头
 - [x] #57 具体 victory verb 。 「上手」「你会懂」「真好」，无「就够了」「就好」
 

@@ -24,6 +24,8 @@ Apri la cronologia versioni di OneDrive. È rimasta solo l'ultima settimana. Wor
 
 Tre mesi fa hai premuto ⌘+S su quella versione. Gli strumenti non l'hanno ricordata.
 
+Facendo interviste con i clienti Keeply, questo messaggio delle 11:23 di sera è lo scenario che sento più spesso.
+
 ## Punti chiave
 
 La **cronologia versioni** di Microsoft Word, AutoRecover e snapshot OneDrive sono tutti **meccanismi di salvataggio a livello di archiviazione**. Progettati per scenari "ho perso il documento durante una crash". La retention è breve: si cancella alla chiusura del file, fino a circa 500 versioni nella cronologia cloud. Questo è salvataggio per archiviazione, non tracciamento delle consegne. Per recuperare la versione che hai consegnato tre mesi fa, ti serve una cronologia versioni always-on indipendente a livello strumentale, più un timbro metadata al momento della consegna.
@@ -61,6 +63,8 @@ Per vedere se questi meccanismi reggono, guarda i numeri di retention:
 | Cronologia file Windows | Configurabile | Configurabile | Backup di sistema |
 
 Esatto, è proprio il vincolo. Ogni meccanismo ha un soffitto. Dalla cancellazione alla chiusura fino a circa 500 versioni. Nessuno arriva oltre tre mesi.
+
+Sono stato anni sui cantieri io stesso, e ogni versione di file decideva cosa veniva consegnato alla fine. Non trovare la versione consegnata significava mettere alla prova il limite della memoria di un manager.
 
 ## Perché questi meccanismi non arrivano a 3 mesi dopo
 
