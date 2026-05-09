@@ -119,8 +119,6 @@ Installed isn't done. Your first project being protected the same day. That's do
 
 Open Keeply, hit **New project**, pick a folder you're actively working in.
 
-<!-- TODO: 替換為真實截圖 keeply-add-project.png（Keeply「新增專案」對話框） -->
-
 **What to drop in first**: whatever you're holding right now that you can't afford to lose and that you keep editing. A pitch, a contract, a design file, a deck. Any of those work. Don't pick a folder you haven't touched in six months. That folder's value is in archiving, not in protection. Different story.
 
 The first scan takes 1 to 2 minutes. After that, Keeply watches the folder in the background and **records versions automatically as you save**. No manual "checkpoint" button to press.

@@ -119,8 +119,6 @@ Zainstalowane to nie znaczy gotowe. Twój pierwszy projekt chroniony tego samego
 
 Otwórz Keeply, kliknij **Nowy projekt**, wybierz folder, w którym aktywnie pracujesz.
 
-<!-- TODO: 替換為真實截圖 keeply-add-project.png（Keeply「新增專案」對話框） -->
-
 **Co wrzucić jako pierwsze**: cokolwiek, co teraz trzymasz w rękach, czego nie możesz sobie pozwolić stracić i co ciągle edytujesz. Pitch, umowa, plik projektowy, deck — każde z tego się nadaje. Nie wybieraj folderu, którego nie dotykałeś od sześciu miesięcy. Wartość tego folderu jest w archiwizacji, nie w ochronie. Inna historia.
 
 Pierwsze skanowanie zajmuje 1 do 2 minut. Potem Keeply pilnuje folderu w tle i **odnotowuje wersje automatycznie, gdy zapisujesz**. Bez ręcznego przycisku „checkpoint" do naciskania.

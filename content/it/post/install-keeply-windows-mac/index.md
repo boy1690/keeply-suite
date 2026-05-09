@@ -119,8 +119,6 @@ Installato non vuol dire fatto. Il tuo primo progetto protetto in giornata. Quel
 
 Apri Keeply, clicca **Nuovo progetto**, scegli una cartella su cui stai attivamente lavorando.
 
-<!-- TODO: 替換為真實截圖 keeply-add-project.png（Keeply「新增專案」對話框） -->
-
 **Cosa mettere dentro per primo**: qualunque cosa tu abbia in mano in questo momento che non ti puoi permettere di perdere e che continui a modificare. Una pitch, un contratto, un file di design, una presentazione. Qualsiasi di questi va bene. Non scegliere una cartella che non hai toccato da sei mesi. Il valore di quella cartella è nell'archiviazione, non nella protezione. Storia diversa.
 
 La prima scansione richiede da 1 a 2 minuti. Dopo, Keeply osserva la cartella in background e **registra le versioni automaticamente mentre salvi**. Nessun pulsante "checkpoint" da premere a mano.

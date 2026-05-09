@@ -119,8 +119,6 @@ Instalado no es estar listo. Tu primer proyecto protegido el mismo día — eso 
 
 Abre Keeply, pulsa **Nuevo proyecto**, elige una carpeta en la que estés trabajando activamente.
 
-<!-- TODO: 替換為真實截圖 keeply-add-project.png（Keeply「新增專案」對話框） -->
-
 **Qué arrastrar primero**: lo que tengas ahora mismo en las manos que no puedes permitirte perder y que sigues editando. Una propuesta, un contrato, un archivo de diseño, una presentación — cualquiera vale. No elijas una carpeta que no has tocado en seis meses. El valor de esa carpeta está en archivar, no en proteger. Otra historia.
 
 El primer escaneo tarda de 1 a 2 minutos. Después de eso, Keeply vigila la carpeta en segundo plano y **registra versiones automáticamente cuando guardas**. Sin botón manual de "punto de control" que pulsar.

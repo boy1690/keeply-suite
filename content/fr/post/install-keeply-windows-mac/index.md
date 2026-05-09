@@ -119,8 +119,6 @@ Installé n'est pas terminé. Ton premier projet protégé le jour même — ça
 
 Ouvre Keeply, clique sur **Nouveau projet**, choisis un dossier sur lequel tu travailles activement.
 
-<!-- TODO: 替換為真實截圖 keeply-add-project.png（Keeply「新增專案」對話框） -->
-
 **Quoi déposer en premier** : ce que tu tiens en ce moment et que tu ne peux pas te permettre de perdre, et que tu continues à éditer. Une proposition, un contrat, un fichier de design, un deck — n'importe lequel marche. Ne choisis pas un dossier que tu n'as pas touché depuis six mois. La valeur de ce dossier est dans l'archivage, pas dans la protection. Autre histoire.
 
 Le premier scan prend 1 à 2 minutes. Après, Keeply surveille le dossier en arrière-plan et **enregistre les versions automatiquement à chaque sauvegarde**. Pas de bouton « point de sauvegarde » manuel à appuyer.
