@@ -301,15 +301,18 @@ p();
 if (health.__loadError || !health.sites) {
   p(`⚠️ Health checks unavailable: ${health.__loadError || 'no sites'}`);
 } else {
-  p('| Site | Sitemap | URLs | robots.txt | IndexNow key | Yandex file | DNS TXT |');
-  p('|---|---|---|---|---|---|---|');
+  p('| Site | Sitemap | Type | URLs | robots.txt | IndexNow key | Yandex file | DNS TXT |');
+  p('|---|---|---|---|---|---|---|---|');
   for (const [label, h] of Object.entries(health.sites)) {
     const ok = (probe) => (probe?.ok ? '✅' : `❌ ${probe?.status ?? probe?.error ?? '?'}`);
     const dnsHost = label === 'blog' ? 'blog.keeply.work' : 'keeply.work';
     const dns = health.dns?.[dnsHost];
     const dnsOk = dns?.yandexVerificationFound ? '✅' : '❌';
+    const typeLabel = h.sitemapType === 'index'
+      ? `index (${h.childSitemapCount} children)`
+      : (h.sitemapType || '—');
     p(
-      `| ${label} | ${ok(h.sitemap)} | ${num(h.sitemapUrlCount)} | ${ok(h.robotsTxt)} | ${ok(h.indexNowKey)} | ${ok(h.yandexFile)} | ${dnsOk} |`
+      `| ${label} | ${ok(h.sitemap)} | ${typeLabel} | ${num(h.sitemapUrlCount)} | ${ok(h.robotsTxt)} | ${ok(h.indexNowKey)} | ${ok(h.yandexFile)} | ${dnsOk} |`
     );
   }
   p();
@@ -340,14 +343,29 @@ for (const [label, data] of Object.entries(gsc.sites || {})) {
   }
 }
 
-// Action: sitemap URL drift
-const blogCount = health.sites?.blog?.sitemapUrlCount;
-const mainCount = health.sites?.main?.sitemapUrlCount;
-if (blogCount && blogCount < 15) {
+// Action: sitemap URL drift. health-check.js sums URLs across sitemap-index
+// children, so these counts reflect real submitted-URL volume regardless
+// of whether the sitemap is flat or an index.
+const blogHealth = health.sites?.blog || {};
+const mainHealth = health.sites?.main || {};
+const blogCount = blogHealth.sitemapUrlCount;
+const mainCount = mainHealth.sitemapUrlCount;
+if (blogCount && blogCount < 50) {
   actions.push(`- ⚠️ blog sitemap dropped to ${blogCount} URLs — investigate broken build`);
 }
 if (mainCount && mainCount < 100) {
   actions.push(`- ⚠️ main site sitemap dropped to ${mainCount} URLs — investigate`);
+}
+
+// Structural integrity: blog sitemap-index should list all 6 core locales.
+// Per layouts/sitemapindex.xml — drift here means a locale was dropped from
+// the core publishing set or the template regressed.
+const EXPECTED_CORE = 6;
+if (blogHealth.sitemapType === 'index' && blogHealth.childSitemapCount != null
+    && blogHealth.childSitemapCount < EXPECTED_CORE) {
+  actions.push(
+    `- ⚠️ blog sitemap-index lists ${blogHealth.childSitemapCount}/${EXPECTED_CORE} core locales — check layouts/sitemapindex.xml`
+  );
 }
 
 // Action: organic search trend

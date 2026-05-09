@@ -61,10 +61,32 @@ async function checkSite(site, cfg) {
   out.indexNowKey = await probe(`${cfg.base}/${cfg.indexNowKey}.txt`);
   out.yandexFile = await probe(`${cfg.base}/yandex_${cfg.yandexCode}.html`);
 
-  // Sitemap URL count (regression signal)
+  // Sitemap URL count (regression signal). Handles both flat <urlset> and
+  // <sitemapindex>: for an index, recursively fetch each child sitemap and
+  // sum the URLs so sitemapUrlCount reflects real submitted-URL volume,
+  // not the number of child sitemaps (which trips the < 15 alarm in
+  // build-report.js when the blog uses a 6-core-locale index).
   const sitemapText = await fetchText(`${cfg.base}/sitemap.xml`);
   if (sitemapText) {
-    out.sitemapUrlCount = (sitemapText.match(/<loc>/g) || []).length;
+    const isIndex = /<sitemapindex[\s>]/i.test(sitemapText);
+    const locs = [...sitemapText.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+    if (isIndex) {
+      out.sitemapType = 'index';
+      out.childSitemapCount = locs.length;
+      const children = [];
+      let total = 0;
+      for (const childUrl of locs) {
+        const childText = await fetchText(childUrl);
+        const childUrls = childText ? (childText.match(/<loc>/g) || []).length : 0;
+        children.push({ url: childUrl, urlCount: childUrls });
+        total += childUrls;
+      }
+      out.sitemapChildren = children;
+      out.sitemapUrlCount = total;
+    } else {
+      out.sitemapType = 'urlset';
+      out.sitemapUrlCount = locs.length;
+    }
   }
 
   // robots.txt declares Sitemap line
