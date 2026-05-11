@@ -77,7 +77,7 @@ Il tuo prossimo progetto non rientra in quel presupposto dei 14 giorni.
 
 ## Perché molli uno strumento? {#why-give-up-a-tool}
 
-Un nuovo strumento di solito richiede circa 14 giorni per essere imparato. I primi 13 sono la fase di esplorazione.
+Imparare un nuovo strumento richiede di solito circa 14 giorni — e per la maggior parte di quei giorni stai ancora brancolando.
 
 A metà di quella fase, la maggior parte delle persone vorrà chiudere la scheda.
 

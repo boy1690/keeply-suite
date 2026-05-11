@@ -77,7 +77,7 @@ Your next project is nowhere in that 14-day assumption.
 
 ## Why do you give up on a tool? {#why-give-up-a-tool}
 
-A new tool usually takes about 14 days to learn. The first 13 are the exploration phase.
+Learning a new tool usually takes about 14 days — and most of those days are still spent feeling around.
 
 Halfway through that phase, most people will want to close the tab.
 
@@ -141,7 +141,7 @@ Through the Timeline you watch your own file notes start piling up. **Click into
 
 You're stacking more and more file notes.
 
-One day you'll notice — **this is great that I have this software**.
+One day you'll notice — **I'm glad I have this software**.
 
 ---
 
