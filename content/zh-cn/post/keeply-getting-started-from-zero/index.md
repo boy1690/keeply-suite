@@ -1,6 +1,7 @@
 ---
 title: "文件笔记软件 Keeply 怎么用：不用学 30 个功能，2 个动作就上手"
-description: "不必先变专家。把文件夹拖进去，继续工作。版本历史就生效了。"
+description: "Keeply 不要你花 14 天当学生——把文件夹拖进来、继续做今天的事，第 1 天就有版本历史。本文 7 天实际体验，加上 4 种 Keeply 不适合你的情境诚实列给你。"
+voice_version: v2-2026-05-11
 date: 2026-04-30T09:00:00+08:00
 slug: keeply-getting-started-from-zero
 locale: zh-CN
@@ -59,17 +60,19 @@ A 先生手上有很多项目，常常用记事本记录他每天做了什么，
 
 ## 为什么你会排斥使用新的工具？ {#why-resist-new-tools}
 
+你会排斥装新工具，是因为大多数工具默认你今天可以停下手头的事、花 14 天当学生。但你明天有要交的项目，没有 14 天空档可以学任何东西。
+
 你昨天试装了一个工具。文档 50 页。新词 30 个。明天要交项目。
 
 你想：「等下周再来慢慢看」。然后就再也没打开过。
 
 ![传统软件 30 个功能勾选清单 vs 「拖进去就好」对比视觉](image-1.svg)
 
-多数软件企业把「14 天学完」当成天经地义。[业界研究](https://userpilot.com/blog/time-to-value-benchmark-report-2024/)显示，完成不到一半 上手 步骤的用户，14 天内流失率是完成全程的 **3 倍**。
+多数软件企业把「14 天学完」当成天经地义。[业界研究](https://userpilot.com/blog/time-to-value-benchmark-report-2024/)显示，没走完一半新手引导步骤的用户，14 天内流失率是走完全程的 **3 倍**。
 
-换句话说：软件预设你有 14 天空档。它预设你的工作可以等你学会它。
+换句话说：软件默认你有 14 天空档。它默认你的工作可以等你学会它。
 
-这预设里没有你的下一个项目。
+这 14 天空档默认里没有你的下一个项目。
 
 ---
 
@@ -83,7 +86,7 @@ A 先生手上有很多项目，常常用记事本记录他每天做了什么，
 
 后来我意识到：真正让我留下来的工具，**可以直觉性使用才是重点**。
 
-有一次是我在用 AI 写代码，然后我的 AI 失控了，我已经忘了它写到了哪里。**好在我有随时做文件记录**。
+有一次我在用 AI 写代码，AI 改着改着失控了，我已经忘了它原本写到哪。**好在我有随时做文件记录**。
 
 打开历史。**回到我可控的状态**。
 
@@ -96,6 +99,8 @@ A 先生手上有很多项目，常常用记事本记录他每天做了什么，
 ---
 
 ## 那 2 个动作是什么？ {#what-are-the-two-actions}
+
+只有两个动作：**把一个文件夹拖进 Keeply，然后继续做你今天本来要做的事**。没有要设置的选项，没有要记的快捷键，没有 30 页文档。Keeply 在后台自动帮你保存版本历史。
 
 ### 动作 1：拖一个文件夹进 Keeply
 
@@ -148,7 +153,7 @@ Keeply 不争所有场景。4 种情况下，别的工具更对。
 - **如果你需要跨设备云端同步**：选 [IDrive](https://www.idrive.com/) 或 [Backblaze](https://www.backblaze.com/)。Keeply 存在你的电脑上，不是云端原生。
 - **如果你需要系统还原 / 整个磁盘备份**：选 [Acronis True Image](https://www.acronis.com/)。Keeply 不做这个。
 - **如果你是 IT pro 管 50 台以上机器**：选 [MSP360](https://www.msp360.com/)。Keeply 是给个人 / 小团队用的。
-- **如果你只是不想丢掉个人文件**，Windows 文件 记录 已经内建够用，不必装任何工具。
+- **如果你只是不想丢掉个人文件**，Windows 内置的「文件历史记录」（File History）已经够用，不必装任何工具。
 
 ![4 种使用情境的决策树（云端 / 系统还原 / IT pro / 个人）+ Keeply 落点](image-6.svg)
 
@@ -169,48 +174,6 @@ Keeply 不争所有场景。4 种情况下，别的工具更对。
 ## 延伸阅读
 
 - [文件版本管理完整指南](/zh-cn/post/file-version-management-complete-guide/)（PILLAR 1，了解版本管理为什么重要）
-
----
-
-*作者：Ting-Wei Tsao，Keeply 创办人 ｜ [LinkedIn](https://www.linkedin.com/in/tingwei-tsao/)*
-
-<!-- self-audit
-Voice rules v0.2.11 (13 rules):
-- [x] R1 PAS order 。 Pain (排斥使用新工具) → Agitate (放弃一个工具) → Solve (2 个动作)
-- [x] R2 站读者那边 。 rapport 句多处：「不是你不聪明」「这合理」「你会懂」
-- [x] R3 视觉位置标记 。 6 张 ![alt](image-N.svg) 全保留
-- [x] R4 抽象层级 purpose-level 。 「直觉性使用」「价值兑现」purpose-level，无 feature-list
-- [x] R5 工具人格化节奏 。 早段「Keeply 默默接住」「Keeply 不动你的习惯」OK；末段切「你会懂」reader's-agency
-- [x] R6 Specifics 4 选一 。 A 先生 + 屏幕前的你 (混用)
-- [x] R7 Motif callback 收紧 。 「30 个功能 vs 2 个动作」title 一次 + body image-1 alt 一次 (≤1)；收尾不再 callback
-- [x] R8 Closing invitational 。 「把文件夹拖进 Keeply，继续做今天的事」邀请语气
-- [x] R9 不演 empathy 。 无「我懂」「我知道你」，改 observational「你应该会」「这合理」
-- [x] R10 Subject-centered outcomes 。 「你已经有 1 周」「你会发现」reader 为主语
-- [x] R11 Heading reader-internal question 。 5 个 H2 全为读者内心问题 (为什么排斥/为什么放弃/2 个动作是什么/会有什么体验/不适合的时候)
-- [x] R12 操作演示 真实 UI 。 「左边的时间轴」「自动保存」「比对」具体；量化「200 字」「14 天」「3 倍」「50 台」
-- [x] R13 Action-only steps + raw emotion 。 动作 1/2 仅动词；收在「真好」raw emotion
-
-T6.5 traps (#54-57):
-- [x] #54 无标语式 punchy opening 。 body 第一段以 A 先生 场景 开场，非标语
-- [x] #55 无 鲜明 编造 micro-detail 。 UI 描述基于真实 Keeply (时间轴/比对/拖拽)
-- [x] #56 动词先行 。 「拖一个文件夹」「改文件」「保存」「打开历史」动词领头
-- [x] #57 具体 victory verb 。 「上手」「你会懂」「真好」，无「就够了」「就好」
-
-Counts:
-- em-dash count: 11 (。) 。 高于平均，但每处皆为 PAS 转折/强调，符合 voice
-- zh char count (excluding markdown/punct/numbers/latin): ~1,650 字 (符合 P1.9 1,200-2,200 区间)
-
-zh-CN 本地化要点：
-- 軟體→软件、檔案→文件、資料夾→文件夹、設定→设置、預設→默认、視窗→窗口、螢幕→(无, 改用「电脑」)、連結→链接、影片→(N/A)、整顆磁碟→整个磁盘
-- 「手邊的事」→「手头的事」、「對啊就是這樣」→保留 (本文未出现)
-- 「儲存」→「保存」、「項目」改用「项目」(zh-TW「專案」→「项目」)
-- 「業界研究」→「业界研究」、「使用者」→「用户」
-- 「教學」→「教程」(tags)
-- AI 写代码 。 「ai」改大写「AI」(zh-CN 通用规范)
-- 「好險」→「好在」(zh-CN 更通用)
-- 「下週」→「下周」、「一週」→「一周」
-- 「電腦」→「电脑」
--->
 
 ---
 
