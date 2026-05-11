@@ -1,6 +1,7 @@
 ---
 title: "Word's version history doesn't cover deliveries 3 months ago"
-description: "Word AutoRecover, OneDrive version history, and Time Machine are all save-layer rescue tools. Retention runs short. From cleared on close to a few hundred versions. Recovering what you delivered 3 months ago takes a tool layer."
+description: "Word AutoRecover, OneDrive version history, and Time Machine are all save-layer rescue tools — retention runs from cleared-on-close to a few hundred versions. Recovering the deliverable you sent 3 months ago needs a tool-layer always-on version history plus delivery-time metadata."
+voice_version: v2-2026-05-11
 date: 2026-05-02T15:00:00+08:00
 draft: false
 slug: "client-asked-which-version"
@@ -101,7 +102,7 @@ You need two layers:
 
 [Keeply](https://keeply.work) provides both layers.
 
-Lisa has used Keeply for half a year. Monday morning, her client asks for the April version of a deck. She finds the attachment in her client's email and drops the `.pdf` into Keeply. Keeply surfaces "**This is the v3 deck from 2026-04-12**". Original `.docx` commit hash plus the purpose tag "client-approved." She clicks "go to this version" and three seconds later Word opens that exact April 12 version, ready to edit.
+Lisa has used Keeply for half a year. Monday morning, her client asks for the April version of a deck. She finds the attachment in her client's email and drops the `.pdf` into Keeply. Keeply surfaces "**This is the v3 deck from 2026-04-12**, the original `.docx` is still in your version history, tagged 'client-approved'." She clicks "go to this version" and three seconds later Word opens that exact April 12 version, ready to edit.
 
 That said, Keeply doesn't replace AutoRecover. If Word crashes mid-document, AutoRecover is still your first line. Keeply also can't rewrite history retroactively: it has to be in use at delivery time for the metadata to embed. For deliveries before you installed Keeply, this article doesn't help. For every delivery from today onward, Keeply will.
 
@@ -125,9 +126,9 @@ Time Machine is a system-level backup, not a per-file version manager. It snapsh
 
 Google doesn't publish a clear retention number. Their [official docs](https://support.google.com/docs/answer/190843) note that "older revisions may be merged" to save space. In practice, revisions older than three months are often merged or pruned automatically.
 
-**Q5: Is Keeply's layer the same as Git?**
+**Q5: Is Keeply in the same category as Git?**
 
-Keeply uses a Git engine under the hood, but Git terminology is hidden from the UI. You'll see "save a version / work copy / sync to project location". Not commit, branch, or push. For non-developers, it's office-language version management.
+No. Git is a version-control tool built for software engineers — its interface is a black terminal, and you have to learn a vocabulary (branch, merge, commit) to use it. Keeply is built for non-engineers from day one: the interface is a file window, the words you see are "save a version / work copy / sync to project location," and there's no engineering jargon. Both solve a similar problem (keeping file history), but the audience, interface, and mental model are different.
 
 ---
 

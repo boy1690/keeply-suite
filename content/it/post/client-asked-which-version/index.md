@@ -1,6 +1,7 @@
 ---
 title: "La cronologia versioni di Word non copre le consegne di 3 mesi fa"
-description: "Word AutoRecover, cronologia versioni OneDrive e Time Machine sono strumenti di salvataggio a livello di archiviazione. La retention è breve. Recuperare ciò che hai consegnato 3 mesi fa richiede uno strato strumentale."
+description: "Word AutoRecover, cronologia versioni OneDrive e Time Machine sono tutti strumenti di salvataggio a livello di archiviazione — retention va da cancellato-alla-chiusura fino a circa 500 versioni. Recuperare ciò che hai consegnato 3 mesi fa richiede una cronologia versioni always-on a livello strumentale più metadata al momento della consegna."
+voice_version: v2-2026-05-11
 date: 2026-05-02T09:00:00+08:00
 draft: false
 slug: "client-asked-which-version"
@@ -121,9 +122,9 @@ Time Machine di Mac è backup a livello di sistema, non gestione versioni per fi
 
 Google non pubblica un numero di retention chiaro. La loro [documentazione ufficiale](https://support.google.com/docs/answer/190843) nota che "revisioni più vecchie possono essere unite" per risparmiare spazio. In pratica, le revisioni più vecchie di tre mesi sono spesso unite o prune automaticamente.
 
-**Q5: Lo strato di Keeply è uguale a Git?**
+**Q5: Keeply è nella stessa categoria di Git?**
 
-Keeply usa un motore Git sotto il cofano, ma la terminologia Git è nascosta dall'interfaccia. Vedrai "salva versione / copia di lavoro / sincronizza alla posizione del progetto". Non commit, branch o push. Per i non sviluppatori, è gestione versioni in linguaggio d'ufficio.
+No. Git è uno strumento di controllo versione costruito per ingegneri software — la sua interfaccia è un terminale nero, e devi imparare un vocabolario (branch, merge, commit) per usarlo. Keeply è costruito per non-ingegneri dal primo giorno: l'interfaccia è una finestra file, le parole che vedi sono "salva una versione / copia di lavoro / sincronizza alla posizione del progetto", e non c'è gergo ingegneristico. Entrambi risolvono un problema simile (conservare la storia dei file), ma il pubblico, l'interfaccia e il modello mentale sono diversi."
 
 ---
 
