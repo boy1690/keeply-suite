@@ -1,6 +1,7 @@
 ---
 title: "The Document Version Control System for People Who Don't Use Git"
-description: "Your `_v3_real_FINAL.docx` habit isn't OCD. It's a survival reflex against an OS that doesn't give you undo. Here are 3 tool designs that fix it."
+description: "Your `_v3_real_FINAL.docx` habit isn't OCD — it's a survival reflex against an OS that doesn't give you undo after Cmd+S. This article unpacks 'too many versions' into 4 separate pains, then walks through 3 tool designs that take the naming burden off your shoulders."
+voice_version: v2-2026-05-11
 date: 2026-05-04T20:15:00+08:00
 draft: false
 slug: too-many-file-versions
@@ -59,6 +60,8 @@ You think you're solving one thing, but it's actually four. Type 1 needs automat
 
 ## You're doing the right thing, the tool just didn't pick up the baton {#tool-side}
 
+Appending `_v3_FINAL` to a filename is logically correct — you need to mark the meaning of each version. The mistake isn't yours; it's that the tool layer never provided "automatic checkpoints" or "automatic milestones," so it dumps the responsibility back onto the filename. You use the only tool you have — the filename — because that's all that's available.
+
 Productivity blogs will tell you to "have a naming convention," circulate a 14-page naming standards PDF, get the team to memorize prefix orders. It sounds reasonable. In practice, it lasts three days.
 
 The problem: **rules push version-management responsibility onto human discipline.** And discipline never wins against automation. Today you remember `2026-05-04_Proposal_v3_signed.docx`. Tomorrow you're rushed and it becomes `Proposal_v3_FINAL.docx`. The day after, the client sends another round and it's `Proposal_v3_FINAL_v2.docx`.
@@ -71,15 +74,15 @@ Three design patterns the tool can use. Each one solves one of the four pain typ
 
 ### Design A: Automatic checkpoints (every Cmd+S keeps history)
 
-You press Cmd+S, the tool quietly preserves the previous version. You don't have to name anything. **Examples**: macOS Time Machine, Word AutoSave ([only goes back 1-2 versions](/en/post/excel-version-history-limits/)), Dropbox 30-day version history. **Keeply** uses a git engine for this, text files use delta storage, binaries above 10MB go into LFS (each version preserved in full). **Solves Type 1.**
+You press Cmd+S, the tool quietly preserves the previous version. You don't have to name anything. **Examples**: macOS Time Machine (Apple's built-in tool that snapshots every hour), Word AutoSave ([only goes back 1-2 versions](/en/post/excel-version-history-limits/)), Dropbox 30-day version history. **Keeply** runs this in the background on your working folder: text files only store what changed, design and image files each keep a full snapshot — so large files don't blow out your disk. **Solves Type 1.**
 
 ### Design B: Named milestones (you mark "client signed" or "shipped")
 
-You actively flag "this version got signed" or "this version went live", from then on, no matter how the file changes, the milestone stays put. **Examples**: Git tags (developer-only), GitHub Releases. **Keeply** has Release built in, with no git terminology in the UI. **Solves Type 2.**
+You actively flag "this version got signed" or "this version went live", from then on, no matter how the file changes, the milestone stays put. **Example**: GitHub Releases (a feature engineers use to freeze a code snapshot as a named milestone — developer-only territory). **Keeply** has a "Release" feature that does the same job without you having to learn any developer terminology: pick a version from history, click "freeze as release," and that version stays recoverable forever. **Solves Type 2.**
 
 ### Design C: Single-file restore (pull one file out of history)
 
-Restore a **single file** from any historical version, without rolling back the whole folder. **Examples**: Dropbox single-file restore, Time Machine single-file restore. **Keeply** adds version-content search and cherry-pick. **Solves Type 1+2 combined scenarios.**
+Restore a **single file** from any historical version, without rolling back the whole folder. **Examples**: Dropbox single-file restore, Time Machine single-file restore. **Keeply** adds version-content search — if you remember "I changed something last week," you can search inside past changes, locate the version, and pull just that one file back. **Solves Type 1+2 combined scenarios.**
 
 You'll notice that of the four pain types, only Type 4 (software auto-save residue) takes a different path: it's a tool-training problem (learn to clear caches), not a version-management one.
 

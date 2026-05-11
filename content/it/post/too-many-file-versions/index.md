@@ -1,6 +1,7 @@
 ---
 title: "Versioni precedenti file Excel: 4 vere cause + come gli strumenti dovrebbero risolverlo"
-description: "La tua serie `_v3_finale_VERO_FINALE.docx` non è OCD. È un riflesso di sopravvivenza contro un OS che non ti dà undo. Ecco 3 design di strumenti che lo risolvono."
+description: "La tua serie `_v3_finale_VERO_FINALE.docx` non è OCD — è un riflesso di sopravvivenza contro un OS che non ti dà undo dopo Cmd+S. Questo articolo apre «troppe versioni» in 4 dolori separati e mostra 3 design di strumento che si prendono il peso del naming dalle tue spalle."
+voice_version: v2-2026-05-11
 date: 2026-05-04T20:15:00+08:00
 draft: false
 slug: too-many-file-versions
@@ -59,6 +60,8 @@ Pensi di risolvere una cosa, ma in realtà ne sono quattro. Il Tipo 1 ha bisogno
 
 ## Stai facendo la cosa giusta, lo strumento non ha raccolto il testimone {#tool-side}
 
+Aggiungere `_v3_FINALE` a un nome di file è logicamente corretto — devi segnare il significato di ogni versione. L'errore non è tuo; è che il livello dello strumento non ha mai fornito "checkpoint automatici" o "milestone automatici", e quindi scarica la responsabilità sul nome del file. Usi l'unico strumento che hai — il nome del file — perché è l'unica cosa disponibile.
+
 I blog di produttività ti diranno di "avere una convenzione di denominazione," far circolare un PDF di standard di denominazione di 14 pagine, far memorizzare alla squadra l'ordine dei prefissi. Suona ragionevole. In pratica, dura tre giorni.
 
 Il problema: **le regole spingono la responsabilità della gestione versioni sulla disciplina umana.** E la disciplina non vince mai contro l'automazione. Oggi ricordi `2026-05-04_Proposta_v3_firmata.docx`. Domani sei di fretta e diventa `Proposta_v3_FINALE.docx`. Il giorno dopo il cliente manda un altro giro ed è `Proposta_v3_FINALE_v2.docx`.
@@ -71,15 +74,15 @@ Tre pattern di design che lo strumento può usare. Ognuno risolve uno dei quattr
 
 ### Design A: Checkpoint automatici (ogni Cmd+S mantiene la cronologia)
 
-Premi Cmd+S, lo strumento conserva silenziosamente la versione precedente. Non devi nominare niente. **Esempi**: macOS Time Machine, Word AutoSave (torna indietro solo di 1-2 versioni), Dropbox cronologia versioni 30 giorni. **Keeply** usa un motore git per questo, i file di testo usano delta storage, i binari sopra 10MB vanno in LFS (ogni versione preservata per intero). **Risolve Tipo 1.**
+Premi Cmd+S, lo strumento conserva silenziosamente la versione precedente. Non devi nominare niente. **Esempi**: macOS Time Machine (lo strumento integrato di Apple che fa snapshot ogni ora), Word AutoSave (torna indietro solo di 1-2 versioni), Dropbox cronologia versioni 30 giorni. **Keeply** fa questo in background sulla tua cartella di lavoro: i file di testo memorizzano solo cosa è cambiato, mentre file di design e immagini conservano per intero ogni snapshot — così i file grandi non saturano il disco. **Risolve Tipo 1.**
 
 ### Design B: Milestone nominati (segni tu "cliente firmato" o "rilasciato")
 
-Marchi attivamente "questa versione è firmata" o "questa versione è andata in produzione", da quel momento, qualunque cosa cambi, il milestone resta. **Esempi**: Git tag (solo per sviluppatori), GitHub Release. **Keeply** ha Release integrato, senza terminologia git nell'UI. **Risolve Tipo 2.**
+Marchi attivamente "questa versione è firmata" o "questa versione è andata in produzione", da quel momento, qualunque cosa cambi, il milestone resta. **Esempio**: GitHub Releases (una funzione che gli ingegneri usano per congelare uno snapshot di codice come milestone nominato — territorio per soli sviluppatori). **Keeply** ha una funzione "Release" che fa lo stesso lavoro senza che tu debba imparare terminologia da sviluppatore: prendi una versione dalla cronologia, clicca "congela come release", e quella versione resta recuperabile per sempre. **Risolve Tipo 2.**
 
 ### Design C: Ripristino singolo file (tira fuori un file dalla cronologia)
 
-Ripristina un **singolo file** da qualunque versione storica, senza fare rollback dell'intera cartella. **Esempi**: ripristino singolo file Dropbox, ripristino singolo file Time Machine. **Keeply** aggiunge ricerca contenuto-versione e cherry-pick. **Risolve scenari combinati Tipo 1+2.**
+Ripristina un **singolo file** da qualunque versione storica, senza fare rollback dell'intera cartella. **Esempi**: ripristino singolo file Dropbox, ripristino singolo file Time Machine. **Keeply** aggiunge ricerca nel contenuto delle versioni — se ricordi "ho cambiato qualcosa la settimana scorsa", puoi cercare dentro le modifiche passate, individuare la versione, e tirare fuori solo quel file. **Risolve scenari combinati Tipo 1+2.**
 
 Noterai che dei quattro tipi di dolore, solo il Tipo 4 (residui auto-save software) prende una strada diversa: è un problema di formazione sullo strumento (impara a pulire le cache), non di gestione versioni.
 
@@ -88,7 +91,7 @@ Noterai che dei quattro tipi di dolore, solo il Tipo 4 (residui auto-save softwa
 Keeply non risolve ogni scenario:
 
 - **Materiale video grezzo**: Decine di GB di footage Premiere accumulati ogni giorno. Il disco non basta. Keeply non è una soluzione di archiviazione fredda.
-- **Cartelle con 1M+ file**: L'onboarding di Keeply è progettato per centinaia o migliaia di file.
+- **Cartelle con oltre 1M di file**: Keeply è progettato per cartelle di lavoro da centinaia a migliaia di file. Oltre rallenta.
 - **Conflitti merge cross-team frequenti**: L'UI di risoluzione conflitti di Keeply è ancora limitata.
 - **Bloccare versioni finali contratti / consegne cliente**: È uno scenario che dovrebbe essere nominato manualmente. Lo strumento non dovrebbe automatizzarlo.
 
