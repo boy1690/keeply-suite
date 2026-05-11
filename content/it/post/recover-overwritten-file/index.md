@@ -59,7 +59,7 @@ Microsoft Office ha tre meccanismi di "**recupero versione**" integrati:
 
 - **AutoRecover**: salva il contenuto non salvato durante una crash. Intervallo di salvataggio automatico predefinito di 10 minuti. **Cancellato quando il file si chiude normalmente.**
 - **Versioni precedenti** (Windows): torna a snapshot passati tramite copie shadow. Richiede configurazione preventiva.
-- **Cronologia versioni OneDrive**: snapshot di ogni salvataggio. La [documentazione Microsoft](https://support.microsoft.com/it-it/office/restore-a-previous-version-of-a-file-stored-in-onedrive-159cad6d-d76e-4981-88ef-de6e96c93893) nota circa 500 versioni principali conservate.
+- **Cronologia versioni OneDrive**: snapshot di ogni salvataggio. La [documentazione Microsoft](https://learn.microsoft.com/it-it/sharepoint/document-library-version-history-limits) nota 500 versioni principali di default (account Microsoft personali: 25).
 
 L'intento progettuale è chiaro: questi tre sono per "**recupero da crash**" o "**incidenti di salvataggio recenti**". Non per lo scenario "**mi rendo conto di averlo sovrascritto dopo aver chiuso il file**".
 
@@ -70,14 +70,14 @@ Per vedere il limite di ogni meccanismo, confrontali fianco a fianco:
 | Meccanismo | Ti salva in… | Non ti salva in… | Note |
 | --- | --- | --- | --- |
 | AutoRecover | Crash a metà documento | Sovrascrittura dopo chiusura normale | Cancellato alla chiusura |
-| OneDrive [cronologia versioni](https://support.microsoft.com/it-it/office/enable-and-configure-versioning-for-a-list-or-library-1555d642-23ee-446a-990a-bcab618c7a37) | Entro le 500 versioni precedenti | Oltre 500, file solo locali | Salvataggio cloud richiesto |
+| OneDrive [cronologia versioni](https://learn.microsoft.com/it-it/sharepoint/document-library-version-history-limits) | Entro le 500 versioni precedenti (25 sugli account personali) | Oltre 500, file solo locali | Salvataggio cloud richiesto |
 | Versioni precedenti Windows | Se esiste copia shadow | Senza setup, ambienti SSD | Setup necessario |
 | Software di recupero dati | Subito dopo sovrascrittura, settori intatti | Ore dopo, dopo SSD TRIM | Tasso successo dipende da ambiente |
 | Mac [Time Machine](https://support.apple.com/it-it/HT201250) | Snapshot recente | Tra gli intervalli di snapshot | Setup separato |
 
 Esatto, è proprio il vincolo. Nessuno di questi meccanismi arriva strutturalmente al tipico scenario "sovrascritto dopo un salvataggio normale".
 
-Ciò che osserviamo presso i clienti è quasi sempre questo scenario.
+Quello che gli utenti Keeply riportano più spesso è quasi sempre questo scenario.
 
 ## Perché "dopo il salvataggio sovrascritto" è già troppo tardi
 

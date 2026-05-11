@@ -59,7 +59,7 @@ Microsoft Office has three "**version recovery**" mechanisms built in:
 
 - **AutoRecover**: rescues unsaved content during a crash. Default 10-minute auto-save interval. **Cleared once the file closes normally.**
 - **Previous Versions** (Windows): rolls back to past snapshots via shadow copies. Requires prior setup.
-- **OneDrive version history**: snapshots of every save. The [Microsoft documentation](https://support.microsoft.com/en-us/office/restore-a-previous-version-of-a-file-stored-in-onedrive-159cad6d-d76e-4981-88ef-de6e96c93893) notes about 500 major versions retained.
+- **OneDrive version history**: snapshots of every save. The [Microsoft documentation](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits) notes a default of 500 major versions retained (personal Microsoft accounts: 25).
 
 The design intent is clear: these three are for "**crash rescue**" or "**recent save mishaps**". Not for the "**realized I overwrote it after closing the file**" scenario.
 
@@ -70,14 +70,14 @@ To see where each mechanism's boundary lies, compare them side by side:
 | Mechanism | Saves you in… | Doesn't save you in… | Notes |
 | --- | --- | --- | --- |
 | AutoRecover | Crash mid-document | Overwrite after normal close | Cleared on file close |
-| OneDrive [version history](https://support.microsoft.com/en-us/office/enable-and-configure-versioning-for-a-list-or-library-1555d642-23ee-446a-990a-bcab618c7a37) | Within ~500 prior versions | Beyond 500, local-only files | Cloud save required |
+| OneDrive [version history](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits) | Within ~500 prior versions (25 on personal accounts) | Beyond 500, local-only files | Cloud save required |
 | Windows Previous Versions | If shadow copy exists | No setup, SSD environments | Setup needed |
 | Data recovery software | Right after overwrite, sectors untouched | Hours later, after SSD TRIM | Success rate environment-dependent |
 | Mac [Time Machine](https://support.apple.com/en-us/HT201250) | Recent snapshot | Within snapshot interval | Separate setup |
 
 That's exactly the bind. None of these mechanisms structurally reaches the typical "overwrote after a normal save" scenario.
 
-What we observe at client sites is almost always this exact scenario.
+What Keeply users most often report is almost always this exact scenario.
 
 ## Why "after the overwrite save" is too late
 
