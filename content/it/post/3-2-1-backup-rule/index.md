@@ -1,6 +1,7 @@
 ---
 title: "La regola 3-2-1 del backup: 20 anni dopo, basta ancora nel 2026?"
-description: "3-2-1 è necessario, ma fin dalla progettazione non gestisce l'operator-error. Questo articolo analizza cosa la regola 3-2-1 protegge, cosa non protegge, e cosa serve per quel livello mancante."
+description: "La regola 3-2-1 del backup (3 copie, 2 supporti, 1 fuori sede) protegge da guasti hardware, incendi e ransomware. Ma fin dalla progettazione non gestisce l'errore utente — tu che sovrascrivi la tua versione, la sincronizzazione cloud che replica la versione sbagliata in tutte e tre le copie. Ecco cosa la 3-2-1 copre, cosa no, e come chiudere il vuoto."
+voice_version: v2-2026-05-11
 date: 2026-05-02T09:00:00+08:00
 draft: false
 slug: "3-2-1-backup-rule"
@@ -38,7 +39,7 @@ La regola 3-2-1 non si è mai mossa, ma la tua vera minaccia sì.
 
 ## Punti chiave
 
-La **regola 3-2-1 del backup** è necessaria: tre copie, due tipi di supporto, una fuori sede. Protegge dai guasti hardware, incendi, ransomware, gli scenari di disastro. Ma fin dalla progettazione non gestisce **operator-error**: tu che sovrascrivi il tuo file, un collega che modifica la versione sbagliata, la sincronizzazione cloud che replica la versione errata in tutte e tre le copie. Questo articolo analizza cosa la 3-2-1 copre, cosa non copre, e cosa serve per quel livello mancante.
+La **regola 3-2-1 del backup** è necessaria: tre copie, due tipi di supporto, una fuori sede. Protegge dai guasti hardware, incendi, ransomware, gli scenari di disastro. Ma fin dalla progettazione non gestisce l'**errore utente**: tu che sovrascrivi il tuo file, un collega che modifica la versione sbagliata, la sincronizzazione cloud che replica la versione errata in tutte e tre le copie. Questo articolo analizza cosa la 3-2-1 copre, cosa non copre, e cosa serve per quel livello mancante.
 
 ## Indice
 
@@ -61,6 +62,8 @@ La regola 3-2-1 viene da [*The DAM Book*](https://www.oreilly.com/library/view/t
 Nel 2005 i supporti dominanti erano nastri, CD/DVD, dischi rigidi meccanici. I tassi di guasto erano alti, i supporti invecchiavano in fretta. L'intento progettuale era chiaro: **fare in modo che nessun guasto hardware singolo, degrado del supporto o disastro nella struttura potesse cancellare i tuoi file**.
 
 ## Da cosa protegge la 3-2-1, e da cosa no?
+
+La 3-2-1 protegge da tutto ciò che fa *sparire* un file — guasto del disco, incendio in ufficio, cifratura ransomware. Non protegge dal file che c'è ancora ma è sbagliato — tu che sovrascrivi la tua versione, un collega che modifica la cartella condivisa sbagliata, tu che hai bisogno della proposta di tre mesi fa. Gli scenari messi in fila:
 
 Per vedere dove la 3-2-1 regge, guarda come si presenta davvero "perdere un file":
 
@@ -99,7 +102,7 @@ Sì. [Keeply](https://keeply.work) integra la 3-2-1 nello strato di posizione:
 - **Posizione canonica del progetto**: il deposito canonico su NAS o cloud (conta come "2 supporti")
 - **Posizione di backup**: l'intero progetto sincronizzato in un'altra posizione fisica (la "1 fuori sede")
 
-Aggiungi cronologia versioni a livello git, più un meccanismo di freezing per Release. Uno strumento, tre livelli di protezione.
+Aggiungi cronologia versioni automatica a ogni salvataggio, più un meccanismo di "Release" — uno snapshot che puoi marcare come "questa versione è andata al cliente" e che i salvataggi successivi non possono sovrascrivere. Uno strumento, tre livelli di protezione.
 
 Keeply non decide dove va la posizione di backup. Se tieni il computer e il backup nello stesso ufficio, un incendio prende entrambi. Nessuno strumento risolve questo. Il principio "fuori sede" rimane responsabilità tua.
 
@@ -113,7 +116,7 @@ Ma non hai bisogno di due strumenti separati: uno per la ridondanza spaziale e u
 
 **Q2: Il backup cloud conta come copia "fuori sede" della 3-2-1?**
 
-Sì. Ma iCloud, OneDrive e Google Drive sono sincronizzazione, non backup. Se cancelli o sovrascrivi localmente, il cloud sincronizza la stessa modifica in pochi secondi. **Non proteggono da operator-error.**
+Sì. Ma iCloud, OneDrive e Google Drive sono sincronizzazione, non backup. Se cancelli o sovrascrivi localmente, il cloud sincronizza la stessa modifica in pochi secondi. **Non proteggono dall'errore utente.**
 
 **Q3: Il NAS conta come 2 tipi di supporto?**
 
@@ -121,7 +124,7 @@ NAS più un disco locale possono contare come 2 supporti. Ma RAID non è un back
 
 **Q4: Keeply è già 3-2-1?**
 
-Sì. Keeply integra la 3-2-1 nel suo strato di posizione (copia di lavoro locale + canonica + posizione di backup) e aggiunge cronologia versioni e freezing Release. Uno strumento, tre livelli.
+Sì. Keeply integra la 3-2-1 nel suo strato di posizione (copia di lavoro locale + canonica + posizione di backup) e aggiunge cronologia versioni e la funzione "Release" (marca una versione come pietra miliare, così i salvataggi successivi non possono sovrascriverla). Uno strumento, tre livelli.
 
 **Q5: Anche i lavoratori autonomi hanno bisogno della 3-2-1?**
 
