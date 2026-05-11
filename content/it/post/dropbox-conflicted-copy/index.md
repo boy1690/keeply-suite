@@ -1,6 +1,7 @@
 ---
 title: "Dropbox copia in conflitto: perché continua a comparire (3 design di sync che lo risolvono)"
-description: "La copia in conflitto non è un bug, è il risultato di Dropbox che usa last-writer-wins senza un livello di rilevazione conflitti."
+description: "`(copia in conflitto)` non è un bug — è il risultato di Dropbox che salva la versione dell'ultimo writer sopra quella precedente, senza un livello di rilevazione conflitti. L'articolo apre 4 scenari che lo scatenano, più 3 design di sync che risolvono davvero il meccanismo."
+voice_version: v2-2026-05-11
 date: 2026-05-05T05:55:00+08:00
 draft: false
 slug: dropbox-conflicted-copy
@@ -53,7 +54,7 @@ Non è ovvio finché non ci sbatti: basta uno di questi a scatenare una copia in
 
 ## Perché Dropbox l'ha progettato così {#why-dropbox-design}
 
-Dropbox usa **last-writer-wins + salva la versione precedente separatamente**: due persone editano, l'upload successivo vince, la versione precedente è preservata come `(copia in conflitto)`.
+Dropbox usa il meccanismo "l'ultimo writer vince + salva separatamente la versione precedente": due persone editano, l'upload successivo vince, la versione precedente è preservata come `(copia in conflitto)`.
 
 Non è che la rilevazione conflitti sia tecnicamente difficile. È un trade-off commerciale:
 
@@ -79,19 +80,19 @@ Confrontato con i top 3 di Google (Dropbox Help / EaseUS / Wondershare): tutti g
 
 Tre pattern di design che sync può usare. Ognuno risolve scenari di collisione diversi:
 
-### Design A: Detect-and-prompt sync (merge stile Git)
+### Design A: Rileva e chiedi (la sync ti chiede prima)
 
-Due lati editano lo stesso file, sync rileva collisione, UI chiede all'utente: tieni A, tieni B, o unisci entrambi i cambiamenti. **Esempi**: Git (cerchia CLI), **Keeply** spec M3-100 conflict-detection (incartato in linguaggio ufficio, nessun "merge conflict" gergo). **Risolve scenari #1 + #2.**
+Due lati editano lo stesso file, la sync rileva la collisione e chiede all'utente: tieni A, tieni B, o unisci entrambi i cambiamenti. **Esempio**: gli strumenti di controllo versione usati dagli sviluppatori funzionano così. **Keeply** porta la stessa rilevazione negli strumenti d'ufficio — quando c'è una collisione, ti chiede in linguaggio piano ("la versione di Anna" / "la tua versione" / "combina entrambe") invece di buttarti addosso terminologia tecnica. **Risolve scenari #1 + #2.**
 
-### Design B: File locking (check-out atomico)
+### Design B: File locking (chi apre per primo lo usa)
 
-Apri il file, lo strumento auto-blocca. Il collega lo apre e vede "Anna sta editando", non può cambiare. **Esempi**: SharePoint, Adobe Creative Cloud Files, Bentley ProjectWise. **Risolve scenari #1 + #3 + #4 interamente**, trade-off: il collega deve aspettare.
+Apri il file, lo strumento lo blocca automaticamente. Il collega lo apre e vede "Anna sta editando", non può cambiare e deve aspettare. **Esempi**: SharePoint, Adobe Creative Cloud Files, Bentley ProjectWise (un sistema di project management usato in edilizia/ingegneria). **Risolve scenari #1 + #3 + #4**, trade-off: il collega deve aspettare.
 
-### Design C: Local Clone + sync manuale (modello Keeply)
+### Design C: Copia locale + push manuale (modello Keeply)
 
-Working copy vive sulla tua macchina, sync è push attivo (non mirror real-time). Collisione rilevata su push, UI chiede all'utente. **Esempi**: il Local Clone Pattern di **Keeply** (spec M3-098) + SMB safety layer (M3-095) + conflict-detection (M3-100). **Risolve scenari #1-#4 in pieno**, trade-off: non istantaneo come Dropbox.
+La tua versione di lavoro vive sulla tua macchina, la sync è un push attivo che fai tu (non il mirror real-time di Dropbox). Le collisioni sono rilevate al momento del push e mostrate in un'interfaccia in linguaggio piano. **Keeply** percorre questa strada: edita in locale, controlla la diff, poi pusha su NAS / SharePoint / cartella condivisa quando sei sicuro — niente sovrascritture a sorpresa. **Risolve scenari #1-#4**, trade-off: non istantaneo come Dropbox.
 
-Noterai che lo scenario #4 (ritardo sync cross-OS) è il più difficile, è puro problema di orologio. Design A e C possono detect, ma la risoluzione richiede ancora l'utente.
+Noterai che lo scenario #4 (disallineamento orologio cross-OS) è il più difficile, è puro problema di orologio. Design A e C possono rilevarlo, ma la risoluzione richiede ancora l'utente.
 
 ## Quando non è lo strumento giusto {#boundaries}
 

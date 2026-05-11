@@ -1,6 +1,7 @@
 ---
 title: "드롭박스 충돌된 사본이 계속 생기는 이유 (4 가지 sync 설계로 근본 해결)"
-description: "충돌된 사본은 버그가 아닙니다. Dropbox 가 last-writer-wins 로 충돌 감지층 없이 설계한 결과입니다."
+description: "`(충돌된 사본)` 은 버그가 아닙니다 — Dropbox가 충돌 감지층 없이 나중에 저장된 버전이 앞 버전을 덮어쓰도록 설계한 결과입니다. 본문은 4가지 트리거 시나리오와 근본 해결을 위한 3가지 동기화 설계를 정리합니다."
+voice_version: v2-2026-05-11
 date: 2026-05-05T05:55:00+08:00
 draft: false
 slug: dropbox-conflicted-copy
@@ -53,9 +54,9 @@ faq_schema:
 
 ## Dropbox 가 이렇게 설계한 이유 {#why-dropbox-design}
 
-Dropbox 는 **last-writer-wins + 옛 버전을 따로 저장** 으로 설계: 두 명 동시 편집, 나중 업로드가 이김, 앞 버전은 `(충돌된 사본)` 으로 보존.
+Dropbox 는 「나중에 저장한 버전이 이기고, 앞 버전을 따로 보관」 으로 설계: 두 명 동시 편집, 나중 업로드가 이김, 앞 버전은 `(충돌된 사본)` 으로 보존.
 
-충돌 감지가 기술적으로 어려운 게 아닙니다. 상업 트레이드오프 입니다:
+충돌 감지가 기술적으로 어려운 게 아닙니다. 상업적 트레이드오프입니다:
 
 - **실시간 경험 우선**: 동기화 가 작업을 막을 수 없음. 매번 「병합 방식 선택」이 뜨면 Dropbox 가 불편해짐.
 - **충돌 해결을 사용자에게 떠넘김**: 다른 버전 별도 저장 = 「다 보관해드릴게요, 직접 결정하세요」
@@ -79,28 +80,28 @@ Google 상위 3 위 (Dropbox Help / EaseUS / Wondershare) 와 비교: 모두 증
 
 동기화 설계가 할 수 있는 일을 3 가지 패턴으로 나눕니다. 각각 다른 충돌 시나리오 해결:
 
-### Design A: Detect-and-prompt sync (Git 식 merge)
+### 설계 A: 감지 + 확인 (동기화 시 먼저 묻기)
 
-양쪽이 같은 파일 편집, 동기화 시 충돌 감지, UI 알림 창 가 사용자에게 선택 요청: A 유지, B 유지, 둘 다 병합. **예**: Git (CLI 권), **Keeply** spec M3-100 conflict-detection (오피스 언어로 wrap, 「merge conflict」jargon 없음). **시나리오 #1 + #2 해결.**
+양쪽이 같은 파일을 편집, 동기화 시 충돌을 감지하고 UI로 사용자에게 묻기: A 유지, B 유지, 둘 다 병합. **예**: 엔지니어들이 쓰는 버전 관리 도구가 이 방식. **Keeply** 는 같은 감지를 오피스 도구에 가져옴: 충돌이 일어나면 「Anna 의 버전 / 당신의 버전 / 둘 다 합치기」 같은 일상 언어로 묻고, 전문 용어는 보여주지 않습니다. **시나리오 #1 + #2 해결.**
 
-### Design B: File locking (atomic check-out)
+### 설계 B: 파일 잠금 (먼저 연 사람이 사용)
 
-파일을 열면 도구가 자동 lock. 동료가 열면 「Anna 가 편집 중」 표시, 변경 불가. **예**: SharePoint, Adobe Creative Cloud Files, Bentley ProjectWise. **시나리오 #1 + #3 + #4 전부 해결**, 트레이드오프: 동료가 기다려야 함.
+파일을 열면 도구가 자동으로 잠금. 동료가 열면 「Anna 가 편집 중」 표시되어 변경 불가, 기다려야 함. **예**: SharePoint, Adobe Creative Cloud Files, Bentley ProjectWise (건설·엔지니어링 업계에서 쓰는 프로젝트 관리 시스템). **시나리오 #1 + #3 + #4 해결**, 트레이드오프: 동료가 기다려야 함.
 
-### Design C: Local Clone + manual 동기화 (Keeply 모델)
+### 설계 C: 로컬 사본 + 능동 푸시 (Keeply 모델)
 
-Working 사본 는 당신 머신에, 동기화 는 능동적 푸시 (실시간 미러가 아님). 충돌 은 푸시 시 감지, UI 알림 창 가 사용자에게 선택 요청. **예**: **Keeply** 의 Local Clone Pattern (spec M3-098) + SMB safety layer (M3-095) + conflict-detection (M3-100). **시나리오 #1-#4 전부 해결**, 트레이드오프: Dropbox 만큼 즉시는 아님.
+작업 버전은 당신 머신에 있고, 동기화는 당신이 「푸시」를 능동적으로 누름 (Dropbox 의 실시간 미러가 아님). 충돌은 푸시 시 감지하고 일상 언어 UI 로 묻습니다. **Keeply** 는 이 방식: 로컬에서 편집, 차이를 눈으로 확인, 문제 없으면 NAS / SharePoint / 공유 폴더로 푸시 — 「Dropbox 가 모르는 사이에 당신의 버전을 덮어쓰는」 깜짝 상황이 없습니다. **시나리오 #1-#4 해결**, 트레이드오프: Dropbox 만큼 즉시는 아님.
 
-이때 알게 됩니다, 시나리오 #4 (크로스 OS 동기화 지연) 가 가장 어렵습니다, 순수 시계 문제니까. Design A 와 C 는 detect 가능하지만, 해결은 여전히 사용자 개입 필요.
+이때 알게 됩니다, 시나리오 #4 (OS 간 시계 차이) 가 가장 어렵습니다, 순수 시계 문제니까. 설계 A 와 C 는 감지 가능하지만, 해결은 여전히 사용자 개입 필요.
 
 ## Keeply 가 맞지 않는 경우 {#boundaries}
 
 Keeply 가 모든 Dropbox 시나리오를 해결하진 않습니다:
 
-- **대용량 파일 실시간 동기화**: Premiere 프로젝트 편집하며 동기화, Keeply 의 Local Clone 모델은 부적합 (푸시 몇 분).
-- **모바일 디바이스 접근**: Keeply 는 데스크톱 우선, Dropbox 앱 이 폰에서 훨씬 부드러움.
+- **대용량 파일 실시간 동기화**: Premiere 프로젝트를 편집하며 동기화, Keeply 의 로컬 사본 모델은 부적합 (푸시에 몇 분).
+- **모바일 디바이스 접근**: Keeply 는 데스크톱 우선, Dropbox 앱이 폰에서 훨씬 부드러움.
 - **외부 공유 링크**: Dropbox 의 「Share link」는 Keeply 에 대응 기능 없음.
-- **협업 빈도 매우 높음** (1 시간 내 여러 편집): Keeply UX 가 Dropbox 보다 느림, 그 경우엔 Google Docs 공동 편집 사용 권장.
+- **협업 빈도 매우 높음** (1 시간 내에 여러 명이 번갈아 편집): Keeply UX 가 Dropbox 보다 느림, 그 경우엔 Google Docs 공동 편집 사용 권장.
 
 ## 다음에 `(충돌된 사본)` 을 보기 전에
 

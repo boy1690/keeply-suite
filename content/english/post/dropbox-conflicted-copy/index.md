@@ -1,6 +1,7 @@
 ---
 title: "Dropbox Conflicted Copy: Why It Keeps Coming Back (And 3 Sync Designs That Actually Fix It)"
-description: "Conflicted copy isn't a bug, it's the result of Dropbox using last-writer-wins without a conflict-detection layer."
+description: "`(conflicted copy)` isn't a bug — it's the result of Dropbox saving the later writer's version on top of the earlier one with no conflict-detection layer. This article unpacks 4 scenarios that trigger it, plus 3 sync designs that actually fix the mechanism."
+voice_version: v2-2026-05-11
 date: 2026-05-05T05:55:00+08:00
 draft: false
 slug: dropbox-conflicted-copy
@@ -79,19 +80,19 @@ Compared to Google's top 3 (Dropbox Help / EaseUS / Wondershare): all symptom-tr
 
 Three design patterns sync can use. Each one solves different collision scenarios:
 
-### Design A: Detect-and-prompt sync (Git-style merge)
+### Design A: Detect and prompt (sync asks you first)
 
-Two ends edit the same file, sync detects collision, UI prompts the user: keep A, keep B, or merge both changes. **Examples**: Git (CLI crowd), **Keeply** spec M3-100 conflict-detection (wrapped in office language, no "merge conflict" jargon). **Solves scenarios #1 + #2.**
+Two ends edit the same file, sync detects a collision and prompts the user: keep A, keep B, or merge both changes. **Example**: developer version-control tools work this way. **Keeply** brings the same detection into office tooling — when a collision happens, it asks you in plain language ("Anna's version" / "your version" / "combine both") instead of throwing engineering terminology at you. **Solves scenarios #1 + #2.**
 
-### Design B: File locking (atomic check-out)
+### Design B: File locking (whoever opens first gets it)
 
-You open the file, the tool auto-locks. Your colleague opens it and sees "Anna is editing", can't change it. **Examples**: SharePoint, Adobe Creative Cloud Files, Bentley ProjectWise. **Solves scenarios #1 + #3 + #4 entirely**, trade-off: colleague has to wait.
+You open the file, the tool auto-locks it. Your colleague opens it and sees "Anna is editing", they can't change it and have to wait. **Examples**: SharePoint, Adobe Creative Cloud Files, Bentley ProjectWise (a project management system used in construction/engineering). **Solves scenarios #1 + #3 + #4**, trade-off: colleague has to wait.
 
-### Design C: Local Clone + manual sync (Keeply's model)
+### Design C: Local copy + manual push (Keeply's model)
 
-Working copy lives on your machine, sync is an active push (not real-time mirror). Collision is detected on push, UI prompts the user. **Examples**: **Keeply**'s Local Clone Pattern (spec M3-098) + SMB safety layer (M3-095) + conflict-detection (M3-100). **Solves scenarios #1-#4 in full**, trade-off: not as instant as Dropbox.
+Your working version lives on your machine, sync is an active push you trigger (not Dropbox's real-time mirror). Collisions are detected at push time and surfaced in a plain-language UI. **Keeply** takes this route: edit locally, eyeball the diff, then push up to your NAS / SharePoint / shared folder once you're sure — no surprise overwrites. **Solves scenarios #1-#4**, trade-off: not as instant as Dropbox.
 
-You'll notice scenario #4 (cross-OS sync delay) is the hardest, it's a pure clock problem. Designs A and C can detect it, but resolution still needs the user.
+You'll notice scenario #4 (cross-OS clock drift) is the hardest, it's a pure clock problem. Designs A and C can detect it, but resolution still needs the user.
 
 ## When this isn't the right tool {#boundaries}
 
