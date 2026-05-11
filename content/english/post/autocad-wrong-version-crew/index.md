@@ -80,7 +80,7 @@ You might think, "Fine, I'll just double-check every time I'm in the office." In
 
 One detail, from first schematic to issued-for-construction, goes through a lot of versions. Owner adds a comment. Revision. Field walk turns up a utility conflict. Revision. Structural engineer reviews. Revision. **Then the architect goes to rev 5 and the owner says "actually rev 2's edge detail was cleaner," so it flips back**. You open the folder and see six files, two of which are nearly identical. But you can't tell which one is the one that counts right now.
 
-If you waited for the architect to fully "finalize" before you let the crew start, the schedule would crush you. Three trades are stacked up behind this section. Every day you hold, you burn labor, equipment, and float. So the GC takes the calculated risk ,  **proceeds on the latest seen version**, betting the next revision won't be drastic.
+If you waited for the architect to fully "finalize" before you let the crew start, the schedule would crush you. Three trades are stacked up behind this section. Every day you hold, you burn labor, equipment, and float. So the GC takes the calculated risk — **proceeds on the latest seen version**, betting the next revision won't be drastic.
 
 Most of the time the bet pays off. Sometimes it doesn't. That's this week.
 
@@ -154,7 +154,7 @@ Let's be honest. This isn't for everyone in construction. But the exclusion list
 
 **One-person shops need it too.** You might think: "It's just me on this project from start to finish, do I really need version control?" You do. Because three months from now, looking at the same file, **you will forget why past-you made the change**. A timeline stores more than the file itself. It stores the reason at the moment. Future-you will thank present-you for leaving the trail.
 
-Everyone else. Small-to-midsize residential, commercial, interior fit-out, drainage, landscape, roads, campus work, public works, BIM projects, solo designers, design firms ,  **if your work involves a file being changed and reopened later by someone else or by future-you, you need a timeline.** Every time that line breaks, time and money walk out of your pocket.
+Everyone else. Small-to-midsize residential, commercial, interior fit-out, drainage, landscape, roads, campus work, public works, BIM projects, solo designers, design firms — **if your work involves a file being changed and reopened later by someone else or by future-you, you need a timeline.** Every time that line breaks, time and money walk out of your pocket.
 
 ---
 

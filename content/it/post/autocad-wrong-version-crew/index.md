@@ -80,7 +80,7 @@ Potresti pensare: "Va bene, ricontrollerò ogni volta che sono in ufficio." In t
 
 Un dettaglio, dal primo schema all'emesso per costruzione, passa per molte versioni. Il committente aggiunge un commento. Revisione. Un sopralluogo trova un conflitto con i sottoservizi. Revisione. L'ingegnere strutturista revisiona. Revisione. **Poi l'architetto arriva alla rev 5 e il committente dice "in realtà il dettaglio del bordo della rev 2 era più pulito", così si torna indietro**. Apri la cartella e vedi sei file, due dei quali quasi identici. Ma non riesci a capire quale sia quello che conta in questo momento.
 
-Se aspettassi che l'architetto "finalizzi" completamente prima di lasciar partire la squadra, il cronoprogramma ti schiaccerebbe. Tre maestranze sono accodate dietro questa sezione. Ogni giorno che trattieni, bruci manodopera, attrezzature e margine. Quindi l'impresa generale prende il rischio calcolato ,  **procede sull'ultima versione vista**, scommettendo che la prossima revisione non sarà drastica.
+Se aspettassi che l'architetto "finalizzi" completamente prima di lasciar partire la squadra, il cronoprogramma ti schiaccerebbe. Tre maestranze sono accodate dietro questa sezione. Ogni giorno che trattieni, bruci manodopera, attrezzature e margine. Quindi l'impresa generale prende il rischio calcolato — **procede sull'ultima versione vista**, scommettendo che la prossima revisione non sarà drastica.
 
 Il più delle volte la scommessa paga. A volte no. È questa settimana.
 
@@ -154,7 +154,7 @@ Siamo onesti. Non è per tutti nell'edilizia. Ma la lista delle esclusioni è pi
 
 **Anche i singoli professionisti ne hanno bisogno.** Potresti pensare: "Sono solo io su questo progetto dall'inizio alla fine, ho davvero bisogno del controllo versioni?" Sì. Perché tra tre mesi, guardando lo stesso file, **dimenticherai perché il tu di prima ha fatto quel cambio**. Una cronologia conserva più del file stesso. Conserva il motivo nel momento. Il tu del futuro ringrazierà il tu del presente per aver lasciato la traccia.
 
-Tutti gli altri. Residenziale piccolo e medio, commerciale, finiture d'interni, drenaggi, paesaggio, strade, lavori di campus, lavori pubblici, progetti BIM, designer singoli, studi di progettazione ,  **se il tuo lavoro coinvolge un file che viene cambiato e riaperto in seguito da qualcun altro o dal tu del futuro, hai bisogno di una cronologia.** Ogni volta che quella linea si rompe, tempo e denaro escono dalla tua tasca.
+Tutti gli altri. Residenziale piccolo e medio, commerciale, finiture d'interni, drenaggi, paesaggio, strade, lavori di campus, lavori pubblici, progetti BIM, designer singoli, studi di progettazione — **se il tuo lavoro coinvolge un file che viene cambiato e riaperto in seguito da qualcun altro o dal tu del futuro, hai bisogno di una cronologia.** Ogni volta che quella linea si rompe, tempo e denaro escono dalla tua tasca.
 
 ---
 
