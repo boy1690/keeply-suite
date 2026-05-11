@@ -91,7 +91,7 @@ Wait. The next bad news is on its way: **a 30-day cap**.
 
 Translate to daily life: you want last quarter's client brief? Unless you're paying enterprise, **it's already gone**.
 
-The 30-day limit isn't a technical constraint, it's a business decision. Version history turned into a reason to upgrade.
+Version history turned into a reason to upgrade.
 (Keeply gives you file history that's free, forever.)
 
 > April 2026, Hacker News. User julianozen posts: their dad overwrote a file that hadn't been touched in 2 years. Two days later, he tried to recover it. Couldn't. Dropbox's reason: outside the 30-day retention window. julianozen's reaction: "That's not what 30-day history means." A reply from lazide: "Which is bonkers." [Full thread](https://news.ycombinator.com/item?id=47772260)

@@ -90,7 +90,7 @@ Aspetta. La prossima brutta notizia è in arrivo: **un limite di 30 giorni**.
 
 Tradotto nella vita quotidiana: vuoi il brief del cliente del trimestre scorso? A meno che tu non stia pagando l'enterprise, **è già sparito**.
 
-Il limite di 30 giorni non è un vincolo tecnico. È una decisione di business. Lo strumento ha trasformato la cronologia dei file in un motivo per fare l'upgrade. (Keeply ti dà una cronologia file gratuita, per sempre.)
+Lo strumento ha trasformato la cronologia dei file in un motivo per fare l'upgrade. (Keeply ti dà una cronologia file gratuita, per sempre.)
 
 > Aprile 2026, Hacker News. L'utente julianozen posta: suo padre ha sovrascritto un file che non toccava da 2 anni. Due giorni dopo, ha provato a recuperarlo. Impossibile. Motivo di Dropbox: fuori dalla finestra di conservazione di 30 giorni. La reazione di julianozen: "Non è questo che significa cronologia a 30 giorni." Una risposta di lazide: "Che roba assurda." [Thread completo](https://news.ycombinator.com/item?id=47772260)
 
