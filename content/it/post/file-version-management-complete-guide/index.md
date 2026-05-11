@@ -1,6 +1,7 @@
 ---
 title: "Gestione delle versioni dei file: perché lo inventiamo tutti da soli"
-description: "Cartelle condivise, Dropbox e NAS non sono stati progettati per gestire la cronologia dei file. Hanno 4 lacune strutturali, e ognuna scarica il lavoro su di te."
+description: "Dropbox, NAS e cartelle condivise non sono progettati per gestire la cronologia dei file — 4 lacune strutturali ti costringono ogni volta a inventare uno schema di naming. Questo articolo le smonta una per una, e ammette cosa risolve Keeply e cosa no."
+voice_version: v2-2026-05-11
 slug: file-version-management-complete-guide
 date: 2026-04-28T09:00:00+08:00
 draft: false
@@ -39,19 +40,21 @@ Non perché abbiano tutti il disturbo ossessivo-compulsivo. Perché se non lo fa
 
 ---
 
-> **TL;DR** ,   Cartelle condivise, Dropbox e NAS **non sono stati progettati per gestire la cronologia dei file**. Hanno 4 lacune strutturali, e ognuna scarica il lavoro su di te. Questo articolo le smonta una per una. E ammette cosa risolve Keeply e cosa no.
+> **TL;DR** —  Cartelle condivise, Dropbox e NAS **non sono stati progettati per gestire la cronologia dei file**. Hanno 4 lacune strutturali, e ognuna scarica il lavoro su di te. Questo articolo le smonta una per una. E ammette cosa risolve Keeply e cosa no.
 
 ## Mappa dell'articolo
 
 1. [Il pulsante "versione precedente" non è mai esistito](#reason-1)
 2. [La cronologia a 30 giorni è una bugia](#reason-2)
-3. [La cronologia ti dice quando, non perché](#reason-3)
+3. [La cronologia ti dice quando — ma perché non ti dice perché?](#reason-3)
 4. [Le convenzioni di denominazione scaricano la memoria sulle persone](#reason-4)
-5. [Quando Keeply non è la risposta](#limitations)
+5. [Quando Keeply non è la risposta giusta per la gestione versioni file?](#limitations)
 
 ---
 
 ## 1. Il pulsante "versione precedente" non è mai esistito {#reason-1}
+
+Apri Dropbox, Google Drive o il NAS aziendale — non c'è un pulsante "versione precedente". Questi strumenti non l'hanno costruito. Quello che gli interessa è che i tuoi tre dispositivi vedano lo stesso file, non farti tornare a quello che hai scritto ieri.
 
 Vuoi la versione di ieri di quel file di design.
 
@@ -71,11 +74,13 @@ Quindi gli strumenti hanno scelto la sincronizzazione. **Non ti mostrano la sequ
 
 > Nel 2015, il dottorando in linguistica della UCSD Will Styler ha perso i file della sua tesi. Aveva 7 diversi piani di backup. Ognuno ha fallito. Ha scritto un post-mortem per i futuri studenti universitari. L'ultima riga: "Redundancy doesn't prevent stupidity" (la ridondanza non previene la stupidità). [Incidente completo](https://wstyler.ucsd.edu/posts/lost_dissertation_files.html)
 
-→ Approfondimento: [Perché tenere la tua tesi magistrale su un solo laptop è una scommessa che nessuno ti ha avvertito di fare](/en/post/thesis-single-point-of-failure/)
+→ Approfondimento: [Perché tenere la tua tesi magistrale su un solo laptop è una scommessa che nessuno ti ha avvertito di fare](/it/post/thesis-single-point-of-failure/)
 
 ---
 
 ## 2. La cronologia a 30 giorni è una bugia {#reason-2}
+
+Dropbox ti dà 30 giorni di cronologia versioni e basta. Il limite di 30 giorni non è un vincolo tecnico — è una decisione commerciale. Apple ha spedito Time Machine su ogni Mac dal 2007: salva uno snapshot ogni ora in silenzio, e recuperare il file che avevi tre mesi fa sono due click, gratis. La tecnologia è pronta da quasi vent'anni. Dropbox nasconde di proposito tutto ciò che è più vecchio di 30 giorni, così paghi per vederlo.
 
 Bene. Hai scoperto che Dropbox ha davvero una cronologia versioni. Sollievo?
 
@@ -89,13 +94,15 @@ Il limite di 30 giorni non è un vincolo tecnico. È una decisione di business. 
 
 > Aprile 2026, Hacker News. L'utente julianozen posta: suo padre ha sovrascritto un file che non toccava da 2 anni. Due giorni dopo, ha provato a recuperarlo. Impossibile. Motivo di Dropbox: fuori dalla finestra di conservazione di 30 giorni. La reazione di julianozen: "Non è questo che significa cronologia a 30 giorni." Una risposta di lazide: "Che roba assurda." [Thread completo](https://news.ycombinator.com/item?id=47772260)
 
-La finestra di 30 giorni è stata progettata per "ho accidentalmente sovrascritto il file di ieri". Per "il mio cliente vuole la proposta del trimestre scorso la prossima settimana" ,  **usare lo strumento sbagliato raramente ti dà quello che vuoi**.
+La finestra di 30 giorni è stata progettata per "ho accidentalmente sovrascritto il file di ieri". Per "il mio cliente vuole la proposta del trimestre scorso la prossima settimana" — **usare lo strumento sbagliato raramente ti dà quello che vuoi**.
 
-→ Approfondimento: [Il costo nascosto delle cartelle condivise](/en/post/hidden-cost-shared-folders/)
+→ Approfondimento: [Il costo nascosto delle cartelle condivise](/it/post/hidden-cost-shared-folders/)
 
 ---
 
-## 3. La cronologia ti dice quando, non perché {#reason-3}
+## 3. La cronologia ti dice quando — ma perché non ti dice perché? {#reason-3}
+
+La cronologia versioni registra chi ha cambiato qualcosa e quando — ma non cosa intendeva con quel cambiamento. Un designer abbassa l'opacità di un livello al 30%. Un avvocato cambia una clausola da "deve" a "può". Un dottorando riscrive "questo argomento ha dei limiti" come "questo argomento è chiaramente valido". Il log mostra "modificato" in tutti e tre i casi. Non ti può dire che il significato si è ribaltato.
 
 Supponi di aver risolto i primi due problemi: la cronologia è attiva, 30 giorni bastano. C'è un problema più profondo che ti aspetta.
 
@@ -124,7 +131,9 @@ Quindi cominci a stipare l'intenzione nei nomi dei file: `contratto_v7_su_richie
 
 ## 4. Le convenzioni di denominazione scaricano la memoria sulle persone {#reason-4}
 
-Dopo aver incontrato tutti e tre i problemi sopra, ogni azienda fa la stessa cosa ,  **scrive un PDF di convenzioni di denominazione di 14 pagine**.
+I PDF di convenzioni di denominazione crollano entro sei mesi. Non perché il tuo team sia pigro — perché la regola chiede a ogni persona, a ogni salvataggio, di ricordare + essere d'accordo + avere il tempo di digitare il nome file corretto. Salta uno di questi (come un salvataggio sotto deadline chiamato "FINAL") e tutto il sistema collassa. Quello che ti rimane: `FINAL`, `FINAL_v2`, `davvero_finale`.
+
+Dopo aver incontrato tutti e tre i problemi sopra, ogni azienda fa la stessa cosa — **scrive un PDF di convenzioni di denominazione di 14 pagine**.
 
 Di solito è così:
 
@@ -146,11 +155,13 @@ Ogni membro del team, ad ogni salvataggio, deve ricordare + essere d'accordo + a
 
 Ricordare una convenzione di denominazione è qualcosa che **uno strumento dovrebbe fare da solo**. Non qualcosa da scaricare sulla disciplina di ogni singola persona.
 
-→ Approfondimento: [Quando il team AutoCAD ha caricato la versione sbagliata](/en/post/autocad-wrong-version-crew/)
+→ Approfondimento: [Quando il team AutoCAD ha caricato la versione sbagliata](/it/post/autocad-wrong-version-crew/)
 
 ---
 
-## 5. Quando Keeply non è la risposta {#limitations}
+## 5. Quando Keeply non è la risposta giusta per la gestione versioni file? {#limitations}
+
+Ci sono quattro scenari in cui Keeply non è la risposta: appunti di riunione condivisi in tempo reale, filmati video oltre 50GB, contratti che vanno a studi legali esterni, e IT aziendale con controllo accessi rigido. Ognuno ha uno strumento migliore, e li vedremo sotto. Keeply è costruito per il caso in cui tu (o un piccolo team) continui a tornare su file su cui lavori da settimane o mesi.
 
 Abbiamo costruito Keeply per colmare queste 4 lacune strutturali. Ma ci sono scenari **in cui Keeply non è la risposta**:
 
@@ -158,7 +169,7 @@ Abbiamo costruito Keeply per colmare queste 4 lacune strutturali. Ma ci sono sce
 - **Filmati video da 50GB+** → usa Frame.io / PostHaste. La logica di versioning di Keeply (registra le differenze ad ogni salvataggio) non scala economicamente per i file binari di grandi dimensioni.
 - **Firma legale cross-organizzativa** → usa DocuSign / Adobe Sign. Se un contratto va a 10 studi legali esterni, Keeply non rientra in quel framework di conformità.
 
-Per l'altro 80% degli scenari dei lavoratori della conoscenza ,  **designer, paralegali all'interno di studi legali, commercialisti, dottorandi, team di PM, freelance**. Quelle 4 lacune strutturali ti colpiranno. È questo che vogliamo risolvere.
+Per l'altro 80% degli scenari dei lavoratori della conoscenza — **designer, paralegali all'interno di studi legali, commercialisti, dottorandi, team di PM, freelance** — quelle 4 lacune strutturali ti colpiranno ogni giorno. Quelle 4 lacune sono ciò che Keeply è costruito per chiudere.
 
 ---
 
@@ -174,5 +185,5 @@ E se sei arrivato fino a qui, probabilmente sai già la risposta. Non sei tu. È
 
 ---
 
-> Sull'autore: [Nome Reale Fondatore], fondatore di Keeply.
-> LinkedIn (da completare al Touch 4) ｜ X (da completare al Touch 4)
+> Sull'autore: Ting-Wei Tsao, fondatore di Keeply.
+> [LinkedIn](https://www.linkedin.com/in/ting-wei-tsao-b57480152/)

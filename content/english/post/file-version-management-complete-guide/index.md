@@ -1,6 +1,7 @@
 ---
 title: "File version management: why we all invent our own naming schemes"
-description: "Shared folders, Dropbox, and NAS drives weren't designed to manage file history. They have 4 structural gaps, and each one pushes the work back onto you."
+description: "Shared folders, Dropbox, and NAS weren't designed to manage file history — they have 4 structural gaps that push the work back onto your discipline. This article unpacks each gap, explains why naming-rule PDFs collapse after 6 months, and admits which gaps Keeply closes and which it doesn't."
+voice_version: v2-2026-05-11
 slug: file-version-management-complete-guide
 date: 2026-04-28T09:00:00+08:00
 draft: false
@@ -39,19 +40,21 @@ Not because they all have OCD. Because if you don't do this, **your files turn i
 
 ---
 
-> **TL;DR** ,   Shared folders, Dropbox, and NAS drives **weren't designed to manage file history**. They have 4 structural gaps, and each one pushes the work back onto you. This article unpacks each one. And admits which Keeply solves and which it doesn't.
+> **TL;DR** — Shared folders, Dropbox, and NAS drives **weren't designed to manage file history**. They have 4 structural gaps, and each one pushes the work back onto you. This article unpacks each one. And admits which Keeply solves and which it doesn't.
 
 ## Article map
 
 1. [The "previous version" button never existed](#reason-1)
 2. [The 30-day version history has fine print](#reason-2)
-3. [Version history tells you when, not why](#reason-3)
+3. [Version history tells you when — but why doesn't it tell you why?](#reason-3)
 4. [Naming conventions push memory onto people](#reason-4)
-5. [When Keeply isn't the answer](#limitations)
+5. [When is Keeply not the right answer for file version management?](#limitations)
 
 ---
 
 ## 1. The "previous version" button never existed {#reason-1}
+
+Open Dropbox, Google Drive, or your company NAS — there's no "previous version" button. These tools didn't build one. What they care about is making sure your three devices see the same file, not letting you go back to what you wrote yesterday.
 
 You want yesterday's version of that design file.
 
@@ -78,6 +81,8 @@ So tools picked sync. **They don't show you the timeline of changes**.
 
 ## 2. The 30-day version history has fine print {#reason-2}
 
+Dropbox gives you 30 days of version history and that's it. The 30-day cap isn't a technical limit — it's a business decision. Apple has shipped Time Machine on every Mac since 2007: it quietly saves a snapshot every hour, and getting back the file you had three months ago is two clicks, for free. The technology has been ready for nearly two decades. Dropbox hides anything older than 30 days specifically so you'll pay to see it.
+
 Good. You found out Dropbox actually has version history. Relief?
 
 Wait. The next bad news is on its way: **a 30-day cap**.
@@ -92,13 +97,15 @@ The 30-day limit isn't a technical constraint, it's a business decision. Version
 > April 2026, Hacker News. User julianozen posts: their dad overwrote a file that hadn't been touched in 2 years. Two days later, he tried to recover it. Couldn't. Dropbox's reason: outside the 30-day retention window. julianozen's reaction: "That's not what 30-day history means." A reply from lazide: "Which is bonkers." [Full thread](https://news.ycombinator.com/item?id=47772260)
 
 The 30-day window was designed for "I accidentally overwrote yesterday's file."
-For "my client wants last quarter's pitch back next week" ,  **using the wrong tool rarely gets you what you want**.
+For "my client wants last quarter's pitch back next week" — **using the wrong tool rarely gets you what you want**.
 
 → Related: [The hidden cost of shared folders](/en/post/hidden-cost-shared-folders/)
 
 ---
 
-## 3. Version history tells you when, not why {#reason-3}
+## 3. Version history tells you when — but why doesn't it tell you why? {#reason-3}
+
+Version history records who changed something and when — but not what they meant by the change. A designer drops one layer's opacity to 30%. A lawyer flips a contract clause from "shall" to "may." A grad student rewrites "this argument has limitations" as "this argument clearly stands." The log shows "modified" in all three cases. It can't tell you the meaning got flipped.
 
 Suppose you've solved the first two: history's on, 30 days is enough.
 There's a deeper problem waiting.
@@ -132,7 +139,9 @@ Three months later, you open your records and find your own past habits don't ma
 
 ## 4. Naming conventions push memory onto people {#reason-4}
 
-After hitting all three problems above, every company does the same thing ,  **writes a 14-page naming convention PDF**.
+Naming-convention PDFs fall apart within six months. Not because your team is lazy — because the rule asks every person, every save, to remember + agree + have time to type the right filename. Skip any one of those (like a deadline-stressed save called "FINAL") and the whole system collapses. What you end up with: `FINAL`, `FINAL_v2`, `really_final`.
+
+After hitting all three problems above, every company does the same thing — **writes a 14-page naming convention PDF**.
 
 Usually it looks like this:
 
@@ -160,7 +169,9 @@ Not something to push onto every individual's discipline.
 
 ---
 
-## 5. When Keeply isn't the answer {#limitations}
+## 5. When is Keeply not the right answer for file version management? {#limitations}
+
+There are four scenarios where Keeply isn't the answer: live shared meeting notes, 50GB+ video footage, contracts going to outside law firms, and enterprise IT with strict access controls. Each has a better tool, and we'll go through them below. Keeply is built for the case where you (or your small team) keep coming back to files you've worked on for weeks or months.
 
 We built Keeply to fill these 4 structural gaps.
 But there are scenarios **where Keeply isn't the answer**:
@@ -169,8 +180,8 @@ But there are scenarios **where Keeply isn't the answer**:
 - **Video footage 50GB+** → use Frame.io / PostHaste. Keeply's version logic (recording differences each save) doesn't scale economically to large binary files.
 - **Cross-organization legal signing** → use DocuSign / Adobe Sign. If a contract goes to 10 outside law firms, Keeply isn't in that compliance framework.
 
-For the other 80% of knowledge-worker scenarios ,  **designers, paralegals inside law firms, accountants, grad students, PM teams, freelancers**. Those 4 structural gaps will hit you.
-That's what we're here for.
+For the other 80% of knowledge-worker scenarios — **designers, paralegals inside law firms, accountants, grad students, PM teams, freelancers** — those 4 structural gaps will hit you every day.
+Those 4 gaps are what Keeply is built to close.
 
 ---
 
@@ -186,10 +197,10 @@ It's whether your tool can do that job for you.**
 
 ## Related articles
 
-- **[Shared folder version problems: the 83-hour micro-panic tax](/en/post/hidden-cost-shared-folders/)** , , The real cost of shared folders isn't lost files. It's the daily defensive-naming tax everyone pays.
-- **[Masters Thesis Version Control: The Diff You Forgot](/en/post/thesis-single-point-of-failure/)** , , Your thesis is one drive failure away from being gone, if you only have one copy.
-- **[Why your crew keeps opening last week's AutoCAD drawing](/en/post/autocad-wrong-version-crew/)** , , The crew keeps getting the old CAD because the office got the new version and didn't tell the field.
-- **[What the 3-2-1 backup rule doesn't cover in 2026](/en/post/3-2-1-backup-rule/)** , , 3-2-1 protects against disaster, not operator-error. Keeply builds 3-2-1 + version history into one tool.
+- **[Shared folder version problems: the 83-hour micro-panic tax](/en/post/hidden-cost-shared-folders/)** — The real cost of shared folders isn't lost files. It's the daily defensive-naming tax everyone pays.
+- **[Masters Thesis Version Control: The Diff You Forgot](/en/post/thesis-single-point-of-failure/)** — Your thesis is one drive failure away from being gone, if you only have one copy.
+- **[Why your crew keeps opening last week's AutoCAD drawing](/en/post/autocad-wrong-version-crew/)** — The crew keeps getting the old CAD because the office got the new version and didn't tell the field.
+- **[What the 3-2-1 backup rule doesn't cover in 2026](/en/post/3-2-1-backup-rule/)** — 3-2-1 protects against disaster, not operator-error. Keeply builds 3-2-1 + version history into one tool.
 
 ---
 
