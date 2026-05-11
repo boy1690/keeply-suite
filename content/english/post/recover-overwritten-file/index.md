@@ -1,6 +1,7 @@
 ---
 title: "The limit of overwritten file recovery: when AutoRecover isn't enough"
-description: "AutoRecover is built for crash rescue; data recovery software has only minutes after overwrite. None of them reach 'overwrote after a normal save.' What you need isn't post-event rescue. It's an always-on version history at the tool layer."
+description: "AutoRecover is built for crash rescue, data-recovery software has only minutes after the overwrite — neither reaches the 'realized after a normal save' scenario. This article walks through the limits of post-event rescue and shows why an always-on version history at the tool layer is the actual answer."
+voice_version: v2-2026-05-11
 date: 2026-05-02T18:00:00+08:00
 draft: false
 slug: "recover-overwritten-file"
@@ -94,7 +95,7 @@ Surpassing the limit of post-event rescue means **upstream prevention**. Placing
 
 Every save = one version preserved. No pruning. Independent of Word's or OneDrive's retention policy.
 
-[Keeply](https://keeply.work) auto-commits every save through a Git engine. An "overwrite save" stops being a **destructive action**. The previous version is always preserved.
+[Keeply](https://keeply.work) does this in the background on the working folder you point it at: every press of Save adds a timestamped version to the history — two clicks to open the one you want. An "overwrite save" stops being a **destructive action**; the previous version is always preserved.
 
 Lisa has used Keeply for half a year. Monday morning, she notices the month-end report has been overwritten with the previous sheet. She opens Keeply. Friday's 19:00 sheet, 19:15 sheet, the 19:30 overwritten sheet, all retained as versions. She clicks "go to the 19:00 sheet" and three seconds later Excel opens it.
 

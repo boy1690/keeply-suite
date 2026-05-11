@@ -1,6 +1,7 @@
 ---
 title: "Il limite del recupero file sovrascritto: dove AutoRecover non arriva"
-description: "AutoRecover è progettato per il salvataggio da crash, il software di recupero dati ha minuti dopo la sovrascrittura. Nessuno arriva a 'sovrascritto dopo un salvataggio normale'. Quello che serve non è il salvataggio post-evento. È una cronologia versioni always-on a livello strumentale."
+description: "AutoRecover è progettato per il recupero da crash, il software di recupero dati ha pochi minuti dopo la sovrascrittura — nessuno arriva allo scenario 'me ne accorgo dopo un salvataggio normale'. L'articolo apre i limiti del recupero post-evento e spiega perché una cronologia versioni always-on a livello strumentale è la vera risposta."
+voice_version: v2-2026-05-11
 date: 2026-05-02T18:00:00+08:00
 draft: false
 slug: "recover-overwritten-file"
@@ -94,7 +95,7 @@ Superare il limite del salvataggio post-evento significa **prevenzione a monte**
 
 Ogni salvataggio = una versione preservata. Nessun pruning. Indipendente dalla retention policy di Word o OneDrive.
 
-[Keeply](https://keeply.work) auto-commit ogni salvataggio attraverso un motore Git. Una "sovrascrittura" smette di essere un'**azione distruttiva**. La versione precedente è sempre preservata.
+[Keeply](https://keeply.work) lo fa in background sulla cartella di lavoro che gli indichi: ogni pressione di Salva aggiunge una versione con timestamp alla cronologia — due click per aprire quella che vuoi. Una "sovrascrittura" smette di essere un'**azione distruttiva**; la versione precedente è sempre preservata.
 
 Lisa usa Keeply da sei mesi. Lunedì mattina, nota che il report di chiusura mensile è stato sovrascritto con il foglio precedente. Apre Keeply. Il foglio delle 19:00 di venerdì, il foglio delle 19:15, il foglio sovrascritto delle 19:30, tutti conservati come versioni. Clicca "vai al foglio delle 19:00" e tre secondi dopo Excel lo apre.
 
