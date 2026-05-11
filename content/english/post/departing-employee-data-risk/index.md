@@ -1,6 +1,6 @@
 ---
-title: "Departing-employee data risk isn't a people problem: 3 tool blind spots"
-description: "When an employee leaves, they may take or delete company files. Sync tools can't stop either — by design, not by defect. How small business owners spot they've been using the wrong tool category."
+title: "Departing employee deleted your files? Sync isn't backup"
+description: "Tina emptied the brand-book folder Saturday night and Dropbox dutifully synced the disaster. Why 'sync isn't backup' is the real lesson — not lawyers, not DLP."
 slug: departing-employee-data-risk
 image: cover.svg
 og_image: cover.png
@@ -12,118 +12,83 @@ spec: specs/departing-employee-data-risk/
 status: approved
 ---
 
-# Departing-employee data risk isn't a people problem: 3 tool blind spots
+# Departing employee deleted your files? Sync isn't backup
 
-> When an employee leaves, they may take or delete company files. Sync tools can't stop either — by design, not by defect.
+> Tina emptied the brand-book folder Saturday night and Dropbox dutifully synced the disaster. Why "sync isn't backup" is the real lesson — not lawyers, not DLP.
 
 ## Table of contents
 
 - [That Saturday night, 11:03 PM](#hook)
-- [The first answer you'll find: legal](#legal)
-- [The second answer you'll find: IT tools](#it-tools)
-- [The question both sides skip](#missing-question)
-- [Switch tool category: version history + immutable snapshot + audit log](#tool-category)
-- [When Keeply isn't your answer](#boundaries)
+- [The lawyer can't help; DLP gets there too late](#alternatives)
+- [Why was it so easy for her to delete it](#why)
+- [Switching to Keeply: irreversible history](#keeply)
+- [What Keeply isn't going to fix](#limits)
 
 ---
 
 ## That Saturday night, 11:03 PM {#hook}
 
-That Saturday night, 11:03 PM, Tina dragged the entire brand-book folder from her home computer into the trash and emptied it.
+That Saturday night at 11:03 PM, Tina dragged the entire `brand-book` folder into the trash at home, and emptied it for good measure.
 
-The sync tool faithfully executed that action up to the cloud.
+Within a minute, Dropbox dutifully synced that action to the cloud.
 
-Three days later when the client called asking for the original files, you opened the folder and it was empty. The trash showed "2 weeks ago, Tina deleted brand-book/" and the 30-day retention had already expired.
+Monday morning, the client called for the original files. You opened the folder — empty. You thought there was still hope, but her manual "empty trash" move bypassed Dropbox's version-recovery mechanism entirely.
 
-You called your lawyer. The lawyer said, "First tell me whether she copied any files out." You opened the system and no one could find a copy log.
+(Dropbox Personal keeps deleted files for 30 days, Business for 180. Neither saves you when the user actively empties the trash. See [Dropbox's own docs](https://help.dropbox.com/delete-restore/recover-deleted-files).)
 
----
-
-## The first answer you'll find: legal {#legal}
-
-The moment you call your lawyer, you'll hear words like "trade secret," "secrecy management," and "unfair competition." The lawyer will tell you that if the evidence is in place, this path works.
-
-It works, but four things you should know first:
-
-- **You can sue** — assuming the evidence is on your side first
-- **It's slow** — litigation runs 6 to 18 months
-- **It's expensive** — legal fees plus forensic costs
-- **You won't get the files back** — courts handle punishment and damages; the brand-book doesn't come back to life because you won the case
-
-Yeah, that's the awkward part of the legal route. Your lawyer can tell you how to **punish** her. The lawyer can't help with the fact that you **can't deliver the files right now**.
+You can't tell whether she copied the files first. You can't deliver to the client.
 
 ---
 
-## The second answer you'll find: IT tools {#it-tools}
+## The lawyer can't help; DLP gets there too late {#alternatives}
 
-Google one more round and you'll see a stack of IT security vendors. Data Loss Prevention (DLP) systems, log monitoring, SSO consolidation.
+When this happens, you search for answers.
 
-This works too, with the same four caveats:
+The legal route? Your lawyer will start talking about trade secrets. The catch is, you can't even produce evidence right now. Even if you spent a year or two winning the lawsuit, that brand-book file would be too stale to use anyway.
 
-- **It blocks copying** — newly occurring copy actions can be detected or blocked after install
-- **It's expensive** — DLP monthly fees are out of proportion for a 12-person team
-- **High setup bar** — typically needs a full-time engineer to maintain
-- **Doesn't undo what Tina already did** — the tool ships in after the fact; the past is still blank
+Since the law can't put out the fire, you turn to enterprise security software (DLP). That's a deeper hole. DLP can block copies, sure, but the monthly fee is wildly out of proportion for a team of a dozen, and you'll need a dedicated engineer to babysit the system. Worst of all, DLP only defends against the future. What Tina did over the weekend? No DLP license bought today can undo it.
 
-Yeah, that's what's frustrating about being a small business. The big-company solutions all assume you have an IT department. DLP is for companies with an IT department. You don't have an IT department, **which is why you're staring at the trash bin alone on a Sunday morning**.
+Both paths are trying to solve "what to do after the fact." Nobody's asking the real question.
 
 ---
 
-## The question both sides skip {#missing-question}
+## Why was it so easy for her to delete it {#why}
 
-Both answers are solving "what to do after Tina did it."
+**Why was it so easy for her to delete it?**
 
-But you've opened two browser tabs and read 12 articles, and no one asked you one thing:
+Because you used the wrong tool.
 
-**Why was it so easy for her to do these two things?**
+Dropbox, Google Drive, OneDrive — none of them are broken. Their core design is "two ends in sync." You delete, the cloud deletes. You change, the cloud overwrites. Their job is to mirror your action, not to protect your asset.
 
-What did she actually do? She dragged a folder from her home Dropbox into the trash and emptied it. The whole motion took 30 seconds. Dropbox didn't stop her, didn't ask her, didn't pop up "this folder was opened by 8 people last week." It just faithfully executed her action up to the cloud.
+Using a sync tool as a file vault is like putting the company's entire backbone in an uninsured naked warehouse.
 
-Dropbox isn't broken. The design intent is just different.
-
-Sync tools (Dropbox / Google Drive / OneDrive) are designed for **two-end consistency**. You delete, the cloud deletes; you change, the cloud changes; you copy out, no record. Their job is to make what you see locally match what you see in the cloud — **your action is their final truth**.
-
-That's a completely different design from "preserve history." File management tools (version control + audit + immutable snapshot) are designed for **traceable history**. Every change keeps a version, important milestones are frozen and unchangeable, and who-touched-what is logged.
-
-Using sync as data management means using the wrong tool category.
-
-This category of tools wasn't designed for this job in the first place.
+I built Keeply to fill that missing mechanism layer.
 
 ---
 
-## Switch tool category: version history + immutable snapshot + audit log {#tool-category}
+## Switching to Keeply: irreversible history {#keeply}
 
-Switch into the file management tool category and three things come default:
+This is why you need real file-version-management software. Its underlying logic isn't sync — it's irreversible history.
 
-**Version history**: Tina deleted a file, you can still find the previous version. The "30-day trash" in sync tools is an after-the-fact patch; version history is default-on. Every change is kept, no setting toggle needed.
-
-**Immutable snapshot**: Important milestones (final proposal, client deliverable) once frozen, even an employee with admin permission can't delete them. Sync tools don't have this layer. Keeply's Release snapshots are designed exactly for this.
-
-**Audit log**: What Tina copied out, what she printed — checkable after the fact. (Honest note: the audit log layer is on the Keeply roadmap; before spec 104 ships, you can use the version history timeline to see who modified what file when.)
-
-It looks like this: you open the Keeply timeline, see Tina's file notes from that Saturday, click in and see what she changed and what she deleted. You can still find the previous version of the original file. You don't have to tell the client "let me check and get back to you" and stall for a week.
+On Keeply, when Tina deletes a file, you don't dig through any trash. You open the timeline and pull back the previous version. Even with admin permission, she can't delete the milestones marked as Release. As for what she touched, the audit trail is nailed down — you don't need to play detective to piece it together.
 
 ---
 
-## When Keeply isn't your answer {#boundaries}
+## What Keeply isn't going to fix {#limits}
 
-Honestly, four things Keeply can't do:
+Let me be honest: Keeply isn't a silver bullet.
 
-- **Doesn't block copying** — real-time detect-and-block on copy behavior is a DLP scenario, not a Keeply scenario
-- **Doesn't manage cross-platform accounts** — Slack / Notion / Figma access revocation is a separate offboarding workflow
-- **Can't recover locally permanently-deleted copies** — physical limitation; all tools in this category share it
-- **Doesn't replace a lawyer** — audit logs can support litigation, but only a lawyer can give legal advice
+If you want real-time monitoring and USB-stick lockdown on employees, that's DLP's job. If you want to revoke Slack or Figma access, that's standard offboarding. If you want legal advice, talk to a lawyer.
 
-When you choose a tool, ask yourself: are you trying to solve "**stop the action from happening**" or "**recover after it happens**"? Two different things.
+You have to settle one thing first: do you want to spend big money preventing employees from making mistakes, or do you want **"no matter what an employee does, I can restore it in a second"**?
 
----
+I built Keeply for the second one.
 
-What I built Keeply to solve is the latter.
+The next time an employee gives notice, when you open the system at 9:14 Monday morning, you'll see every file they touched over the past six months, every meaningful change, all sitting safely on the timeline.
 
-The next time an employee gives notice, you open the system and see every file, every version, every important milestone they touched in the past 6 months — all still there. You don't need to know what they did on the last Saturday night before leaving, because you already have the record.
+You won't need to worry about what they did during their last weekend before leaving. Because the record was locked down long before then.
 
 ---
 
-## Author
-
-Ting-Wei Tsao (Keeply founder), [LinkedIn](https://www.linkedin.com/in/ting-wei-tsao-b57480152/)
+> About the author: Ting-Wei Tsao, founder of Keeply.
+> [LinkedIn](https://www.linkedin.com/in/ting-wei-tsao-b57480152/)

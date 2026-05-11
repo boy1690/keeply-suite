@@ -92,6 +92,7 @@ Note：`Z:\keeply-blog\` 需要 `git config --global --add safe.directory '%(pre
 - **P1.14** 每篇至少 1 處 admit limitation：「Keeply 不解決 X」「對 Y 場景 Keeply 不是最佳選擇」。Trustworthiness 訊號 + P0.3 競品承認規則的反向延伸。寫在「For when Keeply isn't the right tool」或「Limitations」小節，明白寫進文章本體，不是腳註。
 - **P1.15** 每篇 `intent.md` 必須宣告 `pillar` / `cluster` / `standalone` 角色 + 對應 pillar slug（若為 cluster）。對應 `specs/_roadmap/2026-q2-content-queue.md`。Cluster 在 Touch 4 DELIVER 必須含 ≥1 in-body link 連回 pillar；pillar 必須含 ≥3 cluster 連結。
 - **P1.16** Tag 必須 reusable，從 `specs/_roadmap/tag-pool-ledger.md` 既有 pool 中選。新增 tag 的條件：當下有 ≥3 篇文章可掛上去；否則該詞下沉進 title / description / 文章本體，不開 tag。Reason：每加一個 1-post tag = Hugo 自動生 19 locale × 1 = 19 個 thin-content URL，稀釋整域 SEO quality signal（2026-05-08 SEO L2 spec）。How to apply：寫 frontmatter 時對照 ledger；要新增 pool 必須同時宣告 ≥3 篇現有 slug + 更新 ledger + GATE-2 通過。
+- **P1.17** 章節層篇幅與作者真實觀點強度成正比，不是均等覆蓋（對應 BWF traps.md T18 #67-#70）。Why：均等篇幅 = 顧問簡報味（AI 預設 balanced）；不均等 = E-E-A-T Experience 訊號（真實人類有強弱觀點）。事故紀錄：2026-05-11 `departing-employee-data-risk` voice refactor session — user 點名「下意識追求結構完美與對稱」是 AI 味洩底（原 shipped 版踩「第一派/第二派」+ 4-bullet 對 4-bullet + Keeply 三道防線 1/2/3）。How to apply：(a) 拒絕替代方案 section 字數差 ≥30%（真正看不慣的競品 4-5 句帶實務細節；只是路過的領域 1-2 句結論）；(b) 1/2/3 編號列表只用於各 item 真等重的場景，主從關係明確 → 散文化；(c) H2 / 子標題不准「第一 X／第二 X」結構鏡像；(d) scene 時間戳用非整點（11:03 / 9:14，不是 9:00 / 12:00）。GATE-PRE-SHIP-AI-RESILIENCE #13-#16 hard-stop。
 - Prefer Hugo built-in features over custom code
 - Content in markdown only, no HTML templates unless necessary
 
