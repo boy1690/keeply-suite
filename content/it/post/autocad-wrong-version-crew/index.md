@@ -1,14 +1,25 @@
 ---
-title: "Perché la tua squadra continua ad aprire il disegno AutoCAD della settimana scorsa"
-description: "Sono le 9:40 del mattino, passi dall'ufficio e il PM tira fuori la revisione di giovedì scorso. La specifica del telaio è cambiata. Sei stato in cantiere ogni giorno, nessuno te l'ha detto. Il calcestruzzo è già stato gettato. La guida pratica di un capocantiere al controllo versioni dei disegni: nessun nuovo strumento per la squadra, nessuna rivoluzione del flusso di lavoro, solo un modo per far sì che ogni revisione lasci la sua traccia."
+title: "Controllo versioni disegni AutoCAD in 4 passi: ferma la squadra dal disegno della scorsa settimana"
+description: "Sono le 9:40, passi dall'ufficio e il PM tira fuori la revisione di giovedì scorso. La specifica del telaio è cambiata, sei stato in cantiere ogni giorno, nessuno te l'ha detto. Guida del capocantiere al controllo versioni dei disegni in 4 passi: nessun nuovo strumento per la squadra, nessuna rivoluzione del flusso di lavoro."
 slug: "autocad-wrong-version-crew"
-date: 2026-04-24
+date: 2026-04-24T08:50:00+08:00
+draft: false
+locale: it
+primary_keyword: "controllo versioni disegni AutoCAD"
+tags: [controllo versione, recupero file]
+categories: [Gestione file]
+locales: [zh-TW, en, zh-CN, ja, ko, it]
 image: cover.svg
 og_image: cover.png
-categories: [Gestione file]
-tags: [controllo versione, recupero file]
+role: cluster
+template: T1
+pillar_parent: file-version-management-complete-guide
+voice_version: v2-2026-05-11
+status: approved_master
 cta_topic: versioning
 ---
+
+> Sono le 9:40, passi dall'ufficio e il PM tira fuori la revisione di giovedì scorso. La specifica del telaio è cambiata, sei stato in cantiere ogni giorno, nessuno te l'ha detto. Guida del capocantiere al controllo versioni dei disegni in 4 passi: nessun nuovo strumento per la squadra, nessuna rivoluzione del flusso di lavoro.
 
 Sono le 9:40 del mattino. Passi finalmente dall'ufficio e fai scorrere con disinvoltura le foto del cantiere di ieri davanti al PM. La sezione di drenaggio acque piovane dove è stato gettato il calcestruzzo, i telai a getto pieno tutti annegati nella soletta, pronti per le griglie.
 
@@ -27,7 +38,7 @@ Non hai mandato il file sbagliato alla squadra. Semplicemente non sapevi che il 
 - ["È quella la revisione di giovedì scorso?"](#h2-1)
 - [Prima dell'"emesso per costruzione" ci sono molte bozze. Poi l'architetto torna indietro su una](#h2-2)
 - [L'ufficio sa. Il cantiere no](#h2-3)
-- [Dai ai tuoi disegni la loro cronologia](#h2-4)
+- [Controllo versioni disegni AutoCAD in 4 passi: ufficio + cantiere allineati](#h2-4)
 - [Le uniche persone che non ne hanno bisogno: la squadra che installa dai fogli stampati](#h2-5)
 
 ---
@@ -72,9 +83,9 @@ Di quei tre fili, **quello tra ufficio e cantiere è il più facile da perdere**
 
 ---
 
-## Dai ai tuoi disegni la loro cronologia {#h2-4}
+## Controllo versioni disegni AutoCAD in 4 passi: ufficio + cantiere allineati {#h2-4}
 
-Non c'è molto da fare. Quattro passaggi.
+Non c'è molto da fare. Quattro passaggi. Prima di costruire Keeply ho visto lo stesso copione andare in scena nello studio dove lavoravo: nuova revisione arriva in ufficio, il cantiere non lo sa, il calcestruzzo viene gettato male. I quattro passi qui sotto sono il set minimo che chiude "nessuno l'ha portato dall'altro lato."
 
 **1. Nel momento in cui un nuovo file arriva in ufficio, avvisa il cantiere. E aspetta un "ricevuto" di ritorno.** Non "archiviato e fatto." **Lo scambio è completo solo quando la persona del cantiere conferma esplicitamente**. Può essere WhatsApp, può essere Slack, può essere una telefonata. La regola è: il cantiere deve confermare per iscritto. Senza conferma, il passaggio non è completo.
 
@@ -105,6 +116,10 @@ Archivio: Z:\Projects\MapleSt_Drainage\
    una nuova versione, compare per tutti.
    Passa il mouse su una riga → ripristino con un click.
 ```
+
+**Compatibilità**: Keeply registra a livello sottostante, compatibile con il NAS aziendale, SharePoint, OneDrive Business, Synology, QNAP, dischi di rete condivisi. I file non si spostano, non sostituisci AutoCAD, non cambi il flusso di lavoro della squadra.
+
+Devo essere onesto: se devi confrontare due disegni `.dwg` riga per riga, devi comunque aprire AutoCAD e farlo a mano. Keeply non fa il confronto tra disegni CAD.
 
 **4. Almeno una copia che non sia su questa macchina e non sul NAS di cantiere.** Hard disk esterno, cloud, slot di backup. Qualunque cosa. Il punto è **almeno una copia fuori sede**. I dischi NAS dell'ufficio si rompono, vengono cancellati, vengono riutilizzati per il prossimo progetto. Il backup fuori sede è l'assicurazione più economica che ti comprerai mai.
 

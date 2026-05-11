@@ -1,14 +1,25 @@
 ---
-title: "Why your crew keeps opening last week's AutoCAD drawing"
-description: "It's 9:40 AM, you stop by the office, and the PM pulls up last Thursday's revision. The frame spec changed. You've been on site every day, nobody told you. The concrete's already poured. A field supervisor's practical guide to drawing version control: no new tools for the crew, no workflow overhaul, just a way to make every revision leave its own trail."
+title: "AutoCAD drawing version control in 4 steps: stop your crew using last week's revision"
+description: "It's 9:40 AM, you stop by the office, and the PM pulls up last Thursday's revision. The frame spec changed, you've been on site every day, nobody told you. A field supervisor's 4-step drawing version control playbook: no new tools for the crew, no workflow overhaul."
 slug: "autocad-wrong-version-crew"
-date: 2026-04-24
+date: 2026-04-24T08:50:00+08:00
+draft: false
+locale: en
+primary_keyword: "AutoCAD drawing version control"
+tags: [version control, file recovery]
+categories: [File management]
+locales: [zh-TW, en, zh-CN, ja, ko, it]
 image: cover.svg
 og_image: cover.png
-categories: [File management]
-tags: [version control, file recovery]
+role: cluster
+template: T1
+pillar_parent: file-version-management-complete-guide
+voice_version: v2-2026-05-11
+status: approved_master
 cta_topic: versioning
 ---
+
+> It's 9:40 AM, you stop by the office, and the PM pulls up last Thursday's revision. The frame spec changed, you've been on site every day, nobody told you. A field supervisor's 4-step drawing version control playbook: no new tools for the crew, no workflow overhaul.
 
 It's 9:40 AM. You finally swing by the office and casually swipe through yesterday's site photos for the PM. The section of storm drain where the concrete has been poured, the cast-in-place frames all set in the slab, ready for the grates.
 
@@ -27,7 +38,7 @@ You didn't send the wrong file to the crew. You just didn't know the file had ch
 - ["Is that last Thursday's revision?"](#h2-1)
 - [Before "issued-for-construction," there are a lot of drafts. Then the architect flips one back](#h2-2)
 - [The office knows. The field doesn't](#h2-3)
-- [Give your drawings their own timeline](#h2-4)
+- [AutoCAD drawing version control in 4 steps: office + field aligned](#h2-4)
 - [The only people who don't need this: the crew installing from printed sheets](#h2-5)
 
 ---
@@ -72,9 +83,9 @@ Of those three threads, **the one between office and field is the easiest one to
 
 ---
 
-## Give your drawings their own timeline {#h2-4}
+## AutoCAD drawing version control in 4 steps: office + field aligned {#h2-4}
 
-There isn't much to it. Four steps.
+There isn't much to it. Four steps. Before I built Keeply, I watched this same script play out at the firm I was at: new revision lands in the office, the field doesn't know, concrete gets poured wrong. The four steps below are the minimum set that closes "nobody carried it across."
 
 **1. The moment a new file lands at the office, ping the field. And wait for a "got it" back.** Not "filed and done." **Handshake completed only when the field person explicitly acknowledges**. Could be WhatsApp, could be Slack, could be a phone call. The rule is: the field has to confirm in writing. No confirmation, the handoff isn't complete.
 
@@ -105,6 +116,10 @@ Vault: Z:\Projects\MapleSt_Drainage\
    lands, it shows up for everyone.
    Hover any row → one-click restore.
 ```
+
+**Compatibility**: Keeply records underneath, compatible with your existing NAS, SharePoint, OneDrive Business, Synology, QNAP, shared network drives. Files don't move, you don't switch from AutoCAD, you don't change the crew's workflow.
+
+I have to be honest: if you need to compare two `.dwg` drawings line-by-line, you still open AutoCAD and do that yourself. Keeply doesn't do CAD drawing diffs.
 
 **4. At least one copy that's not on this machine and not on the site NAS.** External drive, cloud, backup slot. Whatever. The point is **at least one off-site copy**. Office NAS drives fail, get wiped, get repurposed for the next project. The off-site backup is the cheapest insurance you'll ever buy yourself.
 
