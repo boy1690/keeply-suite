@@ -1,6 +1,7 @@
 ---
 title: "Keeply のインストール手順（Windows + macOS）。 10 分で初プロジェクトまで"
-description: "「実行」のリンクや運に頼らず、10 分で Keeply をインストール。その日のうちに最初のプロジェクトを守れる。"
+description: "SmartScreen「実行」のリンクや運に頼らない——本記事は Windows winget 一行コマンド + macOS の右クリック起動という 2 つのクリーンな経路を歩き、10 分で Keeply をインストールして当日に最初のプロジェクトを守る方法を解説。"
+voice_version: v2-2026-05-11
 date: 2026-04-26
 draft: false
 tags: [Keeply チュートリアル]
@@ -102,7 +103,7 @@ winget install Boy1690.Keeply
 
 ## Windows 道 2 。 .exe を手動ダウンロード {#path-exe}
 
-PowerShell を開きたくない？問題ない。keeply.動作 でダウンロードボタンを押し、`.exe` を取得してダブルクリック。
+PowerShell を開きたくない？問題ない。[keeply.work](https://keeply.work/) でダウンロードボタンを押し、`.exe` を取得してダブルクリック。
 
 そこで SmartScreen の青い画面が出る。**これは正常な動作**（[理由は上で説明済み](#why-smartscreen)）。続けるには：
 
@@ -158,7 +159,7 @@ Keeply を開き、「**新規プロジェクト**」を押し、いま作業中
 | Win 11 で「管理者権限が必要」と表示 | **管理者として実行**で PowerShell を開き直す |
 | Mac で「開発元を確認できないため開けない」 | 右クリック → 開く（ダブルクリックではない）。上の macOS セクション参照 |
 | 社内ネットワークでダウンロードがブロックされる | winget コマンド経由なら Microsoft CDN を通るので、たいてい通る |
-| インストールしたのに開かない | 一度再起動。それでもダメなら [support@keeply.動作](mailto:support@keeply.動作) へ |
+| インストールしたのに開かない | 一度再起動。それでもダメなら [support@keeply.work](mailto:support@keeply.work) へ |
 
 ## 覚えておくべき一つのこと
 

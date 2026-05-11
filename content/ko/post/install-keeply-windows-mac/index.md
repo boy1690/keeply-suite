@@ -1,6 +1,7 @@
 ---
 title: "Windows와 macOS에 Keeply 10분 만에 설치하기"
-description: "「실행 안 함」 안내 문구와 추측은 그만. 10분 만에 Keeply를 설치하고 당일에 첫 프로젝트를 보호하세요."
+description: "SmartScreen「실행 안 함」 안내 문구와 추측에 의존하지 않습니다 — 본문은 Windows winget 한 줄 명령 + macOS 우클릭 열기라는 깔끔한 두 경로를 따라, 10 분 안에 Keeply를 설치하고 당일에 첫 프로젝트를 보호하는 방법을 정리합니다."
+voice_version: v2-2026-05-11
 date: 2026-04-26
 draft: false
 tags: [Keeply 튜토리얼]
@@ -102,7 +103,7 @@ winget install Boy1690.Keeply
 
 ## Windows 경로 2 ,  .exe 파일 다운로드 {#path-exe}
 
-PowerShell은 만지기 싫다고요? 괜찮아요. keeply.작동에 가서 다운로드 클릭, `.exe` 받고, 더블클릭하세요.
+PowerShell은 만지기 싫다고요? 괜찮아요. [keeply.work](https://keeply.work/) 로 가서 다운로드 클릭, `.exe` 받고, 더블클릭하세요.
 
 SmartScreen 파란 화면이 뜰 거예요. **정상이에요** ([이유는 위 참조](#why-smartscreen)). 진행하려면:
 
@@ -158,7 +159,7 @@ Keeply를 열고, **새 프로젝트** 버튼을 누르고, 지금 작업 중인
 | Win 11에서 「관리자 권한 필요」라고 나옴 | PowerShell을 **관리자 권한으로 실행**으로 다시 열기 |
 | Mac에서 「확인되지 않은 개발자라 열 수 없습니다」 | 우클릭 → 열기 (더블클릭 말고). 위 macOS 섹션 참조 |
 | 회사 네트워크가 다운로드를 막음 | winget 명령어를 쓰세요 ,  Microsoft CDN을 통해서 보통 통과해요 |
-| 설치는 됐는데 안 열림 | 한 번 재시작. 그래도 안 되면 [support@keeply.작동](mailto:support@keeply.작동)로 메일 |
+| 설치는 됐는데 안 열림 | 한 번 재시작. 그래도 안 되면 [support@keeply.work](mailto:support@keeply.work) 로 메일 |
 
 ## 한 가지만 기억한다면
 

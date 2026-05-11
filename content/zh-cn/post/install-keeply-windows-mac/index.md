@@ -1,6 +1,7 @@
 ---
 title: "Keeply 安装指南（Windows + macOS）：从下载到第一个项目"
-description: "不靠「仍要执行」那颗小字、不靠运气。10 分钟装好 Keeply，当天就能保住第一个项目。"
+description: "不靠 SmartScreen「仍要运行」那颗小字、不靠运气——本文走完 Windows winget 一行命令 + macOS 右键打开两条干净路径，10 分钟装好 Keeply、当天就能保住第一个项目。"
+voice_version: v2-2026-05-11
 date: 2026-04-26
 draft: false
 tags: [Keeply 教程]
@@ -102,7 +103,7 @@ winget install Boy1690.Keeply
 
 ## Windows 路径 2：手动下载 .exe {#path-exe}
 
-不想开 PowerShell？也行。去 keeply.运作 点下载，拿到 `.exe` 安装文件，双击。
+不想开 PowerShell？也行。去 [keeply.work](https://keeply.work/) 点下载，拿到 `.exe` 安装文件，双击。
 
 接下来会跳出 SmartScreen 蓝屏。**这是正常的**（[原因见上面](#why-smartscreen)）。要继续装，动作是这样：
 
@@ -158,7 +159,7 @@ Mac 不会跳蓝屏。但首次打开不能双击。双击会被 [macOS Gatekeep
 | Win 11 跳「需要管理员」 | 用「**以管理员身份运行**」重开 PowerShell |
 | Mac「无法打开因为无法验证开发者」 | 右键 → 打开（不是双击），见上面 macOS 段 |
 | 公司网络挡下载 | 改用 winget 指令，走 Microsoft CDN，多半放行 |
-| 装完打不开 | 重启一次；仍不行寄 [support@keeply.运作](mailto:support@keeply.运作) |
+| 装完打不开 | 重启一次；仍不行寄 [support@keeply.work](mailto:support@keeply.work) |
 
 ## 唯一要记住的一件事
 

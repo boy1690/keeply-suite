@@ -1,6 +1,7 @@
 ---
 title: "How to install Keeply on Windows and macOS in 10 minutes"
-description: "Skip the 'Run anyway' fine print and the guesswork. Install Keeply in ten minutes and protect your first project the same day."
+description: "Skip the SmartScreen 'Run anyway' fine print and the guesswork — this article walks through Windows winget one-liner + macOS right-click open, two clean paths to install Keeply in 10 minutes and protect your first project the same day."
+voice_version: v2-2026-05-11
 date: 2026-04-26
 draft: false
 tags: [keeply tutorial]

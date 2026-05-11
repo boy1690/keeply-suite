@@ -1,6 +1,7 @@
 ---
 title: "Keeply 安裝指南（Windows + macOS）：從下載到第一個專案"
-description: "不靠「仍要執行」那顆小字、不靠運氣。10 分鐘裝好 Keeply，當天就能保住第一個專案。"
+description: "不靠 SmartScreen「仍要執行」那顆小字、不靠運氣——本文走完 Windows winget 一行指令 + macOS 右鍵打開兩條乾淨路徑，10 分鐘裝好 Keeply、當天就能保住第一個專案。"
+voice_version: v2-2026-05-11
 date: 2026-04-26
 draft: false
 tags: [Keeply 教學]
@@ -102,7 +103,7 @@ winget install Boy1690.Keeply
 
 ## Windows 路徑 2：手動下載 .exe {#path-exe}
 
-不想開 PowerShell？也行。去 keeply.運作 點下載，拿到 `.exe` 安裝檔，雙擊。
+不想開 PowerShell？也行。去 [keeply.work](https://keeply.work/) 點下載，拿到 `.exe` 安裝檔，雙擊。
 
 接下來會跳出 SmartScreen 藍屏。**這是正常的**（[原因見上面](#why-smartscreen)）。要繼續裝，動作是這樣：
 
@@ -146,7 +147,7 @@ Mac 不會跳藍屏。但首次打開不能雙擊。雙擊會被 [macOS Gatekeep
 
 第一次掃描需要 1 到 2 分鐘。之後 Keeply 會在背景看著這個資料夾，**改檔自動記錄**版本，不必你手動按存檔點。
 
-舉個合成範例幫你想像：某設計師裝完當下丟的是 Q2 提案資料夾。第一次掃描花了 2 分鐘。第三天，他發現自己上週六改錯一個 標誌 顏色，從歷史拉回前一版花了 20 秒。
+舉個合成範例幫你想像：某設計師裝完當下丟的是 Q2 提案資料夾。第一次掃描花了 2 分鐘。第三天，他發現自己上週六改錯一個 logo 顏色，從歷史拉回前一版花了 20 秒。
 
 裝完當天就用第一個專案，比裝完一週才用，留存率高很多。
 
@@ -158,13 +159,13 @@ Mac 不會跳藍屏。但首次打開不能雙擊。雙擊會被 [macOS Gatekeep
 | Win 11 跳「需要管理員」 | 用「**以系統管理員身分**」重開 PowerShell |
 | Mac「無法打開因為無法驗證開發者」 | 右鍵 → 打開（不是雙擊），見上面 macOS 段 |
 | 公司網路擋下載 | 改用 winget 指令，走 Microsoft CDN，多半放行 |
-| 裝完打不開 | 重啟一次；仍不行寄 [support@keeply.運作](mailto:support@keeply.運作) |
+| 裝完打不開 | 重啟一次；仍不行寄 [support@keeply.work](mailto:support@keeply.work) |
 
 ## 唯一要記住的一件事
 
 記住一件事就好：
 
-**藍屏不是判決，是 信譽 還在累積。**
+**藍屏不是判決，是信譽還在累積。**
 
 你不需要繞過警告，你只需要走 winget 那條沒有警告的路。
 
