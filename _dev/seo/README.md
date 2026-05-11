@@ -138,6 +138,25 @@ node _dev/seo/fetch-ga4.js | jq .byHost
 | Issue not opened | `seo-weekly` label was deleted | `gh label create seo-weekly --repo boy1690/keeply-blog --color 0e8a16` |
 | Sitemap URL count drops sharply | Hugo build broke or config regression | Check the latest `Deploy Hugo site to Pages` run; investigate before merging. |
 
+## Tag inventory drift detection
+
+`tag-inventory.js` snapshots and diffs the tag pool across the 6 core locales (`content/english|zh-tw|zh-cn|ja|ko|it/post/*/index.md`). Built 2026-05-11 after the GSC audit found 15 dangling 404s caused by tag renames with no redirect.
+
+```bash
+node _dev/seo/tag-inventory.js --snapshot   # refresh baseline (after intentional change)
+node _dev/seo/tag-inventory.js --diff       # exit 1 if any tag was REMOVED
+```
+
+Baseline lives in `tag-inventory.json` (committed). Run `--diff` before merging any PR that touches `tags:` frontmatter in core-locale post bundles. If a tag is REMOVED:
+
+1. Add the old `/{locale}/tags/{tag}/` URL to `cloudflare-bulk-redirects-*.csv` with 301 to `/{locale}/`
+2. Upload to Cloudflare → Account → Bulk Redirects (the existing list `blog_keeply_tag_404_redirects_2026_05_11` is the target)
+3. Re-run `--snapshot` to accept the new state
+
+## Cloudflare Bulk Redirects (404 cleanup)
+
+`cloudflare-bulk-redirects-2026-05-11.csv` — 15 dangling tag URLs → locale homepage 301. Already deployed to Cloudflare list `blog_keeply_tag_404_redirects_2026_05_11`. New entries append to this CSV and re-upload to the same list.
+
 ## Related infrastructure (not in this folder)
 
 - **GA4 install** — blog: `layouts/_partials/head.html` + `assets/js/ga-init.js`. Main site: `keeply-website/ga4-loader.js`.

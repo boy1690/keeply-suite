@@ -112,7 +112,7 @@ NAS plus a local drive can count as 2 media. But RAID isn't a backup. RAID prote
 
 **Q4: Is Keeply already 3-2-1?**
 
-Yes. Keeply builds 3-2-1 into its location layer (local work copy + canonical + backup location) and adds version history and release freezing. One tool, three layers.
+Yes. Keeply builds 3-2-1 into its location layer (local work copy + canonical + backup location) and adds version history and release freezing. One tool, three layers. ([Compare: what Keeply actually saves vs. backup and cloud tools.](/en/post/what-keeply-saves-vs-backup-cloud/))
 
 **Q5: Do solo workers need 3-2-1 too?**
 

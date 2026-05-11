@@ -35,7 +35,7 @@ In meno di un minuto, Dropbox sincronizza fedelmente quell'azione sul cloud.
 
 Lunedì mattina il cliente chiama per i file originali. Apri la cartella — vuota. Pensi che ci sia ancora speranza, ma la sua mossa manuale di «svuota cestino» ha aggirato in blocco il meccanismo di ripristino versioni di Dropbox.
 
-(Dropbox Personal conserva i file cancellati per 30 giorni, Business per 180. Nessuno dei due ti salva quando l'utente svuota attivamente il cestino. Vedi la [documentazione ufficiale di Dropbox](https://help.dropbox.com/delete-restore/recover-deleted-files).)
+(Dropbox Personal conserva i file cancellati per 30 giorni, Business per 180. Nessuno dei due ti salva quando l'utente svuota attivamente il cestino. Vedi la [documentazione ufficiale di Dropbox](https://help.dropbox.com/delete-restore/recover-deleted-files). Anche il software di recupero dati non arriva — sono [4 casi documentati](/it/post/restore-without-panic/).)
 
 Non sai nemmeno se prima ha copiato i file fuori. Non puoi consegnare nulla al cliente.
 

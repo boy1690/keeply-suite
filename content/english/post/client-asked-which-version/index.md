@@ -50,6 +50,8 @@ Word and the broader Office stack include three "**version recovery**" mechanism
 - **AutoSave** (in [OneDrive / SharePoint online Word](https://support.microsoft.com/en-us/office/restore-a-previous-version-of-a-file-stored-in-onedrive-159cad6d-d76e-4981-88ef-de6e96c93893)): writes to the cloud as you type.
 - **OneDrive version history**: keeps a snapshot of each save, retrievable for any timestamp. Microsoft's [SharePoint versioning docs](https://support.microsoft.com/en-us/office/enable-and-configure-versioning-for-a-list-or-library-1555d642-23ee-446a-990a-bcab618c7a37) note about 500 major versions retained by default.
 
+Excel's version history sits in the same design — see [the 4 Microsoft limits behind Excel's 1-2 version cap](/en/post/excel-version-history-limits/) for the spreadsheet shape of this same trap.
+
 The design intent is consistent: handle "**I crashed mid-document**" or "**I just saved over something**". Short-term save accidents. They aren't designed for "**the client asks about version v3 from three months ago**."
 
 ## AutoRecover, OneDrive, Time Machine: how long does each retain?

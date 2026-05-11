@@ -28,7 +28,7 @@ This isn't a one-off. It happens to everyone working with Cmd+S (or Ctrl+S). Let
 
 ## Why you end up naming files `_v3_FINAL` {#why-naming}
 
-Cmd+S is a permanent action. The moment you press it, the previous version is overwritten. There's no "the version from thirty minutes ago" button waiting for you. PSDs for designers, contract `.docx` files for lawyers, dissertations for grad students, same story everywhere. **If you don't name it, you lose it.** So you append `_v3`, `_FINAL`, `_REAL_FINAL` to the filename.
+Cmd+S is a permanent action. The moment you press it, the previous version is overwritten. There's no "the version from thirty minutes ago" button waiting for you. PSDs for designers, contract `.docx` files for lawyers, [dissertations for grad students](/en/post/thesis-single-point-of-failure/), same story everywhere. **If you don't name it, you lose it.** So you append `_v3`, `_FINAL`, `_REAL_FINAL` to the filename.
 
 Yeah, that's the frustrating part. What you're doing isn't compulsive. It's a survival reflex against an OS that never gave you an undo button.
 
@@ -59,7 +59,7 @@ Three design patterns the tool can use. Each one solves one of the four pain typ
 
 ### Design A: Automatic checkpoints (every Cmd+S keeps history)
 
-You press Cmd+S, the tool quietly preserves the previous version. You don't have to name anything. **Examples**: macOS Time Machine, Word AutoSave (only goes back 1-2 versions), Dropbox 30-day version history. **Keeply** uses a git engine for this, text files use delta storage, binaries above 10MB go into LFS (each version preserved in full). **Solves Type 1.**
+You press Cmd+S, the tool quietly preserves the previous version. You don't have to name anything. **Examples**: macOS Time Machine, Word AutoSave ([only goes back 1-2 versions](/en/post/excel-version-history-limits/)), Dropbox 30-day version history. **Keeply** uses a git engine for this, text files use delta storage, binaries above 10MB go into LFS (each version preserved in full). **Solves Type 1.**
 
 ### Design B: Named milestones (you mark "client signed" or "shipped")
 

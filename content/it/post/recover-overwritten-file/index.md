@@ -98,7 +98,7 @@ Sì. Percorso: "File → Opzioni → Salva → Salva informazioni di salvataggio
 
 **Q2: Quanto è efficace il software di recupero dati?**
 
-Può avere successo nei minuti subito dopo la sovrascrittura, ma sugli SSD (la maggior parte dei PC moderni), TRIM cancella immediatamente i settori sovrascritti, quindi i tassi di successo sono inferiori agli HDD. Anche sugli HDD, il successo cala bruscamente dopo qualche giorno.
+Può avere successo nei minuti subito dopo la sovrascrittura, ma sugli SSD (la maggior parte dei PC moderni), TRIM cancella immediatamente i settori sovrascritti, quindi i tassi di successo sono inferiori agli HDD. Anche sugli HDD, il successo cala bruscamente dopo qualche giorno. Per i file cancellati la stessa struttura di limiti vale — vedi [i 4 casi in cui il software di recupero non arriva](/it/post/restore-without-panic/).
 
 **Q3: OneDrive Personal e Business conservano lo stesso numero di versioni?**
 

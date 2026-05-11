@@ -35,7 +35,7 @@ locale_role: master_market (ja primary; vol 260 / SD 14 ⭐⭐⭐ Phase B 雙強
 
 月曜日、クライアントから原稿の依頼が入り、フォルダを開けると——空。まだ救えると思った。だが、彼女が手動でゴミ箱を空にした行為は、Dropbox のバージョン復元機構を丸ごと迂回していた。
 
-（Dropbox Personal の保持期間は 30 日、Business は 180 日。だがどちらも「ユーザーが自分でゴミ箱を空にする」行為は救えない。詳しくは [Dropbox 公式の説明](https://help.dropbox.com/delete-restore/recover-deleted-files)を参照。）
+（Dropbox Personal の保持期間は 30 日、Business は 180 日。だがどちらも「ユーザーが自分でゴミ箱を空にする」行為は救えない。詳しくは [Dropbox 公式の説明](https://help.dropbox.com/delete-restore/recover-deleted-files)を参照。データ復元ソフトも同じく [4 つのケースには届きません](/ja/post/restore-without-panic/)。）
 
 彼女がファイルをコピーして持ち出したかどうかも分からない。クライアントに何も納品できない。
 

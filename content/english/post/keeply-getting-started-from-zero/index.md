@@ -127,7 +127,7 @@ One day you'll notice ,  **this is great that I have this software**.
 
 Keeply doesn't fight for every scenario. In 4 cases, another tool is the better call.
 
-- **If you need cross-device cloud sync**: pick [IDrive](https://www.idrive.com/) or [Backblaze](https://www.backblaze.com/). Keeply lives on your computer. It's not cloud-native.
+- **If you need cross-device cloud sync**: pick [IDrive](https://www.idrive.com/) or [Backblaze](https://www.backblaze.com/). Keeply lives on your computer. It's not cloud-native. ([What Keeply actually saves vs. backup and cloud tools.](/en/post/what-keeply-saves-vs-backup-cloud/))
 - **If you need system restore or full disk backup**: pick [Acronis True Image](https://www.acronis.com/). Keeply doesn't do that.
 - **If you're an IT pro managing 50+ machines**: pick [MSP360](https://www.msp360.com/). Keeply is for individuals and small teams.
 - **If you just don't want to lose personal documents**, Windows File History is built in and good enough. You don't need to install anything.
