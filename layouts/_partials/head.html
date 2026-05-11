@@ -231,6 +231,78 @@
     ]
   }
   </script>
+
+  {{- /* FAQPage Schema (AEO v0.2.22 — answer engine Query Fan-out target).
+         Activated when frontmatter declares:
+           faq_schema:
+             - q: "問題完整句"
+               a: "完整答案 80-120 chars"
+             - q: "..."
+               a: "..."
+         Aligns with BWF P1.22 (question-based H2) — typically these Q/A
+         pairs mirror the article's H2 questions + Executive Answer
+         paragraphs (P1.23). Google AI Overviews + ChatGPT + Perplexity
+         actively extract FAQPage entries for direct answer surfaces. */ -}}
+  {{- with .Params.faq_schema -}}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {{- range $i, $faq := . }}
+        {{- if $i }},{{ end }}
+        {
+          "@type": "Question",
+          "name": {{ $faq.q | jsonify | safeJS }},
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": {{ $faq.a | jsonify | safeJS }}
+          }
+        }
+        {{- end }}
+      ]
+    }
+    </script>
+  {{- end -}}
+
+  {{- /* HowTo Schema (AEO v0.2.22 — tutorial / step-by-step content).
+         Activated when frontmatter declares:
+           howto_schema:
+             name: "完整教學名稱"
+             totalTime: "PT30M"          # ISO 8601 duration (optional)
+             steps:
+               - name: "Step 1 short title"
+                 text: "Step 1 detailed instruction"
+                 url: "#anchor-id"        # optional in-page anchor
+               - name: "..."
+                 text: "..."
+         Google + Copilot + Perplexity extract HowTo for "如何 X" queries. */ -}}
+  {{- with .Params.howto_schema -}}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": {{ .name | jsonify | safeJS }},
+      {{- with .totalTime }}
+      "totalTime": {{ . | jsonify | safeJS }},
+      {{- end }}
+      "step": [
+        {{- range $i, $step := .steps }}
+        {{- if $i }},{{ end }}
+        {
+          "@type": "HowToStep",
+          "position": {{ add $i 1 }},
+          "name": {{ $step.name | jsonify | safeJS }},
+          "text": {{ $step.text | jsonify | safeJS }}
+          {{- with $step.url }},
+          "url": {{ . | jsonify | safeJS }}
+          {{- end }}
+        }
+        {{- end }}
+      ]
+    }
+    </script>
+  {{- end -}}
 {{- else -}}
   {{- /* Homepage / list pages: Blog + WebSite (with SearchAction fallback to
          Google site: search since no internal search exists) + Organization

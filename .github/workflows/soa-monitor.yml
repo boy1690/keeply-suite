@@ -1,0 +1,79 @@
+name: SoA Monthly Monitoring Pipeline
+
+# Share of Answer (SoA) monitoring for keeply-blog across the 4 core
+# LLM engines (ChatGPT / Perplexity / Gemini / Google AI Mode).
+#
+# STATUS: SCAFFOLD — needs SERANKING_API_KEY + SITE_ID secrets before
+# the cron will produce useful output. Triggers manually via
+# workflow_dispatch for testing without API key (dry-run mode).
+#
+# See: scripts/soa_monitor.py + scripts/golden_prompt_set.csv
+
+on:
+  # Auto-run twice a month (1st + 15th at 00:00 UTC = 08:00 Asia/Taipei).
+  # Disabled until API key is provisioned — uncomment when ready.
+  # schedule:
+  #   - cron: '0 0 1,15 * *'
+
+  # Manual trigger for testing. Defaults to dry-run; flip to false when ready.
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (no API calls)'
+        required: false
+        default: 'true'
+        type: choice
+        options:
+          - 'true'
+          - 'false'
+      engines:
+        description: 'Comma-separated engine list'
+        required: false
+        default: 'chatgpt,perplexity,gemini,google_ai_mode'
+        type: string
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          pip install requests pandas python-dotenv
+
+      - name: Run SoA monitoring script
+        env:
+          SERANKING_API_KEY: ${{ secrets.SERANKING_API_KEY }}
+          SITE_ID: ${{ secrets.SE_RANKING_SITE_ID }}
+        run: |
+          mkdir -p output
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            python scripts/soa_monitor.py --dry-run --engines "${{ github.event.inputs.engines }}"
+          else
+            python scripts/soa_monitor.py --engines "${{ github.event.inputs.engines }}"
+          fi
+
+      - name: Upload SoA report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: SoA-Metrics-${{ github.run_id }}
+          path: output/*.csv
+          retention-days: 90
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "## SoA Monitoring Run" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ -d output ]; then
+            ls -la output/ >> $GITHUB_STEP_SUMMARY 2>&1 || true
+          fi
