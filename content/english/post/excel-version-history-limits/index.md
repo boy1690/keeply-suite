@@ -1,6 +1,7 @@
 ---
 title: "Excel Version History Only Goes Back 1-2 Versions? 4 Microsoft Limits Nobody Tells You"
-description: "Excel version history only goes back 1-2 versions isn't a bug, it's Microsoft designing AutoSave as cloud subscription bait."
+description: "Excel's version-history button is grayed out and only goes back 1-2 versions — not a bug, but the result of Microsoft designing AutoSave as OneDrive subscription bait. This article unpacks 4 limits you can't get around, plus 3 tool designs that close the gap."
+voice_version: v2-2026-05-11
 date: 2026-05-04T20:00:00+08:00
 draft: false
 slug: excel-version-history-limits
@@ -59,7 +60,7 @@ Each of these is something Microsoft **deliberately doesn't fix**, not something
 
 ## Why Microsoft designed it this way {#why-microsoft}
 
-A complete file history layer is technically trivial. macOS Time Machine showed the entire industry how to do it back in 2007. Microsoft can. Microsoft chose not to.
+A complete file history layer is technically straightforward. Apple has shipped Time Machine on every Mac since 2007 — it snapshots automatically every hour and lets you recover a file from any point in the past two months in two clicks, for free. The whole industry has seen it work for nearly two decades. Microsoft can do this. Microsoft chose not to.
 
 The reason is commercial design: version history is a OneDrive subscription differentiator. If desktop Excel had complete history on its own, local files had it too, no time limits, OneDrive subscriptions would lose a lock-in reason.
 
@@ -71,15 +72,15 @@ Three design patterns the tool can use. Each one solves some of the four limits 
 
 ### Design A: Automatic snapshots on every Cmd+S (no cloud dependency)
 
-The tool quietly preserves the previous version every time you press Cmd+S, no matter where the file lives. **Examples**: macOS Time Machine (file layer / system level), Keeply (file layer / git engine). **Keeply's difference**: each version is preserved in full with no time limit (unlike OneDrive's 30 days). **Solves limits #1 + #2 + #3.**
+The tool preserves the previous version every time you press Cmd+S, no matter where the file lives. **Examples**: macOS Time Machine (system-level, whole disk), Keeply (file-layer, scoped to the working folder you choose). **Keeply's difference**: each version is preserved in full with no time limit, unlike OneDrive's 30-day window. **Solves limits #1 + #2 + #3.**
 
 ### Design B: Automatic milestones (freezing at month-end / quarter-end)
 
-You actively flag "this version is month-end close v3" or "this version is Q2 close." Once flagged, no matter how the file changes, the milestone stays put. **Examples**: Git tag (developer-only), Keeply Release (built in, no git terminology in the UI). **Solves the extended-timeline part of #2**: quarterly reviews can still find the version that existed at the time.
+You actively flag "this version is month-end close v3" or "this version is Q2 close." Once flagged, no matter how the file changes, the milestone stays put. **Example**: GitHub Releases (a developer feature for freezing a code snapshot as a named milestone). **Keeply** has a "Release" feature that does the same job without developer terminology — pick a version from history, click "freeze as release," and that version stays recoverable forever. **Solves the extended-timeline part of #2**: quarterly reviews can still find the version that existed at the time.
 
 ### Design C: Version content search
 
-Search cell content across any historical version (not just file names). **Example**: Keeply spec 049 version-search across historical version cell content. **Solves part of #4**: not cell-level diff, but you can find "which version was the last one that contained that $100 number."
+Search content across any historical version (not just filenames). **Keeply** lets you search inside past file contents — useful for "which version was the last one that contained that $100 number." **Solves part of #4**: not cell-level diff, but a way to locate the version where a specific value lived.
 
 You'll notice that limit #4 (cell-level diff) is the real boundary. The next section is honest about why.
 

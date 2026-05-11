@@ -1,6 +1,7 @@
 ---
 title: "Versioni precedenti file Excel: solo 1-2 versioni indietro? 4 limiti Microsoft che nessuno ti dice"
-description: "Le versioni precedenti di Excel tornano indietro solo di 1-2 versioni: non è un bug, è Microsoft che progetta AutoSave come esca per l'abbonamento cloud."
+description: "Il pulsante cronologia versioni di Excel è grigio e torna indietro solo di 1-2 versioni — non è un bug, è il risultato di Microsoft che progetta AutoSave come esca per l'abbonamento OneDrive. L'articolo apre 4 limiti che non puoi aggirare, più 3 design di strumento che chiudono il vuoto."
+voice_version: v2-2026-05-11
 date: 2026-05-04T20:00:00+08:00
 draft: false
 slug: excel-version-history-limits
@@ -59,7 +60,7 @@ Ognuno di questi è qualcosa che Microsoft **deliberatamente non risolve**, non 
 
 ## Perché Microsoft l'ha progettato così {#why-microsoft}
 
-Un file history layer completo è tecnicamente trivial. macOS Time Machine ha mostrato a tutta l'industria come si fa nel 2007. Microsoft può. Microsoft sceglie di no.
+Un livello di cronologia file completo è tecnicamente semplice da costruire. Apple ha spedito Time Machine su ogni Mac dal 2007 — snapshot automatico ogni ora, recuperare un file di tre mesi fa in due click, tutto gratis. Tutta l'industria lo ha visto funzionare per quasi vent'anni. Microsoft può. Microsoft sceglie di no.
 
 La ragione è design commerciale: la cronologia versioni è un differenziatore dell'abbonamento OneDrive. Se Excel desktop avesse cronologia completa di suo, anche i file locali, senza limiti di tempo, gli abbonamenti OneDrive perderebbero un motivo di lock-in.
 
@@ -71,15 +72,15 @@ Tre pattern di design che lo strumento può usare. Ognuno risolve alcuni dei qua
 
 ### Design A: Snapshot automatici a ogni Cmd+S (no dipendenza cloud)
 
-Lo strumento conserva silenziosamente la versione precedente ogni volta che premi Cmd+S, indipendentemente da dove vive il file. **Esempi**: macOS Time Machine (livello file / sistema), Keeply (livello file / motore git). **La differenza di Keeply**: ogni versione preservata per intero senza limiti di tempo (a differenza dei 30 giorni di OneDrive). **Risolve i limiti #1 + #2 + #3.**
+Lo strumento conserva la versione precedente ogni volta che premi Cmd+S, indipendentemente da dove vive il file. **Esempi**: macOS Time Machine (livello sistema, disco intero), Keeply (livello file, limitato alla cartella di lavoro che indichi). **La differenza di Keeply**: ogni versione preservata per intero senza limiti di tempo, a differenza della finestra di 30 giorni di OneDrive. **Risolve i limiti #1 + #2 + #3.**
 
 ### Design B: Milestone automatici (congelamento fine mese / fine trimestre)
 
-Marchi attivamente "questa versione è chiusura fine mese v3" o "questa versione è Q2 close." Una volta marcato, qualunque cambiamento, il milestone resta. **Esempi**: Git tag (solo sviluppatori), Keeply Release (integrato, no terminologia git nell'UI). **Risolve la parte timeline estesa di #2**: revisioni trimestrali possono ancora trovare la versione esistente all'epoca.
+Marchi attivamente "questa versione è chiusura fine mese v3" o "questa versione è Q2 close." Una volta marcato, qualunque cambiamento, il milestone resta. **Esempio**: GitHub Releases (una funzione per sviluppatori che congela uno snapshot di codice come milestone nominato). **Keeply** ha una funzione "Release" che fa lo stesso lavoro senza terminologia da sviluppatore — prendi una versione dalla cronologia, clicca "congela come release," e quella versione resta recuperabile per sempre. **Risolve la parte timeline estesa di #2**: revisioni trimestrali possono ancora trovare la versione esistente all'epoca.
 
 ### Design C: Ricerca contenuto versioni
 
-Cerca contenuto cella in qualunque versione storica (non solo nomi file). **Esempio**: Keeply spec 049 ricerca contenuto attraverso le celle delle versioni storiche. **Risolve parte di #4**: non diff a livello cella, ma puoi trovare "quale versione era l'ultima che conteneva quel numero da 100 €."
+Cerca contenuto attraverso qualunque versione storica (non solo nomi file). **Keeply** ti lascia cercare dentro i contenuti delle versioni passate — utile per "quale versione era l'ultima che conteneva quel numero da 100 €." **Risolve parte di #4**: non diff a livello cella, ma un modo per localizzare la versione dove viveva un valore specifico.
 
 Noterai che il limite #4 (diff a livello cella) è il vero confine. La prossima sezione è onesta sul perché.
 
