@@ -1,6 +1,7 @@
 ---
 title: "Keeply는 실제로 무엇을 보관하나요? 백업·클라우드 도구와 어떻게 다른가요"
-description: "백업 도구는 디스크 전체를 다뤄요. 클라우드 도구는 가장 최근 사본을 다뤄요. Keeply는 모든 변경의 이력을 다뤄요. 세 가지 다른 일이에요."
+description: "백업은 디스크 전체를, 클라우드는 가장 최근 사본을, Keeply는 모든 변경의 이력을 다뤄요 — 세 가지 다른 일입니다. 본문은 이 세 도구가 각각 무엇을 보관하고 무엇을 해결하는지, 그리고 가장 흔한 「내가 덮어썼다」 시나리오를 앞 두 가지가 못 살리는 이유를 정리합니다."
+voice_version: v2-2026-05-11
 date: 2026-04-30T09:00:00+08:00
 slug: what-keeply-saves-vs-backup-cloud
 locale: ko
@@ -128,10 +129,6 @@ Keeply는 모든 파일의 이력 타임라인을 다뤄요. 백업은 컴퓨터
 
 - [파일 노트 앱 Keeply 사용법: 2가지 동작, 30가지 기능 커리큘럼은 없음](/ko/post/keeply-getting-started-from-zero/) (PILLAR 3, Keeply 온보딩 종합 가이드)
 - [파일 버전 관리 완벽 가이드](/ko/post/file-version-management-complete-guide/) (PILLAR 1, 버전 관리가 왜 중요한가)
-
----
-
-*저자: Ting-Wei Tsao, Keeply 창업자 | [LinkedIn](https://www.linkedin.com/in/tingwei-tsao/)*
 
 ---
 

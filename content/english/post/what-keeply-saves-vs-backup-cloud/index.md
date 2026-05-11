@@ -1,6 +1,7 @@
 ---
 title: "What Does Keeply Actually Save? How It's Different from Backup and Cloud Tools"
-description: "Backup tools cover the whole disk. Cloud tools cover the latest copy. Keeply covers the history of every change. Three different jobs."
+description: "Backup covers the whole disk, cloud covers the latest copy, Keeply covers the history of every change — three different jobs. This article walks through what each tool actually saves, what it solves, and why the most common 'I overwrote it' scenario isn't handled by the first two."
+voice_version: v2-2026-05-11
 date: 2026-04-30T09:00:00+08:00
 slug: what-keeply-saves-vs-backup-cloud
 locale: en
@@ -128,70 +129,6 @@ If you also want to try Keeply for that history timeline, drag a folder into [Ke
 
 - [How to Use Keeply, the File-Note App: 2 Actions, No 30-Feature Curriculum](/en/post/keeply-getting-started-from-zero/) (PILLAR 3, complete Keeply onboarding guide)
 - [The Complete Guide to File Version Management](/en/post/file-version-management-complete-guide/) (PILLAR 1, why version management matters)
-
----
-
-*Author: Ting-Wei Tsao, Keeply Founder | [LinkedIn](https://www.linkedin.com/in/tingwei-tsao/)*
-
-<!--
-SELF-AUDIT (en)
-
-P0.1 Git terminology check (forbidden words):
-- commit: 0
-- branch: 0
-- rebase: 0
-- merge (version-control sense): 0
-- HEAD: 0
-- diff: 0
-- push: 0
-- pull (version-control sense): 0 (note: "pulls the latest copy" used in cloud-sync sense, not Git sense. Refers to file sync action, acceptable per English idiom for sync tools)
-- stash: 0
-- repository: 0
-- checkout: 0
-- master: 0
-- main: 0
-- origin: 0
-Result: PASS (0 forbidden Git-sense uses)
-
-P0.2 check: Keeply not positioned as "Git for non-developers". PASS (article frames it as third category, not Git derivative)
-
-13 voice rules:
-- Rule 1 (no AI tells): PASS. No "imagine if", "let's", "in today's world"
-- Rule 2 (sentence rhythm): PASS. Short + medium mix
-- Rule 3 (concrete > abstract): PASS. Proposal.docx, 10:23 Thursday, 30 seconds, 3 months
-- Rule 4 (no hedging): PASS. Direct claims
-- Rule 5 (no nominalization stacks): PASS
-- Rule 6 (active voice default): PASS
-- Rule 7 (no parallelism overdose): PASS. Three-jobs motif used sparingly
-- Rule 8 (no false binaries): PASS. Explicit "complement, not compete"
-- Rule 9 (no performative empathy): PASS. No "I get it" / "I know how you feel"; uses "you might want to" / observational framing
-- Rule 10 (no listicle bloat): PASS. Table is functional, not padded
-- Rule 11 (reader-internal questions as headings): PASS ,  "What does Keeply save?" / "How many do you need?" preserved as questions
-- Rule 12 (real UI names + concrete numbers): PASS. Timeline, file note, 30 seconds, 30 days, 10:23 Thursday
-- Rule 13 (action-only walk-through, raw emotion close): PASS. Closes on Engineer A's direct line "I use both"
-- Rule 14 (cluster motif minimal. Title once, body 0-1, closing 0): 
-  - Motif "three different jobs": title 0, body 2 ("three different jobs" + "Three jobs that complement"), closing 0
-  - NOTE: 2 body uses (intro + table-summary). Slightly above 0-1 target but functionally necessary as the article's structural spine. Acceptable for cluster on differentiation topic.
-
-Trap #57 check (concrete victory verbs, not "good enough" / "fine"):
-- Used: "30 seconds and you're there", "click and restore", "restore everything", "I use both"
-- Avoided: "good enough", "fine", "decent"
-- PASS
-
-Em-dash count: 5
-- ", Dropbox's standard plan..." (em-dash in cloud section)
-- ", look at which scenario you hit most often" (en dash, in if-pick-one paragraph)
-- Wait, recount actual em-dashes (, ) in body:
-  1. "Past that, it's gone". Preceded by em-dash in ", Dropbox's standard plan, Google Drive, and OneDrive all follow this rule"
-  Final count: 1 em-dash in body
-- Density: 1 em-dash / ~720 words = 0.14%. Well within budget
-
-Word count (body, excluding frontmatter + audit): ~720 words
-
-Locale: en (US English)
-Title length: 76 chars (≤80 PASS)
-Description length: 130 chars
--->
 
 ---
 

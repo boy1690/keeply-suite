@@ -1,6 +1,7 @@
 ---
 title: "Keeply は何を保存する？バックアップ・クラウドとの違い"
-description: "バックアップはディスク全体を守る。クラウドは最新版を守る。Keeply は変更ごとの履歴を守る。三つは別物です。"
+description: "バックアップはディスク全体を、クラウドは最新版を、Keeply は変更ごとの履歴を守る——3 つは別物です。本記事はそれぞれが何を保存し何を解決するか、そして最も多い「自分で上書きしてしまった」場面を前 2 つが救えない理由を解説します。"
+voice_version: v2-2026-05-11
 date: 2026-04-30T09:00:00+08:00
 slug: what-keeply-saves-vs-backup-cloud
 locale: ja
@@ -128,10 +129,6 @@ A さんが B さんに返した答えに戻ります。
 
 - [ファイルノートツール Keeply の使い方：30 個の機能を覚えなくても、2 つの動作で身につく](/ja/post/keeply-getting-started-from-zero/)（PILLAR 3、Keeply 全体の入門ガイド）
 - [ファイルバージョン管理 完全ガイド](/ja/post/file-version-management-complete-guide/)（PILLAR 1、バージョン管理がなぜ大切か）
-
----
-
-*著者：Ting-Wei Tsao、Keeply 創業者 ｜ [LinkedIn](https://www.linkedin.com/in/tingwei-tsao/)*
 
 ---
 
