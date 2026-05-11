@@ -1,6 +1,7 @@
 ---
 title: "Why I Built Keeply: For People Who Lose Files in Shared Folders Every Day"
-description: "Keeply grew out of shared-folder chaos, not to turn you into a dev."
+description: "Keeply grew out of construction-site shared-folder chaos — the weekly story of concrete getting broken out because the field had last week's drawing. This is the founder note: I'm not trying to turn non-devs into git users, I'm building the tool they don't have to learn."
+voice_version: v2-2026-05-11
 date: 2026-05-06T01:00:00+08:00
 draft: false
 slug: why-i-built-keeply
