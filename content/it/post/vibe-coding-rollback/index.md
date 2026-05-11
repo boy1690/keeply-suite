@@ -1,6 +1,7 @@
 ---
 title: "Vibe coding fuori controllo? Un'azione per tornare a una versione funzionante"
-description: "L'agente AI corre avanti, il codice non parte. Apri la Timeline di Keeply. L'ultima versione funzionante è ancora lì."
+description: "L'agente AI corre avanti, il codice non parte, hai perso traccia dei file che ha modificato? Apri la Timeline di Keeply, trova l'ultima voce funzionante, click destro Ripristina — l'intera cartella di progetto torna allo stato pre-overshoot in 30 secondi."
+voice_version: v2-2026-05-11
 date: 2026-04-30T09:00:00+08:00
 slug: vibe-coding-rollback
 locale: it
@@ -125,10 +126,6 @@ La prossima volta che sfora, apri la Timeline e clicca l'ultima voce. **Problema
 ## Letture correlate
 
 - [Come usare Keeply, l'app per le note dei file: salta il tour delle 30 funzioni, parti con 2 azioni](/it/post/keeply-getting-started-from-zero/) (PILLAR 3, la guida completa all'onboarding di Keeply)
-
----
-
-*A cura di Ting-Wei Tsao, fondatore di Keeply | [LinkedIn](https://www.linkedin.com/in/tingwei-tsao/)*
 
 ---
 

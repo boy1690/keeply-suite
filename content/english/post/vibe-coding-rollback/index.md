@@ -1,6 +1,7 @@
 ---
 title: "Vibe Coding Off the Rails? One Action to Roll Back to a Working Version"
-description: "AI agent races ahead, code won't run. Open the Keeply Timeline. The last working version is still right there."
+description: "AI agent races ahead, code won't run, you've lost track of which files it edited? Open Keeply's Timeline, find the last working entry, right-click Restore — the entire project folder returns to the pre-overshoot state in 30 seconds."
+voice_version: v2-2026-05-11
 date: 2026-04-30T09:00:00+08:00
 slug: vibe-coding-rollback
 locale: en
@@ -125,51 +126,6 @@ Next time it overshoots, you open the Timeline and click the last entry. **Probl
 ## Further reading
 
 - [How to use Keeply, the file-notes app: skip the 30-feature tour, get going in 2 actions](/en/post/keeply-getting-started-from-zero/) (PILLAR 3, the full Keeply onboarding guide)
-
----
-
-*By Ting-Wei Tsao, founder of Keeply | [LinkedIn](https://www.linkedin.com/in/tingwei-tsao/)*
-
-<!-- self-audit
-P0.1 forbidden-term scan (en body + frontmatter):
-- commit: 0
-- branch: 0
-- rebase: 0
-- HEAD: 0
-- diff: 0
-- push (repo sense): 0
-- pull (repo sense): 0 (note: "pull it back" used in plain-English sense for recalling AI, not git pull)
-- stash: 0
-- repository / repo: 0
-- checkout: 0
-- master / main (branch ref): 0 (note: no use)
-- origin (remote): 0
-
-P0.2 framing check: Keeply framed as "safety net" / "file history". No "Git for non-developers" framing. PASS.
-
-13 voice rules:
-1. PAS order. Problem (overshoot scene) → Agitate (AI doesn't know it's broken) → Solution (Timeline, 3 steps). PASS.
-2. Reader-side rapport ,  "you're probably thinking", "you don't have to remember", "let the AI race as far as it wants". PASS.
-3. Image markers preserved exactly: image-1.svg, image-2.svg, image-3.svg. PASS.
-4. Purpose-level abstraction. Focuses on "get back to working" not features. PASS.
-5. Tool framing rhythm. Keeply named only at action moments + closing. PASS.
-6. Specifics 4-choose-1 ,  "Engineer A". PASS.
-7. Motif strict ,  "races ahead / pull it back / overshoot / off the rails" appears: title 1x, body limited (overshoot heading + "races ahead" once + "off the rails" once + "overshoots" once), closing reuses "off the rails" once and "overshoots" once. Motif appearances within target.
-8. Closing invitational ,  "open Keeply and drop your project folder in" / "Next time...". PASS.
-9. No performative empathy. No "I get it" / "I know how you feel". PASS.
-10. Subject-centered outcomes ,  "the whole folder returns", "Keeply remembered". PASS.
-11. Heading reader-internal questions. H2s phrased as the question the reader is already asking. PASS.
-12. Walk-through real UI names + concrete numbers. Cursor, left sidebar, Timeline, Restore, 30 seconds, 30-60 minutes, 3 files, 5 files. PASS.
-13. Action-only steps + closing on raw reader emotion. Steps 1/2/3 are imperative; closing ends on "Problem closed in 30 seconds." PASS.
-
-T6.5 traps:
-- #54 No banner-style body opening. Opens with Engineer A scene, not banner. PASS.
-- #55 No fabricated micro-detail. Numbers (3 files, 5 files, 30 seconds, 30-60 minutes) match source. PASS.
-- #56 Verb-first sentence ordering ,  "Run it.", "Open each point", "Find the last point", "Then you run it." PASS.
-- #57 Concrete victory verbs ,  "It works." / "Problem closed" (not "fine" / "good enough"). PASS.
-
-Em-dash count: 6 in body, 1 motif-line, 0 in self-audit. Body length ~3,400 chars. Density ~1.8/1000. PASS (≤2/1000).
--->
 
 ---
 

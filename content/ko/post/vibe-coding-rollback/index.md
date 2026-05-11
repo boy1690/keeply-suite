@@ -1,6 +1,7 @@
 ---
 title: "Vibe Coding이 궤도를 이탈했나요? 동작 한 번으로 작동하던 버전으로 복원"
-description: "AI 에이전트가 앞서 달려나가서 코드가 안 돌아가요. Keeply Timeline을 여세요. 마지막으로 작동하던 버전이 그대로 거기 있어요."
+description: "AI 에이전트가 너무 앞서 달려나가 코드가 안 돌아가고, 어느 파일을 건드렸는지도 모르겠다? Keeply Timeline을 열고, 마지막으로 동작했던 항목을 우클릭으로 「복원」 — 프로젝트 폴더 전체가 30 초 안에 AI 가 손대기 전 상태로 돌아갑니다."
+voice_version: v2-2026-05-11
 date: 2026-04-30T09:00:00+08:00
 slug: vibe-coding-rollback
 locale: ko
@@ -125,10 +126,6 @@ Keeply는 당신이 코드를 쓰는 부분을 대체하려고 있는 게 아니
 ## 더 읽어보기
 
 - [파일 노트 앱 Keeply 사용법: 30가지 기능 투어는 건너뛰고, 2가지 동작으로 시작](/ko/post/keeply-getting-started-from-zero/) (PILLAR 3, Keeply 온보딩 종합 가이드)
-
----
-
-*저자: Ting-Wei Tsao, Keeply 창업자 | [LinkedIn](https://www.linkedin.com/in/tingwei-tsao/)*
 
 ---
 
