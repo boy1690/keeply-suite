@@ -1,6 +1,7 @@
 ---
 title: "Why \"Version Control Software\" Means Git: 3 Non-Developer Alternatives That Don't Require CLI"
-description: "Non-developer version control software exists, Google just doesn't surface it for you."
+description: "Search 'version control software' and get nothing but git tutorials — because Google assumes you're an engineer. This article unpacks the 4 design requirements non-developers actually need, and lists 3 tools you can actually use without learning a single command."
+voice_version: v2-2026-05-11
 date: 2026-05-05T06:40:00+08:00
 draft: false
 slug: version-control-software-non-developer
@@ -59,31 +60,23 @@ Pull "what should version control software do" apart and you find four requireme
 
 git was **designed for text code**. Designer / admin file-management use cases mismatch it from the start.
 
-## The key: hide git mechanism behind the UI {#hide-git-key}
+## The software industry solved version control 20 years ago — why didn't it cross over? {#hide-git-key}
 
-Here's the insight: **you can use git mechanism, but don't expose it in the UI**. That's the key to non-developer version control.
+The software industry solved version control 20 years ago: an engineer presses save, the whole project's history is preserved cleanly. The problem is that layer of tooling never crossed over to non-developers.
 
-Why:
+It's not that the technology can't be applied. It's that the design assumptions never made it across. The vocabulary (branch, merge, HEAD), the default workflow (commit before switching), the UI (black terminal screen) — all assume the user is already an engineer. If you're not, the toolset has nothing to say to you.
 
-- git's delta storage / merge / branching is technically excellent (proven)
-- The problem is git's UI/CLI is dev-facing, confusing for non-developers
-- Solution: **git mechanism + non-developer UI = non-developer version control**
+What non-developers actually need is **version control designed for them from day one**, not engineer tools with a different color palette. Keeply takes this route: doesn't assume you know git, doesn't teach you git, designs version history from the file-level perspective from scratch.
 
-Concrete example: Keeply's ADR-001 mandates "no commit/branch/HEAD in the UI." git terminology is wrapped in office language:
-
-- "Save version" = "commit"
-- "Version history" = "git log"
-- "Restore" = "checkout"
-
-Yeah, that's the key. Atlassian, GitHub, Stack Overflow all talk to devs. Nobody takes the "mechanism + UI separated" angle.
+That's the frustrating part. Atlassian, GitHub, Stack Overflow all talk to devs. Nobody answered the obvious question — what would version control look like if it had been built for non-developers in the first place?
 
 ## Three non-developer alternatives {#three-options}
 
 Three non-developer options, each with trade-offs:
 
-### Option A: macOS Time Machine
+### Option A: macOS Time Machine (built into Mac)
 
-System-level file restore, auto-snapshots every hour. **Pros**: file-level UI, no CLI, binary support. **Cons**: Mac only, restore via timeline UI is partially clunky, no milestone freeze. **Fit for**: macOS individuals, ad-hoc recovery only.
+Apple's built-in tool since 2007: plug in an external drive, it automatically snapshots your whole disk every hour, opening a 3-month-old file takes two clicks. **Pros**: free, file-level UI, no CLI, works with anything. **Cons**: Mac only, restore timeline animation is slightly clunky, no "freeze as milestone" feature. **Fit for**: Mac individuals, occasional recovery.
 
 ### Option B: Dropbox version history (30-day limited)
 
@@ -91,7 +84,7 @@ Versions auto-preserved up to 30 days, restore via right-click "Previous version
 
 ### Option C: Keeply
 
-git2 engine + ADR-001 git-terminology-hidden UI. **Pros**: file-level UI, no CLI, automatic LFS for binaries, no time limit, Release milestone feature. **Cons**: desktop-first (weak on mobile), not great at instant sync, not for real-time collaboration. **Fit for**: non-developer individuals / SMBs, long-term history needs, binary-heavy work.
+Built for non-developers from day one: every save automatically kept as a version, version history shown as "date + what changed," zero engineering terminology in the UI. **Pros**: file-level UI, no CLI, large files handled, no time limit, you can freeze a version as a "Release" so later saves can't overwrite it. **Cons**: desktop-first (weaker on mobile), instant sync isn't its strength, not for real-time multi-person editing. **Fit for**: designers, grad students, freelancers, small teams, long-term version needs, design-file-heavy work.
 
 Pick by use case: (1) just ad-hoc restore → Time Machine, (2) team collab within 30 days → Dropbox, (3) long-term + individual + design files → Keeply.
 

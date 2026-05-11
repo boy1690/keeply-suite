@@ -1,6 +1,7 @@
 ---
 title: "「版本管理軟體」搜出來都是 git？非開發者的 3 種選擇"
-description: "非開發者的版本管理軟體存在。只是 Google 不會找給你。"
+description: "搜「版本管理軟體」跳出來全是 git 教學？因為 Google 預設你是工程師。本文拆解非開發者需要的 4 個設計要件，並列 3 個能用、不用學指令的工具選項。"
+voice_version: v2-2026-05-11
 date: 2026-05-05T06:40:00+08:00
 draft: false
 slug: version-control-software-non-developer
@@ -26,87 +27,79 @@ faq_schema:
     a: 真正的開發者需要 CLI 存取或想看 git 圖表的人——Keeply UI 故意藏太多，不適合；以及需要分散式團隊合作整合 GitHub Actions 等開發流程的場景。Keeply 為非開發者設計，不取代開發者工具。
 ---
 
-你 Google「版本管理軟體」搜尋。跳出來的是 git、svn、Mercurial 教學。CLI 指令、終端畫面、存檔點/推送/merge。讀 5 分鐘就放棄。你不是 工程師，是設計師、事務職或接案者。你想要的只是「能看到檔案的 UI」版本管理軟體而已。
+你 Google「版本管理軟體」。跳出來的是 git、SVN、Mercurial 教學。終端機指令、黑底白字、存檔點、合併、推送。讀 5 分鐘就放棄了。你不是工程師，是設計師、行政、接案者。你只是想要一個「看得到檔案的視窗」就能管版本的軟體而已。
 
-這不是個案。是 Google 把「版本管理」全部當作 工程師 查詢 的結果。我們先看為什麼，再給你 3 個非開發者的選項。
+這不是你哪裡搜錯，是 Google 把「版本管理」這個詞預設成「工程師搜尋」。我們先看為什麼，再給你 3 個非開發者實際能用的選項。
 
 ## 目錄
 
-- [為什麼搜不到 git 以外的選項](#why-only-git)
-- [非開發者需要的 4 個設計要件](#four-requirements)
-- [關鍵：把 git 機制 藏在 UI 後面](#hide-git-key)
-- [3 個非開發者的選擇](#three-options)
-- [Keeply 不適合的時候](#boundaries)
+- [為什麼搜「版本管理軟體」只跑出 git？](#why-only-git)
+- [非開發者需要的 4 個設計要件是什麼？](#four-requirements)
+- [軟體業早就解決版本管理，為什麼沒搬給非開發者？](#why-never-crossed-over)
+- [非開發者實際能用的 3 個選擇是什麼？](#three-options)
+- [什麼時候 Keeply 不是版本管理軟體的正確答案？](#boundaries)
 
-## 為什麼搜不到 git 以外的選項 {#why-only-git}
+## 為什麼搜「版本管理軟體」只跑出 git？ {#why-only-git}
 
-「版本管理軟體」搜尋意圖其實是**混的**：一半是 工程師 (要比較 git/svn/Mercurial)，另一半是非開發者 (要看得到檔案的 UI)。
+「版本管理軟體」搜尋意圖其實**一半一半**：一半是工程師（要比較 git / SVN / Mercurial 這類版本控制系統），另一半是非開發者（要看得到檔案的視窗、不想學指令）。
 
-但 Google SERP **100% 顯示 工程師 那一半**：Atlassian、GitHub、Stack Overflow 把上位獨占。非開發者的需求 invisible。
+但 Google 搜尋結果**100% 都顯示工程師那一半**：Atlassian、GitHub、Stack Overflow 把前 10 名霸佔了。非開發者的需求被擠到結果第二頁以後。
 
-不講真的不知道：你找不到不是因為你搜不對，是你需要的工具被擠到 SERP 角落。
+沒人告訴你的是：你找不到不是因為你搜不對，是你需要的工具被擠出視野了。
 
-## 非開發者需要的 4 個設計要件 {#four-requirements}
+## 非開發者需要的 4 個設計要件是什麼？ {#four-requirements}
 
-把「版本管理軟體要什麼」拆開看，git/svn 滿足不了 4 個要件：
+把「版本管理軟體要什麼」拆開看，工程師工具滿足不了 4 個要件：
 
-| # | 要件 | git/svn 滿足不了的原因 |
+| # | 要件 | 工程師工具滿足不了的原因 |
 |---|---|---|
-| 1 | **以檔案為單位的 UI** | git 是 存檔點/blob 單位，跟檔案不直接對應 |
-| 2 | **不用 CLI** | git 預設要 CLI（GUI wrapper 有但學習曲線陡）|
-| 3 | **二進位檔案支援** | git 為 文字 優化，PSD/DWG/MP4 不擅長（要另設定 LFS）|
-| 4 | **直觀的還原 UI** | git 的 checkout/reset/revert 概念混亂 |
+| 1 | **看得到檔案的介面** | git 是用「存檔點」當單位，看不到你想看的「proposal.docx 在哪裡」|
+| 2 | **不用打指令** | git 預設要用終端機（有 GUI 但學習曲線一樣陡）|
+| 3 | **大檔案能裝得下** | git 為純文字優化，PSD、DWG、影片這類大檔不擅長 |
+| 4 | **直覺的還原介面** | git 的「checkout」「reset」「revert」三個概念對非工程師很混亂 |
 
-git 是**為文字程式碼設計的**。設計師、事務職的檔案管理場景跟它本質不對。
+git 是**為文字程式碼設計的工具**。設計師、行政、接案者的檔案場景跟它本質上不對。
 
-## 關鍵：把 git 機制 藏在 UI 後面 {#hide-git-key}
+## 軟體業早就解決版本管理，為什麼沒搬給非開發者？ {#why-never-crossed-over}
 
-這裡是重點：**git 機制 可以用，但 UI 不要露出來**。這是非開發者向版本管理的 關鍵。
+軟體業 20 年前就解決版本管理：工程師按一次儲存，整份程式碼的歷史軌跡都留得乾乾淨淨。問題是那層工具從來沒搬給非開發者用。
 
-理由：
+不是技術做不到，是設計思維沒過來。工程師工具的詞彙（branch、merge、HEAD）、預設流程（先 commit 才能切換）、UI（黑底白字終端機），都假設使用者已經是工程師。你不是工程師，那套工具就跟你無關。
 
-- git 的 delta storage / merge / branching 技術上優秀（已證明）
-- 問題是 git 的 UI/CLI 是 工程師 向，非開發者會混亂
-- 解：**git 機制 + non-developer UI = 非開發者向版本管理**
+非開發者需要的是**從零為他們設計的版本管理工具**，不是把工程師工具的介面換個顏色。Keeply 走的是這條路：不假設你懂 git，也不教你 git，從檔案層的視角設計版本歷史。
 
-具體例：Keeply 的 ADR-001 規定「UI 不出現 存檔點/branch/HEAD」。git terminology 用辦公室語言 wrap：
+對啊，這就是讓人煩的地方。Atlassian、GitHub、Stack Overflow 都對工程師講話，從來沒有人正面回答「不是工程師的人想要的版本管理長什麼樣」。
 
-- 「儲存版本」=「存檔點」
-- 「版本歷史」=「git log」
-- 「還原」=「checkout」
+## 非開發者實際能用的 3 個選擇是什麼？ {#three-options}
 
-對啊，這就是 關鍵。Atlassian、GitHub、Stack Overflow 都對 工程師 講話。「機制 跟 UI 分離」這個角度沒人 take。
+3 個非開發者可以實際用的選項，各有取捨：
 
-## 3 個非開發者的選擇 {#three-options}
+### 選項 A：macOS Time Machine（Mac 內建）
 
-3 個非開發者向選項，各有 取捨：
+Apple 從 2007 年起在每一台 Mac 內建的功能：插上外接硬碟，系統每小時自動存一份完整快照，要回到 3 個月前那一份檔案打開、點兩下就有。**優點**：免費、看得到檔案、不用打指令、什麼檔案都行。**缺點**：只限 Mac、還原介面要走時間軸動畫、沒有「凍結成里程碑」這個功能。**適合**：Mac 個人使用、只要偶爾還原。
 
-### Option A：macOS Time Machine
+### 選項 B：Dropbox 版本歷史（30 天限定）
 
-系統級檔案還原，每小時 自動 快照。**優點**：以檔案為單位 UI、不用 CLI、二進位支援。**缺點**：Mac only、還原走時間軸 UI 部分不便、沒有 milestone freeze。**適合**：macOS 個人用戶，突發還原 only。
+30 天內的版本 Dropbox 自動留著，從檔案右鍵→「之前的版本」就能還原。**優點**：跨平台、團隊共享方便。**缺點**：超過 30 天就清掉、不支援儲存格層級比對、會產生「衝突副本」（[參考另一篇](/zh-tw/post/dropbox-conflicted-copy/)）。**適合**：30 天內的協作場景。
 
-### Option B：Dropbox 版本歷史（30 天限定版）
+### 選項 C：Keeply
 
-30 天內 版本 自動保留，UI 從檔案右鍵→「之前的版本」還原。**優點**：跨平台、共享方便。**缺點**：30 天後消失、沒有 儲存格-level 比對、衝突 副本 問題（[另一篇文章參考](/zh-tw/post/dropbox-conflicted-copy/)）。**適合**：30 天內 collaborative editing。
+從零為非開發者設計：每次存檔自動留版、版本歷史用「日期 + 改了什麼」呈現、UI 完全沒有工程師術語。**優點**：看得到檔案、不用打指令、大檔案都能裝、無時間限制、可以把某一版凍結成「發行版」永遠不被覆蓋。**缺點**：桌面優先（手機端弱）、即時同步不是強項、即時多人協作不適合。**適合**：設計師、研究生、接案者、中小團隊、有長期版本需求或設計檔多的工作。
 
-### Option C：Keeply
+選哪個的提示：(1) 只要偶爾還原 → Time Machine；(2) 團隊在 30 天內協作 → Dropbox；(3) 長期 + 個人 / 小團隊 + 設計檔多 → Keeply。
 
-git2 引擎 + ADR-001 把 git terminology 隱藏 的 UI。**優點**：以檔案為單位 UI、不用 CLI、二進位 LFS 自動、無時間限制、發行版 milestone。**缺點**：桌面優先（mobile 弱）、即時 同步 不是強項、即時協作 不適合。**適合**：非開發者 個人 / SMB、長期 紀錄 需要、binary 重視。
+## 什麼時候 Keeply 不是版本管理軟體的正確答案？ {#boundaries}
 
-選擇提示：(1) 只突發還原 → Time Machine、(2) 團隊共享 30 天內 → Dropbox、(3) 長期 + 個人 + 設計檔多 → Keeply。
+老實講，Keeply 不適合所有人：
 
-## Keeply 不適合的時候 {#boundaries}
-
-老實寫，Keeply 不適合所有人：
-
-- **Real developer**：要 CLI access、要看 git 紀錄 圖表。Keeply UI 藏太多
-- **大企業**：沒 SSO / Active Directory 整合
-- **Mobile-first**：Keeply 是 桌面優先
-- **即時協作**：Microsoft 365 共同編輯 / Google Docs 比較強
+- **真正的工程師**：要用終端機、要看版本歷史的圖表結構——Keeply UI 故意藏太多。
+- **大企業**：沒有 SSO / Active Directory 整合。
+- **手機優先的使用者**：Keeply 是桌面優先。
+- **即時多人協作**：Microsoft 365 共同編輯 / Google Docs 比較強。
 
 ## 下次搜「版本管理軟體」之前
 
-不會再被 git 教學挫敗。你不是 工程師，那也沒關係。非開發者向的選項存在，只是 Google 不會給你看。
+不會再被 git 教學挫敗。你不是工程師，那也沒關係——非開發者的選項存在，只是 Google 不會給你看而已。
 
 想看完整地圖？[繼續閱讀「檔案版本管理完整指南」](/zh-tw/post/file-version-management-complete-guide/)。
 
