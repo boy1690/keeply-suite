@@ -17,6 +17,23 @@ pillar_parent: file-version-management-complete-guide
 voice_version: v2-2026-05-11
 status: approved_master
 cta_topic: recovery
+image_alt_data: "版本堆疊從 thesis_v5.docx 到 thesis_final_really_final.docx，其中 v6 標記為「你遺忘的差異」——一台筆電、兩年心血，真正的風險不是截止日而是再也拼湊不回的那個修改"
+howto_schema:
+  name: 碩士論文版本管理 4 步實戰
+  totalTime: P2Y
+  steps:
+    - name: 每日收工存日期檔
+      text: 每天收工前存一份帶日期的檔案（如「論文-0423.docx」），讓每天的版本有獨立記錄，為日後教授問起舊版時提供可查依據。
+      url: '#h2-4'
+    - name: 交教授前獨立留檔
+      text: 每次交給教授前將那一份單獨保留，檔名標記「交教授」（如「論文-0423-交教授.docx」），這是教授最常回頭問「上一版那段」時最需要的版本。
+      url: '#h2-4'
+    - name: 工具自動記錄每版差異
+      text: 導入 Keeply 讓每次存檔自動留版，開啟差異視圖直接看 v5 與 v6 改了哪些字，不用手動翻找，教授問起兩下就打得開。
+      url: '#h2-4'
+    - name: 至少一份不在這台筆電
+      text: 雲端、外接硬碟或隨身碟擇一，確保至少一份論文不在這台電腦上，防止筆電遺失、SSD 損毀或意外潑水導致兩年心血全部消失。
+      url: '#h2-4'
 ---
 
 # 碩士論文版本管理 4 步：別讓兩年心血押在一台電腦的單點故障

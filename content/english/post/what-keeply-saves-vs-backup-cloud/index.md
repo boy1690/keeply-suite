@@ -23,6 +23,16 @@ strategic_fit:
   icp_fit: "★★★★ Most common newcomer evaluation question"
   conversion_path: "★★★★★ Reader walks away knowing why Keeply doesn't duplicate Time Machine"
 cta_topic: backup
+image_alt_data: "Three-column diagram: Backup recovers a dead disk, Cloud recovers a lost laptop, Keeply recovers the version you saved over yourself — the third column is where 80% of file pain lives but neither traditional tool addresses"
+faq_schema:
+  - q: Keeply 存什麼？跟備份和雲端有什麼不同？
+    a: Keeply 存的是「你自己改動的歷史」：每次 Cmd+S 都留版本，不用思考要不要存哪些。它解決「我改錯了想退回」的場景，這是備份和雲端都不處理的層次。
+  - q: 備份工具存什麼？什麼情境下需要？
+    a: 備份工具存「整顆磁碟某個時間點的完整快照」，解決硬碟壞掉、筆電遺失、機房失火等災難場景。Time Machine、3-2-1 都屬此類。它救硬體，不救你自己存錯。
+  - q: 雲端工具存什麼？解決什麼問題？
+    a: 雲端工具存「多裝置間的最新版同步」，解決手機、平板、筆電要看同一份檔案的場景。Dropbox、OneDrive、iCloud 都屬此類。它救裝置切換，不救改動歷史。
+  - q: 我到底需要幾個工具才夠？
+    a: 看你怕什麼：怕硬碟壞需要備份；怕跨裝置需要雲端；怕自己改錯需要 Keeply。三個是不同層次的工具，不互相取代。最常見的「我改錯了」情境，前兩個都救不了。
 ---
 
 # What Does Keeply Actually Save? How It's Different from Backup and Cloud Tools

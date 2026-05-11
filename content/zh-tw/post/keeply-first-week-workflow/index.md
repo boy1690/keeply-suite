@@ -15,6 +15,23 @@ template: T1
 template_variant: trial_diary
 voice_version: v2-2026-05-11
 status: approved_master
+image_alt_data: "三天觀察清單：第 1 天新增檔案自動追蹤、第 3 天編輯壓縮為 2-4 個有意義版本而非 17 個、第 5 天清空資源回收桶後仍可從 Keeply 還原刪除檔——7 天被動試用，無需安裝精靈"
+howto_schema:
+  name: Keeply 第一週 7 天驗證觀察日記
+  totalTime: PT7D
+  steps:
+    - name: Day 1 新增檔案
+      text: 裝完 Keeply 後正常工作存第一個檔，中午前打開 Keeply 確認新增的檔案自動出現在介面並有時間戳記，無需手動加入。
+      url: '#day-1'
+    - name: Day 3 修改檔案
+      text: 改昨天的檔案並多次存檔，傍晚打開版本面板，確認顯示 2-4 個帶時間戳的關鍵版本而非 17 個瑣碎紀錄，且每個版本可點擊還原。
+      url: '#day-3'
+    - name: Day 5 刪除測試
+      text: 故意刪一個不重要的測試檔，打開 Keeply「已刪除檔案」清單，確認該檔仍存在並可點「還原」撈回，驗證刪除與系統垃圾桶獨立。
+      url: '#day-5'
+    - name: Day 7 綜合評估
+      text: 回顧本週三件事：Keeply 是否看見新增的檔、留下合理數量版本、刪除後能找回。三個答案都是「對」則繼續使用；有一項不符則直接移除。
+      url: '#day-7'
 ---
 
 # Keeply 教學：第一週什麼都不用做，用 7 天觀察日記驗證 3 個真實信號

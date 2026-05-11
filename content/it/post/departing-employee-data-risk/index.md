@@ -11,6 +11,7 @@ primary_keyword: 'rischio dati dipendente in uscita (baseline; ja-master primary
 spec: specs/departing-employee-data-risk/
 status: approved
 voice_version: v2-2026-05-11
+image_alt_data: "Timeline della cartella alle 23:03: brand-book/ copiata alle 22:50, eliminata alle 23:03, scaduta dopo 30 giorni — due azioni sulla stessa cartella, nessuna registrata da Dropbox o Google Drive, entrambe fuori dalla portata degli strumenti di sync"
 ---
 
 # Il dipendente in uscita ti ha cancellato i file? Hai confuso «sincronizzazione» con «backup»

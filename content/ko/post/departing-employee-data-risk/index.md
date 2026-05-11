@@ -11,6 +11,7 @@ primary_keyword: '퇴사 직원 자료 위험 (baseline; ja-master 기본 키워
 spec: specs/departing-employee-data-risk/
 status: approved
 voice_version: v2-2026-05-11
+image_alt_data: "23:03 폴더 타임라인: brand-book/가 22:50에 복사되고, 23:03에 삭제되며, 30일 후 만료 — 동일 폴더에 두 가지 동작이 발생했지만 Dropbox와 Google Drive 모두 기록하지 못하고, 두 행위 모두 동기화 도구가 차단할 수 없는 범위"
 ---
 
 # 퇴사 직원이 회사 파일을 다 지웠다? '동기화'를 '백업'으로 착각했기 때문이다

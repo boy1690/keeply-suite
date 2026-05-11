@@ -11,6 +11,7 @@ image: cover.svg
 og_image: cover.png
 role: standalone
 template: T6
+image_alt_data: "Sagoma del fondatore vicino alla finestra con il carattere 創 (creare) scritto a mano — il momento che ha dato vita a Keeply: vedere un collega perdere 6 settimane di lavoro CAD per una sovrascrittura non salvata, capendo che gli strumenti esistenti non erano progettati per non-sviluppatori"
 ---
 
 Negli ultimi anni ho lavorato fianco a fianco con ingegneri dell'edilizia. Molti hanno 50, 60 anni. Il computer non è il loro strumento più comodo, ma planimetrie, ordini di variante e contratti passano tutti da lì ogni giorno. La cartella condivisa è il loro campo di collaborazione: un NAS, un gruppo di persone, N versioni di file, modifiche continue.

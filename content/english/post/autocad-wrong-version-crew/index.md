@@ -17,6 +17,23 @@ pillar_parent: file-version-management-complete-guide
 voice_version: v2-2026-05-11
 status: approved_master
 cta_topic: versioning
+image_alt_data: "Three diverging timelines: Design shipped 5 versions, Office missed the last 2, Field crew still building from version 2 — one project folder, three realities, the gap between office and field always breaks first"
+howto_schema:
+  name: 圖檔版本管理 4 步：辦公室與現場對齊
+  totalTime: PT2H
+  steps:
+    - name: 新版進辦公室即通知現場
+      text: 新版一進辦公室當下通知現場人員，並要求對方明確回覆「收到」才算完成交接，不能只存好就算。
+      url: '#h2-4'
+    - name: 新版覆蓋舊版前先留檔
+      text: 每次新版覆蓋舊版之前，將舊版獨立保存並於檔名中標記版次，以備設計回頭改回舊版時有據可查。
+      url: '#h2-4'
+    - name: 工具自動記錄版本供全員查看
+      text: 導入 Keeply 等版本管理工具，讓每次存檔自動記錄一版，所有人開啟同一保管庫即可看到同一條版本時間線。
+      url: '#h2-4'
+    - name: 保留一份異地備份
+      text: 確保至少一份檔案不在辦公室或工地 NAS，存放於外接硬碟、雲端或備份槽，防止公司 NAS 損毀時無從復原。
+      url: '#h2-4'
 ---
 
 > It's 9:40 AM, you stop by the office, and the PM pulls up last Thursday's revision. The frame spec changed, you've been on site every day, nobody told you. A field supervisor's 4-step drawing version control playbook: no new tools for the crew, no workflow overhaul.

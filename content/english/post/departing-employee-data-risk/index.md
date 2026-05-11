@@ -10,6 +10,7 @@ locale: en
 primary_keyword: 'departing employee data risk (baseline; ja-master primary keyword: 退職 データ 持ち出し どこまで)'
 spec: specs/departing-employee-data-risk/
 status: approved
+image_alt_data: "Folder timeline at 23:03: brand-book/ copied at 22:50, deleted at 23:03, expiring 30 days later — two actions on the same folder, neither logged by Dropbox or Google Drive, both beyond what sync tools can stop"
 ---
 
 # Departing employee deleted your files? Sync isn't backup

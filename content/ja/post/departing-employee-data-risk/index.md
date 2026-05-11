@@ -11,6 +11,7 @@ primary_keyword: '退職 データ 持ち出し どこまで'
 spec: specs/departing-employee-data-risk/
 status: approved
 locale_role: master_market (ja primary; vol 260 / SD 14 ⭐⭐⭐ Phase B 雙強)
+image_alt_data: "23:03のフォルダタイムライン：brand-book/は22:50にコピーされ、23:03に削除され、30日後に完全消滅——同じフォルダへの2つの操作はどちらもDropboxやGoogle Driveに記録されず、同期ツールでは防げない"
 ---
 
 # 退職社員のデータ持ち出しはどこまで防げる？「同期」を「バックアップ」と混同しているから

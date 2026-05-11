@@ -12,6 +12,18 @@ image: cover.svg
 og_image: cover.png
 locales_required: [en, zh-TW, zh-CN, ja, ko, it]
 cta_topic: backup
+image_alt_data: "Schema di tre copie di backup di proposal_v7_FINAL.psd etichettate tutte LATEST: la regola 3-2-1 di Peter Krogh del 2005 è intatta, ma il problema si è spostato dalla perdita di file alla versione sbagliata"
+faq_schema:
+  - q: 3-2-1 備份原則到底在說什麼？
+    a: 3-2-1 是 Peter Krogh 2005 年訂下的備份規則：3 份檔案、2 種儲存媒介、1 份存放異地。設計目的是讓任何單一硬體故障、媒介老化、機房災難都無法讓你的檔案完全消失。
+  - q: 3-2-1 備份原則防什麼、不防什麼？
+    a: 3-2-1 能防硬碟損毀、機房失火、勒索軟體。但它不防操作失誤：你自己覆蓋版本、同事改錯共用資料夾、雲端同步把錯的版本傳到三個位置，3-2-1 都救不了。
+  - q: 為什麼做了 3-2-1 備份還是會丟檔？
+    a: 3-2-1 的「3 份」是空間冗餘，不是時間冗餘。2026 年雲端即時同步，「3」變成同一個錯誤被即時複製到 3 個位置。你需要的不只是多份備份，而是能回溯時間點的版本歷史。
+  - q: 雲端備份算 3-2-1 的「異地」嗎？
+    a: 算。但 iCloud、OneDrive、Google Drive 是同步不是備份。你刪除或覆蓋會即時同步到雲端，無法防止操作失誤。異地要求只解決物理隔離問題，版本歷史是另一層需求。
+  - q: 個人工作者也需要 3-2-1 備份原則嗎？
+    a: 看檔案重要性。判斷標準只有一個：丟了會不會痛？跟個人或企業身份無關。會痛就需要。3-2-1 是必要但不足夠的基礎，還需要搭配版本歷史才能應對操作失誤場景。
 ---
 
 # La regola 3-2-1 del backup: 20 anni dopo, basta ancora nel 2026?

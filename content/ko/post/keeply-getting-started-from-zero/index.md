@@ -17,6 +17,23 @@ status: approved
 bwf_version_at_draft: v0.2.11
 voice_calibration_round: "user round 1+2+3 applied + UI-grounded walk-through"
 cta_topic: install
+image_alt_data: "30개 기능 체크리스트로 온보딩에 14일 걸리는 경우와 \"폴더 하나 드래그, 오늘 작업 계속\"의 2가지 동작으로 첫날부터 보호받는 경우의 좌우 비교 — 학습 곡선 없음"
+howto_schema:
+  name: Keeply 從零開始 2 個動作上手
+  totalTime: PT7D
+  steps:
+    - name: 動作 1：拖入資料夾
+      text: 把一個目前正在進行、不想搞丟的資料夾直接拖進 Keeply 視窗，不改命名、不分類、不思考結構，拖進去就完成。
+      url: '#what-are-the-two-actions'
+    - name: 動作 2：繼續工作
+      text: 照平常習慣改檔案、存檔，Keeply 自動在時間軸記錄每次存檔變動，不需要按任何按鈕或記憶快捷鍵。
+      url: '#what-are-the-two-actions'
+    - name: Day 2-3 看時間軸
+      text: 第 2 到第 3 天打開 Keeply 時間軸，確認每次存檔筆記已累積出現，點進任一筆可看到新增或刪除了哪些內容。
+      url: '#first-week-natural'
+    - name: Day 7 確認價值
+      text: 第 7 天回顧整週的時間軸，確認版本歷史是否讓你感到有保障；若某天發現改錯可直接點歷史版本還原。
+      url: '#first-week-natural'
 ---
 
 # Keeply 사용법: 30가지 기능은 건너뛰고, 2가지 동작으로 시작하세요

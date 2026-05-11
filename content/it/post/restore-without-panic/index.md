@@ -13,6 +13,18 @@ role: cluster
 template: T1
 primary_keyword: "recuperare file cancellati"
 voice_version: v2-2026-05-11
+image_alt_data: "Quattro motivi per cui il Cestino è vuoto quando serve: svuotato di recente, unità condivisa, Shift+Canc, cestino cloud oltre 30 giorni — uno strumento di versioning a livello file installato in anticipo è l'unica soluzione che funziona in tutti e quattro i casi"
+faq_schema:
+  - q: 為什麼 SSD 上的刪除檔案救援軟體幾乎救不回來？
+    a: 現代電腦多使用 SSD，Windows 7 後預設開啟 TRIM 機制，刪除時 OS 立刻告訴 SSD 把該區塊標為空白可重用，救援軟體掃描到的只有一片零。業界直言：聲稱能從啟用 TRIM 的 SSD 救出已刪檔案的公司，不是無能就是在騙客戶。
+  - q: 有哪些情境下檔案根本不會進入資源回收筒？
+    a: 4 種情境直接略過垃圾桶：從 NAS 或 SharePoint 等共用磁碟刪除（直接抹除）、按 Shift+Del 快捷鍵（OS 設計即永久刪除）、雲端垃圾桶超過 30 天保留期自動清空、以及你前天剛手動清過垃圾桶。
+  - q: 為什麼事後的檔案救援比事前防禦更不可靠？
+    a: 事後救援依賴「發現的時機」，TRIM 觸發後磁區立即被標記可覆寫，每多拖一小時成功率急速下降。SSD 加 BitLocker 加密的環境下救援機率基本為零。事前防禦在每次儲存時就留版本，完全不依賴發現時機。
+  - q: Keeply 可以解決哪些檔案救援軟體解不了的場景？
+    a: Keeply 在工具層建立版本紀錄層，不靠雲端也不靠外接硬碟：共用磁碟 NAS 或 SharePoint 上作業一樣保留歷史；離線工作無需全程連線；沒有 30 天保留期上限，3 個月前的版本時間軸上仍找得到。
+  - q: Keeply 有哪些救援場景做不到？
+    a: 三種情境 Keeply 無法處理：SD 卡與手機照片需要專門 App；整顆磁碟實體損毀需要備份工具加 3-2-1 原則；以及 Keeply 安裝前已刪除的檔案，因為它是事前防禦工具，無法溯及既往。
 ---
 
 # Recuperare file cancellati: 4 casi in cui il software di recupero fallisce

@@ -11,6 +11,29 @@ slug: install-keeply-windows-mac
 image: cover.svg
 og_image: cover.png
 cta_topic: install
+image_alt_data: "Microsoft Defender SmartScreen의 \"Windows가 PC를 보호했습니다\" 경고에서 winget 설치를 거쳐 첫 번째 프로젝트가 자동 버전 관리되기까지의 단계 — 차단 화면에서 첫 보호 저장까지 10분"
+howto_schema:
+  name: Keeply Windows / macOS 安裝教學
+  totalTime: PT10M
+  steps:
+    - name: 了解藍屏原因
+      text: SmartScreen 藍屏不代表軟體有問題，是判斷新軟體下載量是否累積足夠信譽。Keeply 已被 Microsoft winget 官方審查收錄，走 winget 路徑就不會出現藍屏。
+      url: '#why-smartscreen'
+    - name: 選擇安裝路徑
+      text: 三條路擇一：Windows 推薦用 winget 指令；不想開 PowerShell 可下載 .exe；macOS 下載 .dmg。
+      url: '#three-paths'
+    - name: Windows winget 安裝
+      text: 開啟 PowerShell，貼入 `winget install Boy1690.Keeply` 並按 Enter，約 30 秒完成，全程不出現 SmartScreen 警告。
+      url: '#path-winget'
+    - name: Windows .exe 安裝
+      text: 下載 .exe 後雙擊，SmartScreen 跳出時點左下角「其他資訊」小字，再點「仍要執行」，安裝精靈接手完成安裝。
+      url: '#path-exe'
+    - name: macOS .dmg 安裝
+      text: 下載 .dmg 並將 Keeply 拖入應用程式資料夾，首次開啟必須右鍵選「打開」而非雙擊，確認對話框點「打開」。
+      url: '#path-macos'
+    - name: 新增第一個專案
+      text: 開啟 Keeply 點「新增專案」，選一個目前正在進行、不想搞丟的資料夾，初次掃描約 1-2 分鐘，之後自動在背景記錄版本歷史。
+      url: '#first-project'
 ---
 
 > "더블클릭했더니 파란 화면이 떠서, 바이러스인 줄 알고 그냥 닫아버렸어요."

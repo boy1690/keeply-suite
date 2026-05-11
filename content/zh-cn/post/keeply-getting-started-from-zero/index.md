@@ -18,6 +18,23 @@ bwf_version_at_draft: v0.2.11
 voice_calibration_round: "user round 1+2+3 套用 + UI-grounded walk-through"
 derived_from: zh-TW
 cta_topic: install
+image_alt_data: "左右对比：30个功能清单需14天才能上手，对比仅需「拖入一个文件夹、继续今天的工作」2个动作——第一天即获保护，无需学习曲线"
+howto_schema:
+  name: Keeply 從零開始 2 個動作上手
+  totalTime: PT7D
+  steps:
+    - name: 動作 1：拖入資料夾
+      text: 把一個目前正在進行、不想搞丟的資料夾直接拖進 Keeply 視窗，不改命名、不分類、不思考結構，拖進去就完成。
+      url: '#what-are-the-two-actions'
+    - name: 動作 2：繼續工作
+      text: 照平常習慣改檔案、存檔，Keeply 自動在時間軸記錄每次存檔變動，不需要按任何按鈕或記憶快捷鍵。
+      url: '#what-are-the-two-actions'
+    - name: Day 2-3 看時間軸
+      text: 第 2 到第 3 天打開 Keeply 時間軸，確認每次存檔筆記已累積出現，點進任一筆可看到新增或刪除了哪些內容。
+      url: '#first-week-natural'
+    - name: Day 7 確認價值
+      text: 第 7 天回顧整週的時間軸，確認版本歷史是否讓你感到有保障；若某天發現改錯可直接點歷史版本還原。
+      url: '#first-week-natural'
 ---
 
 # 文件笔记软件 Keeply 怎么用：不用学 30 个功能，2 个动作就上手

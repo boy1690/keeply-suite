@@ -18,6 +18,20 @@ status: approved
 bwf_version_at_draft: v0.2.11
 flow: v0.3 4-step (auto draft)
 cta_topic: versioning
+image_alt_data: "Keeply Timeline at 14:23 marked 'off the rails — +12 files / -47 lines / build fail' above the 13:00 entry starred as last working version — one click restores entire project tree in 30 seconds after AI agent overshoot"
+howto_schema:
+  name: Vibe Coding 失控時 3 步回退 AI 改動
+  totalTime: PT30S
+  steps:
+    - name: 打開 Keeply 時間軸
+      text: 不要試著看懂 AI 改了哪些檔案，也不用手動 ctrl+Z。直接打開 Keeply 介面，找到目前專案資料夾的時間軸視圖。
+      url: '#one-action'
+    - name: 找最後一筆「還在跑」的時間點
+      text: 在時間軸上往上滑，找到上一筆你記得程式還能跑的版本（通常是 10-30 分鐘前），通常有星號標示為穩定版本。
+      url: '#one-action'
+    - name: 右鍵選還原
+      text: 在那一筆版本上右鍵點選「還原到此版本」，Keeply 在 30 秒內把整個專案目錄恢復到該時間點狀態，AI 失控的所有改動同時被撤銷。
+      url: '#one-action'
 ---
 
 # Vibe Coding Off the Rails? One Action to Roll Back to a Working Version

@@ -14,6 +14,18 @@ locales_required: [en, zh-TW, zh-CN, ja, ko]
 market_strategy: hybrid
 ranking_locales: [en, ko]
 cta_topic: versioning
+image_alt_data: "时钟显示 11:23，旁列三个文件名——proposal_v3_FINAL、_v3_FINAL_v2、_v3_FINAL_final——没有一个能对应客户询问的三月交付版本；Word 自动恢复与 OneDrive 均无法回溯三个月"
+faq_schema:
+  - q: Word 內建版本歷史能做什麼？
+    a: Word 有三種機制：AutoRecover（當機救援，關閉即清除）、自動儲存（邊打邊存至雲端）、OneDrive 版本歷史（保留約 500 個版本快照）。三種都是短期儲存事故救援，設計目標不包含 3 個月後的交付版本追蹤。
+  - q: AutoRecover、OneDrive 和 Time Machine 各能保留多久？
+    a: AutoRecover 在檔案正常關閉後即清除；OneDrive 版本歷史預設約 500 個版本，超過自動刪最舊；Mac Time Machine 每小時快照保留 24 小時、每天快照保留 30 天。每種機制都有保留上限，無法跨越 3 個月這條線。
+  - q: 為什麼 Word 版本歷史守不到 3 個月後？
+    a: 軟體內建版本歷史活在「儲存層」，設計給最近一次寫入失敗用，保留期依平均使用者一個月內查找頻率設定。3 個月以上不在設計目標，清除是合理行為。需要工具層獨立的常駐版本歷史才能解決。
+  - q: 找回 3 個月前的交付版本需要什麼？
+    a: 需要兩層：常駐版本歷史（每次儲存都留下，不依賴 Word 或 OneDrive 保留期政策）；以及交付便條元資料（匯出時自動嵌入誰、何時、對應哪個版本）。Keeply 同時提供這兩層。
+  - q: Google Docs 的修訂版能保留多久？
+    a: Google 未公開明確保留期。官方文件指出較舊的修訂版可能會被合併以節省空間，實務上 3 個月以上的修訂版常被自動合併或清除，無法可靠用於長期交付版本追蹤。
 ---
 
 # 3 个月后客户问你那版：Word 内置版本历史救不了你

@@ -12,6 +12,18 @@ image: cover.svg
 og_image: cover.png
 role: cluster
 pillar_parent: file-version-management-complete-guide
+image_alt_data: "Timeline di monthly_close.xlsx salvato alle 17:15, 17:30 e 17:47 — il salvataggio delle 17:47 sovrascrive con dati corrotti; la versione delle 17:30 è irrecuperabile perché AutoSave richiede OneDrive/SharePoint e 4 condizioni simultanee"
+faq_schema:
+  - q: Excel 版本歷史按鈕為什麼會變灰無法使用？
+    a: 「版本歷史」按鈕需要同時滿足 4 個條件才能運作：檔案存 OneDrive 或 SharePoint、AutoSave 已開啟、商業版授權、在桌面版而非網頁版。任一條件不符按鈕就變灰，而多數工作模式 4 個條件一個都不符。
+  - q: Microsoft AutoSave 有哪些沒說清楚的限制？
+    a: 有 4 個繞不過的限制：桌面 AutoSave 只能回 1-2 版；OneDrive 版本歷史 30 天過期；本機檔案完全沒有版本記錄；以及不支援儲存格層級的比對。這些都是 Microsoft 刻意的工程選擇，不是技術做不到。
+  - q: 為什麼 Microsoft 把 Excel 版本歷史設計成這樣？
+    a: 因為完整版本歷史是 OneDrive 訂閱的差異化功能。若桌面 Excel 自帶完整本機紀錄，OneDrive 少一個綁定理由。版本歷史對使用者是安全網，對 Microsoft 是訂閱上鉤誘餌，兩個角色決定了功能的實際行為。
+  - q: 有哪些工具設計能真正解決 Excel 版本歷史不足的問題？
+    a: 三種設計：每次 Cmd+S 自動快照不依賴雲端（如 Keeply，無時間限制）；自動里程碑讓月底或季度凍結點永遠保留；版本內容搜尋讓你從歷史版本中找到特定數值最後出現的時間點。
+  - q: Keeply 可以完全取代 Excel 的版本歷史功能嗎？
+    a: 不能完全取代。Keeply 顯示「整檔 v3 到 v4 的差異」，不支援儲存格層級比對；也不修正 formula 邏輯錯誤；不適合多人即時協作場景。但對本機存檔、長期保留、快速還原這三個核心需求，Keeply 能補足 Excel 的限制。
 ---
 
 Venerdì pomeriggio, le 17:47. Stai lavorando alla chiusura di fine mese in Excel. Hai appena cancellato una formula per provarne un'altra, ed era sbagliata. Cmd+Z arriva al limite undo, non torna indietro. Apri File > Informazioni > Cronologia versioni. In grigio. Poi ti ricordi: questo foglio è sul desktop, non su OneDrive. Trenta minuti di lavoro sulle formule, persi.

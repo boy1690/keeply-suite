@@ -12,6 +12,18 @@ image: cover.svg
 og_image: cover.png
 role: cluster
 pillar_parent: file-version-management-complete-guide
+image_alt_data: "터미널에 git commit, git push, git checkout HEAD~3 명령이 표시되고 \"이게 당신에게 주어진 것\"이라는 제목 — 비개발자에게 필요하지만 git이 충족 못 하는 4가지 요건: 파일 레벨 UI, CLI 불필요, 바이너리 지원, 직관적 복원"
+faq_schema:
+  - q: 為什麼搜「版本管理軟體」結果都是 git？
+    a: 因為 git 統治了開發者市場 20 年，相關討論、教學、SaaS 工具全部圍繞 git 設計。非開發者用同樣關鍵字搜尋會撞到一片開發者話語，找不到適合自己的選項。這是搜尋結果的偏誤，不是市場上真的只有 git。
+  - q: 非開發者需要的版本管理工具有哪 4 個設計要件？
+    a: 4 個關鍵：檔案層介面（按檔案不按 repo）、免命令列（GUI 為主）、二進位支援（Word/Excel/PSD 不只純文字）、直覺還原（不用學 checkout 概念）。git 在這 4 點都不滿足非開發者需求。
+  - q: 把 git 機制藏在 UI 後面為什麼是關鍵？
+    a: 因為 git 核心引擎（不可變物件、SHA hash、tree structure）技術上是好的，但暴露給非開發者的概念（branch、merge conflict、HEAD~3）不需要被使用者看見。隱藏這些概念但保留底層功能，是非開發者工具的核心設計。
+  - q: 非開發者有哪 3 個版本管理工具可以選？
+    a: 三選一：macOS Time Machine（限 Mac、只能還原整顆磁碟到時間點）；Dropbox 版本歷史（限 30 天保留期、需雲端訂閱）；Keeply（跨平台、本機優先、無時間限制、UI 隱藏 git 概念）。
+  - q: Keeply 不適合哪些使用情境？
+    a: 真正的開發者需要 CLI 存取或想看 git 圖表的人——Keeply UI 故意藏太多，不適合；以及需要分散式團隊合作整合 GitHub Actions 等開發流程的場景。Keeply 為非開發者設計，不取代開發者工具。
 ---
 
 당신은 「버전 관리 소프트웨어」를 검색했습니다. 나온 건 git, svn, Mercurial 튜토리얼. CLI 명령, 터미널 화면, 저장 시점/푸시/merge. 5 분 읽고 포기. 당신은 개발자 가 아니라 디자이너, 사무직, 프리랜서입니다. 「파일이 보이는 UI」의 버전 관리 소프트웨어가 필요할 뿐.

@@ -11,6 +11,7 @@ image: cover.svg
 og_image: cover.png
 role: standalone
 template: T6
+image_alt_data: "Founder sketch by a window with handwritten character 創 (create) — the moment that triggered Keeply was watching a colleague lose 6 weeks of CAD work to an unsaved overwrite, realizing existing tools were never designed for non-developers"
 ---
 
 For the past few years I've worked alongside engineers in the construction industry. Many of them are 50, 60 years old. The computer isn't their most comfortable tool, but the daily blueprints, change orders, and contracts all run through it. The shared folder is where they collaborate: one NAS, a group of people, N versions of files, edits all the time.

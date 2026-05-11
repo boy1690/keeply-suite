@@ -14,6 +14,18 @@ locales_required: [en, zh-TW, zh-CN, ja, ko]
 market_strategy: single-market-ja-primary
 ranking_locales: [ja, ko]
 cta_topic: recovery
+image_alt_data: "monthly_report.xlsx 在 19:00、19:15、19:30 三次儲存的時間軸——19:30 的覆蓋儲存無法透過 AutoRecover、OneDrive 或資料復原軟體復原；唯一解答是在儲存發生前建立上游防護"
+faq_schema:
+  - q: AutoRecover 到底是為什麼設計的？
+    a: AutoRecover 是為當機救援設計的，每 10 分鐘自動暫存一份，但在檔案正常關閉後就會清除。它的設計目標是「打到一半當機」場景，不適用於「正常關閉後才發現覆蓋錯」這種情境。
+  - q: AutoRecover、OneDrive 版本歷史和資料復原軟體各自能救什麼？
+    a: AutoRecover 救當機中斷；OneDrive 版本歷史救過去 500 版以內、需雲端儲存；Windows 陰影複製救有事先設定者；資料復原軟體只在覆蓋直後幾分鐘有效；Time Machine 只有在快照間隔內有效。沒有一種能結構性救到「正常關閉後才發現覆蓋錯」的典型場景。
+  - q: 為什麼「覆蓋儲存後」再求救就已經來不及了？
+    a: 這些救援機制活在「儲存層」，依賴發現的時機。AutoRecover 一關檔就清；資料復原軟體依賴磁區未被新寫入。每過一小時磁區被覆蓋的機率直線飆升。而「事前防禦」的常駐版本歷史不依賴發現時機。
+  - q: 要如何預防覆蓋儲存造成版本遺失？
+    a: 在工具層放一份常駐版本歷史：每次儲存都自動留一個版本，不依賴 Word 或 OneDrive 的保留期政策。Keeply 用 git 引擎在每次儲存時自動存檔點，讓「覆蓋儲存」不再是破壞性動作。
+  - q: Keeply 可以取代 AutoRecover 嗎？
+    a: 不能取代。AutoRecover 處理當機中斷救援，Keeply 處理正常儲存後的版本保留，兩者是互補關係。且 Keeply 不能溯及既往，必須在覆蓋發生前就已啟動。
 ---
 
 # 找回被覆蓋檔案的極限：AutoRecover 救不到的地方

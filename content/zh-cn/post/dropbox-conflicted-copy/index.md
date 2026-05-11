@@ -12,6 +12,18 @@ image: cover.svg
 og_image: cover.png
 role: cluster
 pillar_parent: file-version-management-complete-guide
+image_alt_data: "分割图示:Anna 与 Bill 同时编辑同一份 proposal.docx，Dropbox 碰撞产生「(conflicted copy)」文件——后存者覆盖先存，每月每个团队平均触发 4 次，这是产品设计的结果而非错误"
+faq_schema:
+  - q: Dropbox 的「衝突的副本」是什麼時候會出現？
+    a: 有 4 種場景都會觸發：兩人同時編輯並儲存、離線編輯後上線同步、多裝置切換時的同步延遲、以及 Mac 與 Windows 系統時鐘差異。這 4 種情境只要踩中一種就會產生衝突副本。
+  - q: Dropbox 為什麼這樣設計衝突副本機制？
+    a: Dropbox 採用 last-writer-wins 策略：後上傳的版本勝出，前一版另存為衝突副本。這是商業取捨，優先保障同步不打斷工作流，而非做衝突偵測。衝突解析責任被刻意推給使用者，不是技術做不到。
+  - q: 手動合併兩份衝突副本能根治問題嗎？
+    a: 不能。手動合併只是症狀治療，不改變同步機制。下個禮拜同樣情境會再次觸發衝突副本，一個月後你已經重複合併了 4-5 次。解法是換同步機制，而不是讓自己合併得更快。
+  - q: 有什麼設計能根治 Dropbox 衝突副本問題？
+    a: 有三種設計模式：衝突偵測並提示合併（Git-style）、檔案鎖定機制（check-out 模式）、以及本機副本加手動推送（Keeply 模型）。三種各有取捨，其中本機副本加推送能解決全部 4 種衝突場景。
+  - q: Keeply 適合取代 Dropbox 解決衝突副本問題嗎？
+    a: 部分適合。Keeply 能解決衝突副本的核心機制問題，但不適合大檔即時同步、行動裝置存取、外部分享連結、或 1 小時內多人頻繁協作的場景。那些情境 Dropbox 或 Google Docs 更合適。
 ---
 
 周四晚上 10:30，你跟同事 Anna 共用 Dropbox 改一份提案。她加了 3 段内容，你同时加了结尾的 CTA。你们都按 Cmd+S。隔天打开文件夹，多了一份 `提案 (Anna 的 conflicted copy 2026-05-02).docx`。她改的你这里没有，你加的她那里也没有。你花 1 小时手动合并，30 分钟检查有没有漏。
