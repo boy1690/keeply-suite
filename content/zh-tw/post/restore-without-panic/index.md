@@ -1,12 +1,12 @@
 ---
-title: "檔案救援軟體不一定救得到：4 種你以為有 trash 但其實沒有的情境"
-description: "你按了 Delete、Recycle Bin 是空的。4 個常見原因讓 OS 沒留任何救援痕跡。"
+title: "檔案救援軟體不一定救得到：4 種你以為有垃圾桶，但其實早已消失的情境"
+description: "按了 Delete 發現資源回收筒是空的？破解 SSD TRIM 機制與檔案救援軟體的盲區，告訴你為什麼事前防禦比事後鑑識更可靠。"
 date: 2026-05-06T08:50:00+08:00
 draft: false
 slug: restore-without-panic
 locales: [zh-TW, en, zh-CN, ja, ko, it]
 categories: [檔案管理]
-tags: [檔案還原, Keeply 教學]
+tags: [檔案還原, 版本控制]
 image: cover.svg
 og_image: cover.png
 role: cluster
@@ -14,66 +14,75 @@ template: T1
 primary_keyword: "檔案救援"
 ---
 
-你按了 刪除。打開 回收 資料夾，是空的。
+# 檔案救援軟體不一定救得到：4 種你以為有垃圾桶，但其實早已消失的情境
 
-四個常見原因：你前天剛清過、這個檔案在共用磁碟所以根本沒進過、你按的是 Shift+Del、這是雲端 垃圾桶 而檔案放滿 30 天前。OS 沒留任何救援痕跡。
+> 按了 Delete 發現資源回收筒是空的？破解 SSD TRIM 機制與檔案救援軟體的盲區，告訴你為什麼事前防禦比事後鑑識更可靠。
 
-接著 Google「檔案救援」第一頁告訴你下載 Recoverit、EaseUS、Disk Drill。先慢一秒。
+## 本文目錄
 
-Microsoft 官方論壇有[使用者反映打開 Excel 卻看不到 AutoRecover 救回的檔案](https://techcommunity.microsoft.com/discussions/excelgeneral/excel-autorecover-files-disappeared/3937167)，這是日常情境。SSD 救援的真相更刺眼：[Hetman 救援 直言](https://hetmanrecovery.com/recovery_news/data-recovery-is-impossible-ssd-cloud-and-online-services.htm)「救援公司若聲稱能從啟用 TRIM 的 SSD 救出已刪檔，多半不是無能就是在騙客戶」。
+- [救援軟體不敢說的致命傷：SSD + TRIM](#trim)
+- [4 種打從一開始就沒進過垃圾桶的情境](#scenarios)
+- [真正可靠的救援，在檔案層](#file-layer)
+- [誠實的邊界：Keeply 不做的事](#limits)
 
-## 為什麼 回收 資料夾 不一定有你的檔案
+---
 
-這四個情境你大概都遇過。
+你按了刪除鍵。打開資源回收筒，裡面是空的。
 
-**你前天剛清過 回收 資料夾**。刪除指令對 OS 來說已完成，這個檔案不再被追蹤。
+你接著 Google「檔案救援」，第一頁的廣告叫你下載 Recoverit 或 Disk Drill。先慢一秒。我做 Keeply 之前也買過一輪 Recoverit 想救自己誤刪的家人照片，直接告訴你結論：絕大多數情境裡，那 1980 元的軟體救不了你的檔案。
 
-**共用磁碟跳過本機 回收 資料夾**。NAS、SharePoint、公司網路磁碟刪檔不會進你電腦的 回收 資料夾（[Microsoft 文件](https://learn.microsoft.com/en-us/windows/win32/shell/recycle-bin)說明 映射 drive 的刪除行為）。團隊裡常見的故事：「以為刪檔可以救，結果 IT 說那是直接從 NAS 消失」。
+多數時候，OS 根本沒留下任何救援痕跡。
 
-**Shift+Del 直接跳過 回收 資料夾**。這是 OS 的設計，你按了快捷鍵就是要「不留 垃圾桶」。
+---
 
-**雲端 垃圾桶 30 天到期**。OneDrive 預設 30 天、Google Drive 30 天、Dropbox Basic 30 天（付費 180 天）。過期後雲端那邊也清掉（[OneDrive 官方說明](https://support.microsoft.com/en-us/office/restore-deleted-files-or-folders-in-onedrive-949ada80-0026-4db3-a953-c99083e6a84f)）。
+## 救援軟體不敢說的致命傷：SSD + TRIM {#trim}
 
-## 磁碟救援軟體的三個盲區
+那些救援軟體做的是「磁區掃描（Sector Scanning）」，試圖找出磁碟上沒被覆蓋的位元組來重組檔案。這在十年前的傳統 HDD 時代聽起來很合理，但在現代電腦上，這條路幾乎已被封死。
 
-那些救援軟體（Recoverit、EaseUS、Disk Drill）做的是 磁區 scanning，掃磁碟上沒被覆蓋的 位元組 嘗試重組檔案。聽起來合理，但有三個限制把成功率壓得很低。
+現代電腦多數使用 SSD（固態硬碟），而 Windows 7 之後預設開啟了 TRIM 機制（[Microsoft Learn 官方文件](https://learn.microsoft.com/en-us/windows-hardware/drivers/storage/standard-inquiry-data-vpd-page)）。當你刪除檔案時，OS 會立刻發送 TRIM 指令，告訴 SSD 把那個區塊標記為空白可重用。
 
-**SSD + TRIM**。SSD 收到 OS 的 TRIM 指令會把 磁區 標記為可重用，磁區 內容對救援軟體來說等於 0。Windows 7 之後 TRIM 預設開啟（[Microsoft Learn 文件](https://learn.microsoft.com/en-us/windows-hardware/drivers/storage/standard-inquiry-data-vpd-page)）。新電腦多數是 SSD，意思是多數情境救不到。
+這代表救援軟體掃描過去，看到的只會是一片零。資料救援公司 Hetman 曾直言：「如果救援公司聲稱能從啟用 TRIM 的 SSD 救出已刪檔案，他多半不是無能，就是在騙客戶。」（[Hetman 官方說明](https://hetmanrecovery.com/recovery_news/data-recovery-is-impossible-ssd-cloud-and-online-services.htm)）我自己後來也跟幾位資料救援工程師聊過，得到的答案都一樣。
 
-**加密磁碟**（BitLocker、FileVault）。磁區 救援 拿到的是加密後的密文，沒有 關鍵 等於沒有內容。
+再加上 Windows Update、雲端同步或瀏覽器快取每分鐘都在寫入新資料。你刪檔後每多拖一小時，磁區被覆蓋的機率就直線飆升。如果你的磁碟還有開 BitLocker 加密，那救援機率基本上就是零。
 
-**寫入活動**。Windows update、雲端 同步、瀏覽器快取每分鐘都在寫 磁區。你刪檔到開始救援之間每多 1 小時，磁區 被覆蓋的機率就高一截。
+---
 
-簡單講：救援軟體在「HDD + 剛刪 + 沒寫入」這個窄條件下有效，其他多數現代電腦情境裡幫不上忙。
+## 4 種打從一開始就沒進過垃圾桶的情境 {#scenarios}
 
-我們在客戶現場觀察到的，幾乎都是這個情境。
+除了硬體限制，還有 4 種日常情境，會讓你的檔案直接繞過資源回收筒，當場消失：
 
-## 真正可靠的救援在檔案層
+1. **共用磁碟的陷阱**：你在 NAS、SharePoint 或公司網路磁碟裡刪了檔案。系統會直接抹除，根本不會退回到你本機的垃圾桶（[Microsoft 官方文件](https://learn.microsoft.com/en-us/windows/win32/shell/recycle-bin)）。團隊最常發生的悲劇就是：「以為刪了可以去垃圾桶撿，結果 IT 說那是直接從 NAS 消失。」
+2. **手滑按了 Shift+Del**：OS 的原生設計，快捷鍵按下去就是物理超渡，不留紀錄。
+3. **雲端垃圾桶已過期**：OneDrive 預設 30 天、Google Drive 30 天、Dropbox Basic 30 天。時間一到，雲端端點也會自動清空（[OneDrive 官方說明](https://support.microsoft.com/en-us/office/restore-deleted-files-or-folders-in-onedrive-949ada80-0026-4db3-a953-c99083e6a84f)）。
+4. **你前天剛順手清過垃圾桶**：對 OS 來說，清理指令已完成，該檔案徹底脫離追蹤。
 
-不靠磁碟 鑑識，靠的是檔案系統之上的版本紀錄層。三種工具設計：
+簡單來說：市面上的救援軟體，只有在「傳統 HDD + 剛剛才刪 + 磁碟完全沒新寫入」這個極度狹窄的完美條件下才有效。而你在辦公室裡遇到的，幾乎都不是這種情境。
 
-**OS 檔案 紀錄**。Windows 檔案 紀錄、macOS Time Machine。限制：要事先打開、只追蹤指定資料夾、需要外接磁碟。沒裝過外接磁碟的人這一層是空的。
+---
 
-**雲端版本歷史**。OneDrive、Google Drive、Dropbox 都有檔案版本歷史，30-180 天 保留期。限制：要全程 線上 同步、跳過離線檔案、保留期 過期就消失。
+## 真正可靠的救援，在檔案層 {#file-layer}
 
-**事前裝的本機版本工具**。每次儲存自動留一份版本，檔案層的版本歷史不靠雲端、不靠外接磁碟、沒有 保留期 上限。Keeply 就是這個設計。延伸閱讀：[檔案版本管理完整指南](/zh-tw/post/file-version-management-complete-guide/)。
+不要再迷信事後的「磁碟鑑識」，真正的答案是在檔案系統之上，鋪一層靜默的「版本紀錄層」。
 
-## Keeply 在這位置做什麼
+這就是 Keeply 的位置。它不靠雲端、不靠外接硬碟，而是在你每次按下儲存時，自動在背景留下一份版本。
 
-做的事：
+- **不怕共用磁碟**：就算在 NAS 或 SharePoint 上作業，一樣能保留歷史。
+- **Offline-first**：不需要全程連線同步。
+- **沒有 30 天大限**：沒有雲端嚴苛的保留期上限，3 個月前的版本，時間軸上照樣找得到。
 
-- 每次儲存自動建立一份版本，刪檔當下 時間軸 上已有
-- offline-first，不需要 雲端 同步
-- 共用磁碟（NAS、SharePoint）一樣保留歷史
-- 沒有 保留期 上限，3 個月前的版本還在
+想看更深的版本歷史設計理論，可看 [Pillar：檔案版本管理完整指南](/zh-tw/post/file-version-management-complete-guide/)。
 
-不做的事：
+---
 
-- 手機、SD card 的照片救援。那是不同 SERP、不同工具
-- 整顆磁碟損毀。那是備份工具的事，看 [3-2-1 備份原則](/zh-tw/post/3-2-1-backup-rule/)
-- Keeply 安裝**之前**刪掉的檔案救不到。它是事前防禦工具，不是事後救援工具
+## 誠實的邊界：Keeply 不做的事 {#limits}
 
-下次按 刪除 之前，[今天裝 Keeply](/zh-tw/post/install-keeply-windows-mac/)。
+我一樣要誠實標示 Keeply 的極限：
+
+- **不救 SD 卡與手機照片**：那是另一個領域的工具，請找專門的 App。
+- **不防整顆磁碟實體損毀**：這是備份工具的事，請去買外接硬碟並遵守 [3-2-1 備份原則](/zh-tw/post/3-2-1-backup-rule/)。
+- **不救「安裝前」的檔案**：Keeply 是事前防禦工具，不是事後鑑識軟體。在你裝上它之前刪除的東西，它無能為力。
+
+下次按下刪除鍵引發災難之前，[今天先裝好 Keeply](/zh-tw/post/install-keeply-windows-mac/)。
 
 ---
 
