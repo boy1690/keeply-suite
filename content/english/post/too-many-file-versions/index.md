@@ -1,5 +1,5 @@
 ---
-title: "The Document Version Control System for People Who Don't Use Git"
+title: "【2026 File Management】The Document Version Control System for People Who Don't Use Git"
 description: "Your `_v3_real_FINAL.docx` habit isn't OCD — it's a survival reflex against an OS that doesn't give you undo after Cmd+S. This article unpacks 'too many versions' into 4 separate pains, then walks through 3 tool designs that take the naming burden off your shoulders."
 voice_version: v2-2026-05-11
 date: 2026-05-04T20:15:00+08:00

@@ -1,5 +1,5 @@
 ---
-title: "Guida Keeply: nella prima settimana non fai niente, 3 segnali reali nei giorni 1, 3, 5"
+title: "【2026 Gestione file】Guida Keeply: nella prima settimana non fai niente, 3 segnali reali nei giorni 1, 3, 5"
 description: "Non correre alla procedura guidata dopo aver installato Keeply. Usa la prima settimana di lavoro vero come banco di prova per i tre segnali: tracciamento versioni automatico, ritmo delle modifiche, recupero delle cancellazioni. Non ti convince al Day 7? Disinstalla, zero rischio."
 slug: keeply-first-week-workflow
 date: 2026-05-10T08:00:00+08:00
@@ -34,7 +34,7 @@ howto_schema:
       url: '#day-7'
 ---
 
-# Guida Keeply: nella prima settimana non fai niente, 3 segnali reali nei giorni 1, 3, 5
+# 【2026 Gestione file】Guida Keeply: nella prima settimana non fai niente, 3 segnali reali nei giorni 1, 3, 5
 
 > Non correre alla procedura guidata dopo aver installato Keeply. Usa la prima settimana di lavoro vero come banco di prova per i tre segnali: tracciamento versioni automatico, ritmo delle modifiche, recupero delle cancellazioni. Non ti convince al Day 7? Disinstalla, zero rischio.
 

@@ -1,5 +1,5 @@
 ---
-title: "Come installare Keeply su Windows e macOS in 10 minuti"
+title: "【2026 Gestione file】Come installare Keeply su Windows e macOS in 10 minuti"
 description: "Salta le righe in piccolo dell'\"Esegui comunque\" di SmartScreen e i tentativi a tentoni — l'articolo percorre Windows winget one-liner + macOS apri con tasto destro, due percorsi puliti per installare Keeply in 10 minuti e proteggere il primo progetto in giornata."
 voice_version: v2-2026-05-11
 date: 2026-04-26

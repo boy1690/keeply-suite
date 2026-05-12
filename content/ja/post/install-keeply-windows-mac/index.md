@@ -1,5 +1,5 @@
 ---
-title: "Keeply のインストール手順（Windows + macOS）。 10 分で初プロジェクトまで"
+title: "【2026 ファイル管理】Keeply のインストール手順（Windows + macOS）。 10 分で初プロジェクトまで"
 description: "SmartScreen「実行」のリンクや運に頼らない——本記事は Windows winget 一行コマンド + macOS の右クリック起動という 2 つのクリーンな経路を歩き、10 分で Keeply をインストールして当日に最初のプロジェクトを守る方法を解説。"
 voice_version: v2-2026-05-11
 date: 2026-04-26

@@ -1,5 +1,5 @@
 ---
-title: "Vibe Coding 失控了？1 个动作回到上一个能跑的版本"
+title: "【2026 文件管理】Vibe Coding 失控了？1 个动作回到上一个能跑的版本"
 description: "AI agent 冲太远、代码跑不过、你分不清它动了哪几个文件？打开 Keeply 时间轴，找上一笔能跑的版本、右键还原——30 秒整个项目目录回到 AI 动手前的状态。"
 voice_version: v2-2026-05-11
 date: 2026-04-30T09:00:00+08:00
@@ -36,7 +36,7 @@ howto_schema:
       url: '#one-action'
 ---
 
-# Vibe Coding 失控了？1 个动作回到上一个能跑的版本
+# 【2026 文件管理】Vibe Coding 失控了？1 个动作回到上一个能跑的版本
 
 > AI agent 冲太远，代码 不能跑。打开 Keeply 时间轴，最后一笔能跑的版本还在。
 

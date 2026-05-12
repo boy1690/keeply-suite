@@ -1,5 +1,5 @@
 ---
-title: "Dropbox copia in conflitto: perché continua a comparire (3 design di sync che lo risolvono)"
+title: "【2026 Gestione file】Dropbox copia in conflitto: perché continua a comparire (3 design di sync che lo risolvono)"
 description: "`(copia in conflitto)` non è un bug — è il risultato di Dropbox che salva la versione dell'ultimo writer sopra quella precedente, senza un livello di rilevazione conflitti. L'articolo apre 4 scenari che lo scatenano, più 3 design di sync che risolvono davvero il meccanismo."
 voice_version: v2-2026-05-11
 date: 2026-05-05T05:55:00+08:00

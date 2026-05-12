@@ -1,5 +1,5 @@
 ---
-title: "Keeply 安装指南（Windows + macOS）：从下载到第一个项目"
+title: "【2026 文件管理】Keeply 安装指南（Windows + macOS）：从下载到第一个项目"
 description: "不靠 SmartScreen「仍要运行」那颗小字、不靠运气——本文走完 Windows winget 一行命令 + macOS 右键打开两条干净路径，10 分钟装好 Keeply、当天就能保住第一个项目。"
 voice_version: v2-2026-05-11
 date: 2026-04-26

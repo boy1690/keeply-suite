@@ -1,5 +1,5 @@
 ---
-title: "Keeply tutorial: do nothing in week 1, see 3 real signals on days 1, 3, 5"
+title: "【2026 File Management】Keeply tutorial: do nothing in week 1, see 3 real signals on days 1, 3, 5"
 description: "Don't rush into the setup wizard after installing Keeply. Use your real workdays in week one to verify automatic version tracking, modify cadence, and delete recovery — three signals. Unsatisfied on Day 7? Remove it, zero burden."
 slug: keeply-first-week-workflow
 date: 2026-05-10T08:00:00+08:00
@@ -34,7 +34,7 @@ howto_schema:
       url: '#day-7'
 ---
 
-# Keeply tutorial: do nothing in week 1, see 3 real signals on days 1, 3, 5
+# 【2026 File Management】Keeply tutorial: do nothing in week 1, see 3 real signals on days 1, 3, 5
 
 > Don't rush into the setup wizard after installing Keeply. Use your real workdays in week one to verify automatic version tracking, modify cadence, and delete recovery — three signals. Unsatisfied on Day 7? Remove it, zero burden.
 

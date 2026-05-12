@@ -1,5 +1,5 @@
 ---
-title: "Shared folder file versioning: don't let _v8 steal your team's 83 hours a year"
+title: "【2026 File Management】Shared folder file versioning: don't let _v8 steal your team's 83 hours a year"
 description: "Thursday, 5:30 p.m. You've finished the drawing but your hand is hovering on the filename. The cost of shared folders + manual v1/v7/FINAL naming: 83 hours of defensive tax per year. Why naming rules always collapse, and what automatic version control takes over."
 slug: "hidden-cost-shared-folders"
 date: 2026-04-23T08:50:00+08:00
@@ -29,7 +29,7 @@ faq_schema:
     a: 只能解一半。同步工具處理多人即時共用與本機檔案不遺失，但同事覆蓋了你的版本你不會收到通知，且版本歷史通常只保留 30 天。設計檔 .dwg/.psd/.indd 的跨改動版本追蹤仍需要工具層自動版本管理。
 ---
 
-# Shared folder file versioning: don't let _v8 steal your team's 83 hours a year
+# 【2026 File Management】Shared folder file versioning: don't let _v8 steal your team's 83 hours a year
 
 > Thursday, 5:30 p.m. You've finished the drawing but your hand is hovering on the filename. The cost of shared folders + manual v1/v7/FINAL naming: 83 hours of defensive tax per year. Why naming rules always collapse, and what automatic version control takes over.
 

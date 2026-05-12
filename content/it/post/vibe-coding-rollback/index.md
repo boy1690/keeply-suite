@@ -1,5 +1,5 @@
 ---
-title: "Vibe coding fuori controllo? Un'azione per tornare a una versione funzionante"
+title: "【2026 Gestione file】Vibe coding fuori controllo? Un'azione per tornare a una versione funzionante"
 description: "L'agente AI corre avanti, il codice non parte, hai perso traccia dei file che ha modificato? Apri la Timeline di Keeply, trova l'ultima voce funzionante, click destro Ripristina — l'intera cartella di progetto torna allo stato pre-overshoot in 30 secondi."
 voice_version: v2-2026-05-11
 date: 2026-04-30T09:00:00+08:00
@@ -35,7 +35,7 @@ howto_schema:
       url: '#one-action'
 ---
 
-# Vibe coding fuori controllo? Un'azione per tornare a una versione funzionante
+# 【2026 Gestione file】Vibe coding fuori controllo? Un'azione per tornare a una versione funzionante
 
 > L'agente AI corre avanti, il codice non parte. Apri la Timeline di Keeply. L'ultima versione funzionante è ancora lì.
 

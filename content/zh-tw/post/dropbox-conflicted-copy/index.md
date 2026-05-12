@@ -1,5 +1,5 @@
 ---
-title: "Dropbox 衝突的副本：為什麼一直出現？4 種讓它不再回來的 sync 設計"
+title: "【2026 檔案管理】Dropbox 衝突的副本：為什麼一直出現？4 種讓它不再回來的 sync 設計"
 description: "`(conflicted copy)` 不是 bug，是 Dropbox 設計上沒做衝突偵測、後存者覆蓋前一版的結果。本文拆解 4 種會觸發衝突副本的場景，以及 3 種同步設計怎麼根治。"
 voice_version: v2-2026-05-11
 date: 2026-05-05T05:55:00+08:00

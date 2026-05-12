@@ -1,5 +1,5 @@
 ---
-title: "Vibe Coding Off the Rails? One Action to Roll Back to a Working Version"
+title: "【2026 File Management】Vibe Coding Off the Rails? One Action to Roll Back to a Working Version"
 description: "AI agent races ahead, code won't run, you've lost track of which files it edited? Open Keeply's Timeline, find the last working entry, right-click Restore — the entire project folder returns to the pre-overshoot state in 30 seconds."
 voice_version: v2-2026-05-11
 date: 2026-04-30T09:00:00+08:00
@@ -35,7 +35,7 @@ howto_schema:
       url: '#one-action'
 ---
 
-# Vibe Coding Off the Rails? One Action to Roll Back to a Working Version
+# 【2026 File Management】Vibe Coding Off the Rails? One Action to Roll Back to a Working Version
 
 > AI agent races ahead, code won't run. Open the Keeply Timeline. The last working version is still right there.
 

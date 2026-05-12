@@ -1,5 +1,5 @@
 ---
-title: "Dropbox Conflicted Copy: Why It Keeps Coming Back (And 3 Sync Designs That Actually Fix It)"
+title: "【2026 File Management】Dropbox Conflicted Copy: Why It Keeps Coming Back (And 3 Sync Designs That Actually Fix It)"
 description: "`(conflicted copy)` isn't a bug — it's the result of Dropbox saving the later writer's version on top of the earlier one with no conflict-detection layer. This article unpacks 4 scenarios that trigger it, plus 3 sync designs that actually fix the mechanism."
 voice_version: v2-2026-05-11
 date: 2026-05-05T05:55:00+08:00

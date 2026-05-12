@@ -1,5 +1,5 @@
 ---
-title: "Windows와 macOS에 Keeply 10분 만에 설치하기"
+title: "【2026 파일 관리】Windows와 macOS에 Keeply 10분 만에 설치하기"
 description: "SmartScreen「실행 안 함」 안내 문구와 추측에 의존하지 않습니다 — 본문은 Windows winget 한 줄 명령 + macOS 우클릭 열기라는 깔끔한 두 경로를 따라, 10 분 안에 Keeply를 설치하고 당일에 첫 프로젝트를 보호하는 방법을 정리합니다."
 voice_version: v2-2026-05-11
 date: 2026-04-26

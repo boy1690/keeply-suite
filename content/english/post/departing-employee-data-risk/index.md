@@ -1,5 +1,5 @@
 ---
-title: "Departing employee deleted your files? Sync isn't backup"
+title: "【2026 File Management】Departing employee deleted your files? Sync isn't backup"
 description: "Tina emptied the brand-book folder Saturday night and Dropbox dutifully synced the disaster. Why 'sync isn't backup' is the real lesson — not lawyers, not DLP."
 slug: departing-employee-data-risk
 image: cover.svg
@@ -13,7 +13,7 @@ status: approved
 image_alt_data: "Folder timeline at 23:03: brand-book/ copied at 22:50, deleted at 23:03, expiring 30 days later — two actions on the same folder, neither logged by Dropbox or Google Drive, both beyond what sync tools can stop"
 ---
 
-# Departing employee deleted your files? Sync isn't backup
+# 【2026 File Management】Departing employee deleted your files? Sync isn't backup
 
 > Tina emptied the brand-book folder Saturday night and Dropbox dutifully synced the disaster. Why "sync isn't backup" is the real lesson — not lawyers, not DLP.
 
