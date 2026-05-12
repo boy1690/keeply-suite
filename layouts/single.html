@@ -15,10 +15,12 @@
           <span>/</span>
           <a href="{{ .RelPermalink }}" class="hover:text-brand-600">{{ i18n "nav_posts" }}</a>
         {{- end -}}
+        {{- /* Breadcrumb 不再 link 到 /categories/{slug}/ — 2026-05-12 移除 categories
+               taxonomy（GSC duplicate canonical 修復）。category 名稱仍以下方 badge 顯示。 */ -}}
         {{- with .Params.categories -}}
           {{- $cat := index . 0 -}}
           <span>/</span>
-          <a href="{{ "categories/" | relLangURL }}{{ $cat | urlize }}/" class="hover:text-brand-600">{{ $cat }}</a>
+          <span>{{ $cat }}</span>
         {{- end -}}
       </nav>
       {{- with .Params.categories -}}

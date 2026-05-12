@@ -24,6 +24,29 @@ enableEmoji = true
     noClasses = false
     lineNos = true
 
+# Taxonomies — explicit override of Hugo default (which would enable both
+# `tag` and `category`). 2026-05-12 GSC audit reported 14 URLs in
+# "Duplicate, Google chose different canonical" — 100% were /categories/X/
+# being deduped against /tags/X/ across 13 auto-translate locales (same
+# slug, same article membership). Disabling categories eliminates the
+# duplicate URL surface entirely. 218 articles still carry `categories:`
+# in frontmatter; Hugo silently ignores them with no taxonomy declared.
+[taxonomies]
+  tag = "tags"
+
+# Outputs — strip RSS from listing kinds. GSC reported 3 URLs in
+# "Duplicate without user-selected canonical" — all were /categories/X/index.xml
+# (RSS feeds for category taxonomy pages, which couldn't carry canonical/noindex
+# meta). Removing the taxonomy + dropping RSS from term/section/taxonomy
+# kills the entire feed surface for navigation pages. Per-post + home RSS
+# preserved.
+[outputs]
+  home = ["HTML", "RSS"]
+  page = ["HTML"]
+  section = ["HTML"]
+  taxonomy = ["HTML"]
+  term = ["HTML"]
+
 [params]
   mainSections = ["post"]
   featuredImageField = "image"
