@@ -1,5 +1,5 @@
 ---
-title: "【2026 Photoshop】Photoshop 자동 저장은 크래시는 살려도, 덮어쓴 버전은 못 살린다"
+title: "【2026 파일 관리】Photoshop 자동 저장은 크래시는 살려도, 덮어쓴 버전은 못 살린다"
 description: "Photoshop 자동 저장 폴더가 비어 있는 건 설계상 그렇게 만들어진 것입니다. 크래시 복구용이지, Cmd+S로 덮어쓴 이전 버전을 되돌리는 기능이 아닙니다. 필요한 건 다른 층의 메커니즘입니다."
 date: 2026-05-11T08:00:00+08:00
 slug: photoshop-autosave-not-version-history

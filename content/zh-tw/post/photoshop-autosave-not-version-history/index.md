@@ -1,5 +1,5 @@
 ---
-title: "【2026 Photoshop】Photoshop 自動儲存救當機，救不了你存錯版本"
+title: "【2026 檔案管理】Photoshop 自動儲存救當機，救不了你存錯版本"
 description: "Photoshop 自動儲存資料夾翻遍是空的——這是設計使然。它為當機救援而生，不負責你 Cmd+S 蓋掉舊版的還原。真正需要的是另一層機制。"
 date: 2026-05-11T08:00:00+08:00
 slug: photoshop-autosave-not-version-history
