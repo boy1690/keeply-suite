@@ -37,7 +37,7 @@ howto_schema:
       url: '#first-week-natural'
 ---
 
-# Come usare Keeply: salta 30 funzioni, parti con 2 azioni
+# 【2026 Gestione file】Come usare Keeply: salta 30 funzioni, parti con 2 azioni
 
 > Non devi diventare prima un esperto. Trascina dentro una cartella, continua a lavorare. La cronologia delle versioni è già attiva.
 

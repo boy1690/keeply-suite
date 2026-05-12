@@ -29,7 +29,7 @@ faq_schema:
     a: Google 未公開明確保留期。官方文件指出較舊的修訂版可能會被合併以節省空間，實務上 3 個月以上的修訂版常被自動合併或清除，無法可靠用於長期交付版本追蹤。
 ---
 
-# Word Saves Versions, Not the Memory of Which One You Sent 3 Months Ago
+# 【2026 File Management】Word Saves Versions, Not the Memory of Which One You Sent 3 Months Ago
 
 > Built-in version history is save-layer rescue. Recovering versions you delivered 3 months ago takes a tool layer.
 

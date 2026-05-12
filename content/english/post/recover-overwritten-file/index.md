@@ -29,7 +29,7 @@ faq_schema:
     a: 不能取代。AutoRecover 處理當機中斷救援，Keeply 處理正常儲存後的版本保留，兩者是互補關係。且 Keeply 不能溯及既往，必須在覆蓋發生前就已啟動。
 ---
 
-# The limit of overwritten file recovery: when AutoRecover isn't enough
+# 【2026 File Management】The limit of overwritten file recovery: when AutoRecover isn't enough
 
 > AutoRecover is built for crash rescue. What you need after an overwritten save is upstream prevention.
 

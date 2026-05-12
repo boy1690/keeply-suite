@@ -1,5 +1,5 @@
 ---
-title: "La regola 3-2-1 del backup: 20 anni dopo, basta ancora nel 2026?"
+title: "【2026 Gestione file】La regola 3-2-1 del backup: 20 anni dopo, basta ancora nel 2026?"
 description: "La regola 3-2-1 del backup (3 copie, 2 supporti, 1 fuori sede) protegge da guasti hardware, incendi e ransomware. Ma fin dalla progettazione non gestisce l'errore utente — tu che sovrascrivi la tua versione, la sincronizzazione cloud che replica la versione sbagliata in tutte e tre le copie. Ecco cosa la 3-2-1 copre, cosa no, e come chiudere il vuoto."
 voice_version: v2-2026-05-11
 date: 2026-05-02T09:00:00+08:00
@@ -27,7 +27,7 @@ faq_schema:
     a: 看檔案重要性。判斷標準只有一個：丟了會不會痛？跟個人或企業身份無關。會痛就需要。3-2-1 是必要但不足夠的基礎，還需要搭配版本歷史才能應對操作失誤場景。
 ---
 
-# La regola 3-2-1 del backup: 20 anni dopo, basta ancora nel 2026?
+# 【2026 Gestione file】La regola 3-2-1 del backup: 20 anni dopo, basta ancora nel 2026?
 
 > La regola 3-2-1 non è cambiata in 20 anni, ma quello che temi oggi non è più quello del 2005.
 
@@ -86,7 +86,7 @@ Nel 2005 le durate dei dischi erano brevi e i supporti fragili. Più copie comba
 
 Nel 2026 i dischi sono affidabili e la sincronizzazione cloud è istantanea. Cosa diventa il "3"? Diventa lo stesso errore replicato in tre posti, in tempo reale.
 
-È lo scenario che osserviamo più spesso lavorando con i clienti.
+Questo è lo scenario più comune.
 
 A è un designer. Lunedì mattina alle 10:32, un cliente chiama chiedendo la versione della proposta firmata tre mesi fa. A apre il NAS. 12 versioni, tre copie cloud che mostrano tutte l'attuale "ultima".
 

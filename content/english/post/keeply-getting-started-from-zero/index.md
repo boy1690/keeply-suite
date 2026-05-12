@@ -37,7 +37,7 @@ howto_schema:
       url: '#first-week-natural'
 ---
 
-# How to use Keeply: skip 30 features, get on board with 2 actions
+# 【2026 File Management】How to use Keeply: skip 30 features, get on board with 2 actions
 
 > You don't need to become an expert first. Drag a folder in, keep working. Version history is already running.
 

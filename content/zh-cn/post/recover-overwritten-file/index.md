@@ -29,7 +29,7 @@ faq_schema:
     a: 不能取代。AutoRecover 處理當機中斷救援，Keeply 處理正常儲存後的版本保留，兩者是互補關係。且 Keeply 不能溯及既往，必須在覆蓋發生前就已啟動。
 ---
 
-# 找回被覆盖文件的极限：AutoRecover 救不到的地方
+# 【2026 文件管理】找回被覆盖文件的极限：AutoRecover 救不到的地方
 
 > AutoRecover 是为崩溃救援设计的。覆盖保存后你需要的是事前防御。
 

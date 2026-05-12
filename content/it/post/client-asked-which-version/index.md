@@ -27,7 +27,7 @@ faq_schema:
     a: Google 未公開明確保留期。官方文件指出較舊的修訂版可能會被合併以節省空間，實務上 3 個月以上的修訂版常被自動合併或清除，無法可靠用於長期交付版本追蹤。
 ---
 
-# Word salva le versioni, non i ricordi di 3 mesi fa
+# 【2026 Gestione file】Word salva le versioni, non i ricordi di 3 mesi fa
 
 > La cronologia versioni integrata è salvataggio a livello di archiviazione. Recuperare le versioni consegnate 3 mesi fa richiede uno strato strumentale.
 

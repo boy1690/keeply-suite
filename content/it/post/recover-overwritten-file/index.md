@@ -29,7 +29,7 @@ faq_schema:
     a: 不能取代。AutoRecover 處理當機中斷救援，Keeply 處理正常儲存後的版本保留，兩者是互補關係。且 Keeply 不能溯及既往，必須在覆蓋發生前就已啟動。
 ---
 
-# Il limite del recupero file sovrascritto: dove AutoRecover non arriva
+# 【2026 Gestione file】Il limite del recupero file sovrascritto: dove AutoRecover non arriva
 
 > AutoRecover è per il salvataggio da crash. Quello che serve dopo un sovrascrittura è la prevenzione a monte.
 
