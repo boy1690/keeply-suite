@@ -1,5 +1,5 @@
 ---
-title: "Excel 历史版本只回 1-2 版？4 个 Microsoft AutoSave 没讲的限制"
+title: "【2026 文件管理】Excel 历史版本只回 1-2 版？4 个 Microsoft AutoSave 没讲的限制"
 description: "Excel 版本历史按钮变灰、只回 1-2 版？不是你做错，是 Microsoft 把 AutoSave 当 OneDrive 订阅诱饵设计的后果——本文拆解 4 个绕不过的限制，加上 3 种工具设计怎么补。"
 voice_version: v2-2026-05-11
 date: 2026-05-04T20:00:00+08:00

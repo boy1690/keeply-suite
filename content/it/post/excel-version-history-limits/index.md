@@ -1,5 +1,5 @@
 ---
-title: "Versioni precedenti file Excel: solo 1-2 versioni indietro? 4 limiti Microsoft che nessuno ti dice"
+title: "【2026 Gestione file】Versioni precedenti file Excel: solo 1-2 versioni indietro? 4 limiti Microsoft che nessuno ti dice"
 description: "Il pulsante cronologia versioni di Excel è grigio e torna indietro solo di 1-2 versioni — non è un bug, è il risultato di Microsoft che progetta AutoSave come esca per l'abbonamento OneDrive. L'articolo apre 4 limiti che non puoi aggirare, più 3 design di strumento che chiudono il vuoto."
 voice_version: v2-2026-05-11
 date: 2026-05-04T20:00:00+08:00
