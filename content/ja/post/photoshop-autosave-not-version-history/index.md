@@ -1,5 +1,5 @@
 ---
-title: "Photoshop の自動保存はあなたを救えない理由"
+title: "【2026 Photoshop】Photoshop の自動保存はあなたを救えない理由"
 description: "Photoshop の自動保存フォルダが空なのは設計上の制約です。クラッシュ救援用に作られていて、上書き保存した PSD の復元には使えません。必要なのは別の仕組みです。"
 date: 2026-05-11T08:00:00+08:00
 slug: photoshop-autosave-not-version-history

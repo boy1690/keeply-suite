@@ -1,5 +1,5 @@
 ---
-title: "Photoshop 自动保存救崩溃，救不了你存错版本"
+title: "【2026 Photoshop】Photoshop 自动保存救崩溃，救不了你存错版本"
 description: "Photoshop 自动保存文件夹翻遍是空的——这是设计使然。它为崩溃救援而生，不负责你 Cmd+S 盖掉旧版的还原。真正需要的是另一层机制。"
 date: 2026-05-11T08:00:00+08:00
 slug: photoshop-autosave-not-version-history

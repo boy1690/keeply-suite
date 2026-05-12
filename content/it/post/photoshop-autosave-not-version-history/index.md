@@ -1,5 +1,5 @@
 ---
-title: "Il salvataggio automatico di Photoshop salva i crash, non i file sovrascritti"
+title: "【2026 Photoshop】Il salvataggio automatico di Photoshop salva i crash, non i file sovrascritti"
 description: "La cartella di salvataggio automatico di Photoshop è vuota per design. È stata costruita per i crash, non per recuperare la versione che hai appena sovrascritto con Cmd+S. Ti serve un altro livello."
 date: 2026-05-11T08:00:00+08:00
 slug: photoshop-autosave-not-version-history
