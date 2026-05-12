@@ -1,5 +1,5 @@
 ---
-title: "Word salva le versioni, non i ricordi di 3 mesi fa (Gestione file 2026)"
+title: "【2026 Gestione file】Word salva le versioni, non i ricordi di 3 mesi fa"
 description: "Word AutoRecover, cronologia versioni OneDrive e Time Machine sono tutti strumenti di salvataggio a livello di archiviazione — retention va da cancellato-alla-chiusura fino a circa 500 versioni. Recuperare ciò che hai consegnato 3 mesi fa richiede una cronologia versioni always-on a livello strumentale più metadata al momento della consegna."
 voice_version: v2-2026-05-11
 date: 2026-05-02T09:00:00+08:00

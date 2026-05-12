@@ -1,5 +1,5 @@
 ---
-title: "Word Saves Versions, Not the Memory of Which One You Sent 3 Months Ago"
+title: "【2026 File Management】Word Saves Versions, Not the Memory of Which One You Sent 3 Months Ago"
 description: "Word AutoRecover, OneDrive version history, and Time Machine are all save-layer rescue tools — retention runs from cleared-on-close to a few hundred versions. Recovering the deliverable you sent 3 months ago needs a tool-layer always-on version history plus delivery-time metadata."
 voice_version: v2-2026-05-11
 date: 2026-05-02T15:00:00+08:00
