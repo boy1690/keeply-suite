@@ -1,5 +1,5 @@
 ---
-title: "【2026 File Recovery】The limit of overwritten file recovery: when AutoRecover isn't enough"
+title: "【2026 File Management】The limit of overwritten file recovery: when AutoRecover isn't enough"
 description: "AutoRecover is built for crash rescue, data-recovery software has only minutes after the overwrite — neither reaches the 'realized after a normal save' scenario. This article walks through the limits of post-event rescue and shows why an always-on version history at the tool layer is the actual answer."
 voice_version: v2-2026-05-11
 date: 2026-05-02T18:00:00+08:00
