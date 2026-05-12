@@ -1,5 +1,5 @@
 ---
-title: "How to use Keeply: skip 30 features, get on board with 2 actions"
+title: "【2026 Keeply Onboarding】How to use Keeply: skip 30 features, get on board with 2 actions"
 description: "Keeply doesn't ask you to spend 14 days as a student — drag a folder in, keep working, and version history is already running by day 1. This piece walks through a real 7-day trial and lists 4 scenarios where Keeply honestly isn't the right tool for you."
 voice_version: v2-2026-05-11
 date: 2026-04-30T09:00:00+08:00

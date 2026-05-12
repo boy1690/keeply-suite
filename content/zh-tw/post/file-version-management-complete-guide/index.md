@@ -1,5 +1,5 @@
 ---
-title: "檔案版本管理：為什麼每個用過共用資料夾的人，都會發明一套命名規則？"
+title: "【2026 檔案管理】檔案版本管理：為什麼每個用過共用資料夾的人，都會發明一套命名規則？"
 description: "Dropbox、NAS、共用資料夾本來就不是設計來管檔案歷史的——4 個缺口讓你每次都得自己發明一套命名規則來補救。這篇一個一個拆，順便講 Keeply 補哪些、哪些補不到。"
 voice_version: v2-2026-05-11
 slug: file-version-management-complete-guide

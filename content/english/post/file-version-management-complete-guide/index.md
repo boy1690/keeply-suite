@@ -1,5 +1,5 @@
 ---
-title: "File version management: why we all invent our own naming schemes"
+title: "【2026 File Management】File version management: why we all invent our own naming schemes"
 description: "Shared folders, Dropbox, and NAS weren't designed to manage file history — they have 4 structural gaps that push the work back onto your discipline. This article unpacks each gap, explains why naming-rule PDFs collapse after 6 months, and admits which gaps Keeply closes and which it doesn't."
 voice_version: v2-2026-05-11
 slug: file-version-management-complete-guide

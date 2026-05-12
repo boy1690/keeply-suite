@@ -1,5 +1,5 @@
 ---
-title: "文件版本管理：为什么每个用过共享文件夹的人，都会发明一套命名规则？"
+title: "【2026 文件管理】文件版本管理：为什么每个用过共享文件夹的人，都会发明一套命名规则？"
 description: "Dropbox、NAS、共享文件夹本来就不是设计来管文件历史的——4 个缺口让你每次都得自己发明一套命名规则来补救。这篇一个一个拆，顺便讲 Keeply 补哪些、哪些补不到。"
 voice_version: v2-2026-05-11
 slug: file-version-management-complete-guide
