@@ -78,6 +78,52 @@
 | +2-3 週 | #5 / #6（auto-translate lag）也應同步下降，因 categories URL 不再進 crawl queue |
 | +4 週 | 「Validation passed」通知 email 應從 GSC 寄達 |
 
+## GSC Coverage 官方 export 對照（5/12 export, 5/8 最後數據點）
+
+來源：`0.idea/https___blog.keeply.work_-Coverage-2026-05-12.xlsx`（gitignored）
+
+### 時間序列（indexed vs not-indexed）
+
+| 日期 | 未建立索引 | 已建立索引 |
+|---|---:|---:|
+| 2026-04-27 | 4 | 26 |
+| 2026-04-28 | **396** ↑↑ | 42 |
+| 2026-05-02 | 668 | **412** ↑↑ |
+| 2026-05-05 | **405** ↓ | **609** ↑ |
+| 2026-05-08 | 405 | 609 (停滯) |
+
+關鍵 inflection：
+- 4/28 not-indexed 大跳到 396 = Google 第一次大規模 crawl 到 19 locale × N article 的所有變體
+- 5/2 → 5/5 indexed +197 / not-indexed −263 = noindex + sitemap 設定（5/8 commit 系列）生效
+- 5/8 之後 stagnate = Validate Fix 沒按 → Google 沒重評估排程
+
+### 5/12 export 確認驗證狀態（4/7 分類在 queue）
+
+| # | 分類 | 頁數 | 驗證 chip |
+|---|---|---:|---|
+| 1 | noindex 排除 | 94 | 已開始（5/8 觸發殘留） |
+| 2 | 404 | 27 | **已開始（今天 5/12）** |
+| 7 | Google 選不同 canonical | 14 | **已開始（今天 5/12）** |
+| 4 | 重複未選 canonical | 3 | **已開始（今天 5/12）** |
+| 3 | 替代頁面有 canonical | 17 | 尚未開始（hreflang 正常） |
+| 5 | 已檢索未索引 | 181 | 尚未開始（Google 端） |
+| 6 | 已找到未索引 | 69 | 尚未開始（Google 端） |
+
+驗證 queue 中總頁數：94 + 27 + 14 + 3 = **138 頁**
+
+### 預估改善
+
+| 指標 | 5/8 baseline | 1-2 週後目標 |
+|---|---:|---:|
+| 已建立索引 | 609 | 620-640 |
+| 未建立索引 | 405 | 200-220 (−45%) |
+| #2 找不到網頁 | 27 | ≤ 5 |
+| #4 重複未選 canonical | 3 | 0 |
+| #7 Google 選不同 canonical | 14 | 0 |
+| #1 noindex 排除 | 94 | 持平或微降（design 使然） |
+| #5 已檢索未索引 | 181 | 130-150 (crawl budget 重分配) |
+| #6 已找到未索引 | 69 | 40-50 |
+
 ## 1-2 週後複盤檢查清單
 
 回到 GSC `https://search.google.com/search-console/index?resource_id=sc-domain:keeply.work` →「索引」→「網頁」：
