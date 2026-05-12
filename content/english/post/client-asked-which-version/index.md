@@ -1,5 +1,5 @@
 ---
-title: "Word's version history doesn't cover deliveries 3 months ago"
+title: "Word Saves Versions, Not the Memory of Which One You Sent 3 Months Ago"
 description: "Word AutoRecover, OneDrive version history, and Time Machine are all save-layer rescue tools — retention runs from cleared-on-close to a few hundred versions. Recovering the deliverable you sent 3 months ago needs a tool-layer always-on version history plus delivery-time metadata."
 voice_version: v2-2026-05-11
 date: 2026-05-02T15:00:00+08:00
@@ -29,7 +29,7 @@ faq_schema:
     a: Google 未公開明確保留期。官方文件指出較舊的修訂版可能會被合併以節省空間，實務上 3 個月以上的修訂版常被自動合併或清除，無法可靠用於長期交付版本追蹤。
 ---
 
-# Word's version history doesn't cover deliveries 3 months ago
+# Word Saves Versions, Not the Memory of Which One You Sent 3 Months Ago
 
 > Built-in version history is save-layer rescue. Recovering versions you delivered 3 months ago takes a tool layer.
 
@@ -39,7 +39,7 @@ You open OneDrive version history. Only the last week is left. Word AutoRecover 
 
 Three months ago you pressed ⌘+S on that version. The tools didn't remember.
 
-Doing Keeply customer interviews, this 11:23 PM message is the scenario I've heard most often.
+From the conversations Keeply users share, this 11:23 PM message is the scenario that comes up most often.
 
 ## TL;DR
 
@@ -60,8 +60,8 @@ Microsoft Word's **version history**, AutoRecover, and OneDrive version snapshot
 Word and the broader Office stack include three "**version recovery**" mechanisms:
 
 - **AutoRecover**: rescues unsaved content during a crash. Saves a temp version every 10 minutes by default. Cleared once the file closes normally.
-- **AutoSave** (in [OneDrive / SharePoint online Word](https://support.microsoft.com/en-us/office/restore-a-previous-version-of-a-file-stored-in-onedrive-159cad6d-d76e-4981-88ef-de6e96c93893)): writes to the cloud as you type.
-- **OneDrive version history**: keeps a snapshot of each save, retrievable for any timestamp. Microsoft's [SharePoint versioning docs](https://support.microsoft.com/en-us/office/enable-and-configure-versioning-for-a-list-or-library-1555d642-23ee-446a-990a-bcab618c7a37) note about 500 major versions retained by default.
+- **AutoSave** (OneDrive / SharePoint online Word): writes to the cloud as you type.
+- **OneDrive version history**: keeps a snapshot of each save, retrievable for any timestamp. Microsoft's [SharePoint versioning docs](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits) note 500 major versions retained by default (personal Microsoft accounts: 25).
 
 Excel's version history sits in the same design — see [the 4 Microsoft limits behind Excel's 1-2 version cap](/en/post/excel-version-history-limits/) for the spreadsheet shape of this same trap.
 
@@ -74,14 +74,14 @@ To see whether these mechanisms hold, look at the retention numbers:
 | Mechanism | Default retention | Prune trigger | Designed for |
 | --- | --- | --- | --- |
 | Word AutoRecover | Cleared on file close | File close, Word restart | Crash recovery |
-| OneDrive AutoSave | Live writes | ,  | Real-time co-editing |
-| OneDrive version history | About [500 versions](https://support.microsoft.com/en-us/office/enable-and-configure-versioning-for-a-list-or-library-1555d642-23ee-446a-990a-bcab618c7a37) | Older drops once over 500 | Short-term rollback |
+| OneDrive AutoSave | Live writes | Live overwrite | Real-time co-editing |
+| OneDrive version history | About [500 versions](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits) (25 on personal accounts) | Older drops once over 500 | Short-term rollback |
 | Mac [Time Machine](https://support.apple.com/en-us/HT201250) | hourly 24h + daily 30 days + weekly until disk full | Disk full | System-level backup |
 | Windows File History | Configurable | Configurable | System-level backup |
 
 That's exactly the bind. Each mechanism has a ceiling. From cleared on close to about 500 versions. None of them reach across three months.
 
-I spent years on construction sites myself, and every file version decided what was delivered in the end. Not finding the delivered version meant testing the limits of a manager's memory.
+On construction sites, every file version decides what gets delivered in the end. Not finding the delivered version means testing the limits of a manager's memory.
 
 ## Why these mechanisms don't reach 3 months later
 

@@ -1,5 +1,5 @@
 ---
-title: "La cronologia versioni di Word non copre le consegne di 3 mesi fa"
+title: "Word salva le versioni, non i ricordi di 3 mesi fa (Gestione file 2026)"
 description: "Word AutoRecover, cronologia versioni OneDrive e Time Machine sono tutti strumenti di salvataggio a livello di archiviazione — retention va da cancellato-alla-chiusura fino a circa 500 versioni. Recuperare ciò che hai consegnato 3 mesi fa richiede una cronologia versioni always-on a livello strumentale più metadata al momento della consegna."
 voice_version: v2-2026-05-11
 date: 2026-05-02T09:00:00+08:00
@@ -27,7 +27,7 @@ faq_schema:
     a: Google 未公開明確保留期。官方文件指出較舊的修訂版可能會被合併以節省空間，實務上 3 個月以上的修訂版常被自動合併或清除，無法可靠用於長期交付版本追蹤。
 ---
 
-# La cronologia versioni di Word non copre le consegne di 3 mesi fa
+# Word salva le versioni, non i ricordi di 3 mesi fa
 
 > La cronologia versioni integrata è salvataggio a livello di archiviazione. Recuperare le versioni consegnate 3 mesi fa richiede uno strato strumentale.
 
@@ -37,7 +37,7 @@ Apri la cronologia versioni di OneDrive. È rimasta solo l'ultima settimana. Wor
 
 Tre mesi fa hai premuto ⌘+S su quella versione. Gli strumenti non l'hanno ricordata.
 
-Facendo interviste con i clienti Keeply, questo messaggio delle 11:23 di sera è lo scenario che sento più spesso.
+Dalle storie che gli utenti Keeply condividono, questo messaggio delle 11:23 di sera è lo scenario che sento più spesso.
 
 ## Punti chiave
 
@@ -58,8 +58,8 @@ La **cronologia versioni** di Microsoft Word, AutoRecover e snapshot OneDrive so
 Word e l'ecosistema Office hanno tre meccanismi di "**recupero versione**" integrati:
 
 - **AutoRecover**: salva il contenuto non salvato durante una crash. Salva una versione temporanea ogni 10 minuti per impostazione predefinita. Si cancella quando il file si chiude normalmente.
-- **AutoSave** (in [OneDrive / SharePoint Word online](https://support.microsoft.com/it-it/office/restore-a-previous-version-of-a-file-stored-in-onedrive-159cad6d-d76e-4981-88ef-de6e96c93893)): scrive sul cloud mentre digiti.
-- **Cronologia versioni OneDrive**: snapshot di ogni salvataggio, recuperabile per qualsiasi timestamp. La [documentazione SharePoint versioning](https://support.microsoft.com/it-it/office/enable-and-configure-versioning-for-a-list-or-library-1555d642-23ee-446a-990a-bcab618c7a37) di Microsoft indica circa 500 versioni principali conservate per impostazione predefinita.
+- **AutoSave** (OneDrive / SharePoint Word online): scrive sul cloud mentre digiti.
+- **Cronologia versioni OneDrive**: snapshot di ogni salvataggio, recuperabile per qualsiasi timestamp. La [documentazione SharePoint versioning](https://learn.microsoft.com/it-it/sharepoint/document-library-version-history-limits) di Microsoft indica 500 versioni principali di default (account Microsoft personali: 25).
 
 L'intento progettuale è coerente: gestire "**ho avuto una crash a metà documento**" o "**ho appena salvato sopra qualcosa**". Incidenti di salvataggio a breve termine. Non sono progettati per "**il cliente chiede la versione v3 di tre mesi fa**".
 
@@ -70,14 +70,14 @@ Per vedere se questi meccanismi reggono, guarda i numeri di retention:
 | Meccanismo | Retention predefinita | Trigger di prune | Progettato per |
 | --- | --- | --- | --- |
 | Word AutoRecover | Cancellato alla chiusura del file | Chiusura file, riavvio Word | Recupero da crash |
-| OneDrive AutoSave | Scrittura in tempo reale | ,  | Co-editing in tempo reale |
-| Cronologia OneDrive | Circa [500 versioni](https://support.microsoft.com/it-it/office/enable-and-configure-versioning-for-a-list-or-library-1555d642-23ee-446a-990a-bcab618c7a37) | Le più vecchie cadono oltre 500 | Rollback a breve termine |
+| OneDrive AutoSave | Scrittura in tempo reale | Sovrascrittura sync | Co-editing in tempo reale |
+| Cronologia OneDrive | Circa [500 versioni](https://learn.microsoft.com/it-it/sharepoint/document-library-version-history-limits) (25 sugli account personali) | Le più vecchie cadono oltre 500 | Rollback a breve termine |
 | Mac [Time Machine](https://support.apple.com/it-it/HT201250) | hourly 24h + daily 30 giorni + weekly fino a disco pieno | Disco pieno | Backup di sistema |
 | Cronologia file Windows | Configurabile | Configurabile | Backup di sistema |
 
 Esatto, è proprio il vincolo. Ogni meccanismo ha un soffitto. Dalla cancellazione alla chiusura fino a circa 500 versioni. Nessuno arriva oltre tre mesi.
 
-Sono stato anni sui cantieri io stesso, e ogni versione di file decideva cosa veniva consegnato alla fine. Non trovare la versione consegnata significava mettere alla prova il limite della memoria di un manager.
+Sui cantieri, ogni versione di file decide cosa viene consegnato alla fine. Non trovare la versione consegnata significa mettere alla prova il limite della memoria di un manager.
 
 ## Perché questi meccanismi non arrivano a 3 mesi dopo
 
