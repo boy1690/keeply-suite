@@ -53,6 +53,11 @@ jobs:
           GOOGLE_ADC_JSON: ${{ secrets.GOOGLE_ADC_JSON }}
         run: node _dev/seo/fetch-ga4.js > "$SEO_DATA_DIR/ga4.json" || echo '{"error":"fetch-ga4 failed"}' > "$SEO_DATA_DIR/ga4.json"
 
+      - name: Fetch CrUX (real-user Web Vitals + INP)
+        env:
+          CRUX_API_KEY: ${{ secrets.CRUX_API_KEY }}
+        run: node _dev/seo/fetch-crux.js > "$SEO_DATA_DIR/crux.json" || echo '{"error":"fetch-crux failed"}' > "$SEO_DATA_DIR/crux.json"
+
       - name: External health check
         run: node _dev/seo/health-check.js > "$SEO_DATA_DIR/health.json"
 

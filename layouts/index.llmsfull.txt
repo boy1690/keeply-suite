@@ -1,0 +1,42 @@
+{{/*
+  llms-full.txt — full-content companion to /llms.txt for LLM grounding.
+  Spec: https://llmstxt.org/
+
+  Generated per locale at /{locale}/llms-full.txt. Each file embeds the
+  full markdown body of every post in that locale. AI systems pulling a
+  specific market's content can fetch the right URL without crawling
+  individual pages.
+
+  Hugo emits one file per language because keeply-blog uses
+  defaultContentLanguageInSubdir = true.
+*/ -}}
+# {{ .Site.Title }} — Full Content ({{ .Language.LanguageName | default .Language.Lang }})
+
+> {{ with .Site.Params.description }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}
+>
+> Locale: {{ .Language.Lang }}
+> Source: {{ .Permalink }}
+> Generated: {{ now.Format "2006-01-02" }}
+>
+> This file embeds the full markdown body of every published post in the
+> {{ .Language.Lang }} locale of {{ .Site.BaseURL }}. See /llms.txt for
+> the curated short index across all locales.
+
+{{ $posts := where .Site.RegularPages "Section" "post" -}}
+{{ range $posts.ByPublishDate.Reverse -}}
+---
+
+# {{ .Title }}
+
+- URL: {{ .Permalink }}
+- Published: {{ .PublishDate.Format "2006-01-02" }}
+{{- with .Params.tags }}
+- Tags: {{ delimit . ", " }}
+{{- end }}
+{{- with .Params.primary_keyword }}
+- Primary keyword: {{ . }}
+{{- end }}
+
+{{ .Plain | strings.TrimSpace }}
+
+{{ end -}}

@@ -41,11 +41,19 @@ enableEmoji = true
 # kills the entire feed surface for navigation pages. Per-post + home RSS
 # preserved.
 [outputs]
-  home = ["HTML", "RSS"]
+  home = ["HTML", "RSS", "LLMSFULL"]
   page = ["HTML"]
   section = ["HTML"]
   taxonomy = ["HTML"]
   term = ["HTML"]
+
+# llms-full.txt — full-content companion to /llms.txt for LLM grounding.
+# Spec: https://llmstxt.org/  (optional "full" variant embedding article bodies)
+[outputFormats.LLMSFULL]
+  mediaType = "text/plain"
+  baseName = "llms-full"
+  isPlainText = true
+  notAlternative = true
 
 [params]
   mainSections = ["post"]

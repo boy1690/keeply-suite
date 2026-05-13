@@ -27,6 +27,7 @@ const gsc = load('gsc.json');
 const bwt = load('bwt.json');
 const yandex = load('yandex.json');
 const ga4 = load('ga4.json');
+const crux = load('crux.json');
 const health = load('health.json');
 
 const today = new Date();
@@ -226,6 +227,65 @@ if (ga4.__loadError) {
     p();
   }
 }
+
+// ─── CrUX (real-user Web Vitals + INP) ───────────────────────────────
+p('## 🌡️ Core Web Vitals — real user (CrUX)');
+p();
+p('_28-day rolling window from Chrome User Experience Report. Complements the monthly lab Lighthouse audit (which cannot measure INP)._');
+p();
+if (crux.__loadError || !crux.origins) {
+  p(`⚠️ CrUX unavailable: ${crux.__loadError || crux.error || 'no origins'}`);
+} else {
+  const cwvMetrics = [
+    ['largest_contentful_paint', 'LCP', 'ms', 2500, 4000],
+    ['interaction_to_next_paint', 'INP', 'ms', 200, 500],
+    ['cumulative_layout_shift', 'CLS', '', 0.1, 0.25],
+    ['first_contentful_paint', 'FCP', 'ms', 1800, 3000],
+    ['experimental_time_to_first_byte', 'TTFB', 'ms', 800, 1800],
+  ];
+  const formatP75 = (key, val) => {
+    if (val == null) return '—';
+    if (key === 'cumulative_layout_shift') return Number(val).toFixed(3);
+    return `${Number(val).toFixed(0)} ms`;
+  };
+  const badge = (key, val, goodMax, niMax) => {
+    if (val == null) return '—';
+    const n = Number(val);
+    if (n <= goodMax) return '🟢';
+    if (n <= niMax) return '🟡';
+    return '🔴';
+  };
+  for (const [label, data] of Object.entries(crux.origins)) {
+    p(`### ${label} — \`${data.origin}\``);
+    p();
+    let anyData = false;
+    for (const ff of ['phone', 'desktop']) {
+      const block = data[ff];
+      if (!block) continue;
+      if (block.status === 'no-crux-data') {
+        p(`- **${ff}** — insufficient real-user traffic for CrUX dataset yet.`);
+        continue;
+      }
+      if (block.error) {
+        p(`- **${ff}** — ⚠️ ${block.error}`);
+        continue;
+      }
+      anyData = true;
+      p(`**${ff}** _(period: ${block.collectionPeriod?.firstDate?.year}-${String(block.collectionPeriod?.firstDate?.month).padStart(2,'0')}-${String(block.collectionPeriod?.firstDate?.day).padStart(2,'0')} → ${block.collectionPeriod?.lastDate?.year}-${String(block.collectionPeriod?.lastDate?.month).padStart(2,'0')}-${String(block.collectionPeriod?.lastDate?.day).padStart(2,'0')})_`);
+      p();
+      p('| Metric | p75 | Good | Needs improvement | Poor |');
+      p('|---|---|---|---|---|');
+      for (const [key, name, , goodMax, niMax] of cwvMetrics) {
+        const m = block.metrics?.[key];
+        if (!m) { p(`| ${name} | — | — | — | — |`); continue; }
+        p(`| ${name} ${badge(key, m.p75, goodMax, niMax)} | ${formatP75(key, m.p75)} | ${pct(m.good)} | ${pct(m.ni)} | ${pct(m.poor)} |`);
+      }
+      p();
+    }
+    if (!anyData) p();
+  }
+}
+p();
 
 // ─── Bing ────────────────────────────────────────────────────────────
 p('## 🟧 Bing Webmaster');
