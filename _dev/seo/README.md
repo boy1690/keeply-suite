@@ -1,8 +1,21 @@
-# SEO weekly auto-monitoring system
+# SEO auto-monitoring system
 
-> Built 2026-04-30. Pulls live data from Google Search Console + Bing Webmaster
-> Tools + Yandex Webmaster + GA4 every Monday morning, opens a GitHub Issue
-> with the combined report.
+> Built 2026-04-30, extended 2026-05-13 with monthly site-audit + SerpBear
+> rank tracker. Three layers of automation across weekly / monthly / daily
+> cadences, each owning a different signal.
+
+## Tool layer overview
+
+| Layer                   | Cadence | Tool                                                            | What it answers                                      |
+| ----------------------- | ------- | --------------------------------------------------------------- | ---------------------------------------------------- |
+| **Weekly report**       | Mon 09:00 TPE | `.github/workflows/seo-weekly.yml` (GSC + BWT + Yandex + GA4)   | Aggregate traffic, top queries, indexing health      |
+| **Monthly audit**       | 1st 10:00 TPE | `.github/workflows/seo-audit.yml` (site-audit-seo + Lighthouse) | Per-page technical issues, Lighthouse perf/SEO/a11y  |
+| **Daily rank tracking** | 03:00 (in-container) | `_dev/seo/serpbear/` (self-hosted SerpBear)                     | Per-keyword position change, alerting                |
+
+Run on demand: every workflow has a `workflow_dispatch` trigger; the SerpBear
+container has its own "Refresh all" button in the UI.
+
+## Layer 1 — Weekly report (original system)
 
 ## What it does
 
@@ -163,6 +176,28 @@ Baseline lives in `tag-inventory.json` (committed). Run `--diff` before merging 
 - **IndexNow** — blog: cron in `.github/workflows/deploy.yml` (auto on schedule). Main site: `keeply-website/.github/workflows/deploy.yml` `indexnow` job (manual via workflow_dispatch).
 - **Yandex DNS verification** — TXT records on both `keeply.work` and `blog.keeply.work` zones in Cloudflare DNS.
 - **Cloudflare CSP** — authoritative `Content-Security-Policy` header set by Transform Rule "Keeply Security Headers" on `keeply.work` zone (covers both apex + blog subdomain).
+
+## Layer 2 — Monthly site audit (added 2026-05-13)
+
+`.github/workflows/seo-audit.yml` runs [site-audit-seo](https://github.com/viasite/site-audit-seo) on the 1st of every month (10:00 TPE / 02:00 UTC) and on `workflow_dispatch`. It crawls up to 200 pages from `https://blog.keeply.work/`, runs Lighthouse per page, and uploads JSON + CSV + XLSX as the `seo-audit-report` artifact (90-day retention) plus opens an Issue labelled `seo-audit`.
+
+**Local run** (writes to `_dev/seo/audit-output/`, gitignored):
+
+```bash
+npm run seo:audit
+```
+
+The XLSX is the quickest read — one row per URL, sortable by Lighthouse SEO score / broken link count / canonical conflicts. Filter `status_code != 200` first; that catches the same class of issue as the Cloudflare 404 redirect list but with more context.
+
+**Why monthly cadence**: a full crawl + Lighthouse takes 5–15 min and burns runner minutes. The weekly report already catches traffic regressions; structural issues (broken canonicals, missing meta) drift slowly enough that monthly is enough.
+
+**One-time setup**: create the `seo-audit` label in the repo (`gh label create seo-audit --color BFD4F2 --description "Monthly site-audit-seo crawl"`).
+
+## Layer 3 — Daily rank tracking (SerpBear, added 2026-05-13)
+
+`_dev/seo/serpbear/` ships a `docker-compose.yml` for self-hosted [SerpBear](https://github.com/towfiqi/serpbear) — daily Google SERP position tracking with GSC auto-import. See `_dev/seo/serpbear/README.md` for setup; it lives outside CI because the scraper needs a long-running container (a GitHub-Actions cron is the wrong shape for this).
+
+Hosting options: local NAS (`Z:\`), Railway / Fly.io, or any VPS. Initial keyword set: ~30 keywords per domain (one for `blog.keeply.work`, one for `keeply.work`), bootstrapped from existing GSC top queries + shipped article `primary_keyword`s.
 
 ## Memory pointers
 
