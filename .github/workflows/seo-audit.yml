@@ -81,17 +81,32 @@ jobs:
             echo "- **Tool:** [unlighthouse](https://unlighthouse.dev/)"
             echo ""
             if [ -f "$REPORT_JSON" ]; then
-              echo "## Score summary"
+              echo "## Category scores (avg across $MAX_ROUTES routes)"
               echo ""
               echo '```'
               node -e "
                 const r = require('$REPORT_JSON');
                 const cats = ['performance','accessibility','best-practices','seo'];
-                const rows = Array.isArray(r) ? r : (r.routes || []);
-                if (!rows.length) { console.log('(no routes)'); process.exit(0); }
-                const avg = c => Math.round(100 * rows.reduce((a,b)=>a+(b.score?.[c]??b.report?.categories?.[c]?.score??0),0)/rows.length);
-                cats.forEach(c => console.log(c.padEnd(16), avg(c)));
+                cats.forEach(c => {
+                  const s = r.summary?.categories?.[c]?.score ?? 0;
+                  console.log(c.padEnd(16), Math.round(100 * s));
+                });
               " 2>/dev/null || echo "(score parse failed — see ci-result.json)"
+              echo '```'
+              echo ""
+              echo "## Core Web Vitals"
+              echo ""
+              echo '```'
+              node -e "
+                const r = require('$REPORT_JSON');
+                const m = r.summary?.metrics || {};
+                const show = (k, label) => console.log(label.padEnd(28), m[k]?.displayValue ?? '—');
+                show('largest-contentful-paint', 'LCP');
+                show('cumulative-layout-shift', 'CLS');
+                show('first-contentful-paint', 'FCP');
+                show('total-blocking-time', 'TBT');
+                show('interactive', 'TTI');
+              " 2>/dev/null || echo "(metrics parse failed)"
               echo '```'
               echo ""
               echo "## Worst-scoring routes (SEO)"
@@ -99,13 +114,12 @@ jobs:
               echo '```'
               node -e "
                 const r = require('$REPORT_JSON');
-                const rows = Array.isArray(r) ? r : (r.routes || []);
-                rows
-                  .map(x => ({ url: x.url || x.route?.url, seo: x.score?.seo ?? x.report?.categories?.seo?.score ?? 0 }))
-                  .filter(x => x.url)
+                (r.routes || [])
+                  .map(x => ({ path: x.path, seo: x.categories?.seo?.score ?? 0 }))
+                  .filter(x => x.path)
                   .sort((a,b) => a.seo - b.seo)
                   .slice(0, 10)
-                  .forEach(x => console.log((Math.round(100*x.seo)+'').padStart(3), x.url));
+                  .forEach(x => console.log((Math.round(100*x.seo)+'').padStart(3), x.path));
               " 2>/dev/null || echo "(parse failed)"
               echo '```'
             else
