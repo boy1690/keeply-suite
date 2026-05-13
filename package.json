@@ -13,7 +13,9 @@
     "seo:fetch:ga4": "node _dev/seo/fetch-ga4.js",
     "seo:health": "node _dev/seo/health-check.js",
     "seo:report": "node _dev/seo/build-report.js",
-    "seo:audit": "npx --yes unlighthouse-ci@latest --site https://blog.keeply.work/ --build-static --reporter jsonExpanded --output-path _dev/seo/audit-output"
+    "seo:audit": "npx --yes unlighthouse-ci@latest --site https://blog.keeply.work/ --build-static --reporter jsonExpanded --output-path _dev/seo/audit-output",
+    "seo:sync-gsc": "node _dev/seo/sync-gsc-to-serpbear.js",
+    "seo:sync-gsc:dry": "node -e \"process.env.SYNC_DRY_RUN='1';require('./_dev/seo/sync-gsc-to-serpbear.js')\""
   },
   "devDependencies": {
     "googleapis": "^144.0.0",
