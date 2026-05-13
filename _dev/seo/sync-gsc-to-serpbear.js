@@ -72,12 +72,28 @@ if (!SERPBEAR_USER || !SERPBEAR_PASSWORD) {
   process.exit(1);
 }
 const TOP_N = parseInt(process.env.SYNC_TOP_N || '30', 10);
-const MIN_IMPRESSIONS = parseInt(process.env.SYNC_MIN_IMPRESSIONS || '10', 10);
+const MIN_IMPRESSIONS = parseInt(process.env.SYNC_MIN_IMPRESSIONS || '3', 10);
 const DRY_RUN = !!process.env.SYNC_DRY_RUN;
+
+// GSC returns ISO 3166-1 alpha-3; SerpBear expects alpha-2.
+// Limit to 6 core publish locales by default; override via SYNC_COUNTRY_ALLOW
+// (comma-separated alpha-2). Unknown alpha-3 codes get skipped with reason.
+const ISO_A3_TO_A2 = {
+  TWN: 'TW', USA: 'US', CHN: 'CN', JPN: 'JP', KOR: 'KR', ITA: 'IT',
+  HKG: 'HK', SGP: 'SG', GBR: 'GB', DEU: 'DE', FRA: 'FR', ESP: 'ES',
+  NLD: 'NL', POL: 'PL', VNM: 'VN', THA: 'TH', IDN: 'ID', TUR: 'TR',
+  ARE: 'AE', IND: 'IN', AUS: 'AU', CAN: 'CA',
+};
+const COUNTRY_ALLOW = new Set(
+  (process.env.SYNC_COUNTRY_ALLOW || 'TW,US,CN,JP,KR,IT').split(',').map((c) => c.trim().toUpperCase()),
+);
 
 const adc = JSON.parse(ADC_JSON);
 const auth = new google.auth.OAuth2(adc.client_id, adc.client_secret);
 auth.setCredentials({ refresh_token: adc.refresh_token });
+// Local ADC (gcloud CLI's default OAuth client) requires explicit quota project.
+// CI's custom OAuth client doesn't, but harmless to set when present.
+if (adc.quota_project_id) auth.quotaProjectId = adc.quota_project_id;
 
 const SITES = [
   { gscUrl: 'https://blog.keeply.work/', serpbearDomain: 'blog.keeply.work', tag: 'site:blog' },
@@ -150,7 +166,11 @@ async function addKeyword(cookie, payload) {
 
 async function syncSite(cookie, site) {
   const queries = await fetchTopQueries(site.gscUrl);
-  const filtered = queries
+  // GSC country code (alpha-3) → SerpBear (alpha-2). Drop unknown / not-in-allowlist.
+  const mapped = queries
+    .map((q) => ({ ...q, country2: ISO_A3_TO_A2[q.country] }))
+    .filter((q) => q.country2 && COUNTRY_ALLOW.has(q.country2));
+  const filtered = mapped
     .filter((q) => q.impressions >= MIN_IMPRESSIONS)
     .sort((a, b) => b.impressions - a.impressions)
     .slice(0, TOP_N);
@@ -160,7 +180,7 @@ async function syncSite(cookie, site) {
   const skipped = [];
 
   for (const q of filtered) {
-    const fp = `${q.query.toLowerCase()}|${q.country}|desktop`;
+    const fp = `${q.query.toLowerCase()}|${q.country2}|desktop`;
     if (existing.has(fp)) {
       skipped.push({ ...q, reason: 'already-tracked' });
       continue;
@@ -168,7 +188,7 @@ async function syncSite(cookie, site) {
     const payload = {
       keyword: q.query,
       device: 'desktop',
-      country: q.country,
+      country: q.country2,
       domain: site.serpbearDomain,
       tags: `${site.tag},gsc-auto`,
       city: '',
@@ -188,6 +208,7 @@ async function syncSite(cookie, site) {
   return {
     domain: site.serpbearDomain,
     pulled: queries.length,
+    in_allowlist: mapped.length,
     after_filter: filtered.length,
     added: added.length,
     skipped: skipped.length,
