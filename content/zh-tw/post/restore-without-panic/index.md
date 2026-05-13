@@ -10,6 +10,7 @@ tags: [檔案還原, 版本控制]
 image: cover.svg
 og_image: cover.png
 role: cluster
+pillar_parent: file-version-management-complete-guide
 template: T1
 primary_keyword: "檔案救援"
 image_alt_data: "四個原因說明為何需要時資源回收桶已清空：最近剛清空、位於共用磁碟、使用 Shift+Del、雲端垃圾桶超過 30 天——事前安裝的檔案層版本工具是唯四情境均有效的唯一解法"

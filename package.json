@@ -14,6 +14,11 @@
     "seo:health": "node _dev/seo/health-check.js",
     "seo:report": "node _dev/seo/build-report.js",
     "seo:audit": "npx --yes unlighthouse-ci@latest --site https://blog.keeply.work/ --build-static --reporter jsonExpanded --output-path _dev/seo/audit-output",
+    "seo:audit:images": "node _dev/seo/audit-images.js",
+    "seo:audit:images:verbose": "node _dev/seo/audit-images.js --verbose",
+    "seo:audit:links": "node _dev/seo/audit-internal-links.js",
+    "seo:audit:links:verbose": "node _dev/seo/audit-internal-links.js --verbose",
+    "seo:audit:staleness": "node _dev/seo/audit-content-staleness.js",
     "seo:sync-gsc": "node _dev/seo/sync-gsc-to-serpbear.js",
     "seo:sync-gsc:dry": "node -e \"process.env.SYNC_DRY_RUN='1';require('./_dev/seo/sync-gsc-to-serpbear.js')\""
   },

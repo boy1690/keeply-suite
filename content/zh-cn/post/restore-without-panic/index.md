@@ -10,6 +10,7 @@ tags: [文件恢复, 版本控制]
 image: cover.svg
 og_image: cover.png
 role: cluster
+pillar_parent: file-version-management-complete-guide
 template: T1
 primary_keyword: "文件恢复"
 voice_version: v2-2026-05-11

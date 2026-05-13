@@ -10,6 +10,7 @@ tags: [recupero file, controllo versione]
 image: cover.svg
 og_image: cover.png
 role: cluster
+pillar_parent: file-version-management-complete-guide
 template: T1
 primary_keyword: "recuperare file cancellati"
 voice_version: v2-2026-05-11

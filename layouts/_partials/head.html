@@ -38,6 +38,16 @@
 <title>{{ $title }}</title>
 <meta name="description" content="{{ $description | plainify }}" />
 
+{{- /* DNS prefetch + preconnect for third-party origins shipped on every
+       page (GA4 + Clarity + Cloudflare Insights). preconnect for the
+       analytics endpoints that actually return data; dns-prefetch for
+       the rest (cheap + covered as fallback for older browsers). */ -}}
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+<link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
+<link rel="preconnect" href="https://www.clarity.ms" crossorigin />
+<link rel="dns-prefetch" href="https://static.cloudflareinsights.com" />
+<link rel="dns-prefetch" href="https://cloudflareinsights.com" />
+
 {{- /* Canonical */ -}}
 <link rel="canonical" href="{{ .Permalink }}" />
 

@@ -10,6 +10,7 @@ tags: [파일 복구, 버전 관리]
 image: cover.svg
 og_image: cover.png
 role: cluster
+pillar_parent: file-version-management-complete-guide
 template: T1
 primary_keyword: "삭제된 파일 복구"
 voice_version: v2-2026-05-11

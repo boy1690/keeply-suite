@@ -10,6 +10,7 @@ tags: [file recovery, version control]
 image: cover.svg
 og_image: cover.png
 role: cluster
+pillar_parent: file-version-management-complete-guide
 template: T1
 primary_keyword: "recover deleted file from windows 10"
 voice_version: v2-2026-05-11

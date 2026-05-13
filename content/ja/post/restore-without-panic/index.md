@@ -10,6 +10,7 @@ tags: [ファイル復元, バージョン管理]
 image: cover.svg
 og_image: cover.png
 role: cluster
+pillar_parent: file-version-management-complete-guide
 template: T1
 primary_keyword: "削除したファイル復元 ゴミ箱にない"
 voice_version: v2-2026-05-11
