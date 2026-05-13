@@ -1,99 +1,160 @@
 <!-- =============================================================
-     Cover: photoshop-autosave-not-version-history (zh-TW master)
-     Recipe: cost-hero — big "0" = autosave folder count for today
+     Cover: cloud-version-history-cliff (ko)
      ============================================================= -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none"
-     font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',system-ui,sans-serif">
+     font-family="'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif">
 
   <defs>
-    <linearGradient id="grad-indigo" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#312E81"/>
-    </linearGradient>
-    <linearGradient id="grad-amber" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#FFB300"/><stop offset="1" stop-color="#F59E0B"/>
-    </linearGradient>
-    <linearGradient id="grad-paper" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#F8F7FF"/><stop offset="1" stop-color="#E4E3FF"/>
-    </linearGradient>
-
-    <symbol id="doc-icon-amber" viewBox="0 0 32 36">
-      <path d="M2 0 L20 0 L30 10 L30 36 L2 36 Z" fill="url(#grad-amber)" opacity="0.95"/>
-      <path d="M20 0 L30 10 L20 10 Z" fill="#FFB300" opacity="0.7"/>
-    </symbol>
-
-    <symbol id="doc-icon-gray" viewBox="0 0 32 36">
-      <path d="M2 0 L20 0 L30 10 L30 36 L2 36 Z" fill="#94A3B8" opacity="0.6"/>
-      <path d="M20 0 L30 10 L20 10 Z" fill="#94A3B8" opacity="0.4"/>
-    </symbol>
-
-    <symbol id="keeply-lockup" viewBox="0 0 200 50">
-      <circle cx="22" cy="25" r="16" fill="url(#grad-indigo)"/>
-      <path d="M16 18 L16 32 M16 25 L26 18 M16 25 L26 32" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-      <text x="48" y="33" font-size="22" font-weight="800" fill="#312E81">Keeply</text>
-    </symbol>
-
-    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#312E81" flood-opacity="0.15"/>
-    </filter>
-    <filter id="hero-shadow" x="-5%" y="-5%" width="110%" height="115%">
-      <feDropShadow dx="0" dy="14" stdDeviation="20" flood-color="#312E81" flood-opacity="0.15"/>
-    </filter>
+    <linearGradient id="grad-indigo" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#4338CA"/></linearGradient>
+    <linearGradient id="grad-indigo-deep" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4338CA"/><stop offset="1" stop-color="#312E81"/></linearGradient>
+    <linearGradient id="grad-amber" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFB300"/><stop offset="1" stop-color="#F59E0B"/></linearGradient>
+    <linearGradient id="grad-paper" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F8F7FF"/><stop offset="1" stop-color="#EEF2FF"/></linearGradient>
+    <linearGradient id="grad-number" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4338CA"/><stop offset="1" stop-color="#312E81"/></linearGradient>
+    <linearGradient id="grad-cliff" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFB300"/><stop offset="1" stop-color="#DC2626"/></linearGradient>
+    <pattern id="pat-grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#4338CA" stroke-width="1" opacity="0.05"/></pattern>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#312E81" flood-opacity="0.12"/></filter>
   </defs>
 
+  <symbol id="keeply-mark" viewBox="0 0 512 512">
+    <path d="M396 129C429 159 448 200 448 255C448 363 360 451 252 451C145 451 58 368 56 263C55 206 75 158 111 123" stroke="url(#grad-indigo)" stroke-width="44" stroke-linecap="round" fill="none"/>
+    <path d="M111 123C145 91 190 72 239 72C253 72 265 73 278 76" stroke="url(#grad-amber)" stroke-width="44" stroke-linecap="round" fill="none"/>
+    <path d="M236 54L313 79L254 134L236 54Z" fill="url(#grad-amber)"/>
+    <rect x="220" y="150" width="152" height="206" rx="32" fill="url(#grad-indigo-deep)" opacity="0.48"/>
+    <rect x="192" y="167" width="152" height="206" rx="32" fill="url(#grad-indigo-deep)" opacity="0.72"/>
+    <rect x="164" y="184" width="152" height="206" rx="32" fill="url(#grad-indigo)"/>
+  </symbol>
+
+  <symbol id="keeply-lockup" viewBox="0 0 260 64">
+    <g transform="translate(0,4) scale(0.11)"><use href="#keeply-mark"/></g>
+    <text x="66" y="28" font-size="24" font-weight="800" fill="#312E81" font-family="system-ui,sans-serif" letter-spacing="0.2">Keeply</text>
+    <text x="66" y="50" font-size="11" font-weight="600" fill="#4338CA" opacity="0.72" font-family="system-ui,sans-serif" letter-spacing="1.5">KEEPLY.WORK</text>
+  </symbol>
+
   <rect width="1600" height="900" fill="url(#grad-paper)"/>
+  <rect width="1600" height="900" fill="url(#pat-grid)"/>
+  <circle cx="1450" cy="780" r="200" fill="#FDE68A" opacity="0.28"/>
+  <circle cx="1180" cy="200" r="240" fill="#DDD6FE" opacity="0.30"/>
+  <line x1="720" y1="120" x2="720" y2="780" stroke="#C7D2FE" stroke-width="1" opacity="0.55" stroke-dasharray="4 8"/>
 
-  <!-- eyebrow -->
-  <g transform="translate(120, 100)">
-    <text x="0" y="0" font-size="15" font-weight="700" fill="#4338CA" letter-spacing="3">檔案版本管理 · EDITORIAL</text>
+  <g transform="translate(120, 120)">
+    <rect x="0" y="2" width="14" height="14" fill="url(#grad-amber)"/>
+    <text x="28" y="14" font-size="17" font-weight="800" fill="#312E81" letter-spacing="4">THE RETENTION CLIFF</text>
+    <text x="28" y="40" font-size="14" font-weight="600" fill="#4338CA" opacity="0.72" letter-spacing="2">버전 기록의 천장 · EDITORIAL</text>
   </g>
 
-  <!-- big hero number -->
-  <g transform="translate(120, 380)" filter="url(#hero-shadow)">
-    <text x="0" y="0" font-size="320" font-weight="900" fill="url(#grad-indigo)" letter-spacing="-12">0</text>
+  <g transform="translate(120, 230)">
+    <text x="0" y="120" font-size="170" font-weight="900" fill="url(#grad-number)" letter-spacing="-6">천장</text>
+    <text x="0" y="290" font-size="100" font-weight="900" fill="url(#grad-number)" letter-spacing="-4">CEILING</text>
+    <path d="M0 320 L420 320" stroke="url(#grad-amber)" stroke-width="6" stroke-linecap="round"/>
   </g>
 
-  <!-- hero subtitle -->
-  <g transform="translate(280, 320)">
-    <text x="0" y="0" font-size="32" font-weight="800" fill="#312E81" letter-spacing="0.5">Photoshop autosave 資料夾</text>
-    <text x="0" y="46" font-size="32" font-weight="800" fill="#312E81" letter-spacing="0.5">今天<tspan fill="#F59E0B">有的檔案</tspan>。</text>
+  <g transform="translate(120, 600)">
+    <text x="0" y="0" font-size="26" font-weight="800" fill="#312E81">4 클라우드 공통의 retention cap</text>
+    <text x="0" y="34" font-size="15" font-weight="500" fill="#4338CA" opacity="0.75">THE INVISIBLE VERSION-HISTORY CEILING</text>
   </g>
 
-  <!-- file cards on right -->
-  <g transform="translate(960, 230)">
-    <g transform="translate(0, 0)" filter="url(#soft-shadow)">
-      <rect width="500" height="70" fill="#FFFFFF" rx="6"/>
-      <rect x="0" y="0" width="6" height="70" fill="#94A3B8" rx="2"/>
-      <use href="#doc-icon-gray" x="24" y="17" width="32" height="36"/>
-      <text x="72" y="44" font-size="18" font-weight="700" fill="#475569" font-family="'JetBrains Mono','Fira Code',ui-monospace,monospace">recovery_2025-05-04.psb</text>
-      <text x="430" y="44" font-size="13" font-weight="700" fill="#94A3B8" letter-spacing="1.5">先前 session</text>
+  <g transform="translate(120, 690)">
+    <text x="0" y="0" font-size="19" font-weight="700" fill="#312E81">iCloud · Dropbox · OneDrive · Drive</text>
+    <text x="0" y="30" font-size="19" font-weight="700" fill="#312E81">자동으로 있다고 생각했지—<tspan fill="#F59E0B">3개월 뒤엔 없다</tspan></text>
+  </g>
+
+  <use href="#keeply-lockup" x="120" y="790" width="200" height="50"/>
+
+  <g transform="translate(820, 130)">
+    <text x="0" y="14" font-size="11" font-weight="700" fill="#4338CA" opacity="0.72" letter-spacing="2">RETENTION CEILING（공식 정책）</text>
+    <text x="660" y="14" font-size="11" font-weight="700" fill="#F59E0B" opacity="0.95" letter-spacing="2" text-anchor="end">⚠️ CLIFF EDGE</text>
+  </g>
+
+  <g transform="translate(820, 170)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="700" height="100" rx="12" fill="#ffffff"/>
+    <g transform="translate(20, 24)">
+      <circle cx="26" cy="26" r="26" fill="url(#grad-indigo-deep)"/>
+      <path d="M14 30 Q14 24 20 24 Q21 18 28 18 Q35 18 36 25 Q40 25 40 30 Q40 34 36 34 L18 34 Q14 34 14 30 Z" fill="#ffffff"/>
     </g>
-    <g transform="translate(0, 90)" filter="url(#soft-shadow)">
-      <rect width="500" height="70" fill="#FFFFFF" rx="6"/>
-      <rect x="0" y="0" width="6" height="70" fill="#94A3B8" rx="2"/>
-      <use href="#doc-icon-gray" x="24" y="17" width="32" height="36"/>
-      <text x="72" y="44" font-size="18" font-weight="700" fill="#475569" font-family="'JetBrains Mono','Fira Code',ui-monospace,monospace">recovery_2025-05-03.psb</text>
-      <text x="430" y="44" font-size="13" font-weight="700" fill="#94A3B8" letter-spacing="1.5">先前 session</text>
+    <text x="92" y="36" font-size="20" font-weight="800" fill="#312E81">iCloud Drive</text>
+    <text x="92" y="58" font-size="12" font-weight="500" fill="#4338CA" opacity="0.7">Apple 생태계 기본</text>
+    <g transform="translate(320, 24)">
+      <rect x="0" y="0" width="280" height="56" rx="8" fill="#312E81" opacity="0.08" stroke="#4338CA" stroke-width="1.5" stroke-dasharray="5 4"/>
+      <text x="140" y="25" font-size="12" font-weight="700" fill="#312E81" text-anchor="middle">일반 파일 정책</text>
+      <text x="140" y="46" font-size="14" font-weight="800" fill="#DC2626" text-anchor="middle">공개되지 않음</text>
     </g>
-    <g transform="translate(0, 180)" filter="url(#soft-shadow)">
-      <rect width="500" height="70" fill="#FFFBEB" rx="6"/>
-      <rect x="0" y="0" width="6" height="70" fill="url(#grad-amber)" rx="2"/>
-      <use href="#doc-icon-amber" x="24" y="17" width="32" height="36"/>
-      <text x="72" y="44" font-size="18" font-weight="700" fill="#312E81" font-family="'JetBrains Mono','Fira Code',ui-monospace,monospace">_today_(missing).psb</text>
-      <text x="408" y="44" font-size="13" font-weight="700" fill="#F59E0B" letter-spacing="1.5">今天：沒被寫進去</text>
-    </g>
-
-    <g transform="translate(0, 290)">
-      <text x="0" y="0" font-size="16" font-weight="600" fill="#4338CA" opacity="0.7" letter-spacing="0.5">Cmd+S 沒當機 · autosave 不會被觸發</text>
+    <g transform="translate(640, 50)">
+      <circle cx="0" cy="0" r="22" fill="#FEE2E2"/>
+      <circle cx="0" cy="0" r="22" fill="none" stroke="#DC2626" stroke-width="2"/>
+      <path d="M-8 -8 L8 8 M8 -8 L-8 8" stroke="#DC2626" stroke-width="3" stroke-linecap="round"/>
     </g>
   </g>
 
-  <!-- Keeply lockup -->
-  <g transform="translate(1320, 820)">
-    <use href="#keeply-lockup" width="200" height="50"/>
+  <g transform="translate(820, 290)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="700" height="100" rx="12" fill="#ffffff"/>
+    <g transform="translate(20, 24)">
+      <circle cx="26" cy="26" r="26" fill="url(#grad-indigo)"/>
+      <g fill="#ffffff"><path d="M16 22 L26 28 L36 22 L26 16 Z"/><path d="M16 30 L26 36 L36 30 L26 24 Z" opacity="0.85"/></g>
+    </g>
+    <text x="92" y="36" font-size="20" font-weight="800" fill="#312E81">Dropbox</text>
+    <text x="92" y="58" font-size="12" font-weight="500" fill="#4338CA" opacity="0.7">Plus / Family / Professional</text>
+    <g transform="translate(320, 24)">
+      <rect x="0" y="0" width="280" height="56" rx="8" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1.5"/>
+      <text x="140" y="25" font-size="13" font-weight="700" fill="#312E81" text-anchor="middle">버전 보존 기간</text>
+      <text x="140" y="46" font-size="15" font-weight="800" fill="#F59E0B" text-anchor="middle">30 / 180 일</text>
+    </g>
+    <g transform="translate(640, 50)">
+      <circle cx="0" cy="0" r="22" fill="#FFFBEB"/>
+      <circle cx="0" cy="0" r="22" fill="none" stroke="#F59E0B" stroke-width="2"/>
+      <text x="0" y="6" font-size="22" font-weight="900" fill="#F59E0B" text-anchor="middle">!</text>
+    </g>
   </g>
 
-  <!-- bottom note -->
-  <g transform="translate(120, 840)">
-    <text x="0" y="0" font-size="13" font-weight="600" fill="#4338CA" opacity="0.6" letter-spacing="1.5">P1 CLUSTER · 6 LOCALES · 自動儲存不是版本歷史</text>
+  <g transform="translate(820, 410)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="700" height="100" rx="12" fill="#ffffff"/>
+    <g transform="translate(20, 24)">
+      <circle cx="26" cy="26" r="26" fill="url(#grad-indigo)"/>
+      <path d="M14 32 Q14 26 20 26 Q21 19 28 19 Q35 19 36 26 Q40 26 40 32 Q40 36 36 36 L18 36 Q14 36 14 32 Z" fill="#ffffff"/>
+    </g>
+    <text x="92" y="36" font-size="20" font-weight="800" fill="#312E81">OneDrive</text>
+    <text x="92" y="58" font-size="12" font-weight="500" fill="#4338CA" opacity="0.7">Microsoft 365 개인 / 비즈니스</text>
+    <g transform="translate(320, 24)">
+      <rect x="0" y="0" width="280" height="56" rx="8" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1.5"/>
+      <text x="140" y="25" font-size="13" font-weight="700" fill="#312E81" text-anchor="middle">최대 보관</text>
+      <text x="140" y="46" font-size="15" font-weight="800" fill="#F59E0B" text-anchor="middle">500 버전</text>
+    </g>
+    <g transform="translate(640, 50)">
+      <circle cx="0" cy="0" r="22" fill="#FFFBEB"/>
+      <circle cx="0" cy="0" r="22" fill="none" stroke="#F59E0B" stroke-width="2"/>
+      <text x="0" y="6" font-size="22" font-weight="900" fill="#F59E0B" text-anchor="middle">!</text>
+    </g>
   </g>
+
+  <g transform="translate(820, 530)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="700" height="100" rx="12" fill="#ffffff"/>
+    <g transform="translate(20, 24)">
+      <circle cx="26" cy="26" r="26" fill="url(#grad-indigo)"/>
+      <path d="M26 14 L40 38 L12 38 Z" fill="#ffffff"/>
+    </g>
+    <text x="92" y="36" font-size="20" font-weight="800" fill="#312E81">Google Drive</text>
+    <text x="92" y="58" font-size="12" font-weight="500" fill="#4338CA" opacity="0.7">Workspace / 개인 (비 Google 파일)</text>
+    <g transform="translate(320, 24)">
+      <rect x="0" y="0" width="280" height="56" rx="8" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1.5"/>
+      <text x="140" y="25" font-size="13" font-weight="700" fill="#312E81" text-anchor="middle">비 Google 파일</text>
+      <text x="140" y="46" font-size="14" font-weight="800" fill="#F59E0B" text-anchor="middle">30일 또는 100 버전</text>
+    </g>
+    <g transform="translate(640, 50)">
+      <circle cx="0" cy="0" r="22" fill="#FFFBEB"/>
+      <circle cx="0" cy="0" r="22" fill="none" stroke="#F59E0B" stroke-width="2"/>
+      <text x="0" y="6" font-size="22" font-weight="900" fill="#F59E0B" text-anchor="middle">!</text>
+    </g>
+  </g>
+
+  <g transform="translate(820, 660)">
+    <path d="M0 30 L500 30 L500 30 Q500 36 506 36 L514 60" stroke="#9C98FF" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <path d="M520 50 L540 70 L520 70 Z" fill="url(#grad-cliff)"/>
+    <text x="0" y="50" font-size="15" font-weight="800" fill="#312E81">3개월 뒤 클라이언트가 요청　→</text>
+    <text x="310" y="50" font-size="15" font-weight="800" fill="#DC2626">cap이 이미 지났다</text>
+    <text x="540" y="74" font-size="13" font-weight="700" fill="#F59E0B">영원히 못 되돌림</text>
+  </g>
+
+  <g transform="translate(820, 820)">
+    <text x="0" y="0" font-size="13" font-weight="600" fill="#4338CA" opacity="0.72" letter-spacing="1">자동으로 버전 기록이 있다　≠　영원히 버전 기록이 있다</text>
+  </g>
+
 </svg>
