@@ -5,6 +5,7 @@ voice_version: v2-2026-05-11
 date: 2026-05-06T01:00:00+08:00
 draft: false
 slug: why-i-built-keeply
+primary_keyword: "为什么做 Keeply"
 locales: [zh-TW, en, zh-CN, ja, ko, it]
 categories: [创始人笔记]
 tags: []

@@ -393,3 +393,35 @@ echo "Result: ${PASS}/$((${#SLUGS[@]}*${#LOCALES[@]}))"
 ### Quarterly review 仍照舊
 
 Touch 5 Phase 5.1-5.3 quarterly review（GSC rank tracking + AI Overview cite check + refresh/retire/relax 決策）獨立於 weekly retrofit Issue。Weekly 是戰術（具體哪段加哪句話），quarterly 是戰略（這篇要 refresh / retire / relax）。兩者 cadence 不同、Issue 不同、不混。
+
+---
+
+## P1.11 標題公式 audit（`_dev/blog/title-audit.js`）
+
+> v0.1 新增（2026-05-14）— Jerry playbook 第二條：標題公式落地 audit。BWF P1.11 + P1.21 contrast frame 都規定了，但**沒有自動 audit**。腳本掃 `content/{locale}/post/{slug}/index.md` frontmatter，對 zh-tw / zh-cn / en 三 locale 全文章逐條打分。
+
+### 跑法
+
+```bash
+node _dev/blog/title-audit.js              # 全部 3 locale
+node _dev/blog/title-audit.js --locale en  # 只跑 en
+```
+
+Output: markdown to stdout。建議導向檔案存 baseline：`> _dev/blog/title-audit-{date}.md`。
+
+### Severity 分級
+
+| Level | 含義                                                                                            | 處理                                                                       |
+| ----- | ----------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| HARD  | 違反強制規則（NO_TITLE / NO_PRIMARY_KEYWORD / NO_DIVIDER / LEN_TOO_LONG / NO_YEAR / NO_TAG_PREFIX / PK_LOOKS_LIKE_NOTE） | 必修。voice-driven 既決 title 可走 Phase 5.0 retrofit queue 而非當下修     |
+| WARN  | 違反偏好（NO_INTENT_WORD / NO_DIGIT_IN_BODY / PK_NOT_IN_HEAD / LEN_LONG / LEN_SHORT）           | 建議優化；P1.20 voice-driven mode 可合法保留                               |
+
+### 何時跑
+
+1. **DELIVER 觸點（Touch 4 step 9.5）**：spec → content sync 完成後跑一次，HARD = 0 才能 commit
+2. **每月一次**：跟 Touch 5 quarterly review 同步，把 baseline 更新進 `_dev/blog/title-audit-{date}.md` snapshot
+3. **新增 BWF 規則時**：規則 codify 後跑一次 audit，看回溯既有 article 違規率，決定是否要批次 retrofit
+
+### Baseline
+
+- **2026-05-14**：69 articles × 3 locale；8 全通過 / 51 only-WARN / **10 HARD**（全 EN locale，多為 LEN_TOO_LONG + NO_DIVIDER，voice-driven trade-off，留 Phase 5.0 retrofit queue）。Snapshot：[`_dev/blog/title-audit-baseline-2026-05-14.md`](_dev/blog/title-audit-baseline-2026-05-14.md)

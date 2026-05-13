@@ -7,7 +7,7 @@ og_image: cover.png
 date: 2026-05-09T08:00:00+08:00
 draft: false
 locale: zh-CN
-primary_keyword: '员工离职资料风险（baseline；ja-master 主市场主键 退職 データ 持ち出し どこまで）'
+primary_keyword: "员工离职 公司资料"
 spec: specs/departing-employee-data-risk/
 status: approved
 image_alt_data: "文件夹时间轴显示 23:03：brand-book/ 于 22:50 被复制、23:03 遭删除、30 天后永久失效——同一文件夹两个动作，Dropbox 与 Google Drive 均未记录，两者都超出同步工具的拦截范围"
