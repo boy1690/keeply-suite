@@ -1,10 +1,32 @@
-# Handoff: Schema.org JSON-LD for `keeply.work` main site
+# Handoff: Schema.org JSON-LD for `keeply.work` main site — ⚠️ OBSOLETE
 
-> Created 2026-05-13 during cross-repo SEO audit. This file lives in
-> keeply-blog repo (where SEO audits run) but the **work belongs in**
-> `keeply-website` repo. CLAUDE.md P0 cross-repo boundary forbids
-> writing to that repo from here — this is a spec / suggested
-> implementation, not a PR.
+> **Created 2026-05-13. Marked obsolete same day after re-audit.**
+>
+> The original audit probe was wrong: `grep '"@type":"[A-Za-z]+"'` missed
+> the schema because production HTML uses pretty-printed JSON with a
+> space after `:`. The schema HAS been present all along, and is in
+> fact MORE comprehensive than the blog's (SoftwareApplication with
+> price/Offer + FAQPage in addition to Organization + WebSite).
+>
+> Verified 2026-05-13 via:
+>
+> ```bash
+> curl -s --compressed https://keeply.work/ | grep -A 30 'application/ld+json'
+> ```
+>
+> Result: full Organization + WebSite + SoftwareApplication (price
+> 599 USD, downloadUrl to GitHub releases, OS Windows/macOS,
+> applicationCategory UtilitiesApplication) + FAQPage with 8 Q&As.
+>
+> **No action required** on this front.
+>
+> See instead: `handoff-keeply-website-integration-audit-2026-05-13.md`
+> for the actual main-site gaps that DO need work (font preload,
+> per-locale install page, compare-page localization, HSTS headers).
+>
+> Original (incorrect) spec below preserved for traceability.
+
+---
 
 ## Why this matters
 
