@@ -19,6 +19,7 @@
     "seo:audit:links": "node _dev/seo/audit-internal-links.js",
     "seo:audit:links:verbose": "node _dev/seo/audit-internal-links.js --verbose",
     "seo:audit:staleness": "node _dev/seo/audit-content-staleness.js",
+    "seo:audit:noindex": "node _dev/seo/audit-noindex-enforcement.js",
     "seo:backlinks:delta": "node _dev/seo/fetch-backlinks.js",
     "seo:sync-gsc": "node _dev/seo/sync-gsc-to-serpbear.js",
     "seo:sync-gsc:dry": "node -e \"process.env.SYNC_DRY_RUN='1';require('./_dev/seo/sync-gsc-to-serpbear.js')\""
