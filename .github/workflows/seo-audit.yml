@@ -36,7 +36,7 @@ jobs:
     env:
       TARGET_URL: ${{ github.event.inputs.target_url != '' && github.event.inputs.target_url || matrix.site.url }}
       MAX_ROUTES: ${{ github.event.inputs.max_routes || '200' }}
-      OUT_DIR: ${{ github.workspace }}/.unlighthouse-${{ matrix.site.name }}
+      OUT_DIR: ${{ github.workspace }}/unlighthouse-${{ matrix.site.name }}
       SITE_LABEL: ${{ matrix.site.name }}
     steps:
       - name: Skip when dispatch overrides target on non-blog matrix leg
