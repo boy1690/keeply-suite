@@ -64,12 +64,21 @@ jobs:
       - name: Build markdown report
         run: node _dev/seo/build-report.js > report.md
 
+      - name: Fetch GSC retrofit queue (page × query)
+        env:
+          GOOGLE_ADC_JSON: ${{ secrets.GOOGLE_ADC_JSON }}
+        run: node _dev/seo/gsc-retrofit-queue.js > "$SEO_DATA_DIR/gsc-retrofit.json" || echo '{"error":"retrofit-queue failed","articles":[],"totals":{},"thresholds":{},"window":{}}' > "$SEO_DATA_DIR/gsc-retrofit.json"
+
+      - name: Build retrofit report
+        run: node _dev/seo/build-retrofit-report.js < "$SEO_DATA_DIR/gsc-retrofit.json" > retrofit-report.md
+
       - name: Upload report artifact
         uses: actions/upload-artifact@v4
         with:
           name: seo-weekly-report
           path: |
             report.md
+            retrofit-report.md
             ${{ env.SEO_DATA_DIR }}/*.json
 
       - name: Open GitHub Issue with the report
@@ -83,3 +92,15 @@ jobs:
             --label seo-weekly \
             --repo "${{ github.repository }}" \
             || echo "Issue creation failed (label may not exist; create label 'seo-weekly' once)"
+
+      - name: Open GitHub Issue with retrofit queue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          DATE=$(date -u +%Y-%m-%d)
+          gh issue create \
+            --title "SEO retrofit queue — $DATE" \
+            --body-file retrofit-report.md \
+            --label seo-retrofit \
+            --repo "${{ github.repository }}" \
+            || echo "Issue creation failed (label may not exist; create label 'seo-retrofit' once)"

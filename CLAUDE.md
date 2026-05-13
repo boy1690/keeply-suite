@@ -319,3 +319,46 @@ echo "Result: ${PASS}/$((${#SLUGS[@]}*${#LOCALES[@]}))"
 - 2026-05-01: 5-locale 升級 — 8 articles × 5 locales (en/zh-tw/zh-cn/ja/ko) = 40/40 為新 baseline 目標。
 - **2026-05-03: 9 articles × 5 locales = 45/45 URL HTTP 200 ✅ confirmed via curl** — 修復 Cloudflare cross-zone redirect bug 後重驗。9 個 slug：上述 8 + `client-asked-which-version`。RSS feeds 5/5 同步恢復 200（`/{locale}/index.xml`）。後續新文章 slug 加入上述 `SLUGS` 陣列即可。
 - **2026-05-03 it 升核心後新 baseline 目標：9 articles × 6 locales = 54/54**（既有 9 篇 it 版本是 auto-translated baseline，URL HTTP 200 應已成立；human polish backfill 為獨立 quality 任務、不影響 URL completeness check）。
+
+---
+
+## 發布後優化 SOP（Touch 5 Phase 5.0 — Retrofit Queue）
+
+> v0.1 新增（2026-05-14）— Jerry 百萬部落格 playbook 第一條：**每週**從 GSC 找「排名 5-15 + 高曝光 + 內文沒提到該 query」的文章，retrofit 標題 / H2 / 內文。已自動化。BWF measure.md Phase 5.0 是 framework spec，本節是 keeply-blog 專案落地細節。
+
+### Weekly 自動產出
+
+`.github/workflows/seo-weekly.yml` 週一 09:00 Asia/Taipei 跑 `_dev/seo/gsc-retrofit-queue.js`，joins 90-day GSC page × query 資料 + shipped 文章內文，產出 GitHub Issue（label：`seo-retrofit`）。
+
+| Action      | 觸發條件                                              | 對應動作                                          |
+| ----------- | ----------------------------------------------------- | ------------------------------------------------- |
+| TITLE_ADD   | query 不在 title + 任何 H2 + 內文                     | 改 frontmatter title（含此 query 或頭部關鍵字） + 內文加 1 段 |
+| H2_ADD      | query 在內文但不在 title / 任何 H2                    | 加一個 H2 把 query 拉成 heading + 該段擴寫 1-3 段 |
+| AMPLIFY     | query 在 title / H2 但內文 ≤1 次                      | 該段擴寫，不另開 H2                               |
+| SATURATED   | query 在 title + H2 + 內文 ≥2 次但仍排 5-15           | **不 retrofit**。Backlink / SOC / dwell-time 戰場 |
+
+### 每週 Issue 處理 SOP
+
+1. 開 Issue → 看 leverage score 最高的前 3 篇文章（leverage = TITLE_ADD + H2_ADD 曝光加總）
+2. Retrofit content（依 action 種類）— spec 為 source of truth，**先改 `specs/{slug}/final.{locale}.md`** 再同步到 `content/{locale-mapped}/post/{slug}/index.md`
+3. **Bump frontmatter `date` 到「現在 - 1 小時」**（沿用 [`reference_article_date_must_predate_ci.md`](memory) safe range；Jerry 的 freshness 訊號訣竅）
+4. `hugo --gc --minify` 本機驗證 exit 0
+5. Commit 訊息格式：`seo(retrofit): {slug} — {action} for "{top query}"`
+6. Push（需 user 授權）→ 等 GitHub Pages CDN propagation → curl 驗證 200
+7. 關閉該 Issue 或在 Issue 留註說明哪些 deferred 到下週
+
+### 預設 threshold
+
+| Env var                | Default | 何時調整                                                       |
+| ---------------------- | ------- | -------------------------------------------------------------- |
+| `RETROFIT_WINDOW_DAYS` | 90      | 文章累積到 30 天就有密集數據時降到 30                          |
+| `RETROFIT_MIN_IMP`     | 3       | Issue 被 <10 曝光 noise 淹沒時調高（建議下一步 5 → 10 → 20）   |
+| `RETROFIT_MIN_POS`     | 5       | 鮮少動。Jerry sweet spot 5-15                                  |
+| `RETROFIT_MAX_POS`     | 30      | 累積到夠多 query 進前 30 後降到 15 進一步聚焦                  |
+| `RETROFIT_TOP_N`       | 10      | 每篇文章 retrofit tail 變長時降到 5                            |
+
+調整方式：在 `.github/workflows/seo-weekly.yml` 的 `Fetch GSC retrofit queue` step 加 env block。
+
+### Quarterly review 仍照舊
+
+Touch 5 Phase 5.1-5.3 quarterly review（GSC rank tracking + AI Overview cite check + refresh/retire/relax 決策）獨立於 weekly retrofit Issue。Weekly 是戰術（具體哪段加哪句話），quarterly 是戰略（這篇要 refresh / retire / relax）。兩者 cadence 不同、Issue 不同、不混。
