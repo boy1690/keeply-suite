@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html{{ with site.LanguageCode }} lang="{{ . }}"{{ end }}>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ .Permalink }}</title>
+  <link rel="canonical" href="{{ .Permalink }}">
+  <meta name="robots" content="noindex">
+  {{- $js := resources.Get "js/locale-redirect.js" | resources.Fingerprint "sha384" -}}
+  <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" crossorigin="anonymous"></script>
+  <meta http-equiv="refresh" content="0; url={{ .Permalink }}">
+</head>
+<body></body>
+</html>

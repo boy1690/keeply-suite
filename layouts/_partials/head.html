@@ -178,6 +178,12 @@
   <script defer src="{{ $clarityInit.RelPermalink }}" integrity="{{ $clarityInit.Data.Integrity }}" crossorigin="anonymous"></script>
 {{- end -}}
 
+{{- /* Cross-subdomain locale cookie — writes keeply_locale on .keeply.work
+       so the apex (keeply.work) and any subdomain land on the same language
+       on next navigation. Paired with layouts/alias.html root redirect. */ -}}
+{{- $localeSync := resources.Get "js/locale-cookie-sync.js" | resources.Fingerprint "sha384" -}}
+<script defer src="{{ $localeSync.RelPermalink }}" integrity="{{ $localeSync.Data.Integrity }}" crossorigin="anonymous"></script>
+
 {{- /* Inline stylesheet (Round B-1.2): eliminates the render-blocking
        network round-trip for CSS. Tailwind purged output is ~5.5KB
        gzipped — small enough to inline without significant HTML bloat,
