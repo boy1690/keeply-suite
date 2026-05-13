@@ -69,7 +69,10 @@ enableEmoji = true
     alternateName = "曹庭維"
     jobTitle = "Founder"
     url = "https://github.com/boy1690"
-    sameAs = ["https://github.com/boy1690"]
+    sameAs = [
+      "https://github.com/boy1690",
+      "https://www.linkedin.com/in/ting-wei-tsao-b57480152/"
+    ]
 
   # Organization identity for JSON-LD Organization sameAs (Knowledge Graph).
   # Append every owned brand-level URL: main site, social pages, LinkedIn

@@ -130,6 +130,52 @@ jobs:
           } > "$REPORT"
           echo "report=$REPORT" >> "$GITHUB_OUTPUT"
 
+      - name: Performance budget assertion
+        if: env.SKIP != 'true' && always()
+        id: budget
+        continue-on-error: true
+        run: |
+          REPORT_JSON="$OUT_DIR/ci-result.json"
+          [ -f "$REPORT_JSON" ] || { echo "no ci-result.json"; exit 0; }
+          node -e "
+            const r = require('$REPORT_JSON');
+            // Thresholds (Web Vitals + Lighthouse scoring):
+            //   performance avg ≥ 0.85, accessibility ≥ 0.90, best-practices ≥ 0.80, seo ≥ 0.90
+            //   any route CLS p75 > 0.25 = breach
+            //   any route LCP p75 > 4000ms = breach
+            const T = { performance: 0.85, accessibility: 0.90, 'best-practices': 0.80, seo: 0.90 };
+            const breaches = [];
+            for (const [cat, min] of Object.entries(T)) {
+              const score = r.summary?.categories?.[cat]?.score ?? 0;
+              if (score < min) breaches.push(\`category \${cat}: \${Math.round(100*score)} < \${Math.round(100*min)}\`);
+            }
+            for (const route of (r.routes || [])) {
+              const cls = route.categories?.['cumulative-layout-shift']?.score
+                       ?? route.metrics?.['cumulative-layout-shift']?.numericValue;
+              const lcp = route.metrics?.['largest-contentful-paint']?.numericValue;
+              if (cls !== undefined && cls > 0.25) breaches.push(\`\${route.path} CLS \${cls.toFixed(3)} > 0.25\`);
+              if (lcp !== undefined && lcp > 4000) breaches.push(\`\${route.path} LCP \${Math.round(lcp)}ms > 4000ms\`);
+            }
+            if (breaches.length) {
+              console.log('BUDGET BREACHES:');
+              for (const b of breaches) console.log('  - ' + b);
+              process.exit(1);
+            } else {
+              console.log('All thresholds met.');
+            }
+          "
+
+      - name: Append budget result to summary
+        if: env.SKIP != 'true' && always()
+        run: |
+          REPORT="$OUT_DIR/summary.md"
+          if [ "${{ steps.budget.outcome }}" = "failure" ]; then
+            echo "" >> "$REPORT"
+            echo "## 🚨 Performance budget breached" >> "$REPORT"
+            echo "" >> "$REPORT"
+            echo "One or more thresholds did not meet the Web Vitals / Lighthouse SLA. See \"Performance budget assertion\" step log for the specific category / route." >> "$REPORT"
+          fi
+
       - name: Upload audit artifact
         if: env.SKIP != 'true' && always()
         uses: actions/upload-artifact@v4
@@ -144,9 +190,19 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           DATE=$(date -u +%Y-%m-%d)
+          TITLE_PREFIX="SEO audit ($SITE_LABEL) — $DATE"
+          if [ "${{ steps.budget.outcome }}" = "failure" ]; then
+            TITLE_PREFIX="🚨 $TITLE_PREFIX (budget breach)"
+          fi
           gh issue create \
-            --title "SEO audit ($SITE_LABEL) — $DATE" \
+            --title "$TITLE_PREFIX" \
             --body-file "${{ steps.summary.outputs.report }}" \
             --label seo-audit \
             --repo "${{ github.repository }}" \
             || echo "Issue creation failed (create label 'seo-audit' once if missing)"
+
+      - name: Fail workflow if budget breached
+        if: env.SKIP != 'true' && steps.budget.outcome == 'failure'
+        run: |
+          echo "::error::Performance budget breached for $SITE_LABEL — see Issue + Performance budget assertion step log"
+          exit 1
