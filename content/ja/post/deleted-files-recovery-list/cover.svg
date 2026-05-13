@@ -1,99 +1,151 @@
 <!-- =============================================================
-     Cover: photoshop-autosave-not-version-history (zh-TW master)
-     Recipe: cost-hero — big "0" = autosave folder count for today
+     Cover: deleted-files-recovery-list (ja)
+     Layout: 編集マガジン式の左右分割（左テキスト、右シーン）
      ============================================================= -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none"
-     font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',system-ui,sans-serif">
+     font-family="'Noto Sans JP','Hiragino Sans','Yu Gothic','Meiryo',system-ui,sans-serif">
 
   <defs>
     <linearGradient id="grad-indigo" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#312E81"/>
+      <stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#4338CA"/>
+    </linearGradient>
+    <linearGradient id="grad-indigo-deep" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4338CA"/><stop offset="1" stop-color="#312E81"/>
     </linearGradient>
     <linearGradient id="grad-amber" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#FFB300"/><stop offset="1" stop-color="#F59E0B"/>
     </linearGradient>
-    <linearGradient id="grad-paper" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#F8F7FF"/><stop offset="1" stop-color="#E4E3FF"/>
+    <linearGradient id="grad-paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8F7FF"/><stop offset="1" stop-color="#EEF2FF"/>
     </linearGradient>
-
-    <symbol id="doc-icon-amber" viewBox="0 0 32 36">
-      <path d="M2 0 L20 0 L30 10 L30 36 L2 36 Z" fill="url(#grad-amber)" opacity="0.95"/>
-      <path d="M20 0 L30 10 L20 10 Z" fill="#FFB300" opacity="0.7"/>
-    </symbol>
-
-    <symbol id="doc-icon-gray" viewBox="0 0 32 36">
-      <path d="M2 0 L20 0 L30 10 L30 36 L2 36 Z" fill="#94A3B8" opacity="0.6"/>
-      <path d="M20 0 L30 10 L20 10 Z" fill="#94A3B8" opacity="0.4"/>
-    </symbol>
-
-    <symbol id="keeply-lockup" viewBox="0 0 200 50">
-      <circle cx="22" cy="25" r="16" fill="url(#grad-indigo)"/>
-      <path d="M16 18 L16 32 M16 25 L26 18 M16 25 L26 32" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-      <text x="48" y="33" font-size="22" font-weight="800" fill="#312E81">Keeply</text>
-    </symbol>
-
+    <linearGradient id="grad-screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E0E7FF"/><stop offset="1" stop-color="#C7D2FE"/>
+    </linearGradient>
+    <linearGradient id="grad-number" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4338CA"/><stop offset="1" stop-color="#312E81"/>
+    </linearGradient>
+    <pattern id="pat-grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#4338CA" stroke-width="1" opacity="0.05"/>
+    </pattern>
     <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#312E81" flood-opacity="0.15"/>
-    </filter>
-    <filter id="hero-shadow" x="-5%" y="-5%" width="110%" height="115%">
-      <feDropShadow dx="0" dy="14" stdDeviation="20" flood-color="#312E81" flood-opacity="0.15"/>
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#312E81" flood-opacity="0.12"/>
     </filter>
   </defs>
 
+  <symbol id="keeply-mark" viewBox="0 0 512 512">
+    <path d="M396 129C429 159 448 200 448 255C448 363 360 451 252 451C145 451 58 368 56 263C55 206 75 158 111 123" stroke="url(#grad-indigo)" stroke-width="44" stroke-linecap="round" fill="none"/>
+    <path d="M111 123C145 91 190 72 239 72C253 72 265 73 278 76" stroke="url(#grad-amber)" stroke-width="44" stroke-linecap="round" fill="none"/>
+    <path d="M236 54L313 79L254 134L236 54Z" fill="url(#grad-amber)"/>
+    <rect x="220" y="150" width="152" height="206" rx="32" fill="url(#grad-indigo-deep)" opacity="0.48"/>
+    <rect x="192" y="167" width="152" height="206" rx="32" fill="url(#grad-indigo-deep)" opacity="0.72"/>
+    <rect x="164" y="184" width="152" height="206" rx="32" fill="url(#grad-indigo)"/>
+  </symbol>
+
+  <symbol id="keeply-lockup" viewBox="0 0 260 64">
+    <g transform="translate(0,4) scale(0.11)"><use href="#keeply-mark"/></g>
+    <text x="66" y="28" font-size="24" font-weight="800" fill="#312E81" font-family="system-ui,sans-serif" letter-spacing="0.2">Keeply</text>
+    <text x="66" y="50" font-size="11" font-weight="600" fill="#4338CA" opacity="0.72" font-family="system-ui,sans-serif" letter-spacing="1.5">KEEPLY.WORK</text>
+  </symbol>
+
   <rect width="1600" height="900" fill="url(#grad-paper)"/>
+  <rect width="1600" height="900" fill="url(#pat-grid)"/>
+  <circle cx="1450" cy="780" r="200" fill="#FDE68A" opacity="0.28"/>
+  <circle cx="1180" cy="200" r="240" fill="#DDD6FE" opacity="0.30"/>
+  <line x1="720" y1="120" x2="720" y2="780" stroke="#C7D2FE" stroke-width="1" opacity="0.55" stroke-dasharray="4 8"/>
 
-  <!-- eyebrow -->
-  <g transform="translate(120, 100)">
-    <text x="0" y="0" font-size="15" font-weight="700" fill="#4338CA" letter-spacing="3">檔案版本管理 · EDITORIAL</text>
+  <g transform="translate(120, 120)">
+    <rect x="0" y="2" width="14" height="14" fill="url(#grad-amber)"/>
+    <text x="28" y="14" font-size="17" font-weight="800" fill="#312E81" letter-spacing="4">THE MISSING BUTTON</text>
+    <text x="28" y="40" font-size="14" font-weight="600" fill="#4338CA" opacity="0.72" letter-spacing="2">欠落した UX パターン · EDITORIAL</text>
   </g>
 
-  <!-- big hero number -->
-  <g transform="translate(120, 380)" filter="url(#hero-shadow)">
-    <text x="0" y="0" font-size="320" font-weight="900" fill="url(#grad-indigo)" letter-spacing="-12">0</text>
+  <g transform="translate(120, 230)">
+    <text x="0" y="120" font-size="170" font-weight="900" fill="url(#grad-number)" letter-spacing="-6">最近</text>
+    <text x="0" y="300" font-size="170" font-weight="900" fill="url(#grad-number)" letter-spacing="-6">削除</text>
+    <path d="M0 330 L420 330" stroke="url(#grad-amber)" stroke-width="6" stroke-linecap="round"/>
   </g>
 
-  <!-- hero subtitle -->
-  <g transform="translate(280, 320)">
-    <text x="0" y="0" font-size="32" font-weight="800" fill="#312E81" letter-spacing="0.5">Photoshop autosave 資料夾</text>
-    <text x="0" y="46" font-size="32" font-weight="800" fill="#312E81" letter-spacing="0.5">今天<tspan fill="#F59E0B">有的檔案</tspan>。</text>
+  <g transform="translate(120, 600)">
+    <text x="0" y="0" font-size="28" font-weight="800" fill="#312E81">あなたのツールにこのボタン、ある？</text>
+    <text x="0" y="34" font-size="15" font-weight="500" fill="#4338CA" opacity="0.75">THE BUTTON YOU EXPECT BUT NEVER FIND</text>
   </g>
 
-  <!-- file cards on right -->
-  <g transform="translate(960, 230)">
-    <g transform="translate(0, 0)" filter="url(#soft-shadow)">
-      <rect width="500" height="70" fill="#FFFFFF" rx="6"/>
-      <rect x="0" y="0" width="6" height="70" fill="#94A3B8" rx="2"/>
-      <use href="#doc-icon-gray" x="24" y="17" width="32" height="36"/>
-      <text x="72" y="44" font-size="18" font-weight="700" fill="#475569" font-family="'JetBrains Mono','Fira Code',ui-monospace,monospace">recovery_2025-05-04.psb</text>
-      <text x="430" y="44" font-size="13" font-weight="700" fill="#94A3B8" letter-spacing="1.5">先前 session</text>
+  <g transform="translate(120, 690)">
+    <text x="0" y="0" font-size="20" font-weight="700" fill="#312E81">iOS はボタンをくれる／</text>
+    <text x="0" y="30" font-size="20" font-weight="700" fill="#312E81">デスクトップは<tspan fill="#F59E0B">復元ソフト</tspan>を買わせる</text>
+  </g>
+
+  <use href="#keeply-lockup" x="120" y="790" width="200" height="50"/>
+
+  <g transform="translate(820, 120)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="340" height="320" rx="28" fill="#ffffff"/>
+    <rect x="0" y="0" width="340" height="320" rx="28" fill="none" stroke="#C7D2FE" stroke-width="2"/>
+    <rect x="0" y="0" width="340" height="56" rx="28" fill="url(#grad-indigo-deep)"/>
+    <rect x="0" y="28" width="340" height="28" fill="url(#grad-indigo-deep)"/>
+    <text x="170" y="36" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">iOS · 写真</text>
+    <text x="20" y="92" font-size="20" font-weight="800" fill="#312E81">最近削除した項目</text>
+    <text x="295" y="92" font-size="14" font-weight="600" fill="#4338CA" opacity="0.65">(24)</text>
+    <circle cx="318" cy="105" r="11" fill="#059669"/>
+    <path d="M312 105 L317 110 L324 101" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <g font-family="'JetBrains Mono',monospace" font-size="13" fill="#4338CA">
+      <rect x="20" y="120" width="300" height="36" rx="6" fill="#F8F7FF"/>
+      <rect x="32" y="130" width="16" height="16" fill="#C7D2FE"/>
+      <text x="60" y="142">IMG_2025_05_04.jpg</text>
+      <text x="280" y="142" fill="#9C98FF" font-size="11">残り28日</text>
+
+      <rect x="20" y="166" width="300" height="36" rx="6" fill="#F8F7FF"/>
+      <rect x="32" y="176" width="16" height="16" fill="#C7D2FE"/>
+      <text x="60" y="188">IMG_2025_04_28.jpg</text>
+      <text x="280" y="188" fill="#9C98FF" font-size="11">残り23日</text>
+
+      <rect x="20" y="212" width="300" height="36" rx="6" fill="#F8F7FF"/>
+      <rect x="32" y="222" width="16" height="16" fill="#C7D2FE"/>
+      <text x="60" y="234" font-size="11">Note_顧客プレゼン下書き.txt</text>
+      <text x="280" y="234" fill="#9C98FF" font-size="11">残り12日</text>
     </g>
-    <g transform="translate(0, 90)" filter="url(#soft-shadow)">
-      <rect width="500" height="70" fill="#FFFFFF" rx="6"/>
-      <rect x="0" y="0" width="6" height="70" fill="#94A3B8" rx="2"/>
-      <use href="#doc-icon-gray" x="24" y="17" width="32" height="36"/>
-      <text x="72" y="44" font-size="18" font-weight="700" fill="#475569" font-family="'JetBrains Mono','Fira Code',ui-monospace,monospace">recovery_2025-05-03.psb</text>
-      <text x="430" y="44" font-size="13" font-weight="700" fill="#94A3B8" letter-spacing="1.5">先前 session</text>
-    </g>
-    <g transform="translate(0, 180)" filter="url(#soft-shadow)">
-      <rect width="500" height="70" fill="#FFFBEB" rx="6"/>
-      <rect x="0" y="0" width="6" height="70" fill="url(#grad-amber)" rx="2"/>
-      <use href="#doc-icon-amber" x="24" y="17" width="32" height="36"/>
-      <text x="72" y="44" font-size="18" font-weight="700" fill="#312E81" font-family="'JetBrains Mono','Fira Code',ui-monospace,monospace">_today_(missing).psb</text>
-      <text x="408" y="44" font-size="13" font-weight="700" fill="#F59E0B" letter-spacing="1.5">今天：沒被寫進去</text>
-    </g>
+    <text x="20" y="285" font-size="13" font-weight="600" fill="#059669">✓ 内蔵の復元ボタン、ソフト不要</text>
+  </g>
 
-    <g transform="translate(0, 290)">
-      <text x="0" y="0" font-size="16" font-weight="600" fill="#4338CA" opacity="0.7" letter-spacing="0.5">Cmd+S 沒當機 · autosave 不會被觸發</text>
+  <g transform="translate(820, 470)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="540" height="320" rx="12" fill="#ffffff"/>
+    <rect x="0" y="0" width="540" height="320" rx="12" fill="none" stroke="#C7D2FE" stroke-width="2"/>
+    <rect x="0" y="0" width="540" height="38" rx="12" fill="#E0E7FF"/>
+    <rect x="0" y="20" width="540" height="18" fill="#E0E7FF"/>
+    <circle cx="20" cy="19" r="6" fill="#DC2626" opacity="0.5"/>
+    <circle cx="40" cy="19" r="6" fill="#FFB300" opacity="0.5"/>
+    <circle cx="60" cy="19" r="6" fill="#059669" opacity="0.5"/>
+    <text x="270" y="25" font-size="13" font-weight="700" fill="#312E81" text-anchor="middle">Finder</text>
+    <rect x="0" y="38" width="160" height="282" rx="0" fill="#F8F7FF"/>
+    <g font-size="12" fill="#4338CA" opacity="0.85">
+      <text x="20" y="68" font-weight="700" fill="#312E81">よく使う項目</text>
+      <text x="20" y="92">デスクトップ</text>
+      <text x="20" y="116">書類</text>
+      <text x="20" y="140">ダウンロード</text>
+      <text x="20" y="164">ムービー</text>
+      <text x="20" y="188" font-weight="700" fill="#312E81">場所</text>
+      <text x="20" y="212">Macintosh HD</text>
+      <text x="20" y="236">iCloud Drive</text>
+    </g>
+    <g transform="translate(180, 80)">
+      <text x="0" y="0" font-size="16" font-weight="700" fill="#312E81">最近の項目</text>
+      <text x="0" y="24" font-size="12" fill="#4338CA" opacity="0.7">最近使ったフォルダ、最近開いたファイル...</text>
+      <g transform="translate(0, 60)">
+        <rect x="0" y="0" width="320" height="56" rx="8" stroke="#DC2626" stroke-width="2" stroke-dasharray="6 4" fill="#FEE2E2" opacity="0.4"/>
+        <text x="16" y="28" font-size="15" font-weight="700" fill="#DC2626">最近削除した項目</text>
+        <text x="16" y="48" font-size="12" font-weight="600" fill="#DC2626" opacity="0.85">— このオプションは存在しない —</text>
+        <circle cx="296" cy="28" r="14" fill="#DC2626"/>
+        <path d="M289 21 L303 35 M303 21 L289 35" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      </g>
+      <g transform="translate(0, 140)">
+        <rect x="0" y="0" width="320" height="60" rx="10" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1"/>
+        <text x="14" y="24" font-size="13" font-weight="700" fill="#F59E0B">だから検索する：</text>
+        <text x="14" y="46" font-size="14" font-weight="800" fill="#312E81" font-family="'JetBrains Mono',monospace">"Disk Drill 価格"</text>
+      </g>
     </g>
   </g>
 
-  <!-- Keeply lockup -->
-  <g transform="translate(1320, 820)">
-    <use href="#keeply-lockup" width="200" height="50"/>
+  <g transform="translate(820, 820)">
+    <text x="0" y="0" font-size="14" font-weight="600" fill="#4338CA" opacity="0.72" letter-spacing="1">iOS · iCloud · Outlook は内蔵　·　Finder にはない</text>
   </g>
 
-  <!-- bottom note -->
-  <g transform="translate(120, 840)">
-    <text x="0" y="0" font-size="13" font-weight="600" fill="#4338CA" opacity="0.6" letter-spacing="1.5">P1 CLUSTER · 6 LOCALES · 自動儲存不是版本歷史</text>
-  </g>
 </svg>
