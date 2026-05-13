@@ -8,11 +8,11 @@ on:
   workflow_dispatch:
     inputs:
       target_url:
-        description: "Site to audit (default: https://blog.keeply.work/)"
+        description: "Override target (default: both sites via matrix)"
         required: false
-        default: "https://blog.keeply.work/"
+        default: ""
       max_routes:
-        description: "Max routes (pages) to crawl"
+        description: "Max routes (pages) to crawl per site"
         required: false
         default: "200"
 
@@ -22,21 +22,41 @@ permissions:
 
 jobs:
   audit:
+    # Two siblings — keeply.work (apex) + blog.keeply.work (sub). See
+    # memory feedback_main_site_parity.md: treat them as one stack.
+    strategy:
+      fail-fast: false
+      matrix:
+        site:
+          - name: blog
+            url: https://blog.keeply.work/
+          - name: main
+            url: https://keeply.work/
     runs-on: ubuntu-latest
     env:
-      TARGET_URL: ${{ github.event.inputs.target_url || 'https://blog.keeply.work/' }}
+      TARGET_URL: ${{ github.event.inputs.target_url != '' && github.event.inputs.target_url || matrix.site.url }}
       MAX_ROUTES: ${{ github.event.inputs.max_routes || '200' }}
-      OUT_DIR: ${{ github.workspace }}/.unlighthouse
+      OUT_DIR: ${{ github.workspace }}/.unlighthouse-${{ matrix.site.name }}
+      SITE_LABEL: ${{ matrix.site.name }}
     steps:
+      - name: Skip when dispatch overrides target on non-blog matrix leg
+        if: github.event.inputs.target_url != '' && matrix.site.name != 'blog'
+        run: |
+          echo "Manual dispatch override provided — only running on the 'blog' matrix leg to avoid duplicate audits."
+          echo "SKIP=true" >> $GITHUB_ENV
+
       - name: Checkout
+        if: env.SKIP != 'true'
         uses: actions/checkout@v4
 
       - name: Setup Node.js
+        if: env.SKIP != 'true'
         uses: actions/setup-node@v4
         with:
           node-version: "20"
 
       - name: Run Unlighthouse (crawl + Lighthouse per page)
+        if: env.SKIP != 'true'
         run: |
           npx --yes unlighthouse-ci@latest \
             --site "$TARGET_URL" \
@@ -44,18 +64,17 @@ jobs:
             --reporter jsonExpanded \
             --output-path "$OUT_DIR"
         env:
-          # `unlighthouse-ci` exits non-zero only on bad config; per-page
-          # score failures are reported in the JSON. We let it propagate.
           UNLIGHTHOUSE_MAX_ROUTES: ${{ env.MAX_ROUTES }}
 
       - name: Summarise top issues
+        if: env.SKIP != 'true'
         id: summary
         run: |
           DATE=$(date -u +%Y-%m-%d)
           REPORT="$OUT_DIR/summary.md"
           REPORT_JSON="$OUT_DIR/ci-result.json"
           {
-            echo "# SEO Site Audit — $DATE"
+            echo "# SEO Site Audit — $SITE_LABEL — $DATE"
             echo ""
             echo "- **Target:** $TARGET_URL"
             echo "- **Max routes:** $MAX_ROUTES"
@@ -64,7 +83,7 @@ jobs:
             if [ -f "$REPORT_JSON" ]; then
               echo "## Score summary"
               echo ""
-              echo "\`\`\`"
+              echo '```'
               node -e "
                 const r = require('$REPORT_JSON');
                 const cats = ['performance','accessibility','best-practices','seo'];
@@ -73,11 +92,11 @@ jobs:
                 const avg = c => Math.round(100 * rows.reduce((a,b)=>a+(b.score?.[c]??b.report?.categories?.[c]?.score??0),0)/rows.length);
                 cats.forEach(c => console.log(c.padEnd(16), avg(c)));
               " 2>/dev/null || echo "(score parse failed — see ci-result.json)"
-              echo "\`\`\`"
+              echo '```'
               echo ""
               echo "## Worst-scoring routes (SEO)"
               echo ""
-              echo "\`\`\`"
+              echo '```'
               node -e "
                 const r = require('$REPORT_JSON');
                 const rows = Array.isArray(r) ? r : (r.routes || []);
@@ -88,31 +107,31 @@ jobs:
                   .slice(0, 10)
                   .forEach(x => console.log((Math.round(100*x.seo)+'').padStart(3), x.url));
               " 2>/dev/null || echo "(parse failed)"
-              echo "\`\`\`"
+              echo '```'
             else
               echo "_ci-result.json not produced — check workflow logs._"
             fi
             echo ""
-            echo "Full HTML report + per-page JSON in artifact \`seo-audit-report\` (90-day retention)."
+            echo "Full HTML report + per-page JSON in artifact \`seo-audit-report-$SITE_LABEL\` (90-day retention)."
           } > "$REPORT"
           echo "report=$REPORT" >> "$GITHUB_OUTPUT"
 
       - name: Upload audit artifact
-        if: always()
+        if: env.SKIP != 'true' && always()
         uses: actions/upload-artifact@v4
         with:
-          name: seo-audit-report
+          name: seo-audit-report-${{ matrix.site.name }}
           path: ${{ env.OUT_DIR }}
           retention-days: 90
 
       - name: Open GitHub Issue with summary
-        if: always()
+        if: env.SKIP != 'true' && always()
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           DATE=$(date -u +%Y-%m-%d)
           gh issue create \
-            --title "SEO audit — $DATE" \
+            --title "SEO audit ($SITE_LABEL) — $DATE" \
             --body-file "${{ steps.summary.outputs.report }}" \
             --label seo-audit \
             --repo "${{ github.repository }}" \

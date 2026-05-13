@@ -179,7 +179,12 @@ Baseline lives in `tag-inventory.json` (committed). Run `--diff` before merging 
 
 ## Layer 2 — Monthly site audit (added 2026-05-13)
 
-`.github/workflows/seo-audit.yml` runs [unlighthouse](https://unlighthouse.dev/) on the 1st of every month (10:00 TPE / 02:00 UTC) and on `workflow_dispatch`. It crawls up to 200 routes from `https://blog.keeply.work/`, runs Lighthouse per page (perf / a11y / best-practices / SEO), and uploads the full static HTML report + JSON as artifact `seo-audit-report` (90-day retention). The Issue body (label `seo-audit`) carries a summary: average category scores + the 10 worst-SEO routes.
+`.github/workflows/seo-audit.yml` runs [unlighthouse](https://unlighthouse.dev/) on the 1st of every month (10:00 TPE / 02:00 UTC) and on `workflow_dispatch`. **Matrix strategy** — both sibling properties are crawled in parallel:
+
+- `blog.keeply.work` → artifact `seo-audit-report-blog` + Issue `SEO audit (blog) — YYYY-MM-DD`
+- `keeply.work` → artifact `seo-audit-report-main` + Issue `SEO audit (main) — YYYY-MM-DD`
+
+Each leg crawls up to 200 routes, runs Lighthouse per page (perf / a11y / best-practices / SEO), and uploads the full static HTML report + JSON. The Issue body carries a summary: average category scores + the 10 worst-SEO routes. On manual dispatch with a custom `target_url`, only the `blog` leg runs (avoids audit-yourself-twice on the same URL).
 
 **Local run** (writes to `_dev/seo/audit-output/`, gitignored):
 

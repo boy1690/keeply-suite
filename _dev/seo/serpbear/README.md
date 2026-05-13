@@ -65,7 +65,18 @@ Tag-set conventions inside SerpBear:
 
 - `country` — pick one per market (TW / US / CN / JP / KR / IT for the 6 core locales).
 - `device` — desktop / mobile; track both for any keyword where mobile share > 40% in GA4.
-- `tag` — `pillar` / `cluster:<slug>` / `competitor-brand` / `commercial-intent`.
+- `tag` — `pillar` / `cluster:<slug>` / `competitor-brand` / `commercial-intent` / `site:blog` / `site:main`.
+
+### Sibling property parity (`blog.keeply.work` + `keeply.work`)
+
+Both domains live in the same SerpBear instance — they're sibling properties (see memory `feedback_main_site_parity.md`). Add **both** domains under SerpBear → Domains, then split keyword strategy by intent:
+
+| Domain               | Primary keyword class                        | Why                                                  |
+| -------------------- | -------------------------------------------- | ---------------------------------------------------- |
+| `blog.keeply.work`   | TOFU / informational (long-tail, `+how`)     | Pillar / cluster articles intercept research stage   |
+| `keeply.work`        | BOFU / brand + commercial (`+download`, `+vs`) | Main site converts evaluation-stage searches         |
+
+When a keyword starts ranking blog-side but the searcher's intent is commercial, that's a signal to write a comparison/eval piece on the main site (or add a CTA on the blog post). SerpBear's per-domain dashboards make this gap visible.
 
 ## GSC integration (recommended)
 
