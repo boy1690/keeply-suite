@@ -62,6 +62,8 @@ jobs:
             --gc \
             --minify \
             --baseURL "https://blog.keeply.work/"
+      - name: Build Pagefind search index
+        run: npx --yes pagefind@latest --site public
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

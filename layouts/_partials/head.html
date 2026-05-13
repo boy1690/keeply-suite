@@ -397,7 +397,7 @@
       "@type": "SearchAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "https://www.google.com/search?q=site%3Ablog.keeply.work+{search_term_string}"
+        "urlTemplate": "{{ .Site.BaseURL | strings.TrimRight "/" }}/{{ .Language.Lang }}/search/?q={search_term_string}"
       },
       "query-input": "required name=search_term_string"
     }
