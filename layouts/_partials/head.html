@@ -192,6 +192,17 @@
        `safeJS` to bypass and emit valid JSON. Without safeJS, every
        jsonify'd value gets its surrounding quotes double-escaped to \". */ -}}
 {{- if .IsPage -}}
+  {{- /* Word count + reading time computed from .Plain (text only, no
+         markup). Hugo's .WordCount is whitespace-split — works for
+         en/ja/ko but undercounts CJK. For zh-tw / zh-cn / ja / ko we
+         use rune count / locale-specific reading rate instead. */ -}}
+  {{- $isCjk := in (slice "zh-tw" "zh-cn" "zh-hant" "zh-hans" "ja" "ko") .Language.Lang -}}
+  {{- $wordCount := .WordCount -}}
+  {{- $runeCount := len .Plain -}}
+  {{- if $isCjk -}}{{- $wordCount = $runeCount -}}{{- end -}}
+  {{- $wpm := cond $isCjk 350 220 -}}
+  {{- $readingTime := math.Ceil (div (float $wordCount) $wpm) -}}
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -200,6 +211,19 @@
     "description": {{ $description | plainify | jsonify | safeJS }},
     "datePublished": "{{ .PublishDate.Format "2006-01-02" }}",
     "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
+    "inLanguage": {{ .Language.Lang | jsonify | safeJS }},
+    "wordCount": {{ $wordCount }},
+    "timeRequired": "PT{{ $readingTime }}M",
+    {{- /* Speakable schema: signals which parts of the page voice assistants
+           (Google Assistant) and AI search engines (Perplexity / ChatGPT)
+           should read aloud. Target H2/H3 and the article body. */ -}}
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["h1", "h2", "h3", ".article-content p:first-of-type", ".prose-keeply p:first-of-type"]
+    },
+    {{- with .Params.tags -}}
+    "keywords": {{ . | jsonify | safeJS }},
+    {{- end }}
     "author": {
       "@type": "Person",
       "name": {{ .Site.Params.author.name | jsonify | safeJS }},
@@ -317,7 +341,36 @@
   {{- /* Homepage / list pages: Blog + WebSite (with SearchAction fallback to
          Google site: search since no internal search exists) + Organization
          (with sameAs for entity disambiguation). Kept as separate blocks for
-         clarity; Google parses each independently. */ -}}
+         clarity; Google parses each independently.
+
+         Taxonomy term pages (/tags/<tag>/, /categories/<cat>/) get an extra
+         CollectionPage block listing the contained articles via ItemList —
+         tells Google + AI search "this URL is a curated topical list, here
+         are its members" instead of falling back to generic Blog type. */ -}}
+  {{- if eq .Kind "term" -}}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": {{ .Title | jsonify | safeJS }},
+      "url": {{ .Permalink | jsonify | safeJS }},
+      "inLanguage": {{ .Language.Lang | jsonify | safeJS }},
+      "isPartOf": { "@type": "WebSite", "url": {{ .Site.BaseURL | jsonify | safeJS }}, "name": {{ .Site.Title | jsonify | safeJS }} },
+      "mainEntity": {
+        "@type": "ItemList",
+        "numberOfItems": {{ len .Pages }},
+        "itemListElement": [
+          {{- $first := true -}}
+          {{- range $i, $p := .Pages -}}
+            {{- if not $first }},{{ end -}}
+            { "@type": "ListItem", "position": {{ add $i 1 }}, "url": {{ $p.Permalink | jsonify | safeJS }}, "name": {{ $p.Title | jsonify | safeJS }} }
+            {{- $first = false -}}
+          {{- end }}
+        ]
+      }
+    }
+    </script>
+  {{- end -}}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",

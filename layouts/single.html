@@ -40,10 +40,18 @@
         <div class="w-11 h-11 rounded-full bg-gradient-to-br from-brand-400 to-brand-600 flex items-center justify-center text-white font-bold flex-shrink-0">K</div>
         <div class="flex-1 min-w-0">
           <p class="text-sm font-medium text-gray-700">{{ with .Params.author }}{{ . }}{{ else }}Keeply{{ end }}</p>
+          {{- /* Locale-aware reading time: Hugo's .WordCount is whitespace-split
+                 and undercounts CJK ~10×. Override with rune count / 350 cpm
+                 for CJK locales; keep .WordCount / 220 wpm for European. */ -}}
+          {{- $isCjk := in (slice "zh-tw" "zh-cn" "zh-hant" "zh-hans" "ja" "ko") .Language.Lang -}}
+          {{- $wordCount := .WordCount -}}
+          {{- if $isCjk -}}{{- $wordCount = len .Plain -}}{{- end -}}
+          {{- $wpm := cond $isCjk 350 220 -}}
+          {{- $readingTime := int (math.Ceil (div (float $wordCount) $wpm)) -}}
           <p class="text-xs text-gray-400">
             <time datetime="{{ .PublishDate.Format "2006-01-02" }}">{{ .PublishDate.Format "2006-01-02" }}</time>
-            · {{ i18n "reading_time" (dict "count" .ReadingTime) }}
-            · {{ .WordCount }} words
+            · {{ i18n "reading_time" (dict "count" $readingTime) }}
+            · {{ $wordCount }} {{ cond $isCjk "字" "words" }}
           </p>
         </div>
         <div class="flex items-center gap-2">
