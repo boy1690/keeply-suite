@@ -13,7 +13,7 @@
     "seo:fetch:ga4": "node _dev/seo/fetch-ga4.js",
     "seo:health": "node _dev/seo/health-check.js",
     "seo:report": "node _dev/seo/build-report.js",
-    "seo:audit": "npx --yes site-audit-seo@latest -u https://blog.keeply.work/ --lighthouse --json --csv --xlsx --max-requests 200 --out-dir _dev/seo/audit-output --no-color"
+    "seo:audit": "npx --yes unlighthouse-ci@latest --site https://blog.keeply.work/ --build-static --reporter jsonExpanded --output-path _dev/seo/audit-output"
   },
   "devDependencies": {
     "googleapis": "^144.0.0",

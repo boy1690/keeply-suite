@@ -11,8 +11,8 @@ on:
         description: "Site to audit (default: https://blog.keeply.work/)"
         required: false
         default: "https://blog.keeply.work/"
-      max_requests:
-        description: "Max pages to crawl"
+      max_routes:
+        description: "Max routes (pages) to crawl"
         required: false
         default: "200"
 
@@ -25,8 +25,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       TARGET_URL: ${{ github.event.inputs.target_url || 'https://blog.keeply.work/' }}
-      MAX_REQUESTS: ${{ github.event.inputs.max_requests || '200' }}
-      OUT_DIR: /tmp/seo-audit
+      MAX_ROUTES: ${{ github.event.inputs.max_routes || '200' }}
+      OUT_DIR: ${{ github.workspace }}/.unlighthouse
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -36,54 +36,69 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Install Chromium (for Lighthouse)
+      - name: Run Unlighthouse (crawl + Lighthouse per page)
         run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y -qq chromium-browser
-          echo "CHROME_PATH=$(which chromium-browser)" >> $GITHUB_ENV
-
-      - name: Prepare output dir
-        run: mkdir -p "$OUT_DIR"
-
-      - name: Run site-audit-seo (crawl + Lighthouse)
-        run: |
-          npx --yes site-audit-seo@latest \
-            -u "$TARGET_URL" \
-            --lighthouse \
-            --json \
-            --csv \
-            --xlsx \
-            --max-requests "$MAX_REQUESTS" \
-            --out-dir "$OUT_DIR" \
-            --no-color \
-            --remove-csv \
-          || echo "site-audit-seo exited non-zero — keeping partial output"
+          npx --yes unlighthouse-ci@latest \
+            --site "$TARGET_URL" \
+            --build-static \
+            --reporter jsonExpanded \
+            --output-path "$OUT_DIR"
+        env:
+          # `unlighthouse-ci` exits non-zero only on bad config; per-page
+          # score failures are reported in the JSON. We let it propagate.
+          UNLIGHTHOUSE_MAX_ROUTES: ${{ env.MAX_ROUTES }}
 
       - name: Summarise top issues
         id: summary
         run: |
           DATE=$(date -u +%Y-%m-%d)
-          REPORT=$OUT_DIR/summary.md
+          REPORT="$OUT_DIR/summary.md"
+          REPORT_JSON="$OUT_DIR/ci-result.json"
           {
             echo "# SEO Site Audit — $DATE"
             echo ""
             echo "- **Target:** $TARGET_URL"
-            echo "- **Max pages:** $MAX_REQUESTS"
-            echo "- **Tool:** [site-audit-seo](https://github.com/viasite/site-audit-seo)"
+            echo "- **Max routes:** $MAX_ROUTES"
+            echo "- **Tool:** [unlighthouse](https://unlighthouse.dev/)"
             echo ""
-            echo "## Artifacts"
+            if [ -f "$REPORT_JSON" ]; then
+              echo "## Score summary"
+              echo ""
+              echo "\`\`\`"
+              node -e "
+                const r = require('$REPORT_JSON');
+                const cats = ['performance','accessibility','best-practices','seo'];
+                const rows = Array.isArray(r) ? r : (r.routes || []);
+                if (!rows.length) { console.log('(no routes)'); process.exit(0); }
+                const avg = c => Math.round(100 * rows.reduce((a,b)=>a+(b.score?.[c]??b.report?.categories?.[c]?.score??0),0)/rows.length);
+                cats.forEach(c => console.log(c.padEnd(16), avg(c)));
+              " 2>/dev/null || echo "(score parse failed — see ci-result.json)"
+              echo "\`\`\`"
+              echo ""
+              echo "## Worst-scoring routes (SEO)"
+              echo ""
+              echo "\`\`\`"
+              node -e "
+                const r = require('$REPORT_JSON');
+                const rows = Array.isArray(r) ? r : (r.routes || []);
+                rows
+                  .map(x => ({ url: x.url || x.route?.url, seo: x.score?.seo ?? x.report?.categories?.seo?.score ?? 0 }))
+                  .filter(x => x.url)
+                  .sort((a,b) => a.seo - b.seo)
+                  .slice(0, 10)
+                  .forEach(x => console.log((Math.round(100*x.seo)+'').padStart(3), x.url));
+              " 2>/dev/null || echo "(parse failed)"
+              echo "\`\`\`"
+            else
+              echo "_ci-result.json not produced — check workflow logs._"
+            fi
             echo ""
-            ls -la "$OUT_DIR" | awk 'NR>1 {print "- `" $NF "`"}'
-            echo ""
-            echo "Full JSON / CSV / XLSX + Lighthouse reports attached as workflow artifact \`seo-audit-report\`."
-            echo ""
-            echo "## How to read"
-            echo ""
-            echo "Open the XLSX in the artifact — one row per crawled URL, columns include status code, title length, description length, h1 count, canonical, Lighthouse perf/SEO/accessibility scores. Filter \`status_code != 200\` first, then sort by Lighthouse SEO ascending."
+            echo "Full HTML report + per-page JSON in artifact \`seo-audit-report\` (90-day retention)."
           } > "$REPORT"
           echo "report=$REPORT" >> "$GITHUB_OUTPUT"
 
       - name: Upload audit artifact
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: seo-audit-report
@@ -91,6 +106,7 @@ jobs:
           retention-days: 90
 
       - name: Open GitHub Issue with summary
+        if: always()
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |

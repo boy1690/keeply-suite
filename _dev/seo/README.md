@@ -9,7 +9,7 @@
 | Layer                   | Cadence | Tool                                                            | What it answers                                      |
 | ----------------------- | ------- | --------------------------------------------------------------- | ---------------------------------------------------- |
 | **Weekly report**       | Mon 09:00 TPE | `.github/workflows/seo-weekly.yml` (GSC + BWT + Yandex + GA4)   | Aggregate traffic, top queries, indexing health      |
-| **Monthly audit**       | 1st 10:00 TPE | `.github/workflows/seo-audit.yml` (site-audit-seo + Lighthouse) | Per-page technical issues, Lighthouse perf/SEO/a11y  |
+| **Monthly audit**       | 1st 10:00 TPE | `.github/workflows/seo-audit.yml` ([unlighthouse](https://unlighthouse.dev/))   | Per-page Lighthouse (perf / a11y / best-practices / SEO) |
 | **Daily rank tracking** | 03:00 (in-container) | `_dev/seo/serpbear/` (self-hosted SerpBear)                     | Per-keyword position change, alerting                |
 
 Run on demand: every workflow has a `workflow_dispatch` trigger; the SerpBear
@@ -179,19 +179,22 @@ Baseline lives in `tag-inventory.json` (committed). Run `--diff` before merging 
 
 ## Layer 2 — Monthly site audit (added 2026-05-13)
 
-`.github/workflows/seo-audit.yml` runs [site-audit-seo](https://github.com/viasite/site-audit-seo) on the 1st of every month (10:00 TPE / 02:00 UTC) and on `workflow_dispatch`. It crawls up to 200 pages from `https://blog.keeply.work/`, runs Lighthouse per page, and uploads JSON + CSV + XLSX as the `seo-audit-report` artifact (90-day retention) plus opens an Issue labelled `seo-audit`.
+`.github/workflows/seo-audit.yml` runs [unlighthouse](https://unlighthouse.dev/) on the 1st of every month (10:00 TPE / 02:00 UTC) and on `workflow_dispatch`. It crawls up to 200 routes from `https://blog.keeply.work/`, runs Lighthouse per page (perf / a11y / best-practices / SEO), and uploads the full static HTML report + JSON as artifact `seo-audit-report` (90-day retention). The Issue body (label `seo-audit`) carries a summary: average category scores + the 10 worst-SEO routes.
 
 **Local run** (writes to `_dev/seo/audit-output/`, gitignored):
 
 ```bash
 npm run seo:audit
+# then open _dev/seo/audit-output/index.html
 ```
 
-The XLSX is the quickest read — one row per URL, sortable by Lighthouse SEO score / broken link count / canonical conflicts. Filter `status_code != 200` first; that catches the same class of issue as the Cloudflare 404 redirect list but with more context.
+The static HTML report is the quickest read — sortable table per category, drill-down per page. The JSON (`ci-result.json`) is the machine-readable equivalent if you want to script alerts.
 
-**Why monthly cadence**: a full crawl + Lighthouse takes 5–15 min and burns runner minutes. The weekly report already catches traffic regressions; structural issues (broken canonicals, missing meta) drift slowly enough that monthly is enough.
+**Why monthly cadence**: a full crawl + Lighthouse on ~100 routes takes 3–8 min and burns runner minutes. The weekly report already catches traffic regressions; per-page Lighthouse scores drift slowly enough that monthly is enough.
 
-**One-time setup**: create the `seo-audit` label in the repo (`gh label create seo-audit --color BFD4F2 --description "Monthly site-audit-seo crawl"`).
+**Pivot note 2026-05-13**: first attempt used `site-audit-seo` but `@latest` (6.0.1) ships a broken `expandHomedir` reference; older v5 has 4-year-old deprecated deps with CVEs. Pivoted to unlighthouse — actively maintained by the Nuxt team, single-command CI mode, generates static HTML report out of the box.
+
+**One-time setup**: create the `seo-audit` label in the repo (`gh label create seo-audit --color BFD4F2 --description "Monthly unlighthouse audit"`).
 
 ## Layer 3 — Daily rank tracking (SerpBear, added 2026-05-13)
 
