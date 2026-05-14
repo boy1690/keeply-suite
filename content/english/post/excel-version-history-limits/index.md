@@ -1,5 +1,5 @@
 ---
-title: "【2026 File Management】Excel Version History Only Goes Back 1-2 Versions? 4 Microsoft Limits Nobody Tells You"
+title: "【2026 File Management】Excel version history: 4 Microsoft limits nobody tells you"
 description: "Excel's version-history button is grayed out and only goes back 1-2 versions — not a bug, but the result of Microsoft designing AutoSave as OneDrive subscription bait. This article unpacks 4 limits you can't get around, plus 3 tool designs that close the gap."
 voice_version: v2-2026-05-11
 date: 2026-05-04T20:00:00+08:00

@@ -1,5 +1,5 @@
 ---
-title: "【2026 File Management】How to install Keeply on Windows and macOS in 10 minutes"
+title: "【2026 File Management】Install Keeply on Windows and macOS: a 10-minute walkthrough"
 description: "Skip the SmartScreen 'Run anyway' fine print and the guesswork — this article walks through Windows winget one-liner + macOS right-click open, two clean paths to install Keeply in 10 minutes and protect your first project the same day."
 voice_version: v2-2026-05-11
 date: 2026-04-26

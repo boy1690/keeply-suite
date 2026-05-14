@@ -1,5 +1,5 @@
 ---
-title: "【2026 File Management】Before comparing iCloud vs Dropbox: all 4 clouds share the same version history cliff"
+title: "【2026 File Management】iCloud vs Dropbox version history: 4 clouds share the same cliff"
 description: "iCloud, Dropbox, OneDrive, Google Drive comparison articles all measure storage / price / sharing — not retention. The structural gap: all 4 cap version history (time-based or count-based), and Apple doesn't publish iCloud's policy at all. Real cost shows up 3 months later when the version you need is gone."
 voice_version: v2-2026-05-12
 date: 2026-05-12T08:00:00+08:00

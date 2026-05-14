@@ -1,5 +1,5 @@
 ---
-title: "【2026 File Management】What the 3-2-1 backup rule doesn't cover in 2026"
+title: "【2026 File Management】3-2-1 backup rule: what it covers in 2026, and what it doesn't"
 description: "The 3-2-1 backup rule (3 copies, 2 media, 1 offsite) protects against hardware failure, fire, and ransomware. But it was never designed to handle operator error — you overwriting your own version, cloud sync replicating the broken file to all three copies. Here's what 3-2-1 covers, what it misses, and how to close the gap."
 voice_version: v2-2026-05-11
 date: 2026-05-02T09:00:00+08:00
