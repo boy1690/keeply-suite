@@ -9,6 +9,7 @@ primary_keyword: "Keeply 怎麼用"
 locales: [zh-TW, en, zh-CN, ja, ko]
 tags: [Keeply 教學]
 categories: [教學]
+role: pillar
 template: T1
 voice: B-Emotional-StoryBrand
 image: cover.svg
@@ -172,7 +173,10 @@ Keeply 不爭所有場景。4 種情況下，別的工具更對。
 
 ## 延伸閱讀
 
-- [檔案版本管理完整指南](/zh-tw/post/file-version-management-complete-guide/)（PILLAR 1，了解版本管理為什麼重要）
+- [檔案版本管理完整指南](/zh-tw/post/file-version-management-complete-guide/)（了解版本管理為什麼重要）
+- [Keeply 第一週：用 7 天觀察日記驗證 3 個真實信號](/zh-tw/post/keeply-first-week-workflow/)（裝好之後第一週怎麼跑）
+- [Keeply 到底存什麼？跟備份、雲端工具有什麼不一樣](/zh-tw/post/what-keeply-saves-vs-backup-cloud/)（先搞懂 Keeply vs Dropbox / Time Machine 的差別）
+- [Vibe Coding 失控了？1 個動作回到上一個能跑的版本](/zh-tw/post/vibe-coding-rollback/)（AI 改壞檔案的典型 use case）
 
 ---
 

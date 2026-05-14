@@ -11,6 +11,7 @@ categories: [教學]
 image: cover.svg
 og_image: cover.png
 role: cluster
+pillar_parent: keeply-getting-started-from-zero
 template: T1
 template_variant: trial_diary
 voice_version: v2-2026-05-11

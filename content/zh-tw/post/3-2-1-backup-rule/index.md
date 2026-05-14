@@ -9,6 +9,9 @@ primary_keyword: "3-2-1 備份原則"
 locale: zh-TW
 categories: [使用情境]
 tags: [版本控制, 操作失誤, 工具比較]
+role: cluster
+pillar_parent: file-version-management-complete-guide
+template: T1
 image: cover.svg
 og_image: cover.png
 locales_required: [en, zh-TW, zh-CN, ja, ko]

@@ -9,6 +9,8 @@ primary_keyword: "vibe coding 失控"
 locales: [zh-TW, en, zh-CN, ja, ko]
 tags: [檔案還原, Keeply 教學]
 categories: [使用情境]
+role: cluster
+pillar_parent: keeply-getting-started-from-zero
 template: T1-cluster
 voice: B-Emotional-StoryBrand
 motif: "AI 衝太遠 vs 你叫得回它"

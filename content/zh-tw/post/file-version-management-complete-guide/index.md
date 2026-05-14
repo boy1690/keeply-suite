@@ -8,6 +8,8 @@ date: 2026-04-28T09:00:00+08:00
 draft: false
 categories: [檔案管理]
 tags: [版本控制, 雲端同步]
+role: pillar
+template: T1
 image: cover.svg
 og_image: cover.png
 cta_topic: versioning

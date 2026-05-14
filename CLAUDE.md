@@ -425,3 +425,41 @@ Output: markdown to stdout。建議導向檔案存 baseline：`> _dev/blog/title
 ### Baseline
 
 - **2026-05-14**：69 articles × 3 locale；8 全通過 / 51 only-WARN / **10 HARD**（全 EN locale，多為 LEN_TOO_LONG + NO_DIVIDER，voice-driven trade-off，留 Phase 5.0 retrofit queue）。Snapshot：[`_dev/blog/title-audit-baseline-2026-05-14.md`](_dev/blog/title-audit-baseline-2026-05-14.md)
+
+---
+
+## P1.15 Pillar ↔ Cluster 互連 audit（`_dev/blog/internal-link-audit.js`）
+
+> v0.1 新增（2026-05-14）— Jerry playbook 第三條：pillar-cluster 互連是 SEO 內鏈核心 + 內容合併產文乘數。BWF P1.15 寫了「pillar ≥3 cluster link / cluster ≥1 pillar link」但**沒有 audit 腳本**，腳本掃 zh-tw locale（master）的 frontmatter `role` / `pillar_parent` + body in-body link。
+
+### Internal-link audit 跑法
+
+```bash
+node _dev/blog/internal-link-audit.js
+```
+
+Output: markdown to stdout。建議導向檔案存 baseline：`> _dev/blog/internal-link-audit-{date}.md`。
+
+### Internal-link 檢查項目
+
+| Severity | 項目                                                                   |
+| -------- | ---------------------------------------------------------------------- |
+| HARD     | Pillar 在 body 內 link 到 ≥3 cluster article 的數量                    |
+| HARD     | Cluster 在 body 內 link 到 `pillar_parent` 宣告的 pillar               |
+| HARD     | Cluster 有 `role:` 但 `pillar_parent` 空白                             |
+| HARD     | Cluster 的 `pillar_parent` 指向 corpus 不存在的 slug                   |
+| WARN     | 被 ≥3 article 指認為 parent，但自身 `role:` 不是 pillar（implicit pillar）|
+| WARN     | `role:` + `pillar_parent` 都空白（unclear positioning）                |
+| INFO     | 同 tag ≥5 article（Jerry「合併產文」乘數信號 → 寫 pillar 收進來）       |
+
+### Internal-link 何時跑
+
+1. **DELIVER 觸點（Touch 4 step 9.6）**：spec → content sync 完成後跑一次，HARD = 0 才能 commit
+2. **新文章宣告 `role: cluster` 時**：必同步加 in-body link 連回 pillar；audit 是 last line of defense
+3. **新 pillar ship 時**：必須在 body 內 link ≥3 cluster；audit 會 enforce
+4. **每月一次 review**：看 INFO mature-tag 是否該開新 pillar 收割（Jerry 合併產文招式）
+
+### Internal-link Baseline
+
+- **2026-05-14**：24 articles in zh-tw corpus；0 HARD / 5 WARN（unclear positioning 待 user 決定）/ 6 INFO（mature tags：版本控制 13 / 工具比較 6 / 操作失誤 5 / 雲端同步 5 / 檔案還原 5 / Keeply 教學 5，其中只有 `版本控制` 已有 pillar 覆蓋）。Snapshot：[`_dev/blog/internal-link-audit-baseline-2026-05-14.md`](_dev/blog/internal-link-audit-baseline-2026-05-14.md)
+- 本次 audit 順帶修了：`file-version-management-complete-guide` 標 `role: pillar` / `keeply-getting-started-from-zero` 標 `role: pillar` + 補 ≥3 cluster in-body links / `keeply-first-week-workflow` 補 `pillar_parent` / 3-2-1-backup-rule + vibe-coding-rollback + keeply-getting-started 補 role 設定
