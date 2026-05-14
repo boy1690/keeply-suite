@@ -1,0 +1,106 @@
+<!-- =============================================================
+     Cover: windows-file-history-vs-backup (zh-TW master)
+     Kit version: 0.1
+     Recipe: Big-headline numerical reveal — Windows 有 3 種「備份」
+     Layout: Left big text + right three-tile illustration
+     ============================================================= -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none"
+     font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',system-ui,sans-serif">
+
+  <defs>
+    <linearGradient id="grad-indigo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#4338CA"/>
+    </linearGradient>
+    <linearGradient id="grad-indigo-deep" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4338CA"/><stop offset="1" stop-color="#312E81"/>
+    </linearGradient>
+    <linearGradient id="grad-amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFB300"/><stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="grad-paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8F7FF"/><stop offset="1" stop-color="#EEF2FF"/>
+    </linearGradient>
+    <linearGradient id="grad-number" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4338CA"/><stop offset="1" stop-color="#312E81"/>
+    </linearGradient>
+    <pattern id="pat-grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#4338CA" stroke-width="1" opacity="0.05"/>
+    </pattern>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#312E81" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <symbol id="keeply-mark" viewBox="0 0 512 512">
+    <path d="M396 129C429 159 448 200 448 255C448 363 360 451 252 451C145 451 58 368 56 263C55 206 75 158 111 123" stroke="url(#grad-indigo)" stroke-width="44" stroke-linecap="round" fill="none"/>
+    <path d="M111 123C145 91 190 72 239 72C253 72 265 73 278 76" stroke="url(#grad-amber)" stroke-width="44" stroke-linecap="round" fill="none"/>
+    <path d="M236 54L313 79L254 134L236 54Z" fill="url(#grad-amber)"/>
+    <rect x="220" y="150" width="152" height="206" rx="32" fill="url(#grad-indigo-deep)" opacity="0.48"/>
+    <rect x="192" y="167" width="152" height="206" rx="32" fill="url(#grad-indigo-deep)" opacity="0.72"/>
+    <rect x="164" y="184" width="152" height="206" rx="32" fill="url(#grad-indigo)"/>
+  </symbol>
+
+  <symbol id="keeply-lockup" viewBox="0 0 260 64">
+    <g transform="translate(0,4) scale(0.11)"><use href="#keeply-mark"/></g>
+    <text x="66" y="28" font-size="24" font-weight="800" fill="#312E81" font-family="system-ui,sans-serif" letter-spacing="0.2">Keeply</text>
+    <text x="66" y="50" font-size="11" font-weight="600" fill="#4338CA" opacity="0.72" font-family="system-ui,sans-serif" letter-spacing="1.5">KEEPLY.WORK</text>
+  </symbol>
+
+  <!-- Background -->
+  <rect width="1600" height="900" fill="url(#grad-paper)"/>
+  <rect width="1600" height="900" fill="url(#pat-grid)"/>
+
+  <!-- Top eyebrow -->
+  <g transform="translate(96,84)">
+    <rect width="14" height="36" fill="url(#grad-amber)"/>
+    <text x="28" y="20" font-size="16" font-weight="800" fill="#312E81" letter-spacing="2.4">WHAT WINDOWS DOESN'T GIVE YOU</text>
+    <text x="28" y="40" font-size="13" font-weight="600" fill="#4338CA" opacity="0.7" letter-spacing="1.2">Windows 백업 시리즈 ‧ EDITORIAL</text>
+  </g>
+
+  <!-- Left big headline -->
+  <g transform="translate(96,210)">
+    <text font-size="118" font-weight="900" fill="url(#grad-number)" letter-spacing="-2">
+      <tspan x="0" y="100">Windows에는</tspan>
+      <tspan x="0" y="240">3가지</tspan>
+      <tspan x="0" y="380">"백업"이 있다</tspan>
+    </text>
+    <text x="0" y="470" font-size="28" font-weight="700" fill="#92400E" opacity="0.95">셋 다 「회의 후 결론을 추가한」 버전을 못 찾는다</text>
+    <text x="0" y="510" font-size="20" font-weight="600" fill="#4338CA" opacity="0.7">그 레이어는 Keeply가 채운다</text>
+  </g>
+
+  <!-- Right tiles — Keeply pinned as the answer -->
+  <g transform="translate(990,180)" filter="url(#soft-shadow)">
+    <!-- Keeply tile (top, highlighted) -->
+    <rect x="0" y="0" width="480" height="180" rx="20" fill="url(#grad-indigo)"/>
+    <rect x="0" y="0" width="8" height="180" rx="2" fill="url(#grad-amber)"/>
+    <text x="36" y="46" font-size="14" font-weight="700" fill="#FCD34D" letter-spacing="1.8">WITH NOTES ‧ ON YOUR LAPTOP ★</text>
+    <text x="36" y="92" font-size="36" font-weight="900" fill="white">Keeply</text>
+    <text x="36" y="128" font-size="17" font-weight="500" fill="white" opacity="0.9">30분마다 자동 저장 + 수동 「버전 저장」</text>
+    <text x="36" y="152" font-size="17" font-weight="500" fill="white" opacity="0.9">버전마다 메모, 로컬에서 동작</text>
+
+    <!-- Windows Backup -->
+    <rect x="0" y="200" width="480" height="100" rx="20" fill="white"/>
+    <rect x="0" y="200" width="8" height="100" rx="2" fill="url(#grad-indigo)" opacity="0.5"/>
+    <text x="36" y="232" font-size="13" font-weight="700" fill="#4338CA" opacity="0.65" letter-spacing="1.4">DISK ‧ Windows Backup</text>
+    <text x="36" y="270" font-size="18" font-weight="600" fill="#312E81" opacity="0.85">디스크 전체 스냅숏 — 디스크는 구해도 파일은 못 구한다</text>
+
+    <!-- File History -->
+    <rect x="0" y="320" width="480" height="100" rx="20" fill="white"/>
+    <rect x="0" y="320" width="8" height="100" rx="2" fill="url(#grad-indigo-deep)" opacity="0.5"/>
+    <text x="36" y="352" font-size="13" font-weight="700" fill="#4338CA" opacity="0.65" letter-spacing="1.4">FOLDER ‧ File History</text>
+    <text x="36" y="390" font-size="18" font-weight="600" fill="#312E81" opacity="0.85">폴더 예약 스냅숏 — 타임스탬프뿐, 외장 드라이브 필수</text>
+
+    <!-- OneDrive -->
+    <rect x="0" y="440" width="480" height="100" rx="20" fill="white"/>
+    <rect x="0" y="440" width="8" height="100" rx="2" fill="url(#grad-indigo-deep)" opacity="0.5"/>
+    <text x="36" y="472" font-size="13" font-weight="700" fill="#4338CA" opacity="0.65" letter-spacing="1.4">CLOUD ‧ OneDrive 버전 기록</text>
+    <text x="36" y="510" font-size="18" font-weight="600" fill="#312E81" opacity="0.85">클라우드 버전 — 보존 기간 내, 타임스탬프뿐</text>
+  </g>
+
+  <!-- Bottom strip -->
+  <rect x="0" y="820" width="1600" height="80" fill="url(#grad-indigo-deep)"/>
+  <g transform="translate(96,840)">
+    <use href="#keeply-lockup" width="260" height="64"/>
+  </g>
+  <text x="1504" y="868" font-size="16" font-weight="700" fill="white" opacity="0.85" text-anchor="end" letter-spacing="1.2">THE 4TH LAYER WINDOWS NEVER GAVE YOU</text>
+</svg>
