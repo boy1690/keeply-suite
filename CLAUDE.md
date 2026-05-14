@@ -372,7 +372,13 @@ echo "Result: ${PASS}/$((${#SLUGS[@]}*${#LOCALES[@]}))"
 
 1. 開 Issue → 看 leverage score 最高的前 3 篇文章（leverage = TITLE_ADD + H2_ADD 曝光加總）
 2. Retrofit content（依 action 種類）— spec 為 source of truth，**先改 `specs/{slug}/final.{locale}.md`** 再同步到 `content/{locale-mapped}/post/{slug}/index.md`
-3. **Bump frontmatter `date` 到「現在 - 1 小時」**（沿用 [`reference_article_date_must_predate_ci.md`](memory) safe range；Jerry 的 freshness 訊號訣竅）
+3. **Bump frontmatter `date` 到「現在 - 1 小時」**（沿用 [`reference_article_date_must_predate_ci.md`](memory) safe range；Jerry 的 freshness 訊號訣竅）。用 helper（[`_dev/blog/bump-date.js`](_dev/blog/bump-date.js)）：
+
+   ```bash
+   node _dev/blog/bump-date.js <slug> --advise     # 看 git diff ≥10% 再決定
+   node _dev/blog/bump-date.js <slug>              # 6 locale 一次 bump
+   ```
+
 4. `hugo --gc --minify` 本機驗證 exit 0
 5. Commit 訊息格式：`seo(retrofit): {slug} — {action} for "{top query}"`
 6. Push（需 user 授權）→ 等 GitHub Pages CDN propagation → curl 驗證 200
