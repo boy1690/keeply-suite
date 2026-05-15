@@ -72,7 +72,7 @@ draft: false
 
 它的職責到這裡為止。你存檔蓋掉自己上一個版本？這在 Photoshop 內部完全是另一件事——程式運作正常、使用者主動執行儲存指令、自動儲存機制連被觸發都沒。沒當機、沒東西需要救、所以也沒東西被寫進回復資料夾。
 
-想自己去資料夾翻一遍確認？[Adobe 官方文件有列出每個平台的精確路徑](https://helpx.adobe.com/tw/photoshop/using/auto-save-recovery-background-save.html)：Mac 的 `~/Documents/Adobe/AutoRecover/`、Windows 的 `%AppData%/Adobe/Adobe Photoshop {version}/AutoRecover/`。前幾次 session 的舊 `.psb` 可能還躺著、但今天的工作從來沒被寫進去、也就還原不出來。
+想自己去資料夾翻一遍確認？[Adobe 官方文件有列出每個平台的精確路徑](https://helpx.adobe.com/tw/photoshop/using/auto-save-recovery-background-save.html)：Mac 的 `~/Documents/Adobe/自動回復/`、Windows 的 `%AppData%/Adobe/Adobe Photoshop {version}/自動回復/`。前幾次 session 的舊 `.psb` 可能還躺著、但今天的工作從來沒被寫進去、也就還原不出來。
 
 那為什麼還有上千篇文章教你「自動儲存資料夾在哪」？
 
@@ -147,7 +147,7 @@ Keeply 救不回已經不存在的東西、誠實列幾個情境。
 
 **Keeply 安裝之前被蓋掉的檔案**也救不了。它從你裝那一刻起開始記錄版本、昨天蓋掉的 v2、今天才裝 Keeply、沒有歷史可以回。我承認這聽起來廢、但版本歷史工具的本質就是這樣——它記錄的是從現在開始的時間流、往前是它不認識的時段。
 
-**Photoshop 編輯中當機那一刻**。Keeply 30 分鐘輪詢、不會抓到那一刻的中間狀態。Photoshop 自動儲存 / AutoRecover 仍是第一道線（Photoshop 自己的緊急傘）。Keeply + Photoshop 自動儲存互補、各管一段、並排運作。
+**Photoshop 編輯中當機那一刻**。Keeply 30 分鐘輪詢、不會抓到那一刻的中間狀態。Photoshop 自動儲存 / 自動回復 仍是第一道線（Photoshop 自己的緊急傘）。Keeply + Photoshop 自動儲存互補、各管一段、並排運作。
 
 ---
 

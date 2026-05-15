@@ -60,7 +60,7 @@ Perché c'è un terzo asse che non mettono sul tavolo.
 
 ## Il terzo asse: cronologia versioni intenzionale a livello di file
 
-Quello che manca da ogni confronto: **un registro per file dei tuoi salvataggi deliberati, senza cap di tempo né cap di conteggio, con la capacità di marcare un salvataggio specifico come una milestone che sopravvive per sempre**.
+Quello che manca da ogni confronto: **un registro per file dei tuoi salvataggi deliberati, senza limite di tempo né limite di conteggio, con la capacità di marcare un salvataggio specifico come una milestone che sopravvive per sempre**.
 
 Ecco la stessa tabella con il terzo asse aggiunto:
 
@@ -72,7 +72,7 @@ Ecco la stessa tabella con il terzo asse aggiunto:
 
 Time Machine ha snapshot, ma sono a livello disco. Non sa che hai premuto Cmd+S su un file specifico alle 14:47 con intenzione. Conosce lo stato del disco al prossimo snapshot orario, che potrebbe essere le 14:00 (prima del tuo salvataggio) o le 15:00 (dopo — ma contenente qualunque altra cosa sia cambiata nel frattempo).
 
-Dropbox ha versioni a livello file, ma capped a 30 giorni per il gratuito, 180 o 365 per i piani a pagamento. Passato il cap, quella cronologia a livello file è sparita.
+Dropbox ha versioni a livello file, ma capped a 30 giorni per il gratuito, 180 o 365 per i piani a pagamento. Passato il limite, quella cronologia a livello file è sparita.
 
 Quindi quando ti serve «il salvataggio deliberato di martedì pomeriggio di due mesi fa», Time Machine ha i byte (da qualche parte nello snapshot) ma non l'indice. Dropbox aveva l'indice, ma l'ha buttato al giorno 31.
 
@@ -91,12 +91,12 @@ Scegli quindi gli strumenti per gli assi visibili. Prendi Time Machine più Drop
 Uno strumento costruito attorno alla cronologia versioni intenzionale a livello di file fa queste cose:
 
 - **Salva una versione a ogni Cmd+S deliberato**, non su uno schedule di snapshot
-- **Nessun cap di tempo** — la versione di due anni fa è accessibile come quella di ieri
-- **Nessun cap di conteggio** — 500 salvataggi dopo, le prime sono ancora recuperabili
+- **Nessun limite di tempo** — la versione di due anni fa è accessibile come quella di ieri
+- **Nessun limite di conteggio** — 500 salvataggi dopo, le prime sono ancora recuperabili
 - **Un marker «Release» o «Milestone»** — segnala un salvataggio specifico come «questo è quello che ho mandato al cliente l'8 marzo» e sopravvive per sempre, anche se salvi il file altre 500 volte
 - **Funziona accanto a Time Machine e Dropbox** — non li sostituisce, sta sul terzo asse
 
-[Keeply](https://keeply.work) è una implementazione di questo terzo strato. Gira in locale, osserva le cartelle che aggiungi, cattura ogni salvataggio deliberato, senza cap. La funzione Release ti lascia congelare una versione specifica come milestone.
+[Keeply](https://keeply.work) è una implementazione di questo terzo strato. Gira in locale, osserva le cartelle che aggiungi, cattura ogni salvataggio deliberato, senza limite. La funzione Release ti lascia congelare una versione specifica come milestone.
 
 ```
 Keeply — martedì pomeriggio di due mesi fa
@@ -109,7 +109,7 @@ Keeply — martedì pomeriggio di due mesi fa
 ● 15:42   proposal.psd          (salvataggio automatico)
 ```
 
-Quel marker ★ è quello che ti restituisce il «salvataggio deliberato di martedì pomeriggio» — sopravvive al cap di 30 giorni di Dropbox, alla diluizione oraria di Time Machine, e al tuo stesso dimenticare quale data esatta fosse.
+Quel marker ★ è quello che ti restituisce il «salvataggio deliberato di martedì pomeriggio» — sopravvive al limite di 30 giorni di Dropbox, alla diluizione oraria di Time Machine, e al tuo stesso dimenticare quale data esatta fosse.
 
 ## Time Machine e Dropbox restano importanti
 

@@ -128,7 +128,7 @@ Alcune situazioni in cui aggiungere uno strato per-save è eccessivo:
 
 **Il tuo drive è connesso in modo affidabile.** Dock sempre attivo, condivisione NAS, drive di backup dedicato che non lascia mai la scrivania — File History raramente ha lacune in questa configurazione, e i suoi snapshot pianificati si allineeranno abbastanza vicino ai tuoi salvataggi.
 
-**La sincronizzazione cloud copre i tuoi file importanti.** Se tutto ciò che è importante vive in OneDrive / Dropbox / Google Drive e sei entro le loro finestre di retention, hai già una sorta di strato guidato dall'intenzione nella cronologia versioni cloud (anche se con cap — vedi [lo strapiombo della cronologia versioni](/it/post/cloud-version-history-cliff/)).
+**La sincronizzazione cloud copre i tuoi file importanti.** Se tutto ciò che è importante vive in OneDrive / Dropbox / Google Drive e sei entro le loro finestre di retention, hai già una sorta di strato guidato dall'intenzione nella cronologia versioni cloud (anche se con limite — vedi [lo strapiombo della cronologia versioni](/it/post/cloud-version-history-cliff/)).
 
 Se nessuna di queste si applica — utente portatile, drive a volte offline, lavoro importante oltre i 30 giorni — è allora che aggiungere uno strato guidato dall'intenzione ripaga.
 

@@ -49,24 +49,24 @@ Spazio, condivisione, canone mensile — è dove finisce ogni articolo «iCloud 
 |---|---|---|---|
 | **iCloud Drive** | ❌ Non esposta per file non Apple | Solo cartella Eliminati di recente | 30 giorni per eliminazioni; nessuna superficie cronologia versioni per PSD / Word / PDF |
 | **Dropbox** | ✅ Sì | Basata sul tempo | [30 giorni (Basic / Plus / Family) / 180 giorni (Pro / Business) / 365 giorni (Enterprise)](https://help.dropbox.com/files-folders/restore-delete/version-history-overview) |
-| **OneDrive** | ✅ Sì | Basata sul conteggio + finestra di eliminazione | [500 major version conservate](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits); Cestino 30 giorni personal / 93 giorni business |
+| **OneDrive** | ✅ Sì | Basata sul conteggio + finestra di eliminazione | [500 versione principale conservate](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits); Cestino 30 giorni personal / 93 giorni business |
 | **Google Drive** (file non nativi) | ✅ Sì | Tempo + conteggio (chi scatta prima vince) | [30 giorni O 100 versioni](https://support.google.com/drive/answer/2409045), a meno che tu non clicchi «Keep forever» |
 
 Guarda la tabella per dieci secondi. Non hanno la stessa forma. Non puoi confrontarle apple-to-apple anche volendo.
 
 ## Tre meccanismi di «retention» diversi, un solo punto cieco condiviso
 
-Le tre cloud che espongono la cronologia versioni usano ciascuna un cap fondamentalmente diverso.
+Le tre cloud che espongono la cronologia versioni usano ciascuna un limite fondamentalmente diverso.
 
 **Basata sul tempo (Dropbox)** — ti danno una finestra. 30 / 180 / 365 giorni. Fuori dalla finestra, la versione sparisce indipendentemente da quante ne hai. Un file toccato una volta due mesi fa è uguale a un file toccato cinquanta volte due mesi fa: spariscono entrambi.
 
-**Basata sul conteggio (OneDrive)** — ti danno un numero di slot. 500 major version conservate. Dopo 500, la più vecchia viene eliminata per fare spazio alla nuova. Potrebbero essere 500 versioni distribuite su due anni. Oppure 500 versioni fatte in una sola settimana, con il file aperto a gennaio già sparito a febbraio.
+**Basata sul conteggio (OneDrive)** — ti danno un numero di slot. 500 versione principale conservate. Dopo 500, la più vecchia viene eliminata per fare spazio alla nuova. Potrebbero essere 500 versioni distribuite su due anni. Oppure 500 versioni fatte in una sola settimana, con il file aperto a gennaio già sparito a febbraio.
 
-**Ibrida (Google Drive)** — vince il cap che scatta prima. 30 giorni O 100 versioni. Un PSD modificato pian piano potrebbe perdere la cronologia al giorno 30 con solo 15 versioni. Un documento modificato intensamente potrebbe perdere la cronologia alla versione 100 in due settimane. Google offre un override «Keep forever» per versione — ma devi ricordarti di marcarla al momento del salvataggio.
+**Ibrida (Google Drive)** — vince il limite che scatta prima. 30 giorni O 100 versioni. Un PSD modificato pian piano potrebbe perdere la cronologia al giorno 30 con solo 15 versioni. Un documento modificato intensamente potrebbe perdere la cronologia alla versione 100 in due settimane. Google offre un override «Keep forever» per versione — ma devi ricordarti di marcarla al momento del salvataggio.
 
 **La quarta, iCloud Drive** — problema completamente diverso: **nessuna superficie di cronologia versioni per file generici**. Pages, Numbers e Keynote hanno browser di versioni nativi (Apple eredita questo dall'architettura documenti macOS). Word, PSD, PDF, qualsiasi altra cosa dentro iCloud Drive: solo l'ultima versione sincronizza. Le versioni precedenti non sono conservate. Apple non ha mai pubblicato una politica di retention chiara per i tipi di file non Apple perché non c'è una politica da pubblicare.
 
-Il punto cieco condiviso dalle quattro: **ogni cloud ha un cap. La forma del cap differisce. Gli articoli di confronto non ti dicono nulla su quale forma si adatta al tuo lavoro.**
+Il punto cieco condiviso dalle quattro: **ogni cloud ha un limite. La forma del limite differisce. Gli articoli di confronto non ti dicono nulla su quale forma si adatta al tuo lavoro.**
 
 ## Perché gli articoli di confronto non coprono la retention?
 
@@ -82,18 +82,18 @@ La versione che ti serve non è prezzata nel confronto. La versione che ti serve
 
 ## Lo strato di cronologia versioni che non è una feature cloud
 
-Ecco la riformulazione: non cambi cloud per risolvere questo. La tua cloud va bene per la sincronizzazione. Il pezzo mancante è uno **strato separato** sopra di essa — cronologia versioni a livello di file, senza cap temporale, automatica a ogni salvataggio.
+Ecco la riformulazione: non cambi cloud per risolvere questo. La tua cloud va bene per la sincronizzazione. Il pezzo mancante è uno **strato separato** sopra di essa — cronologia versioni a livello di file, senza limite temporale, automatica a ogni salvataggio.
 
 Concretamente:
 
 - **Cloud (una qualsiasi delle 4)** gestisce sincronizzazione + copia offsite
-- **Strato di cronologia versioni (Keeply o simile)** gestisce ogni salvataggio, nessun cap di tempo, nessun cap di conteggio, nessuna decisione «Keep forever» al momento del salvataggio
+- **Strato di cronologia versioni (Keeply o simile)** gestisce ogni salvataggio, nessun limite di tempo, nessun limite di conteggio, nessuna decisione «Keep forever» al momento del salvataggio
 
 Non stai sostituendo Dropbox o iCloud. Stai aggiungendo uno strato che la cloud non era stata progettata per essere.
 
 [Keeply](https://keeply.work) si combina con iCloud Drive, Dropbox, OneDrive, Google Drive, NAS Synology e QNAP, cartelle Finder semplici — non migri, aggiungi uno strato sopra a ciò che già c'è.
 
-Keeply è l'implementazione di riferimento di questo strato: ogni salvataggio conservato in locale senza cap di tempo o conteggio, più un meccanismo di snapshot «Release» — marca una versione come «questa è quella che è andata al cliente» e quello snapshot sopravvive per sempre, anche dopo cinquanta salvataggi successivi. Recupero della versione di due mesi fa in circa due clic.
+Keeply è l'implementazione di riferimento di questo strato: ogni salvataggio conservato in locale senza limite di tempo o conteggio, più un meccanismo di snapshot «Release» — marca una versione come «questa è quella che è andata al cliente» e quello snapshot sopravvive per sempre, anche dopo cinquanta salvataggi successivi. Recupero della versione di due mesi fa in circa due clic.
 
 ```
 Keeply timeline — proposal.psd
@@ -104,7 +104,7 @@ Keeply timeline — proposal.psd
 ● 2026-02-14 11:30
 ```
 
-La marca Release sulla versione di 65 giorni fa significa che resta accessibile dopo il cap di 500 versioni di OneDrive, dopo la finestra di 30 giorni di Dropbox, dopo il conteggio di 100 versioni di Google Drive — perché Keeply non applica cap come fanno le cloud.
+La marca Release sulla versione di 65 giorni fa significa che resta accessibile dopo il limite di 500 versioni di OneDrive, dopo la finestra di 30 giorni di Dropbox, dopo il conteggio di 100 versioni di Google Drive — perché Keeply non applica limite come fanno le cloud.
 
 ## Quando questo articolo non basta
 

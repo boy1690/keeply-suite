@@ -5,6 +5,7 @@ voice_version: v2-2026-05-13
 date: 2026-05-13T10:00:00+08:00
 draft: false
 slug: "deleted-files-recovery-list"
+retrofit_status: v1-legacy
 primary_keyword: "誤刪檔案 找回"
 locale: zh-TW
 categories: [檔案管理]
@@ -122,7 +123,7 @@ Keeply — 最近刪除
 
 [檔案救援軟體不一定救得到：4 種情境](/zh-tw/post/restore-without-panic/) — 本文的 forensics 角度對照版：當「清單救援」太遲時，這篇講為什麼替代方案也常常失敗。
 
-[找回被覆蓋檔案的極限：AutoRecover 救不到的地方](/zh-tw/post/recover-overwritten-file/) — 不同救援場景（覆蓋而非刪除），同一主題：工具是依「為什麼建造」分類的。
+[找回被覆蓋檔案的極限：自動回復 救不到的地方](/zh-tw/post/recover-overwritten-file/) — 不同救援場景（覆蓋而非刪除），同一主題：工具是依「為什麼建造」分類的。
 
 ---
 

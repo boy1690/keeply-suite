@@ -61,7 +61,7 @@ Tre forme diverse. Tre lavori diversi. Ciò che condividono è la parola «backu
 
 **Asse 1 — Livello disco/sistema.** Quando il tuo drive muore o Windows si rifiuta di avviarsi, ti serve un'immagine di sistema — l'intera macchina, ripristinabile a uno stato buono noto. Backup di Windows fa questo. Cronologia file no. OneDrive no.
 
-**Asse 2 — Livello cartella nel tempo.** Quando una cartella esiste e vuoi una copia di essa di prima questo mese, ti servono snapshot di cartella pianificati. Cronologia file fa questo. Backup di Windows è troppo grossolano (immagine intera, non versioni di cartella). OneDrive lo fa per i file sincronizzati su OneDrive, con cap di retention del piano.
+**Asse 2 — Livello cartella nel tempo.** Quando una cartella esiste e vuoi una copia di essa di prima questo mese, ti servono snapshot di cartella pianificati. Cronologia file fa questo. Backup di Windows è troppo grossolano (immagine intera, non versioni di cartella). OneDrive lo fa per i file sincronizzati su OneDrive, con limite di retention del piano.
 
 **Asse 3 — Eventi di salvataggio per file.** Quando vuoi lo specifico salvataggio che hai fatto ieri alle 14:47 — quello prima di rompere la formula — ti serve versioning per salvataggio. Né Cronologia file, né Backup di Windows, né OneDrive lo fanno pulitamente. Cronologia file ti dà lo snapshot pianificato più vicino (che potrebbe essere a ore di distanza, o giorni, se il drive era scollegato). La cronologia versioni di OneDrive può farlo solo per file sincronizzati cloud e solo entro la finestra di retention. Non c'è uno strato per-save generale in Windows.
 
@@ -94,9 +94,9 @@ Guarda di nuovo la tabella. L'angolo in basso a destra — «la versione specifi
 
 Cronologia file ti dà uno snapshot pianificato, non il tuo salvataggio. Backup di Windows ti dà il disco, non un file. OneDrive ti dà la cronologia cloud, ma solo per file sincronizzati cloud e solo entro la finestra di retention.
 
-Uno strato di cronologia versioni per-save guidato dall'intenzione — ogni Cmd+S diventa un punto recuperabile, localmente, senza cap temporale — è l'asse mancante.
+Uno strato di cronologia versioni per-save guidato dall'intenzione — ogni Cmd+S diventa un punto recuperabile, localmente, senza limite temporale — è l'asse mancante.
 
-[Keeply](https://keeply.work) è un'implementazione. Osserva le cartelle che gli punti e cattura ogni salvataggio come la sua versione, senza pianificazione e senza cap di retention. Tira fuori la bozza di ieri alle 14:47, non lo snapshot pianificato più vicino.
+[Keeply](https://keeply.work) è un'implementazione. Osserva le cartelle che gli punti e cattura ogni salvataggio come la sua versione, senza pianificazione e senza limite di retention. Tira fuori la bozza di ieri alle 14:47, non lo snapshot pianificato più vicino.
 
 Questa non è una sostituzione per Cronologia file o Backup di Windows — quelli coprono ancora i loro assi. Keeply aggiunge l'asse che Windows non include.
 

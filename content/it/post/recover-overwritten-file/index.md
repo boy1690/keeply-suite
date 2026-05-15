@@ -30,47 +30,47 @@ faq_schema:
     a: 不能取代。AutoRecover 處理當機中斷救援，Keeply 處理正常儲存後的版本保留，兩者是互補關係。且 Keeply 不能溯及既往，必須在覆蓋發生前就已啟動。
 ---
 
-# 【2026 Gestione file】Il limite del recupero file sovrascritto: dove AutoRecover non arriva
+# 【2026 Gestione file】Il limite del recupero file sovrascritto: dove Salvataggio automatico non arriva
 
-> AutoRecover è per il salvataggio da crash. Quello che serve dopo un sovrascrittura è la prevenzione a monte.
+> Salvataggio automatico è per il salvataggio da crash. Quello che serve dopo un sovrascrittura è la prevenzione a monte.
 
 Venerdì sera, 19:30. Stai lavorando alla chiusura mensile in Excel e accidentalmente salvi sopra il foglio precedente.
 
-Ctrl+Z non funziona più (hai già chiuso il file). Anche il file AutoRecover è scomparso.
+Ctrl+Z non funziona più (hai già chiuso il file). Anche il file Salvataggio automatico è scomparso.
 
 Hai fino a lunedì mattina per recuperarlo. Ma farai in tempo?
 
 ## Punti chiave
 
-La maggior parte delle persone che cercano "**recupero file sovrascritto**" vogliono salvataggio post-evento. Ma Microsoft AutoRecover è per il recupero da crash, e la finestra di successo del software di recupero dati è di pochi minuti dopo la sovrascrittura. Nessuno di questi arriva allo scenario "sovrascritto dopo un salvataggio normale". **Il salvataggio post-evento non è la risposta. La prevenzione a monte sì.** Con una cronologia versioni always-on a livello strumentale, una sovrascrittura smette di essere un'azione distruttiva.
+La maggior parte delle persone che cercano "**recupero file sovrascritto**" vogliono salvataggio post-evento. Ma Microsoft Salvataggio automatico è per il recupero da crash, e la finestra di successo del software di recupero dati è di pochi minuti dopo la sovrascrittura. Nessuno di questi arriva allo scenario "sovrascritto dopo un salvataggio normale". **Il salvataggio post-evento non è la risposta. La prevenzione a monte sì.** Con una cronologia versioni always-on a livello strumentale, una sovrascrittura smette di essere un'azione distruttiva.
 
 ## Indice
 
-1. A cosa serve davvero AutoRecover?
-2. AutoRecover / Versioni precedenti / software di recupero: cosa può salvare ognuno?
+1. A cosa serve davvero Salvataggio automatico?
+2. Salvataggio automatico / Versioni precedenti / software di recupero: cosa può salvare ognuno?
 3. Perché "dopo il salvataggio sovrascritto" è già troppo tardi
 4. Oltre il salvataggio post-evento: l'opzione cronologia versioni always-on
 5. Domande frequenti
 
 ---
 
-## A cosa serve davvero AutoRecover?
+## A cosa serve davvero Salvataggio automatico?
 
 Microsoft Office ha tre meccanismi di "**recupero versione**" integrati:
 
-- **AutoRecover**: salva il contenuto non salvato durante una crash. Intervallo di salvataggio automatico predefinito di 10 minuti. **Cancellato quando il file si chiude normalmente.**
+- **Salvataggio automatico**: salva il contenuto non salvato durante una crash. Intervallo di salvataggio automatico predefinito di 10 minuti. **Cancellato quando il file si chiude normalmente.**
 - **Versioni precedenti** (Windows): torna a snapshot passati tramite copie shadow. Richiede configurazione preventiva.
 - **Cronologia versioni OneDrive**: snapshot di ogni salvataggio. La [documentazione Microsoft](https://learn.microsoft.com/it-it/sharepoint/document-library-version-history-limits) nota 500 versioni principali di default (account Microsoft personali: 25).
 
 L'intento progettuale è chiaro: questi tre sono per "**recupero da crash**" o "**incidenti di salvataggio recenti**". Non per lo scenario "**mi rendo conto di averlo sovrascritto dopo aver chiuso il file**".
 
-## AutoRecover / Versioni precedenti / software di recupero: cosa può salvare ognuno?
+## Salvataggio automatico / Versioni precedenti / software di recupero: cosa può salvare ognuno?
 
 Per vedere il limite di ogni meccanismo, confrontali fianco a fianco:
 
 | Meccanismo | Ti salva in… | Non ti salva in… | Note |
 | --- | --- | --- | --- |
-| AutoRecover | Crash a metà documento | Sovrascrittura dopo chiusura normale | Cancellato alla chiusura |
+| Salvataggio automatico | Crash a metà documento | Sovrascrittura dopo chiusura normale | Cancellato alla chiusura |
 | OneDrive [cronologia versioni](https://learn.microsoft.com/it-it/sharepoint/document-library-version-history-limits) | Entro le 500 versioni precedenti (25 sugli account personali) | Oltre 500, file solo locali | Salvataggio cloud richiesto |
 | Versioni precedenti Windows | Se esiste copia shadow | Senza setup, ambienti SSD | Setup necessario |
 | Software di recupero dati | Subito dopo sovrascrittura, settori intatti | Ore dopo, dopo SSD TRIM | Tasso successo dipende da ambiente |
@@ -86,9 +86,9 @@ Ecco una distinzione che nessuno nomina chiaramente: **strato di archiviazione**
 
 Questi meccanismi vivono allo strato di **archiviazione**. L'obiettivo progettuale è "se l'ultima scrittura fallisce, fai rollback". Quindi la retention è breve. I punti di riferimento "500 versioni" o "30 giorni" si basano su "quanto spesso l'utente medio guarda indietro entro un mese". Oltre i tre mesi non è nello scopo; il pruning è intenzionale.
 
-Sam è contabile. Venerdì sera alle 19:30, salva sopra il report di chiusura mensile in Excel per errore. Va a cercare il file AutoRecover ma non lo trova. Prova il software di recupero dati; restituisce "il settore è già stato sovrascritto". Sessanta ore fino a lunedì mattina.
+Sam è contabile. Venerdì sera alle 19:30, salva sopra il report di chiusura mensile in Excel per errore. Va a cercare il file Salvataggio automatico ma non lo trova. Prova il software di recupero dati; restituisce "il settore è già stato sovrascritto". Sessanta ore fino a lunedì mattina.
 
-Ecco il problema vero. Sam se ne rende conto solo dopo. Se avesse sovrascritto prima nel pomeriggio, l'intervallo di 30 minuti di AutoRecover avrebbe potuto catturarlo. **Ma quando se n'è accorto, era già troppo tardi. Il salvataggio post-evento dipende dal notare in tempo. La prevenzione a monte non dipende dal notare per niente. Ogni salvataggio preserva già una versione.**
+Ecco il problema vero. Sam se ne rende conto solo dopo. Se avesse sovrascritto prima nel pomeriggio, l'intervallo di 30 minuti di Salvataggio automatico avrebbe potuto catturarlo. **Ma quando se n'è accorto, era già troppo tardi. Il salvataggio post-evento dipende dal notare in tempo. La prevenzione a monte non dipende dal notare per niente. Ogni salvataggio preserva già una versione.**
 
 ## Oltre il salvataggio post-evento: l'opzione cronologia versioni always-on
 
@@ -100,15 +100,15 @@ Ogni salvataggio = una versione preservata. Nessun pruning. Indipendente dalla r
 
 Lisa usa Keeply da sei mesi. Lunedì mattina, nota che il report di chiusura mensile è stato sovrascritto con il foglio precedente. Apre Keeply. Il foglio delle 19:00 di venerdì, il foglio delle 19:15, il foglio sovrascritto delle 19:30, tutti conservati come versioni. Clicca "vai al foglio delle 19:00" e tre secondi dopo Excel lo apre.
 
-Detto questo, Keeply non sostituisce AutoRecover. Il salvataggio da crash a metà documento è ancora la prima linea di AutoRecover. Keeply non può nemmeno riscrivere la storia retroattivamente: deve essere in esecuzione al momento della sovrascrittura. Per le sovrascritture prima di installare Keeply, questo articolo non aiuta. Per ogni salvataggio da oggi in poi, sì.
+Detto questo, Keeply non sostituisce Salvataggio automatico. Il salvataggio da crash a metà documento è ancora la prima linea di Salvataggio automatico. Keeply non può nemmeno riscrivere la storia retroattivamente: deve essere in esecuzione al momento della sovrascrittura. Per le sovrascritture prima di installare Keeply, questo articolo non aiuta. Per ogni salvataggio da oggi in poi, sì.
 
 Ecco la parte che dovrebbe farti respirare.
 
 ## Domande frequenti
 
-**Q1: AutoRecover è attivo per impostazione predefinita?**
+**Q1: Salvataggio automatico è attivo per impostazione predefinita?**
 
-Sì. Percorso: "File → Opzioni → Salva → Salva informazioni di salvataggio automatico ogni 10 minuti". Ma AutoRecover si cancella alla chiusura normale del file. Non è retention a lungo termine.
+Sì. Percorso: "File → Opzioni → Salva → Salva informazioni di salvataggio automatico ogni 10 minuti". Ma Salvataggio automatico si cancella alla chiusura normale del file. Non è retention a lungo termine.
 
 **Q2: Quanto è efficace il software di recupero dati?**
 
@@ -122,9 +122,9 @@ Non esattamente. OneDrive Personal predefinisce circa 500 versioni. OneDrive for
 
 Time Machine di Mac è backup a livello di sistema. Le sovrascritture che avvengono tra gli intervalli di snapshot (predefinito 1 ora) non vengono catturate. Non è nemmeno gestione versioni per file. Recuperare un punto specifico di un singolo file è macchinoso.
 
-**Q5: Keeply è un sostituto di AutoRecover?**
+**Q5: Keeply è un sostituto di Salvataggio automatico?**
 
-No. AutoRecover gestisce il salvataggio da crash; Keeply gestisce la conservazione versioni dopo un salvataggio normale. I due sono complementari. Keeply deve essere in esecuzione preventivamente (nessun recupero retroattivo).
+No. Salvataggio automatico gestisce il salvataggio da crash; Keeply gestisce la conservazione versioni dopo un salvataggio normale. I due sono complementari. Keeply deve essere in esecuzione preventivamente (nessun recupero retroattivo).
 
 ---
 

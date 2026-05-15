@@ -122,7 +122,7 @@ Keeply — 最近删除
 
 [文件恢复软体不一定救得到：4 种情境](/zh-cn/post/restore-without-panic/) — 本文的 forensics 角度对照版：当「清单恢复」太迟时，这篇讲为什么替代方案也常常失败。
 
-[找回被覆盖文件的极限：AutoRecover 救不到的地方](/zh-cn/post/recover-overwritten-file/) — 不同恢复场景（覆盖而非删除），同一主题：工具是按「为什么建造」分类的。
+[找回被覆盖文件的极限：自动恢复 救不到的地方](/zh-cn/post/recover-overwritten-file/) — 不同恢复场景（覆盖而非删除），同一主题：工具是按「为什么建造」分类的。
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "【2026 Gestione file】La cronologia versioni di OneDrive non è illimitata — Limite di 500 + finestra di 30 giorni nei documenti Microsoft"
-description: "Microsoft Learn lo dichiara chiaramente: OneDrive conserva fino a 500 versioni principali per file. Il Cestino mantiene gli elementi eliminati 30 giorni (personale) / 93 giorni (lavoro). Il Salvataggio automatico è un buffer separato. Ecco dove arriva il limite e come Keeply Release freeze colma il divario."
+description: "Microsoft Learn lo dichiara chiaramente: OneDrive conserva fino a 500 versioni principali per file. Il Cestino mantiene gli elementi eliminati 30 giorni (personale) / 93 giorni (lavoro). Il Salvataggio automatico è un buffer separato. Ecco dove arriva il limite e come Keeply Blocco Release colma il divario."
 voice_version: v3-2026-05-15
 date: 2026-05-15T14:29:00+08:00
 draft: false
@@ -16,7 +16,7 @@ template: T1
 image: cover.svg
 og_image: cover.png
 cta_topic: cap-mechanism
-image_alt_data: "Diagramma a 3 meccanismi: cronologia versioni OneDrive 500 cap + Cestino 30 giorni + Salvataggio automatico, citazione URL ufficiale Microsoft Learn"
+image_alt_data: "Diagramma a 3 meccanismi: cronologia versioni OneDrive 500 limite + Cestino 30 giorni + Salvataggio automatico, citazione URL ufficiale Microsoft Learn"
 faq_schema:
   - q: Quante versioni conserva OneDrive?
     a: "Secondo Microsoft Learn, OneDrive conserva fino a 500 versioni principali per file. Dopo il 501° salvataggio, la versione più vecchia viene eliminata automaticamente, senza notifica. La conservazione del Cestino è separata (30 giorni personale, 93 giorni lavoro o scuola) e si applica solo ai file eliminati, non a quelli modificati."
@@ -27,9 +27,9 @@ faq_schema:
   - q: Perché non riesco a trovare il mio file OneDrive di 6 mesi fa?
     a: "Probabilmente due motivi. (a) Hai superato il limite di 500 versioni e Microsoft ha eliminato automaticamente la più vecchia. (b) Hai cercato nel Cestino invece che nella cronologia versioni, e la finestra di 30 giorni si è già chiusa. Gli utenti pesanti (3+ salvataggi al giorno) raggiungono il limite in 7-8 mesi."
   - q: Cosa succede dopo aver superato 500 versioni?
-    a: "OneDrive elimina silenziosamente la versione più vecchia per fare spazio alla nuova. Nessun avviso, nessuna migrazione all'archivio, nessuna opzione per mantenere le versioni più vecchie. Puoi appuntare manualmente una versione ma solo all'interno del pool di 500. Strumenti con meccanismo Release-freeze e nessun tetto di versioni (come Keeply) colmano questo divario."
+    a: "OneDrive elimina silenziosamente la versione più vecchia per fare spazio alla nuova. Nessun avviso, nessuna migrazione all'archivio, nessuna opzione per mantenere le versioni più vecchie. Puoi appuntare manualmente una versione ma solo all'interno del pool di 500. Strumenti con meccanismo Blocco Release e nessun tetto di versioni (come Keeply) colmano questo divario."
   - q: Keeply è in conflitto con OneDrive?
-    a: "No. Keeply funziona insieme a OneDrive: osserva la tua cartella di lavoro e mantiene la propria timeline, indipendentemente dal limite di OneDrive. Mantieni OneDrive per la sincronizzazione collaborativa e Keeply per la cronologia versioni illimitata per file con note e Release freeze."
+    a: "No. Keeply funziona insieme a OneDrive: osserva la tua cartella di lavoro e mantiene la propria timeline, indipendentemente dal limite di OneDrive. Mantieni OneDrive per la sincronizzazione collaborativa e Keeply per la cronologia versioni illimitata per file con note e Blocco Release."
 ---
 
 # 【2026 Gestione file】La cronologia versioni di OneDrive non è illimitata — Limite di 500 + finestra di 30 giorni nei documenti Microsoft
@@ -38,16 +38,16 @@ faq_schema:
 
 "OneDrive ti ha salvato 200 volte. Poi al 501°, ha silenziosamente eliminato la tua versione più vecchia — senza dirtelo."
 
-Non è un bug. È il limite di 500 versioni principali che [Microsoft Learn](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits) ha dichiarato fin dall'inizio. Ma il 90% dei tutorial sulla cronologia versioni di OneDrive insegna **come usarla**, non **dove si rompe**. Questo articolo colma questo divario — tre meccanismi di OneDrive (cronologia versioni 500 cap / Cestino finestra 30 giorni / Salvataggio automatico) spesso scambiati per uno, poi come [Keeply](https://keeply.work) cattura gli scenari post-cap.
+Non è un bug. È il limite di 500 versioni principali che [Microsoft Learn](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits) ha dichiarato fin dall'inizio. Ma il 90% dei tutorial sulla cronologia versioni di OneDrive insegna **come usarla**, non **dove si rompe**. Questo articolo colma questo divario — tre meccanismi di OneDrive (cronologia versioni 500 limite / Cestino finestra 30 giorni / Salvataggio automatico) spesso scambiati per uno, poi come [Keeply](https://keeply.work) cattura gli scenari post-limite.
 
 ## Contenuti
 
 1. [Come Keeply impedisce alla cronologia OneDrive di scomparire al 501° salvataggio](#keeply-timeline)
 2. [I tre meccanismi di OneDrive: 500 / 30 giorni / Salvataggio automatico — cose diverse](#three-mechanisms)
-3. [Il limite di 500 versioni: il numero ufficiale di Microsoft e quando lo raggiungi](#500-cap)
+3. [Il limite di 500 versioni: il numero ufficiale di Microsoft e quando lo raggiungi](#500-limite)
 4. [Cestino 30 / 93 giorni: una finestra temporale di eliminazione, non cronologia versioni](#recycle-bin)
 5. [Salvataggio automatico: buffer di crash di Office, completamente separato dalla cronologia versioni](#autorecover)
-6. [Keeply colma il divario: Release freeze + nota per file dopo il limite](#keeply-fills)
+6. [Keeply colma il divario: Blocco Release + nota per file dopo il limite](#keeply-fills)
 7. [3 scenari in cui non hai bisogno di Keeply con OneDrive](#when-not-needed)
 8. [FAQ](#faq)
 
@@ -86,7 +86,7 @@ Quando OneDrive dice "cronologia versioni", in realtà sono tre cose diverse fus
 
 Tre cose diverse — confuse come una sola, cercherai nel livello sbagliato. "Non riesco a trovare il mio file di 6 mesi fa" potrebbe essere il limite di 500 della Cronologia versioni che entra in gioco, la finestra di 30 giorni del Cestino scaduta, o il Salvataggio automatico sovrascritto da tempo. Problemi diversi, soluzioni diverse.
 
-## Il limite di 500 versioni: il numero ufficiale di Microsoft {#500-cap}
+## Il limite di 500 versioni: il numero ufficiale di Microsoft {#500 limite}
 
 [Microsoft Learn](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits) lo afferma chiaramente: le librerie documenti SharePoint / OneDrive conservano fino a **500 versioni principali** per file (con il controllo versione principale/secondaria abilitato, fino a 511 versioni secondarie in più).
 
@@ -131,9 +131,9 @@ Il `proposal.docx` di Tina ha raggiunto il limite di 500. Il cliente improvvisam
 
 In [Keeply](https://keeply.work), tre cose atterrano in un unico strumento:
 
-- **Release freeze**: il 14 febbraio quando il cliente ha firmato, Tina ha premuto "Salva versione" e l'ha taggata come "Client signed v2.3" — quella versione diventa uno snapshot separato, mai sovrascritto dai prossimi 500 salvataggi, conservato per sempre. Il limite di 500 di OneDrive non si applica.
+- **Blocco Release**: il 14 febbraio quando il cliente ha firmato, Tina ha premuto "Salva versione" e l'ha taggata come "Client signed v2.3" — quella versione diventa uno snapshot separato, mai sovrascritto dai prossimi 500 salvataggi, conservato per sempre. Il limite di 500 di OneDrive non si applica.
 - **Nota per file**: ogni versione può portare una nota di una riga. Tre mesi dopo, Tina scorre la timeline e vede "CFO terza revisione", "Client signed", "Preparazione CdA" — nessun bisogno di scavare in 12 file `_FINAL` cercando di indovinare quale è quale.
-- **Portabilità cross-tool**: Keeply non dipende da OneDrive. Passa a Dropbox / NAS / un nuovo laptop — la timeline vive ancora localmente + nella propria posizione di backup di Keeply. Nessun limite di vendor cloud ti blocca.
+- **Portabilità tra strumenti**: Keeply non dipende da OneDrive. Passa a Dropbox / NAS / un nuovo laptop — la timeline vive ancora localmente + nella propria posizione di backup di Keeply. Nessun limite di vendor cloud ti blocca.
 
 OneDrive continua a fare ciò in cui è forte (sincronizzazione collaborativa). Keeply ti dà cronologia versioni illimitata per file.
 
@@ -167,11 +167,11 @@ Due possibilità: (a) superato il limite di 500, eliminato automaticamente; (b) 
 
 **Q5: Cosa succede dopo aver superato 500 versioni?**
 
-OneDrive elimina silenziosamente la più vecchia. Nessun avviso. Per risolvere, serve uno strumento senza limite — [Keeply](https://keeply.work) Release freeze per esempio.
+OneDrive elimina silenziosamente la più vecchia. Nessun avviso. Per risolvere, serve uno strumento senza limite — [Keeply](https://keeply.work) Blocco Release per esempio.
 
 **Q6: Keeply è in conflitto con OneDrive?**
 
-No. Funziona insieme. OneDrive per sincronizzazione collaborativa, Keeply per cronologia versioni illimitata per file + note + Release freeze.
+No. Funziona insieme. OneDrive per sincronizzazione collaborativa, Keeply per cronologia versioni illimitata per file + note + Blocco Release.
 
 ## Vedi anche
 

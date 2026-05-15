@@ -45,28 +45,28 @@ faq_schema:
 
 容量、分享、月费——这是每篇「iCloud vs Dropbox vs OneDrive vs Google Drive」比较文的落点。没人把 retention 规则并排放出来。我们放这里:
 
-| 云端 | 通用档版本历史 | Retention 形状 | 实际 cap |
+| 云端 | 通用档版本历史 | Retention 形状 | 实际 上限 |
 |---|---|---|---|
 | **iCloud Drive** | ❌ 对非 Apple 档不暴露 | 只有「最近删除」文件夹 | 删除恢复 30 天;PSD / Word / PDF 没版本历史界面 |
 | **Dropbox** | ✅ 有 | 时间制 | [30 天(Basic / Plus / Family)/ 180 天(Pro / Business)/ 365 天(Enterprise)](https://help.dropbox.com/files-folders/restore-delete/version-history-overview) |
-| **OneDrive** | ✅ 有 | 计数制 + 删除窗口 | [保留 500 major versions](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits);回收站 personal 30 天 / business 93 天 |
+| **OneDrive** | ✅ 有 | 计数制 + 删除窗口 | [保留 500 主要版本](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits);回收站 personal 30 天 / business 93 天 |
 | **Google Drive**(非原生档) | ✅ 有 | 时间 + 计数(先触发者赢) | [30 天 OR 100 versions](https://support.google.com/drive/answer/2409045),除非你按「Keep forever」 |
 
 盯着这张表看十秒。4 家形状根本不一样。你想 apple-to-apple 比都比不了。
 
 ## 3 种不同的「retention」机制,1 个共通盲点
 
-3 家有 expose 版本历史的云端各自用完全不同的 cap。
+3 家有 expose 版本历史的云端各自用完全不同的 上限。
 
 **时间制(Dropbox)**——你拿到一个窗口。30 / 180 / 365 天。窗口外的版本不管有几个都消失。两个月前动一次的文件,跟两个月前动五十次的文件,下场一样:都没了。
 
-**计数制(OneDrive)**——你拿到的是 slot 数。保留 500 major versions。超过 500,最旧的版本被删腾空间给新的。可能是两年累积 500 个版本,也可能是一周内就改了 500 次,1 月看过的那版 2 月就消失。
+**计数制(OneDrive)**——你拿到的是 slot 数。保留 500 主要版本。超过 500,最旧的版本被删腾空间给新的。可能是两年累积 500 个版本,也可能是一周内就改了 500 次,1 月看过的那版 2 月就消失。
 
 **混合制(Google Drive)**——先触发者赢。30 天 OR 100 versions。闲置的 PSD 可能在 30 天时只有 15 个版本就消失历史;密集改的文档可能两周内就到 100 版本上限。Google 提供「Keep forever」per-version override——但你要在保存当下就记得按。
 
 **第四家 iCloud Drive**——是完全不同的问题:**通用档没有版本历史界面**。Pages、Numbers、Keynote 有原生版本浏览器(Apple 从 macOS 文档架构继承的)。Word、PSD、PDF,iCloud Drive 里的其他任何东西:只同步最新版本,旧版本不保留。Apple 从没对非 Apple 档类型公布过明确的 retention 政策,因为根本没有政策可公布。
 
-4 家共通的盲点:**每家都有 cap。Cap 形状不一样。比较文从没告诉你哪个形状符合你的工作。**
+4 家共通的盲点:**每家都有 上限。Cap 形状不一样。比较文从没告诉你哪个形状符合你的工作。**
 
 ## 为什么比较文不写 retention?
 
@@ -82,18 +82,18 @@ Retention 是一棵条件树:方案层级、文件类型、版本数、流逝时
 
 ## 不在云端 feature 内的那层版本历史
 
-Reframe 一下:你不换云端就能解这个问题。你的云端做同步没问题。少的那一块是**另一层**——文件层级的版本历史,无时间 cap、每次保存自动触发。
+Reframe 一下:你不换云端就能解这个问题。你的云端做同步没问题。少的那一块是**另一层**——文件层级的版本历史,无时间 上限、每次保存自动触发。
 
 具体说:
 
 - **云端(4 家任一)**负责同步 + 异地副本
-- **版本历史层(Keeply 或同类)**负责每次保存,无时间 cap、无计数 cap、不需要在保存当下决定要不要「Keep forever」
+- **版本历史层(Keeply 或同类)**负责每次保存,无时间 上限、无计数 上限、不需要在保存当下决定要不要「Keep forever」
 
 你不是要取代 Dropbox 或 iCloud。你是叠一层原本云端没设计成的东西上去。
 
 [Keeply](https://keeply.work) 跟 iCloud Drive、Dropbox、OneDrive、Google Drive、Synology / QNAP NAS、纯 Finder 文件夹都能搭配——你不换系统,是加一层在原本系统上面。
 
-Keeply 是这层的 reference 实现:每次保存本地保留,无时间 cap、无计数 cap,加上「Release」冻结机制——把某个版本标成「这版送给客户」,那个 snapshot 永远存在,后续保存五十次也盖不掉。两个月前的版本,回溯约 2 个点击。
+Keeply 是这层的 reference 实现:每次保存本地保留,无时间 上限、无计数 上限,加上「Release」冻结机制——把某个版本标成「这版送给客户」,那个 snapshot 永远存在,后续保存五十次也盖不掉。两个月前的版本,回溯约 2 个点击。
 
 ```
 Keeply 时间轴 — proposal.psd
@@ -104,7 +104,7 @@ Keeply 时间轴 — proposal.psd
 ● 2026-02-14 11:30
 ```
 
-65 天前那版上面的 Release 标记表示它过了 OneDrive 500 版本 cap、过了 Dropbox 30 天窗口、过了 Google Drive 100 版本计数,还是能拉回来——因为 Keeply 不像云端那样套 cap。
+65 天前那版上面的 Release 标记表示它过了 OneDrive 500 版本 上限、过了 Dropbox 30 天窗口、过了 Google Drive 100 版本计数,还是能拉回来——因为 Keeply 不像云端那样套 上限。
 
 ## 这篇文章不够用的场景
 

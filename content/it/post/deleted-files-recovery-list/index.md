@@ -122,7 +122,7 @@ L'articolo pilastro [guida completa alla gestione versioni file](/it/post/file-v
 
 [Recuperare file cancellati: 4 casi in cui il software di recupero fallisce](/it/post/restore-without-panic/) — la controparte angolo-forense di questo articolo: quando il recupero per lista è troppo tardi, ecco perché l'alternativa spesso fallisce.
 
-[Il limite del recupero file sovrascritto: dove AutoRecover non arriva](/it/post/recover-overwritten-file/) — uno scenario di recupero diverso (sovrascrittura, non eliminazione), stesso tema: gli strumenti sono classificati per ciò per cui sono stati costruiti.
+[Il limite del recupero file sovrascritto: dove Salvataggio automatico non arriva](/it/post/recover-overwritten-file/) — uno scenario di recupero diverso (sovrascrittura, non eliminazione), stesso tema: gli strumenti sono classificati per ciò per cui sono stati costruiti.
 
 ---
 

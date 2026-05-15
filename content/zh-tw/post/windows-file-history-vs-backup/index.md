@@ -5,6 +5,7 @@ voice_version: v6-2026-05-14
 date: 2026-05-13T08:00:00+08:00
 draft: false
 slug: "windows-file-history-vs-backup"
+retrofit_status: v1-legacy
 primary_keyword: "Windows 備份 差別"
 locale: zh-TW
 categories: [檔案管理]
