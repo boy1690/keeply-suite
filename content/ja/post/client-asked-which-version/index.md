@@ -5,6 +5,7 @@ voice_version: v2-2026-05-11
 date: 2026-05-02T15:00:00+08:00
 draft: false
 slug: "client-asked-which-version"
+retrofit_status: v1-legacy
 primary_keyword: "Word 版数履歴"
 locale: ja
 categories: [ユースケース]

@@ -193,6 +193,21 @@ TIMELINES = {
         ("Diagram second revision", [], "yesterday"),
         ("First draft — from scratch", ["Draft"], "last week"),
     ],
+    ("en", "3-2-1-backup-rule"): [
+        ("Auto-save — last week's working revision", [], "last week"),
+        ("Auto-save", [], "1 month ago"),
+        ("Client-approved v2.3 — signed contract version", ["Release"], "3 months ago"),
+        ("Auto-save — pre-client review", [], "3 months ago"),
+        ("First draft to client", ["Draft v1"], "4 months ago"),
+    ],
+    ("en", "too-many-file-versions"): [
+        ("Auto-save — last revision", [], "1 hour ago"),
+        ("Client-approved v2.3 — signed contract version", ["Release"], "Tue PM"),
+        ("Auto-save — pre-client-call", [], "Tue AM"),
+        ("Boss third round edits", ["Boss"], "Mon"),
+        ("Client first feedback round", ["Client"], "last Thu"),
+        ("First draft", ["Draft"], "2 weeks ago"),
+    ],
 }
 
 

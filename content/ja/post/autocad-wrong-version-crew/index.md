@@ -2,6 +2,7 @@
 title: "【2026 ファイル管理】AutoCAD 図面バージョン管理 4 ステップ：なぜ現場はいつも先週の旧図を開くのか"
 description: "朝 9 時 40 分、事務所に戻ると所長が先週木曜の改訂版を広げる。グレーチング枠の規格はとっくに変わっていた。現場代理人向けの図面バージョン管理 4 ステップ実戦：職人の習慣を変えず、作業フローも変えない。"
 slug: "autocad-wrong-version-crew"
+retrofit_status: v1-legacy
 date: 2026-04-24T08:50:00+08:00
 draft: false
 locale: ja

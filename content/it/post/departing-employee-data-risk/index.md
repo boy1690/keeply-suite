@@ -2,6 +2,7 @@
 title: "【2026 Gestione file】Il dipendente in uscita ti ha cancellato i file? Hai confuso «sincronizzazione» con «backup»"
 description: "Sabato sera, Tina svuota la cartella brand-book. Dropbox sincronizza fedelmente il disastro. Perché «sync non è backup» è la vera lezione — non gli avvocati, non il DLP."
 slug: departing-employee-data-risk
+retrofit_status: v1-legacy
 image: cover.svg
 og_image: cover.png
 date: 2026-05-09T08:00:00+08:00

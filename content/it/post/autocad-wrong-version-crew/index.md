@@ -2,6 +2,7 @@
 title: "【2026 Gestione file】Controllo versioni disegni AutoCAD in 4 passi: ferma la squadra dal disegno della scorsa settimana"
 description: "Sono le 9:40, passi dall'ufficio e il PM tira fuori la revisione di giovedì scorso. La specifica del telaio è cambiata, sei stato in cantiere ogni giorno, nessuno te l'ha detto. Guida del capocantiere al controllo versioni dei disegni in 4 passi: nessun nuovo strumento per la squadra, nessuna rivoluzione del flusso di lavoro."
 slug: "autocad-wrong-version-crew"
+retrofit_status: v1-legacy
 date: 2026-04-24T08:50:00+08:00
 draft: false
 locale: it

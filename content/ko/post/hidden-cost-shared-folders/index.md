@@ -2,6 +2,7 @@
 title: "【2026 파일 관리】공유 폴더의 파일 버전 관리: _v8 이 팀의 연 83 시간 방어 세금을 훔치게 두지 마라"
 description: "목요일 오후 5 시 30 분, 도면은 다 그렸는데, 손은 파일명 위에서 멈춰 있다. 공유 폴더 + 수동 명명 v1/v7/FINAL 의 대가: 연 83 시간 방어 세금. 왜 명명 규칙은 반드시 무너지는가, 그리고 자동 버전 관리가 어떻게 그 자리를 잇는가."
 slug: "hidden-cost-shared-folders"
+retrofit_status: v1-legacy
 date: 2026-04-23T08:50:00+08:00
 draft: false
 locale: ko

@@ -2,6 +2,7 @@
 title: "【2026 파일 관리】석사 논문 버전 관리 4 단계: 2 년 노력을 노트북 한 대에 걸지 마라"
 description: "수요일 오후 3시, 지도교수에게 메시지: 「이전 버전의 3장이 더 강했는데, 어디로 갔지?」 thesis_final_v7을 열지만 v5나 v6에 뭐가 있었는지 기억나지 않습니다. 대학원생을 위한 4 단계 버전 관리 플레이북: 작업 흐름 변경 없이, 전문 용어 없이, 2 년의 사고에 발자국을 남기는 법."
 slug: "thesis-single-point-of-failure"
+retrofit_status: v1-legacy
 date: 2026-04-23T08:50:00+08:00
 draft: false
 locale: ko

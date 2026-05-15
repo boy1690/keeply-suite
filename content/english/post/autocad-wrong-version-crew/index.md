@@ -2,6 +2,7 @@
 title: "【2026 File Management】AutoCAD drawing version control: stop crews using last week's revision"
 description: "It's 9:40 AM, you stop by the office, and the PM pulls up last Thursday's revision. The frame spec changed, you've been on site every day, nobody told you. A field supervisor's 4-step drawing version control playbook: no new tools for the crew, no workflow overhaul."
 slug: "autocad-wrong-version-crew"
+retrofit_status: v1-legacy
 date: 2026-04-24T08:50:00+08:00
 draft: false
 locale: en

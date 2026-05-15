@@ -3,6 +3,7 @@ title: "【2026 Gestione file】Il salvataggio automatico di Photoshop salva i c
 description: "La cartella di salvataggio automatico di Photoshop è vuota per design. È stata costruita per i crash, non per recuperare la versione che hai appena sovrascritto con Cmd+S. Ti serve un altro livello."
 date: 2026-05-11T08:00:00+08:00
 slug: photoshop-autosave-not-version-history
+retrofit_status: v1-legacy
 tags: ["gestione versioni file", "design", "recupero"]
 categories: ["controllo versioni"]
 image: cover.svg

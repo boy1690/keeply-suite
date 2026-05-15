@@ -390,6 +390,20 @@ CASES = {
         ],
         "note": "Final version — client approved, no CLI",
     },
+    "3-2-1-backup-rule_en": {
+        "file_count_text": "1 file changed",
+        "files": [
+            ("M", "proposal.psd", "Modified"),
+        ],
+        "note": "Client-approved v2.3 — signed contract version",
+    },
+    "too-many-file-versions_en": {
+        "file_count_text": "1 file changed",
+        "files": [
+            ("M", "proposal.docx", "Modified"),
+        ],
+        "note": "Client-approved v2.3 — signed contract version",
+    },
 }
 
 

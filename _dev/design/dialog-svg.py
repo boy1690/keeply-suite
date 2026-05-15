@@ -241,6 +241,8 @@ TARGETS = [
     ("zh-cn", "version-control-software-non-developer", "version-control-software-non-developer_cn"),
     ("ja", "version-control-software-non-developer", "version-control-software-non-developer_ja"),
     ("en", "version-control-software-non-developer", "version-control-software-non-developer_en"),
+    ("en", "3-2-1-backup-rule", "3-2-1-backup-rule_en"),
+    ("en", "too-many-file-versions", "too-many-file-versions_en"),
 ]
 
 

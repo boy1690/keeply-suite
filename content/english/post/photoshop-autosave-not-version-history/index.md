@@ -3,6 +3,7 @@ title: "【2026 File Management】Photoshop autosave: why it won't recover your 
 description: "Photoshop's autosave folder is empty when you save over your own work — by design. It's built for crashes, not for the file-level version history you actually need."
 date: 2026-05-11T08:00:00+08:00
 slug: photoshop-autosave-not-version-history
+retrofit_status: v1-legacy
 tags: ["file-version-management", "design", "recovery"]
 categories: ["version-control"]
 image: cover.svg

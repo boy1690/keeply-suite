@@ -2,6 +2,7 @@
 title: "【2026 Gestione file】Gestione versioni dei file in cartelle condivise: non lasciare che _v8 rubi 83 ore l'anno al tuo team"
 description: "Giovedì, 17:30. Hai finito la planimetria, ma la tua mano resta sospesa sul nome del file. Il costo delle cartelle condivise + nomi manuali v1/v7/FINAL: 83 ore di tassa difensiva all'anno. Perché le regole di denominazione collassano sempre, e cosa fa al loro posto il controllo automatico delle versioni."
 slug: "hidden-cost-shared-folders"
+retrofit_status: v1-legacy
 date: 2026-04-23T08:50:00+08:00
 draft: false
 locale: it

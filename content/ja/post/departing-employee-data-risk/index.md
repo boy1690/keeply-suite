@@ -2,6 +2,7 @@
 title: "【2026 ファイル管理】退職社員のデータ持ち出しはどこまで防げる？「同期」を「バックアップ」と混同しているから"
 description: "退職前の土曜日、社員が brand-book フォルダを空にした。Dropbox は素直に同期しただけ。法律でも DLP でもなく、「同期はバックアップではない」が本当の教訓。"
 slug: departing-employee-data-risk
+retrofit_status: v1-legacy
 image: cover.svg
 og_image: cover.png
 date: 2026-05-09T08:00:00+08:00

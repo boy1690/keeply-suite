@@ -2,6 +2,7 @@
 title: "【2026 File Management】Departing employee deleted your files? Sync isn't backup"
 description: "Tina emptied the brand-book folder Saturday night and Dropbox dutifully synced the disaster. Why 'sync isn't backup' is the real lesson — not lawyers, not DLP."
 slug: departing-employee-data-risk
+retrofit_status: v1-legacy
 image: cover.svg
 og_image: cover.png
 date: 2026-05-09T08:00:00+08:00

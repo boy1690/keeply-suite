@@ -2,6 +2,7 @@
 title: "【2026 Gestione file】Controllo versioni tesi magistrale in 4 passi: non scommettere due anni su un solo laptop"
 description: "Mercoledì, ore 15. Il tuo relatore ti scrive: 'La tua versione precedente del Capitolo 3 era più forte. Dov'è finita?' Apri tesi_definitiva_v7 e non ricordi cosa diceva la v5 o la v6. Una guida in quattro passi alla gestione delle versioni per dottorandi e laureandi: nessun cambio di flusso di lavoro, nessun gergo, solo un modo per far sì che due anni di pensiero lascino una traccia."
 slug: "thesis-single-point-of-failure"
+retrofit_status: v1-legacy
 date: 2026-04-23T08:50:00+08:00
 draft: false
 locale: it

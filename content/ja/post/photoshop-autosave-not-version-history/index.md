@@ -3,6 +3,7 @@ title: "【2026 ファイル管理】Photoshop の自動保存はあなたを救
 description: "Photoshop の自動保存フォルダが空なのは設計上の制約です。クラッシュ救援用に作られていて、上書き保存した PSD の復元には使えません。必要なのは別の仕組みです。"
 date: 2026-05-11T08:00:00+08:00
 slug: photoshop-autosave-not-version-history
+retrofit_status: v1-legacy
 tags: ["ファイル バージョン管理", "デザイン", "復元"]
 categories: ["バージョン管理"]
 image: cover.svg

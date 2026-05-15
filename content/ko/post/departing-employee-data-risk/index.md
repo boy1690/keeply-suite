@@ -2,6 +2,7 @@
 title: "【2026 파일 관리】퇴사 직원이 회사 파일을 다 지웠다? '동기화'를 '백업'으로 착각했기 때문이다"
 description: "퇴사 전 토요일 밤, 직원이 brand-book 폴더를 비웠다. Dropbox는 그대로 동기화했을 뿐. 법률도 DLP도 아닌 '동기화는 백업이 아니다'가 진짜 교훈."
 slug: departing-employee-data-risk
+retrofit_status: v1-legacy
 image: cover.svg
 og_image: cover.png
 date: 2026-05-09T08:00:00+08:00

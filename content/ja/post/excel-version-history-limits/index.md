@@ -5,6 +5,7 @@ voice_version: v2-2026-05-11
 date: 2026-05-04T20:00:00+08:00
 draft: false
 slug: excel-version-history-limits
+retrofit_status: v1-legacy
 primary_keyword: "エクセル バージョン 履歴"
 locales: [zh-TW, en, zh-CN, ja, ko, it]
 categories: [ファイル管理]

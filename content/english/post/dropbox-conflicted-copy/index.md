@@ -5,6 +5,7 @@ voice_version: v2-2026-05-11
 date: 2026-05-05T05:55:00+08:00
 draft: false
 slug: dropbox-conflicted-copy
+retrofit_status: v1-legacy
 primary_keyword: "dropbox conflicted copy"
 locales: [zh-TW, en, zh-CN, ja, ko, it]
 categories: [File management]

@@ -4,6 +4,7 @@ description: "Il backup copre l'intero disco, il cloud copre l'ultima copia, Kee
 voice_version: v2-2026-05-11
 date: 2026-04-30T09:00:00+08:00
 slug: what-keeply-saves-vs-backup-cloud
+retrofit_status: v1-legacy
 locale: it
 primary_keyword: "Keeply vs backup"
 locales: [zh-TW, en, zh-CN, ja, it]

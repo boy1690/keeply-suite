@@ -2,6 +2,7 @@
 title: "【2026 File Management】Masters thesis version control: 4 steps, no single-laptop gamble"
 description: "Wednesday, 3 p.m. Your advisor messages: 'Your previous version of Chapter 3 was stronger, where did it go?' You open thesis_final_v7 and can't remember what v5 or v6 said. A four-step version-management playbook for grad students: no workflow changes, no jargon, just let two years of thinking leave a trail."
 slug: "thesis-single-point-of-failure"
+retrofit_status: v1-legacy
 date: 2026-04-23T08:50:00+08:00
 draft: false
 locale: en

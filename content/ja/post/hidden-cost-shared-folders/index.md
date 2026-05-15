@@ -2,6 +2,7 @@
 title: "【2026 ファイル管理】共有フォルダのファイルバージョン管理：_v8 にチーム年 83 時間の防御税を盗ませない"
 description: "木曜日の午後 5 時半、図面は描き終えた。でも手はファイル名の上で止まる。共有フォルダ + 手動命名 v1/v7/FINAL の代償：年 83 時間の防御税。なぜ命名ルールは必ず崩れるか、そして自動バージョン管理がどう引き継ぐか。"
 slug: "hidden-cost-shared-folders"
+retrofit_status: v1-legacy
 date: 2026-04-23T08:50:00+08:00
 draft: false
 locale: ja
