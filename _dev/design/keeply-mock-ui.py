@@ -286,6 +286,22 @@ CASES = {
         ],
         "note": "Q2 结算 — 改完应收账款公式",
     },
+    "client-asked-which-version_tw": {
+        "file_count_text": "這次改了 2 個檔案",
+        "files": [
+            ("M", "proposal.docx", "已修改"),
+            ("A", "proposal_v3.pdf", "新增"),
+        ],
+        "note": "4/12 業主核定版 — 給客戶 v3 簡報",
+    },
+    "client-asked-which-version_cn": {
+        "file_count_text": "这次改了 2 个文件",
+        "files": [
+            ("M", "proposal.docx", "已修改"),
+            ("A", "proposal_v3.pdf", "新增"),
+        ],
+        "note": "4/12 业主核定版 — 给客户 v3 简报",
+    },
 }
 
 

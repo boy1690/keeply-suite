@@ -195,6 +195,8 @@ TARGETS = [
     ("zh-cn", "dropbox-conflicted-copy", "dropbox-conflicted-copy_cn"),
     ("zh-tw", "excel-version-history-limits", "excel-version-history-limits_tw"),
     ("zh-cn", "excel-version-history-limits", "excel-version-history-limits_cn"),
+    ("zh-tw", "client-asked-which-version", "client-asked-which-version_tw"),
+    ("zh-cn", "client-asked-which-version", "client-asked-which-version_cn"),
 ]
 
 
