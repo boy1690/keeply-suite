@@ -197,6 +197,8 @@ TARGETS = [
     ("zh-cn", "excel-version-history-limits", "excel-version-history-limits_cn"),
     ("zh-tw", "client-asked-which-version", "client-asked-which-version_tw"),
     ("zh-cn", "client-asked-which-version", "client-asked-which-version_cn"),
+    ("zh-tw", "recover-overwritten-file", "recover-overwritten-file_tw"),
+    ("zh-cn", "recover-overwritten-file", "recover-overwritten-file_cn"),
 ]
 
 

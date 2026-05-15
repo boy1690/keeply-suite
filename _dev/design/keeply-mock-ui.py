@@ -302,6 +302,20 @@ CASES = {
         ],
         "note": "4/12 业主核定版 — 给客户 v3 简报",
     },
+    "recover-overwritten-file_tw": {
+        "file_count_text": "這次改了 1 個檔案",
+        "files": [
+            ("M", "monthly_report.xlsx", "已修改"),
+        ],
+        "note": "月底結算 — 應收應付對帳完成",
+    },
+    "recover-overwritten-file_cn": {
+        "file_count_text": "这次改了 1 个文件",
+        "files": [
+            ("M", "monthly_report.xlsx", "已修改"),
+        ],
+        "note": "月底结算 — 应收应付对账完成",
+    },
 }
 
 
