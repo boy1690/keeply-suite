@@ -61,11 +61,11 @@ Tina는 컨설턴트입니다. 6개월 동안 OneDrive에 `proposal.docx`를 저
 
 ![Keeply 타임라인 proposal.docx: 고객 서명 Release 태그 + 자동 저장 버전](timeline.svg)
 
-"Client signed v2.3 — board approved"가 자체 행과 Release 태그를 가집니다 — 오늘 오후 고객 서명 후 Tina가 Keeply 메인 창에서 "버전 저장"을 눌러 노트를 작성한 것입니다:
+"Client signed v2.3 — 이사회 승인"가 자체 행과 Release 태그를 가집니다 — 오늘 오후 고객 서명 후 Tina가 Keeply 메인 창에서 "버전 저장"을 눌러 노트를 작성한 것입니다:
 
 ![Keeply 버전 저장 대화 상자: proposal.docx 노트 "Client signed v2.3"](save-dialog.svg)
 
-"Client signed v2.3 — board approved"를 한 줄 쓰고 버전을 저장합니다. 내년 3월 타임라인에서 태그를 보면 바로 찾을 수 있습니다 — OneDrive 500 상한에 영향받지 않고 자동 삭제되지 않습니다.
+"Client signed v2.3 — 이사회 승인"를 한 줄 쓰고 버전을 저장합니다. 내년 3월 타임라인에서 태그를 보면 바로 찾을 수 있습니다 — OneDrive 500 상한에 영향받지 않고 자동 삭제되지 않습니다.
 
 2가지 동작만:
 

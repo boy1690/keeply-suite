@@ -89,12 +89,30 @@ ALLOWLIST_TERMS = {
 
 # Per-locale blacklist: English tech terms → local translation
 # These are HARD violations when found in body text of the given locale.
+# v2 (2026-05-15): expanded from 8 to 30+ terms covering Microsoft Office /
+# SharePoint admin / SaaS / generic tech vocabulary.
 BLACKLIST: dict[str, dict[str, str]] = {
     "ja": {
-        # Microsoft official Japanese terms
+        # Microsoft / Office terms
         "AutoRecover": "自動回復",
         "Recycle Bin": "ごみ箱",
-        # Generic tech terms
+        "auto-delete": "自動削除",
+        "Auto-delete": "自動削除",
+        "admin center": "管理センター",
+        "Admin Center": "管理センター",
+        "tenant level": "テナントレベル",
+        "tenant": "テナント",
+        "site collection": "サイトコレクション",
+        "storage quota": "ストレージ容量",
+        "storage tier": "ストレージ階層",
+        "storage cost": "ストレージコスト",
+        "storage": "ストレージ",
+        "major versions": "メジャーバージョン",
+        "major version": "メジャーバージョン",
+        "minor versions": "マイナーバージョン",
+        "minor version": "マイナーバージョン",
+        "versioning": "バージョニング",
+        # Generic tech
         "Release freeze": "リリース凍結",
         "Release-freeze": "リリース凍結",
         "Mock UI": "モック UI",
@@ -102,15 +120,49 @@ BLACKLIST: dict[str, dict[str, str]] = {
         "per-file": "ファイル単位",
         "cross-tool portability": "クロスツール移植性",
         "cross-tool": "クロスツール",
-        # "cap" (as English standalone word) — translate to 上限
-        # only when it's a standalone English word, not part of slug like cap-mechanism
-        # Treated separately below via regex.
-        "major version": "メジャーバージョン",
-        "major versions": "メジャーバージョン",
+        "cutoff": "カットオフ",
+        "trade-off": "トレードオフ",
+        "bookkeeping": "記録管理",
+        # Office workflow
+        "board approved": "取締役会承認",
+        "board-approved": "取締役会承認",
+        "client signed": "クライアント承認",
+        "client-signed": "クライアント承認",
+        "IT admin": "IT 管理者",
+        "board approval": "取締役会承認",
+        "board": "取締役会",
+        "active document": "アクティブドキュメント",
+        "unlimited": "無制限",
+        "mobile-only": "モバイル専用",
+        "Office mobile": "Office モバイル",
+        "SharePoint mobile": "SharePoint モバイル",
+        "overkill": "過剰",
+        "cleanup": "クリーンアップ",
+        "Storage cost": "ストレージコスト",
+        "compliance archive": "コンプライアンスアーカイブ",
+        "audit chain": "監査チェーン",
+        # "cap" handled via regex (CAP_RE)
+        # "site" alone NOT auto-translated (避免 domain name 衝突)
     },
     "ko": {
         "AutoRecover": "자동 복구",
         "Recycle Bin": "휴지통",
+        "auto-delete": "자동 삭제",
+        "Auto-delete": "자동 삭제",
+        "admin center": "관리 센터",
+        "Admin Center": "관리 센터",
+        "tenant level": "tenant 레벨",
+        "tenant": "tenant",
+        "site collection": "사이트 컬렉션",
+        "storage quota": "스토리지 할당량",
+        "storage tier": "스토리지 계층",
+        "storage cost": "스토리지 비용",
+        "storage": "스토리지",
+        "major versions": "주요 버전",
+        "major version": "주요 버전",
+        "minor versions": "부 버전",
+        "minor version": "부 버전",
+        "versioning": "버전 관리",
         "Release freeze": "Release 잠금",
         "Release-freeze": "Release 잠금",
         "Mock UI": "모크 UI",
@@ -118,12 +170,46 @@ BLACKLIST: dict[str, dict[str, str]] = {
         "per-file": "파일별",
         "cross-tool portability": "크로스 도구 이식성",
         "cross-tool": "크로스 도구",
-        "major version": "주요 버전",
-        "major versions": "주요 버전",
+        "cutoff": "컷오프",
+        "trade-off": "트레이드오프",
+        "bookkeeping": "기록 관리",
+        "board approved": "이사회 승인",
+        "board-approved": "이사회 승인",
+        "client signed": "고객 서명",
+        "client-signed": "고객 서명",
+        "IT admin": "IT 관리자",
+        "board approval": "이사회 승인",
+        "board": "이사회",
+        "active document": "활성 문서",
+        "unlimited": "무제한",
+        "mobile-only": "모바일 전용",
+        "Office mobile": "Office 모바일",
+        "SharePoint mobile": "SharePoint 모바일",
+        "overkill": "과잉",
+        "cleanup": "정리",
+        "Storage cost": "스토리지 비용",
+        "compliance archive": "컴플라이언스 아카이브",
+        "audit chain": "감사 체인",
     },
     "it": {
         "AutoRecover": "Salvataggio automatico",
         "Recycle Bin": "Cestino",
+        "auto-delete": "eliminazione automatica",
+        "Auto-delete": "Eliminazione automatica",
+        "admin center": "centro amministrativo",
+        "Admin Center": "Centro amministrativo",
+        "tenant level": "livello tenant",
+        # "tenant" kept English (commonly used in IT IT-IT)
+        "site collection": "site collection",
+        "storage quota": "quota storage",
+        "storage tier": "livello storage",
+        "storage cost": "costo storage",
+        # "storage" kept English (commonly used in IT IT-IT)
+        "major versions": "versioni principali",
+        "major version": "versione principale",
+        "minor versions": "versioni secondarie",
+        "minor version": "versione secondaria",
+        "versioning": "versioning",
         "Release freeze": "Blocco Release",
         "Release-freeze": "Blocco Release",
         "Mock UI": "mock UI",
@@ -131,12 +217,46 @@ BLACKLIST: dict[str, dict[str, str]] = {
         "per-file": "per file",
         "cross-tool portability": "portabilità tra strumenti",
         "cross-tool": "tra strumenti",
-        "major version": "versione principale",
-        "major versions": "versioni principali",
+        "cutoff": "cutoff",
+        "trade-off": "trade-off",
+        "bookkeeping": "tenuta dei registri",
+        "board approved": "approvato dal consiglio",
+        "board-approved": "approvato dal consiglio",
+        "client signed": "firmato dal cliente",
+        "client-signed": "firmato dal cliente",
+        "IT admin": "IT admin",  # commonly kept English in IT-IT business context
+        "board approval": "approvazione del consiglio",
+        "board": "consiglio",
+        "active document": "documento attivo",
+        "unlimited": "illimitato",
+        "mobile-only": "solo mobile",
+        "Office mobile": "Office mobile",
+        "SharePoint mobile": "SharePoint mobile",
+        "overkill": "eccessivo",
+        "cleanup": "pulizia",
+        "Storage cost": "costo storage",
+        "compliance archive": "archivio conformità",
+        "audit chain": "catena di audit",
     },
     "zh-tw": {
         "AutoRecover": "自動回復",
         "Recycle Bin": "資源回收筒",
+        "auto-delete": "自動刪除",
+        "Auto-delete": "自動刪除",
+        "admin center": "管理中心",
+        "Admin Center": "管理中心",
+        "tenant level": "租戶層級",
+        "tenant": "租戶",
+        "site collection": "站台集合",
+        "storage quota": "儲存空間配額",
+        "storage tier": "儲存階層",
+        "storage cost": "儲存成本",
+        "storage": "儲存空間",
+        "major versions": "主要版本",
+        "major version": "主要版本",
+        "minor versions": "次要版本",
+        "minor version": "次要版本",
+        "versioning": "版本管理",
         "Release freeze": "發行版凍結",
         "Release-freeze": "發行版凍結",
         "Mock UI": "模擬介面",
@@ -144,12 +264,47 @@ BLACKLIST: dict[str, dict[str, str]] = {
         "per-file": "單檔",
         "cross-tool portability": "跨工具可攜性",
         "cross-tool": "跨工具",
-        "major version": "主要版本",
-        "major versions": "主要版本",
+        "cutoff": "截止",
+        "trade-off": "取捨",
+        "bookkeeping": "紀錄管理",
+        "board approved": "董事會核可",
+        "board-approved": "董事會核可",
+        "client signed": "客戶簽核",
+        "client-signed": "客戶簽核",
+        "IT admin": "IT 管理員",
+        "bug": "錯誤",
+        "board": "董事會",
+        "active document": "活躍文件",
+        "unlimited": "無上限",
+        "mobile-only": "純行動裝置",
+        "Office mobile": "Office 行動版",
+        "SharePoint mobile": "SharePoint 行動版",
+        "overkill": "過度",
+        "cleanup": "清理",
+        "Storage cost": "儲存空間成本",
+        "compliance archive": "合規封存",
+        "enterprise compliance archive": "企業合規封存",
+        "audit chain": "稽核軌跡",
     },
     "zh-cn": {
         "AutoRecover": "自动恢复",
         "Recycle Bin": "回收站",
+        "auto-delete": "自动删除",
+        "Auto-delete": "自动删除",
+        "admin center": "管理中心",
+        "Admin Center": "管理中心",
+        "tenant level": "租户层级",
+        "tenant": "租户",
+        "site collection": "站点集合",
+        "storage quota": "存储配额",
+        "storage tier": "存储层级",
+        "storage cost": "存储成本",
+        "storage": "存储",
+        "major versions": "主要版本",
+        "major version": "主要版本",
+        "minor versions": "次要版本",
+        "minor version": "次要版本",
+        "versioning": "版本管理",
         "Release freeze": "发布版冻结",
         "Release-freeze": "发布版冻结",
         "Mock UI": "模拟界面",
@@ -157,8 +312,27 @@ BLACKLIST: dict[str, dict[str, str]] = {
         "per-file": "单档",
         "cross-tool portability": "跨工具可移植性",
         "cross-tool": "跨工具",
-        "major version": "主要版本",
-        "major versions": "主要版本",
+        "cutoff": "截止",
+        "trade-off": "取舍",
+        "bookkeeping": "记录管理",
+        "board approved": "董事会核可",
+        "board-approved": "董事会核可",
+        "client signed": "客户签核",
+        "client-signed": "客户签核",
+        "IT admin": "IT 管理员",
+        "bug": "错误",
+        "board": "董事会",
+        "active document": "活跃文件",
+        "unlimited": "无上限",
+        "mobile-only": "纯移动设备",
+        "Office mobile": "Office 移动版",
+        "SharePoint mobile": "SharePoint 移动版",
+        "overkill": "过度",
+        "cleanup": "清理",
+        "Storage cost": "存储成本",
+        "compliance archive": "合规封存",
+        "enterprise compliance archive": "企业合规封存",
+        "audit chain": "审计轨迹",
     },
 }
 
@@ -181,6 +355,14 @@ def strip_inline_code(text: str) -> str:
     return text
 
 
+def strip_anchor_refs(text: str) -> str:
+    """Remove markdown anchor refs `](#anchor)` and heading IDs `{#anchor}` so
+    Hugo anchor IDs (which must stay ASCII) don't trigger false positives."""
+    text = re.sub(r"\]\(#[a-zA-Z0-9\-_]+\)", "](#ANCHOR)", text)
+    text = re.sub(r"\{#[a-zA-Z0-9\-_]+\}", "{#ANCHOR}", text)
+    return text
+
+
 def strip_frontmatter(text: str) -> str:
     """Return body only, excluding YAML frontmatter."""
     m = re.match(r"^---\n.*?\n---\n(.*)", text, re.DOTALL)
@@ -194,23 +376,121 @@ def strip_urls(text: str) -> str:
     return text
 
 
+# Markdown heading anchor `{#...}` must NEVER be translated — they're Hugo IDs.
+# Markdown image / link `[...](...)` URL parts already stripped via strip_urls.
+ANCHOR_RE = re.compile(r"\{#[a-zA-Z0-9\-_]+\}")
+
+
+def protect_anchors(text: str) -> tuple[str, list[str]]:
+    """Replace `{#anchor}` with placeholders, returning the protected text + the
+    original anchors so they can be re-inserted after substitution.
+    """
+    anchors = ANCHOR_RE.findall(text)
+    protected = text
+    for i, anchor in enumerate(anchors):
+        protected = protected.replace(anchor, f"\x00ANCHOR{i}\x00", 1)
+    return protected, anchors
+
+
+def restore_anchors(text: str, anchors: list[str]) -> str:
+    """Re-insert anchor placeholders."""
+    for i, anchor in enumerate(anchors):
+        text = text.replace(f"\x00ANCHOR{i}\x00", anchor, 1)
+    return text
+
+
+FRONTMATTER_FIELDS_TO_AUDIT = (
+    "title",
+    "description",
+    "image_alt_data",
+)
+
+
+def extract_frontmatter_audit_text(text: str) -> str:
+    """Pull title / description / image_alt_data / faq_schema q+a values out of
+    frontmatter as a single string for blacklist scanning. These render to
+    user-visible HTML (meta tags, FAQ structured data, page <title>), so they
+    must follow the same locale-consistency rules as body text."""
+    m = re.match(r"^---\n(.*?)\n---", text, re.DOTALL)
+    if not m:
+        return ""
+    fm = m.group(1)
+    chunks: list[str] = []
+    # title / description / image_alt_data — single-line YAML values
+    for field in FRONTMATTER_FIELDS_TO_AUDIT:
+        for line in re.findall(rf'^{field}:\s*"([^"]+)"', fm, re.MULTILINE):
+            chunks.append(line)
+        for line in re.findall(rf"^{field}:\s+([^\n]+)$", fm, re.MULTILINE):
+            if not line.startswith('"'):
+                chunks.append(line)
+    # faq_schema: indented YAML list of q/a entries
+    for kv_match in re.findall(r'^\s+-?\s*[qa]:\s*"([^"]+)"', fm, re.MULTILINE):
+        chunks.append(kv_match)
+    return "\n".join(chunks)
+
+
+def fix_frontmatter(fm: str, blacklist: dict[str, str], locale: str) -> str:
+    """Apply blacklist translations to title / description / image_alt_data /
+    faq_schema q+a values in frontmatter. Preserve YAML structure."""
+    def translate_value(val: str) -> str:
+        protected, anchors = protect_anchors(val)
+        for en, local in sorted(blacklist.items(), key=lambda kv: -len(kv[0])):
+            if en == local:
+                continue
+            protected = protected.replace(en, local)
+        cap_trans = CAP_TRANSLATE.get(locale, "上限")
+        protected = CAP_RE.sub(cap_trans, protected)
+        return restore_anchors(protected, anchors)
+
+    # title / description / image_alt_data
+    def replace_field(m_):
+        field, quoted_val = m_.group(1), m_.group(2)
+        return f'{field}: "{translate_value(quoted_val)}"'
+
+    fm = re.sub(
+        r'^(' + "|".join(FRONTMATTER_FIELDS_TO_AUDIT) + r'):\s*"([^"]+)"',
+        replace_field,
+        fm,
+        flags=re.MULTILINE,
+    )
+
+    # FAQ q/a
+    def replace_qa(m_):
+        prefix, val = m_.group(1), m_.group(2)
+        return f'{prefix}"{translate_value(val)}"'
+
+    fm = re.sub(
+        r'^(\s+-?\s*[qa]:\s*)"([^"]+)"',
+        replace_qa,
+        fm,
+        flags=re.MULTILINE,
+    )
+
+    return fm
+
+
 def audit_file(path: Path, locale: str, fix: bool = False) -> tuple[list[tuple[str, int]], str]:
     """Return list of (term, count) violations + (optionally) fixed text."""
     text = path.read_text(encoding="utf-8")
     body = strip_frontmatter(text)
-    body_clean = strip_inline_code(strip_urls(body))
+    body_clean = strip_anchor_refs(strip_inline_code(strip_urls(body)))
+    # Also scan user-visible frontmatter fields (title / description / FAQ).
+    fm_audit_text = extract_frontmatter_audit_text(text)
+    audit_corpus = body_clean + "\n" + fm_audit_text
 
     violations: list[tuple[str, int]] = []
     blacklist = BLACKLIST.get(locale, {})
 
-    # 1. Blacklist exact terms
-    for en, _ in blacklist.items():
-        count = body_clean.count(en)
+    # 1. Blacklist exact terms — skip idempotent kept-English entries (en == local)
+    for en, local in blacklist.items():
+        if en == local:
+            continue  # idempotent — term intentionally kept English in this locale
+        count = audit_corpus.count(en)
         if count > 0:
             violations.append((en, count))
 
-    # 2. Standalone "cap" — but only inside the locale's body
-    cap_hits = CAP_RE.findall(body_clean)
+    # 2. Standalone "cap" — body + frontmatter audit-text
+    cap_hits = CAP_RE.findall(audit_corpus)
     if cap_hits:
         violations.append(("cap (standalone)", len(cap_hits)))
 
@@ -220,19 +500,24 @@ def audit_file(path: Path, locale: str, fix: bool = False) -> tuple[list[tuple[s
     # 3. Apply translations
     fixed = text
     body_full = strip_frontmatter(fixed)
+    # Protect markdown anchors {#xxx} from translation (Hugo IDs must stay ASCII)
+    body_full, anchors = protect_anchors(body_full)
     # Sort longer keys first to avoid prefix-collisions
     for en, local in sorted(blacklist.items(), key=lambda kv: -len(kv[0])):
-        fixed_body_new = body_full.replace(en, local)
-        if fixed_body_new != body_full:
-            fixed = fixed.replace(body_full, fixed_body_new, 1)
-            body_full = fixed_body_new
+        if en == local:
+            continue
+        body_full = body_full.replace(en, local)
     # cap-as-standalone replacement in body only (preserve frontmatter slugs like cap-mechanism)
     cap_trans = CAP_TRANSLATE.get(locale, "上限")
     body_full = CAP_RE.sub(cap_trans, body_full)
+    # Restore anchors
+    body_full = restore_anchors(body_full, anchors)
     # rebuild fixed
     m = re.match(r"^(---\n.*?\n---\n)", text, re.DOTALL)
     if m:
-        fixed = m.group(1) + body_full
+        fm = m.group(1)[:-5]  # strip trailing "\n---\n"
+        fm_fixed = fix_frontmatter(fm, blacklist, locale)
+        fixed = fm_fixed + "\n---\n" + body_full
     else:
         fixed = body_full
     return violations, fixed

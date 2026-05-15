@@ -4,6 +4,7 @@ description: "Keeply는 14일 동안 당신을 학생으로 만들지 않아요 
 voice_version: v2-2026-05-11
 date: 2026-04-30T09:00:00+08:00
 slug: keeply-getting-started-from-zero
+retrofit_status: v1-legacy
 locale: ko
 primary_keyword: "Keeply 사용법"
 locales: [zh-TW, en, zh-CN, ja, ko]

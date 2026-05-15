@@ -1,6 +1,6 @@
 ---
-title: "【2026 ファイル管理】上書き 復元の限界：AutoRecover が消えた後でも間に合う方法"
-description: "AutoRecover はクラッシュ救援のためのもの、データ復元ソフトは上書き直後の数分以内が勝負——どちらも「正常に閉じた後の上書き」には届かない。本記事は事後救援の限界を解き、ツール層の常時稼働版数履歴という事前防御が本当の答えである理由を説明します。"
+title: "【2026 ファイル管理】上書き 復元の限界：自動回復 が消えた後でも間に合う方法"
+description: "自動回復 はクラッシュ救援のためのもの、データ復元ソフトは上書き直後の数分以内が勝負——どちらも「正常に閉じた後の上書き」には届かない。本記事は事後救援の限界を解き、ツール層の常時稼働版数履歴という事前防御が本当の答えである理由を説明します。"
 voice_version: v2-2026-05-11
 date: 2026-05-02T18:00:00+08:00
 draft: false
@@ -16,7 +16,7 @@ locales_required: [en, zh-TW, zh-CN, ja, ko]
 market_strategy: single-market-ja-primary
 ranking_locales: [ja, ko]
 cta_topic: recovery
-image_alt_data: "monthly_report.xlsxを19:00・19:15・19:30に保存したタイムライン——19:30の上書き保存はAutoRecover・OneDrive・データ復元ソフトでは元に戻せず、唯一の答えは保存が起きる前の上流防御"
+image_alt_data: "monthly_report.xlsxを19:00・19:15・19:30に保存したタイムライン——19:30の上書き保存は自動回復・OneDrive・データ復元ソフトでは元に戻せず、唯一の答えは保存が起きる前の上流防御"
 faq_schema:
   - q: AutoRecover 到底是為什麼設計的？
     a: AutoRecover 是為當機救援設計的，每 10 分鐘自動暫存一份，但在檔案正常關閉後就會清除。它的設計目標是「打到一半當機」場景，不適用於「正常關閉後才發現覆蓋錯」這種情境。

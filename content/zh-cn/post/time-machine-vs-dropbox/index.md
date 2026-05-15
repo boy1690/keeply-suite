@@ -130,7 +130,7 @@ Keeply — 2 个月前礼拜二下午
 
 **你的工作完全在 Pages / Numbers / Keynote**：Apple 原生档类型有内建版本历史，不依赖 Time Machine 或第三方工具。第三轴本来就 build-in 进档案格式。代价是档案类型 lock-in。
 
-**你在需要不可变存档的合规产业**：版本历史不是 compliance archive。如果 GDPR / HIPAA / SOX 要求「这个版本创建后不能再被修改」，你需要 archive 级工具（Veeam、Acronis），不是 Time Machine + Dropbox + 版本历史。
+**你在需要不可变存档的合规产业**：版本历史不是 合规封存。如果 GDPR / HIPAA / SOX 要求「这个版本创建后不能再被修改」，你需要 archive 级工具（Veeam、Acronis），不是 Time Machine + Dropbox + 版本历史。
 
 ## 延伸阅读
 

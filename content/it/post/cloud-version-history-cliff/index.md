@@ -1,6 +1,6 @@
 ---
 title: "【2026 Gestione file】Prima di confrontare iCloud vs Dropbox: tutte e 4 le cloud condividono lo stesso strapiombo di cronologia versioni"
-description: "Gli articoli di confronto tra iCloud, Dropbox, OneDrive, Google Drive misurano spazio / prezzo / condivisione — non retention. Il vuoto strutturale: tutte e 4 mettono un cap alla cronologia versioni (basato sul tempo o sul conteggio), e Apple non pubblica nemmeno la politica di iCloud. Il costo vero arriva 3 mesi dopo, quando la versione che ti serve non c'è più."
+description: "Gli articoli di confronto tra iCloud, Dropbox, OneDrive, Google Drive misurano spazio / prezzo / condivisione — non retention. Il vuoto strutturale: tutte e 4 mettono un limite alla cronologia versioni (basato sul tempo o sul conteggio), e Apple non pubblica nemmeno la politica di iCloud. Il costo vero arriva 3 mesi dopo, quando la versione che ti serve non c'è più."
 voice_version: v2-2026-05-12
 date: 2026-05-12T08:00:00+08:00
 draft: false
@@ -16,7 +16,7 @@ cta_topic: backup
 role: cluster
 pillar_parent: file-version-management-complete-guide
 locales_required: [en, zh-TW, zh-CN, ja, ko, it]
-image_alt_data: "Confronto fianco a fianco di iCloud Drive, Dropbox, OneDrive, Google Drive sulla retention della cronologia versioni — Apple mostra 'non pubblicato', Dropbox mostra 30/180/365 giorni, OneDrive mostra conteggio 500 versioni, Google Drive mostra 30 giorni O 100 versioni — illustra che le 4 cloud condividono un cap strutturale che gli articoli di confronto non elencano mai"
+image_alt_data: "Confronto fianco a fianco di iCloud Drive, Dropbox, OneDrive, Google Drive sulla retention della cronologia versioni — Apple mostra 'non pubblicato', Dropbox mostra 30/180/365 giorni, OneDrive mostra conteggio 500 versioni, Google Drive mostra 30 giorni O 100 versioni — illustra che le 4 cloud condividono un limite strutturale che gli articoli di confronto non elencano mai"
 faq_schema:
   - q: iCloud, Dropbox, OneDrive e Google Drive hanno tutti la cronologia versioni?
     a: Solo 3 delle 4 espongono la cronologia versioni per file generici. iCloud Drive non mostra la cronologia versioni per file non nativi Apple (PSD, Word, PDF) — solo Pages, Numbers e Keynote hanno browser di versioni integrato. Dropbox, OneDrive e Google Drive conservano tutti le versioni, ma con cap di forma diversa.

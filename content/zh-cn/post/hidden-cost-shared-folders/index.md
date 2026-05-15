@@ -52,7 +52,7 @@ faq_schema:
 
 - [共享文件夹命名税一年 83 小时：Asana《Anatomy of Work》算给你看](#anxious-bill)
 - [为什么共享文件夹命名规则 4 周后一定崩溃：纪律对抗赶件压力的设计缺陷](#naming-failure)
-- [Keeply 怎么让共享文件夹的 _v8_FINAL 后缀从此消失：自动 30 分钟 + 手动写笔记](#auto-versioning)
+- [Keeply 怎么让共享文件夹的 _v8_FINAL 后缀从此消失：自动 30 分钟 + 手动写笔记](#auto-版本管理)
 - [共享文件夹 + Dropbox / OneDrive / Google Drive 对照表：4 种工具各解什么](#compare-tools)
 - [不必加 Keeply 的 3 种共享文件夹情境](#when-not-needed)
 
@@ -88,7 +88,7 @@ faq_schema:
 
 ---
 
-## Keeply 怎么让共享文件夹的 _v8_FINAL 后缀从此消失：自动 30 分钟 + 手动写笔记 {#auto-versioning}
+## Keeply 怎么让共享文件夹的 _v8_FINAL 后缀从此消失：自动 30 分钟 + 手动写笔记 {#auto-版本管理}
 
 [Keeply](https://keeply.work) 补的就是这层。装完之后、明天早上你打开共享文件夹——里面只有 `Floorplan.dwg`、`Brand_Brief.psd`、`Budget.xlsx` 几个干净的主文件名。没有 `_v7_FINAL`、没有 `_千万别动`、没有 `_真的最后一版`。
 

@@ -128,7 +128,7 @@ Se vuoi anche tu provare Keeply per quella cronologia, trascina una cartella den
 
 ## Letture correlate
 
-- [Come usare Keeply, l'app per le note dei file: 2 azioni, niente programma di studio da 30 funzioni](/it/post/keeply-getting-started-from-zero/) (PILLAR 3, guida completa all'onboarding di Keeply)
+- [Come usare Keeply, l'app per le note dei file: 2 azioni, niente programma di studio da 30 funzioni](/it/post/keeply-getting-started-from-zero/) (PILLAR 3, guida completa all'onconsiglioing di Keeply)
 - [La guida completa alla gestione delle versioni dei file](/it/post/file-version-management-complete-guide/) (PILLAR 1, perché conta la gestione delle versioni)
 
 ---

@@ -46,7 +46,7 @@ faq_schema:
 
 - [보이지 않는 청구서는 불안으로 지불한다](#anxious-bill)
 - [왜 공유 폴더의 명명 규칙은 반드시 무너지는가](#naming-failure)
-- [공유 폴더 자동 버전 관리: _v8 을 사라지게 하라](#auto-versioning)
+- [공유 폴더 자동 버전 관리: _v8 을 사라지게 하라](#auto-버전 관리)
 - [당신은 설계를 하고 있는가, 파일을 지키고 있는가?](#designer-or-guard)
 
 ---
@@ -75,7 +75,7 @@ Asana《[Anatomy of Work](https://asana.com/resources/why-work-about-work-is-bad
 
 ---
 
-## 공유 폴더 자동 버전 관리: _v8 을 사라지게 하라 {#auto-versioning}
+## 공유 폴더 자동 버전 관리: _v8 을 사라지게 하라 {#auto-버전 관리}
 
 내일 아침 폴더를 열면 깨끗한 `Floorplan.dwg`, `Brand_Brief.psd`, `Budget.xlsx` 만 있어요. `_v7_FINAL_절대건드리지마` 접미사는 없습니다.
 

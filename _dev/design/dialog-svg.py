@@ -271,6 +271,12 @@ TARGETS = [
     ("ja", "onedrive-version-history", "onedrive-version-history_ja"),
     ("ko", "onedrive-version-history", "onedrive-version-history_ko"),
     ("it", "onedrive-version-history", "onedrive-version-history_it"),
+    ("zh-tw", "sharepoint-version-history", "sharepoint-version-history_tw"),
+    ("zh-cn", "sharepoint-version-history", "sharepoint-version-history_cn"),
+    ("en", "sharepoint-version-history", "sharepoint-version-history_en"),
+    ("ja", "sharepoint-version-history", "sharepoint-version-history_ja"),
+    ("ko", "sharepoint-version-history", "sharepoint-version-history_ko"),
+    ("it", "sharepoint-version-history", "sharepoint-version-history_it"),
 ]
 
 

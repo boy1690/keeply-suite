@@ -4,6 +4,7 @@ description: "Keeply doesn't ask you to spend 14 days as a student — drag a fo
 voice_version: v2-2026-05-11
 date: 2026-04-30T09:00:00+08:00
 slug: keeply-getting-started-from-zero
+retrofit_status: v1-legacy
 locale: en
 primary_keyword: "how to use Keeply"
 locales: [zh-TW, en, zh-CN, ja, ko]

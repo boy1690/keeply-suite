@@ -61,11 +61,11 @@ In [Keeply](https://keeply.work), la timeline di questo progetto appare così:
 
 ![Timeline Keeply per proposal.docx: tag Release firmato dal cliente + versioni salvate automaticamente](timeline.svg)
 
-"Client signed v2.3 — board approved" ha la propria riga con un tag Release — è lei oggi pomeriggio, dopo che il cliente ha firmato, premendo "Salva versione" nella finestra principale di Keeply e scrivendo una nota:
+"Client signed v2.3 — approvato dal consiglio" ha la propria riga con un tag Release — è lei oggi pomeriggio, dopo che il cliente ha firmato, premendo "Salva versione" nella finestra principale di Keeply e scrivendo una nota:
 
 ![Finestra di dialogo Keeply Salva versione: proposal.docx nota "Client signed v2.3"](save-dialog.svg)
 
-Scrivi "Client signed v2.3 — board approved", salva la versione. Il prossimo marzo quando consulterà la timeline, il tag è lì — non influenzato dal limite di 500 di OneDrive, mai eliminato automaticamente.
+Scrivi "Client signed v2.3 — approvato dal consiglio", salva la versione. Il prossimo marzo quando consulterà la timeline, il tag è lì — non influenzato dal limite di 500 di OneDrive, mai eliminato automaticamente.
 
 Due azioni in totale:
 

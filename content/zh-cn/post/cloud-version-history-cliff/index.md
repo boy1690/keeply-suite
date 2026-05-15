@@ -1,6 +1,6 @@
 ---
 title: "【2026 文件管理】比 iCloud 跟 Dropbox 之前先看:4 家云端共通的版本历史天花板"
-description: "iCloud、Dropbox、OneDrive、Google Drive 比较文都在比容量、价格、分享 UX,没人比版本历史 retention。4 家其实共通有 cap(时间制或计数制),iCloud 甚至没对外公布通用档的政策。代价在 3 个月后出现——客户要那版你叫不出来。"
+description: "iCloud、Dropbox、OneDrive、Google Drive 比较文都在比容量、价格、分享 UX,没人比版本历史 retention。4 家其实共通有 上限(时间制或计数制),iCloud 甚至没对外公布通用档的政策。代价在 3 个月后出现——客户要那版你叫不出来。"
 voice_version: v2-2026-05-12
 date: 2026-05-12T08:00:00+08:00
 draft: false
@@ -16,7 +16,7 @@ cta_topic: backup
 role: cluster
 pillar_parent: file-version-management-complete-guide
 locales_required: [en, zh-TW, zh-CN, ja, ko, it]
-image_alt_data: "iCloud Drive、Dropbox、OneDrive、Google Drive 四家云端的版本历史 retention 并排对比——Apple 没公布、Dropbox 30/180/365 天、OneDrive 500 版本计数、Google Drive 30 天或 100 版本——揭露 4 家共通有 cap,比较文从没列出来"
+image_alt_data: "iCloud Drive、Dropbox、OneDrive、Google Drive 四家云端的版本历史 retention 并排对比——Apple 没公布、Dropbox 30/180/365 天、OneDrive 500 版本计数、Google Drive 30 天或 100 版本——揭露 4 家共通有 上限,比较文从没列出来"
 faq_schema:
   - q: iCloud、Dropbox、OneDrive、Google Drive 4 家都有版本历史吗?
     a: 4 家中只有 3 家有通用档版本历史。iCloud Drive 不对外暴露 PSD / Word / PDF 等非 Apple 原生档的版本历史,只有 Pages、Numbers、Keynote 有内置版本浏览器。Dropbox、OneDrive、Google Drive 都保留版本,但 cap 形状不同。

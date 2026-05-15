@@ -1,6 +1,6 @@
 ---
 title: "【2026 檔案管理】Dropbox 衝突的副本：為什麼一直出現？4 種觸發場景 + Keeply 怎麼根治"
-description: "`(conflicted copy)` 不是 bug，是 Dropbox 設計上沒做衝突偵測、後存者覆蓋前一版的結果。本文拆解 4 種觸發衝突副本的場景、3 種同步設計各自能解什麼，然後讓你看換 Keeply 後同事跟你各存一版都進時間軸、沒有 `(conflicted copy)` 再出現。"
+description: "`(conflicted copy)` 不是 錯誤，是 Dropbox 設計上沒做衝突偵測、後存者覆蓋前一版的結果。本文拆解 4 種觸發衝突副本的場景、3 種同步設計各自能解什麼，然後讓你看換 Keeply 後同事跟你各存一版都進時間軸、沒有 `(conflicted copy)` 再出現。"
 voice_version: v3-2026-05-15
 date: 2026-05-05T05:55:00+08:00
 draft: false
@@ -33,11 +33,11 @@ faq_schema:
 
 # 【2026 檔案管理】Dropbox 衝突的副本：為什麼一直出現？4 種觸發場景 + Keeply 怎麼根治
 
-> Dropbox `(conflicted copy)` 不是 bug，是設計上沒做衝突偵測層、後存者覆蓋前一版的結果。
+> Dropbox `(conflicted copy)` 不是 錯誤，是設計上沒做衝突偵測層、後存者覆蓋前一版的結果。
 
 週四晚上 10:30，你跟同事 Anna 共用 Dropbox 改一份提案。她加了 3 段內容、你同時加了結尾的 CTA。你們都存了檔。隔天打開資料夾、多了一份 `提案 (Anna 的 conflicted copy 2026-05-02).docx`。她改的你這裡沒有、你加的她那裡也沒有。你花 1 小時手動合併、30 分鐘檢查有沒有漏。
 
-這不是 bug，是 Dropbox 設計上沒做衝突偵測層的後果。這篇拆完 4 種會觸發衝突副本的場景、Dropbox 為什麼這樣設計、然後讓你看 [Keeply](https://keeply.work) 怎麼用「本機副本 + 主動推送」根治。
+這不是 錯誤，是 Dropbox 設計上沒做衝突偵測層的後果。這篇拆完 4 種會觸發衝突副本的場景、Dropbox 為什麼這樣設計、然後讓你看 [Keeply](https://keeply.work) 怎麼用「本機副本 + 主動推送」根治。
 
 ## 目錄
 

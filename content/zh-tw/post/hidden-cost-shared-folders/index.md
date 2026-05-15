@@ -51,7 +51,7 @@ faq_schema:
 
 - [共用資料夾命名稅一年 83 小時：Asana《Anatomy of Work》算給你看](#anxious-bill)
 - [為什麼共用資料夾命名規則 4 週後一定崩潰：紀律對抗趕件壓力的設計缺陷](#naming-failure)
-- [Keeply 怎麼讓共用資料夾的 _v8_FINAL 後綴從此消失：自動 30 分鐘 + 手動寫筆記](#auto-versioning)
+- [Keeply 怎麼讓共用資料夾的 _v8_FINAL 後綴從此消失：自動 30 分鐘 + 手動寫筆記](#auto-版本管理)
 - [共用資料夾 + Dropbox / OneDrive / Google Drive 對照表：4 種工具各解什麼](#compare-tools)
 - [不必加 Keeply 的 3 種共用資料夾情境](#when-not-needed)
 
@@ -87,7 +87,7 @@ faq_schema:
 
 ---
 
-## Keeply 怎麼讓共用資料夾的 _v8_FINAL 後綴從此消失：自動 30 分鐘 + 手動寫筆記 {#auto-versioning}
+## Keeply 怎麼讓共用資料夾的 _v8_FINAL 後綴從此消失：自動 30 分鐘 + 手動寫筆記 {#auto-版本管理}
 
 [Keeply](https://keeply.work) 補的就是這層。裝完之後、明天早上你打開共用資料夾——裡面只有 `Floorplan.dwg`、`Brand_Brief.psd`、`Budget.xlsx` 幾個乾淨的主檔名。沒有 `_v7_FINAL`、沒有 `_千萬別動`、沒有 `_真的最後一版`。
 

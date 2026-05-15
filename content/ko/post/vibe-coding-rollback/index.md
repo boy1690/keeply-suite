@@ -4,6 +4,7 @@ description: "AI 에이전트가 너무 앞서 달려나가 코드가 안 돌아
 voice_version: v2-2026-05-11
 date: 2026-04-30T09:00:00+08:00
 slug: vibe-coding-rollback
+retrofit_status: v1-legacy
 locale: ko
 primary_keyword: "vibe coding 복원"
 locales: [zh-TW, en, zh-CN, ja, ko]

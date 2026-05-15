@@ -1,6 +1,6 @@
 ---
-title: "【2026 파일 관리】덮어쓴 파일 복구의 한계: AutoRecover로는 닿지 못하는 곳"
-description: "AutoRecover는 충돌 구조용, 데이터 복구 소프트웨어는 덮어쓰기 직후 몇 분 안이 승부 — 어느 것도 「정상 종료 후의 덮어쓰기」에는 닿지 못합니다. 본문은 사후 구조의 한계를 풀어내고, 툴 계층의 상시 버전 기록이 사전 방어로 진짜 답이 되는 이유를 설명합니다."
+title: "【2026 파일 관리】덮어쓴 파일 복구의 한계: 자동 복구로는 닿지 못하는 곳"
+description: "자동 복구는 충돌 구조용, 데이터 복구 소프트웨어는 덮어쓰기 직후 몇 분 안이 승부 — 어느 것도 「정상 종료 후의 덮어쓰기」에는 닿지 못합니다. 본문은 사후 구조의 한계를 풀어내고, 툴 계층의 상시 버전 기록이 사전 방어로 진짜 답이 되는 이유를 설명합니다."
 voice_version: v2-2026-05-11
 date: 2026-05-02T18:00:00+08:00
 draft: false
@@ -16,7 +16,7 @@ locales_required: [en, zh-TW, zh-CN, ja, ko]
 market_strategy: single-market-ja-primary
 ranking_locales: [ja, ko]
 cta_topic: recovery
-image_alt_data: "monthly_report.xlsx를 19:00, 19:15, 19:30에 저장한 타임라인 — 19:30 덮어쓰기는 AutoRecover, OneDrive, 데이터 복구 소프트웨어로 되돌릴 수 없으며, 유일한 답은 저장이 발생하기 전 상류 예방"
+image_alt_data: "monthly_report.xlsx를 19:00, 19:15, 19:30에 저장한 타임라인 — 19:30 덮어쓰기는 자동 복구, OneDrive, 데이터 복구 소프트웨어로 되돌릴 수 없으며, 유일한 답은 저장이 발생하기 전 상류 예방"
 faq_schema:
   - q: AutoRecover 到底是為什麼設計的？
     a: AutoRecover 是為當機救援設計的，每 10 分鐘自動暫存一份，但在檔案正常關閉後就會清除。它的設計目標是「打到一半當機」場景，不適用於「正常關閉後才發現覆蓋錯」這種情境。

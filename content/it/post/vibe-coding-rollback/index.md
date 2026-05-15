@@ -4,6 +4,7 @@ description: "L'agente AI corre avanti, il codice non parte, hai perso traccia d
 voice_version: v2-2026-05-11
 date: 2026-04-30T09:00:00+08:00
 slug: vibe-coding-rollback
+retrofit_status: v1-legacy
 locale: it
 primary_keyword: "rollback vibe coding"
 locales: [zh-TW, en, zh-CN, ja, it]
@@ -125,7 +126,7 @@ La prossima volta che sfora, apri la Timeline e clicca l'ultima voce. **Problema
 
 ## Letture correlate
 
-- [Come usare Keeply, l'app per le note dei file: salta il tour delle 30 funzioni, parti con 2 azioni](/it/post/keeply-getting-started-from-zero/) (PILLAR 3, la guida completa all'onboarding di Keeply)
+- [Come usare Keeply, l'app per le note dei file: salta il tour delle 30 funzioni, parti con 2 azioni](/it/post/keeply-getting-started-from-zero/) (PILLAR 3, la guida completa all'onconsiglioing di Keeply)
 
 ---
 

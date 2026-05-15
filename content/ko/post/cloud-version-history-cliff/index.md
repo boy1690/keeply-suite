@@ -1,6 +1,6 @@
 ---
 title: "【2026 파일 관리】iCloud 와 Dropbox 를 비교하기 전에:4 개 클라우드가 공유하는 버전 기록의 절벽"
-description: "iCloud、Dropbox、OneDrive、Google Drive 비교 글은 모두 용량・가격・공유 UX 만 측정하고 retention 은 측정하지 않는다. 구조적 빈틈:4 개 모두 버전 기록에 cap 을 둔다(시간제 또는 계수제). Apple 은 iCloud 정책조차 공개하지 않았다. 대가는 3 개월 뒤 나타난다——필요한 버전이 사라져 있다."
+description: "iCloud、Dropbox、OneDrive、Google Drive 비교 글은 모두 용량・가격・공유 UX 만 측정하고 retention 은 측정하지 않는다. 구조적 빈틈:4 개 모두 버전 기록에 상한 을 둔다(시간제 또는 계수제). Apple 은 iCloud 정책조차 공개하지 않았다. 대가는 3 개월 뒤 나타난다——필요한 버전이 사라져 있다."
 voice_version: v2-2026-05-12
 date: 2026-05-12T08:00:00+08:00
 draft: false
@@ -16,7 +16,7 @@ cta_topic: backup
 role: cluster
 pillar_parent: file-version-management-complete-guide
 locales_required: [en, zh-TW, zh-CN, ja, ko, it]
-image_alt_data: "iCloud Drive、Dropbox、OneDrive、Google Drive 4 개 클라우드의 버전 기록 retention 을 나란히 비교 — Apple 은 미공개、Dropbox 는 30/180/365 일、OneDrive 는 500 버전 계수、Google Drive 는 30 일 또는 100 버전 — 4 개 모두 공통 cap 이 있음을 드러낸다. 비교 글이 보여주지 않은 표"
+image_alt_data: "iCloud Drive、Dropbox、OneDrive、Google Drive 4 개 클라우드의 버전 기록 retention 을 나란히 비교 — Apple 은 미공개、Dropbox 는 30/180/365 일、OneDrive 는 500 버전 계수、Google Drive 는 30 일 또는 100 버전 — 4 개 모두 공통 상한 이 있음을 드러낸다. 비교 글이 보여주지 않은 표"
 faq_schema:
   - q: iCloud、Dropbox、OneDrive、Google Drive 4 개 모두 버전 기록이 있나요?
     a: 4 개 중 3 개만 범용 파일 버전 기록을 노출합니다. iCloud Drive 는 PSD / Word / PDF 등 Apple 네이티브 외 파일의 버전 기록을 노출하지 않습니다. Pages、Numbers、Keynote 만 내장 버전 브라우저가 있습니다. Dropbox、OneDrive、Google Drive 모두 버전을 보관하지만 cap 형태가 다릅니다.

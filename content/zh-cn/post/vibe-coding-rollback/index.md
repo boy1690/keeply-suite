@@ -4,6 +4,7 @@ description: "AI agent 冲太远、代码跑不过、你分不清它动了哪几
 voice_version: v2-2026-05-11
 date: 2026-04-30T09:00:00+08:00
 slug: vibe-coding-rollback
+retrofit_status: v1-legacy
 locale: zh-CN
 primary_keyword: "vibe coding 失控"
 locales: [zh-TW, en, zh-CN, ja, ko]
@@ -48,7 +49,7 @@ howto_schema:
 
 ---
 
-A 工程师打开 Cursor，让 AI 改一个 bug。AI 改完跑不过。他让 AI 再修。AI 动了第 3 个文件。还是不行。又改了第 5 个。A 工程师此刻已经不确定 AI 动过哪几个文件了。
+A 工程师打开 Cursor，让 AI 改一个 错误。AI 改完跑不过。他让 AI 再修。AI 动了第 3 个文件。还是不行。又改了第 5 个。A 工程师此刻已经不确定 AI 动过哪几个文件了。
 
 这时候你大概会想：先停下来，至少要回到刚才那个还能跑的状态。
 

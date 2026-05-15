@@ -1,6 +1,6 @@
 ---
-title: "【2026 檔案管理】找回被覆蓋檔案的極限：AutoRecover 救不到、資料復原軟體賭運氣，Keeply 怎麼補事前防禦"
-description: "AutoRecover 為當機救援設計、檔案關閉就清；資料復原軟體成功率以覆蓋後幾分鐘為勝負；SSD TRIM 直接抹掉磁區。事後救援都有極限——換 Keeply 後每 30 分鐘背景自動存、覆蓋掉了 3 秒回得到上一版。"
+title: "【2026 檔案管理】找回被覆蓋檔案的極限：自動回復 救不到、資料復原軟體賭運氣，Keeply 怎麼補事前防禦"
+description: "自動回復 為當機救援設計、檔案關閉就清；資料復原軟體成功率以覆蓋後幾分鐘為勝負；SSD TRIM 直接抹掉磁區。事後救援都有極限——換 Keeply 後每 30 分鐘背景自動存、覆蓋掉了 3 秒回得到上一版。"
 voice_version: v3-2026-05-15
 date: 2026-05-02T18:00:00+08:00
 draft: false
@@ -17,7 +17,7 @@ ranking_locales: [ja, ko]
 cta_topic: recovery
 role: cluster
 pillar_parent: file-version-management-complete-guide
-image_alt_data: "monthly_report.xlsx 在 19:00、19:15、19:30 三次儲存的時間軸——19:30 的覆蓋儲存無法透過 AutoRecover、OneDrive 或資料復原軟體復原；唯一解答是在儲存發生前建立上游防護"
+image_alt_data: "monthly_report.xlsx 在 19:00、19:15、19:30 三次儲存的時間軸——19:30 的覆蓋儲存無法透過 自動回復、OneDrive 或資料復原軟體復原；唯一解答是在儲存發生前建立上游防護"
 faq_schema:
   - q: AutoRecover 到底是為什麼設計的？
     a: AutoRecover 是為當機救援設計的、每 10 分鐘自動暫存一份，但在檔案正常關閉後就會清除。它的設計目標是「打到一半當機」場景，不適用於「正常關閉後才發現覆蓋錯」這種情境。

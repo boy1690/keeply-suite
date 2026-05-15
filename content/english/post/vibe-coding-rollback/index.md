@@ -4,6 +4,7 @@ description: "AI agent races ahead, code won't run, you've lost track of which f
 voice_version: v2-2026-05-11
 date: 2026-04-30T09:00:00+08:00
 slug: vibe-coding-rollback
+retrofit_status: v1-legacy
 locale: en
 primary_keyword: "vibe coding rollback"
 locales: [zh-TW, en, zh-CN, ja, ko]

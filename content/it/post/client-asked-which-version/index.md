@@ -1,6 +1,6 @@
 ---
 title: "【2026 Gestione file】Word salva le versioni, non i ricordi di 3 mesi fa"
-description: "Word AutoRecover, cronologia versioni OneDrive e Time Machine sono tutti strumenti di salvataggio a livello di archiviazione — retention va da cancellato-alla-chiusura fino a circa 500 versioni. Recuperare ciò che hai consegnato 3 mesi fa richiede una cronologia versioni always-on a livello strumentale più metadata al momento della consegna."
+description: "Word Salvataggio automatico, cronologia versioni OneDrive e Time Machine sono tutti strumenti di salvataggio a livello di archiviazione — retention va da cancellato-alla-chiusura fino a circa 500 versioni. Recuperare ciò che hai consegnato 3 mesi fa richiede una cronologia versioni always-on a livello strumentale più metadata al momento della consegna."
 voice_version: v2-2026-05-11
 date: 2026-05-02T09:00:00+08:00
 draft: false
@@ -14,7 +14,7 @@ image: cover.svg
 og_image: cover.png
 locales_required: [en, zh-TW, zh-CN, ja, ko, it]
 cta_topic: versioning
-image_alt_data: "Orologio alle 11:23 accanto a tre file — proposal_v3_FINAL.docx, v3_FINAL_v2.docx, v3_FINAL_final.docx — nessuno riconducibile alla consegna di marzo chiesta dal cliente; AutoRecover di Word e OneDrive non raggiungono 3 mesi indietro"
+image_alt_data: "Orologio alle 11:23 accanto a tre file — proposal_v3_FINAL.docx, v3_FINAL_v2.docx, v3_FINAL_final.docx — nessuno riconducibile alla consegna di marzo chiesta dal cliente; Salvataggio automatico di Word e OneDrive non raggiungono 3 mesi indietro"
 faq_schema:
   - q: Word 內建版本歷史能做什麼？
     a: Word 有三種機制：AutoRecover（當機救援，關閉即清除）、自動儲存（邊打邊存至雲端）、OneDrive 版本歷史（保留約 500 個版本快照）。三種都是短期儲存事故救援，設計目標不包含 3 個月後的交付版本追蹤。

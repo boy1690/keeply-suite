@@ -46,7 +46,7 @@ faq_schema:
 
 - [見えない請求書は不安で払う](#anxious-bill)
 - [なぜ共有フォルダの命名ルールは必ず崩れるか](#naming-failure)
-- [共有フォルダの自動バージョン管理：_v8 を消す](#auto-versioning)
+- [共有フォルダの自動バージョン管理：_v8 を消す](#auto-バージョニング)
 - [あなたは設計しているのか、ファイルを守っているのか](#designer-or-guard)
 
 ---
@@ -75,7 +75,7 @@ Asana《[Anatomy of Work](https://asana.com/resources/why-work-about-work-is-bad
 
 ---
 
-## 共有フォルダの自動バージョン管理：_v8 を消す {#auto-versioning}
+## 共有フォルダの自動バージョン管理：_v8 を消す {#auto-バージョニング}
 
 明日の朝、フォルダを開けると、中には綺麗な `Floorplan.dwg`、`Brand_Brief.psd`、`Budget.xlsx` だけがある。`_v7_FINAL_絶対に触らないで` のサフィックスはない。
 

@@ -4,6 +4,7 @@ description: "Keeply non ti chiede 14 giorni da studente — trascina dentro una
 voice_version: v2-2026-05-11
 date: 2026-04-30T09:00:00+08:00
 slug: keeply-getting-started-from-zero
+retrofit_status: v1-legacy
 locale: it
 primary_keyword: "come usare Keeply"
 locales: [zh-TW, en, zh-CN, ja, it]
@@ -18,7 +19,7 @@ status: approved
 bwf_version_at_draft: v0.2.11
 voice_calibration_round: "user round 1+2+3 applied + UI-grounded walk-through"
 cta_topic: install
-image_alt_data: "Confronto affiancato: checklist di 30 funzioni richiede 14 giorni di onboarding contro 2 azioni — trascina una cartella, continua a lavorare — con protezione attiva dal primo giorno senza curva di apprendimento"
+image_alt_data: "Confronto affiancato: checklist di 30 funzioni richiede 14 giorni di onconsiglioing contro 2 azioni — trascina una cartella, continua a lavorare — con protezione attiva dal primo giorno senza curva di apprendimento"
 howto_schema:
   name: Keeply 從零開始 2 個動作上手
   totalTime: PT7D
@@ -67,7 +68,7 @@ Pensi: "Ci tornerò la prossima settimana e me la prenderò comoda." Poi non lo 
 
 ![Confronto fianco a fianco: la checklist tradizionale di 30 funzioni vs. "trascinalo dentro e basta"](image-1.svg)
 
-La maggior parte delle aziende di software tratta "imparalo in 14 giorni" come l'ordine naturale delle cose. La [ricerca di settore](https://userpilot.com/blog/time-to-value-benchmark-report-2024/) mostra che gli utenti che completano meno della metà dell'onboarding abbandonano entro 14 giorni a un tasso **3 volte** superiore rispetto agli utenti che lo completano tutto.
+La maggior parte delle aziende di software tratta "imparalo in 14 giorni" come l'ordine naturale delle cose. La [ricerca di settore](https://userpilot.com/blog/time-to-value-benchmark-report-2024/) mostra che gli utenti che completano meno della metà dell'onconsiglioing abbandonano entro 14 giorni a un tasso **3 volte** superiore rispetto agli utenti che lo completano tutto.
 
 In altre parole: il software dà per scontato che tu abbia 14 giorni liberi. Dà per scontato che il tuo lavoro possa aspettare finché non l'hai imparato.
 
@@ -91,7 +92,7 @@ Apro la cronologia. **Torno a uno stato che potevo controllare.**
 
 È stato lì che ho capito: un buon strumento non è quello con più funzioni, è **quello abbastanza semplice da padroneggiare**. Non avevo imparato nemmeno una funzione, e solo per aver tranquillamente recuperato quel file, lo strumento si era già ripagato.
 
-![Documentazione di onboarding tradizionale vs. Keeply che gira al giorno 1](image-2.svg)
+![Documentazione di onconsiglioing tradizionale vs. Keeply che gira al giorno 1](image-2.svg)
 
 Lo strumento non è il problema. **Questa categoria di software semplicemente non dovrebbe essere progettata intorno a "impara prima, usa dopo".**
 

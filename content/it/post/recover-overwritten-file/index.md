@@ -1,6 +1,6 @@
 ---
-title: "【2026 Gestione file】Il limite del recupero file sovrascritto: dove AutoRecover non arriva"
-description: "AutoRecover è progettato per il recupero da crash, il software di recupero dati ha pochi minuti dopo la sovrascrittura — nessuno arriva allo scenario 'me ne accorgo dopo un salvataggio normale'. L'articolo apre i limiti del recupero post-evento e spiega perché una cronologia versioni always-on a livello strumentale è la vera risposta."
+title: "【2026 Gestione file】Il limite del recupero file sovrascritto: dove Salvataggio automatico non arriva"
+description: "Salvataggio automatico è progettato per il recupero da crash, il software di recupero dati ha pochi minuti dopo la sovrascrittura — nessuno arriva allo scenario 'me ne accorgo dopo un salvataggio normale'. L'articolo apre i limiti del recupero post-evento e spiega perché una cronologia versioni always-on a livello strumentale è la vera risposta."
 voice_version: v2-2026-05-11
 date: 2026-05-02T18:00:00+08:00
 draft: false
@@ -16,7 +16,7 @@ locales_required: [en, zh-TW, zh-CN, ja, ko, it]
 market_strategy: single-market-ja-primary
 ranking_locales: [ja, ko]
 cta_topic: recovery
-image_alt_data: "Timeline di monthly_report.xlsx salvato alle 19:00, 19:15 e 19:30 — la sovrascrittura delle 19:30 non è annullabile con AutoRecover, OneDrive o software di recupero dati; l'unica risposta è la prevenzione a monte, prima del salvataggio"
+image_alt_data: "Timeline di monthly_report.xlsx salvato alle 19:00, 19:15 e 19:30 — la sovrascrittura delle 19:30 non è annullabile con Salvataggio automatico, OneDrive o software di recupero dati; l'unica risposta è la prevenzione a monte, prima del salvataggio"
 faq_schema:
   - q: AutoRecover 到底是為什麼設計的？
     a: AutoRecover 是為當機救援設計的，每 10 分鐘自動暫存一份，但在檔案正常關閉後就會清除。它的設計目標是「打到一半當機」場景，不適用於「正常關閉後才發現覆蓋錯」這種情境。
