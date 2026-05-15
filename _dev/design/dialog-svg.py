@@ -201,6 +201,8 @@ TARGETS = [
     ("zh-cn", "recover-overwritten-file", "recover-overwritten-file_cn"),
     ("zh-tw", "photoshop-autosave-not-version-history", "photoshop-autosave-not-version-history_tw"),
     ("zh-cn", "photoshop-autosave-not-version-history", "photoshop-autosave-not-version-history_cn"),
+    ("zh-tw", "departing-employee-data-risk", "departing-employee-data-risk_tw"),
+    ("zh-cn", "departing-employee-data-risk", "departing-employee-data-risk_cn"),
 ]
 
 

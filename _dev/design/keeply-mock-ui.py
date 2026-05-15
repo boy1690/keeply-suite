@@ -330,6 +330,24 @@ CASES = {
         ],
         "note": "客户确认版 — v2 主色完稿",
     },
+    "departing-employee-data-risk_tw": {
+        "file_count_text": "這次改了 3 個檔案",
+        "files": [
+            ("A", "brand-book/logo.ai", "新增"),
+            ("A", "brand-book/colors.pdf", "新增"),
+            ("A", "brand-book/guidelines.docx", "新增"),
+        ],
+        "note": "4 月 brand-book 交付完整集 — 已交給業主",
+    },
+    "departing-employee-data-risk_cn": {
+        "file_count_text": "这次改了 3 个文件",
+        "files": [
+            ("A", "brand-book/logo.ai", "新增"),
+            ("A", "brand-book/colors.pdf", "新增"),
+            ("A", "brand-book/guidelines.docx", "新增"),
+        ],
+        "note": "4 月 brand-book 交付完整集 — 已交给业主",
+    },
 }
 
 
