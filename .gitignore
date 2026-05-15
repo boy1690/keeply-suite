@@ -19,6 +19,7 @@ Thumbs.db
 .claude/*
 !.claude/settings.json
 !.claude/skills/
+!.claude/hooks/
 .specify/
 
 # Specs live in Z:\keeply-blog (separate git repo on NAS)

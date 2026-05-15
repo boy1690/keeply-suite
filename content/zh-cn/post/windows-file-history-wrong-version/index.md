@@ -51,23 +51,15 @@ faq_schema:
 
 ## 换 Keeply 后我的时间轴长这样
 
-先让你看现在。同样的「meeting-notes.docx」、同样昨天到今天的修改，在 [Keeply](https://keeply.work) 里长这样：
+先让你看现在。同样的「meeting-notes.docx」、同样昨天到今天的修改、在 [Keeply](https://keeply.work) 里长这样。
 
-```
-Keeply 时间轴 — meeting-notes.docx
+昨天会议结束后我亲手存了一版——点 Keeply 主窗口的「保存版本」按钮、跳出来这个对话框：
 
-5 月 13 日 — 星期二
-─────────────────────────────────
-● 19:42   meeting-notes.docx   （自动保存）
-● 14:50   meeting-notes.docx   ★「会议后加结论」 ← 我亲手存的
-● 14:30   meeting-notes.docx   （自动保存）
-● 09:30   meeting-notes.docx   ★「早上的草稿」 ← 我亲手存的
+![Keeply 保存版本对话框：变更文件清单 + 笔记字段 + 取消/保存版本按钮](save-dialog.svg)
 
-5 月 12 日 — 星期一
-─────────────────────────────────
-● 17:15   meeting-notes.docx   （自动保存）
-● 14:22   meeting-notes.docx   ★「业主第一次反馈后」 ← 我亲手存的
-```
+写完笔记、点保存版本、关电脑走人。这时候时间轴长这样：
+
+![Keeply 时间轴 meeting-notes.docx：跨 2 天的版本史 + 亲手存的笔记](timeline.svg)
 
 要找「会议后加结论」那版——点那一行就好。不用看一排 14:00、15:00、16:00 时间戳猜。
 
