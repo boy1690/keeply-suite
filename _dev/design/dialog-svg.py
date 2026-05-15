@@ -191,6 +191,8 @@ TARGETS = [
     ("zh-cn", "thesis-single-point-of-failure", "thesis-single-point-of-failure_cn"),
     ("zh-tw", "autocad-wrong-version-crew", "autocad-wrong-version-crew_tw"),
     ("zh-cn", "autocad-wrong-version-crew", "autocad-wrong-version-crew_cn"),
+    ("zh-tw", "dropbox-conflicted-copy", "dropbox-conflicted-copy_tw"),
+    ("zh-cn", "dropbox-conflicted-copy", "dropbox-conflicted-copy_cn"),
 ]
 
 

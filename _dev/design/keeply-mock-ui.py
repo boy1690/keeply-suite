@@ -258,6 +258,20 @@ CASES = {
         ],
         "note": "盖板规格改 — 设计第 4 版",
     },
+    "dropbox-conflicted-copy_tw": {
+        "file_count_text": "這次改了 1 個檔案",
+        "files": [
+            ("M", "proposal.docx", "已修改"),
+        ],
+        "note": "加完結尾 CTA — 等 Anna 那邊合進來",
+    },
+    "dropbox-conflicted-copy_cn": {
+        "file_count_text": "这次改了 1 个文件",
+        "files": [
+            ("M", "proposal.docx", "已修改"),
+        ],
+        "note": "加完结尾 CTA — 等 Anna 那边合进来",
+    },
 }
 
 
