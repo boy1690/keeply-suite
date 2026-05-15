@@ -5,6 +5,7 @@ voice_version: v2-2026-05-13
 date: 2026-05-13T09:00:00+08:00
 draft: false
 slug: "time-machine-vs-dropbox"
+retrofit_status: v1-legacy
 primary_keyword: "Time Machine Dropbox 違い"
 locale: ja
 categories: [ファイル管理]

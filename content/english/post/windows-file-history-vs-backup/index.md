@@ -1,10 +1,11 @@
 ---
-title: "【2026 File Management】You think you're backed up. \"Backup\" means three different things in Windows."
+title: "【2026 File Management】Windows file history vs backup: 3 different things"
 description: "Windows ships three separate features people call \"backup\" — File History, Windows Backup, and version history in cloud sync. They solve three different problems. Confusing them is why you have one of them covered and feel safe when you're missing the other two."
 voice_version: v2-2026-05-13
 date: 2026-05-13T08:00:00+08:00
 draft: false
 slug: "windows-file-history-vs-backup"
+retrofit_status: v1-legacy
 primary_keyword: "windows file history vs backup"
 locale: en
 categories: [File Management]
@@ -33,7 +34,7 @@ faq_schema:
     a: Keeply is a per-save version history layer that lives next to whatever cloud or backup you're already running. Not a replacement for Windows Backup or File History. You keep using those for disaster recovery and external-drive sync; Keeply captures every deliberate save so you can pull back the specific version you intended, not the closest scheduled snapshot.
 ---
 
-# 【2026 File Management】You think you're backed up. "Backup" means three different things in Windows.
+# 【2026 File Management】Windows file history vs backup: 3 different things
 
 > Three Windows features answer to "backup." They aren't interchangeable. You probably have one of them.
 

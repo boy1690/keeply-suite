@@ -5,6 +5,7 @@ voice_version: v2-2026-05-13
 date: 2026-05-13T08:30:00+08:00
 draft: false
 slug: "windows-file-history-wrong-version"
+retrofit_status: v1-legacy
 primary_keyword: "ファイル履歴 復元 違うバージョン"
 locale: ja
 categories: [ファイル管理]

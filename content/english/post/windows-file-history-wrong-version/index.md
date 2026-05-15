@@ -1,10 +1,11 @@
 ---
-title: "【2026 File Management】I asked Windows File History for yesterday's draft. It gave me a file from 2019."
+title: "【2026 File Management】Windows File History wrong version: yesterday's draft missing"
 description: "File History returns the nearest scheduled snapshot — not the save you made. If the external drive was offline, the nearest snapshot might be from 2019. The mechanism isn't broken. It just wasn't built for the question you were asking."
 voice_version: v2-2026-05-13
 date: 2026-05-13T08:30:00+08:00
 draft: false
 slug: "windows-file-history-wrong-version"
+retrofit_status: v1-legacy
 primary_keyword: "windows file history wrong version"
 locale: en
 categories: [File Management]
@@ -33,7 +34,7 @@ faq_schema:
     a: Keep File History — it's good at its job (continuous folder backup to an external drive). Add an intent-driven layer for the "exact save I made at 2:47 PM" need. The two cover different failure modes and aren't replacements for each other.
 ---
 
-# 【2026 File Management】I asked Windows File History for yesterday's draft. It gave me a file from 2019.
+# 【2026 File Management】Windows File History wrong version: yesterday's draft missing
 
 > File History didn't break. It returned what it had. The question was the wrong shape for the tool.
 

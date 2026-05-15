@@ -5,6 +5,7 @@ voice_version: v2-2026-05-13
 date: 2026-05-13T10:00:00+08:00
 draft: false
 slug: "deleted-files-recovery-list"
+retrofit_status: v1-legacy
 primary_keyword: "误删文件 找回"
 locale: zh-CN
 categories: [文件管理]

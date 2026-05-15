@@ -1,10 +1,11 @@
 ---
-title: "【2026 文件管理】Windows 有 3 种「备份」、却没一个能找回「会议后加结论」那版"
+title: "【2026 文件管理】Windows 3 种「备份」：没一个能找回「会议后加结论」那版"
 description: "Windows 内建 File History、Windows Backup、云端版本历史——名字都叫备份、解的却是 3 种不同问题。第 4 种问题「我会议后存的那一版」，3 个全答不出来。Keeply 就是补这层的工具：本机跑、每版可以写笔记、不靠外接硬盘。"
 voice_version: v6-2026-05-14
 date: 2026-05-13T08:00:00+08:00
 draft: false
 slug: "windows-file-history-vs-backup"
+retrofit_status: v1-legacy
 primary_keyword: "Windows 备份 区别"
 locale: zh-CN
 categories: [文件管理]
@@ -33,7 +34,7 @@ faq_schema:
     a: 两种方式同时跑。一是背景自动每 30 分钟轮询一次、文件有变更才存（默认 30 min、可调）。二是你随时可以点 Keeply 主窗口的「保存版本」按钮、跳对话框让你填笔记再存。Keeply 不监听你在 Word 或 Photoshop 按 Cmd+S——那是外部编辑器自己的事，Keeply 是事后轮询文件系统变更。
 ---
 
-# 【2026 文件管理】Windows 有 3 种「备份」、却没一个能找回「会议后加结论」那版
+# 【2026 文件管理】Windows 3 种「备份」：没一个能找回「会议后加结论」那版
 
 > Windows 内建 3 个都叫「备份」的功能。它们都答不出「我会议后存的那版在哪」。
 

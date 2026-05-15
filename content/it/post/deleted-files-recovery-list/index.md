@@ -5,6 +5,7 @@ voice_version: v2-2026-05-13
 date: 2026-05-13T10:00:00+08:00
 draft: false
 slug: "deleted-files-recovery-list"
+retrofit_status: v1-legacy
 primary_keyword: "recupero file eliminati"
 locale: it
 categories: [Gestione file]

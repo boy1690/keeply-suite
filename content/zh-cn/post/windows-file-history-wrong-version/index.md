@@ -5,6 +5,7 @@ voice_version: v6-2026-05-14
 date: 2026-05-13T08:30:00+08:00
 draft: false
 slug: "windows-file-history-wrong-version"
+retrofit_status: v1-legacy
 primary_keyword: "Windows 还原 错版本"
 locale: zh-CN
 categories: [文件管理]

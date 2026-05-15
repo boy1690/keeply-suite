@@ -1,5 +1,5 @@
 ---
-title: "【2026 File Management】Document version control system for non-developers: stop the `_v3_FINAL` arms race"
+title: "【2026 File Management】Document version control: stop the `_v3_FINAL` arms race"
 description: "Why your `_v3_FINAL.docx` habit isn't OCD — it's a survival reflex against an OS that doesn't give you undo after Cmd+S. This piece unpacks 'too many versions' into 4 separate pains, then shows the 3 tool designs (with Keeply as one) that take the naming burden off your shoulders."
 voice_version: v3-2026-05-15
 date: 2026-05-15T14:29:00+08:00

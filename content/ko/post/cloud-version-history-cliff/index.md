@@ -5,6 +5,7 @@ voice_version: v2-2026-05-12
 date: 2026-05-12T08:00:00+08:00
 draft: false
 slug: "cloud-version-history-cliff"
+retrofit_status: v1-legacy
 primary_keyword: "아이클라우드 드롭박스 차이"
 locale: ko
 categories: [파일 관리]

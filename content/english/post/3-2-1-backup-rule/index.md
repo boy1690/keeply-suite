@@ -1,5 +1,5 @@
 ---
-title: "【2026 File Management】3-2-1 backup rule still enough in 2026? Space redundancy saves drives, not the version you overwrote"
+title: "【2026 File Management】3-2-1 backup rule: spatial redundancy, not temporal"
 description: "The 3-2-1 backup rule (3 copies, 2 media, 1 offsite) protects against hardware failure, fire, and ransomware — but Peter Krogh's 2005 design never handled the version you overwrote yourself. Here's why the '3' is spatial redundancy not temporal, and how one tool covers both."
 voice_version: v3-2026-05-15
 date: 2026-05-15T14:29:00+08:00
@@ -32,7 +32,7 @@ faq_schema:
     a: Yes. Keeply builds 3-2-1 directly into its location layer (local work copy + canonical store + backup location), adds automatic version history on every save, and a Release freeze mechanism (mark a snapshot as "the version that went to the client" so it can't be overwritten by later saves). One tool covers spatial redundancy + temporal redundancy + release freeze.
 ---
 
-# 【2026 File Management】3-2-1 backup rule still enough in 2026? Space redundancy saves drives, not the version you overwrote
+# 【2026 File Management】3-2-1 backup rule: spatial redundancy, not temporal
 
 > The 3-2-1 rule hasn't changed in 20 years. What you're afraid of has.
 
