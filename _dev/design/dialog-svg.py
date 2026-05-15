@@ -205,6 +205,8 @@ TARGETS = [
     ("zh-cn", "departing-employee-data-risk", "departing-employee-data-risk_cn"),
     ("zh-tw", "too-many-file-versions", "too-many-file-versions_tw"),
     ("zh-cn", "too-many-file-versions", "too-many-file-versions_cn"),
+    ("zh-tw", "version-control-software-non-developer", "version-control-software-non-developer_tw"),
+    ("zh-cn", "version-control-software-non-developer", "version-control-software-non-developer_cn"),
 ]
 
 

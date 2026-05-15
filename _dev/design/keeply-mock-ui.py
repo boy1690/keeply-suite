@@ -362,6 +362,20 @@ CASES = {
         ],
         "note": "客户签约版 — 5/4 业主确认",
     },
+    "version-control-software-non-developer_tw": {
+        "file_count_text": "這次改了 1 個檔案",
+        "files": [
+            ("M", "presentation.pptx", "已修改"),
+        ],
+        "note": "客戶簡報定版 — 不打一行 git 指令",
+    },
+    "version-control-software-non-developer_cn": {
+        "file_count_text": "这次改了 1 个文件",
+        "files": [
+            ("M", "presentation.pptx", "已修改"),
+        ],
+        "note": "客户简报定版 — 不打一行 git 指令",
+    },
 }
 
 
