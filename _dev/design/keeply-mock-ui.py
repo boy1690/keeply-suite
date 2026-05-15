@@ -376,6 +376,20 @@ CASES = {
         ],
         "note": "客户简报定版 — 不打一行 git 指令",
     },
+    "version-control-software-non-developer_ja": {
+        "file_count_text": "1 件のファイルを変更",
+        "files": [
+            ("M", "presentation.pptx", "変更"),
+        ],
+        "note": "クライアント承認の最終版 — コマンド入力ゼロ",
+    },
+    "version-control-software-non-developer_en": {
+        "file_count_text": "1 file changed",
+        "files": [
+            ("M", "presentation.pptx", "Modified"),
+        ],
+        "note": "Final version — client approved, no CLI",
+    },
 }
 
 

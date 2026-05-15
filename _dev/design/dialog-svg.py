@@ -67,6 +67,20 @@ def badge_colors_cn(status: str):
     return bg, tx, label
 
 
+def badge_colors_ja(status: str):
+    s = status.upper()
+    bg, tx, _ = badge_colors(s)
+    label = {"M": "変更", "A": "追加", "D": "削除"}.get(s, status)
+    return bg, tx, label
+
+
+def badge_colors_en(status: str):
+    s = status.upper()
+    bg, tx, _ = badge_colors(s)
+    label = {"M": "Modified", "A": "Added", "D": "Deleted"}.get(s, status)
+    return bg, tx, label
+
+
 def gen_svg(
     *,
     files: list,
@@ -75,6 +89,7 @@ def gen_svg(
     save_btn_text: str,
     kbd_hint: str = "⌘ S",
     is_cn: bool = False,
+    locale: str = "zh-tw",
 ) -> str:
     """Build the side-panel SVG matching actual ChangesView UI."""
     y = 0
@@ -106,8 +121,18 @@ def gen_svg(
 
     # Header row content
     total = len(files)
-    select_all_text = "全部勾選" if not is_cn else "全部勾选"
-    refresh_text = "重新整理" if not is_cn else "刷新"
+    select_all_text = {
+        "zh-tw": "全部勾選",
+        "zh-cn": "全部勾选",
+        "ja": "全選",
+        "en": "Select all",
+    }.get(locale, "全部勾選")
+    refresh_text = {
+        "zh-tw": "重新整理",
+        "zh-cn": "刷新",
+        "ja": "再読込",
+        "en": "Refresh",
+    }.get(locale, "重新整理")
     parts.append(f'<text x="{PAD}" y="18" font-size="12" fill="{HEADER_TEXT}">{esc(select_all_text)}</text>')
     parts.append(f'<text x="{PAD + 70}" y="18" font-size="12" fill="{TEXT_MUTED}">{total}/{total}</text>')
     # refresh icon (simplified circle arrow) + text
@@ -132,7 +157,14 @@ def gen_svg(
         parts.append(f'<text x="{fx}" y="{cy + 4}" font-size="13" fill="{TEXT}" font-family="\'JetBrains Mono\',ui-monospace,monospace">{esc(name)}</text>')
 
         # Status badge (right-aligned)
-        bg_c, tx_c, label = badge_colors_cn(status) if is_cn else badge_colors(status)
+        if locale == "ja":
+            bg_c, tx_c, label = badge_colors_ja(status)
+        elif locale == "en":
+            bg_c, tx_c, label = badge_colors_en(status)
+        elif is_cn or locale == "zh-cn":
+            bg_c, tx_c, label = badge_colors_cn(status)
+        else:
+            bg_c, tx_c, label = badge_colors(status)
         # Badge width based on label
         badge_w = 44
         badge_h = 18
@@ -207,7 +239,14 @@ TARGETS = [
     ("zh-cn", "too-many-file-versions", "too-many-file-versions_cn"),
     ("zh-tw", "version-control-software-non-developer", "version-control-software-non-developer_tw"),
     ("zh-cn", "version-control-software-non-developer", "version-control-software-non-developer_cn"),
+    ("ja", "version-control-software-non-developer", "version-control-software-non-developer_ja"),
+    ("en", "version-control-software-non-developer", "version-control-software-non-developer_en"),
 ]
+
+
+def locale_to_dir(locale: str) -> str:
+    """Map Hugo URL locale to content/ subdir."""
+    return "english" if locale == "en" else locale
 
 
 def main():
@@ -215,8 +254,18 @@ def main():
         case = kmu.CASES[case_key]
         is_cn = locale == "zh-cn"
         n_files = len(case["files"])
-        save_btn = f"儲存全部 {n_files} 個檔案" if not is_cn else f"保存全部 {n_files} 个文件"
-        placeholder_ex = "例如：「業主要求加大柱斷面」" if not is_cn else "例如：「业主要求加大柱断面」"
+        save_btn = {
+            "zh-tw": f"儲存全部 {n_files} 個檔案",
+            "zh-cn": f"保存全部 {n_files} 个文件",
+            "ja": f"{n_files} 件のバージョンを保存",
+            "en": f"Save all {n_files} files" if n_files != 1 else "Save 1 file",
+        }.get(locale, f"儲存全部 {n_files} 個檔案")
+        placeholder_ex = {
+            "zh-tw": "例如：「業主要求加大柱斷面」",
+            "zh-cn": "例如：「业主要求加大柱断面」",
+            "ja": "例：「クライアント承認の最終版」",
+            "en": 'e.g. "Final version — client approved"',
+        }.get(locale, "例如：「業主要求加大柱斷面」")
         kbd = "⌘ S"  # Mac default; could vary per OS
 
         svg = gen_svg(
@@ -226,8 +275,9 @@ def main():
             save_btn_text=save_btn,
             kbd_hint=kbd,
             is_cn=is_cn,
+            locale=locale,
         )
-        out_path = ROOT / f"content/{locale}/post/{slug}/save-dialog.svg"
+        out_path = ROOT / f"content/{locale_to_dir(locale)}/post/{slug}/save-dialog.svg"
         out_path.write_text(svg, encoding="utf-8")
         print(f"  [OK] {out_path}")
 

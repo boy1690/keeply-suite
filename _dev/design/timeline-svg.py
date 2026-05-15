@@ -179,6 +179,20 @@ TIMELINES = {
         ("圖表第二輪修改", [], "昨天"),
         ("初稿 — 從零開始", ["初稿"], "上禮拜"),
     ],
+    ("ja", "version-control-software-non-developer"): [
+        ("自動保存 — 結びページ追加", [], "1 時間前"),
+        ("クライアント承認版 — コマンド入力ゼロ", ["最終版"], "今日午前"),
+        ("自動保存", [], "昨日"),
+        ("図表の二度目の修正", [], "昨日"),
+        ("初稿 — ゼロから", ["初稿"], "先週"),
+    ],
+    ("en", "version-control-software-non-developer"): [
+        ("Auto-save — added closing page", [], "1 hour ago"),
+        ("Client-approved version — no CLI required", ["Final"], "today AM"),
+        ("Auto-save", [], "yesterday"),
+        ("Diagram second revision", [], "yesterday"),
+        ("First draft — from scratch", ["Draft"], "last week"),
+    ],
 }
 
 
@@ -206,18 +220,23 @@ def cn_convert(entries):
     return out
 
 
+def locale_to_dir(locale: str) -> str:
+    return "english" if locale == "en" else locale
+
+
 def main():
     for (locale, slug), entries in TIMELINES.items():
-        # zh-TW
-        svg_tw = gen_timeline(entries=entries)
-        out_tw = ROOT / f"content/{locale}/post/{slug}/timeline.svg"
-        out_tw.write_text(svg_tw, encoding="utf-8")
-        print(f"  [OK] {out_tw}")
-        # zh-CN mirror
-        svg_cn = gen_timeline(entries=cn_convert(entries))
-        out_cn = ROOT / f"content/zh-cn/post/{slug}/timeline.svg"
-        out_cn.write_text(svg_cn, encoding="utf-8")
-        print(f"  [OK] {out_cn}")
+        # direct write for this locale
+        svg = gen_timeline(entries=entries)
+        out = ROOT / f"content/{locale_to_dir(locale)}/post/{slug}/timeline.svg"
+        out.write_text(svg, encoding="utf-8")
+        print(f"  [OK] {out}")
+        # zh-CN mirror only when source is zh-TW
+        if locale == "zh-tw":
+            svg_cn = gen_timeline(entries=cn_convert(entries))
+            out_cn = ROOT / f"content/zh-cn/post/{slug}/timeline.svg"
+            out_cn.write_text(svg_cn, encoding="utf-8")
+            print(f"  [OK] {out_cn}")
 
 
 if __name__ == "__main__":
