@@ -199,6 +199,8 @@ TARGETS = [
     ("zh-cn", "client-asked-which-version", "client-asked-which-version_cn"),
     ("zh-tw", "recover-overwritten-file", "recover-overwritten-file_tw"),
     ("zh-cn", "recover-overwritten-file", "recover-overwritten-file_cn"),
+    ("zh-tw", "photoshop-autosave-not-version-history", "photoshop-autosave-not-version-history_tw"),
+    ("zh-cn", "photoshop-autosave-not-version-history", "photoshop-autosave-not-version-history_cn"),
 ]
 
 

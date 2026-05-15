@@ -316,6 +316,20 @@ CASES = {
         ],
         "note": "月底结算 — 应收应付对账完成",
     },
+    "photoshop-autosave-not-version-history_tw": {
+        "file_count_text": "這次改了 1 個檔案",
+        "files": [
+            ("M", "campaign_v2.psd", "已修改"),
+        ],
+        "note": "客戶確認版 — v2 主色完稿",
+    },
+    "photoshop-autosave-not-version-history_cn": {
+        "file_count_text": "这次改了 1 个文件",
+        "files": [
+            ("M", "campaign_v2.psd", "已修改"),
+        ],
+        "note": "客户确认版 — v2 主色完稿",
+    },
 }
 
 
