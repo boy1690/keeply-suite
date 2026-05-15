@@ -189,6 +189,8 @@ TARGETS = [
     ("zh-cn", "hidden-cost-shared-folders", "hidden-cost-shared-folders_cn"),
     ("zh-tw", "thesis-single-point-of-failure", "thesis-single-point-of-failure_tw"),
     ("zh-cn", "thesis-single-point-of-failure", "thesis-single-point-of-failure_cn"),
+    ("zh-tw", "autocad-wrong-version-crew", "autocad-wrong-version-crew_tw"),
+    ("zh-cn", "autocad-wrong-version-crew", "autocad-wrong-version-crew_cn"),
 ]
 
 

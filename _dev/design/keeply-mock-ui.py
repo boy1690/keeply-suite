@@ -242,6 +242,22 @@ CASES = {
         ],
         "note": "3.2 节重写 — 教授第三轮反馈后",
     },
+    "autocad-wrong-version-crew_tw": {
+        "file_count_text": "這次改了 2 個檔案",
+        "files": [
+            ("M", "A-05_水溝.dwg", "已修改"),
+            ("M", "A-05_水溝.pdf", "已修改"),
+        ],
+        "note": "蓋板規格改 — 設計第 4 版",
+    },
+    "autocad-wrong-version-crew_cn": {
+        "file_count_text": "这次改了 2 个文件",
+        "files": [
+            ("M", "A-05_水沟.dwg", "已修改"),
+            ("M", "A-05_水沟.pdf", "已修改"),
+        ],
+        "note": "盖板规格改 — 设计第 4 版",
+    },
 }
 
 
