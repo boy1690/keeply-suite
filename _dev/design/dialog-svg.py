@@ -193,6 +193,8 @@ TARGETS = [
     ("zh-cn", "autocad-wrong-version-crew", "autocad-wrong-version-crew_cn"),
     ("zh-tw", "dropbox-conflicted-copy", "dropbox-conflicted-copy_tw"),
     ("zh-cn", "dropbox-conflicted-copy", "dropbox-conflicted-copy_cn"),
+    ("zh-tw", "excel-version-history-limits", "excel-version-history-limits_tw"),
+    ("zh-cn", "excel-version-history-limits", "excel-version-history-limits_cn"),
 ]
 
 

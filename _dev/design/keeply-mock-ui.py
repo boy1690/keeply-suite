@@ -272,6 +272,20 @@ CASES = {
         ],
         "note": "加完结尾 CTA — 等 Anna 那边合进来",
     },
+    "excel-version-history-limits_tw": {
+        "file_count_text": "這次改了 1 個檔案",
+        "files": [
+            ("M", "monthly_close.xlsx", "已修改"),
+        ],
+        "note": "Q2 結算 — 改完應收帳款公式",
+    },
+    "excel-version-history-limits_cn": {
+        "file_count_text": "这次改了 1 个文件",
+        "files": [
+            ("M", "monthly_close.xlsx", "已修改"),
+        ],
+        "note": "Q2 结算 — 改完应收账款公式",
+    },
 }
 
 
