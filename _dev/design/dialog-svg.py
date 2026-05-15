@@ -187,6 +187,8 @@ TARGETS = [
     ("zh-cn", "3-2-1-backup-rule", "3-2-1-backup-rule_cn"),
     ("zh-tw", "hidden-cost-shared-folders", "hidden-cost-shared-folders_tw"),
     ("zh-cn", "hidden-cost-shared-folders", "hidden-cost-shared-folders_cn"),
+    ("zh-tw", "thesis-single-point-of-failure", "thesis-single-point-of-failure_tw"),
+    ("zh-cn", "thesis-single-point-of-failure", "thesis-single-point-of-failure_cn"),
 ]
 
 

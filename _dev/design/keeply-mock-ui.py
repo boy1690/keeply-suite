@@ -226,6 +226,22 @@ CASES = {
         ],
         "note": "中庭平面 — 业主签约版 v2.3",
     },
+    "thesis-single-point-of-failure_tw": {
+        "file_count_text": "這次改了 2 個檔案",
+        "files": [
+            ("M", "thesis.docx", "已修改"),
+            ("M", "references.bib", "已修改"),
+        ],
+        "note": "3.2 節重寫 — 教授第三輪回饋後",
+    },
+    "thesis-single-point-of-failure_cn": {
+        "file_count_text": "这次改了 2 个文件",
+        "files": [
+            ("M", "thesis.docx", "已修改"),
+            ("M", "references.bib", "已修改"),
+        ],
+        "note": "3.2 节重写 — 教授第三轮反馈后",
+    },
 }
 
 
