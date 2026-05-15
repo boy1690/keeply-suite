@@ -348,6 +348,20 @@ CASES = {
         ],
         "note": "4 月 brand-book 交付完整集 — 已交给业主",
     },
+    "too-many-file-versions_tw": {
+        "file_count_text": "這次改了 1 個檔案",
+        "files": [
+            ("M", "proposal.docx", "已修改"),
+        ],
+        "note": "客戶簽約版 — 5/4 業主確認",
+    },
+    "too-many-file-versions_cn": {
+        "file_count_text": "这次改了 1 个文件",
+        "files": [
+            ("M", "proposal.docx", "已修改"),
+        ],
+        "note": "客户签约版 — 5/4 业主确认",
+    },
 }
 
 

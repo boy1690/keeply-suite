@@ -203,6 +203,8 @@ TARGETS = [
     ("zh-cn", "photoshop-autosave-not-version-history", "photoshop-autosave-not-version-history_cn"),
     ("zh-tw", "departing-employee-data-risk", "departing-employee-data-risk_tw"),
     ("zh-cn", "departing-employee-data-risk", "departing-employee-data-risk_cn"),
+    ("zh-tw", "too-many-file-versions", "too-many-file-versions_tw"),
+    ("zh-cn", "too-many-file-versions", "too-many-file-versions_cn"),
 ]
 
 
