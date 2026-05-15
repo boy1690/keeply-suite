@@ -208,6 +208,46 @@ TIMELINES = {
         ("Client first feedback round", ["Client"], "last Thu"),
         ("First draft", ["Draft"], "2 weeks ago"),
     ],
+    ("zh-tw", "onedrive-version-history"): [
+        ("自動儲存 — 加入執行摘要", [], "30 分鐘前"),
+        ("Client signed v2.3 — board approved", ["Release"], "今天下午"),
+        ("自動儲存", [], "昨天"),
+        ("CFO 第三輪修改", [], "週一"),
+        ("給董事會的初稿", ["Draft"], "2 週前"),
+        ("董事會前準備", [], "1 個月前"),
+    ],
+    ("en", "onedrive-version-history"): [
+        ("Auto-save — exec summary added", [], "30 min ago"),
+        ("Client signed v2.3 — board approved", ["Release"], "today PM"),
+        ("Auto-save", [], "yesterday"),
+        ("CFO third-round edits", [], "Mon"),
+        ("First draft to board", ["Draft"], "2 weeks ago"),
+        ("Pre-board prep", [], "1 month ago"),
+    ],
+    ("ja", "onedrive-version-history"): [
+        ("自動保存 — エグゼクティブサマリー追加", [], "30 分前"),
+        ("Client signed v2.3 — board approved", ["Release"], "今日午後"),
+        ("自動保存", [], "昨日"),
+        ("CFO 第 3 ラウンド修正", [], "月曜"),
+        ("取締役会初稿", ["Draft"], "2 週間前"),
+        ("取締役会準備", [], "1 ヶ月前"),
+    ],
+    ("ko", "onedrive-version-history"): [
+        ("자동 저장 — 요약 추가", [], "30분 전"),
+        ("Client signed v2.3 — board approved", ["Release"], "오늘 오후"),
+        ("자동 저장", [], "어제"),
+        ("CFO 3차 수정", [], "월요일"),
+        ("이사회 초안", ["Draft"], "2주 전"),
+        ("이사회 준비", [], "1개월 전"),
+    ],
+    ("it", "onedrive-version-history"): [
+        ("Salvataggio auto — sommario aggiunto", [], "30 min fa"),
+        ("Client signed v2.3 — board approved", ["Release"], "oggi pom."),
+        ("Salvataggio auto", [], "ieri"),
+        ("CFO terza revisione", [], "lunedì"),
+        ("Bozza per il CdA", ["Draft"], "2 settimane fa"),
+        ("Preparazione CdA", [], "1 mese fa"),
+    ],
 }
 
 

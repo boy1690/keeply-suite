@@ -81,6 +81,20 @@ def badge_colors_en(status: str):
     return bg, tx, label
 
 
+def badge_colors_ko(status: str):
+    s = status.upper()
+    bg, tx, _ = badge_colors(s)
+    label = {"M": "수정", "A": "추가", "D": "삭제"}.get(s, status)
+    return bg, tx, label
+
+
+def badge_colors_it(status: str):
+    s = status.upper()
+    bg, tx, _ = badge_colors(s)
+    label = {"M": "Modif.", "A": "Aggiun.", "D": "Elim."}.get(s, status)
+    return bg, tx, label
+
+
 def gen_svg(
     *,
     files: list,
@@ -126,12 +140,16 @@ def gen_svg(
         "zh-cn": "全部勾选",
         "ja": "全選",
         "en": "Select all",
+        "ko": "전체 선택",
+        "it": "Seleziona tutto",
     }.get(locale, "全部勾選")
     refresh_text = {
         "zh-tw": "重新整理",
         "zh-cn": "刷新",
         "ja": "再読込",
         "en": "Refresh",
+        "ko": "새로 고침",
+        "it": "Aggiorna",
     }.get(locale, "重新整理")
     parts.append(f'<text x="{PAD}" y="18" font-size="12" fill="{HEADER_TEXT}">{esc(select_all_text)}</text>')
     parts.append(f'<text x="{PAD + 70}" y="18" font-size="12" fill="{TEXT_MUTED}">{total}/{total}</text>')
@@ -161,6 +179,10 @@ def gen_svg(
             bg_c, tx_c, label = badge_colors_ja(status)
         elif locale == "en":
             bg_c, tx_c, label = badge_colors_en(status)
+        elif locale == "ko":
+            bg_c, tx_c, label = badge_colors_ko(status)
+        elif locale == "it":
+            bg_c, tx_c, label = badge_colors_it(status)
         elif is_cn or locale == "zh-cn":
             bg_c, tx_c, label = badge_colors_cn(status)
         else:
@@ -243,6 +265,12 @@ TARGETS = [
     ("en", "version-control-software-non-developer", "version-control-software-non-developer_en"),
     ("en", "3-2-1-backup-rule", "3-2-1-backup-rule_en"),
     ("en", "too-many-file-versions", "too-many-file-versions_en"),
+    ("zh-tw", "onedrive-version-history", "onedrive-version-history_tw"),
+    ("zh-cn", "onedrive-version-history", "onedrive-version-history_cn"),
+    ("en", "onedrive-version-history", "onedrive-version-history_en"),
+    ("ja", "onedrive-version-history", "onedrive-version-history_ja"),
+    ("ko", "onedrive-version-history", "onedrive-version-history_ko"),
+    ("it", "onedrive-version-history", "onedrive-version-history_it"),
 ]
 
 
@@ -261,12 +289,16 @@ def main():
             "zh-cn": f"保存全部 {n_files} 个文件",
             "ja": f"{n_files} 件のバージョンを保存",
             "en": f"Save all {n_files} files" if n_files != 1 else "Save 1 file",
+            "ko": f"{n_files}개 버전 저장",
+            "it": f"Salva {n_files} versioni" if n_files != 1 else "Salva 1 versione",
         }.get(locale, f"儲存全部 {n_files} 個檔案")
         placeholder_ex = {
             "zh-tw": "例如：「業主要求加大柱斷面」",
             "zh-cn": "例如：「业主要求加大柱断面」",
             "ja": "例：「クライアント承認の最終版」",
             "en": 'e.g. "Final version — client approved"',
+            "ko": "예: \"고객 승인 최종본\"",
+            "it": 'es. "Versione finale — approvata dal cliente"',
         }.get(locale, "例如：「業主要求加大柱斷面」")
         kbd = "⌘ S"  # Mac default; could vary per OS
 

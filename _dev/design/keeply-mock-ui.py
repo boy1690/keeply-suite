@@ -404,6 +404,48 @@ CASES = {
         ],
         "note": "Client-approved v2.3 — signed contract version",
     },
+    "onedrive-version-history_tw": {
+        "file_count_text": "這次改了 1 個檔案",
+        "files": [
+            ("M", "proposal.docx", "已修改"),
+        ],
+        "note": "Client signed v2.3 — board approved",
+    },
+    "onedrive-version-history_cn": {
+        "file_count_text": "这次改了 1 个文件",
+        "files": [
+            ("M", "proposal.docx", "已修改"),
+        ],
+        "note": "Client signed v2.3 — board approved",
+    },
+    "onedrive-version-history_en": {
+        "file_count_text": "1 file changed",
+        "files": [
+            ("M", "proposal.docx", "Modified"),
+        ],
+        "note": "Client signed v2.3 — board approved",
+    },
+    "onedrive-version-history_ja": {
+        "file_count_text": "1 件のファイルを変更",
+        "files": [
+            ("M", "proposal.docx", "変更"),
+        ],
+        "note": "クライアント承認 v2.3 — 取締役会承認版",
+    },
+    "onedrive-version-history_ko": {
+        "file_count_text": "1개 파일 변경됨",
+        "files": [
+            ("M", "proposal.docx", "수정"),
+        ],
+        "note": "고객 승인 v2.3 — 이사회 승인본",
+    },
+    "onedrive-version-history_it": {
+        "file_count_text": "1 file modificato",
+        "files": [
+            ("M", "proposal.docx", "Modif."),
+        ],
+        "note": "Approvato dal cliente v2.3 — versione del consiglio",
+    },
 }
 
 
