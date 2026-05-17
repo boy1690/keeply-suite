@@ -143,6 +143,12 @@ James 的場景：5 人團隊 + SP 儲存空間 緊 + 想 清理 但又怕失去
 - **單檔 筆記**：每版 1-2 行筆記。3 個月後翻時間軸看「CFO 第三輪修改」「董事會 簽」tag、不必猜 SP 上 100 版裡哪個是哪個
 - **跨工具 portability**：Keeply 不依賴 SP。James 即使換 Dropbox / NAS、時間軸還在本機 + Keeply 備援位置、不被任何 cloud vendor 的 上限 鎖死
 
+5 人協作場景常遇到的另一個動作：同事改了 SP 上同一份 `proposal.docx`、你想把對方那版套到自己本機改的版本上。Keeply 的「套用同事版本」對話框長這樣：
+
+![Keeply 套用同事版本對話框：把 alice 在 SP 上的 Q2 報價表董事會回饋版套到本機 proposal.docx](cherry-pick-dialog.svg)
+
+注意藍色提示那行——本機 09:00 後的編輯不會被覆蓋、會另存為獨立版本、兩版都留在版本歷史。不必先 email 互傳「最新版.docx」、不必擔心套錯版蓋掉自己的修改。
+
 SP 留給團隊協作 sync + 儲存空間 壓 100、Keeply 給 無上限 單檔版本歷史 + 重要版凍結。**兩個並行、各做自己強項**。
 
 ## 3 種你不需要 Keeply 的 SharePoint 場景 {#when-not-needed}
