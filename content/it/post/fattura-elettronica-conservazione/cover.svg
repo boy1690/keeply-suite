@@ -1,6 +1,6 @@
 <!-- =============================================================
      Cover: fattura-elettronica-conservazione (it master)
-     Recipe: cost-hero — big "3" = 3 strati per arrivare al 2036
+     Recipe: cost-hero — big "3" + character + 3 strati differentiated cards
      ============================================================= -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none"
      font-family="'Inter',system-ui,sans-serif">
@@ -9,26 +9,48 @@
     <linearGradient id="grad-indigo" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#312E81"/>
     </linearGradient>
+    <linearGradient id="grad-indigo-soft" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9C98FF"/><stop offset="1" stop-color="#6F6AF0"/>
+    </linearGradient>
     <linearGradient id="grad-amber" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#FFB300"/><stop offset="1" stop-color="#F59E0B"/>
     </linearGradient>
     <linearGradient id="grad-paper" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#F8F7FF"/><stop offset="1" stop-color="#E4E3FF"/>
     </linearGradient>
+    <linearGradient id="grad-screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E0E7FF"/><stop offset="1" stop-color="#C7D2FE"/>
+    </linearGradient>
 
     <symbol id="doc-icon-indigo" viewBox="0 0 32 36">
       <path d="M2 0 L20 0 L30 10 L30 36 L2 36 Z" fill="url(#grad-indigo)" opacity="0.92"/>
       <path d="M20 0 L30 10 L20 10 Z" fill="#4338CA" opacity="0.7"/>
     </symbol>
-
     <symbol id="doc-icon-amber" viewBox="0 0 32 36">
       <path d="M2 0 L20 0 L30 10 L30 36 L2 36 Z" fill="url(#grad-amber)" opacity="0.95"/>
       <path d="M20 0 L30 10 L20 10 Z" fill="#FFB300" opacity="0.7"/>
     </symbol>
+    <symbol id="doc-icon-gray-cracked" viewBox="0 0 32 36">
+      <path d="M2 0 L20 0 L30 10 L30 36 L2 36 Z" fill="#94A3B8" opacity="0.55"/>
+      <path d="M20 0 L30 10 L20 10 Z" fill="#94A3B8" opacity="0.4"/>
+      <!-- crack lines suggesting fragility -->
+      <path d="M10 12 L14 18 L11 24 L16 30" stroke="#F59E0B" stroke-width="1.5" fill="none" opacity="0.85" stroke-linecap="round"/>
+    </symbol>
 
-    <symbol id="doc-icon-gray" viewBox="0 0 32 36">
-      <path d="M2 0 L20 0 L30 10 L30 36 L2 36 Z" fill="#94A3B8" opacity="0.5"/>
-      <path d="M20 0 L30 10 L20 10 Z" fill="#94A3B8" opacity="0.35"/>
+    <!-- person-focused (inline from symbols.svg) -->
+    <symbol id="person-focused" viewBox="0 0 200 240">
+      <rect x="20" y="190" width="160" height="8" rx="2" fill="#9C98FF" opacity="0.35"/>
+      <rect x="110" y="182" width="70" height="6" rx="2" fill="#4338CA"/>
+      <path d="M115 182 L115 140 Q115 134 121 134 L175 134 Q181 134 181 140 L181 182 Z" fill="url(#grad-indigo)"/>
+      <rect x="121" y="140" width="54" height="36" rx="2" fill="url(#grad-screen)"/>
+      <rect x="126" y="146" width="30" height="3" rx="1" fill="#4338CA" opacity="0.45"/>
+      <rect x="126" y="154" width="40" height="3" rx="1" fill="#4338CA" opacity="0.35"/>
+      <rect x="126" y="162" width="24" height="3" rx="1" fill="#4338CA" opacity="0.35"/>
+      <rect x="54" y="150" width="10" height="60" rx="3" fill="#9C98FF" opacity="0.5"/>
+      <path d="M62 186 Q62 150 92 150 L110 150 Q110 186 110 196 L62 196 Z" fill="url(#grad-indigo)"/>
+      <path d="M100 168 Q115 168 115 178 L115 186 L100 186 Z" fill="url(#grad-indigo-soft)"/>
+      <circle cx="92" cy="124" r="24" fill="url(#grad-indigo-soft)"/>
+      <path d="M70 116 Q70 100 92 100 Q114 100 114 116 Q102 112 92 112 Q82 112 70 116 Z" fill="#4338CA" opacity="0.55"/>
     </symbol>
 
     <symbol id="keeply-lockup" viewBox="0 0 200 50">
@@ -37,67 +59,99 @@
       <text x="48" y="33" font-size="22" font-weight="800" fill="#312E81">Keeply</text>
     </symbol>
 
+    <symbol id="calendar-2036" viewBox="0 0 120 110">
+      <!-- calendar body -->
+      <rect x="4" y="14" width="112" height="92" rx="8" fill="#FFFFFF" stroke="#312E81" stroke-width="2"/>
+      <!-- top bar -->
+      <rect x="4" y="14" width="112" height="22" rx="8" fill="url(#grad-amber)"/>
+      <!-- binder dots -->
+      <circle cx="30" cy="14" r="4" fill="#312E81"/>
+      <circle cx="90" cy="14" r="4" fill="#312E81"/>
+      <!-- year text -->
+      <text x="60" y="74" font-size="34" font-weight="900" text-anchor="middle" fill="#312E81" font-family="'Inter',sans-serif">2036</text>
+      <text x="60" y="94" font-size="10" font-weight="700" text-anchor="middle" fill="#475569" letter-spacing="1.5">CONTROLLO</text>
+    </symbol>
+
     <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
       <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#312E81" flood-opacity="0.15"/>
     </filter>
     <filter id="hero-shadow" x="-5%" y="-5%" width="110%" height="115%">
-      <feDropShadow dx="0" dy="14" stdDeviation="20" flood-color="#312E81" flood-opacity="0.15"/>
+      <feDropShadow dx="0" dy="14" stdDeviation="20" flood-color="#312E81" flood-opacity="0.18"/>
+    </filter>
+    <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#312E81" flood-opacity="0.14"/>
     </filter>
   </defs>
 
   <rect width="1600" height="900" fill="url(#grad-paper)"/>
 
-  <!-- Top eyebrow -->
-  <g transform="translate(120, 100)">
-    <text x="0" y="0" font-size="15" font-weight="700" fill="#4338CA" letter-spacing="3">CONSERVAZIONE FISCALE · EDITORIAL</text>
+  <!-- Top eyebrow with Italian flag accent -->
+  <g transform="translate(120, 90)">
+    <rect x="0" y="-14" width="4" height="20" fill="url(#grad-amber)"/>
+    <text x="14" y="0" font-size="15" font-weight="700" fill="#4338CA" letter-spacing="3">CONSERVAZIONE FISCALE · EDITORIAL</text>
   </g>
 
   <!-- Big hero number "3" -->
-  <g transform="translate(120, 470)" filter="url(#hero-shadow)">
-    <text x="0" y="0" font-size="320" font-weight="900" fill="url(#grad-indigo)" letter-spacing="-12">3</text>
+  <g transform="translate(120, 480)" filter="url(#hero-shadow)">
+    <text x="0" y="0" font-size="340" font-weight="900" fill="url(#grad-indigo)" letter-spacing="-14">3</text>
   </g>
 
   <!-- Subtitle to the right of the number -->
-  <g transform="translate(290, 320)">
-    <text x="0" y="0" font-size="32" font-weight="800" fill="#312E81" letter-spacing="0.5">strati per leggere</text>
-    <text x="0" y="46" font-size="32" font-weight="800" fill="#312E81" letter-spacing="0.5">le tue fatture</text>
-    <text x="0" y="92" font-size="32" font-weight="800" fill="#312E81" letter-spacing="0.5">nel <tspan fill="#F59E0B">2036</tspan>.</text>
+  <g transform="translate(310, 270)">
+    <text x="0" y="0" font-size="34" font-weight="800" fill="#312E81" letter-spacing="0.5">strati per leggere</text>
+    <text x="0" y="50" font-size="34" font-weight="800" fill="#312E81" letter-spacing="0.5">le tue fatture</text>
+    <text x="0" y="100" font-size="34" font-weight="800" fill="#312E81" letter-spacing="0.5">nel <tspan fill="#F59E0B" font-weight="900">2036</tspan>.</text>
+    <!-- 10 ANNI callout -->
+    <g transform="translate(0, 140)">
+      <rect x="0" y="-22" width="180" height="32" rx="16" fill="url(#grad-amber)"/>
+      <text x="90" y="-2" font-size="13" font-weight="900" text-anchor="middle" fill="#312E81" letter-spacing="2">10 ANNI DI OBBLIGO</text>
+    </g>
   </g>
 
-  <!-- Three layered cards on right: SaaS / AdE / Local XML -->
-  <g transform="translate(960, 230)">
-    <!-- Strato 1: SaaS (most fragile) -->
-    <g transform="translate(0, 0)" filter="url(#soft-shadow)">
-      <rect width="500" height="100" fill="#FFFFFF" rx="6"/>
-      <rect x="0" y="0" width="6" height="100" fill="#94A3B8" rx="2"/>
-      <use href="#doc-icon-gray" x="24" y="32" width="32" height="36"/>
-      <text x="72" y="44" font-size="13" font-weight="700" fill="#94A3B8" letter-spacing="2">STRATO 1</text>
-      <text x="72" y="74" font-size="20" font-weight="800" fill="#312E81">Gestionale SaaS</text>
-      <text x="380" y="62" font-size="13" font-weight="700" fill="#94A3B8" letter-spacing="1.5">fragile</text>
+  <!-- Person-focused character at lower-left -->
+  <g transform="translate(80, 580)">
+    <use href="#person-focused" x="0" y="0" width="240" height="288"/>
+  </g>
+
+  <!-- Three layered cards on right with visual differentiation -->
+  <g transform="translate(900, 200)">
+    <!-- Strato 1: SaaS (fragile, slight tilt + cracked icon) -->
+    <g transform="translate(0, 0) rotate(-2)" filter="url(#card-shadow)">
+      <rect width="540" height="110" fill="#FFFFFF" rx="8"/>
+      <rect x="0" y="0" width="8" height="110" fill="#94A3B8" rx="3"/>
+      <use href="#doc-icon-gray-cracked" x="28" y="37" width="36" height="40"/>
+      <text x="86" y="42" font-size="13" font-weight="800" fill="#94A3B8" letter-spacing="3">STRATO 1 · FRAGILE</text>
+      <text x="86" y="76" font-size="24" font-weight="800" fill="#312E81">Gestionale SaaS</text>
+      <text x="86" y="98" font-size="13" font-weight="600" fill="#94A3B8">M&amp;A, prezzi, formati che cambiano</text>
     </g>
-    <!-- Strato 2: AdE 15 yr -->
-    <g transform="translate(0, 120)" filter="url(#soft-shadow)">
-      <rect width="500" height="100" fill="#FFFFFF" rx="6"/>
-      <rect x="0" y="0" width="6" height="100" fill="#4338CA" rx="2"/>
-      <use href="#doc-icon-indigo" x="24" y="32" width="32" height="36"/>
-      <text x="72" y="44" font-size="13" font-weight="700" fill="#4338CA" letter-spacing="2">STRATO 2</text>
-      <text x="72" y="74" font-size="20" font-weight="800" fill="#312E81">Agenzia Entrate · 15 anni</text>
-      <text x="380" y="62" font-size="13" font-weight="700" fill="#4338CA" letter-spacing="1.5">gratuito</text>
+    <!-- Strato 2: AdE 15 yr (official, indigo) -->
+    <g transform="translate(20, 140)" filter="url(#card-shadow)">
+      <rect width="540" height="110" fill="#FFFFFF" rx="8"/>
+      <rect x="0" y="0" width="8" height="110" fill="url(#grad-indigo)" rx="3"/>
+      <use href="#doc-icon-indigo" x="28" y="37" width="36" height="40"/>
+      <text x="86" y="42" font-size="13" font-weight="800" fill="#4338CA" letter-spacing="3">STRATO 2 · GRATUITO</text>
+      <text x="86" y="76" font-size="24" font-weight="800" fill="#312E81">Agenzia Entrate · 15 anni</text>
+      <text x="86" y="98" font-size="13" font-weight="600" fill="#475569">Solo via SdI · adesione triennale</text>
     </g>
-    <!-- Strato 3: Local XML (you control) -->
-    <g transform="translate(0, 240)" filter="url(#soft-shadow)">
-      <rect width="500" height="100" fill="#FFFBEB" rx="6"/>
-      <rect x="0" y="0" width="6" height="100" fill="url(#grad-amber)" rx="2"/>
-      <use href="#doc-icon-amber" x="24" y="32" width="32" height="36"/>
-      <text x="72" y="44" font-size="13" font-weight="700" fill="#F59E0B" letter-spacing="2">STRATO 3</text>
-      <text x="72" y="74" font-size="20" font-weight="800" fill="#312E81">FatturaPA XML locale</text>
-      <text x="380" y="62" font-size="13" font-weight="700" fill="#F59E0B" letter-spacing="1.5">tuo controllo</text>
+    <!-- Strato 3: Local XML (you control, amber-bordered, prominent) -->
+    <g transform="translate(40, 280) rotate(1.5)" filter="url(#card-shadow)">
+      <rect width="540" height="110" fill="#FFFBEB" rx="8"/>
+      <rect x="0" y="0" width="8" height="110" fill="url(#grad-amber)" rx="3"/>
+      <use href="#doc-icon-amber" x="28" y="37" width="36" height="40"/>
+      <text x="86" y="42" font-size="13" font-weight="800" fill="#F59E0B" letter-spacing="3">STRATO 3 · TUO CONTROLLO</text>
+      <text x="86" y="76" font-size="24" font-weight="800" fill="#312E81">FatturaPA XML locale</text>
+      <text x="86" y="98" font-size="13" font-weight="600" fill="#475569">CAdES-BES · XAdES-BES · ETSI</text>
     </g>
+  </g>
+
+  <!-- 2036 calendar at lower-right above keeply lockup -->
+  <g transform="translate(1380, 650)" filter="url(#soft-shadow)">
+    <use href="#calendar-2036" x="0" y="0" width="160" height="146"/>
   </g>
 
   <!-- Bottom note -->
-  <g transform="translate(120, 800)">
-    <text x="0" y="0" font-size="14" font-weight="700" fill="#475569" letter-spacing="2">FATTURA ELETTRONICA · OBBLIGO 10 ANNI · DPR 633/72 + D.LGS. 471/1997</text>
+  <g transform="translate(120, 820)">
+    <text x="0" y="0" font-size="13" font-weight="700" fill="#475569" letter-spacing="2">FATTURA ELETTRONICA · DPR 633/72 · D.LGS. 471/1997 · DM 17/06/2014</text>
   </g>
 
   <!-- Keeply lockup bottom-right -->

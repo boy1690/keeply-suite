@@ -47,6 +47,18 @@ Guardiamo le tappe concrete. Nel gennaio 2012 [TeamSystem ha acquisito Danea](ht
 
 Quando il tuo fornitore cambia proprietà, succedono cose che il contratto originale non copriva. Il piano gratuito diventa a pagamento. L'export dell'archivio storico passa da self-service a ticket di supporto. Il formato proprietario interno cambia tra una versione e l'altra. E le fatture del 2019, dietro al login del vecchio gestionale, diventano sempre meno comode da recuperare.
 
+> **Esempio rappresentativo · Esportazione archivio dopo cambio di proprietà**
+>
+> | Periodo fatture | Disponibilità | Formato di export |
+> |:---|:---|:---|
+> | 2024 (corrente) | ✓ Immediata | FatturaPA XML |
+> | 2023 | ✓ Immediata | FatturaPA XML |
+> | 2022 | ⏱ Richiesta in coda · 48-72 h | XML + meta CSV |
+> | 2021 | ⚠ Funzionalità migrata al nuovo gruppo | Contatta assistenza |
+> | 2020 e precedenti | ⚠ Servizio retroattivo terminato | Pacchetto a pagamento |
+>
+> *Pattern tipico osservato dopo un'acquisizione o un cambio di piano commerciale del gestionale SaaS. Il contratto originale spesso non prevedeva clausole di portabilità per archivi storici.*
+
 Aggiungi un dettaglio che molti non sanno. Il [Sistema di Interscambio](https://www.fatturapa.gov.it/it/sistemainterscambio/cose-il-sdi/), gestito dall'Agenzia delle Entrate e operato tecnicamente da [Sogei S.p.A.](https://www.sogei.it/it/sogei-homepage/soluzioni/controllo-della-spesa/fatturazione-elettronica.html), **non è un archivio di lungo periodo**. Il SdI è un nodo di scambio: riceve la tua fattura, la valida, la consegna al cliente o la scarta. [Dal portale Fatture e Corrispettivi](https://www.agenziaentrate.gov.it/portale/aree-tematiche/fatturazione-elettronica/guida-fatturazione-elettronica/i-servizi-dell-agenzia-fe/consultazione-fatture-e-ricevute) i file completi delle fatture restano consultabili fino al 31 dicembre del secondo anno successivo alla ricezione; dopo restano solo i dati di sintesi, fino all'ottavo anno. Per la conservazione decennale serve qualcos'altro.
 
 Esiste un'alternativa che non dipende dal mercato? Sì, ed è gratuita.
@@ -78,6 +90,14 @@ Una nota importante prima di proseguire. **Il formato legale unico in Italia è 
 Sul controllo delle versioni di questa copia locale conviene investire un attimo di pensiero. Ogni FatturaPA XML che produci o ricevi è un file immutabile per definizione — la firma digitale lo blocca. Ma l'archivio in sé cresce, cambia struttura di cartelle, può venire spostato tra macchine quando aggiorni il PC del lavoro. Uno strumento di cronologia file installato sul tuo computer — non un altro SaaS in più — registra automaticamente ogni versione della cartella in cui salvi gli XML, ti fa tornare a qualsiasi punto del tempo, e non dipende da nessun fornitore esterno per ricostruire l'archivio.
 
 Strumenti come [Keeply](https://keeply.work/) servono esattamente a questo: tenere un'istantanea locale immutabile della tua cartella fatture, indipendente dal gestionale che usi quest'anno. Quando l'anno prossimo cambierai SaaS, la tua copia FatturaPA XML rimane dov'è — sul disco che possiedi tu.
+
+> **In sintesi · perché servono tutti e tre**
+>
+> - **Strato 1 (SaaS)** risolve la praticità quotidiana — emissione, ricezione, firma in un solo posto.
+> - **Strato 2 (Agenzia delle Entrate)** copre l'evoluzione del mercato — se il tuo fornitore esce di scena, il file è ancora dentro un'infrastruttura statale.
+> - **Strato 3 (XML locale)** garantisce il controllo finale — anche se SaaS e portale AdE diventassero entrambi inaccessibili nel 2036, la tua copia firmata vive sul tuo disco.
+>
+> Nessuno dei tre basta da solo. Tutti e tre insieme costano zero euro in più: serve solo disciplina trimestrale.
 
 Quanto rischi se questi tre strati non sono in piedi? Vediamo le cifre.
 
