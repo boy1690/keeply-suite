@@ -21,6 +21,15 @@ bwf_version_at_draft: v0.2.11
 flow: v0.3 4-step (auto draft)
 cta_topic: versioning
 image_alt_data: "Keeply Timeline at 14:23 marked 'off the rails — +12 files / -47 lines / build fail' above the 13:00 entry starred as last working version — one click restores entire project tree in 30 seconds after AI agent overshoot"
+faq_schema:
+  - q: My AI agent broke the whole project — how do I get back to a working state fast?
+    a: Don't try to read which files the AI touched, don't hand-step Ctrl+Z. Open the Keeply Timeline, find the last entry you remember was running (usually 10-30 minutes back, often starred), right-click "Restore to this point". In 30 seconds the entire project tree is back to that state.
+  - q: Why won't the AI agent roll itself back?
+    a: Because an AI agent has no concept of "last working state". It only knows what the file looks like now and what to write next. Even when the build fails it'll keep trying to patch, which is exactly how the overshoot keeps growing. Rollback is a project-level timeline operation, not something the AI has built-in.
+  - q: Aren't the editor's built-in undo and IDE local history enough?
+    a: Not quite. IDE undo is per-file and only spans the current session. When the AI touches 12 files at once and you've already switched buffers, undo breaks. Keeply snapshots the entire project tree, so it doesn't matter how many files the AI changed — one click restores the folder.
+  - q: How does Keeply catch the AI-overshoot moment?
+    a: Keeply quietly tracks every save in the project folder you've added, so every few minutes there's a restorable point. When the AI agent runs too far or a new prompt drags in a dependency you didn't want, you don't need to read the diff or remember which files changed — restore to the last "still running" point and continue iterating.
 howto_schema:
   name: Vibe Coding 失控時 3 步回退 AI 改動
   totalTime: PT30S

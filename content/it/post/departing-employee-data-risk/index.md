@@ -13,6 +13,15 @@ spec: specs/departing-employee-data-risk/
 status: approved
 voice_version: v2-2026-05-11
 image_alt_data: "Timeline della cartella alle 23:03: brand-book/ copiata alle 22:50, eliminata alle 23:03, scaduta dopo 30 giorni — due azioni sulla stessa cartella, nessuna registrata da Dropbox o Google Drive, entrambe fuori dalla portata degli strumenti di sync"
+faq_schema:
+  - q: "Un dipendente in uscita ha svuotato la cartella Dropbox o Google Drive prima di andarsene. La cronologia delle versioni può recuperarla?"
+    a: "Quasi mai. Dropbox conserva 30 giorni di cronologia sui piani personali e 180 giorni su quelli Business — ma nel momento in cui l'utente svuota il proprio cestino (o ha permessi di amministratore), quella cancellazione esce dal campo della cronologia. Gli strumenti di sincronizzazione sono progettati per «mantenere coerenti i due estremi», non per «conservare una cronologia irreversibile»."
+  - q: "Gli avvocati o il software DLP possono fermare questa situazione?"
+    a: "Nessuno dei due in tempo. Una causa per segreti commerciali richiede 12-24 mesi, l'onere della prova è pesante e quando vinci i file originali sono troppo vecchi per servire. Il DLP (software per la prevenzione della perdita di dati) costa più di quanto abbia senso per un team di 10 persone, richiede un amministratore dedicato, e blocca solo il futuro — non può annullare ciò che il dipendente ha già fatto sabato scorso."
+  - q: "Come copre Keeply il punto cieco lasciato dagli strumenti di sincronizzazione?"
+    a: "Keeply non si basa sulla sincronizzazione, ma sulla cronologia irreversibile. Ogni salvataggio entra nella timeline, il repository locale non ha limite di tempo, e il «tetto di 500 versioni» semplicemente non esiste. Le consegne critiche possono essere congelate come Release (vedi ADR-003) — anche un amministratore non può cancellare una versione Release congelata."
+  - q: "Keeply è adatto a un'azienda con IT centralizzato?"
+    a: "I team piccoli (≤10 persone) possono adottarlo direttamente. Le aziende medie possono affiancarlo al DLP esistente o al backup centralizzato — il ruolo di Keeply è «cronologia delle versioni per workflow individuali o di squadra». Non sostituisce il DLP enterprise (blocco USB, monitoraggio in tempo reale, canali criptati) — copre il punto cieco che quegli strumenti non hanno mai coperto, cioè la cancellazione fatta da un utente legittimo."
 ---
 
 # 【2026 Gestione file】Il dipendente in uscita ti ha cancellato i file? Hai confuso «sincronizzazione» con «backup»

@@ -22,6 +22,15 @@ flow: v0.3 4-step (auto draft)
 derived_from: zh-TW
 cta_topic: versioning
 image_alt_data: "Keeply 时间轴显示 14:23 标记「失控——+12 个文件 / -47 行 / build 失败」，13:00 加星标为最后可运行版本——AI 代理超出范围后，一次点击在 30 秒内还原整个项目目录"
+faq_schema:
+  - q: AI agent 改坏了我整个项目，怎么快速回到能跑的版本？
+    a: 不要试着看懂 AI 动了哪几个文件、也不用手动按 Ctrl+Z。打开 Keeply 时间轴，找上一笔你记得还能跑的版本（通常 10-30 分钟前、有星号标示），右键选「还原到此版本」，30 秒内整个项目目录回到该时间点状态。
+  - q: 为什么 AI agent 不会自己 rollback？
+    a: 因为 AI agent 没有「上一个能跑的状态」这个概念。它只知道现在这份文件内容是什么、下一步该写什么。即使 build 失败它也只会试图再改、改不对就继续改下去——这就是失控。Rollback 是项目级别的时间轴操作，不是 AI 自己内建的能力。
+  - q: IDE 或编辑器内建的还原（undo）够用吗？
+    a: 不够。IDE 的 undo 是文件级且只记这次 session 的操作，当 AI 同时动了 12 个文件 + 你已切换过几个 buffer，undo 就接不上。Keeply 是项目目录级的快照，不在乎 AI 动了几个文件，整个文件夹一键还原。
+  - q: Keeply 怎么接住 AI 翻车的场景？
+    a: Keeply 在后台对你选定的项目文件夹持续记录保存变动，每几分钟有一个可还原的时间点。当 AI agent 冲太远或新 prompt 加了一个不该加的依赖，你不用看 diff、不用记得改了哪些文件，直接还原到上一笔「能跑」的版本即可继续迭代。
 howto_schema:
   name: Vibe Coding 失控時 3 步回退 AI 改動
   totalTime: PT30S

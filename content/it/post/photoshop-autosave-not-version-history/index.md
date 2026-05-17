@@ -11,6 +11,17 @@ og_image: cover.png
 primary_keyword: "photoshop salvataggio automatico"
 locales: [en, ja, zh-tw, zh-cn, ko, it]
 draft: false
+faq_schema:
+  - q: Perché la cartella di salvataggio automatico di Photoshop è vuota quando cerco una vecchia versione?
+    a: Perché il salvataggio automatico di Photoshop conserva file temporanei di recupero solo mentre un PSD è aperto e non salvato. Nel momento in cui premi Cmd+S sovrascrivendo una versione precedente e chiudi il file normalmente, il salvataggio automatico cancella il temporaneo. È pensato per i crash, non per la cronologia delle versioni.
+  - q: Il salvataggio automatico di Photoshop è la stessa cosa della cronologia delle versioni?
+    a: 'No. Il salvataggio automatico (Auto Recover) risolve un solo problema — non perdere il lavoro non salvato se Photoshop va in crash o salta la corrente. Non risponde a "mi piacevano i colori di mezz''ora fa, riportami indietro". La cronologia versioni a livello di file è un livello separato che conserva ogni Cmd+S come punto recuperabile anche mesi dopo.'
+  - q: Il pannello Cronologia di Photoshop può ripristinare la versione di ieri?
+    a: No. Il pannello Cronologia registra solo i passaggi fatti in questo PSD in questa sessione. Nel momento in cui chiudi il file e lo riapri, tutta quella cronologia sparisce. Risolve "annulla gli ultimi 50 passaggi", non "riportami la versione di ieri".
+  - q: Come può un designer aggiungere una vera cronologia delle versioni a livello di file?
+    a: Aggiunge un livello esterno che fa versioning automatico a ogni salvataggio. Uno strumento come Keeply cattura una copia del PSD ogni volta che premi Cmd+S, con una nota tipo "approvato dal cliente", così la versione di mezz'ora fa — o di 6 mesi fa — è a due click di distanza. Funziona indipendentemente da come o quante volte apri Photoshop.
+  - q: Quando un designer non ha bisogno di questo livello aggiuntivo?
+    a: Tre casi. (1) Lavori brevi senza giri di revisione, dove il cliente approva e il file viene archiviato. (2) Lo studio impone la cronologia versioni di Adobe Creative Cloud e non ha mai dato problemi. (3) La tua convenzione di naming è così rigorosa che ogni Cmd+S diventa -v07 -v08 e sei certo di non rilassarti mai. Fuori da questi casi, prima o poi arriva il pomeriggio in cui "il cliente vuole v2 ma io ho solo v5".
 ---
 
 Hai premuto Cmd+S. Il cursore ha lampeggiato una volta.
@@ -21,7 +32,7 @@ Il brief diceva "v2, ma con i colori della v3". Tu eri sulla v2. Hai scelto le c
 
 Game over.
 
-Il livello che hai appena sovrascritto è l'unica v2 che hai. Cerchi freneticamente su Google "photoshop autosave location," convinto che Photoshop abbia nascosto da qualche parte una copia. Apri la cartella di salvataggio automatico. C'è un file di martedì scorso. Niente di oggi.
+Il livello che hai appena sovrascritto è l'unica v2 che hai. Cerchi freneticamente su Google "photoshop salvataggio automatico location," convinto che Photoshop abbia nascosto da qualche parte una copia. Apri la cartella di salvataggio automatico. C'è un file di martedì scorso. Niente di oggi.
 
 Hai aperto la cartella giusta. Quello che fa, semplicemente, non è quello che pensavi facesse.
 
@@ -29,13 +40,13 @@ Hai aperto la cartella giusta. Quello che fa, semplicemente, non è quello che p
 
 La cartella di salvataggio automatico non sta nascondendo il tuo file. Non l'ha mai avuto, prima di tutto.
 
-Davanti alla cartella vuota, i designer fanno tipicamente le stesse due cose: cercano su Google una volta in più "photoshop autosave location," poi fissano la cartella per dieci minuti. Entrambe a vuoto, perché il salvataggio automatico è da sempre un meccanismo diverso — è il paracadute d'emergenza che Photoshop tiene per sé stesso, pronto per un certo tipo di caduta. Sotto il paracadute c'è Photoshop, non la tua cronologia delle versioni.
+Davanti alla cartella vuota, i designer fanno tipicamente le stesse due cose: cercano su Google una volta in più "photoshop salvataggio automatico location," poi fissano la cartella per dieci minuti. Entrambe a vuoto, perché il salvataggio automatico è da sempre un meccanismo diverso — è il paracadute d'emergenza che Photoshop tiene per sé stesso, pronto per un certo tipo di caduta. Sotto il paracadute c'è Photoshop, non la tua cronologia delle versioni.
 
 Cosa fa esattamente questo paracadute d'emergenza? Photoshop sorveglia le "chiusure anomale" — crash, terminazioni forzate, kernel panic del sistema. Quando queste cose accadono, scrive lo stato di lavoro in memoria in un file `.psb` di recupero; al lancio successivo di Photoshop appare una finestra che chiede se ripristinare quel file.
 
 Il suo compito finisce qui. Un Cmd+S normale che sovrascrive la tua versione precedente è una situazione completamente diversa — il programma funziona, l'utente ha volontariamente eseguito un comando di salvataggio, il meccanismo di salvataggio automatico non si attiva affatto. Niente crash, niente da recuperare, niente viene scritto nella cartella di recupero.
 
-Vuoi verificare frugando direttamente la cartella? [La documentazione Adobe elenca i percorsi esatti per ogni piattaforma](https://helpx.adobe.com/photoshop/using/auto-save-recovery-background-save.html): `~/Documents/Adobe/AutoRecover/` su Mac, `%AppData%/Adobe/Adobe Photoshop {version}/AutoRecover/` su Windows. Vecchi file `.psb` di sessioni precedenti possono ancora essere lì, ma il lavoro di oggi non è mai stato scritto, quindi non c'è nulla da riportare indietro.
+Vuoi verificare frugando direttamente la cartella? [La documentazione Adobe elenca i percorsi esatti per ogni piattaforma](https://helpx.adobe.com/photoshop/using/salvataggio automatico-recovery-background-save.html): `~/Documents/Adobe/Salvataggio automatico/` su Mac, `%AppData%/Adobe/Adobe Photoshop {version}/Salvataggio automatico/` su Windows. Vecchi file `.psb` di sessioni precedenti possono ancora essere lì, ma il lavoro di oggi non è mai stato scritto, quindi non c'è nulla da riportare indietro.
 
 Allora perché esistono migliaia di articoli che ti insegnano "dov'è la cartella di salvataggio automatico"?
 

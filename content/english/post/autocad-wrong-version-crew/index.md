@@ -19,6 +19,17 @@ voice_version: v2-2026-05-11
 status: approved_master
 cta_topic: versioning
 image_alt_data: "Three diverging timelines: Design shipped 5 versions, Office missed the last 2, Field crew still building from version 2 — one project folder, three realities, the gap between office and field always breaks first"
+faq_schema:
+  - q: How do I quickly confirm the field crew has the latest drawing?
+    a: Don't trust the file name "FINAL_v7". The fastest way is a shared version timeline between office and site. With Keeply, the moment a new revision lands in the office it's recorded, and the field sees "2 hours ago — rev 5, drain spec changed" on the same timeline. No WhatsApp ping-pong.
+  - q: Why does our project folder keep ending up with _FINAL_v7 and _really_final_v9?
+    a: Because manual file naming has no enforced rule and everyone defines "final" differently. Designers also fear losing old layouts, so they pile on suffixes. The real fix is to hand version tracking to a tool, not to make everyone memorise a naming convention.
+  - q: What are the 4 steps of AutoCAD drawing version control?
+    a: Step 1 — when a new revision lands in the office, notify the field and require a "got it" reply. Step 2 — preserve the old version before overwriting. Step 3 — adopt a tool like Keeply that auto-records each save with notes. Step 4 — keep at least one off-NAS backup to survive a server failure.
+  - q: What if the architect flips back to an earlier layout?
+    a: Common in construction — the owner says "rev 2's edge detail was cleaner, go back". If the old version wasn't preserved and the crew already laid it out, you're in trouble. Keeply auto-keeps every saved version with notes, so you can roll the project back to "before owner rolled to rev 2" in two clicks.
+  - q: Does every site crew member need to install Keeply?
+    a: No. Keeply runs on the office machine and holds the version timeline. The crew can verify from printed sheets or via a single site PM device. Keeply solves the office-field handoff gap, not "every foreman watches a timeline on their phone".
 howto_schema:
   name: 圖檔版本管理 4 步：辦公室與現場對齊
   totalTime: PT2H

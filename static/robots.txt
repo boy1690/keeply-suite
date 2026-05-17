@@ -1,17 +1,17 @@
 # Keeply Blog robots.txt
-# Policy (split AI bot policy adopted 2026-05-02, per BWF audit T2.1):
-# - Allow search-engine indexing (default *)
-# - Allow social-media link-preview scrapers (OG cards on shares)
-# - Allow AI citation / live-retrieval bots (ChatGPT Search, Claude,
-#   Perplexity live citations) — these bring traffic via AI answers
-# - Disallow AI training bots (GPTBot, ClaudeBot, CCBot, Google-Extended,
-#   etc.) — content shouldn't enter model training corpora
+#
+# Policy (2026-05-17 update — supersedes the 2026-05-02 split policy):
+# Open all major AI crawlers (training + live-retrieval) to maximize
+# GEO citation surface. Trade-off accepted: content enters model training
+# corpora in exchange for being citable in ChatGPT / Claude / Perplexity /
+# Gemini / Apple Intelligence answers. Bytespider stays blocked (poor
+# robots.txt compliance + low ROI for our target locales).
 
 # --- Default: allow indexing for search engines ---
 User-agent: *
 Allow: /
 
-# --- Social media link-preview scrapers (explicitly welcomed) ---
+# --- Social media link-preview scrapers (OG cards on shares) ---
 User-agent: facebookexternalhit
 Allow: /
 
@@ -19,6 +19,9 @@ User-agent: facebookcatalog
 Allow: /
 
 User-agent: meta-externalfetcher
+Allow: /
+
+User-agent: meta-externalagent
 Allow: /
 
 User-agent: Twitterbot
@@ -48,11 +51,7 @@ Allow: /
 User-agent: Pinterestbot
 Allow: /
 
-# --- AI citation / live-retrieval bots (explicitly welcomed) ---
-# These crawlers fetch live pages to cite in AI search answers — they
-# bring traffic; blocking them removes Keeply from AI-search visibility.
-# Distinct from training crawlers which absorb content into model weights.
-
+# --- AI live-retrieval bots (cite in AI answers when user triggers search) ---
 User-agent: OAI-SearchBot
 Allow: /
 
@@ -68,40 +67,37 @@ Allow: /
 User-agent: Perplexity-User
 Allow: /
 
-# --- AI training bots (disallowed) ---
-# These crawlers absorb content for model training. Blocking does NOT
-# affect AI search citation (different bots — see above).
+# --- AI training crawlers (absorb content into model training corpora) ---
+# Opened 2026-05-17 to maximize AI citation surface. Google-Extended and
+# Applebot-Extended use REVERSE default — must be explicitly Allowed or
+# they treat the site as blocked.
 
 User-agent: GPTBot
-Disallow: /
+Allow: /
 
 User-agent: ClaudeBot
-Disallow: /
+Allow: /
 
 User-agent: anthropic-ai
-Disallow: /
+Allow: /
 
 User-agent: CCBot
-Disallow: /
+Allow: /
 
-User-agent: Bytespider
-Disallow: /
+User-agent: PerplexityBot
+Allow: /
 
 User-agent: Amazonbot
-Disallow: /
-
-User-agent: Applebot-Extended
-Disallow: /
+Allow: /
 
 User-agent: Google-Extended
-Disallow: /
+Allow: /
 
-User-agent: meta-externalagent
-Disallow: /
+User-agent: Applebot-Extended
+Allow: /
 
-# PerplexityBot is hybrid (training + live retrieval). Block the hybrid;
-# Perplexity-User handles live citation cleanly above.
-User-agent: PerplexityBot
+# --- Still blocked: poor compliance / low ROI for our locales ---
+User-agent: Bytespider
 Disallow: /
 
 User-agent: Diffbot

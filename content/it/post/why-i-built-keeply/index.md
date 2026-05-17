@@ -13,6 +13,15 @@ og_image: cover.png
 role: standalone
 template: T6
 image_alt_data: "Sagoma del fondatore vicino alla finestra con il carattere 創 (creare) scritto a mano — il momento che ha dato vita a Keeply: vedere un collega perdere 6 settimane di lavoro CAD per una sovrascrittura non salvata, capendo che gli strumenti esistenti non erano progettati per non-sviluppatori"
+faq_schema:
+  - q: Qual è la differenza tra Keeply e Git?
+    a: 'Git è progettato per chi scrive codice — a ogni checkpoint esegui comandi manualmente, impari concetti come rami e merge, gestisci un repository. Keeply è progettato per chi non scrive codice — trascini una cartella dentro, continui a salvare come fai sempre, e la cronologia versioni nasce in background. Niente comandi da imparare, nessuna curva "diventa utente Git".'
+  - q: Perché hai deciso di costruire Keeply?
+    a: Ho visto la stessa scena ripetersi troppe volte in cantiere — un collega che perde 6 settimane di lavoro CAD per una sovrascrittura non salvata, oppure operai che rifanno colate di calcestruzzo perché in cantiere c'era ancora la tavola della settimana prima. Gli strumenti esistenti davano per scontato che l'utente volesse imparare Git. Architetti, designer, commercialisti, avvocati, dottorandi non vogliono imparare Git — vogliono "mentre lavoro, qualcuno in silenzio mi tiene le versioni".
+  - q: Quale problema risolve davvero Keeply?
+    a: 'Uno strato di mezzo trascurato — la cronologia versioni intenzionale a livello di file. La sincronizzazione cloud risolve "il file esiste", Time Machine risolve il recupero a livello di disco, le revisioni di Word coprono solo le modifiche in questa sessione. "La versione che ho salvato apposta un martedì tre mesi fa" — quella casella non ha nessun occupante, e la maggior parte delle persone la affronta a colpi di _v7 _final manuali che non resistono sei mesi.'
+  - q: Per chi è adatto e per chi no?
+    a: "Adatto a — architetti, designer, avvocati, commercialisti, dottorandi, sviluppatori in pair programming con l'AI, chiunque debba tracciare chi ha cambiato cosa in cartelle condivise. Non adatto per — lavoro di puro codice (Git/GitHub è più indicato), aziende la cui policy IT impone SharePoint/OneDrive come unica fonte di verità, persone i cui file vivono interamente in strumenti cloud-native (Google Docs, Notion). Non vogliamo competere con Git né sostituire la sincronizzazione cloud — Keeply copre solo lo strato che gli altri dimenticano."
 ---
 
 Negli ultimi anni ho lavorato fianco a fianco con ingegneri dell'edilizia. Molti hanno 50, 60 anni. Il computer non è il loro strumento più comodo, ma planimetrie, ordini di variante e contratti passano tutti da lì ogni giorno. La cartella condivisa è il loro campo di collaborazione: un NAS, un gruppo di persone, N versioni di file, modifiche continue.

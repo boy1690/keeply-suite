@@ -21,6 +21,15 @@ bwf_version_at_draft: v0.2.11
 flow: v0.3 4-step (auto draft)
 cta_topic: versioning
 image_alt_data: "Timeline Keeply alle 14:23 segna 'fuori controllo — +12 file / -47 righe / build fallita' sopra la voce 13:00 stellata come ultima versione funzionante — un click ripristina l'intero progetto in 30 secondi dopo overshoot dell'AI"
+faq_schema:
+  - q: L'agente AI mi ha rotto tutto il progetto — come torno velocemente a una versione funzionante?
+    a: Non cercare di capire quali file ha toccato l'AI, non premere Ctrl+Z a mano. Apri la Timeline di Keeply, trova l'ultima voce che ricordi funzionante (di solito 10-30 minuti fa, spesso stellata), clic destro su "Ripristina a questo punto". In 30 secondi l'intero albero del progetto torna a quello stato.
+  - q: Perché l'agente AI non torna indietro da solo?
+    a: Perché un agente AI non ha il concetto di "ultimo stato funzionante". Sa solo com'è il file ora e cosa scrivere dopo. Anche quando la build fallisce continua a tentare patch, ed è esattamente così che l'overshoot cresce. Il rollback è un'operazione di timeline a livello di progetto, non qualcosa che l'AI ha integrato.
+  - q: Il comando undo dell'editor e la cronologia locale dell'IDE non bastano?
+    a: Non proprio. L'undo dell'IDE è per file e copre solo la sessione corrente. Quando l'AI tocca 12 file contemporaneamente e hai già cambiato buffer, l'undo si spezza. Keeply fa snapshot dell'intero albero di progetto, quindi non importa quanti file abbia cambiato l'AI — un click ripristina la cartella.
+  - q: Come fa Keeply a intercettare il momento dell'overshoot AI?
+    a: Keeply traccia silenziosamente ogni salvataggio nella cartella di progetto che hai aggiunto, quindi ogni pochi minuti c'è un punto ripristinabile. Quando l'agente AI va troppo oltre o un nuovo prompt trascina dentro una dipendenza che non volevi, non serve leggere la diff né ricordare quali file sono cambiati — ripristina all'ultimo punto "ancora in esecuzione" e prosegui le iterazioni.
 howto_schema:
   name: Vibe Coding 失控時 3 步回退 AI 改動
   totalTime: PT30S

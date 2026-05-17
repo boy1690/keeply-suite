@@ -19,6 +19,17 @@ voice_version: v2-2026-05-11
 status: approved_master
 cta_topic: versioning
 image_alt_data: "Tre linee temporali divergenti: Design ha distribuito 5 versioni, l'ufficio ha mancato le ultime 2, il cantiere costruisce ancora dalla versione 2 — una cartella, tre realtà, il gap ufficio-cantiere si spezza per primo"
+faq_schema:
+  - q: Come verifico velocemente se il cantiere ha la tavola più recente?
+    a: Non fidarti del nome del file "FINAL_v7". La via più rapida è condividere una sola linea temporale delle versioni tra ufficio e cantiere. Con Keeply, nel momento in cui una nuova revisione arriva in ufficio viene registrata e il cantiere vede "2 ore fa — rev 5, modifica specifica copertura" sulla stessa timeline, senza dover chiedere su WhatsApp.
+  - q: Perché la cartella di progetto finisce sempre piena di _FINAL_v7 e _really_final_v9?
+    a: Perché la rinominazione manuale non ha regole vincolanti e ognuno definisce "final" a modo suo. I progettisti, per paura di perdere le vecchie versioni, accumulano suffissi. La soluzione vera è affidare il tracciamento delle versioni a uno strumento, non costringere tutti a ricordare una convenzione di naming.
+  - q: In cosa consistono i 4 passi della gestione delle versioni delle tavole AutoCAD?
+    a: Passo 1 — quando una nuova revisione arriva in ufficio, avvisa il cantiere e pretendi una conferma "ricevuto". Passo 2 — conserva la vecchia versione prima di sovrascrivere. Passo 3 — adotta uno strumento come Keeply che registra ogni salvataggio con note. Passo 4 — mantieni almeno un backup fuori dal NAS in caso di guasto del server.
+  - q: Cosa faccio se il progettista torna a una versione della settimana scorsa?
+    a: 'Capita spesso in edilizia — il committente dice "il dettaglio del bordo era più pulito in rev 2, tornaci". Se la vecchia versione non era stata salvata e il cantiere ha già tracciato, sono guai. Keeply conserva automaticamente ogni versione salvata con note, quindi puoi riportare il progetto a "prima del ritorno a rev 2" con due click.'
+  - q: Tutti gli operai in cantiere devono installare Keeply?
+    a: No. Keeply gira sulla macchina d'ufficio e tiene la cronologia delle versioni. Il cantiere può verificare dalle stampe o dal dispositivo del PM di cantiere. Keeply risolve il passaggio di consegne ufficio-cantiere, non serve che ogni capocantiere guardi una timeline sul telefono.
 howto_schema:
   name: 圖檔版本管理 4 步：辦公室與現場對齊
   totalTime: PT2H

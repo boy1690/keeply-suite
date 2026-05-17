@@ -11,6 +11,17 @@ og_image: cover.png
 primary_keyword: "photoshop autosave location"
 locales: [en, ja, zh-tw, zh-cn, ko, it]
 draft: false
+faq_schema:
+  - q: Why is the Photoshop autosave folder empty when I look for an old version?
+    a: Because Photoshop autosave only keeps crash-recovery temp files while a PSD is open and unsaved. Once you hit Cmd+S to overwrite an older version and close the file normally, autosave wipes the temp. It's built for crashes, not for version history.
+  - q: Isn't Photoshop autosave the same thing as version history?
+    a: 'No. Autosave (Auto Recover) solves one problem — don''t lose unsaved progress if Photoshop crashes or the power dies. It doesn''t answer "I liked the colors from half an hour ago, take me back". File-level version history is a separate layer that keeps every Cmd+S as a recoverable point you can find months later.'
+  - q: Can the Photoshop History panel restore yesterday's version?
+    a: No. The History panel only records the steps you took in this PSD during this session. The moment you close the file and reopen it, all that history is gone. It solves "undo my last 50 steps", not "bring back yesterday's version".
+  - q: How can designers add file-level version history to Photoshop?
+    a: Add an external layer that auto-versions on every save. A tool like Keeply captures a copy of the PSD each time you Cmd+S, with a note like "client-approved", so the version from 30 minutes ago — or 6 months ago — is two clicks away. It works regardless of how or how many times you open Photoshop.
+  - q: When don't designers need this extra layer?
+    a: Three cases. (1) Quick gigs with no revision rounds where the client signs off and the file is archived. (2) Your studio mandates Adobe Creative Cloud version history and it's never failed you. (3) Your naming convention is so strict that every Cmd+S becomes -v07 -v08 and you genuinely never get lazy. Outside those, someday you'll hit "the client wants v2 back but I only have v5".
 ---
 
 You hit Cmd+S. The cursor blinked once.

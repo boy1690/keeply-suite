@@ -19,6 +19,17 @@ voice_version: v2-2026-05-11
 status: approved_master
 cta_topic: recovery
 image_alt_data: "Version stack thesis_v5.docx through thesis_final_really_final.docx with v6 marked as 'the diff you forgot' — one laptop, two years of work, the missing version is not the deadline but the change you cannot reconstruct"
+faq_schema:
+  - q: Will OneDrive sync protect my thesis?
+    a: Cloud sync solves "the laptop died, the file is still alive". It doesn't solve "I need the version from three months ago". OneDrive personal keeps version history for 30 days by default, and you'd need to remember the exact file name. Across a two-year thesis cycle, the version your advisor asks about usually sits outside that retention window.
+  - q: Is Word's built-in version history enough?
+    a: No. Word's tracked changes only show edits in this current file, not a list of separately saved historical versions. Once you accept all changes or re-save, the older states are gone. When your advisor says "the paragraph from v5 was better", Word can't help.
+  - q: Why does the 3-2-1 backup rule not save a thesis?
+    a: The 3-2-1 rule (3 copies, 2 media, 1 off-site) protects against catastrophic disk loss. But a thesis's pain isn't lost files — it's **not being able to identify the right version**. You have seven thesis_v* files all backed up, and still can't tell which one is the "last week's paragraph" your advisor wants. 3-2-1 protects existence, not identifiability.
+  - q: What are the 4 steps of master's thesis version control?
+    a: Step 1 — save a dated copy at the end of each work day (e.g. thesis-0423.docx). Step 2 — keep an extra labelled "submitted-to-advisor" copy of every version you send. Step 3 — adopt a tool like Keeply that auto-versions each save with notes ("3.2 rewritten") so months later the timeline shows the diff. Step 4 — at least one copy not on this laptop (cloud, external drive, or USB stick).
+  - q: When don't you need this extra layer?
+    a: Three cases. (1) Thesis is shorter than three months and your advisor never circles back to older drafts. (2) You already have a strict daily-naming routine plus a paid cloud tier with 180+ day retention, sustained for two years without slipping. (3) Your university mandates an LMS with full version tracking. Outside those, most students hit the "advisor asks for v5, you only have v7" moment in year two.
 howto_schema:
   name: 碩士論文版本管理 4 步實戰
   totalTime: P2Y

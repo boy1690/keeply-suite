@@ -14,6 +14,15 @@ og_image: cover.png
 role: standalone
 template: T6
 image_alt_data: "Founder sketch by a window with handwritten character 創 (create) — the moment that triggered Keeply was watching a colleague lose 6 weeks of CAD work to an unsaved overwrite, realizing existing tools were never designed for non-developers"
+faq_schema:
+  - q: How is Keeply different from Git?
+    a: "Git is designed for people who write code — you actively run commands at every checkpoint, learn branches and merges, manage a repository. Keeply is designed for people who don't write code — drag a folder in, keep saving the way you always do, and version history appears in the background. No commands to learn, no \"become a Git user\" arc."
+  - q: Why did you decide to build Keeply?
+    a: I watched the same incident play out too many times on construction sites — a colleague losing 6 weeks of CAD work to an unsaved overwrite, or a crew tearing out concrete because the field built from last week's drawing. The existing version control tools all assumed the user was willing to learn Git. Architects, designers, accountants, lawyers, grad students don't want to learn Git — they want "while I work, something quietly keeps the versions for me".
+  - q: What problem is Keeply actually solving?
+    a: 'An overlooked middle layer — file-level intentional version history. Cloud sync solves "the file exists", Time Machine solves disk-level recovery, Word''s tracked changes only handle this file in this session. "The version I deliberately saved on a Tuesday three months ago" — that gap has no incumbent, and most people fight it with manual _v7 _final naming that doesn''t survive six months.'
+  - q: Who's Keeply for, and who is it not for?
+    a: "Good fit — architects, designers, lawyers, accountants, grad students, AI-pair-programming developers, anyone tracking who changed what in shared folders. Not for — pure code work (Git/GitHub fits better), companies whose IT policy mandates SharePoint/OneDrive as the only source of truth, or people whose files all live in cloud-native tools (Google Docs, Notion). We're not trying to compete with Git or replace cloud sync — Keeply only covers the layer everyone else forgets."
 ---
 
 For the past few years I've worked alongside engineers in the construction industry. Many of them are 50, 60 years old. The computer isn't their most comfortable tool, but the daily blueprints, change orders, and contracts all run through it. The shared folder is where they collaborate: one NAS, a group of people, N versions of files, edits all the time.

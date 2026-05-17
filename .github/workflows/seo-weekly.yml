@@ -61,6 +61,12 @@ jobs:
       - name: External health check
         run: node _dev/seo/health-check.js > "$SEO_DATA_DIR/health.json"
 
+      - name: Audit schema coverage (faq_schema / howto_schema)
+        # Non-blocking — exit code 1 means <90% coverage on a core locale.
+        # We capture JSON for the report; CI failure is opt-in (uncomment
+        # the `|| true` removal to enforce).
+        run: node _dev/seo/audit-schema-coverage.js --json > "$SEO_DATA_DIR/schema-coverage.json" || true
+
       - name: Build markdown report
         run: node _dev/seo/build-report.js > report.md
 

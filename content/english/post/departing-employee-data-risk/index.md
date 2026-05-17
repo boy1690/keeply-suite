@@ -12,6 +12,15 @@ primary_keyword: "departing employee data risk"
 spec: specs/departing-employee-data-risk/
 status: approved
 image_alt_data: "Folder timeline at 23:03: brand-book/ copied at 22:50, deleted at 23:03, expiring 30 days later — two actions on the same folder, neither logged by Dropbox or Google Drive, both beyond what sync tools can stop"
+faq_schema:
+  - q: "A departing employee wiped a Dropbox or Google Drive folder before leaving. Can version history undo it?"
+    a: "Mostly no. Dropbox keeps 30 days of version history on personal plans and 180 days on Business — but the moment that user empties their own trash (or has admin permissions), the deletion bypasses version recovery entirely. Sync tools are designed for 'two ends consistent,' not 'irreversible history.'"
+  - q: "Can lawyers or DLP software solve this?"
+    a: "Neither in time. A trade-secret lawsuit takes 12–24 months, the burden of proof is heavy, and by the time you win, the original files are too stale to matter. DLP software costs more per month than makes sense for a 10-person team, requires a dedicated admin, and only blocks future leaks — it can't undo what your employee already did last weekend."
+  - q: "How does Keeply fix the blind spot that sync tools leave open?"
+    a: "Keeply isn't built on sync; it's built on irreversible history. Every save lands on a timeline, the local repository has no time limit, and the '500 version cap' simply doesn't exist. Critical deliverables can be frozen as Releases (per ADR-003) — even an admin can't delete a frozen Release version."
+  - q: "Is Keeply a fit for IT-controlled enterprises?"
+    a: "Small teams (≤10 people) can deploy it directly. Mid-sized companies can layer it on top of existing DLP / centralized backup — Keeply's job is 'version history for individual or team workflows.' It doesn't replace enterprise DLP (USB lockdown, real-time monitoring, encrypted channels) — it fills the blind spot those tools never covered, namely deletion by a legitimate user."
 ---
 
 # 【2026 File Management】Departing employee deleted your files? Sync isn't backup

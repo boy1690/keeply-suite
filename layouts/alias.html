@@ -3,12 +3,156 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ .Permalink }}</title>
+
+  {{- /*
+    alias.html serves the root `/` URL (and Hugo's other auto-generated
+    aliases). Hugo's `defaultContentLanguageInSubdir = true` redirects
+    `/` → `/en/` via JS + meta-refresh. Before 2026-05-17 this page was
+    a 596-byte empty shell, which av8d-levelup scored GEO 15 / AEO 5
+    because SEO scanners + some AI crawlers don't follow client-side
+    redirects.
+
+    Fix: keep the redirect mechanism, but ship a full entity-graph JSON-LD
+    payload + minimal body content so any scanner / crawler that DOESN'T
+    follow JS still sees Organization / WebSite / Person / Blog signals.
+    `noindex` stays so we don't compete with `/en/` for the same content.
+  */ -}}
+
+  {{- $title := .Site.Title | default "Keeply Blog" -}}
+  {{- $description := .Site.Params.description | default "Keeply Blog — version control, file backup, and recovery field notes for non-developers." -}}
+
+  <title>{{ $title }}</title>
+  <meta name="description" content="{{ $description }}">
   <link rel="canonical" href="{{ .Permalink }}">
-  <meta name="robots" content="noindex">
+  <meta name="robots" content="noindex,follow">
+
+  {{- /* Hreflang — point each language to its localized homepage so AI
+         crawlers + Google can discover all 19 locales from the root. */ -}}
+  {{- range .Site.Languages -}}
+    <link rel="alternate" hreflang="{{ .Lang }}" href="{{ $.Site.BaseURL }}{{ .Lang }}/">
+  {{- end -}}
+  <link rel="alternate" hreflang="x-default" href="{{ .Site.BaseURL }}en/">
+
+  {{- /* Open Graph + Twitter Card (minimal) — gives Slack/LINE/Discord
+         a proper preview when someone shares blog.keeply.work/. */ -}}
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:title" content="{{ $title }}">
+  <meta property="og:description" content="{{ $description }}">
+  <meta property="og:image" content="{{ "og-image.png" | absURL }}">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="900">
+  <meta property="og:site_name" content="{{ $title }}">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ $title }}">
+  <meta name="twitter:description" content="{{ $description }}">
+  <meta name="twitter:image" content="{{ "og-image.png" | absURL }}">
+
+  {{- /* Favicons */ -}}
+  <link rel="icon" href="{{ "favicon.ico" | absURL }}" sizes="32x32">
+  <link rel="icon" href="{{ "favicon.svg" | absURL }}" type="image/svg+xml">
+
+  {{- /* @graph JSON-LD — full entity payload so AI engines can resolve
+         the blog as an entity even without crawling /en/.
+         Includes: Organization + WebSite + Person + Blog. */ -}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "{{ .Site.BaseURL }}#organization",
+        "name": {{ .Site.Params.organization.name | jsonify | safeJS }},
+        "url": {{ .Site.Params.organization.url | jsonify | safeJS }},
+        "logo": {
+          "@type": "ImageObject",
+          "url": {{ "logo.svg" | absURL | jsonify | safeJS }}
+        },
+        "sameAs": {{ .Site.Params.organization.sameAs | jsonify | safeJS }}
+      },
+      {
+        "@type": "WebSite",
+        "@id": "{{ .Site.BaseURL }}#website",
+        "url": {{ .Site.BaseURL | jsonify | safeJS }},
+        "name": {{ $title | jsonify | safeJS }},
+        "description": {{ $description | jsonify | safeJS }},
+        "inLanguage": "en",
+        "publisher": { "@id": "{{ .Site.BaseURL }}#organization" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "{{ .Site.BaseURL }}en/search/?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "{{ .Site.BaseURL }}#founder",
+        "name": {{ .Site.Params.author.name | jsonify | safeJS }},
+        "alternateName": {{ .Site.Params.author.alternateName | jsonify | safeJS }},
+        "jobTitle": {{ .Site.Params.author.jobTitle | jsonify | safeJS }},
+        "url": {{ .Site.Params.author.url | jsonify | safeJS }},
+        "sameAs": {{ .Site.Params.author.sameAs | jsonify | safeJS }},
+        "worksFor": { "@id": "{{ .Site.BaseURL }}#organization" }
+      },
+      {
+        "@type": "Blog",
+        "@id": "{{ .Permalink }}#blog",
+        "url": {{ .Site.BaseURL | jsonify | safeJS }},
+        "name": {{ $title | jsonify | safeJS }},
+        "description": {{ $description | jsonify | safeJS }},
+        "publisher": { "@id": "{{ .Site.BaseURL }}#organization" },
+        "author": { "@id": "{{ .Site.BaseURL }}#founder" },
+        "inLanguage": [
+          {{- $first := true -}}
+          {{- range .Site.Languages -}}
+            {{- if not $first }},{{ end -}}
+            {{ .Lang | jsonify | safeJS }}
+            {{- $first = false -}}
+          {{- end }}
+        ]
+      }
+    ]
+  }
+  </script>
+
+  {{- /* Client-side redirect (JS + meta refresh). Most browsers + Googlebot
+         + GPTBot follow these; raw HTTP scanners + some retrieval crawlers
+         don't, which is why the body below carries real entity content. */ -}}
   {{- $js := resources.Get "js/locale-redirect.js" | resources.Fingerprint "sha384" -}}
   <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" crossorigin="anonymous"></script>
   <meta http-equiv="refresh" content="0; url={{ .Permalink }}">
+
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 720px; margin: 4rem auto; padding: 0 1.5rem; color: #1f2937; line-height: 1.6; }
+    h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+    p.lede { font-size: 1.05rem; color: #4b5563; }
+    nav.lang ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.75rem 1rem; }
+    nav.lang a { color: #4f46e5; text-decoration: none; padding: 0.25rem 0.5rem; border: 1px solid #e5e7eb; border-radius: 4px; }
+    nav.lang a:hover { background: #f3f4f6; }
+    footer { margin-top: 2rem; font-size: 0.85rem; color: #6b7280; }
+    footer a { color: #4f46e5; }
+  </style>
 </head>
-<body></body>
+<body>
+  <h1>{{ $title }}</h1>
+  <p class="lede">{{ $description }}</p>
+
+  <p>Loading… If you're not redirected automatically, choose your language:</p>
+
+  <nav class="lang" aria-label="Language selection">
+    <ul>
+      {{- range .Site.Languages }}
+      <li><a href="{{ $.Site.BaseURL }}{{ .Lang }}/" hreflang="{{ .Lang }}">{{ .LanguageName }}</a></li>
+      {{- end }}
+    </ul>
+  </nav>
+
+  <footer>
+    <p>By <a href="https://www.linkedin.com/in/ting-wei-tsao-b57480152/" rel="noopener" target="_blank">Tsao Ting Wei (曹庭維)</a>, Founder of <a href="https://keeply.work">Keeply</a>.</p>
+  </footer>
+</body>
 </html>

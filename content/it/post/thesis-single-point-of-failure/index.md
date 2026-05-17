@@ -19,6 +19,17 @@ voice_version: v2-2026-05-11
 status: approved_master
 cta_topic: recovery
 image_alt_data: "Pila di versioni da thesis_v5.docx a thesis_final_really_final.docx con v6 evidenziato come 'la diff dimenticata' — un laptop, due anni di lavoro, il rischio reale non è la scadenza ma la modifica che non puoi ricostruire"
+faq_schema:
+  - q: La sincronizzazione di OneDrive protegge la mia tesi?
+    a: La sincronizzazione cloud risolve il rischio "il portatile è morto, il file è ancora vivo", ma non risolve "mi serve la versione di tre mesi fa". OneDrive personale conserva la cronologia versioni per 30 giorni di default, e dovresti ricordare il nome esatto del file. Nei due anni di un percorso di tesi, la versione che il relatore ti chiede di solito è fuori da quella finestra di conservazione.
+  - q: La cronologia versioni integrata di Word basta?
+    a: No. Le revisioni di Word mostrano solo le modifiche in questo file corrente, non un elenco di versioni storiche salvate separatamente. Nel momento in cui accetti tutte le modifiche o risalvi, gli stati precedenti spariscono. Quando il relatore dice "il paragrafo della v5 era meglio", Word non può aiutarti.
+  - q: Perché la regola di backup 3-2-1 non salva una tesi?
+    a: La regola 3-2-1 (3 copie, 2 supporti, 1 fuori sede) protegge dalla perdita catastrofica del disco. Ma il dolore di una tesi non è "file persi" — è **non riuscire a identificare la versione giusta**. Hai sette file thesis_v* tutti con backup, e ancora non sai quale sia "il paragrafo della scorsa settimana" che il relatore vuole. Il 3-2-1 protegge l'esistenza, non l'identificabilità.
+  - q: Quali sono i 4 passi del controllo versione per una tesi magistrale?
+    a: Passo 1 — salva una copia datata a fine giornata (es. tesi-0423.docx). Passo 2 — conserva una copia separata etichettata "consegnata-al-relatore" per ogni invio. Passo 3 — adotta uno strumento come Keeply che versiona automaticamente ogni salvataggio con note ("3.2 riscritto") così mesi dopo la timeline mostra la diff. Passo 4 — almeno una copia non su questo portatile (cloud, disco esterno o chiavetta).
+  - q: Quando non serve questo livello aggiuntivo?
+    a: Tre casi. (1) La tesi dura meno di tre mesi e il relatore non torna mai sulle bozze precedenti. (2) Hai già una routine rigida di naming quotidiano più un piano cloud a pagamento con conservazione oltre 180 giorni, mantenuto per due anni senza scivoloni. (3) La tua università impone un LMS con tracking versioni completo. Fuori da questi casi, la maggior parte degli studenti incontra al secondo anno il momento "il relatore chiede v5, io ho solo v7".
 howto_schema:
   name: 碩士論文版本管理 4 步實戰
   totalTime: P2Y

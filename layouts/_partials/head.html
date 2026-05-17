@@ -110,7 +110,23 @@
 <meta property="og:image:height" content="{{ $ogImageHeight }}" />
 <meta property="og:image:alt" content="{{ $title | plainify }}" />
 <meta property="og:site_name" content="{{ .Site.Title }}" />
-<meta property="og:locale" content="{{ replace .Language.Lang "-" "_" }}" />
+{{- /* og:locale must follow ll_CC convention (region uppercase) per Facebook
+       OG spec; e.g. zh_TW not zh_tw. Hugo's .Language.Lang is lowercase
+       ll-cc, so split and uppercase the region. Falls back to bare language
+       code when no region present (e.g. "ja" → "ja", "ko" → "ko"). */ -}}
+{{- $lang := .Language.Lang -}}
+{{- $parts := split $lang "-" -}}
+{{- $ogLocale := index $parts 0 -}}
+{{- if gt (len $parts) 1 -}}
+  {{- $ogLocale = printf "%s_%s" (index $parts 0) (upper (index $parts 1)) -}}
+{{- else -}}
+  {{- /* Map bare language codes to their primary region for Facebook. */ -}}
+  {{- $regionMap := dict "en" "US" "ja" "JP" "ko" "KR" "de" "DE" "fr" "FR" "es" "ES" "it" "IT" "pt" "PT" "ru" "RU" "nl" "NL" "pl" "PL" "tr" "TR" "vi" "VN" "th" "TH" "id" "ID" "ar" "AR" "hi" "IN" -}}
+  {{- with index $regionMap $lang -}}
+    {{- $ogLocale = printf "%s_%s" $lang . -}}
+  {{- end -}}
+{{- end -}}
+<meta property="og:locale" content="{{ $ogLocale }}" />
 
 {{- /* Twitter */ -}}
 <meta name="twitter:card" content="summary_large_image" />
@@ -383,35 +399,60 @@
     }
     </script>
   {{- end -}}
+  {{- /* @graph payload — promotes Organization + Person to top-level
+         @type so simple scanners (av8d-levelup, lower-tier AI bots) that
+         don't dive into nested .publisher / .author counts catch the
+         entity signal. Also adds Person (founder) directly on homepage
+         so E-E-A-T attaches to a real human, not just an Organization. */ -}}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": {{ .Site.Title | jsonify | safeJS }},
-    "url": {{ .Site.BaseURL | jsonify | safeJS }},
-    "publisher": {
-      "@type": "Organization",
-      "name": {{ .Site.Params.organization.name | jsonify | safeJS }},
-      "url": {{ .Site.Params.organization.url | jsonify | safeJS }},
-      "logo": { "@type": "ImageObject", "url": {{ "logo.svg" | absURL | jsonify | safeJS }} },
-      "sameAs": {{ .Site.Params.organization.sameAs | jsonify | safeJS }}
-    }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": {{ .Site.Title | jsonify | safeJS }},
-    "url": {{ .Site.BaseURL | jsonify | safeJS }},
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": "{{ .Site.BaseURL | strings.TrimRight "/" }}/{{ .Language.Lang }}/search/?q={search_term_string}"
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "{{ .Site.BaseURL }}#organization",
+        "name": {{ .Site.Params.organization.name | jsonify | safeJS }},
+        "url": {{ .Site.Params.organization.url | jsonify | safeJS }},
+        "logo": { "@type": "ImageObject", "url": {{ "logo.svg" | absURL | jsonify | safeJS }} },
+        "sameAs": {{ .Site.Params.organization.sameAs | jsonify | safeJS }}
       },
-      "query-input": "required name=search_term_string"
-    }
+      {
+        "@type": "Person",
+        "@id": "{{ .Site.BaseURL }}#founder",
+        "name": {{ .Site.Params.author.name | jsonify | safeJS }},
+        "alternateName": {{ .Site.Params.author.alternateName | jsonify | safeJS }},
+        "jobTitle": {{ .Site.Params.author.jobTitle | jsonify | safeJS }},
+        "url": {{ .Site.Params.author.url | jsonify | safeJS }},
+        "sameAs": {{ .Site.Params.author.sameAs | jsonify | safeJS }},
+        "worksFor": { "@id": "{{ .Site.BaseURL }}#organization" }
+      },
+      {
+        "@type": "Blog",
+        "@id": "{{ .Permalink }}#blog",
+        "name": {{ .Site.Title | jsonify | safeJS }},
+        "url": {{ .Permalink | jsonify | safeJS }},
+        "description": {{ (or .Site.Params.description "Keeply Blog") | jsonify | safeJS }},
+        "inLanguage": {{ .Language.Lang | jsonify | safeJS }},
+        "publisher": { "@id": "{{ .Site.BaseURL }}#organization" },
+        "author": { "@id": "{{ .Site.BaseURL }}#founder" }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "{{ .Site.BaseURL }}#website",
+        "name": {{ .Site.Title | jsonify | safeJS }},
+        "url": {{ .Site.BaseURL | jsonify | safeJS }},
+        "inLanguage": {{ .Language.Lang | jsonify | safeJS }},
+        "publisher": { "@id": "{{ .Site.BaseURL }}#organization" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "{{ .Site.BaseURL | strings.TrimRight "/" }}/{{ .Language.Lang }}/search/?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
   }
   </script>
 {{- end -}}

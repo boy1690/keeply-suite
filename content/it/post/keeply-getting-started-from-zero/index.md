@@ -20,6 +20,17 @@ bwf_version_at_draft: v0.2.11
 voice_calibration_round: "user round 1+2+3 applied + UI-grounded walk-through"
 cta_topic: install
 image_alt_data: "Confronto affiancato: checklist di 30 funzioni richiede 14 giorni di onconsiglioing contro 2 azioni — trascina una cartella, continua a lavorare — con protezione attiva dal primo giorno senza curva di apprendimento"
+faq_schema:
+  - q: Cosa devo imparare per iniziare a usare Keeply?
+    a: "Non devi imparare 30 funzioni. Bastano 2 azioni — trascina una cartella su cui stai lavorando dentro la finestra di Keeply, poi continua a salvare come fai di solito. Keeply registra ogni salvataggio in background, niente scorciatoie da memorizzare, niente comandi da digitare."
+  - q: Keeply è molto diverso dagli strumenti che ho usato finora?
+    a: Nessun riapprendimento. Keeply non ti chiede di rinominare i file, riorganizzare le cartelle o creare un concetto di repository. Premi Cmd+S (o Ctrl+S) come fai sempre, e Keeply mantiene la timeline. Quando ti serve una versione vecchia, scorri la timeline e clicca "ripristina".
+  - q: Quali sono le sole 2 azioni da ricordare?
+    a: "Azione 1 — trascina una cartella su cui stai lavorando e che non vuoi perdere; senza rinominare, senza catalogare. Azione 2 — continua a lavorare come al solito; Keeply registra automaticamente ogni salvataggio. Dal giorno 1 sei già protetto; al giorno 7 la timeline ti mostra tutto quello che ha catturato in silenzio."
+  - q: Com'è davvero la prima settimana?
+    a: 'Giorno 1 — trascini una cartella e quasi non te ne accorgi. Giorno 2-3 — cominci a vedere la timeline riempirsi di salvataggi, con i dettagli delle modifiche a un click di distanza. Giorno 7 — di solito hai un momento "ho sbagliato modifica, fammi ripristinare", ed è lì che ti rendi conto che questa rete di sicurezza prima non c''era.'
+  - q: Quando Keeply non è lo strumento giusto?
+    a: Quattro casi onesti. (1) Lavoro di puro codice — Git/GitHub funziona meglio. (2) La tua azienda impone SharePoint/OneDrive come unica fonte di verità. (3) I tuoi file vivono interamente in strumenti cloud-native (Google Docs, Notion) e non toccano mai il disco locale. (4) Hai già Time Machine più una convenzione di naming rigorosa e non ti è mai capitato un incidente. Fuori da questi casi, Keeply riempie la cronologia dei salvataggi intenzionali a livello di file che nessun altro strumento copre.
 howto_schema:
   name: Keeply 從零開始 2 個動作上手
   totalTime: PT7D
@@ -174,6 +185,9 @@ Al giorno 7, apri la Timeline e dai un'occhiata. **Capirai.**
 ## Letture correlate
 
 - [La guida completa alla gestione delle versioni dei file](/it/post/file-version-management-complete-guide/) (PILLAR 1, perché la gestione delle versioni conta)
+- [La prima settimana con Keeply: diario di osservazione di 7 giorni](/it/post/keeply-first-week-workflow/) (cosa fare davvero dopo l'installazione)
+- [Cosa salva Keeply rispetto a backup e strumenti cloud](/it/post/what-keeply-saves-vs-backup-cloud/) (Keeply vs Dropbox / Time Machine — la differenza pratica)
+- [Vibe coding fuori controllo? Un solo gesto per tornare all'ultima versione funzionante](/it/post/vibe-coding-rollback/) (il classico scenario "l'AI mi ha rotto il file")
 
 ---
 

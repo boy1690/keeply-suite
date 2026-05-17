@@ -21,6 +21,17 @@ voice_calibration_round: "user round 1+2+3 套用 + UI-grounded walk-through"
 derived_from: zh-TW
 cta_topic: install
 image_alt_data: "左右对比：30个功能清单需14天才能上手，对比仅需「拖入一个文件夹、继续今天的工作」2个动作——第一天即获保护，无需学习曲线"
+faq_schema:
+  - q: 第一次用 Keeply 要学什么？
+    a: 你不需要学 30 个功能。只要记住 2 个动作：把一个正在做的文件夹拖进 Keeply 窗口、接着继续照平常保存做事。Keeply 自动在后台记录每一次保存，你不用按任何快捷键也不用记命令。
+  - q: Keeply 跟我之前用过的工具差很多吗？
+    a: 不需要重新学习。Keeply 不要你改命名规则、不要你重新分类文件夹、不要你建立 repository 之类的概念。你照平常的方式 Cmd+S（或 Ctrl+S）保存，Keeply 自动帮你留下时间轴，你想找哪一版就翻时间轴点还原。
+  - q: 只要记住哪 2 个动作就能上手？
+    a: 动作 1：拖入文件夹——把现在正在进行且不想搞丢的文件夹拖进 Keeply 窗口，不用改名也不分类。动作 2：继续工作——照平常习惯保存，Keeply 自动记录每次变动。第 1 天就有版本历史，第 7 天回头看时间轴会知道它在后台帮你做了多少事。
+  - q: 第一周实际体验会是什么样？
+    a: Day 1 拖入文件夹后几乎没感觉；Day 2-3 你开始注意到时间轴累积出每次保存的记录，点进任一笔可看新增或删除了哪些文件；Day 7 通常会发生「改错一次直接点还原」的小事，你会意识到这层安全网之前是真空的。
+  - q: 什么时候不适合用 Keeply？
+    a: 4 种情境直接列出来：(1) 纯文本 code 用 Git/GitHub 更合适；(2) 公司强制 SharePoint/OneDrive 为唯一文件来源；(3) 文件都是云端原生（Google Docs/Notion），不存本机；(4) 你已经有 Time Machine 加完善的命名规则且不曾出过事。其他情境 Keeply 都能补上「文件级故意保存的版本历史」这条缺口。
 howto_schema:
   name: Keeply 從零開始 2 個動作上手
   totalTime: PT7D
@@ -175,6 +186,9 @@ Keeply 不争所有场景。4 种情况下，别的工具更对。
 ## 延伸阅读
 
 - [文件版本管理完整指南](/zh-cn/post/file-version-management-complete-guide/)（PILLAR 1，了解版本管理为什么重要）
+- [Keeply 第一周：用 7 天观察日记验证 3 个真实信号](/zh-cn/post/keeply-first-week-workflow/)（装好之后第一周怎么跑）
+- [Keeply 到底存什么？跟备份、云端工具有什么不一样](/zh-cn/post/what-keeply-saves-vs-backup-cloud/)（先搞懂 Keeply vs Dropbox / Time Machine 的差别）
+- [Vibe Coding 失控了？1 个动作回到上一个能跑的版本](/zh-cn/post/vibe-coding-rollback/)（AI 改坏文件的典型场景）
 
 ---
 

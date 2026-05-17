@@ -15,6 +15,17 @@ voice_version: v3-2026-05-15
 role: cluster
 pillar_parent: file-version-management-complete-guide
 draft: false
+faq_schema:
+  - q: Photoshop 自动保存文件夹为什么翻起来是空的？
+    a: 因为 Photoshop 自动保存只在 PSD「目前正开着但还没保存」的时候保留崩溃备援文件，一旦你 Cmd+S 盖掉旧版、然后正常关闭文件，自动保存就把临时清空。它是「为崩溃而生」的机制，不是版本历史。
+  - q: Photoshop 自动保存跟版本历史一样吗？
+    a: 不一样。自动保存 (Auto Recover) 只解一个问题：Photoshop 崩溃或断电时让你不丢掉现在还没保存的进度。它不负责「半小时前的那版颜色我比较喜欢，帮我还原」。文件级版本历史是另一层工具——每次 Cmd+S 都另存一版、半年后还叫得回来。
+  - q: Photoshop 历史记录面板能还原昨天的版本吗？
+    a: 不行。历史记录面板只记录这个文件这次打开后的操作步骤，一旦你关闭 PSD 再打开，整段历史就清空。它解的是「我刚才这 50 步要回去某一步」，不是「昨天那版我要拿回来」。
+  - q: 设计师怎么补齐文件级版本历史？
+    a: 在 Photoshop 外面加一层自动版本记录。像 Keeply 这类工具会在你每次 Cmd+S 时另存一份 PSD 进时间轴并附笔记（如「客户确认版」），半小时后想对比、半年后想还原都点两下就好，跟你怎么开 Photoshop、开了几次都无关。
+  - q: 什么时候设计师不需要再装这层工具？
+    a: 三个情境可以省：(1) 你只接无修改的快案、客户确认后文件归档不再动；(2) 公司强制走 Adobe Creative Cloud 版本历史 + 不曾出问题；(3) 你的命名规则严格到每次保存都新增 -v07 -v08，且能保证自己永远不偷懒。其他情境都会在某个下午撞上「客户要回 v2 但你只有 v5」的瞬间。
 ---
 
 # 【2026 文件管理】Photoshop 自动保存救崩溃，救不了你盖掉客户版：Keeply 怎么补文件级版本历史
@@ -29,7 +40,7 @@ draft: false
 
 完蛋。
 
-被压过去的那层、现在是你手上唯一的 v2。你疯狂 google「photoshop autosave location」、心想 Photoshop 应该偷偷在哪里留了副本吧——你打开自动保存文件夹、里面有一个文件、上周二的、今天的什么都没有。
+被压过去的那层、现在是你手上唯一的 v2。你疯狂 google「photoshop 自动保存 location」、心想 Photoshop 应该偷偷在哪里留了副本吧——你打开自动保存文件夹、里面有一个文件、上周二的、今天的什么都没有。
 
 你打开的文件夹是对的。问题在于、它做的事跟你以为的不一样。这篇拆完 Photoshop 自动保存 / 历史记录面板 / Time Machine / OneDrive 各自为什么救不了「盖掉客户版」这个场景、然后让你看 [Keeply](https://keeply.work) 怎么用「30 分钟背景轮询 + 主动保存版本 + 笔记」补文件级版本历史这层。
 
@@ -68,13 +79,13 @@ draft: false
 
 自动保存文件夹从头到尾就是空的。它在等崩溃才会写东西；今天没崩溃、所以里面没今天的事。
 
-面对这个空文件夹、设计师通常先做两件事：再 google 一次「photoshop autosave 在哪」、然后盯着文件夹发呆十分钟。两件事都白搭、因为自动保存从头到尾就是另一个机制——它是 Photoshop 为自己准备的紧急伞、伞是为「程式或系统突然死掉」开的、伞下站的人是 Photoshop 自己、不是你的版本历史。
+面对这个空文件夹、设计师通常先做两件事：再 google 一次「photoshop 自动保存 在哪」、然后盯着文件夹发呆十分钟。两件事都白搭、因为自动保存从头到尾就是另一个机制——它是 Photoshop 为自己准备的紧急伞、伞是为「程式或系统突然死掉」开的、伞下站的人是 Photoshop 自己、不是你的版本历史。
 
 这支紧急伞实际在做什么？Photoshop 监控的是「非正常结束」这件事——崩溃、强制关闭、系统 kernel panic。这些事情发生的时候、它会把内存里的工作状态写进一份 `.psb` 恢复文件；下次你打开 Photoshop、会跳出对话框问你要不要还原那份文件。
 
 它的职责到这里为止。你存档盖掉自己上一个版本？这在 Photoshop 内部完全是另一件事——程式运作正常、使用者主动执行保存指令、自动保存机制连被触发都没。没崩溃、没东西需要救、所以也没东西被写进恢复文件夹。
 
-想自己去文件夹翻一遍确认？[Adobe 官方文档有列出每个平台的精确路径](https://helpx.adobe.com/cn/photoshop/using/auto-save-recovery-background-save.html)：Mac 的 `~/Documents/Adobe/自动恢复/`、Windows 的 `%AppData%/Adobe/Adobe Photoshop {version}/自动恢复/`。前几次 session 的旧 `.psb` 可能还躺着、但今天的工作从来没被写进去、也就还原不出来。
+想自己去文件夹翻一遍确认？[Adobe 官方文档有列出每个平台的精确路径](https://helpx.adobe.com/cn/photoshop/using/自动保存-recovery-后台-save.html)：Mac 的 `~/Documents/Adobe/自动恢复/`、Windows 的 `%AppData%/Adobe/Adobe Photoshop {version}/自动恢复/`。前几次 session 的旧 `.psb` 可能还躺着、但今天的工作从来没被写进去、也就还原不出来。
 
 那为什么还有上千篇文章教你「自动保存文件夹在哪」？
 
@@ -155,7 +166,7 @@ Keeply 救不回已经不存在的东西、诚实列几个情境。
 
 下次客户确认版那个瞬间、会再来。
 
-打开 [Keeply](https://keeply.work)、看时间轴顶端那条「客户确认」tag——下次你盖掉 v2、不用再 google「photoshop autosave location」盯着空文件夹发呆。点时间轴还原、3 秒拿回来。
+打开 [Keeply](https://keeply.work)、看时间轴顶端那条「客户确认」tag——下次你盖掉 v2、不用再 google「photoshop 自动保存 location」盯着空文件夹发呆。点时间轴还原、3 秒拿回来。
 
 整个 panic 解掉。
 

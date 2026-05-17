@@ -20,6 +20,17 @@ bwf_version_at_draft: v0.2.11
 voice_calibration_round: "user round 1+2+3 applied + UI-grounded walk-through"
 cta_topic: install
 image_alt_data: "Side-by-side comparison: 30-feature checklist taking 14 days to on-board versus 2 actions — drag one folder, keep working — achieving first-day protection with no learning curve required"
+faq_schema:
+  - q: What do I have to learn to start using Keeply?
+    a: "You don't have to learn 30 features. Just two actions — drag one folder you're working on into the Keeply window, then keep saving the way you normally do. Keeply records every save in the background — no shortcuts to memorise, no commands to type."
+  - q: Is Keeply a big shift from tools I've used before?
+    a: No retraining. Keeply doesn't ask you to rename files, reorganise folders, or create a repository concept. You hit Cmd+S (or Ctrl+S) the way you always do, and Keeply keeps the timeline. When you need an older version, you scroll the timeline and click restore.
+  - q: So what are the only 2 actions to remember?
+    a: Action 1 — drag in a folder you're actively working on and don't want to lose; no renaming, no categorising. Action 2 — keep working as usual; Keeply auto-records every save. Day 1 you're already protected; day 7 the timeline shows you everything it's been quietly capturing.
+  - q: What does the first week actually feel like?
+    a: 'Day 1 — you drag a folder in and barely notice anything. Day 2-3 — you start seeing the timeline fill up with every save, with diff details one click away. Day 7 — usually you''ll have an "I made the wrong edit, let me restore" moment, and that''s when you realise this safety net was missing before.'
+  - q: When is Keeply not the right tool for you?
+    a: Four cases worth naming. (1) Pure code work — Git/GitHub fits better. (2) Your company mandates SharePoint/OneDrive as the only source of truth. (3) Your files live entirely in cloud-native tools (Google Docs, Notion) and never touch the local disk. (4) You already run Time Machine plus a strict naming convention and have never been burned. Outside these, Keeply fills the file-level intentional save history that nothing else covers.
 howto_schema:
   name: Keeply 從零開始 2 個動作上手
   totalTime: PT7D
@@ -174,6 +185,9 @@ On day 7, open the Timeline and take a look. **You'll get it.**
 ## Further reading
 
 - [The complete guide to file version management](/en/post/file-version-management-complete-guide/) (PILLAR 1, why version management matters)
+- [Your first week with Keeply: a 7-day field journal](/en/post/keeply-first-week-workflow/) (what to actually do after the install)
+- [What Keeply actually saves vs. backup and cloud tools](/en/post/what-keeply-saves-vs-backup-cloud/) (Keeply vs Dropbox / Time Machine — the practical difference)
+- [Vibe coding overshot? One move to roll back to the last working version](/en/post/vibe-coding-rollback/) (the classic AI-broke-my-file use case)
 
 ---
 
