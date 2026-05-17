@@ -50,12 +50,27 @@ def gen_timeline(*, entries: list) -> str:
         # Blue dot
         parts.append(f'<circle cx="{PAD + 4}" cy="{cy}" r="4" fill="{DOT_BLUE}"/>')
 
-        # Message (left-aligned)
+        # Pre-compute tag-pills total width (right side) so message can be truncated
+        # before colliding with a pill. (Bug fix 2026-05-15: long EN messages like
+        # "Submitted to supervisor v2 — monthly report" overlapped the Release pill.)
+        time_w = 60
+        tags_total_w = 0
+        for tag in tags:
+            tag_w_est = max(54, len(tag) * 14 + 16)
+            tags_total_w += tag_w_est + 4
         msg_x = PAD + 16
+        # Available message area: from msg_x to (W - PAD - time_w - 8 - tags_total_w)
+        msg_max_x = W - PAD - time_w - 8 - tags_total_w - 8  # 8px breathing room
+        msg_width_px = msg_max_x - msg_x
+        # Cell rough widths: CJK ~13px, ASCII ~7px. Use 8.5 as middle to estimate.
+        max_chars = max(8, int(msg_width_px / 8.5))
+        if len(message) > max_chars:
+            message = message[: max_chars - 1] + "…"
+
+        # Message (left-aligned)
         parts.append(f'<text x="{msg_x}" y="{cy + 5}" font-size="13" fill="{TEXT}">{esc(message)}</text>')
 
         # Tag pills (right side, before relative time)
-        time_w = 60
         tag_x = W - PAD - time_w - 8
         for tag in reversed(tags):
             tag_w = max(54, len(tag) * 14 + 16)
@@ -295,6 +310,24 @@ TIMELINES = {
         ("Salvataggio auto", [], "12 feb"),
         ("Bozza per il CdA", ["Draft"], "2 settimane fa"),
         ("Avviso storage 80%", [], "1 mese fa"),
+    ],
+    # hwp-file-recovery: zh-TW / zh-CN / JP / IT dropped per locale-specific-topic policy
+    # (한글 is Korea-only software, those markets have zero overlap)
+    ("en", "hwp-file-recovery"): [
+        ("Auto-save — ch.5 edits", [], "30 min ago"),
+        ("Submitted v2 — monthly report", ["Release"], "3 weeks ago"),
+        ("CFO third-round edits", [], "3 weeks ago"),
+        ("Auto-save", [], "last month"),
+        ("Month-start proposal", ["Draft"], "1 month ago"),
+        ("Project kickoff", [], "2 months ago"),
+    ],
+    ("ko", "hwp-file-recovery"): [
+        ("자동 저장 — 5장 수정", [], "30분 전"),
+        ("상사 제출 v2 — 보고서", ["Release"], "3주 전"),
+        ("CFO 3차 수정", [], "3주 전"),
+        ("자동 저장", [], "지난달"),
+        ("월초 제안 버전", ["Draft"], "1개월 전"),
+        ("프로젝트 초안", [], "2개월 전"),
     ],
 }
 

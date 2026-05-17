@@ -277,6 +277,17 @@ TARGETS = [
     ("ja", "sharepoint-version-history", "sharepoint-version-history_ja"),
     ("ko", "sharepoint-version-history", "sharepoint-version-history_ko"),
     ("it", "sharepoint-version-history", "sharepoint-version-history_it"),
+    # hwp-file-recovery: KO-only software (한글), launch_locales narrowed to [ko, en]
+    # per locale-specific topic policy 2026-05-15
+    ("en", "hwp-file-recovery", "hwp-file-recovery_en"),
+    ("ko", "hwp-file-recovery", "hwp-file-recovery_ko"),
+    # install-keeply-windows-mac — cluster article, 6-locale parity (P1.21 Mock UI requirement)
+    ("zh-tw", "install-keeply-windows-mac", "install-keeply-windows-mac_tw"),
+    ("zh-cn", "install-keeply-windows-mac", "install-keeply-windows-mac_cn"),
+    ("en", "install-keeply-windows-mac", "install-keeply-windows-mac_en"),
+    ("ja", "install-keeply-windows-mac", "install-keeply-windows-mac_ja"),
+    ("ko", "install-keeply-windows-mac", "install-keeply-windows-mac_ko"),
+    ("it", "install-keeply-windows-mac", "install-keeply-windows-mac_it"),
 ]
 
 

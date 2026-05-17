@@ -59,3 +59,10 @@ static/fonts/_full-backup/
 # SEO audit output (local runs of `npm run seo:audit`; CI uses /tmp)
 _dev/seo/audit-output/
 _dev/seo/serpbear/data/
+
+# Cover / mascot design exploration (large AI-gen PNGs, iteration noise)
+_dev/design/cover-experiments/
+
+# Local screenshots dropped at repo root during ops (cf-*, gsc-*)
+/cf-*.png
+/gsc-*.png

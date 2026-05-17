@@ -476,6 +476,68 @@ CASES = {
         "files": [("M", "proposal.docx", "Modif.")],
         "note": "Approvato dal cliente v2.3 — versione del consiglio",
     },
+    "hwp-file-recovery_tw": {
+        "file_count_text": "這次改了 1 個檔案",
+        "files": [("M", "report.hwp", "已修改")],
+        "note": "上級送審 v2 — 月度報告",
+    },
+    "hwp-file-recovery_cn": {
+        "file_count_text": "这次改了 1 个文件",
+        "files": [("M", "report.hwp", "已修改")],
+        "note": "上级送审 v2 — 月度报告",
+    },
+    "hwp-file-recovery_en": {
+        "file_count_text": "1 file changed",
+        "files": [("M", "report.hwp", "Modified")],
+        "note": "Submitted to supervisor v2 — monthly report",
+    },
+    "hwp-file-recovery_ja": {
+        "file_count_text": "1 件のファイルを変更",
+        "files": [("M", "report.hwp", "変更")],
+        "note": "上司提出 v2 — 月次レポート",
+    },
+    "hwp-file-recovery_ko": {
+        "file_count_text": "1개 파일 변경됨",
+        "files": [("M", "report.hwp", "수정")],
+        "note": "상사 제출 v2 — 월간 보고서",
+    },
+    "hwp-file-recovery_it": {
+        "file_count_text": "1 file modificato",
+        "files": [("M", "report.hwp", "Modif.")],
+        "note": "Inviato al supervisore v2 — rapporto mensile",
+    },
+    # install-keeply-windows-mac — "first save after install" scenario.
+    # Single freshly-added project file, note announces "just installed".
+    "install-keeply-windows-mac_tw": {
+        "file_count_text": "這次改了 1 個檔案",
+        "files": [("M", "Q2-proposal.docx", "已修改")],
+        "note": "首次儲存 — 剛裝好 Keeply",
+    },
+    "install-keeply-windows-mac_cn": {
+        "file_count_text": "这次改了 1 个文件",
+        "files": [("M", "Q2-proposal.docx", "已修改")],
+        "note": "首次保存 — 刚装好 Keeply",
+    },
+    "install-keeply-windows-mac_en": {
+        "file_count_text": "1 file changed",
+        "files": [("M", "Q2-proposal.docx", "Modified")],
+        "note": "First save — Keeply just installed",
+    },
+    "install-keeply-windows-mac_ja": {
+        "file_count_text": "1 件のファイルを変更",
+        "files": [("M", "Q2-proposal.docx", "変更")],
+        "note": "初回保存 — Keeply インストール直後",
+    },
+    "install-keeply-windows-mac_ko": {
+        "file_count_text": "1개 파일 변경",
+        "files": [("M", "Q2-proposal.docx", "수정")],
+        "note": "첫 저장 — Keeply 설치 직후",
+    },
+    "install-keeply-windows-mac_it": {
+        "file_count_text": "1 file modificato",
+        "files": [("M", "Q2-proposal.docx", "Modif.")],
+        "note": "Primo salvataggio — Keeply appena installato",
+    },
 }
 
 
