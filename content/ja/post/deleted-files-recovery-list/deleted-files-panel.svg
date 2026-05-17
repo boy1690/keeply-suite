@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Inter','Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans JP','Noto Sans KR',-apple-system,system-ui,sans-serif">
+<rect x="0" y="0" width="480" height="300" rx="8" fill="#FFFFFF" stroke="#E5E7EB"/>
+<rect x="0" y="0" width="480" height="40" rx="8" fill="#F9FAFB"/>
+<rect x="0" y="32" width="480" height="9" fill="#F9FAFB"/>
+<line x1="0" y1="40" x2="480" y2="40" stroke="#E5E7EB"/>
+<text x="16" y="26" font-size="14" font-weight="700" fill="#374151">🗑️ 最近削除</text>
+<text x="464" y="26" font-size="11" fill="#9CA3AF" text-anchor="end">過去 30 日間</text>
+<text x="16" y="60" font-size="10" font-weight="700" fill="#9CA3AF" letter-spacing="1">今日</text>
+<rect x="0" y="68" width="480" height="44" fill="#EEF2FF" opacity="0.5"/>
+<text x="16" y="86" font-size="14">🎨</text>
+<text x="36" y="86" font-size="13" fill="#374151" font-weight="600">proposal_v7.psd</text>
+<text x="36" y="100" font-size="10" fill="#9CA3AF">/designs/2026/ — 11 分前</text>
+<text x="464" y="92" font-size="11" fill="#3B82F6" font-weight="600" text-anchor="end">復元 →</text>
+<text x="16" y="130" font-size="14">📄</text>
+<text x="36" y="130" font-size="13" fill="#374151" font-weight="600">pricing-notes.docx</text>
+<text x="36" y="144" font-size="10" fill="#9CA3AF">/designs/2026/ — 47 分前</text>
+<text x="464" y="136" font-size="11" fill="#3B82F6" font-weight="600" text-anchor="end">復元 →</text>
+<line x1="0" y1="156" x2="480" y2="156" stroke="#F3F4F6"/>
+<text x="16" y="176" font-size="10" font-weight="700" fill="#9CA3AF" letter-spacing="1">昨日</text>
+<text x="16" y="202" font-size="14">🖼️</text>
+<text x="36" y="202" font-size="13" fill="#374151" font-weight="600">old-logo-export.png</text>
+<text x="36" y="216" font-size="10" fill="#9CA3AF">/assets/branding/ — 1 日前</text>
+<text x="464" y="208" font-size="11" fill="#3B82F6" font-weight="600" text-anchor="end">復元 →</text>
+<line x1="0" y1="228" x2="480" y2="228" stroke="#F3F4F6"/>
+<text x="16" y="248" font-size="10" font-weight="700" fill="#9CA3AF" letter-spacing="1">今週</text>
+<text x="16" y="274" font-size="14">📕</text>
+<text x="36" y="274" font-size="13" fill="#374151" font-weight="600">client-brief-v2.pdf</text>
+<text x="36" y="288" font-size="10" fill="#9CA3AF">/Client/Acme/ — 3 日前</text>
+<text x="464" y="280" font-size="11" fill="#3B82F6" font-weight="600" text-anchor="end">復元 →</text>
+</svg>

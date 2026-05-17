@@ -90,18 +90,7 @@ iOS 照片有「最近刪除」相簿。iCloud Drive 有。備忘錄有。Outloo
 
 [Keeply](https://keeply.work) 把這個做成「🗑️ 刪除清單」面板：你加進去的專案內，過去 30 天刪除的檔案清單、依時間分組、一鍵還原到原始資料夾。還原這個動作本身會建立一個新存檔點——所以連 undo 都會被版本化，你可以再 undo 一次。
 
-```
-Keeply — 最近刪除
-
-今天
-─────────────────────────
-🗑️ proposal_v7.psd       ◀ 11 分鐘前    /designs/2026/
-🗑️ pricing-notes.docx    ◀ 47 分鐘前    /designs/2026/
-
-昨天
-─────────────────────────
-🗑️ old-logo-export.png   ◀ 1 天前       /assets/branding/
-```
+![Keeply 最近刪除面板：proposal_v7.psd / pricing-notes.docx / old-logo-export.png / client-brief-v2.pdf 4 個檔案按時間分組、每個顯示原始路徑 + 還原按鈕](deleted-files-panel.svg)
 
 不是鑑識工具，是一份有還原按鈕的清單。
 
