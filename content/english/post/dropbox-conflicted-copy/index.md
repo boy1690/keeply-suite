@@ -83,7 +83,13 @@ Three design patterns sync can use. Each one solves different collision scenario
 
 ### Design A: Detect and prompt (sync asks you first)
 
-Two ends edit the same file, sync detects a collision and prompts the user: keep A, keep B, or merge both changes. **Example**: developer version-control tools work this way. **Keeply** brings the same detection into office tooling — when a collision happens, it asks you in plain language ("Anna's version" / "your version" / "combine both") instead of throwing engineering terminology at you. **Solves scenarios #1 + #2.**
+Two ends edit the same file, sync detects a collision and prompts the user: keep A, keep B, or merge both changes. **Example**: developer version-control tools work this way. **Keeply** brings the same detection into office tooling — when a collision happens, it asks you in plain language ("Anna's version" / "your version" / "combine both") instead of throwing engineering terminology at you.
+
+Here's what it looks like in practice. Anna pushed a version into the project vault; Keeply pops a dialog so you can decide whether to apply her change to your local copy:
+
+![Keeply apply-change dialog: version source + commit note "Added 3 paragraphs of background context" + conflict-handling options in plain language](cherry-pick-dialog.svg)
+
+Before you click Apply, Keeply auto-snapshots your current version (so even a wrong click is undoable). If both sides edited the same paragraph, a second prompt asks: keep yours / use Anna's / keep both. **Solves scenarios #1 + #2.**
 
 ### Design B: File locking (whoever opens first gets it)
 
@@ -91,7 +97,17 @@ You open the file, the tool auto-locks it. Your colleague opens it and sees "Ann
 
 ### Design C: Local copy + manual push (Keeply's model)
 
-Your working version lives on your machine, sync is an active push you trigger (not Dropbox's real-time mirror). Collisions are detected at push time and surfaced in a plain-language UI. **Keeply** takes this route: edit locally, eyeball the diff, then push up to your NAS / SharePoint / shared folder once you're sure — no surprise overwrites. **Solves scenarios #1-#4**, trade-off: not as instant as Dropbox.
+Your working version lives on your machine, sync is an active push you trigger (not Dropbox's real-time mirror). Collisions are detected at push time and surfaced in a plain-language UI. **Keeply** takes this route: edit locally, eyeball the diff, then push up to your NAS / SharePoint / shared folder once you're sure — no surprise overwrites.
+
+After you finish your closing CTA, you click "Save version" in Keeply's main window and this dialog appears:
+
+![Keeply save-version dialog: proposal.docx + note "Added closing CTA — waiting for Anna's merge"](save-dialog.svg)
+
+Write a one-liner like "Added closing CTA — waiting for Anna's merge" and save the version. Anna does the same on her side. Both versions land separately in the shared vault timeline, neither overwriting the other:
+
+![Keeply project vault timeline: Anna's "Added 3 paragraphs of background" on one row + your "Added closing CTA — waiting for Anna's merge" on its own row + the client's "v1 sign-off" tag](timeline.svg)
+
+Two versions side by side, each with a note explaining what changed. You decide how to merge them — no silent `(conflicted copy)` filename, no surprise three weeks later. **Solves scenarios #1-#4**, trade-off: not as instant as Dropbox.
 
 You'll notice scenario #4 (cross-OS clock drift) is the hardest, it's a pure clock problem. Designs A and C can detect it, but resolution still needs the user.
 

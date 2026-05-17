@@ -83,7 +83,13 @@ Tre pattern di design che sync può usare. Ognuno risolve scenari di collisione 
 
 ### Design A: Rileva e chiedi (la sync ti chiede prima)
 
-Due lati editano lo stesso file, la sync rileva la collisione e chiede all'utente: tieni A, tieni B, o unisci entrambi i cambiamenti. **Esempio**: gli strumenti di controllo versione usati dagli sviluppatori funzionano così. **Keeply** porta la stessa rilevazione negli strumenti d'ufficio — quando c'è una collisione, ti chiede in linguaggio piano ("la versione di Anna" / "la tua versione" / "combina entrambe") invece di buttarti addosso terminologia tecnica. **Risolve scenari #1 + #2.**
+Due lati editano lo stesso file, la sync rileva la collisione e chiede all'utente: tieni A, tieni B, o unisci entrambi i cambiamenti. **Esempio**: gli strumenti di controllo versione usati dagli sviluppatori funzionano così. **Keeply** porta la stessa rilevazione negli strumenti d'ufficio — quando c'è una collisione, ti chiede in linguaggio piano ("la versione di Anna" / "la tua versione" / "combina entrambe") invece di buttarti addosso terminologia tecnica.
+
+In pratica funziona così. Anna ha pushato una versione nel vault del progetto; Keeply apre una finestra di dialogo per farti decidere se applicare la sua modifica alla tua copia locale:
+
+![Finestra di dialogo "applica modifica" di Keeply: origine della versione + nota "Aggiunti 3 paragrafi di contesto" + opzioni di gestione conflitto in linguaggio piano](cherry-pick-dialog.svg)
+
+Prima che tu prema Applica, Keeply fa automaticamente uno snapshot della tua versione attuale (così anche un click sbagliato è recuperabile). Se entrambi avete modificato lo stesso paragrafo, parte un secondo prompt: tieni la tua / usa quella di Anna / tienile entrambe. **Risolve scenari #1 + #2.**
 
 ### Design B: File locking (chi apre per primo lo usa)
 
@@ -91,7 +97,17 @@ Apri il file, lo strumento lo blocca automaticamente. Il collega lo apre e vede 
 
 ### Design C: Copia locale + push manuale (modello Keeply)
 
-La tua versione di lavoro vive sulla tua macchina, la sync è un push attivo che fai tu (non il mirror in tempo reale di Dropbox). Le collisioni sono rilevate al momento del push e mostrate in un'interfaccia in linguaggio piano. **Keeply** percorre questa strada: edita in locale, controlla la diff, poi pusha su NAS / SharePoint / cartella condivisa quando sei sicuro — niente sovrascritture a sorpresa. **Risolve scenari #1-#4**, trade-off: non istantaneo come Dropbox.
+La tua versione di lavoro vive sulla tua macchina, la sync è un push attivo che fai tu (non il mirror in tempo reale di Dropbox). Le collisioni sono rilevate al momento del push e mostrate in un'interfaccia in linguaggio piano. **Keeply** percorre questa strada: edita in locale, controlla la diff, poi pusha su NAS / SharePoint / cartella condivisa quando sei sicuro — niente sovrascritture a sorpresa.
+
+Quando hai finito la CTA di chiusura, clicchi "Salva versione" nella finestra principale di Keeply e si apre questo dialogo:
+
+![Dialogo salva-versione di Keeply: proposal.docx + nota "Aggiunta CTA finale — aspetto la merge di Anna"](save-dialog.svg)
+
+Scrivi una riga tipo "Aggiunta CTA finale — aspetto la merge di Anna" e salvi la versione. Anna fa lo stesso dal suo lato. Entrambe le versioni atterrano separate nella timeline del vault condiviso, nessuna sovrascrive l'altra:
+
+![Timeline del vault progetto Keeply: "Aggiunti 3 paragrafi di contesto" di Anna su una riga + "Aggiunta CTA finale — aspetto la merge di Anna" tua su una riga propria + tag "v1 sign-off cliente"](timeline.svg)
+
+Due versioni affiancate, ognuna con una nota che spiega cosa è cambiato. Decidi tu come unirle — nessun filename `(conflicted copy)` silenzioso, nessuna sorpresa tre settimane dopo. **Risolve scenari #1-#4**, trade-off: non istantaneo come Dropbox.
 
 Noterai che lo scenario #4 (disallineamento orologio cross-OS) è il più difficile, è puro problema di orologio. Design A e C possono rilevarlo, ma la risoluzione richiede ancora l'utente.
 
