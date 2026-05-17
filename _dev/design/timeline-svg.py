@@ -329,6 +329,49 @@ TIMELINES = {
         ("월초 제안 버전", ["Draft"], "1개월 전"),
         ("프로젝트 초안", [], "2개월 전"),
     ],
+    # install-keeply-windows-mac — first-day-after-install timeline. Short
+    # history: project folder added → first draft → manually saved "first
+    # version" Release → a few auto-saves. zh-cn auto-mirrors from zh-tw.
+    ("zh-tw", "install-keeply-windows-mac"): [
+        ("自動儲存 — Q2 提案修圖", [], "30 分鐘前"),
+        ("首次儲存 — 剛裝好 Keeply", ["首次保護"], "今天 10:14"),
+        ("自動儲存", [], "今天 09:42"),
+        ("自動儲存", [], "昨天 17:08"),
+        ("Q2 提案初稿", ["草稿"], "昨天 14:30"),
+        ("新增專案資料夾", [], "昨天 14:25"),
+    ],
+    ("en", "install-keeply-windows-mac"): [
+        ("Auto-save — Q2 proposal tweaks", [], "30 min ago"),
+        ("First save — Keeply just installed", ["First protected"], "Today 10:14"),
+        ("Auto-save", [], "Today 09:42"),
+        ("Auto-save", [], "Yesterday 17:08"),
+        ("Q2 proposal first draft", ["Draft"], "Yesterday 14:30"),
+        ("Added project folder", [], "Yesterday 14:25"),
+    ],
+    ("ja", "install-keeply-windows-mac"): [
+        ("自動保存 — Q2 提案の調整", [], "30 分前"),
+        ("初回保存 — Keeply インストール直後", ["初回保護"], "今日 10:14"),
+        ("自動保存", [], "今日 09:42"),
+        ("自動保存", [], "昨日 17:08"),
+        ("Q2 提案 初稿", ["下書き"], "昨日 14:30"),
+        ("プロジェクトフォルダ追加", [], "昨日 14:25"),
+    ],
+    ("ko", "install-keeply-windows-mac"): [
+        ("자동 저장 — Q2 제안 다듬기", [], "30분 전"),
+        ("첫 저장 — Keeply 설치 직후", ["첫 보호"], "오늘 10:14"),
+        ("자동 저장", [], "오늘 09:42"),
+        ("자동 저장", [], "어제 17:08"),
+        ("Q2 제안 초안", ["초안"], "어제 14:30"),
+        ("프로젝트 폴더 추가", [], "어제 14:25"),
+    ],
+    ("it", "install-keeply-windows-mac"): [
+        ("Salvataggio auto — ritocchi proposta Q2", [], "30 min fa"),
+        ("Primo salvataggio — Keeply appena installato", ["Prima protetta"], "Oggi 10:14"),
+        ("Salvataggio auto", [], "Oggi 09:42"),
+        ("Salvataggio auto", [], "Ieri 17:08"),
+        ("Proposta Q2 prima bozza", ["Bozza"], "Ieri 14:30"),
+        ("Cartella progetto aggiunta", [], "Ieri 14:25"),
+    ],
 }
 
 
