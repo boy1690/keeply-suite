@@ -71,6 +71,12 @@ faq_schema:
 
 没有 `git commit`、没有 `branch / merge / checkout`、没有黑底白字终端机。Keeply 底层其实用 git engine（技术上是好的）、但 UI 完全没有工程师术语——界面是「保存版本 / 记录 / 还原」这种日常词。
 
+连工程师工具最常逼你学的 `git stash` 这层也省掉——你在这个项目边改边忘了存版本、要切到另一个客户文件夹时，Keeply 直接拦下来、用日常话问你：
+
+![Keeply 未存更改对话框：presentation.pptx 有 3 处修改 + 存一版再切 / 不存直接切 / 取消三个选项](unsaved-changes-dialog.svg)
+
+「存一版，再切过去」就是你在工程师世界要打的 `git stash` + `git checkout`、变成两个中文按钮。
+
 下面拆为什么 Google 不会自然给你看这层、传统工具为什么不满足非开发者。
 
 ---
