@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 224" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',-apple-system,system-ui,sans-serif">
+<rect x="0" y="0" width="480" height="224" rx="8" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+<circle cx="20" cy="32" r="4" fill="#3B82F6"/>
+<text x="32" y="37" font-size="13" fill="#374151">Revisione …</text>
+<rect x="138" y="23" width="254" height="18" rx="9" fill="#DBEAFE" stroke="#BFDBFE" stroke-width="1"/>
+<text x="265" y="36" font-size="11" font-weight="500" fill="#1D4ED8" text-anchor="middle">Approvato cliente</text>
+<text x="464" y="36" font-size="11" fill="#9CA3AF" text-anchor="end">oggi 09:14</text>
+<circle cx="20" cy="64" r="4" fill="#3B82F6"/>
+<text x="32" y="69" font-size="13" fill="#374151">Salvataggio auto — proposal_v3.docx</text>
+<text x="464" y="68" font-size="11" fill="#9CA3AF" text-anchor="end">30 min fa</text>
+<circle cx="20" cy="96" r="4" fill="#3B82F6"/>
+<text x="32" y="101" font-size="13" fill="#374151">Modifiche dopo prima r…</text>
+<rect x="236" y="87" width="156" height="18" rx="9" fill="#DBEAFE" stroke="#BFDBFE" stroke-width="1"/>
+<text x="314" y="100" font-size="11" font-weight="500" fill="#1D4ED8" text-anchor="middle">Cliente v2</text>
+<text x="464" y="100" font-size="11" fill="#9CA3AF" text-anchor="end">ieri</text>
+<circle cx="20" cy="128" r="4" fill="#3B82F6"/>
+<text x="32" y="133" font-size="13" fill="#374151">Ripristinato da 60 giorni…</text>
+<rect x="264" y="119" width="128" height="18" rx="9" fill="#DBEAFE" stroke="#BFDBFE" stroke-width="1"/>
+<text x="328" y="132" font-size="11" font-weight="500" fill="#1D4ED8" text-anchor="middle">Recupero</text>
+<text x="464" y="132" font-size="11" fill="#9CA3AF" text-anchor="end">1 sett. fa</text>
+<circle cx="20" cy="160" r="4" fill="#3B82F6"/>
+<text x="32" y="165" font-size="13" fill="#374151">Q1 chiuso — archiviato</text>
+<rect x="278" y="151" width="114" height="18" rx="9" fill="#DBEAFE" stroke="#BFDBFE" stroke-width="1"/>
+<text x="335" y="164" font-size="11" font-weight="500" fill="#1D4ED8" text-anchor="middle">Q1 2026</text>
+<text x="464" y="164" font-size="11" fill="#9CA3AF" text-anchor="end">3 mesi fa</text>
+<circle cx="20" cy="192" r="4" fill="#3B82F6"/>
+<text x="32" y="197" font-size="13" fill="#374151">Bozza iniziale</text>
+<rect x="320" y="183" width="72" height="18" rx="9" fill="#DBEAFE" stroke="#BFDBFE" stroke-width="1"/>
+<text x="356" y="196" font-size="11" font-weight="500" fill="#1D4ED8" text-anchor="middle">v1.0</text>
+<text x="464" y="196" font-size="11" fill="#9CA3AF" text-anchor="end">6 mesi fa</text>
+</svg>
