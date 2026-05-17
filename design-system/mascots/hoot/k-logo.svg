@@ -1,0 +1,7 @@
+<!-- Keeply K — flat embroidered emblem (no background disc) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Pure K letter, dark navy, no background -->
+  <path d="M 36 28 L 36 72 M 36 50 L 60 28 M 36 50 L 60 72"
+        stroke="#1E1B3A" stroke-width="10" fill="none"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
