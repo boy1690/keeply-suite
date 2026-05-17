@@ -93,7 +93,11 @@ faq_schema:
 
 A 設計師上禮拜踩的案例：她下午改完平面圖、習慣性想打 `_v8` 加保險。同事 B 喊她「不用啦你 Keeply 不是有開？直接存就好」。
 
-她決定主動標一版——下班前點 Keeply 主視窗的「儲存版本」按鈕、跳出對話框長這樣：
+她下午切去另一個案子資料夾前、Keeply 跳出一行提示——目前的 Floorplan.dwg 還有未存的變更：
+
+![Keeply 切資料夾未存提示：Floorplan.dwg 還有未存變更、上次自動儲存是 18 分鐘前、3 顆按鈕：儲存版本後切換／不儲存直接切換／取消](unsaved-changes-dialog.svg)
+
+她按了「儲存版本後切換」。這一步避免下午那批改動只剩 18 分鐘前的自動存檔。下班前她再點 Keeply 主視窗的「儲存版本」按鈕主動標一版、跳出對話框長這樣：
 
 ![Keeply 儲存版本對話框：3 個檔案變更（Floorplan.dwg / Brand_Brief.psd / Sections_E.dwg）+ 筆記「中庭平面 業主簽約版 v2.3」](save-dialog.svg)
 
