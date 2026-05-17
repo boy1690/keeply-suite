@@ -139,6 +139,12 @@ Keeply 补的就是这层。
 
 它**不取代** File History 或 Windows Backup——那两个继续顾它们擅长的灾难。Keeply 补的是 Windows 内建一直没人顾的第 4 件事。
 
+挑到「会议后加结论」那一版要还原时，界面长这样——比 Windows 文件资源管理器「以前的版本」选项卡直觉很多：
+
+![Keeply 还原文件对话框：meeting-notes.docx + 来源 2 天前 + 笔记预览 + 自动快照保险](restore-file-dialog.svg)
+
+点还原前 Keeply 自动把当前那版存进时间轴，误按也救得回——这是 File History「以前的版本」选项卡少掉的安全网。
+
 想看具体场景：[我跟 Windows File History 要昨天的草稿，它给我 2019 年的文件](/zh-cn/post/windows-file-history-wrong-version/)——就是这个第 4 件事缺口踩进去会发生什么。
 
 ## 不必加 Keeply 或类似工具的时候
