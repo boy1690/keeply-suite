@@ -373,15 +373,16 @@ TIMELINES = {
         ("Cartella progetto aggiunta", [], "Ieri 14:25"),
     ],
     # fattura-elettronica-conservazione (it) — SMB owner archives quarterly FatturaPA XML batches
-    # Timeline shows 4 quarters of routine archival + 1 audit-readiness checkpoint
+    # Timeline shows 4 quarters + audit checkpoint + decennial backup
+    # Entries shortened to fit 480px width when tag pills present (max ~32 chars w/ 1 tag)
     ("it", "fattura-elettronica-conservazione"): [
-        ("Archivio Q1 2026 — copia locale FatturaPA", ["Q1 2026"], "oggi 09:14"),
-        ("Salvataggio auto — indice CSV aggiornato", [], "30 min fa"),
-        ("Archivio Q4 2025 chiuso — pronto per il commercialista", ["Q4 2025", "Trimestre chiuso"], "3 mesi fa"),
-        ("Archivio Q3 2025 — 47 fatture XML", ["Q3 2025"], "6 mesi fa"),
-        ("Verifica adesione AdE rinnovata", ["Adempimento"], "9 mesi fa"),
-        ("Archivio Q2 2025 — 53 fatture XML", ["Q2 2025"], "9 mesi fa"),
-        ("Backup archivio anno 2024 chiuso", ["Anno 2024", "Decennale"], "16 mesi fa"),
+        ("Archivio Q1 2026 — copia locale", ["Q1 2026"], "oggi 09:14"),
+        ("Salvataggio auto", [], "30 min fa"),
+        ("Q4 2025 chiuso", ["Q4 2025"], "3 mesi fa"),
+        ("Archivio Q3 2025 — 47 XML", ["Q3 2025"], "6 mesi fa"),
+        ("Adesione AdE rinnovata", ["Adempimento"], "9 mesi fa"),
+        ("Archivio Q2 2025 — 53 XML", ["Q2 2025"], "9 mesi fa"),
+        ("Backup anno fiscale 2024", ["Decennale"], "16 mesi fa"),
     ],
 }
 

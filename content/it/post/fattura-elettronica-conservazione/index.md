@@ -99,6 +99,10 @@ Mesi dopo, quando il commercialista ti chiede «mi mandi le fatture del Q3 2025?
 
 ![Timeline Keeply con archivi trimestrali Q1 2026 / Q4 2025 / Q3 2025 e tag «Decennale»](timeline.svg)
 
+E se l'Agenzia delle Entrate apre un accertamento mirato su una singola fattura — magari quella del cliente più importante del 2026 — puoi aprire la cronologia di quel file specifico e vedere ogni passaggio dalla emissione alla chiusura del trimestre fino all'archiviazione decennale:
+
+![Cronologia versioni di una singola fattura IT01234567890_FE_00187.xml dall'emissione SDI fino alla consultazione decennale](file-history.svg)
+
 > **In sintesi · perché servono tutti e tre**
 >
 > - **Strato 1 (SaaS)** risolve la praticità quotidiana — emissione, ricezione, firma in un solo posto.
