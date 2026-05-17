@@ -3,7 +3,7 @@ title: "【2026 파일 관리】Keeply 튜토리얼: 첫째 주 아무것도 하
 description: "Keeply 설치 후 설정 마법사로 달려가지 마세요. 첫째 주 실제 업무일을 시금석으로 자동 버전 추적, 수정 리듬, 삭제 복원 3 가지 신호를 검증합니다. 마음에 안 들면 Day 7 에 바로 제거, 부담 없는 평가."
 slug: keeply-first-week-workflow
 date: 2026-05-10T08:00:00+08:00
-draft: true
+draft: false
 locale: ko
 primary_keyword: "Keeply 튜토리얼"
 tags: [Keeply 튜토리얼, 버전 관리]

@@ -3,7 +3,7 @@ title: "【2026 檔案管理】Keeply 教學：第一週什麼都不用做，用
 description: "裝完 Keeply 後別衝去設定精靈。用第一週真實工作日當試金石，驗證它的自動版本追蹤、修改節奏、刪除復原三層信號；不滿意 Day 7 直接移除，零負擔評估。"
 slug: keeply-first-week-workflow
 date: 2026-05-10T08:00:00+08:00
-draft: true
+draft: false
 locale: zh-TW
 primary_keyword: "Keeply 教學"
 tags: [Keeply 教學, 版本控制]

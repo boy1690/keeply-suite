@@ -3,7 +3,7 @@ title: "【2026 Gestione file】Guida Keeply: nella prima settimana non fai nien
 description: "Non correre alla procedura guidata dopo aver installato Keeply. Usa la prima settimana di lavoro vero come banco di prova per i tre segnali: tracciamento versioni automatico, ritmo delle modifiche, recupero delle cancellazioni. Non ti convince al Day 7? Disinstalla, zero rischio."
 slug: keeply-first-week-workflow
 date: 2026-05-10T08:00:00+08:00
-draft: true
+draft: false
 locale: it
 primary_keyword: "guida Keeply"
 tags: [guida Keeply, controllo versione]

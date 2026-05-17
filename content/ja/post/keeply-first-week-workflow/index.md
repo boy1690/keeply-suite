@@ -3,7 +3,7 @@ title: "【2026 ファイル管理】Keeply チュートリアル：最初の 1 
 description: "Keeply をインストールしてもセットアップウィザードに飛び込まない。最初の 1 週間、普段の仕事で自動バージョン追跡・編集ペース・削除復元の 3 つの信号を検証する。Day 7 で気に入らなければ削除、ノーリスク評価。"
 slug: keeply-first-week-workflow
 date: 2026-05-10T08:00:00+08:00
-draft: true
+draft: false
 locale: ja
 primary_keyword: "Keeply チュートリアル"
 tags: [Keeply チュートリアル, バージョン管理]

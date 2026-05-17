@@ -3,7 +3,7 @@ title: "【2026 文件管理】Keeply 教程：第一周什么都不用做，用
 description: "装完 Keeply 后别冲去设置向导。用第一周真实工作日当试金石，验证它的自动版本追踪、修改节奏、删除复原三层信号；不满意 Day 7 直接移除，零负担评估。"
 slug: keeply-first-week-workflow
 date: 2026-05-10T08:00:00+08:00
-draft: true
+draft: false
 locale: zh-CN
 primary_keyword: "Keeply 教程"
 tags: [Keeply 教程, 版本控制]

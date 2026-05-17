@@ -3,7 +3,7 @@ title: "【2026 File Management】Keeply tutorial: do nothing in week 1, see 3 r
 description: "Don't rush into the setup wizard after installing Keeply. Use your real workdays in week one to verify automatic version tracking, modify cadence, and delete recovery — three signals. Unsatisfied on Day 7? Remove it, zero burden."
 slug: keeply-first-week-workflow
 date: 2026-05-10T08:00:00+08:00
-draft: true
+draft: false
 locale: en
 primary_keyword: "Keeply tutorial"
 tags: [keeply tutorial, version control]
