@@ -158,6 +158,16 @@ Open Keeply, hit **New project**, pick a folder you're actively working in.
 
 The first scan takes 1 to 2 minutes. After that, Keeply watches the folder in the background and **records versions automatically as you save**. No manual "checkpoint" button to press.
 
+Open the Timeline on day one and this is the history you'll see — "First save — Keeply just installed" sits on its own row with a first-protected tag.
+
+![Keeply Timeline: from "Added project folder" through "First save — Keeply just installed" — day one's whole history](timeline.svg)
+
+Where did that "First save" row come from? Open the project folder, click **Save version** in Keeply's main window, and this dialog pops up:
+
+![Keeply Save Version dialog: Q2-proposal.docx 1 file changed with note "First save — Keeply just installed"](save-dialog.svg)
+
+One line of notes telling future-you "this is the just-installed version" — six months later, scrolling the Timeline, you read descriptions, not timestamps.
+
 A made-up but typical example: a designer drops in their Q2 pitch folder right after install. First scan takes 2 minutes. Three days later, they realize they swapped a logo colour wrong last Saturday. Pulling the previous version from history takes 20 seconds.
 
 People who use the first project on install day stick around far more than people who wait a week.

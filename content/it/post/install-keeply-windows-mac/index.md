@@ -158,6 +158,16 @@ Apri Keeply, clicca **Nuovo progetto**, scegli una cartella su cui stai attivame
 
 La prima scansione richiede da 1 a 2 minuti. Dopo, Keeply osserva la cartella in background e **registra le versioni automaticamente mentre salvi**. Nessun pulsante "checkpoint" da premere a mano.
 
+Apri la Timeline il primo giorno e vedrai questa storia — "Primo salvataggio — Keeply appena installato" sta su una riga a sé con un tag di prima protezione.
+
+![Keeply Timeline: da "Cartella progetto aggiunta" fino a "Primo salvataggio — Keeply appena installato" — tutta la storia del primo giorno](timeline.svg)
+
+Da dove arriva quella riga "Primo salvataggio"? Apri la cartella progetto, clicca **Salva versione** nella finestra principale di Keeply, e si apre questa finestra:
+
+![Keeply finestra Salva versione: Q2-proposal.docx 1 file modificato + nota "Primo salvataggio — Keeply appena installato"](save-dialog.svg)
+
+Una riga di nota che dice al te-stesso del futuro "questa è la versione appena installata" — sei mesi dopo, scorrendo la Timeline, leggi descrizioni, non timestamp.
+
 Un esempio inventato ma tipico: una designer aggiunge la sua cartella della pitch del Q2 subito dopo l'installazione. La prima scansione dura 2 minuti. Tre giorni dopo, si accorge di aver scambiato male un colore del logo sabato scorso. Recuperare la versione precedente dalla cronologia richiede 20 secondi.
 
 Le persone che usano il primo progetto nel giorno dell'installazione restano molto più di quelle che aspettano una settimana.
