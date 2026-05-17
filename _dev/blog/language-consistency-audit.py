@@ -141,6 +141,43 @@ BLACKLIST: dict[str, dict[str, str]] = {
         "Storage cost": "ストレージコスト",
         "compliance archive": "コンプライアンスアーカイブ",
         "audit chain": "監査チェーン",
+        # v3 expansion
+        "autosave": "自動保存",
+        "Autosave": "自動保存",
+        "auto-save": "自動保存",
+        "Auto-save": "自動保存",
+        "timeline": "タイムライン",
+        "Timeline": "タイムライン",
+        # v4 Korean tech term translations
+        "자동 저장": "自動保存",
+        "자동 저장 (Autosave)": "自動保存（Autosave）",
+        "자동저장": "自動保存",
+        "임시 저장": "一時保存",
+        "임시저장": "一時保存",
+        "백업파일": "バックアップファイル",
+        "백업 파일": "バックアップファイル",
+        "환경 설정": "環境設定",
+        "환경설정": "環境設定",
+        "복구하시겠습니까": "復元しますか",
+        "최근 문서": "最近のファイル",
+        "응용 프로그램 오류": "アプリケーションエラー",
+        "작업 관리자에서 종료": "タスクマネージャーで終了",
+        "월간 보고서": "月次レポート",
+        "상사 제출": "上司提出",
+        "rollback": "ロールバック",
+        "snapshot": "スナップショット",
+        "milestone": "マイルストーン",
+        "checkpoint": "チェックポイント",
+        "lockdown": "ロックダウン",
+        "crash recovery": "クラッシュ復旧",
+        "force-quit": "強制終了",
+        "real-time": "リアルタイム",
+        "background": "バックグラウンド",
+        "foreground": "フォアグラウンド",
+        "workflow": "ワークフロー",
+        "Workflow": "ワークフロー",
+        "deadline": "締切",
+        "Deadline": "締切",
         # "cap" handled via regex (CAP_RE)
         # "site" alone NOT auto-translated (避免 domain name 衝突)
     },
@@ -190,6 +227,27 @@ BLACKLIST: dict[str, dict[str, str]] = {
         "Storage cost": "스토리지 비용",
         "compliance archive": "컴플라이언스 아카이브",
         "audit chain": "감사 체인",
+        # v3 expansion
+        "autosave": "자동 저장",
+        "Autosave": "자동 저장",
+        "auto-save": "자동 저장",
+        "Auto-save": "자동 저장",
+        "timeline": "타임라인",
+        "Timeline": "타임라인",
+        "rollback": "롤백",
+        "snapshot": "스냅샷",
+        "milestone": "마일스톤",
+        "checkpoint": "체크포인트",
+        "lockdown": "잠금 환경",
+        "crash recovery": "비정상 종료 복구",
+        "force-quit": "강제 종료",
+        "real-time": "실시간",
+        "background": "백그라운드",
+        "foreground": "포그라운드",
+        "workflow": "워크플로우",
+        "Workflow": "워크플로우",
+        "deadline": "마감일",
+        "Deadline": "마감일",
     },
     "it": {
         "AutoRecover": "Salvataggio automatico",
@@ -237,6 +295,40 @@ BLACKLIST: dict[str, dict[str, str]] = {
         "Storage cost": "costo storage",
         "compliance archive": "archivio conformità",
         "audit chain": "catena di audit",
+        # v3 expansion
+        "autosave": "salvataggio automatico",
+        "Autosave": "Salvataggio automatico",
+        "auto-save": "salvataggio automatico",
+        "Auto-save": "Salvataggio automatico",
+        "timeline": "timeline",  # IT kept English (commonly used loan word)
+        # v4 Korean tech term translations
+        "자동 저장": "salvataggio automatico",
+        "자동 저장 (Autosave)": "salvataggio automatico (Autosave)",
+        "자동저장": "salvataggio automatico",
+        "임시 저장": "salvataggio temporaneo",
+        "임시저장": "salvataggio temporaneo",
+        "백업파일": "file di backup",
+        "백업 파일": "file di backup",
+        "환경 설정": "impostazioni",
+        "환경설정": "impostazioni",
+        "복구하시겠습니까": "recuperare?",
+        "최근 문서": "documenti recenti",
+        "응용 프로그램 오류": "errore applicazione",
+        "월간 보고서": "rapporto mensile",
+        "상사 제출": "inviato al supervisore",
+        "rollback": "rollback",
+        "snapshot": "snapshot",
+        "milestone": "milestone",
+        "checkpoint": "checkpoint",
+        "lockdown": "lockdown",
+        "crash recovery": "recupero da crash",
+        "force-quit": "chiusura forzata",
+        "real-time": "in tempo reale",
+        "background": "background",
+        "foreground": "foreground",
+        "workflow": "workflow",
+        "deadline": "scadenza",
+        "Deadline": "Scadenza",
     },
     "zh-tw": {
         "AutoRecover": "自動回復",
@@ -285,6 +377,50 @@ BLACKLIST: dict[str, dict[str, str]] = {
         "compliance archive": "合規封存",
         "enterprise compliance archive": "企業合規封存",
         "audit chain": "稽核軌跡",
+        # v3 expansion (2026-05-15 #2): generic tech terms读者常見英文 leak
+        "autosave": "自動儲存",
+        "Autosave": "自動儲存",
+        "auto-save": "自動儲存",
+        "Auto-save": "自動儲存",
+        "timeline": "時間軸",
+        "Timeline": "時間軸",
+        # v4 (2026-05-15 #3) — Korean tech terms must translate, brand names kept
+        "자동 저장": "自動儲存",
+        "자동 저장 (Autosave)": "自動儲存（Autosave）",
+        "자동저장": "自動儲存",
+        "임시 저장": "暫存",
+        "임시저장": "暫存",
+        "백업파일": "備份檔案",
+        "백업 파일": "備份檔案",
+        "환경 설정": "環境設定",
+        "환경설정": "環境設定",
+        "복구하시겠습니까": "要還原嗎",
+        "최근 문서": "最近文件",
+        "응용 프로그램 오류": "應用程式錯誤",
+        "작업 관리자에서 종료": "工作管理員終止",
+        "월간 보고서": "月度報告",
+        "상사 제출": "上級送審",
+        "월간 보고서": "月度報告",
+        "cluster": "集群",  # 文章 cluster context = topic grouping
+        "rollback": "還原",
+        "Rollback": "還原",
+        "snapshot": "快照",
+        "Snapshot": "快照",
+        "milestone": "里程碑",
+        "checkpoint": "檢查點",
+        "lockdown": "鎖機",
+        "viewer-only": "唯讀檢視",
+        "crash recovery": "當機救援",
+        "force-quit": "強制終了",
+        "live": "即時",
+        "Live": "即時",
+        "real-time": "即時",
+        "background": "背景",
+        "foreground": "前景",
+        "workflow": "工作流程",
+        "Workflow": "工作流程",
+        "deadline": "截止日",
+        "Deadline": "截止日",
     },
     "zh-cn": {
         "AutoRecover": "自动恢复",
@@ -333,6 +469,49 @@ BLACKLIST: dict[str, dict[str, str]] = {
         "compliance archive": "合规封存",
         "enterprise compliance archive": "企业合规封存",
         "audit chain": "审计轨迹",
+        # v3 expansion
+        "autosave": "自动保存",
+        "Autosave": "自动保存",
+        "auto-save": "自动保存",
+        "Auto-save": "自动保存",
+        "timeline": "时间轴",
+        "Timeline": "时间轴",
+        # v4 Korean tech term translations
+        "자동 저장": "自动保存",
+        "자동 저장 (Autosave)": "自动保存（Autosave）",
+        "자동저장": "自动保存",
+        "임시 저장": "暂存",
+        "임시저장": "暂存",
+        "백업파일": "备份文件",
+        "백업 파일": "备份文件",
+        "환경 설정": "环境设置",
+        "환경설정": "环境设置",
+        "복구하시겠습니까": "要还原吗",
+        "최근 문서": "最近文档",
+        "응용 프로그램 오류": "应用程序错误",
+        "작업 관리자에서 종료": "任务管理器终止",
+        "월간 보고서": "月度报告",
+        "상사 제출": "上级送审",
+        "cluster": "集群",
+        "rollback": "还原",
+        "Rollback": "还原",
+        "snapshot": "快照",
+        "Snapshot": "快照",
+        "milestone": "里程碑",
+        "checkpoint": "检查点",
+        "lockdown": "锁机",
+        "viewer-only": "只读查看",
+        "crash recovery": "崩溃救援",
+        "force-quit": "强制结束",
+        "live": "实时",
+        "Live": "实时",
+        "real-time": "实时",
+        "background": "后台",
+        "foreground": "前台",
+        "workflow": "工作流程",
+        "Workflow": "工作流程",
+        "deadline": "截止日",
+        "Deadline": "截止日",
     },
 }
 
@@ -346,6 +525,20 @@ CAP_TRANSLATE = {
     "zh-cn": "上限",
 }
 
+# Korean script (Hangul) detection — when found in non-KO locales, must be either
+# in BRAND_ALLOWLIST_KOREAN (brand names) or be flagged as locale leak.
+KOREAN_CHAR_RE = re.compile(r"[가-힣]+")
+BRAND_ALLOWLIST_KOREAN = {
+    "한글",      # Hancom Hangul (product name)
+    "한컴",      # Hancom (company name)
+    "한컴오피스",  # Hancom Office
+    "한컴 오피스",
+    "Hancom 한글",
+    "Hancom 한컴 오피스",
+    "Hancom 한컴오피스",
+    "지영",      # Korean character name (used as scenario protagonist)
+}
+
 
 def strip_inline_code(text: str) -> str:
     """Remove inline code spans `...` and code fences ```...``` so they
@@ -356,10 +549,14 @@ def strip_inline_code(text: str) -> str:
 
 
 def strip_anchor_refs(text: str) -> str:
-    """Remove markdown anchor refs `](#anchor)` and heading IDs `{#anchor}` so
-    Hugo anchor IDs (which must stay ASCII) don't trigger false positives."""
-    text = re.sub(r"\]\(#[a-zA-Z0-9\-_]+\)", "](#ANCHOR)", text)
+    """Remove markdown anchor refs `](#anchor)`, heading IDs `{#anchor}`, and
+    markdown link/image targets `](filename.ext)` / `](path/to/file)` from
+    audit-counting surface. These are ASCII filenames / Hugo IDs that legitimately
+    contain English-looking tokens and must not be counted as locale leak."""
+    # Heading IDs
     text = re.sub(r"\{#[a-zA-Z0-9\-_]+\}", "{#ANCHOR}", text)
+    # All markdown link/image targets (including #anchor, filename.ext, or path)
+    text = re.sub(r"\]\([^)]+\)", "](LINK)", text)
     return text
 
 
@@ -377,25 +574,39 @@ def strip_urls(text: str) -> str:
 
 
 # Markdown heading anchor `{#...}` must NEVER be translated — they're Hugo IDs.
-# Markdown image / link `[...](...)` URL parts already stripped via strip_urls.
+# Markdown image / link `](...)` paths must NEVER be translated — they're filenames/URLs.
+# Markdown code spans `...` must NEVER be translated — they're literal code/filenames.
 ANCHOR_RE = re.compile(r"\{#[a-zA-Z0-9\-_]+\}")
+# Markdown link/image target: `](something)` — protect path entirely whether anchor or filename
+LINK_TARGET_RE = re.compile(r"\]\(([^)]+)\)")
+INLINE_CODE_RE = re.compile(r"`[^`\n]+`")
 
 
 def protect_anchors(text: str) -> tuple[str, list[str]]:
-    """Replace `{#anchor}` with placeholders, returning the protected text + the
-    original anchors so they can be re-inserted after substitution.
-    """
-    anchors = ANCHOR_RE.findall(text)
+    """Replace `{#anchor}`, `](url)`, `code spans` with placeholders, returning the
+    protected text + the originals so they can be re-inserted after substitution.
+
+    Combined protection (anchor IDs + link targets + inline code) ensures
+    translation never breaks Hugo IDs, image paths, internal URL paths, or
+    code-like content."""
+    saved: list[str] = []
     protected = text
-    for i, anchor in enumerate(anchors):
-        protected = protected.replace(anchor, f"\x00ANCHOR{i}\x00", 1)
-    return protected, anchors
+
+    def stash(match):
+        saved.append(match.group(0))
+        return f"\x00P{len(saved)-1}\x00"
+
+    # Order matters: code first (might contain {} or ()), then anchors, then links
+    protected = INLINE_CODE_RE.sub(stash, protected)
+    protected = ANCHOR_RE.sub(stash, protected)
+    protected = LINK_TARGET_RE.sub(stash, protected)
+    return protected, saved
 
 
-def restore_anchors(text: str, anchors: list[str]) -> str:
-    """Re-insert anchor placeholders."""
-    for i, anchor in enumerate(anchors):
-        text = text.replace(f"\x00ANCHOR{i}\x00", anchor, 1)
+def restore_anchors(text: str, saved: list[str]) -> str:
+    """Re-insert all protected placeholders."""
+    for i, orig in enumerate(saved):
+        text = text.replace(f"\x00P{i}\x00", orig, 1)
     return text
 
 
@@ -469,6 +680,45 @@ def fix_frontmatter(fm: str, blacklist: dict[str, str], locale: str) -> str:
     return fm
 
 
+def extract_svg_text(svg_path: Path) -> str:
+    """Pull all text content out of `<text>` and `<tspan>` elements in an SVG.
+
+    Cover.svg files contain user-visible text that must follow the same locale
+    consistency rules as the article body. (Bug discovered 2026-05-15: cover SVG
+    KO tech terms `자동 저장 / 임시 저장 .bak / 백업파일` were leaking into
+    non-KO locale rendered pages because audit only scanned index.md.)
+
+    Allowlist: "design tagline" style strings — all-caps English with `·` or `|`
+    separators (e.g. `ONEDRIVE · 500 MAJOR VERSIONS · AUTORECOVER ≠ HISTORY`) are
+    intentional brand-design captions, not body leak. Skipped from scan.
+    """
+    if not svg_path.exists():
+        return ""
+    try:
+        text = svg_path.read_text(encoding="utf-8")
+    except Exception:
+        return ""
+    # Extract text between <text...>...</text> and <tspan...>...</tspan>
+    chunks = re.findall(r"<text[^>]*>(.*?)</text>", text, re.DOTALL)
+    chunks += re.findall(r"<tspan[^>]*>(.*?)</tspan>", text, re.DOTALL)
+    # Strip nested XML tags
+    cleaned = [re.sub(r"<[^>]+>", "", c) for c in chunks]
+    # Filter out design-tagline allowlist (all-caps English + `·`/`|` separators)
+    filtered = []
+    for c in cleaned:
+        stripped = c.strip()
+        if not stripped:
+            continue
+        # All-caps tagline detection: 80%+ uppercase Latin + contains `·` or `|`
+        if "·" in stripped or "|" in stripped:
+            latin = re.findall(r"[A-Za-z]", stripped)
+            upper = re.findall(r"[A-Z]", stripped)
+            if latin and len(upper) / len(latin) >= 0.8:
+                continue  # skip design tagline
+        filtered.append(stripped)
+    return "\n".join(filtered)
+
+
 def audit_file(path: Path, locale: str, fix: bool = False) -> tuple[list[tuple[str, int]], str]:
     """Return list of (term, count) violations + (optionally) fixed text."""
     text = path.read_text(encoding="utf-8")
@@ -476,16 +726,55 @@ def audit_file(path: Path, locale: str, fix: bool = False) -> tuple[list[tuple[s
     body_clean = strip_anchor_refs(strip_inline_code(strip_urls(body)))
     # Also scan user-visible frontmatter fields (title / description / FAQ).
     fm_audit_text = extract_frontmatter_audit_text(text)
+    # Cover.svg text is designer-controlled typography (design captions,
+    # rhetorical anchors like "不是 bug，是設計", product-feature labels
+    # like "Time Machine snapshot"). It uses different rules from body
+    # prose — designers intentionally keep certain English loan-words for
+    # visual rhythm. Scan it ONLY for Korean-script leak in non-KO locales
+    # (the original bug that introduced SVG scanning), NOT for the ASCII
+    # blacklist. Body + frontmatter remain the strict audit surface.
+    cover_svg_text = extract_svg_text(path.parent / "cover.svg")
     audit_corpus = body_clean + "\n" + fm_audit_text
+    # Cover.svg appended separately ONLY for Korean script scan (phase 3).
+    audit_corpus_with_cover = audit_corpus + "\n" + cover_svg_text
 
     violations: list[tuple[str, int]] = []
     blacklist = BLACKLIST.get(locale, {})
+
+    # Short blacklist terms that risk substring false-positives need a word
+    # boundary on each end. Long phrases (>= 8 chars, or containing whitespace
+    # / hyphen) don't need boundary. Added 2026-05-17 after `board` matched
+    # `keyboard` in cover.svg "Customize keyboard shortcuts" caption.
+    def _count_term(corpus: str, term: str) -> int:
+        # ASCII-only short terms: enforce \b boundary. Phrases & non-ASCII
+        # (e.g. Korean tokens) keep raw substring count.
+        if len(term) <= 7 and term.isascii() and ' ' not in term:
+            return len(re.findall(rf"(?<![A-Za-z0-9_])"
+                                  rf"{re.escape(term)}"
+                                  rf"(?![A-Za-z0-9_])", corpus))
+        return corpus.count(term)
+
+    # Allowlist English product feature names — intentional brand usage in
+    # cover.svg design captions or body when referring to the actual product
+    # feature. Added 2026-05-17 after audit flagged Photoshop autosave /
+    # Time Machine snapshot / Recycle Bin which are official product names.
+    # Uses regex to allow any 1-5 CJK / connector chars between brand name
+    # and feature term (e.g. "Time Machine 是 snapshot", "Time Machine은").
+    BRAND_FEATURE_REGEX = [
+        r"Photoshop[\s　-鿿·的の은는가]{0,4}[Aa]uto-?[Ss]ave",
+        r"Time Machine[\s　-鿿·的の은는가가의을를]{0,5}snapshots?",
+        r"AutoSave",  # Microsoft product name (camelCase)
+        r"Conflicted copy",  # Dropbox feature name
+    ]
+    masked = audit_corpus
+    for pat in BRAND_FEATURE_REGEX:
+        masked = re.sub(pat, "<<BRAND>>", masked)
 
     # 1. Blacklist exact terms — skip idempotent kept-English entries (en == local)
     for en, local in blacklist.items():
         if en == local:
             continue  # idempotent — term intentionally kept English in this locale
-        count = audit_corpus.count(en)
+        count = _count_term(masked, en)
         if count > 0:
             violations.append((en, count))
 
@@ -493,6 +782,26 @@ def audit_file(path: Path, locale: str, fix: bool = False) -> tuple[list[tuple[s
     cap_hits = CAP_RE.findall(audit_corpus)
     if cap_hits:
         violations.append(("cap (standalone)", len(cap_hits)))
+
+    # 3. Korean script in non-KO locales — flag any Hangul not in brand allowlist
+    if locale != "ko":
+        # Mask brand-allowed Korean strings before scanning.
+        # CRITICAL: sort by length descending so longer brands (e.g. "한컴 오피스")
+        # are masked before shorter prefixes ("한컴") would consume them and orphan
+        # the suffix as a false-positive leak. (Bug found by locale-translation-reviewer
+        # subagent on 2026-05-15 hwp-file-recovery review.)
+        # Korean-script scan covers cover.svg too — that's the bug class
+        # this scan was originally added for (KO tech terms in non-KO covers).
+        scrubbed = audit_corpus_with_cover
+        for brand in sorted(BRAND_ALLOWLIST_KOREAN, key=len, reverse=True):
+            scrubbed = scrubbed.replace(brand, "<<BRAND>>")
+        ko_hits = KOREAN_CHAR_RE.findall(scrubbed)
+        if ko_hits:
+            # Count unique offending tokens
+            unique_tokens = set(ko_hits)
+            for token in sorted(unique_tokens):
+                count = scrubbed.count(token)
+                violations.append((f"Korean script '{token}' (translate or allowlist)", count))
 
     if not fix:
         return violations, text
