@@ -101,6 +101,10 @@ Di solito 30-60 minuti fa. L'ultimo test prima che l'AI iniziasse ad andare di l
 
 ### Passaggio 3: tasto destro su quella voce, scegli Ripristina
 
+Keeply apre un dialogo di ripristino che mostra l'impatto e un avviso chiaro, così puoi leggerlo prima di cliccare:
+
+![Dialogo ripristino versione di Keeply: ultima versione funzionante prima del giro dell'agente AI + 12 file verranno ripristinati + avviso di snapshot automatico](revert-dialog.svg)
+
 L'intera cartella torna a quel punto nel tempo entro 30 secondi. **Tutti i file, l'intero albero delle directory, ogni configurazione. Tornano indietro tutti insieme.** Non solo un file.
 
 Questo include la funzione di supporto che l'AI ha intrufolato, la configurazione che ha modificato, il .env che non avrebbe dovuto toccare. **Tutto torna indietro.**

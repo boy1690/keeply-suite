@@ -101,6 +101,10 @@ Usually 30-60 minutes ago. The last test before the AI started going sideways.
 
 ### Step 3: Right-click that entry, choose Restore
 
+Keeply opens a restore dialog showing the impact and a clear warning, so you can read it before clicking:
+
+![Keeply restore-version dialog: last working version before the AI agent ran + 12 files will be restored + auto-snapshot warning](revert-dialog.svg)
+
 The whole folder returns to that point in time within 30 seconds. **All files, the full directory tree, every config. They all go back together.** Not just one file.
 
 That includes the helper function the AI snuck in, the config it edited, the .env it shouldn't have touched. **All of it goes back.**
