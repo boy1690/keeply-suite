@@ -91,6 +91,14 @@ Sul controllo delle versioni di questa copia locale conviene investire un attimo
 
 Strumenti come [Keeply](https://keeply.work/) servono esattamente a questo: tenere un'istantanea locale immutabile della tua cartella fatture, indipendente dal gestionale che usi quest'anno. Quando l'anno prossimo cambierai SaaS, la tua copia FatturaPA XML rimane dov'è — sul disco che possiedi tu.
 
+Concretamente, alla chiusura di ogni trimestre apri il pannello «Salva versione» di Keeply, contrassegni i nuovi file FatturaPA scaricati e scrivi una nota — l'archivio trimestrale è chiuso, con timestamp e cronologia:
+
+![Pannello «Salva versione» di Keeply con 3 file FatturaPA XML del trimestre Q1 2026](save-dialog.svg)
+
+Mesi dopo, quando il commercialista ti chiede «mi mandi le fatture del Q3 2025?» — apri la timeline di Keeply e ritrovi esattamente l'archivio chiuso a fine trimestre, senza dipendere dal portale del gestionale o dall'AdE:
+
+![Timeline Keeply con archivi trimestrali Q1 2026 / Q4 2025 / Q3 2025 e tag «Decennale»](timeline.svg)
+
 > **In sintesi · perché servono tutti e tre**
 >
 > - **Strato 1 (SaaS)** risolve la praticità quotidiana — emissione, ricezione, firma in un solo posto.

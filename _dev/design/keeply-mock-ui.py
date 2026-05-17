@@ -538,6 +538,18 @@ CASES = {
         "files": [("M", "Q2-proposal.docx", "Modif.")],
         "note": "Primo salvataggio — Keeply appena installato",
     },
+    # fattura-elettronica-conservazione — Italian-master cluster (IT only per topic locale narrow)
+    # Scenario: trimestre Q1 2026 — SMB owner saves quarterly batch of FatturaPA XML files
+    # exported from Fatture e Corrispettivi portal to local archive.
+    "fattura-elettronica-conservazione_it": {
+        "file_count_text": "3 file modificati",
+        "files": [
+            ("A", "IT01234567890_FE_00187.xml", "Nuovo"),
+            ("A", "IT01234567890_FE_00188.xml", "Nuovo"),
+            ("M", "indice_q1_2026.csv", "Modif."),
+        ],
+        "note": "Archivio Q1 2026 — copia locale FatturaPA",
+    },
 }
 
 

@@ -288,6 +288,8 @@ TARGETS = [
     ("ja", "install-keeply-windows-mac", "install-keeply-windows-mac_ja"),
     ("ko", "install-keeply-windows-mac", "install-keeply-windows-mac_ko"),
     ("it", "install-keeply-windows-mac", "install-keeply-windows-mac_it"),
+    # fattura-elettronica-conservazione — Italian-master (IT only, topic locale-narrow)
+    ("it", "fattura-elettronica-conservazione", "fattura-elettronica-conservazione_it"),
 ]
 
 
