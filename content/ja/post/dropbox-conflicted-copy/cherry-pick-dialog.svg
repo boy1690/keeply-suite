@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 280" font-family="'Inter','Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans JP','Noto Sans KR',-apple-system,system-ui,sans-serif">
+<rect x="0" y="0" width="480" height="280" fill="#F3F4F6"/>
+<rect x="40" y="32" width="400" height="216" rx="8" fill="#FFFFFF" stroke="#E5E7EB" filter="drop-shadow(0 4px 8px rgba(0,0,0,.1))"/>
+<text x="56" y="60" font-size="15" font-weight="700" fill="#1F2937">Anna の変更を適用しますか？</text>
+<rect x="56" y="76" width="368" height="68" rx="6" fill="#F9FAFB" stroke="#E5E7EB"/>
+<text x="68" y="96" font-size="12" fill="#9CA3AF">Anna のノート PC から · 今日 17:38 · a8e2b104</text>
+<text x="68" y="116" font-size="13" fill="#374151" font-weight="600">背景説明を 3 段落追加</text>
+<text x="68" y="134" font-size="11" fill="#6B7280">1 ファイルがマージされます · proposal.docx</text>
+<rect x="56" y="156" width="368" height="40" rx="4" fill="#DBEAFE" stroke="#3B82F6" stroke-opacity=".3"/>
+<text x="68" y="174" font-size="11" fill="#1E40AF">💡 適用前に自動スナップショット</text>
+<text x="68" y="189" font-size="10" fill="#1E3A8A">競合時：自分のを保持 / Anna のを採用 / 両方保持</text>
+<rect x="268" y="204" width="72" height="32" rx="6" fill="#FFFFFF" stroke="#D1D5DB"/>
+<text x="304" y="225" font-size="12" fill="#374151" text-anchor="middle">キャンセル</text>
+<rect x="348" y="204" width="76" height="32" rx="6" fill="#3B82F6"/>
+<text x="386" y="225" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">適用</text>
+</svg>
