@@ -103,6 +103,12 @@ Non devi fare niente. Salva il file dove lo salveresti normalmente. Desktop, Doc
 
 Prima di pranzo, apri Keeply per un'occhiata veloce. Quel file dovrebbe comparire nell'interfaccia di Keeply, con accanto un timestamp. Nessun menu complesso, nessun popup "vuoi tracciare questo file?". L'ha visto da solo.
 
+Se vuoi fare un passo in più, clicca "Salva versione" e scrivi una nota di una riga. Keeply apre un pannello laterale apposito:
+
+![Pannello laterale salva-versione di Keeply: proposal_acme.docx aggiunto + nota "Proposta Acme RFP — prima bozza" + bottone Salva blu a tutta larghezza](save-dialog.svg)
+
+Nel campo nota va bene qualsiasi cosa — "prima bozza dopo il kickoff" o "revisione dopo la visita al cliente" in linguaggio piano è la cosa più utile. Sei mesi dopo, quella riga è l'àncora della tua memoria quando scorri la cronologia versioni.
+
 - ✅ **Segnale di fiducia**: il file aggiunto non deve essere "aggiunto" a Keeply; compare automaticamente con il timestamp.
 - ❌ **Punto di fallimento**: il file aggiunto non si trova nell'interfaccia di Keeply. Significa che lo strumento non fa per il tuo ambiente. Una risposta al Day 1 è meglio della sorpresa al Day 30.
 
@@ -117,6 +123,12 @@ Un file viene modificato di solito così: lo apri la mattina, cambi una parte, C
 Domanda: quante versioni dovrebbe tenere lo strumento? Troppe (una per ogni Cmd+S) e la sera ti ritrovi a guardare 17 versioni quasi identiche — inutili. Troppo poche (una sola versione finale al giorno) e le tue modifiche del mattino svaniscono, come se non avessi versioning. Il design di Keeply è di decidere da solo quali salvataggi sono "significativi". Il salvataggio prima di pranzo è una versione, il salvataggio prima di andare via è un'altra. Le modifiche minute in mezzo non vengono salvate ciascuna a parte.
 
 Al Day 3 sera, quando apri il pannello versioni di quel file, dovresti vedere 2-4 versioni, non 17. Ognuna con il timestamp. Puoi cliccarne una qualsiasi per tornare a quello stato.
+
+Aperto, ha questo aspetto — `proposal_acme.docx` dalla prima bozza del Day 1 fino al sign-off del cliente di oggi, 5 versioni accumulate in 3 giorni (2 con note scritte da te, 3 salvataggi automatici):
+
+![Pannello versioni file di Keeply: proposal_acme.docx accumula 5 versioni dalla prima bozza del Day 1 al sign-off del cliente di oggi, con 2 versioni a nota manuale (prezzi finali / clausola SLA rivista) e 3 salvataggi automatici](file-history.svg)
+
+Le righe "auto" sono Keeply che salva in silenzio in background; le righe "tu" sono i momenti che hai marcato attivamente. Tra sei mesi ti basta leggere la colonna della nota per capire quale versione è quale — senza affidarti alla memoria.
 
 - ✅ **Segnale di fiducia**: il pannello versioni mostra 2-4 versioni chiave con timestamp, ognuna cliccabile per ripristinare, non 17 registrazioni banali.
 - ❌ **Punto di fallimento**: 17 versioni quasi identiche, oppure solo 1 versione rimasta. Significa che non corrisponde al tuo ritmo di modifica.
@@ -135,6 +147,12 @@ Il design di Keeply tiene la sua lista delle cancellazioni separata dal cestino 
 
 Al Day 5, cancella di proposito un file di test non importante. Poi apri Keeply, trova l'area "file cancellati" (la posizione esatta varia un po' tra i sistemi operativi). Il file dovrebbe essere ancora lì, e cliccando "ripristina" lo riprendi.
 
+La lista è ordinata per fascia temporale, quindi quello che hai appena cancellato sta in cima:
+
+![Pannello file cancellati di Keeply: test_doc_to_delete.docx appena cancellato al Day 5 + cancellazioni dei giorni precedenti come old_estimate.xlsx e moodboard_v1.png + link Ripristina accanto a ogni voce](deleted-files-panel.svg)
+
+Ogni voce è conservata per almeno 30 giorni — non scompare come il Cestino del Mac quando viene svuotato. Clicchi "Ripristina" e il file torna alla sua cartella originale.
+
 Confrontalo con gli strumenti a cui sei abituato: cestino Mac svuotato — sparito. Cestino Windows svuotato — sparito. OneDrive oltre i 30 giorni di conservazione — sparito. Time Machine che non ha fatto backup di quel momento — sparito. Keeply non si appoggia a queste conservazioni sottostanti. È una cronologia versioni a livello dello strumento, registrata in modo indipendente.
 
 - ✅ **Segnale di fiducia**: il file di test cancellato compare nella lista "file cancellati" di Keeply, e "ripristina" lo riporta.
@@ -149,6 +167,12 @@ Il Day 7 è il giorno del verdetto. Apri Keeply e ripensa a questa settimana:
 - Quanti file ho aggiunto. Keeply li ha visti?
 - Quali file ho modificato. Keeply ha tenuto un numero ragionevole di versioni?
 - Quali file ho cancellato. Keeply riesce ancora a recuperarli?
+
+Apri la timeline principale di Keeply e i 7 giorni appaiono così:
+
+![Timeline della prima settimana di Keeply: Day 1 installazione → aggiunto proposal_acme.docx → Day 2 prezzi finali → Day 5 ripristinato test_doc + clausola SLA rivista → Day 7 sign-off cliente](timeline.svg)
+
+Ogni voce ha una nota e ogni voce è cliccabile per ripristinare. Ripensandoci, non devi ricordare date o nomi di file — la timeline ti dice cosa hai fatto questa settimana.
 
 Tutte e tre le risposte "sì" — puoi lasciare Keeply in background con tranquillità. Ha superato la prova della prima settimana. Il tuo lavoro reale ha generato in 7 giorni le prove se può fare il lavoro. Ti dice più di qualsiasi checklist di setup da 30 voci.
 

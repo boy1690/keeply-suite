@@ -103,6 +103,12 @@ You don't need to do anything. Save the file where you'd normally save it. Deskt
 
 Before lunch, open Keeply for a quick look. That file should be visible in the Keeply interface with a timestamp next to it. No complex menu, no "would you like to track this file?" popup. It saw it automatically.
 
+If you want to go one step further, click "Save version" and write a one-liner note. Keeply pops a side panel for it:
+
+![Keeply save-version side panel: proposal_acme.docx added + note "Acme RFP proposal — first draft" + full-width blue Save button](save-dialog.svg)
+
+Anything in the note field works — "first draft after kickoff" or "post-client-visit revision" plain language is most useful. Six months later, that one line is your memory anchor when you scroll the version history.
+
 - ✅ **Trust signal**: the new file doesn't need to be "added" to Keeply; it shows up automatically with a timestamp.
 - ❌ **Failure point**: the new file isn't visible in Keeply. That means the tool doesn't fit your environment — a Day 1 answer is better than a Day 30 surprise.
 
@@ -117,6 +123,12 @@ A file usually gets edited like this: open it in the morning, change something, 
 Question: how many versions should the tool keep? Keep too many (one per Cmd+S) and you end up looking at 17 nearly identical versions — useless. Keep too few (one final version a day) and your morning's edits vanish, no different from having no version control. Keeply's design is to decide on its own which saves are "meaningful." The save before lunch is one version. The save before leaving is another. The small in-between edits don't each get their own.
 
 By Day 3 evening, when you open that file's version panel, you should see 2 to 4 versions, not 17. Each has a timestamp. You can click any one to roll back to that state.
+
+Opened up, it looks like this — `proposal_acme.docx` from Day 1's first draft through today's client sign-off, 5 versions accumulated in 3 days (2 you wrote notes for, 3 auto-saves):
+
+![Keeply file version panel: proposal_acme.docx accumulates 5 versions from Day 1 first draft through today's client sign-off, including 2 manual-note versions (final pricing / revised SLA clause) and 3 auto-saves](file-history.svg)
+
+The "auto" rows are Keeply quietly saving in the background; the "you" rows are the moments you actively marked. Six months from now, you just read the note column to know which version is which — no memory required.
 
 - ✅ **Trust signal**: the version panel shows 2–4 timestamped key versions, each clickable to restore, not 17 trivial entries.
 - ❌ **Failure point**: 17 near-identical versions, or only 1 version left. That means it doesn't match your editing cadence.
@@ -135,6 +147,12 @@ Keeply's design keeps its delete list separate from the system trash. Files you 
 
 On Day 5, deliberately delete an unimportant test file. Then open Keeply, find the "deleted files" area (the exact location varies a little by OS). The file should still be there, and clicking "restore" pulls it back.
 
+The list is sorted by time bucket, so the one you just deleted sits at the top:
+
+![Keeply deleted files panel: Day 5's just-deleted test_doc_to_delete.docx + earlier deletions like old_estimate.xlsx and moodboard_v1.png + a Restore link next to each entry](deleted-files-panel.svg)
+
+Each entry is preserved for at least 30 days — it won't vanish the way the Mac trash does when emptied. Click "Restore" and the file goes back to its original folder.
+
 Compare with the tools you're used to: Mac trash emptied — gone. Windows Recycle Bin emptied — gone. OneDrive past the 30-day retention — gone. Time Machine that didn't back up that moment — gone. Keeply doesn't rely on these underlying retentions. It's a tool-layer version history, recorded independently.
 
 - ✅ **Trust signal**: the deleted test file appears in Keeply's "deleted files" list, and "restore" brings it back.
@@ -149,6 +167,12 @@ Day 7 is verdict day. Open Keeply and think back on the week:
 - How many files did I add. Did Keeply see them?
 - Which files did I edit. Did Keeply keep a reasonable number of versions?
 - Which files did I delete. Can Keeply still pull them back?
+
+Open Keeply's main timeline and the 7 days look like this:
+
+![Keeply first-week timeline: Day 1 install → added proposal_acme.docx → Day 2 final pricing → Day 5 restored test_doc + revised SLA → Day 7 client sign-off](timeline.svg)
+
+Every entry has a note, and every entry is clickable to restore. Looking back, you don't need to remember dates or filenames — the timeline tells you what you did this week.
 
 All three answers "yes" — you can leave Keeply running in the background with confidence. It passed the first-week trial. Your real work generated the evidence of whether it can do the job, in 7 days. That tells you more than any 30-item setup checklist.
 
