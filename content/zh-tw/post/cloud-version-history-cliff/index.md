@@ -107,6 +107,12 @@ Keeply 時間軸 — proposal.psd
 
 65 天前那版上面的 Release 標記表示它過了 OneDrive 500 版本 上限、過了 Dropbox 30 天視窗、過了 Google Drive 100 版本計數，還是能拉回來——因為 Keeply 不像雲端那樣套 上限。
 
+刪除也是同樣邏輯。雲端的 30 天回收筒到了就清空，但 Keeply 的「最近刪除」面板沒有那道時鐘——本機保留：
+
+![Keeply 最近刪除清單：今天 / 本週 / 上個月 / 更早分組、4 個月前刪掉的 Q4 budget 還能還原（Release 凍結）](deleted-files-panel.svg)
+
+「上個月」那條 38 天前刪的 `logo_export.ai`、雲端 30 天視窗早過了——Dropbox 給你 410 Gone、OneDrive 給你 410 Gone。Keeply 面板裡還在、點還原就回來。「更早」那條 Q4 budget 是 4 個月前刪的 Release 凍結版、任何雲端 retention 都救不回、Keeply 一樣留著。
+
 ## 這篇文章不夠用的場景
 
 這篇不解所有 retention 場景。三個邊界要講清楚：
