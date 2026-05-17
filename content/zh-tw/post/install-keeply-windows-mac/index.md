@@ -13,6 +13,17 @@ image: cover.svg
 og_image: cover.png
 cta_topic: install
 image_alt_data: "安裝步驟序列：從 Microsoft Defender SmartScreen 顯示「Windows 已封鎖此應用程式」警告，經 winget 安裝，到首個專案完成自動版本追蹤——從封鎖畫面到首次受保護儲存僅需十分鐘"
+faq_schema:
+  - q: Windows 跳 SmartScreen 藍屏，代表 Keeply 有問題嗎？
+    a: 不是。SmartScreen 藍屏只是因為 Keeply 是新軟體、累積下載量還不夠多被微軟認列為「廣為人知」。Keeply 已通過 Microsoft winget 官方審查收錄，走 winget 一行指令就完全不會出現藍屏。
+  - q: Windows 上最快的安裝方法是？
+    a: 開啟 PowerShell，貼入 `winget install Boy1690.Keeply` 按 Enter，大約 30 秒完成全程不出現 SmartScreen。如果不想開 PowerShell 可改下載 .exe 雙擊，遇到 SmartScreen 點左下角「其他資訊」再點「仍要執行」即可。
+  - q: macOS 顯示「無法驗證開發者」怎麼處理？
+    a: macOS 首次開啟未上架 App Store 的應用會這樣，是 Gatekeeper 預設保護不是 Keeply 問題。把 Keeply 拖進「應用程式」資料夾後，**右鍵點 Keeply 選「打開」**（不是雙擊），對話框跳出再點「打開」即可，之後直接雙擊就好。
+  - q: 安裝完成後第一步該做什麼？
+    a: 開啟 Keeply 點「新增專案」，選一個你**目前正在做且不想搞丟**的資料夾拖進去。初次掃描約 1-2 分鐘建立基準版本，之後 Keeply 自動在背景記錄每一次存檔，你照平常工作就好。
+  - q: 安裝過程常見錯誤有哪些？
+    a: 三個最常見：(1) winget 指令找不到——Windows 10 舊版本沒內建，到 Microsoft Store 搜「App Installer」更新即可；(2) .dmg 雙擊提示「已損毀」——這是 macOS 的誤判，重新下載並右鍵打開；(3) 第一個專案掃描很慢——資料夾若超過 10GB 第一次需 5 分鐘，之後存檔記錄會是即時的。
 howto_schema:
   name: Keeply Windows / macOS 安裝教學
   totalTime: PT10M

@@ -54,7 +54,7 @@ Apri "troppe versioni" e trovi quattro problemi completamente diversi. Ognuno ri
 | 1 | **Sovrascrittura utente** | Premi Cmd+S, poi realizzi "aspetta, la versione di mezz'ora fa era quella giusta" |
 | 2 | **Loop feedback cliente** | `Contratto_v3_note_cliente.docx` / `Proposta_v5_capo_vuole_modifiche.docx` ping-pong infinito |
 | 3 | **Conflitto sync cloud** | Dropbox / OneDrive: entrambi i lati modificano, ottieni `Proposta (copia in conflitto di Bill).docx` |
-| 4 | **Residui auto-save software** | File `.asd` di Word / `.bak` di Premiere / `.psb` di PSD sparsi ovunque |
+| 4 | **Residui salvataggio automatico software** | File `.asd` di Word / `.bak` di Premiere / `.psb` di PSD sparsi ovunque |
 
 Pensi di risolvere una cosa, ma in realtà ne sono quattro. Il Tipo 1 ha bisogno di preservazione automatica delle versioni. Il Tipo 2 ha bisogno di freezing dei milestone. Il Tipo 3 ha bisogno di risoluzione conflitti sync. Il Tipo 4 ha bisogno di formazione sullo strumento. **Diagnostica quale hai prima di inseguire una soluzione.**
 
@@ -84,7 +84,7 @@ Marchi attivamente "questa versione è firmata" o "questa versione è andata in 
 
 Ripristina un **singolo file** da qualunque versione storica, senza fare rollback dell'intera cartella. **Esempi**: ripristino singolo file Dropbox, ripristino singolo file Time Machine. **Keeply** aggiunge ricerca nel contenuto delle versioni — se ricordi "ho cambiato qualcosa la settimana scorsa", puoi cercare dentro le modifiche passate, individuare la versione, e tirare fuori solo quel file. **Risolve scenari combinati Tipo 1+2.**
 
-Noterai che dei quattro tipi di dolore, solo il Tipo 4 (residui auto-save software) prende una strada diversa: è un problema di formazione sullo strumento (impara a pulire le cache), non di gestione versioni.
+Noterai che dei quattro tipi di dolore, solo il Tipo 4 (residui salvataggio automatico software) prende una strada diversa: è un problema di formazione sullo strumento (impara a pulire le cache), non di gestione versioni.
 
 ## Quando non è lo strumento giusto {#boundaries}
 

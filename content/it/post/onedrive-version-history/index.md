@@ -123,7 +123,7 @@ Il Salvataggio automatico salva file temporanei `.asd` nei client desktop Word /
 
 Completamente separato dalla cronologia versioni cloud di OneDrive.
 
-Per un pattern correlato, vedi [Photoshop salvataggio automatico non è cronologia versioni](/it/post/photoshop-autosave-not-version-history/) — la confusione parallela di Adobe nello spazio design.
+Per un pattern correlato, vedi [Photoshop salvataggio automatico non è cronologia versioni](/it/post/photoshop-salvataggio automatico-not-version-history/) — la confusione parallela di Adobe nello spazio design.
 
 ## Keeply colma il divario — dopo il limite di OneDrive {#keeply-fills}
 

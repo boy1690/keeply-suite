@@ -131,7 +131,7 @@ Quindi cominci a stipare l'intenzione nei nomi dei file: `contratto_v7_su_richie
 
 ## 4. Le convenzioni di denominazione scaricano la memoria sulle persone {#reason-4}
 
-I PDF di convenzioni di denominazione crollano entro sei mesi. Non perché il tuo team sia pigro — perché la regola chiede a ogni persona, a ogni salvataggio, di ricordare + essere d'accordo + avere il tempo di digitare il nome file corretto. Salta uno di questi (come un salvataggio sotto deadline chiamato "FINAL") e tutto il sistema collassa. Quello che ti rimane: `FINAL`, `FINAL_v2`, `davvero_finale`.
+I PDF di convenzioni di denominazione crollano entro sei mesi. Non perché il tuo team sia pigro — perché la regola chiede a ogni persona, a ogni salvataggio, di ricordare + essere d'accordo + avere il tempo di digitare il nome file corretto. Salta uno di questi (come un salvataggio sotto scadenza chiamato "FINAL") e tutto il sistema collassa. Quello che ti rimane: `FINAL`, `FINAL_v2`, `davvero_finale`.
 
 Dopo aver incontrato tutti e tre i problemi sopra, ogni azienda fa la stessa cosa — **scrive un PDF di convenzioni di denominazione di 14 pagine**.
 

@@ -13,6 +13,17 @@ image: cover.svg
 og_image: cover.png
 cta_topic: install
 image_alt_data: "Step sequence from Microsoft Defender SmartScreen 'Windows protected your PC' warning through winget install to first project auto-versioned — ten minutes from blocked app screen to first protected save"
+faq_schema:
+  - q: Does the Windows SmartScreen warning mean Keeply has a problem?
+    a: No. SmartScreen flags Keeply because it's a new app and hasn't accumulated enough downloads to be labelled "widely known" by Microsoft. Keeply is officially listed in the Microsoft winget catalog, and the one-line winget install path skips the SmartScreen warning entirely.
+  - q: What's the fastest way to install Keeply on Windows?
+    a: Open PowerShell, paste `winget install Boy1690.Keeply` and press Enter. It finishes in about 30 seconds, no SmartScreen warning. If you'd rather not open PowerShell, download the .exe and double-click; when SmartScreen appears, click "More info" then "Run anyway".
+  - q: macOS says "cannot verify developer" — what do I do?
+    a: macOS shows this on first launch for any app not published to the App Store. It's Gatekeeper's default protection, not a Keeply issue. After dragging Keeply into the Applications folder, **right-click Keeply and choose "Open"** (don't double-click). Click "Open" again in the confirmation dialog — every double-click after that works normally.
+  - q: What should I do right after installing?
+    a: Open Keeply, click "New project" and drag in a folder you're **actively working on and don't want to lose**. The initial scan takes 1-2 minutes to build a baseline, then Keeply records every save in the background while you work as normal.
+  - q: What are the most common install errors?
+    a: Three you'll hit most often. (1) `winget` not found — older Windows 10 builds don't ship it; update "App Installer" from the Microsoft Store. (2) .dmg says "damaged" — macOS misjudgment; redownload and right-click open. (3) First project scan is slow — folders over 10 GB take ~5 minutes the first time, but save tracking afterwards is real-time.
 howto_schema:
   name: Keeply Windows / macOS 安裝教學
   totalTime: PT10M

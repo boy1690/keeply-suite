@@ -86,7 +86,7 @@ Metti uno accanto all'altro i metodi che il tuo team sta usando, e vedi che ognu
 | Metodo | Cosa risolve | Cosa non risolve | Adatto a un team? |
 |---|---|---|---|
 | Regole di denominazione rigide (`Data_Progetto_v1_Nome.dwg`) | Mantiene una forma di versioni | Contro la natura umana, qualcuno scivola entro la 4ª settimana | Sì nel breve, no nel lungo |
-| Strumenti di sincronizzazione (Dropbox / OneDrive / Google Drive) | Condivisione real-time, i file non spariscono in locale | Un collega sovrascrive la tua versione, nessuna notifica | A metà |
+| Strumenti di sincronizzazione (Dropbox / OneDrive / Google Drive) | Condivisione in tempo reale, i file non spariscono in locale | Un collega sovrascrive la tua versione, nessuna notifica | A metà |
 | Cronologia Office cloud (Word / Google Docs) | Chi ha cambiato quale frase nei file di testo | File di design (.dwg / .psd / .indd) non supportati | OK per i testi, non per il design |
 | Versionamento automatico a livello strumento ([Keeply](https://keeply.work)) | Ogni salvataggio conservato, chi-quando-cosa è visibile | Guasto fisico dell'intero disco (da abbinare alla [regola di backup 3-2-1](/it/post/3-2-1-backup-rule/)) | Sì |
 

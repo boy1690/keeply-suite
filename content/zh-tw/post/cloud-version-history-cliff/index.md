@@ -94,7 +94,7 @@ Reframe 一下：你不換雲端就能解這個問題。你的雲端做同步沒
 
 [Keeply](https://keeply.work) 跟 iCloud Drive、Dropbox、OneDrive、Google Drive、Synology / QNAP NAS、純 Finder 資料夾都能搭配——你不換系統，是加一層在原本系統上面。
 
-Keeply 是這層的 reference 實作：每次存檔本地保留，無時間 上限、無計數 上限，加上「Release」凍結機制——把某個版本標成「這版送給客戶」，那個 snapshot 永遠存在，後續存五十次也蓋不掉。兩個月前的版本，回溯約 2 個點擊。
+Keeply 是這層的 reference 實作：每次存檔本地保留，無時間 上限、無計數 上限，加上「Release」凍結機制——把某個版本標成「這版送給客戶」，那個 快照 永遠存在，後續存五十次也蓋不掉。兩個月前的版本，回溯約 2 個點擊。
 
 ```
 Keeply 時間軸 — proposal.psd

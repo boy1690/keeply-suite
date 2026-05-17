@@ -59,7 +59,7 @@ Dropbox usa il meccanismo "l'ultimo writer vince + salva separatamente la versio
 
 Non è che la rilevazione conflitti sia tecnicamente difficile. È un trade-off commerciale:
 
-- **Esperienza real-time prima**: sync non può bloccarti. Far apparire "scegli una strategia di merge" ogni volta renderebbe Dropbox pesante.
+- **Esperienza in tempo reale prima**: sync non può bloccarti. Far apparire "scegli una strategia di merge" ogni volta renderebbe Dropbox pesante.
 - **Risoluzione conflitti spinta sull'utente**: salvare l'altra versione significa "te la tengo, decidi tu."
 - **La scelta del progettista**: nessuno perde lavoro, ma fai tu il lavoro.
 
@@ -91,7 +91,7 @@ Apri il file, lo strumento lo blocca automaticamente. Il collega lo apre e vede 
 
 ### Design C: Copia locale + push manuale (modello Keeply)
 
-La tua versione di lavoro vive sulla tua macchina, la sync è un push attivo che fai tu (non il mirror real-time di Dropbox). Le collisioni sono rilevate al momento del push e mostrate in un'interfaccia in linguaggio piano. **Keeply** percorre questa strada: edita in locale, controlla la diff, poi pusha su NAS / SharePoint / cartella condivisa quando sei sicuro — niente sovrascritture a sorpresa. **Risolve scenari #1-#4**, trade-off: non istantaneo come Dropbox.
+La tua versione di lavoro vive sulla tua macchina, la sync è un push attivo che fai tu (non il mirror in tempo reale di Dropbox). Le collisioni sono rilevate al momento del push e mostrate in un'interfaccia in linguaggio piano. **Keeply** percorre questa strada: edita in locale, controlla la diff, poi pusha su NAS / SharePoint / cartella condivisa quando sei sicuro — niente sovrascritture a sorpresa. **Risolve scenari #1-#4**, trade-off: non istantaneo come Dropbox.
 
 Noterai che lo scenario #4 (disallineamento orologio cross-OS) è il più difficile, è puro problema di orologio. Design A e C possono rilevarlo, ma la risoluzione richiede ancora l'utente.
 
@@ -99,7 +99,7 @@ Noterai che lo scenario #4 (disallineamento orologio cross-OS) è il più diffic
 
 Keeply non risolve ogni scenario Dropbox:
 
-- **Sync real-time file grandi**: Premiere project edit-mentre-sync, il modello Local Clone di Keeply non è adatto (push richiede minuti).
+- **Sync in tempo reale file grandi**: Premiere project edit-mentre-sync, il modello Local Clone di Keeply non è adatto (push richiede minuti).
 - **Accesso da dispositivi mobili**: Keeply è desktop-first, l'app Dropbox sul telefono è molto più fluida.
 - **Link di condivisione esterni**: Il "Share link" di Dropbox non ha equivalente Keeply.
 - **Frequenza di collaborazione altissima** (multiple edit in un'ora): UX di Keeply più lenta di Dropbox, usa Google Docs co-edit per quello.

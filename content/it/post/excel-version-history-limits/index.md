@@ -91,7 +91,7 @@ Keeply non risolve ogni scenario Excel:
 
 - **Diff a livello cella**: Keeply mostra "file intero v3 → v4," non "cella B7 da 100 a 105." Per diff cella vuoi ancora Microsoft 365 co-editing o uno spreadsheet diff tool.
 - **Errori logici nelle formule**: Keeply ripristina "la formula precedente," non "la formula stessa era sbagliata." Quest'ultimo è il dominio di un Excel debug tool.
-- **Editing collaborativo multi-persona**: Microsoft 365 collaborazione real-time batte Keeply (scenario diverso).
+- **Editing collaborativo multi-persona**: Microsoft 365 collaborazione in tempo reale batte Keeply (scenario diverso).
 - **Dimensione file ancora limitata dal disco**: 100 modelli × 50MB = 5GB anche su Keeply.
 
 ## Prima di premere Cmd+S la prossima volta

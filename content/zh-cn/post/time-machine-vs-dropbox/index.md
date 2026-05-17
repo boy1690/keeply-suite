@@ -16,7 +16,7 @@ cta_topic: backup
 role: cluster
 pillar_parent: file-version-management-complete-guide
 locales_required: [en, zh-TW, zh-CN, ja, ko, it]
-image_alt_data: "三轴图表对比 Time Machine（磁盘层 snapshot）、Dropbox（云端同步）、第三轴「文件层级故意保存的版本历史」——说明标准 Time Machine vs Dropbox 比较只涵盖 3 轴中的 2 轴"
+image_alt_data: "三轴图表对比 Time Machine（磁盘层 快照）、Dropbox（云端同步）、第三轴「文件层级故意保存的版本历史」——说明标准 Time Machine vs Dropbox 比较只涵盖 3 轴中的 2 轴"
 faq_schema:
   - q: Time Machine 会 backup 我的 Dropbox 文件夹吗？
     a: 默认会。Time Machine 会 snapshot 整个家目录包含 Dropbox 文件夹。但它 backup 的是同步好的状态——不是 Dropbox 本身的版本历史。如果想排除 Dropbox 省 Time Machine 空间，可以加进 Time Machine 排除清单。
@@ -40,7 +40,7 @@ faq_schema:
 
 周五晚上 6:18，你在找「改价格前那一版」的提案。你记得是 2 个月前那个礼拜二——下午你特地保存了一版。
 
-打开 Time Machine。技术上资料在里面——但 Time Machine 要你翻一整叠整个 Documents 文件夹的 snapshot。你不记得确切日期，只记得「2 个月前礼拜二午餐后」。
+打开 Time Machine。技术上资料在里面——但 Time Machine 要你翻一整叠整个 Documents 文件夹的 快照。你不记得确切日期，只记得「2 个月前礼拜二午餐后」。
 
 打开 Dropbox。版本历史 30 天。没了。
 
@@ -52,7 +52,7 @@ faq_schema:
 
 | 轴 | Time Machine | Dropbox |
 |---|---|---|
-| 本机磁盘备份 | ✅ 整盘 snapshot | ❌ 不是它的工作 |
+| 本机磁盘备份 | ✅ 整盘 快照 | ❌ 不是它的工作 |
 | 跨设备云端同步 | ❌ 不是它的工作 | ✅ 核心功能 |
 
 两个都对、两个都真。每篇结论：「两个都用」。建议合理——范围错了。
@@ -67,15 +67,15 @@ faq_schema:
 
 | 轴 | Time Machine | Dropbox |
 |---|---|---|
-| 本机磁盘备份 | ✅ 整盘 hourly snapshot | ❌ |
+| 本机磁盘备份 | ✅ 整盘 hourly 快照 | ❌ |
 | 跨设备云端同步 | ❌ | ✅ |
 | **文件层级故意保存版本历史** | ⚠️ 只到磁盘层，不到文件层 | ⚠️ 30 天 上限（付费 180） |
 
-Time Machine 有 snapshot，但是磁盘层。它不知道你下午 2:47 对某个文件故意按了 Cmd+S。它只知道下次整点 snapshot 时的磁盘状态，那可能是 2:00（你保存之前）或 3:00（你保存之后，但夹杂其他改动）。
+Time Machine 有 快照，但是磁盘层。它不知道你下午 2:47 对某个文件故意按了 Cmd+S。它只知道下次整点 快照 时的磁盘状态，那可能是 2:00（你保存之前）或 3:00（你保存之后，但夹杂其他改动）。
 
 Dropbox 有文件层版本，但免费 30 天 上限、付费 180 或 365 天。过了 上限，那份文件级历史就没了。
 
-所以当你要「2 个月前礼拜二下午故意保存的那版」时，Time Machine 有 bytes（在某个 snapshot 里）但没有索引。Dropbox 本来有索引，第 31 天扔了。
+所以当你要「2 个月前礼拜二下午故意保存的那版」时，Time Machine 有 bytes（在某个 快照 里）但没有索引。Dropbox 本来有索引，第 31 天扔了。
 
 ## 为什么第三轴不会出现在比较文里
 
@@ -91,7 +91,7 @@ Dropbox 有文件层版本，但免费 30 天 上限、付费 180 或 365 天。
 
 围绕「文件层级故意保存版本历史」设计的工具会做这些事：
 
-- **每次故意 Cmd+S 都保存一版**——不是按 snapshot 排程
+- **每次故意 Cmd+S 都保存一版**——不是按 快照 排程
 - **无时间 上限**——2 年前的版本跟昨天的一样好叫出来
 - **无计数 上限**——500 次保存之后，最早的还在
 - **「Release」或「Milestone」标记**——把某次保存标成「这是我 3 月 8 号送给客户的版本」，永远不被覆盖
@@ -120,7 +120,7 @@ Keeply — 2 个月前礼拜二下午
 
 **Dropbox** 是对的工具用在：跨设备同步、跟客户共享文件夹、工作中文件的异地副本。它是完整的同步方案。要跑。
 
-两个都做不好的事：「给我这个文件某个我只记得个大概日期的版本，不是那整天的整盘 snapshot」。那是第三轴。
+两个都做不好的事：「给我这个文件某个我只记得个大概日期的版本，不是那整天的整盘 快照」。那是第三轴。
 
 ## 第三轴不值得加的场景
 

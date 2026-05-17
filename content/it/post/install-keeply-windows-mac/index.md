@@ -13,6 +13,17 @@ image: cover.svg
 og_image: cover.png
 cta_topic: install
 image_alt_data: "Sequenza di passi da 'Windows ha protetto il PC' di Microsoft Defender SmartScreen all'installazione via winget fino al primo progetto con auto-versioning attivo — dieci minuti dalla schermata di blocco al primo salvataggio protetto"
+faq_schema:
+  - q: L'avviso blu di Windows SmartScreen significa che Keeply ha un problema?
+    a: No. SmartScreen segnala Keeply perché è un'app nuova e non ha ancora accumulato abbastanza download per essere considerata "ampiamente diffusa" da Microsoft. Keeply è già nel catalogo ufficiale Microsoft winget, e l'installazione via winget evita del tutto l'avviso SmartScreen.
+  - q: Qual è il modo più veloce per installare Keeply su Windows?
+    a: Apri PowerShell, incolla `winget install Boy1690.Keeply` e premi Invio. Finisce in circa 30 secondi, senza avviso SmartScreen. Se preferisci non aprire PowerShell, scarica il .exe e fai doppio clic; quando appare SmartScreen, clicca "Ulteriori informazioni" e poi "Esegui comunque".
+  - q: macOS mostra "impossibile verificare lo sviluppatore" — cosa faccio?
+    a: macOS mostra questo messaggio al primo avvio di qualsiasi app non pubblicata sull'App Store. È la protezione standard di Gatekeeper, non un problema di Keeply. Dopo aver trascinato Keeply nella cartella Applicazioni, **fai clic destro su Keeply e scegli "Apri"** (non doppio clic). Premi "Apri" anche nella finestra di conferma; da quel momento il doppio clic funziona normalmente.
+  - q: Cosa devo fare subito dopo l'installazione?
+    a: Apri Keeply, clicca "Nuovo progetto" e trascina dentro una cartella su cui **stai lavorando ora e che non vuoi perdere**. La scansione iniziale richiede 1-2 minuti per costruire una base di riferimento, poi Keeply registra ogni salvataggio in background mentre lavori normalmente.
+  - q: Quali sono gli errori più comuni durante l'installazione?
+    a: Tre frequenti. (1) `winget` non trovato — versioni vecchie di Windows 10 non lo includono; aggiorna "App Installer" dal Microsoft Store. (2) Il .dmg appare "danneggiato" — è un falso positivo di macOS; riscarica e apri con clic destro. (3) La prima scansione è lenta — cartelle oltre i 10 GB richiedono circa 5 minuti la prima volta, ma il tracking dei salvataggi successivi è in tempo reale.
 howto_schema:
   name: Keeply Windows / macOS 安裝教學
   totalTime: PT10M

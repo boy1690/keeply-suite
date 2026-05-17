@@ -13,6 +13,17 @@ image: cover.svg
 og_image: cover.png
 cta_topic: install
 image_alt_data: "Microsoft Defender SmartScreen의 \"Windows가 PC를 보호했습니다\" 경고에서 winget 설치를 거쳐 첫 번째 프로젝트가 자동 버전 관리되기까지의 단계 — 차단 화면에서 첫 보호 저장까지 10분"
+faq_schema:
+  - q: Windows에서 SmartScreen 파란 경고가 뜨면 Keeply에 문제가 있는 건가요?
+    a: 아닙니다. SmartScreen은 Keeply가 새 앱이라 마이크로소프트가 「널리 알려진 앱」으로 인정할 만큼 다운로드 수가 누적되지 않았기 때문에 경고를 띄울 뿐입니다. Keeply는 Microsoft winget 공식 카탈로그에 이미 등록되어 있으며 winget 한 줄 명령으로 설치하면 SmartScreen 경고는 나타나지 않습니다.
+  - q: Windows에서 Keeply를 가장 빠르게 설치하는 방법은?
+    a: PowerShell을 열고 `winget install Boy1690.Keeply`를 붙여 넣은 뒤 Enter를 누르면 약 30초 만에 끝나며 SmartScreen 경고가 표시되지 않습니다. PowerShell을 열기 싫다면 .exe를 내려받아 더블 클릭하고, SmartScreen이 뜨면 왼쪽 아래 「추가 정보」를 눌러 「실행」을 선택하세요.
+  - q: macOS에서 「개발자를 확인할 수 없습니다」가 뜨면 어떻게 하나요?
+    a: macOS는 App Store에 없는 앱을 처음 열 때 항상 이 메시지를 띄웁니다. Gatekeeper의 기본 보호 동작이며 Keeply 문제는 아닙니다. Keeply를 「응용 프로그램」 폴더로 드래그한 후 **Keeply를 우클릭하고 「열기」를 선택**(더블 클릭이 아님)한 다음 확인 대화 상자에서 「열기」를 누르세요. 이후에는 더블 클릭으로 정상 실행됩니다.
+  - q: 설치 후 첫 단계로 무엇을 해야 하나요?
+    a: Keeply를 열고 「새 프로젝트」를 클릭한 뒤 **현재 작업 중이고 잃기 싫은** 폴더를 드래그해 넣으세요. 초기 스캔에 1〜2분이 걸려 기준 버전을 만들고, 이후에는 평소대로 작업하면 Keeply가 백그라운드에서 저장할 때마다 자동으로 기록합니다.
+  - q: 설치 과정에서 자주 발생하는 오류는?
+    a: 자주 보는 3가지. (1) winget 명령을 찾을 수 없음 — 구형 Windows 10에는 기본 탑재되어 있지 않으므로 Microsoft Store에서 「App Installer」를 업데이트하세요. (2) .dmg가 「손상되었습니다」로 표시 — macOS의 오판이므로 재다운로드 후 우클릭으로 여세요. (3) 첫 프로젝트 스캔이 느림 — 10 GB 이상 폴더는 처음에 약 5분 걸리지만 이후 저장 기록은 실시간입니다.
 howto_schema:
   name: Keeply Windows / macOS 安裝教學
   totalTime: PT10M
