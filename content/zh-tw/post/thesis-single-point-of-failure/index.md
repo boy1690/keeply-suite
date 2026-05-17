@@ -91,6 +91,12 @@ howto_schema:
 
 加上 Keeply 在背景每 30 分鐘自動存一次——你忘記主動標也沒關係、最少 30 分鐘有一版。
 
+點開 `thesis_v3.docx` 的版本歷史面板、看到的是這 4 個月來教授每一輪回饋後的版本一路堆疊：
+
+![Keeply 單檔版本歷史面板：thesis_v3.docx 4 個月內 47 個版本，從 2 月送教授第一輪到 5 月第三輪回饋後重寫，每行都有筆記](file-history.svg)
+
+底下的綠字「47 個版本 · 全部保留」——這是 Keeply 跟 Word 版本歷史最大的差別。Word 改完一句話按 Ctrl+S 就是新版、4 個月累積 47 個版本很正常；Word 撐 [25 版上限](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits)（個人帳號）超過就吃掉最舊那批。47 行裡哪一行你都點得到。
+
 下面拆雲端同步 / Word 版本歷史 / 3-2-1 各自為什麼救不了這場戰役。
 
 ---
