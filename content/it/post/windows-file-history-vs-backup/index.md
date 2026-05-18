@@ -99,6 +99,18 @@ Uno strato di cronologia versioni per-save guidato dall'intenzione — ogni Cmd+
 
 [Keeply](https://keeply.work) è un'implementazione. Osserva le cartelle che gli punti e cattura ogni salvataggio come la sua versione, senza pianificazione e senza limite di retention. Tira fuori la bozza di ieri alle 14:47, non lo snapshot pianificato più vicino.
 
+Dopo una riunione premi "Salva versione" e si apre la finestra — attacchi una nota tipo "aggiunte conclusioni dopo la riunione" e salvi:
+
+![Finestra Salva versione di Keeply: elenco dei file modificati + campo nota + pulsanti Annulla / Salva versione](save-dialog.svg)
+
+Sei mesi dopo, la Timeline mostra ogni salvataggio come una riga a sé — i salvataggi automatici in background accanto a quelli manuali con la nota che hai scritto sul momento:
+
+![Timeline di Keeply per meeting-notes.docx: versioni auto-salvate accanto a salvataggi manuali (conclusioni post-riunione / bozza del mattino / dopo il primo feedback del cliente)](timeline.svg)
+
+Quando devi davvero ripristinare una versione specifica, la finestra è più diretta della scheda "Versioni precedenti" di Esplora file di Windows — anteprima della nota, timestamp di origine e una rete di sicurezza con snapshot automatico prima dello scambio:
+
+![Finestra Ripristina file di Keeply: meeting-notes.docx + origine 2 giorni fa + anteprima della nota + rete di sicurezza snapshot automatico](restore-file-dialog.svg)
+
 Questa non è una sostituzione per Cronologia file o Backup di Windows — quelli coprono ancora i loro assi. Keeply aggiunge l'asse che Windows non include.
 
 Cluster sibling: [Ho chiesto a Windows File History la bozza di ieri. Mi ha restituito un file del 2019.](/it/post/windows-file-history-wrong-version/) — la versione narrativa di perché il terzo asse conta.

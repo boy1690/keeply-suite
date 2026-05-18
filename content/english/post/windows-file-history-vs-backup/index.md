@@ -99,6 +99,18 @@ A per-save intent-driven version history layer — every Cmd+S becomes a recover
 
 [Keeply](https://keeply.work) is one implementation. It watches the folders you point it at and captures every save as its own version, without scheduling and without a retention cap. Pull yesterday's draft at 2:47 PM, not the closest scheduled snapshot.
 
+After a meeting, you hit "Save version" and the dialog opens — you attach a note like "post-meeting conclusions added" and save:
+
+![Keeply save-version dialog: changed-files list + note field + Cancel / Save Version buttons](save-dialog.svg)
+
+Six months later, the Timeline shows each save as its own line — automatic background saves plus the manual ones with the note you wrote at the time:
+
+![Keeply Timeline for meeting-notes.docx: auto-saved versions alongside manual saves (post-meeting conclusions / morning draft / after first client feedback)](timeline.svg)
+
+When you do need to restore a specific version, the dialog is more direct than the Windows File Explorer "Previous Versions" tab — note preview, source timestamp, and an auto-snapshot safety net before the swap:
+
+![Keeply Restore File dialog: meeting-notes.docx + source 2 days ago + note preview + auto-snapshot safety net](restore-file-dialog.svg)
+
 This isn't a replacement for File History or Windows Backup — those still cover their axes. Keeply adds the axis Windows doesn't ship.
 
 Cluster sibling: [I asked Windows File History for yesterday's draft. It gave me a file from 2019.](/en/post/windows-file-history-wrong-version/) — the narrative version of why the third axis matters.
