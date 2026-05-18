@@ -1,6 +1,6 @@
 ---
-title: "【2026 File management】An Excel sheet vanished mid-collaborative-edit: 14:32 Tuesday, why 4 recovery layers all failed"
-description: "14:32 Tuesday. An Excel sheet vanished during collaborative editing — a colleague's accidental delete. A second-by-second forensic walk of why OneDrive sync, SharePoint version history, Time Machine, and recovery software all failed to bring it back."
+title: "【2026 File management】Excel data vanished after lunch: the sheet was just empty, and 4 recovery layers all failed"
+description: "Opened the proposal Excel after lunch — the whole sheet was just gone. A colleague had deleted it during collaborative editing over the lunch break. A layer-by-layer forensic walk of why OneDrive sync, SharePoint version history, Time Machine, and recovery software all failed to bring it back."
 date: 2026-05-18T09:00:00+08:00
 slug: excel-data-vanished-postmortem
 tags: ["file recovery", "operator error", "cloud sync", "tool comparison"]

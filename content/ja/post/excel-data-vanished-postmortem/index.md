@@ -1,6 +1,6 @@
 ---
-title: "【2026 ファイル管理】Excel 共同編集で Sheet が消えた：14:32 火曜、4 層救援が間に合わなかった現場検証"
-description: "14:32 火曜、共同編集中に提案 Excel ファイルの Sheet が消えた。OneDrive 同期、SharePoint バージョン履歴、Time Machine、復元ソフトの 4 層救援がなぜ間に合わなかったかを秒単位で検証した事故報告書。"
+title: "【2026 ファイル管理】消えたエクセルのデータ：昼休み明けに Sheet が空になっていた、4 層救援が間に合わなかった理由"
+description: "昼休み明けに提案用 Excel を開いたら Sheet が空。同僚が昼の共同編集中に誤って削除していた。OneDrive 同期、SharePoint バージョン履歴、Time Machine、復元ソフトの 4 層救援がなぜ間に合わなかったかを分単位で検証した事故報告書。"
 date: 2026-05-18T09:00:00+08:00
 slug: excel-data-vanished-postmortem
 tags: ["ファイル復元", "操作ミス", "クラウド同期", "ツール比較"]
