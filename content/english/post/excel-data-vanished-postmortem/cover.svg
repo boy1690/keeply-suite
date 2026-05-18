@@ -1,0 +1,74 @@
+<!-- =============================================================
+     Cover: excel-data-vanished-postmortem (en master)
+     Recipe: time-stakes-hero — hero "14:32" for the collaborative-edit incident moment
+     ============================================================= -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none"
+     font-family="'Inter','Helvetica Neue','Arial',system-ui,sans-serif">
+  <defs>
+    <linearGradient id="grad-indigo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#312E81"/>
+    </linearGradient>
+    <linearGradient id="grad-amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFB300"/><stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="grad-paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F8F7FF"/><stop offset="1" stop-color="#E4E3FF"/>
+    </linearGradient>
+    <linearGradient id="grad-red" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#DC2626"/><stop offset="1" stop-color="#991B1B"/>
+    </linearGradient>
+    <symbol id="keeply-lockup" viewBox="0 0 200 50">
+      <circle cx="22" cy="25" r="16" fill="url(#grad-indigo)"/>
+      <path d="M16 18 L16 32 M16 25 L26 18 M16 25 L26 32" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <text x="48" y="33" font-size="22" font-weight="800" fill="#312E81">Keeply</text>
+    </symbol>
+    <filter id="hero-shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="14" stdDeviation="20" flood-color="#312E81" flood-opacity="0.15"/>
+    </filter>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#312E81" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#grad-paper)"/>
+
+  <g transform="translate(120, 100)">
+    <text x="0" y="0" font-size="15" font-weight="700" fill="#4338CA" letter-spacing="3">Excel data recovery · Forensic report</text>
+  </g>
+
+  <g transform="translate(120, 410)" filter="url(#hero-shadow)">
+    <text x="0" y="0" font-size="260" font-weight="900" fill="url(#grad-indigo)" letter-spacing="-12">14:32</text>
+  </g>
+
+  <g transform="translate(120, 520)">
+    <text x="0" y="0" font-size="30" font-weight="800" fill="#312E81" letter-spacing="0.5">14:32 Tuesday, the sheet vanished.</text>
+    <text x="0" y="46" font-size="30" font-weight="800" fill="#312E81" letter-spacing="0.5">Tracing what collaborative editing swallowed.</text>
+  </g>
+
+  <g transform="translate(960, 230)">
+    <g transform="translate(0, 0)" filter="url(#soft-shadow)">
+      <rect width="500" height="100" fill="#FFE4E6" rx="8"/>
+      <rect x="0" y="0" width="6" height="100" fill="url(#grad-red)" rx="2"/>
+      <text x="28" y="42" font-size="18" font-weight="700" fill="#7F1D1D">OneDrive sync / SharePoint history</text>
+      <text x="28" y="68" font-size="18" font-weight="700" fill="#7F1D1D">Excel undo / Time Machine</text>
+      <text x="470" y="82" font-size="13" font-weight="700" fill="#DC2626" letter-spacing="1.5" text-anchor="end">Lost</text>
+    </g>
+    <g transform="translate(0, 120)" filter="url(#soft-shadow)">
+      <rect width="500" height="100" fill="#ECFDF5" rx="8"/>
+      <rect x="0" y="0" width="6" height="100" fill="#10B981" rx="2"/>
+      <text x="28" y="55" font-size="22" font-weight="800" fill="#065F46">Keeply</text>
+      <text x="120" y="55" font-size="14" font-weight="500" fill="#065F46">+ 15/30/60 min vault</text>
+      <text x="28" y="82" font-size="14" font-weight="500" fill="#065F46">+ decoupled from cloud sync</text>
+      <text x="470" y="82" font-size="13" font-weight="700" fill="#059669" letter-spacing="1.5" text-anchor="end">Caught</text>
+    </g>
+    <g transform="translate(0, 250)">
+      <text x="0" y="0" font-size="15" font-weight="600" fill="#4338CA" opacity="0.75" letter-spacing="0.5">4 layers · T+24h trace</text>
+    </g>
+  </g>
+
+  <use href="#keeply-lockup" x="1350" y="800" width="200" height="50"/>
+
+  <g transform="translate(120, 820)">
+    <text x="0" y="0" font-size="13" font-weight="500" fill="#4338CA" opacity="0.65" letter-spacing="0.3">OneDrive sync · SharePoint history · Excel undo · Time Machine · Keeply</text>
+  </g>
+</svg>
