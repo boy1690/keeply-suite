@@ -84,6 +84,12 @@ That's where Keeply sits. It doesn't rely on the cloud or external drives — ev
 - **Offline-first**: No always-on sync required.
 - **No 30-day cliff**: No harsh cloud retention ceiling; the version from three months ago is still on the timeline.
 
+Beyond version history, Keeply also keeps a separate "recently deleted" panel — every file you've removed in the last 30 days, grouped by when you deleted it:
+
+![Keeply recently deleted panel: files grouped by today / yesterday / last week, each row showing filename + path + restore button](deleted-files-panel.svg)
+
+No need to first remember when you deleted something — open the panel, scan the names, hit "Restore" on the right and the file is back in its original spot. Compared to digging through the system trash, this path catches you before you panic-hit Cmd+S over something else.
+
 For the deeper theory of version history design, see the [pillar: complete guide to file version management](/en/post/file-version-management-complete-guide/).
 
 ---

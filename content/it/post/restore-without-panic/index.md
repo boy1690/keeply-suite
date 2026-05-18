@@ -84,6 +84,12 @@ Smetti di rincorrere la "forense del disco" a posteriori. La vera risposta è st
 - **Offline-first**: non serve sincronizzazione sempre attiva.
 - **Niente scogliera dei 30 giorni**: nessun tetto rigido di conservazione cloud; la versione di tre mesi fa è ancora sulla timeline.
 
+Non solo cronologia versioni. Keeply ha anche un pannello separato "Eliminati di recente" che elenca i file che hai cancellato negli ultimi 30 giorni, raggruppati per quando li hai eliminati:
+
+![Pannello Eliminati di recente di Keeply: file raggruppati per oggi / ieri / settimana scorsa, ogni riga con nome file + percorso + pulsante ripristina](deleted-files-panel.svg)
+
+Non devi prima ricordare quando hai cancellato qualcosa — apri il pannello, scorri i nomi, clicca "Ripristina" a destra e il file torna al suo posto originale. Rispetto a scavare nel cestino di sistema, questa via ti prende prima che tu finisca per premere Cmd+S in preda al panico su qualcos'altro.
+
 Per la teoria più profonda del design della cronologia delle versioni, vedi il [Pillar: guida completa alla gestione delle versioni dei file](/it/post/file-version-management-complete-guide/).
 
 ---
