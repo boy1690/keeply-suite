@@ -98,7 +98,11 @@ Ogni salvataggio = una versione preservata. Nessun pruning. Indipendente dalla r
 
 [Keeply](https://keeply.work) lo fa in background sulla cartella di lavoro che gli indichi: ogni pressione di Salva aggiunge una versione con timestamp alla cronologia — due click per aprire quella che vuoi. Una "sovrascrittura" smette di essere un'**azione distruttiva**; la versione precedente è sempre preservata.
 
-Lisa usa Keeply da sei mesi. Lunedì mattina, nota che il report di chiusura mensile è stato sovrascritto con il foglio precedente. Apre Keeply. Il foglio delle 19:00 di venerdì, il foglio delle 19:15, il foglio sovrascritto delle 19:30, tutti conservati come versioni. Clicca "vai al foglio delle 19:00" e tre secondi dopo Excel lo apre.
+Lisa usa Keeply da sei mesi. Lunedì mattina, nota che il report di chiusura mensile è stato sovrascritto con il foglio precedente. Apre Keeply. Il foglio delle 19:00 di venerdì, il foglio delle 19:15, il foglio sovrascritto delle 19:30 sono tutti conservati come versioni. Clicca "vai al foglio delle 19:00" e la finestra di ripristino appare così:
+
+![Dialogo di ripristino Keeply: monthly_report.xlsx viene riportato alla versione delle 19:00 di venerdì (chiusura mensile); la sovrascrittura Cmd+S delle 19:30 viene salvata come versione separata](revert-dialog.svg)
+
+Nota la riga blu di suggerimento — la sovrascrittura delle 19:30 non viene buttata, resta come versione indipendente nella cronologia. Tre secondi dopo Excel apre il foglio delle 19:00 di venerdì. Non serve più tirare tardi la domenica per rifare tutto prima del lunedì mattina.
 
 Detto questo, Keeply non sostituisce Salvataggio automatico. Il salvataggio da crash a metà documento è ancora la prima linea di Salvataggio automatico. Keeply non può nemmeno riscrivere la storia retroattivamente: deve essere in esecuzione al momento della sovrascrittura. Per le sovrascritture prima di installare Keeply, questo articolo non aiuta. Per ogni salvataggio da oggi in poi, sì.
 

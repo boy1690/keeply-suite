@@ -98,7 +98,11 @@ Every save = one version preserved. No pruning. Independent of Word's or OneDriv
 
 [Keeply](https://keeply.work) does this in the background on the working folder you point it at: every press of Save adds a timestamped version to the history — two clicks to open the one you want. An "overwrite save" stops being a **destructive action**; the previous version is always preserved.
 
-Lisa has used Keeply for half a year. Monday morning, she notices the month-end report has been overwritten with the previous sheet. She opens Keeply. Friday's 19:00 sheet, 19:15 sheet, the 19:30 overwritten sheet, all retained as versions. She clicks "go to the 19:00 sheet" and three seconds later Excel opens it.
+Lisa has used Keeply for half a year. Monday morning, she notices the month-end report has been overwritten with the previous sheet. She opens Keeply. Friday's 19:00 sheet, 19:15 sheet, the 19:30 overwritten sheet, all retained as versions. She clicks "go to the 19:00 sheet" and the restore dialog looks like this:
+
+![Keeply restore dialog: rolling monthly_report.xlsx back to Friday's 19:00 month-end version, with the 19:30 Cmd+S overwrite saved as a separate version](revert-dialog.svg)
+
+Note the blue hint line — the 19:30 overwrite isn't discarded, it's kept as its own version in the history. Three seconds later Excel opens Friday's 19:00 sheet. No need to pull an all-nighter rebuilding the report before Monday morning.
 
 That said, Keeply doesn't replace AutoRecover. Mid-document crash rescue is still AutoRecover's first line. Keeply also can't rewrite history retroactively: it has to be running at the time the overwrite happens. For overwrites before you installed Keeply, this article won't help. For every save from today onward, it can.
 
