@@ -107,6 +107,12 @@ Keeply timeline — proposal.psd
 
 La marca Release sulla versione di 65 giorni fa significa che resta accessibile dopo il limite di 500 versioni di OneDrive, dopo la finestra di 30 giorni di Dropbox, dopo il conteggio di 100 versioni di Google Drive — perché Keeply non applica limite come fanno le cloud.
 
+L'eliminazione funziona allo stesso modo. I cestini delle cloud si svuotano sul timer dei 30 giorni, ma il pannello "Eliminati di recente" di Keeply non ha quel timer — è conservato in locale:
+
+![Lista eliminati di recente Keeply: raggruppata Oggi / Questa settimana / Ultimo mese / Prima, Q4 budget eliminato 4 mesi fa ancora ripristinabile (versione Release-frozen)](deleted-files-panel.svg)
+
+Quel `logo_export.ai` sotto "Ultimo mese" è stato eliminato 38 giorni fa — la finestra di 30 giorni della cloud è già passata, Dropbox restituisce 410 Gone, OneDrive restituisce 410 Gone. È ancora nel pannello di Keeply, premi ripristina e torna. Il Q4 budget sotto "Prima" è una versione Release-frozen eliminata 4 mesi fa — nessuna retention cloud può salvarla, Keeply la conserva comunque.
+
 ## Quando questo articolo non basta
 
 Questo pezzo non risolve ogni scenario di retention. Tre confini da chiarire:

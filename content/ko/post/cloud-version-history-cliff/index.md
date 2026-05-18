@@ -107,6 +107,12 @@ Keeply 타임라인 — proposal.psd
 
 65 일 전 버전 위의 Release 표시는 OneDrive 의 500 버전 상한、Dropbox 의 30 일 윈도우、Google Drive 의 100 버전 계수를 모두 넘기고도 끌어올 수 있음을 뜻합니다 — Keeply 는 클라우드처럼 상한 을 적용하지 않기 때문입니다.
 
+삭제도 같은 원리입니다. 클라우드 휴지통은 30 일이 되면 자동으로 비워지지만, Keeply 의 「최근 삭제」 패널에는 그 타이머가 없습니다 — 로컬에 보관됩니다:
+
+![Keeply 최근 삭제 목록: 오늘 / 이번 주 / 지난달 / 그 이전 으로 그룹화, 4 개월 전 삭제한 Q4 budget 도 복원 가능 (Release 동결)](deleted-files-panel.svg)
+
+「지난달」 그룹에 있는 `logo_export.ai` 는 38 일 전 삭제된 파일로, 클라우드의 30 일 윈도우는 이미 지났습니다 — Dropbox 는 410 Gone, OneDrive 도 410 Gone 을 돌려줍니다. Keeply 패널에는 그대로 살아 있고, 복원을 누르면 돌아옵니다. 「그 이전」 그룹의 Q4 budget 은 4 개월 전 삭제한 Release 동결 버전 — 어떤 클라우드 retention 으로도 못 살리지만, Keeply 에는 그대로 있습니다.
+
 ## 이 글이 부족한 장면
 
 이 글은 모든 retention 상황을 해결하지 않습니다. 3 가지 경계를 분명히 합시다:

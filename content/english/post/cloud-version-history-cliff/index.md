@@ -107,6 +107,12 @@ Keeply timeline — proposal.psd
 
 The Release mark on that 65-day-old version means it stays accessible after the 500-version cap, after the 30-day window, after the 100-version count — because Keeply doesn't apply caps the way clouds do.
 
+Deletion works the same way. Cloud recycle bins clear out on a 30-day clock, but Keeply's "Recently deleted" panel doesn't have that timer — kept locally:
+
+![Keeply recently deleted list: grouped Today / This week / Last month / Earlier, Q4 budget deleted 4 months ago still restorable (Release-frozen)](deleted-files-panel.svg)
+
+That `logo_export.ai` in "Last month" was deleted 38 days ago — the cloud's 30-day window is long gone, Dropbox returns 410 Gone, OneDrive returns 410 Gone. It's still in Keeply's panel; click restore and it's back. The Q4 budget under "Earlier" was deleted 4 months ago as a Release-frozen version — no cloud retention can save it, Keeply still has it.
+
 ## When this article isn't enough
 
 This piece doesn't solve every retention scenario. Three boundaries to call out:
