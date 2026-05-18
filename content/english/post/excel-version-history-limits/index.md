@@ -57,7 +57,11 @@ Pull "Excel version history isn't enough" apart and you find four invariant limi
 | 3 | **Local files have zero version history** | Saved on desktop for privacy = no history |
 | 4 | **No cell-level diff** | Can't say "keep the new column but recover the old formula" |
 
-Each of these is something Microsoft **deliberately doesn't fix**, not something they can't. The next section is why.
+Number 4 is the one that stings most. Excel version history hands you whole-file rollback only — it never tells you what changed in cell F14. Keeply's diff view shows the cell-level delta right there:
+
+![Keeply version compare: monthly_close.xlsx receivables sheet, F14 formula changed from 5% to 7%, F22 subtotal moved from 1,284,500 to 1,309,720](diff-viewer.svg)
+
+See F14 went from 5% to 7% and you immediately know "ah, the receivables rate got bumped" — no need to open two Excel windows side by side and scan with your eyes. Each of these limits is something Microsoft **deliberately doesn't fix**, not something they can't. The next section is why.
 
 ## Why Microsoft designed it this way {#why-microsoft}
 

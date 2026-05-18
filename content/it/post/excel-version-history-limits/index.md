@@ -57,7 +57,11 @@ Apri "la cronologia versioni di Excel non basta" e trovi quattro limiti invarian
 | 3 | **I file locali hanno cronologia zero** | Salvato sul desktop per privacy = nessuna cronologia |
 | 4 | **Niente diff a livello cella** | Non puoi dire "tieni la nuova colonna ma recupera la vecchia formula" |
 
-Ognuno di questi è qualcosa che Microsoft **deliberatamente non risolve**, non qualcosa che non può. La prossima sezione spiega perché.
+Il numero 4 è quello che pesa di più. La cronologia versioni di Excel ti dà solo il rollback dell'intero file — non ti dice mai cosa è cambiato nella cella F14. Il confronto versioni di Keeply ti mostra la differenza a livello cella lì davanti:
+
+![Confronto versioni Keeply: monthly_close.xlsx foglio crediti, formula F14 passata da 5% a 7%, subtotale F22 da 1.284.500 a 1.309.720](diff-viewer.svg)
+
+Vedi F14 passare da 5% a 7% e capisci subito "ah, hanno alzato il tasso sui crediti" — senza dover aprire due Excel affiancati e scorrere con gli occhi. Ognuno di questi limiti è qualcosa che Microsoft **deliberatamente non risolve**, non qualcosa che non può. La prossima sezione spiega perché.
 
 ## Perché Microsoft l'ha progettato così {#why-microsoft}
 
