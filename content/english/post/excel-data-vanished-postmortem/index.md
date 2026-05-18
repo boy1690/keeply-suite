@@ -53,6 +53,13 @@ A few seconds. The file re-downloaded. He checked "Sales Records" — 250 rows b
 
 Then he checked "Quotes." All `#REF!`. The reason: v7 restored the whole workbook, but at v7's point in time, the "Quotes" sheet formulas referenced cells in "Sales Records" as they were in v6. Formulas pointing to the sheet that v8 deleted still return `#REF!` even after restoring v7. SharePoint version history is a workbook-level snapshot, not per-sheet diff ([SharePoint version history limits](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits)). It records "sheet deletion" as a major version event, but it doesn't roll back the cascading formula damage from the deleted sheet.
 
+**Manual cascade-formula repair steps after restore**:
+
+1. Open the restored "Quotes" sheet (you'll see `#REF!` across many cells)
+2. In the formula bar, locate the original cell references that pointed to "Sales Records"
+3. Rewrite each reference to the new cell address one by one
+4. If the sheet has too many formulas, use VLOOKUP / XLOOKUP for batch replacement
+
 Time lost so far: 3 hours 28 minutes. 15 hours 60 minutes until tomorrow's pitch.
 
 ## Why closing Excel disables Ctrl+Z (per-session undo stack)
