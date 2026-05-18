@@ -9,6 +9,16 @@ defaultContentLanguageInSubdir = true  # 英文也走 /en/ 子路徑，19 語言
 # 啟用 emoji
 enableEmoji = true
 
+# R2 (2026-05-18 GSC audit): disable taxonomy + term kind entirely.
+# Evidence: 9 visible /tags/ + /categories/ URLs in GSC 90-day report = 0 clicks
+# (across both core + auto-translate locales). Cluster pillar in-body links
+# (P1.15) already provide stronger internal nav signal than tag listings.
+# 2026 Google posture: tag/archive pages "favored to be blocked"
+# (research-backed, see ~/.claude/skills/gsc-index-audit Phase 4.5 R2).
+# Must be top-level (before any [table]) — TOML scopes subsequent keys to
+# the last opened table.
+disableKinds = ["taxonomy", "term"]
+
 # Build 優化
 [build]
   writeStats = true
@@ -44,8 +54,6 @@ enableEmoji = true
   home = ["HTML", "RSS", "LLMSFULL"]
   page = ["HTML"]
   section = ["HTML"]
-  taxonomy = ["HTML"]
-  term = ["HTML"]
 
 # llms-full.txt — full-content companion to /llms.txt for LLM grounding.
 # Spec: https://llmstxt.org/  (optional "full" variant embedding article bodies)
@@ -160,79 +168,30 @@ enableEmoji = true
     contentDir = "content/ko"
     [languages.ko.params]
       description = "Keeply 블로그 — 디자이너 · 건축사 · 변호사 · 회계사를 위한 파일 버전 관리와 복구 가이드. Word / Excel / OneDrive / SharePoint 버전 기록의 한계, Time Machine vs Dropbox 비교까지 한 번에 정리합니다."
-  [languages.de]
-    languageName = "Deutsch"
-    title = "Keeply Blog"
-    weight = 6
-    contentDir = "content/de"
-  [languages.es]
-    languageName = "Español"
-    title = "Keeply Blog"
-    weight = 7
-    contentDir = "content/es"
-  [languages.fr]
-    languageName = "Français"
-    title = "Keeply Blog"
-    weight = 8
-    contentDir = "content/fr"
   [languages.it]
     languageName = "Italiano"
     title = "Keeply Blog"
-    weight = 9
+    weight = 6
     contentDir = "content/it"
     [languages.it.params]
       description = "Keeply Blog — Guida pratica al controllo versioni, backup e recupero file per chi non scrive codice. Limiti della cronologia di Word / Excel / OneDrive / SharePoint, Time Machine vs Dropbox e altre trappole della sincronizzazione cloud."
+  # R1 (2026-05-18 GSC audit): 11 zero-click auto-translate locales removed
+  # from build entirely. Evidence: 90-day GSC data showed only pt + es had any
+  # clicks (1 each); de/fr/ru/nl/pl/tr/vi/th/id/ar/hi all 0 clicks. pt + es
+  # retained for now pending further audit. Removed locales redirect to /en/
+  # via CF rule (queued for separate redirect commit). Per memory ref
+  # `reference_gsc_root_cause_fixes_2026_05_18.md` + Google 2026/03 scaled
+  # content abuse enforcement (machine translation without review = spam risk).
   [languages.pt]
     languageName = "Português"
     title = "Keeply Blog"
-    weight = 10
+    weight = 7
     contentDir = "content/pt"
-  [languages.ru]
-    languageName = "Русский"
-    title = "Keeply Блог"
-    weight = 11
-    contentDir = "content/ru"
-  [languages.nl]
-    languageName = "Nederlands"
+  [languages.es]
+    languageName = "Español"
     title = "Keeply Blog"
-    weight = 12
-    contentDir = "content/nl"
-  [languages.pl]
-    languageName = "Polski"
-    title = "Keeply Blog"
-    weight = 13
-    contentDir = "content/pl"
-  [languages.tr]
-    languageName = "Türkçe"
-    title = "Keeply Blog"
-    weight = 14
-    contentDir = "content/tr"
-  [languages.vi]
-    languageName = "Tiếng Việt"
-    title = "Keeply Blog"
-    weight = 15
-    contentDir = "content/vi"
-  [languages.th]
-    languageName = "ภาษาไทย"
-    title = "Keeply Blog"
-    weight = 16
-    contentDir = "content/th"
-  [languages.id]
-    languageName = "Bahasa Indonesia"
-    title = "Keeply Blog"
-    weight = 17
-    contentDir = "content/id"
-  [languages.ar]
-    languageName = "العربية"
-    title = "Keeply Blog"
-    languagedirection = "rtl"
-    weight = 18
-    contentDir = "content/ar"
-  [languages.hi]
-    languageName = "हिन्दी"
-    title = "Keeply Blog"
-    weight = 19
-    contentDir = "content/hi"
+    weight = 8
+    contentDir = "content/es"
 
 [menu]
   [[menu.main]]
