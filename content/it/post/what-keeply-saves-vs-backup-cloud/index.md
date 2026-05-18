@@ -64,6 +64,10 @@ Keeply salva **ogni cambiamento di ogni file**.
 
 Modifichi `proposta.docx` due volte oggi, lo salvi due volte. La Timeline mostra due note del file. Vuoi tornare alla versione del primo salvataggio? Clicca quella voce. 30 secondi e ci sei.
 
+Quando premi "Salva versione" a mano, si apre una finestra dove puoi attaccare una nota — "dopo la riunione", "bozza approvata dal cliente", quello che vuoi ricordare fra sei mesi:
+
+![Finestra Salva versione di Keeply: elenco dei file modificati + campo nota + pulsanti Annulla / Salva versione](save-dialog.svg)
+
 Non salva il Google Doc di qualcun altro. Non salva le impostazioni delle app del tuo computer. Salva solo **come ogni file sul tuo computer cambia nel tempo**.
 
 ![Zoom sulla Timeline di Keeply: più cambiamenti su un file, ognuno mostra orario + righe modificate](image-1.svg)
@@ -98,6 +102,10 @@ Hanno una cronologia delle versioni. Ma in genere **conservano solo 30 giorni**.
 
 Se il tuo bisogno è "voglio l'ultima copia su ogni computer che uso", quello è il loro lavoro. Ma per la versione di 3 mesi fa, di solito il cloud non ce l'ha più.
 
+Keeply sì — quella bozza di 3 mesi fa è ancora lì nel pannello cronologia file, con la nota che hai scritto al momento del salvataggio:
+
+![Pannello cronologia file di Keeply per proposta.docx: 6 versioni da 12 settimane fa a oggi, ognuna con una nota + indicatore conservazione locale](file-history.svg)
+
 ---
 
 ## Quanti te ne servono? {#how-many-do-you-need}
@@ -111,6 +119,10 @@ Se il tuo bisogno è "voglio l'ultima copia su ogni computer che uso", quello è
 In pratica, **usarli tutti e tre è la configurazione più completa**.
 
 Keeply copre la cronologia storica di ogni file. Il backup copre l'istantanea dell'intero computer. Il cloud copre la sincronizzazione tra dispositivi. Tre lavori che si completano a vicenda, non si combattono.
+
+Ecco com'è fatta la Timeline di un singolo file su qualche mese — i salvataggi manuali con nota stanno accanto alle versioni automatiche in background:
+
+![Timeline di Keeply per proposta.docx: 4 versioni di cui 2 salvataggi manuali con nota](timeline.svg)
 
 Se puoi sceglierne solo uno, **guarda quale scenario incontri più spesso**: vuoi spesso ritrovare vecchie versioni? Keeply. Ti preoccupa un disco morto? Backup. Lavori su più computer? Cloud.
 

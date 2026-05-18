@@ -64,6 +64,10 @@ Keeply saves **every change to every file**.
 
 You edit `proposal.docx` twice today, you save it twice. The Timeline shows two file notes. You want to go back to the version from your first save? Click that entry. 30 seconds and you're there.
 
+When you hit "Save version" manually, a dialog pops up so you can attach a note — "after the meeting," "client-approved draft," whatever you want to remember six months from now:
+
+![Keeply save-version dialog: changed-files list + note field + Cancel/Save Version buttons](save-dialog.svg)
+
 It doesn't save someone else's Google Doc. It doesn't save your computer's app settings. It only saves **how every file on your computer changes over time**.
 
 ![Keeply Timeline zoom: multiple changes to one file, each showing time + lines changed](image-1.svg)
@@ -98,6 +102,10 @@ They do have version history. But they typically **only keep 30 days**, Dropbox'
 
 If your need is "I want the latest copy on every computer I use," that's their job. But for the version from 3 months ago, the cloud usually no longer has it.
 
+Keeply does — that 3-month-old draft is still sitting in the file history panel, with the note you wrote when you saved it:
+
+![Keeply file history panel for proposal.docx: 6 versions from 12 weeks ago through today, each with a note + local-retention marker](file-history.svg)
+
 ---
 
 ## How many do you need? {#how-many-do-you-need}
@@ -111,6 +119,10 @@ If your need is "I want the latest copy on every computer I use," that's their j
 In practice, **using all three is the most complete setup**.
 
 Keeply covers the history timeline of every file. Backup covers the snapshot of the whole computer. Cloud covers cross-device sync. Three jobs that complement each other, not compete.
+
+This is what the Timeline looks like for one file across a few months — manual saves with notes sit alongside the automatic background versions:
+
+![Keeply Timeline for proposal.docx: 4 versions including 2 manual saves with notes](timeline.svg)
 
 If you can only pick one, **look at which scenario you hit most often**: you often want to find old versions? Keeply. You're worried about a dead drive? Backup. You work across multiple computers? Cloud.
 
