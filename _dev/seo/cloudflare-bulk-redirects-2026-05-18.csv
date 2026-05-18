@@ -1,0 +1,26 @@
+URL,Target URL,Status,Preserve query string,Include subdomains,Subpath matching,Preserve path suffix
+https://blog.keeply.work/ar/tags/index.xml,https://blog.keeply.work/ar/,301,false,false,false,false
+https://blog.keeply.work/en/tags/excel/,https://blog.keeply.work/en/,301,false,false,false,false
+https://blog.keeply.work/en/tags/thesis-writing/index.xml,https://blog.keeply.work/en/,301,false,false,false,false
+https://blog.keeply.work/hi/tags/cloud-comparison/index.xml,https://blog.keeply.work/hi/,301,false,false,false,false
+https://blog.keeply.work/it/tags/ai-coding/index.xml,https://blog.keeply.work/it/,301,false,false,false,false
+https://blog.keeply.work/it/tags/backup-file/,https://blog.keeply.work/it/,301,false,false,false,false
+https://blog.keeply.work/it/tags/excel/,https://blog.keeply.work/it/,301,false,false,false,false
+https://blog.keeply.work/ko/tags/vibe-coding/index.xml,https://blog.keeply.work/ko/,301,false,false,false,false
+https://blog.keeply.work/ko/tags/%ED%98%91%EC%97%85/index.xml,https://blog.keeply.work/ko/,301,false,false,false,false
+https://blog.keeply.work/pt/categories/gerenciamento-de-arquivos/,https://blog.keeply.work/pt/,301,false,false,false,false
+https://blog.keeply.work/zh-cn/categories/keeply-%E5%85%A5%E9%97%A8/,https://blog.keeply.work/zh-cn/,301,false,false,false,false
+https://blog.keeply.work/zh-cn/categories/%E5%A4%87%E4%BB%BD%E7%AD%96%E7%95%A5/index.xml,https://blog.keeply.work/zh-cn/,301,false,false,false,false
+https://blog.keeply.work/zh-cn/categories/%E6%96%87%E4%BB%B6%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/,https://blog.keeply.work/zh-cn/,301,false,false,false,false
+https://blog.keeply.work/zh-cn/tags/3-2-1-%E5%A4%87%E4%BB%BD/index.xml,https://blog.keeply.work/zh-cn/,301,false,false,false,false
+https://blog.keeply.work/zh-cn/tags/cmd%2Bs/,https://blog.keeply.work/zh-cn/,301,false,false,false,false
+https://blog.keeply.work/zh-cn/tags/nas/,https://blog.keeply.work/zh-cn/,301,false,false,false,false
+https://blog.keeply.work/zh-cn/tags/winget/,https://blog.keeply.work/zh-cn/,301,false,false,false,false
+https://blog.keeply.work/zh-cn/tags/%E5%8D%8F%E4%BD%9C/,https://blog.keeply.work/zh-cn/,301,false,false,false,false
+https://blog.keeply.work/zh-cn/tags/%E6%95%91%E5%9B%9E%E6%96%87%E4%BB%B6/,https://blog.keeply.work/zh-cn/,301,false,false,false,false
+https://blog.keeply.work/zh-cn/tags/%E6%96%87%E4%BB%B6%E5%A4%87%E4%BB%BD/index.xml,https://blog.keeply.work/zh-cn/,301,false,false,false,false
+https://blog.keeply.work/zh-cn/tags/%E6%96%87%E4%BB%B6%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/,https://blog.keeply.work/zh-cn/,301,false,false,false,false
+https://blog.keeply.work/zh-cn/tags/%E7%9F%A5%E8%AF%86%E5%B7%A5%E4%BD%9C%E8%80%85/,https://blog.keeply.work/zh-cn/,301,false,false,false,false
+https://blog.keeply.work/zh-tw/tags/vibe-coding/index.xml,https://blog.keeply.work/zh-tw/,301,false,false,false,false
+https://blog.keeply.work/zh-tw/tags/%E5%85%A5%E9%96%80%E6%8C%87%E5%8D%97/,https://blog.keeply.work/zh-tw/,301,false,false,false,false
+https://blog.keeply.work/zh-tw/tags/%E5%B7%A5%E5%85%B7%E5%B7%AE%E7%95%B0/,https://blog.keeply.work/zh-tw/,301,false,false,false,false

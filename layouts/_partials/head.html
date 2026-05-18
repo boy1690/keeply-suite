@@ -76,7 +76,10 @@
 {{- if eq .Kind "taxonomy" -}}{{- $noindex = true -}}{{- end -}}
 {{- if eq .Kind "term" -}}{{- $noindex = true -}}{{- end -}}
 {{- if findRE "/page/[0-9]+/" .RelPermalink -}}{{- $noindex = true -}}{{- end -}}
-{{- if $noindex }}
+{{- $paramRobots := .Params.robots -}}
+{{- if $paramRobots }}
+<meta name="robots" content="{{ $paramRobots }}" />
+{{- else if $noindex }}
 {{- if $isAutoTranslate }}
 <meta name="robots" content="noindex,nofollow" />
 {{- else }}
