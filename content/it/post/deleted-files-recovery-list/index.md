@@ -103,6 +103,10 @@ Ieri
 🗑️ old-logo-export.png   ◀ 1 giorno fa   /assets/branding/
 ```
 
+Ecco come si presenta il pannello vero e proprio: ogni file mostra il percorso originale e un pulsante di ripristino subito accanto.
+
+![Pannello eliminati di recente Keeply: proposal_v7.psd / pricing-notes.docx / old-logo-export.png / client-brief-v2.pdf 4 file raggruppati per tempo, ognuno con percorso originale + pulsante ripristina](deleted-files-panel.svg)
+
 Non è uno strumento forense. È una lista con pulsanti di ripristino.
 
 Funziona dentro qualunque cartella aggiungi a Keeply — la tua cartella locale Dropbox, la cartella iCloud Drive, una directory di progetto su un NAS Synology, una cartella semplice sul portatile. Non migri; aggiungi la lista come strato sopra ciò che c'è già.

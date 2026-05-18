@@ -103,6 +103,10 @@ Keeply — 최근 삭제됨
 🗑️ old-logo-export.png   ◀ 1 일 전      /assets/branding/
 ```
 
+실제 패널의 모습은 이렇습니다. 각 파일마다 원래 경로와 복원 버튼이 바로 옆에 함께 보입니다.
+
+![Keeply 최근 삭제 패널: proposal_v7.psd / pricing-notes.docx / old-logo-export.png / client-brief-v2.pdf 4 개 파일을 시간별로 그룹화, 각각 원래 경로 + 복원 버튼 표시](deleted-files-panel.svg)
+
 포렌식 도구가 아닙니다. 복원 버튼이 달린 목록입니다.
 
 Keeply 에 추가한 어떤 폴더 안에서도 동작합니다 — 당신의 Dropbox 로컬 폴더、iCloud Drive 폴더、Synology NAS 의 프로젝트 디렉터리、노트북의 일반 폴더. 시스템을 바꾸는 게 아니라 목록을 한 계층으로 기존 시스템 위에 올리는 것입니다.

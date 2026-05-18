@@ -103,6 +103,10 @@ Yesterday
 🗑️ old-logo-export.png   ◀ 1 day ago     /assets/branding/
 ```
 
+Here's what it looks like in the actual panel: each file shows its original path and a restore button right next to it.
+
+![Keeply recently deleted panel: proposal_v7.psd / pricing-notes.docx / old-logo-export.png / client-brief-v2.pdf 4 files grouped by time, each showing original path + restore button](deleted-files-panel.svg)
+
 It isn't a forensic tool. It's a list with restore buttons.
 
 Works inside any folder you add to Keeply — your Dropbox local folder, your iCloud Drive folder, your project directory on a Synology NAS, a plain folder on your laptop. You don't migrate; you add the list as a layer above what's already there.

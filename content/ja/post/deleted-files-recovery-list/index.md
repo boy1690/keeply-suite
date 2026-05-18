@@ -103,6 +103,10 @@ Keeply — 最近削除
 🗑️ old-logo-export.png   ◀ 1 日前       /assets/branding/
 ```
 
+実際のパネルはこんな見え方になります。各ファイルに元のパスと復元ボタンが並んでいます。
+
+![Keeply 最近削除パネル：proposal_v7.psd / pricing-notes.docx / old-logo-export.png / client-brief-v2.pdf の 4 ファイルを時間でグループ化、それぞれ元のパス + 復元ボタン表示](deleted-files-panel.svg)
+
 フォレンジックツールではない。復元ボタン付きのリスト。
 
 Keeply に追加した任意のフォルダの中で動作します——Dropbox ローカルフォルダ、iCloud Drive フォルダ、Synology NAS のプロジェクトディレクトリ、ノート PC のプレーンなフォルダ。システムを乗り換えるのではなく、リストをレイヤーとして既存システムの上に重ねるだけです。
