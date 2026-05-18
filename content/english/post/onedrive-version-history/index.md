@@ -135,7 +135,11 @@ In [Keeply](https://keeply.work), three things land in one tool:
 - **Per-file note**: every version can carry a one-line note. Three months later, Tina scrolls the timeline and sees "CFO third-round edits," "Client signed," "Pre-board prep" — no need to dig through 12 `_FINAL` files trying to guess which is which.
 - **Cross-tool portability**: Keeply doesn't depend on OneDrive. Switch to Dropbox / NAS / a new laptop — the timeline still lives locally + in Keeply's own backup location. No cloud vendor's cap locks you in.
 
-OneDrive keeps doing what it's strong at (collaborative sync). Keeply gives you unlimited per-file version history.
+When the client email lands, Tina opens the Keeply timeline, finds the Feb 14 "Client signed v2.3" row, and right-clicks to restore — this dialog comes up:
+
+![Keeply restore-file dialog: restore proposal.docx to "Client signed v2.3 — 5/4"? Current version auto-snapshotted before restore, Undo available anytime](restore-file-dialog.svg)
+
+She clicks Restore. Three seconds and `proposal.docx` is back to its Feb state; the current version is auto-snapshotted, so Undo is always one click away. OneDrive keeps doing what it's strong at (collaborative sync). Keeply gives you unlimited per-file version history.
 
 ## 3 scenarios where you don't need Keeply with OneDrive {#when-not-needed}
 

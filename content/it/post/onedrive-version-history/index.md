@@ -135,7 +135,11 @@ In [Keeply](https://keeply.work), tre cose atterrano in un unico strumento:
 - **Nota per file**: ogni versione può portare una nota di una riga. Tre mesi dopo, Tina scorre la timeline e vede "CFO terza revisione", "Client signed", "Preparazione CdA" — nessun bisogno di scavare in 12 file `_FINAL` cercando di indovinare quale è quale.
 - **Portabilità tra strumenti**: Keeply non dipende da OneDrive. Passa a Dropbox / NAS / un nuovo laptop — la timeline vive ancora localmente + nella propria posizione di backup di Keeply. Nessun limite di vendor cloud ti blocca.
 
-OneDrive continua a fare ciò in cui è forte (sincronizzazione collaborativa). Keeply ti dà cronologia versioni illimitata per file.
+Quando arriva la mail del cliente, Tina apre la timeline di Keeply, trova la riga del 14 febbraio "Client signed v2.3" e fa clic destro per ripristinare — compare questa finestra:
+
+![Finestra di dialogo Keeply ripristino file: ripristinare proposal.docx alla "Client signed v2.3 — 5/4"? Versione corrente salvata automaticamente come snapshot prima del ripristino, Annulla disponibile in qualsiasi momento](restore-file-dialog.svg)
+
+Clicca "Ripristina". Tre secondi e `proposal.docx` torna allo stato di febbraio; la versione corrente è stata automaticamente catturata come snapshot, quindi l'Annulla è sempre a un clic. OneDrive continua a fare ciò in cui è forte (sincronizzazione collaborativa). Keeply ti dà cronologia versioni illimitata per file.
 
 ## 3 scenari in cui non hai bisogno di Keeply con OneDrive {#when-not-needed}
 

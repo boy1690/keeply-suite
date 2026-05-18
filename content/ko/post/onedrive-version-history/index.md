@@ -135,7 +135,11 @@ Tina의 `proposal.docx`가 500 상한에 도달했습니다. 고객이 갑자기
 - **파일별 노트**: 각 버전에 1-2줄의 노트를 작성할 수 있습니다. 3개월 후 Tina가 타임라인에서 "CFO 3차 수정", "고객 서명", "이사회 준비" 태그를 보면 — 12개의 `_FINAL` 파일 이름을 추측할 필요 없습니다.
 - **크로스 도구 이식성**: Keeply는 OneDrive에 의존하지 않습니다. Dropbox / NAS / 새 노트북으로 전환해도 — 타임라인은 로컬 + Keeply 자체 백업 위치에 남습니다. 어떤 클라우드 벤더의 상한도 당신을 가두지 않습니다.
 
-OneDrive는 잘하는 일(협업 동기화)을 계속하고, Keeply는 무제한 파일별 버전 기록을 제공합니다.
+고객 메일이 도착한 순간, Tina는 Keeply 타임라인을 열어 2월 14일 "Client signed v2.3" 행을 찾고 우클릭으로 복원 — 이런 대화 상자가 뜹니다:
+
+![Keeply 파일 복원 대화 상자: proposal.docx를 「Client signed v2.3 — 5/4」로 복원하시겠어요? 복원 전에 현재 버전을 자동 스냅샷, 언제든 Undo 가능](restore-file-dialog.svg)
+
+「복원」을 누른다. 3초 만에 `proposal.docx`는 2월 상태로 돌아가고, 현재 버전은 자동으로 스냅샷이 떠 있어서 Undo는 언제든지 한 번에 가능. OneDrive는 잘하는 일(협업 동기화)을 계속하고, Keeply는 무제한 파일별 버전 기록을 제공합니다.
 
 ## OneDrive에서 Keeply가 필요 없는 3가지 시나리오 {#when-not-needed}
 
