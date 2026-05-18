@@ -1,5 +1,5 @@
 ---
-title: "【2026 File management】Excel data vanished after lunch: the sheet was just empty, and 4 recovery layers all failed"
+title: "【2026 File management】How to recover Excel data lost after collaborative editing: 4 recovery layers and why they fail"
 description: "Opened the proposal Excel after lunch — the whole sheet was just gone. A colleague had deleted it during collaborative editing over the lunch break. A layer-by-layer forensic walk of why OneDrive sync, SharePoint version history, Time Machine, and recovery software all failed to bring it back."
 date: 2026-05-18T09:00:00+08:00
 slug: excel-data-vanished-postmortem

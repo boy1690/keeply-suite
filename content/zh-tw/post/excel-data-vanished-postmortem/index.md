@@ -1,5 +1,5 @@
 ---
-title: "【2026 檔案管理】消失的 Excel 資料：午休後 Sheet 整個空白，4 層救援為什麼都救不回"
+title: "【2026 檔案管理】共同編輯後消失的 Excel 資料怎麼救回：4 層方法與救不回的真相"
 description: "午休後打開提案的 Excel，整個 Sheet 不見了 — 同事中午共編時誤刪。逐層拆解 OneDrive 同步、SharePoint 版本歷史、Time Machine、還原軟體 4 層救援為什麼一個都救不回。"
 date: 2026-05-18T09:00:00+08:00
 slug: excel-data-vanished-postmortem

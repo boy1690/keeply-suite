@@ -1,5 +1,5 @@
 ---
-title: "【2026 파일 관리】사라진 Excel 데이터: 점심시간 끝나니 Sheet가 통째로 비어 있었다, 4개 복구 계층이 모두 실패한 이유"
+title: "【2026 파일 관리】공동 편집 후 사라진 Excel 데이터를 복구하는 방법과 4개 계층의 한계"
 description: "점심시간 끝나고 제안용 Excel을 열었더니 Sheet 하나가 통째로 비어 있었다 — 동료가 점심 시간 공동 편집 중 실수로 삭제. OneDrive 동기화, SharePoint 버전 기록, Time Machine, 복구 소프트웨어 4개 계층이 모두 실패한 이유를 분 단위로 검증한 사고 보고서."
 date: 2026-05-18T09:00:00+08:00
 slug: excel-data-vanished-postmortem
