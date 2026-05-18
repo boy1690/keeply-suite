@@ -150,6 +150,12 @@ There isn't much to do. Four things:
 
 **3. Let a tool keep every version for you.** This is exactly where steps 1 and 2 fall short, and where the tool steps in. [Keeply](https://keeply.work) is built for this. Every save, the system quietly keeps a version. Files stay in your existing folder — no moves, no switching tools. The **diff view** lets you see word-by-word what changed between v5 and v6. When your advisor asks, you can pull it up in two clicks.
 
+Open the version-history panel on `thesis_v3.docx` and you see four months of edits, one round of advisor feedback after another, stacked in order:
+
+![Keeply per-file version history panel: thesis_v3.docx, 47 versions across 4 months — from February's first hand-off to the advisor through May's rewrite after the third round of feedback, each row carrying a note](file-history.svg)
+
+The green line at the bottom — "47 versions · all preserved" — is the biggest gap between Keeply and Word's built-in version history. With Word, every Ctrl+S after a sentence change becomes a new version, and 47 across four months is normal; Word holds at most [25 versions](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits) (personal account), and once you go past, the oldest get pruned. With Keeply, any of the 47 rows is still a click away.
+
 **4. Keep at least one copy off this laptop.** Cloud, external drive, USB stick — any of them. The point is it **isn't on this computer**. Laptops get stolen at coffee shops. SSDs die. Coffee gets spilled into keyboards. Every year these happen to some grad student somewhere. Offsite backup is the cheapest insurance you'll ever buy yourself.
 
 ---

@@ -150,6 +150,12 @@ Le cose da fare non sono molte. Quattro:
 
 **3. Lascia che lo strumento ricordi ogni versione.** Esattamente dove i passi 1 e 2 cadono, e dove lo strumento subentra. [Keeply](https://keeply.work) è costruito per questo. A ogni salvataggio, il sistema tiene silenziosamente una versione. I file restano nella tua cartella attuale — niente migrazione, niente cambio di strumento. La **vista delle differenze** ti permette di vedere parola per parola cosa è cambiato tra v5 e v6. Quando il relatore chiede, lo apri in due clic.
 
+Apri il pannello cronologia versioni su `thesis_v3.docx` e vedi quattro mesi di modifiche, un giro di feedback del relatore dopo l'altro, impilati in ordine:
+
+![Pannello cronologia versioni per file di Keeply: thesis_v3.docx, 47 versioni in 4 mesi — dalla prima consegna al relatore di febbraio fino alla riscrittura di maggio dopo il terzo giro di feedback, ogni riga con una nota](file-history.svg)
+
+La riga verde in basso — "47 versioni · tutte conservate" — è la differenza più grande tra Keeply e la cronologia versioni integrata di Word. Con Word, ogni Ctrl+S dopo aver cambiato una frase diventa una nuova versione, e 47 in quattro mesi è normale; Word ne tiene al massimo [25](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits) (account personale), oltre quella soglia le più vecchie vengono cancellate. Con Keeply, una qualsiasi delle 47 righe è a un clic di distanza.
+
 **4. Tieni almeno una copia fuori da questo portatile.** Cloud, disco esterno, chiavetta USB — qualsiasi. Il punto è che **non sia su questo computer**. I portatili vengono rubati nei bar. Gli SSD muoiono. Il caffè finisce in tastiera. Ogni anno succede a qualche dottorando da qualche parte. Il backup fuori sede è l'assicurazione più economica che ti puoi comprare.
 
 ---
