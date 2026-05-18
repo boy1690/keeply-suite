@@ -31,7 +31,7 @@ What actually happened:
 - **Today 12:46–14:32** — For 1 hour 46 minutes, the file existed in the cloud as "Sales Records sheet, gone."
 - **Today 14:32** — Sarah opened the file; cloud state (sheet deleted) was applied.
 
-Why didn't Excel warn him? Office 365 co-authoring uses last-writer-wins commit semantics for sheet-level deletes ([Microsoft Learn: Co-authoring in Office](https://learn.microsoft.com/en-us/office365/servicedescriptions/office-online-service-description/sharing-and-collaboration)). Sheet deletion counts as "normal editing"; no confirmation dialog.
+Why didn't Excel warn her? Office 365 co-authoring uses last-writer-wins commit semantics for sheet-level deletes ([Microsoft Learn: Co-authoring in Office](https://learn.microsoft.com/en-us/office365/servicedescriptions/office-online-service-description/sharing-and-collaboration)). Sheet deletion counts as "normal editing"; no confirmation dialog.
 
 But that's just the surface symptom.
 
@@ -41,6 +41,8 @@ But that's just the surface symptom.
 
 The OneDrive sync mark means "your local file matches the cloud." It does not mean "your data is intact." Mike deleted the sheet at 12:46:03, the deletion was pushed to the cloud, Sarah's PC (in the office, hadn't been turned on until afternoon) was waiting to sync. The moment Sarah opened the file at 14:32, OneDrive sync pulled the cloud state and overwrote the local file with the "sheet deleted" version. Green check: success.
 
+![Mock UI OneDrive sync popup: green check + "All up to date" + yellow warning "Synced ≠ Your data is safe"](onedrive-sync-popup.svg)
+
 "Synced" does not equal "your work is safe." In a collaborative editing context, other people's deletes also sync.
 
 ## Why SharePoint version history restore still leaves `#REF!`
@@ -49,9 +51,13 @@ The OneDrive sync mark means "your local file matches the cloud." It does not me
 
 She clicked "Restore v7."
 
+![Mock UI SharePoint Version History list: v8 Mike delete (red) / v7 Sarah Restore button (blue) / v6 / v5 past versions](sharepoint-version-history.svg)
+
 A few seconds. The file re-downloaded. She checked "Sales Records" — 250 rows back. Relief.
 
-Then he checked "Quotes." All `#REF!`. The reason: v7 restored the whole workbook, but at v7's point in time, the "Quotes" sheet formulas referenced cells in "Sales Records" as they were in v6. Formulas pointing to the sheet that v8 deleted still return `#REF!` even after restoring v7. SharePoint version history is a workbook-level snapshot, not per-sheet diff ([SharePoint version history limits](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits)). It records "sheet deletion" as a major version event, but it doesn't roll back the cascading formula damage from the deleted sheet.
+Then she checked "Quotes." All `#REF!`. The reason: v7 restored the whole workbook, but at v7's point in time, the "Quotes" sheet formulas referenced cells in "Sales Records" as they were in v6. Formulas pointing to the sheet that v8 deleted still return `#REF!` even after restoring v7. SharePoint version history is a workbook-level snapshot, not per-sheet diff ([SharePoint version history limits](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits)). It records "sheet deletion" as a major version event, but it doesn't roll back the cascading formula damage from the deleted sheet.
+
+![Mock UI Excel #REF! cell grid: columns B-D all #REF! / column A client names intact / formula bar shows reference to deleted Sheet](excel-ref-error-grid.svg)
 
 **Manual cascade-formula repair steps after restore**:
 
