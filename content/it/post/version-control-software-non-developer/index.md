@@ -68,6 +68,12 @@ Non è che la tecnologia non si possa applicare. È che le assunzioni di design 
 
 Quello che i non-sviluppatori servono davvero è **un controllo versione progettato per loro dal primo giorno**, non strumenti da ingegnere con una palette di colori diversa. Keeply prende questa strada: non presume che tu conosca git, non ti insegna git, progetta la cronologia versioni dalla prospettiva del livello file da zero.
 
+Persino l'unico strato che gli strumenti da ingegnere ti costringono a imparare — `git stash` — qui viene saltato. Quando hai modificato questo progetto senza salvare una versione e provi a passare alla cartella di un altro cliente, Keeply ti ferma con una domanda in linguaggio quotidiano:
+
+![Finestra di modifiche non salvate Keeply: presentation.pptx ha 3 modifiche, con tre opzioni — salva una versione poi passa / passa senza salvare / annulla](unsaved-changes-dialog.svg)
+
+«Salva una versione, poi passa» è esattamente il `git stash` + `git checkout` che dovresti digitare nel mondo da ingegnere — ripiegato in due pulsanti in italiano corrente.
+
 È la parte fastidiosa. Atlassian, GitHub, Stack Overflow parlano tutti agli sviluppatori. Nessuno ha risposto alla domanda ovvia — come sarebbe un controllo versione se fosse stato costruito per i non-sviluppatori in primo luogo?
 
 ## Tre alternative per non-sviluppatori {#three-options}

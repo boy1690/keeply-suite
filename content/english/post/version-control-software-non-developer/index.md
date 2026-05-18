@@ -61,6 +61,12 @@ Write "Final version — client approved, no CLI", save the version. Three month
 
 No `git commit`, no `branch / merge / checkout`, no black-and-white terminal. Keeply uses a git engine underneath (the technology is fine), but the UI has zero engineer terminology — the interface uses everyday words like "Save version / History / Restore".
 
+Even the one layer that engineer tools force you to learn — `git stash` — gets skipped here. When you've been editing this project without saving a version and you try to jump to another client's folder, Keeply stops you with a plain-language question:
+
+![Keeply unsaved-changes dialog: presentation.pptx has 3 modifications, with three options — save a version then switch / switch without saving / cancel](unsaved-changes-dialog.svg)
+
+"Save a version, then switch" is exactly the `git stash` + `git checkout` you'd type in the engineer world — collapsed into two everyday buttons.
+
 Now let's unpack why Google doesn't surface this layer for you, and why traditional tools don't meet non-developer needs.
 
 ---
