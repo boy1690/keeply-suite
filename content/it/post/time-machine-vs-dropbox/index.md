@@ -112,6 +112,12 @@ Keeply — martedì pomeriggio di due mesi fa
 
 Quel marker ★ è quello che ti restituisce il «salvataggio deliberato di martedì pomeriggio» — sopravvive al limite di 30 giorni di Dropbox, alla diluizione oraria di Time Machine, e al tuo stesso dimenticare quale data esatta fosse.
 
+Il terzo asse copre anche i «file eliminati di recente» con un proprio pannello — file raggruppati per quando li hai cancellati, in un livello permanente che l'orologio dei 30 giorni non può divorare:
+
+![Pannello file eliminati di recente di Keeply: nomi file in stile Mac, raggruppati per oggi / ieri / questa settimana / prima, con un pulsante ripristina su ogni riga](deleted-files-panel.svg)
+
+Scegli il file, premi ripristina. Non devi riavvolgere prima l'intero disco per pescarne uno.
+
 ## Time Machine e Dropbox restano importanti
 
 Questo non è un argomento per sostituire uno dei due.

@@ -112,6 +112,12 @@ Keeply — Tuesday afternoon two months ago
 
 That ★ marker is what gives you back the "deliberate save Tuesday afternoon" — it survives the 30-day Dropbox cap, the Time Machine hourly thinning, and your own forgetting which exact date it was.
 
+The third axis also covers "recently dropped files" with its own panel — files grouped by when you deleted them, in a permanent layer the 30-day clock can't eat:
+
+![Keeply recently deleted files panel: Mac-style filenames, grouped by today / yesterday / this week / earlier, with a restore button on each row](deleted-files-panel.svg)
+
+Pick the file, hit restore. You don't have to first roll back the whole disk to fish out one file.
+
 ## Time Machine and Dropbox still matter
 
 This isn't an argument to replace either tool.
