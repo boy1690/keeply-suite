@@ -97,7 +97,11 @@ More than one tool is trying to fill the gap. Apple's Time Machine takes a swing
 
 What remains, Keeply tries to fill. The logic is simple: every Cmd+S on a PSD inside a Keeply folder, Keeply quietly preserves the exact version at that moment, separately from the live file — your current work isn't touched. Even the heaviest PSDs (the 500MB-single-file kind) get handled gracefully in the background; Keeply uses underlying large-file storage so your disk doesn't bloat. There's no save interval to configure, no "snapshot now" button to push — you work in Photoshop the way you always did, and it records every save behind you.
 
-When you realize you've overwritten the v2 the client wanted, you open the Keeply panel, scroll to "30 minutes ago," click restore — the previous version appears next to your current file as a separate file, your current work untouched. You compare the two visually, copy the v3 colors onto the restored v2, and that hour of redoing layer work compresses into 30 seconds of clicks.
+When you realize you've overwritten the v2 the client wanted, you open Keeply, scroll to the "client-confirmed version" row, and click restore. The dialog looks like this:
+
+![Keeply revert dialog: restore campaign_v2.psd to the client-confirmed version, edits after 5/14 14:30 are saved as a new version](revert-dialog.svg)
+
+Notice the line under the red "Restore this version" button — anything you edited after 5/14 14:30 won't be wiped, it's saved as a new version. Old and new both live in the timeline, nothing gets lost. You compare the two visually, copy the v3 colors onto the restored v2, and that hour of redoing layer work compresses into 30 seconds of clicks.
 
 One more thing: Keeply runs alongside Adobe Creative Cloud, Time Machine, whatever cloud sync you already use — it doesn't replace any of them. It fills the one gap none of them address: persistent file-level version history for binary creative files, watched on every save.
 

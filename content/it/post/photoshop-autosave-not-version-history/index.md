@@ -97,7 +97,11 @@ C'è più di uno strumento che prova a riempire il vuoto. Apple Time Machine ci 
 
 Ciò che rimane, Keeply prova a riempirlo. La logica è semplice: ogni Cmd+S su un PSD dentro una cartella Keeply, Keeply preserva silenziosamente la versione esatta in quel momento, separatamente dal file vivo — il tuo lavoro attuale non viene toccato. Anche i PSD più pesanti (quelli da 500MB in un singolo file) vengono gestiti con grazia in background; Keeply usa una memorizzazione sottostante per file grandi che non gonfia il disco. Non c'è intervallo di salvataggio da configurare, nessun pulsante "snapshot ora" da premere — lavori in Photoshop come hai sempre fatto, e lui registra ogni salvataggio dietro di te.
 
-Quando ti accorgi di aver sovrascritto la v2 che il cliente voleva, apri il pannello Keeply, scorri a "30 minuti fa," clicca ripristina — la versione precedente appare accanto al tuo file attuale come file separato, il tuo lavoro attuale intatto. Confronti visivamente le due, copi i colori della v3 sulla v2 ripristinata, e quell'ora di rifacimento di livelli si comprime in 30 secondi di click.
+Quando ti accorgi di aver sovrascritto la v2 che il cliente voleva, apri Keeply, scorri fino alla riga "versione confermata dal cliente" e clicchi ripristina. La finestra che esce è questa:
+
+![Finestra di dialogo Keeply ripristino: riporta campaign_v2.psd alla versione confermata dal cliente, le modifiche dopo il 14/5 14:30 vengono salvate come nuova versione](revert-dialog.svg)
+
+Nota la riga sotto il pulsante rosso "Ripristina questa versione" — tutto quello che hai modificato dopo il 14/5 14:30 non viene cancellato, viene salvato come nuova versione. Vecchia e nuova rimangono entrambe nella timeline, non perdi nulla. Confronti visivamente le due, copi i colori della v3 sulla v2 ripristinata, e quell'ora di rifacimento di livelli si comprime in 30 secondi di click.
 
 Un'altra cosa: Keeply funziona insieme ad Adobe Creative Cloud, Time Machine, qualsiasi sincronizzazione cloud che già usi — non sostituisce nessuna di queste. Riempie l'unico vuoto che nessuna di loro affronta: cronologia delle versioni a livello di file persistente per file creativi binari, osservata a ogni salvataggio.
 
