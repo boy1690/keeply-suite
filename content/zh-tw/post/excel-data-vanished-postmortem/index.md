@@ -1,6 +1,6 @@
 ---
-title: "【2026 檔案管理】消失的 Excel 資料：星期二 14:32，共同編輯吃掉的 Sheet 怎麼從 4 層救援"
-description: "星期二 14:32，提案資料的 Sheet 在共同編輯中消失。秒級檢驗 OneDrive、SharePoint 版本歷史、Time Machine、還原軟體 4 層救援的事故報告書。"
+title: "【2026 檔案管理】Excel 共編誤刪 Sheet：14:32 那個下午，4 層救援為什麼一個都救不回"
+description: "星期二 14:32，提案的 Excel 開啟發現整個 Sheet 不見了 — 同事中午共編時誤刪。秒級檢驗 OneDrive 同步、SharePoint 版本歷史、Time Machine、還原軟體 4 層救援為什麼一個都救不回的事故報告書。"
 date: 2026-05-18T09:00:00+08:00
 slug: excel-data-vanished-postmortem
 tags: ["檔案還原", "操作失誤", "雲端同步", "工具比較"]
