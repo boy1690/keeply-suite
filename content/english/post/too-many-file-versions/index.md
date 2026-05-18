@@ -103,6 +103,12 @@ Three design patterns the tool can use. Each one solves one of the four pain typ
 
 You press Cmd+S, the tool quietly preserves the previous version. You don't have to name anything. **Examples**: macOS Time Machine (Apple's built-in tool that snapshots every hour), Word AutoSave ([only goes back 1-2 versions](/en/post/excel-version-history-limits/)), Dropbox 30-day version history. **Keeply** runs this in the background on your working folder: text files only store what changed, design and image files each keep a full snapshot — so large files don't blow out your disk. **Solves Type 1.**
 
+How do you find one of those quiet checkpoints later? Hover over any row in the timeline and Keeply pops up a card showing exactly which files changed in that save — no need to open anything to compare:
+
+![Keeply version detail popover: "Client signed — 5/4 confirmed by owner" + proposal.docx modified + pricing_revised.xlsx added + pricing_v2_draft.xlsx deleted](version-detail-popover.svg)
+
+Click in for the full diff, or right-click to restore. No more naming files `_v3_FINAL_v2_final.docx` to mark which version was which.
+
 ### Design B: Named milestones (you mark "client signed" or "shipped")
 
 You actively flag "this version got signed" or "this version went live" — from then on, no matter how the file changes, the milestone stays put. **Example**: GitHub Releases (a feature engineers use to freeze a code snapshot as a named milestone — developer-only territory). **Keeply** has a "Release" feature that does the same job without you having to learn any developer terminology: pick a version from history, click "Save version" with a note like "Client-approved v2.3," and that version stays recoverable forever (this is the dialog you saw above). **Solves Type 2.**

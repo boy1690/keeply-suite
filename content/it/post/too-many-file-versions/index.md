@@ -76,6 +76,12 @@ Tre pattern di design che lo strumento può usare. Ognuno risolve uno dei quattr
 
 Premi Cmd+S, lo strumento conserva silenziosamente la versione precedente. Non devi nominare niente. **Esempi**: macOS Time Machine (lo strumento integrato di Apple che fa snapshot ogni ora), Word AutoSave (torna indietro solo di 1-2 versioni), Dropbox cronologia versioni 30 giorni. **Keeply** fa questo in background sulla tua cartella di lavoro: i file di testo memorizzano solo cosa è cambiato, mentre file di design e immagini conservano per intero ogni snapshot — così i file grandi non saturano il disco. **Risolve Tipo 1.**
 
+E come ritrovi uno di quei checkpoint silenziosi più tardi? Passa il mouse su una riga qualsiasi della timeline e Keeply mostra una scheda fluttuante con i file cambiati in quel salvataggio — non devi aprire niente per confrontarli:
+
+![Popover dettagli versione Keeply: "Versione firmata cliente — confermata dal committente il 5/4" + proposal.docx modificato + pricing_revised.xlsx aggiunto + pricing_v2_draft.xlsx eliminato](version-detail-popover.svg)
+
+Clicca per aprire il diff completo o tasto destro per ripristinare direttamente. Niente più nomi tipo `_v3_FINALE_v2_definitivo.docx` per ricordare quale versione è quale.
+
 ### Design B: Milestone nominati (segni tu "cliente firmato" o "rilasciato")
 
 Marchi attivamente "questa versione è firmata" o "questa versione è andata in produzione", da quel momento, qualunque cosa cambi, il milestone resta. **Esempio**: GitHub Releases (una funzione che gli ingegneri usano per congelare uno snapshot di codice come milestone nominato — territorio per soli sviluppatori). **Keeply** ha una funzione "Release" che fa lo stesso lavoro senza che tu debba imparare terminologia da sviluppatore: prendi una versione dalla cronologia, clicca "congela come release", e quella versione resta recuperabile per sempre. **Risolve Tipo 2.**
