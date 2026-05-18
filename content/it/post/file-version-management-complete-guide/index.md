@@ -125,6 +125,12 @@ Ecco dove la maggior parte delle persone sbaglia.
 
 **Il backup ti dà la prima cosa. La gestione ti dà la seconda.**
 
+Un esempio concreto. Quando la cronologia versioni dice solo "proposal.docx modificato", il timestamp da solo non ti dice nulla. Apri le due versioni affiancate:
+
+![Confronto versioni Keeply: proposal.docx Sezione 3 L42 canone annuo passato da NT$ 720.000 a NT$ 855.000, con nota "il cliente ha chiesto l'SLA"; nuovo sla_addendum_v2.docx aggiunto nello stesso momento](diff-viewer.svg)
+
+L42 canone annuo 720.000 → 855.000, con "il cliente ha chiesto l'SLA" scritto a fianco, e un nuovo `sla_addendum_v2.docx` comparso nello stesso momento — tre secondi e sai perché questa versione è salita di prezzo. La gestione delle versioni non è un confronto a posteriori, è scrivere la decisione nel momento in cui la prendi.
+
 Quindi cominci a stipare l'intenzione nei nomi dei file: `contratto_v7_su_richiesta_cliente_clausola3.docx`. Il nome del file esaurisce lo spazio. Apri un foglio di calcolo. Il foglio di calcolo non ce la fa. Apri un canale Slack. **Alla fine il tuo "sistema di gestione versioni" è nomi di file + un foglio di calcolo + Slack + la tua memoria.** Un pezzo qualsiasi fallisce, tutto va storto. Tre mesi dopo, apri i tuoi archivi e le tue vecchie abitudini non corrispondono a quelle attuali. Eh?
 
 ---

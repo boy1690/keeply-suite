@@ -131,6 +131,12 @@ Here's where most people get it wrong.
 
 **Backup gives you the first. Management gives you the second.**
 
+Here's a concrete example. When the version history just says "proposal.docx changed," the timestamp alone tells you nothing. Open the two versions side by side:
+
+![Keeply version compare: proposal.docx Section 3 L42 annual fee changed from NT$ 720,000 to NT$ 855,000, with note "client asked for SLA"; new sla_addendum_v2.docx added at the same time](diff-viewer.svg)
+
+L42 annual fee 720,000 → 855,000, with "client asked for SLA" written next to it, and an extra `sla_addendum_v2.docx` showing up at the same time — three seconds and you know why this version jumped in price. Version management isn't post-hoc comparison, it's writing the decision down at the moment of decision.
+
 So you start cramming intent into filenames: `contract_v7_per_client_request_clause3.docx`.
 The filename runs out of room. You open a spreadsheet. The spreadsheet can't keep up. You start a Slack channel.
 **Eventually your "version management system" is filenames + a spreadsheet + Slack + your memory**. Any one piece fails, the whole thing tilts.
