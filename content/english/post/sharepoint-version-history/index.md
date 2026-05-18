@@ -145,6 +145,12 @@ James's situation: 5-person team + SP storage tight + wants cleanup but afraid o
 
 SP keeps doing team collaboration sync + storage compressed to 100, Keeply gives unlimited per-file version history + important version freeze. **Two parallel tools, each doing what it does best.**
 
+Another move that comes up often in 5-person collaboration: a colleague has edited the same `proposal.docx` on SP, and you want to apply their version on top of your locally edited copy. Keeply's "apply colleague's version" dialog looks like this:
+
+![Keeply apply-colleague-version dialog: pulling alice's board-feedback version of the Q2 quote from SP into the local proposal.docx](cherry-pick-dialog.svg)
+
+Note the blue hint line — your local edits after 09:00 aren't overwritten, they're saved as a separate version, both kept in the history. No more emailing "latest_version.docx" back and forth, no fear of clobbering your own edits with the wrong copy.
+
 ## 3 scenarios where you don't need Keeply with SharePoint {#when-not-needed}
 
 Honest list:

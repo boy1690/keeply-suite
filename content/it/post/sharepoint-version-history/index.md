@@ -128,6 +128,12 @@ La situazione di James: team di 5 + storage SP stretto + vuole pulizia ma teme d
 
 SP continua a fare sincronizzazione collaborativa + storage compresso a 100, Keeply offre cronologia versioni illimitata per file + blocco versioni importanti.
 
+Un'altra mossa che spunta spesso nella collaborazione a 5: un collega ha modificato lo stesso `proposal.docx` su SP e tu vuoi applicare la sua versione sopra alla tua copia modificata in locale. La finestra "applica versione del collega" di Keeply appare così:
+
+![Finestra Keeply applica versione collega: porta la versione del preventivo Q2 con feedback del consiglio (modificata da alice su SP) nel proposal.docx locale](cherry-pick-dialog.svg)
+
+Nota la riga blu di suggerimento — le tue modifiche locali dopo le 09:00 non vengono sovrascritte, vengono salvate come versione separata e restano entrambe nella cronologia. Niente più "ultima_versione.docx" che gira via email, niente paura di schiacciare le tue modifiche con la copia sbagliata.
+
 ## 3 scenari in cui non hai bisogno di Keeply con SharePoint {#when-not-needed}
 
 **Archivio conformità aziendale**. SOX, HIPAA, GDPR — usa [Microsoft 365 Backup](https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-backup) / Veeam / Acronis.
