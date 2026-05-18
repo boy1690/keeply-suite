@@ -124,7 +124,11 @@ He wrote "Client-approved v2.3 — signed contract version" as the note, saved t
 
 ![Keeply timeline proposal.psd: 3-month-old signed-contract Release version + last week's working version](timeline.svg)
 
-"Client-approved v2.3 — signed contract version" gets its own row with his note. One click opens the exact version the client saw three months ago. No digging through 12 `_FINAL` files trying to guess which is which.
+"Client-approved v2.3 — signed contract version" gets its own row with his note. One click opens the exact version the client saw three months ago. No digging through 12 `_FINAL` files trying to guess which is which. Click to restore and Keeply prompts him first:
+
+![Keeply restore file dialog: proposal.psd restoring to Feb 14 signed-contract version + "A snapshot of the current version will be created before restore" notice](restore-file-dialog.svg)
+
+Before he hits "Restore", Keeply auto-saves the current state as a fresh snapshot — so even if he picked the wrong version, he can Undo right back. That "restore is itself versioned" layer means he doesn't have to triple-check before clicking. Any of the three 3-2-1 locations can be the restore source, all the same.
 
 And there's the Release freeze layer — when he hit "Save version" on Feb 14 and labeled it "Client-approved v2.3 — signed contract version," that version got frozen into a separate snapshot that later saves can't overwrite. Three months later, even if he's saved over the working copy a hundred times, the Release snapshot stays put.
 

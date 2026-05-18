@@ -104,6 +104,12 @@ Sì. [Keeply](https://keeply.work) integra la 3-2-1 nello strato di posizione:
 
 Aggiungi cronologia versioni automatica a ogni salvataggio, più un meccanismo di "Release" — uno snapshot che puoi marcare come "questa versione è andata al cliente" e che i salvataggi successivi non possono sovrascrivere. Uno strumento, tre livelli di protezione.
 
+Tre mesi dopo, quando il cliente ti chiede "mandami la versione che ho approvato il 14 febbraio", basta selezionare quella versione dalla timeline e premere "Ripristina":
+
+![Dialog di ripristino file Keeply: proposal.psd ripristinato alla versione firmata del 14 febbraio + avviso "verrà creato uno snapshot della versione attuale prima del ripristino"](restore-file-dialog.svg)
+
+Prima che tu prema "Ripristina", Keeply salva automaticamente lo stato attuale come nuovo snapshot — così, anche se hai scelto la versione sbagliata, puoi tornare indietro immediatamente. Questo strato "anche il ripristino è versionato" ti evita di dover ricontrollare tre volte prima di cliccare. Qualsiasi delle tre posizioni 3-2-1 può fare da sorgente di ripristino.
+
 Keeply non decide dove va la posizione di backup. Se tieni il computer e il backup nello stesso ufficio, un incendio prende entrambi. Nessuno strumento risolve questo. Il principio "fuori sede" rimane responsabilità tua.
 
 Ma non hai bisogno di due strumenti separati: uno per la ridondanza spaziale e uno per la cronologia versioni. Un Keeply, dal portatile al backup, da questo secondo a settimana scorsa, tutto visibile e tutto recuperabile.
