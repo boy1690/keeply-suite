@@ -100,6 +100,14 @@ Se il tuo scenario di perdita comune è «ho fatto un salvataggio alle 14:47 ier
 
 [Keeply](https://keeply.work) gira localmente e cattura ogni Cmd+S come la sua versione, indipendentemente da pianificazione o connessione del drive. Le catture vivono col progetto, non su un drive esterno separato che potrebbe essere offline. Quando chiedi «bozza di ieri», Keeply cammina all'indietro tra i salvataggi, non tra snapshot pianificati, e restituisce quello che hai effettivamente fatto.
 
+Quando premi «Salva versione» a mano, si apre una finestra dove attacchi una nota di una riga — «dopo riunione» o «approvata dal cliente» — che riconoscerai davvero a distanza di mesi:
+
+![Finestra Salva versione di Keeply: elenco dei file modificati + campo nota + pulsanti Annulla / Salva versione](save-dialog.svg)
+
+La Timeline poi si presenta così — il salvataggio manuale con la nota sta sulla sua riga, accanto alle versioni automatiche in background, distribuite su due giorni:
+
+![Timeline di Keeply per meeting-notes.docx: storia versioni su due giorni + salvataggi manuali con nota](timeline.svg)
+
 ```
 Keeply timeline — meeting-notes.docx
 
@@ -116,6 +124,10 @@ Keeply timeline — meeting-notes.docx
 ```
 
 Ogni salvataggio è la sua riga. «Bozza di ieri» mappa a una riga specifica, non a una ricerca su calendario contro snapshot inaffidabili.
+
+Quando decidi di tornare indietro, non rimetti in dubbio il timestamp — clicchi la riga con la nota che hai scritto e ripristini direttamente. Keeply scatta uno snapshot automatico dello stato attuale prima dello scambio, quindi un click sbagliato si recupera comunque:
+
+![Finestra Ripristina versione di Keeply: ieri 15:42 + nota «dopo riunione» + rete di sicurezza snapshot + pulsante Ripristina](revert-dialog.svg)
 
 Keeply non è una sostituzione per File History. Tieni File History per quello che fa — backup folder continuo su drive esterno. Aggiungi Keeply per la granularità a livello di salvataggio. I due rispondono a forme di domanda diverse.
 

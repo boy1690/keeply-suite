@@ -100,6 +100,14 @@ If your common loss scenario is "I made a save at 2:47 PM yesterday and want exa
 
 [Keeply](https://keeply.work) runs locally and captures every Cmd+S as its own version, regardless of schedule or drive connection. The captures live with the project, not on a separate external drive that might be offline. When you ask for "yesterday's draft," Keeply walks back through saves, not through scheduled snapshots, and returns the one you actually made.
 
+When you hit "Save version" manually, a dialog opens so you can attach a one-line note — "after meeting" or "client-approved" — that you'll actually recognize months later:
+
+![Keeply save-version dialog: changed-files list + note field + Cancel / Save Version buttons](save-dialog.svg)
+
+The Timeline then looks like this — the manual save with the note sits on its own row, alongside the automatic background versions, across two days:
+
+![Keeply Timeline for meeting-notes.docx: cross-day version history + manual saves with notes](timeline.svg)
+
 ```
 Keeply timeline — meeting-notes.docx
 
@@ -116,6 +124,10 @@ May 12 — Monday
 ```
 
 Each save is its own line. "Yesterday's draft" maps to a specific line, not a calendar lookup against unreliable snapshots.
+
+When you decide to roll back, you don't re-guess a timestamp — you click the row with the note you wrote and revert directly. Keeply takes an auto-snapshot of the current state first, so a misclick is still recoverable:
+
+![Keeply Revert dialog: yesterday 15:42 + note "after meeting" + rescue snapshot safety net + Revert button](revert-dialog.svg)
 
 Keeply isn't a replacement for File History. Keep File History for what it does — continuous folder backup to external drive. Add Keeply for the save-level granularity. The two answer different question shapes.
 
