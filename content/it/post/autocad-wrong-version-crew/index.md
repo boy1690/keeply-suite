@@ -110,6 +110,12 @@ Sul lato squadra, costruiscono da quello che hai consegnato loro l'ultima volta.
 
 Di quei tre fili, **quello tra ufficio e cantiere è il più facile da perdere**. Non perché qualcuno stia scansando il lavoro. Perché nessun processo costringe quella linea a restare aperta. Un messaggio "nuova versione caricata" in un thread di gruppo che viene perso, è perso per sempre.
 
+Quello che Keeply ti permette di fare qui è confrontare direttamente due disegni — senza aprire due finestre AutoCAD e controllare layer per layer a occhio:
+
+![Diff disegni Keeply: A-05_scolo.dwg v3 emesso per costruzione vs v5 ultima versione, specifica copertura cambiata da 12mm a 15mm + passo armature da 200mm a 150mm](diff-viewer.svg)
+
+Selezioni v3 e v5, e Keeply elenca quali layer sono cambiati e quali quote si sono spostate. La copertura è passata da 12mm in ghisa a 15mm, il passo delle armature è sceso da 200mm a 150mm — la revisione dell'ingegnere dopo il controllo. In 30 secondi sai cosa va rifatto in cantiere, senza dover richiamare l'ufficio.
+
 ---
 
 ## Controllo versioni disegni AutoCAD in 4 passi: ufficio + cantiere allineati {#h2-4}

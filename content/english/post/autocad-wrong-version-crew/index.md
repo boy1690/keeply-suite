@@ -110,6 +110,12 @@ On the crew side, they build from whatever you handed them last. They don't know
 
 Of those three threads, **the one between office and field is the easiest one to drop**. Not because anyone is slacking. Because no process forces that line to stay open. A "new version uploaded" message in a group thread that's missed is missed for good.
 
+What Keeply gives you here is the ability to compare two drawings directly — no opening two AutoCAD windows and eyeballing layer by layer:
+
+![Keeply drawing diff: A-05_drain.dwg v3 issued-for-construction vs v5 latest, cover spec changed from 12mm to 15mm + rebar spacing from 200mm to 150mm](diff-viewer.svg)
+
+Pick v3 and v5, Keeply lists which layers changed and which dimensions moved. Cover plate went from 12mm cast iron to 15mm, rebar spacing dropped from 200mm to 150mm — the engineer's post-review revision. You see it in 30 seconds and know exactly what the field needs to redo, without calling the office.
+
 ---
 
 ## AutoCAD drawing version control in 4 steps: office + field aligned {#h2-4}
