@@ -66,7 +66,7 @@ The distinction nobody explained when I set File History up:
 
 **Schedule-driven** — the system decides when to capture. File History is schedule-driven. Time Machine on Mac is schedule-driven. Cloud sync that runs every N minutes is schedule-driven. The system says "every hour" or "every 10 minutes" or "every change detected," but the unit is time or change-detection — not your intent.
 
-**Intent-driven** — your action (pressing Cmd+S) triggers the capture. The version saved is exactly the file at the moment you committed to it. Git is intent-driven (with explicit save points). Cloud-sync version history is sort of intent-driven (each save creates a version, capped by retention). Tools like Keeply are intent-driven by design.
+**Intent-driven** — your decision marks the capture, not the clock. You explicitly hit "Save a version" with a note (or the tool catches your save shortly after via a short polling window), and that moment becomes a recoverable point with whatever context you wrote. Cloud-sync version history is sort of intent-driven (each save creates a version, capped by retention). Tools like Keeply are intent-driven by design — the tool gives you a "Save a version" button you press at meaningful moments, plus a 30-minute background polling that catches in-progress work; it doesn't fire on every Cmd+S.
 
 The mismatch: when I think "yesterday's draft," I mean "the version I deliberately saved yesterday after I added the conclusion." That's an intent-driven question. File History is schedule-driven. The closest match it can give me is "the disk state at the next snapshot point," which may or may not include my deliberate save, depending on timing and drive availability.
 

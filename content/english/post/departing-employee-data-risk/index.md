@@ -18,7 +18,7 @@ faq_schema:
   - q: "Can lawyers or DLP software solve this?"
     a: "Neither in time. A trade-secret lawsuit takes 12–24 months, the burden of proof is heavy, and by the time you win, the original files are too stale to matter. DLP software costs more per month than makes sense for a 10-person team, requires a dedicated admin, and only blocks future leaks — it can't undo what your employee already did last weekend."
   - q: "How does Keeply fix the blind spot that sync tools leave open?"
-    a: "Keeply isn't built on sync; it's built on irreversible history. Every save lands on a timeline, the local repository has no time limit, and the '500 version cap' simply doesn't exist. Critical deliverables can be frozen as Releases (per ADR-003) — even an admin can't delete a frozen Release version."
+    a: "Keeply isn't built on sync; it's built on irreversible history. Every save lands on a timeline, the local version archive has no time limit, and the '500 version cap' simply doesn't exist. Critical deliverables can be frozen as Releases (per ADR-003) — even an admin can't delete a frozen Release version."
   - q: "Is Keeply a fit for IT-controlled enterprises?"
     a: "Small teams (≤10 people) can deploy it directly. Mid-sized companies can layer it on top of existing DLP / centralized backup — Keeply's job is 'version history for individual or team workflows.' It doesn't replace enterprise DLP (USB lockdown, real-time monitoring, encrypted channels) — it fills the blind spot those tools never covered, namely deletion by a legitimate user."
 ---
