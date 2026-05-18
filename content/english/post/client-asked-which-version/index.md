@@ -84,6 +84,12 @@ That's exactly the bind. Each mechanism has a ceiling. From cleared on close to 
 
 On construction sites, every file version decides what gets delivered in the end. Not finding the delivered version means testing the limits of a manager's memory.
 
+When you do find both versions, the next question is "what actually changed between them?" Keeply lays them side by side so you don't have to read line by line:
+
+![Keeply version diff view: 4/12 client-approved version vs 5/4 pricing revision + proposal.docx 32-line diff + Basic $99→$149 / Pro $299→$399](diff-viewer.svg)
+
+Red and green columns make the pricing change unmistakable — you forward this screenshot to your client and skip the explanation paragraph.
+
 ## Why these mechanisms don't reach 3 months later
 
 Here's the distinction nobody names plainly: **save layer** versus **tool layer**.

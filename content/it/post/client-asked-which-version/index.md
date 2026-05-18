@@ -80,6 +80,12 @@ Esatto, è proprio il vincolo. Ogni meccanismo ha un soffitto. Dalla cancellazio
 
 Sui cantieri, ogni versione di file decide cosa viene consegnato alla fine. Non trovare la versione consegnata significa mettere alla prova il limite della memoria di un manager.
 
+Una volta trovate entrambe le versioni, la domanda successiva è "cosa è cambiato esattamente tra le due?". Keeply le mette affiancate così non devi leggerle riga per riga:
+
+![Vista diff versioni Keeply: versione approvata dal cliente 4/12 vs revisione prezzi 5/4 + proposal.docx 32 righe di differenza + Basic $99→$149 / Pro $299→$399](diff-viewer.svg)
+
+Il contrasto rosso e verde rende il cambio di prezzo immediatamente leggibile — inoltra questo screenshot al cliente e risparmi il paragrafo di spiegazione.
+
 ## Perché questi meccanismi non arrivano a 3 mesi dopo
 
 Ecco la distinzione che nessuno nomina chiaramente: **strato di archiviazione** vs **strato strumentale**.
