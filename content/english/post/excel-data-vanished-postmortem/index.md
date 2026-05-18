@@ -18,7 +18,7 @@ status: draft
 
 Search "Excel data recovery" and you get a wall of recovery software ads. EaseUS, 4DDiG, Recoverit, iMyFone — all about scanning SSD sectors for disk-level recovery. But what actually happened wasn't a disk problem. A colleague deleted a sheet during collaborative editing, and that delete got pushed to the cloud. This is the record I put together, tracing this kind of incident minute by minute.
 
-## 14:32: what happened on screen in that second
+## What appears on screen when collaborative editing eats your sheet
 
 2:32:17 PM, Suzuki opened `proposal_clientA_v3.xlsx`. Excel loaded. He clicked the "Sales Records" sheet. Loading for 0.4 seconds, then completely white. Tabs present, column headers A to AZ present, row numbers 1 to 250 present. Every cell empty. Excel's top bar showed "1 other person is editing," with Tanaka's avatar next to it. 15 seconds before, Tanaka had been editing the file. What Suzuki was seeing was the cloud state from Tanaka's lunchtime session at 2:32 PM.
 
@@ -35,7 +35,7 @@ Why didn't Excel warn him? Office 365 co-authoring uses last-writer-wins commit 
 
 But that's just the surface symptom.
 
-## T+30 seconds: why OneDrive showed a green check
+## Why OneDrive's sync indicator stayed green
 
 2:32:47 PM, Suzuki tried to make sense of things and first looked at the OneDrive icon. Green check. Everything synced, no errors. Really?
 
@@ -43,7 +43,7 @@ The OneDrive sync mark means "your local file matches the cloud." It does not me
 
 "Synced" does not equal "your work is safe." In a collaborative editing context, other people's deletes also sync.
 
-## T+5 minutes: what SharePoint version history didn't bring back
+## Why SharePoint version history restore still leaves `#REF!`
 
 2:37 PM, Suzuki opened OneDrive in the browser, right-clicked the file, chose "Version History." The list appeared: v8 (12:46, Tanaka) / v7 (yesterday 17:50, Suzuki) / v6 (yesterday 17:30, Suzuki)...
 
@@ -55,7 +55,7 @@ Then he checked "Quotes." All `#REF!`. The reason: v7 restored the whole workboo
 
 Time lost so far: 3 hours 28 minutes. 15 hours 60 minutes until tomorrow's pitch.
 
-## T+1 hour: closing Excel wipes the undo stack
+## Why closing Excel disables Ctrl+Z (per-session undo stack)
 
 3:32 PM, Suzuki gave up and closed Excel. He reopened it thinking "let me try restoring another version."
 
@@ -63,7 +63,7 @@ He noticed: Ctrl+Z doesn't work. "Undo" is greyed out. Excel's undo stack is per
 
 The undo stack lives in memory as a per-session structure, never persisted to file or cloud. This is a Microsoft Office-wide spec.
 
-## T+24 hours: Time Machine captured the cloud state
+## Why Time Machine can't save yesterday's sheet version
 
 The next morning at 9 AM, Suzuki remembered "the company Mac has Time Machine," and emailed IT. 30 minutes later: "Time Machine snapshots, yes, every hour, automatic."
 
@@ -73,7 +73,7 @@ Why? Time Machine snapshots the local file state on the OneDrive sync folder ([A
 
 4 hours since the incident. Suzuki has restored nothing.
 
-## Parallel timeline: what would happen at 14:32 if Keeply were on Suzuki's PC
+## How to recover collaborative-edit data loss with Keeply
 
 If, in a parallel timeline, Keeply had been on Suzuki's PC, what would have happened at 14:32?
 
@@ -95,7 +95,7 @@ Keeply auto-saves in the background (you choose the interval: 15, 30, or 60 minu
 
 ![Keeply Save Version dialog: note input + Save button for manual snapshot](save-dialog.svg)
 
-## Limits: three collaborative-edit losses Keeply also can't save
+## Three collaborative-edit losses Keeply also can't recover
 
 Keeply is not magic. In a collaborative editing environment, here are three situations Keeply also can't rescue.
 
