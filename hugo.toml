@@ -177,21 +177,12 @@ disableKinds = ["taxonomy", "term"]
       description = "Keeply Blog — Guida pratica al controllo versioni, backup e recupero file per chi non scrive codice. Limiti della cronologia di Word / Excel / OneDrive / SharePoint, Time Machine vs Dropbox e altre trappole della sincronizzazione cloud."
   # R1 (2026-05-18 GSC audit): 11 zero-click auto-translate locales removed
   # from build entirely. Evidence: 90-day GSC data showed only pt + es had any
-  # clicks (1 each); de/fr/ru/nl/pl/tr/vi/th/id/ar/hi all 0 clicks. pt + es
-  # retained for now pending further audit. Removed locales redirect to /en/
-  # via CF rule (queued for separate redirect commit). Per memory ref
-  # `reference_gsc_root_cause_fixes_2026_05_18.md` + Google 2026/03 scaled
-  # content abuse enforcement (machine translation without review = spam risk).
-  [languages.pt]
-    languageName = "Português"
-    title = "Keeply Blog"
-    weight = 7
-    contentDir = "content/pt"
-  [languages.es]
-    languageName = "Español"
-    title = "Keeply Blog"
-    weight = 8
-    contentDir = "content/es"
+  # clicks (1 each); de/fr/ru/nl/pl/tr/vi/th/id/ar/hi all 0 clicks. All 11
+  # redirect to /en/ via CF Bulk Redirect subpath_matching.
+  # 2026-05-18 follow-up: pt + es 也砍 (Q3 高階模型 verdict 75% confidence).
+  # Reason: 1 click/90d 屬 noise floor; Mueller 2024 仍標 unreviewed MT 為
+  # quality risk; same-slug 301 to /en/ 保留 link equity 零成本. See
+  # _dev/seo/SEO operational decision.md Q3 evidence notes.
 
 [menu]
   [[menu.main]]
