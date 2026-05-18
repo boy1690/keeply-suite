@@ -83,6 +83,12 @@ This is why you need real file-version-management software. Its underlying logic
 
 On Keeply, when Tina deletes a file, you don't dig through any trash. You open the timeline and pull back the previous version. Even with admin permission, she can't delete the milestones marked as Release. As for what she touched, the audit trail is nailed down — you don't need to play detective to piece it together.
 
+How do you actually pull those versions off Tina's laptop into your own machine? Keeply has a dialog called "cherry-pick" that lets you apply specific versions from another machine or another vault:
+
+![Keeply cherry-pick dialog: apply the April 12 client-handoff version from the brand-book vault on Tina's laptop, 12 files plus Release-freeze note](cherry-pick-dialog.svg)
+
+The new owner opens Keeply, picks the brand-book vault from Tina's laptop, sees the April 12 client-handoff row, writes "brand-book client handoff — full approved set" as the note, and clicks Apply. Twelve files — logos, guidelines.pdf, color-tokens.json — land in the working directory on the new machine all at once. The Release-freeze flags come along with them, so no one can accidentally delete them later either.
+
 ---
 
 ## What Keeply isn't going to fix {#limits}
