@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 240" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',system-ui,sans-serif">
+<rect x="0" y="0" width="480" height="240" rx="8" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+<text x="20" y="28" font-size="13" font-weight="700" fill="#1F2937" font-family="'JetBrains Mono',ui-monospace,monospace">月底結算_2026年5月.xlsx</text>
+<rect x="0" y="40" width="480" height="1" fill="#E5E7EB"/>
+<circle cx="20" cy="59" r="4" fill="#3B82F6"/><text x="32" y="64" font-size="13" fill="#374151">morning baseline · 手動儲存</text><rect x="306" y="50" width="86" height="18" rx="9" fill="#DBEAFE" stroke="#BFDBFE" stroke-width="1"/><text x="349" y="63" font-size="11" font-weight="500" fill="#1D4ED8" text-anchor="middle">Release</text><text x="464" y="63" font-size="11" fill="#9CA3AF" text-anchor="end">昨天 18:00</text>
+<circle cx="20" cy="91" r="4" fill="#3B82F6"/><text x="32" y="96" font-size="13" fill="#374151">自動取樣 (30 分鐘)</text><text x="464" y="95" font-size="11" fill="#9CA3AF" text-anchor="end">昨天 17:30</text>
+<circle cx="20" cy="123" r="4" fill="#3B82F6"/><text x="32" y="128" font-size="13" fill="#374151">自動取樣 (30 分鐘)</text><text x="464" y="127" font-size="11" fill="#9CA3AF" text-anchor="end">昨天 17:00</text>
+<circle cx="20" cy="155" r="4" fill="#3B82F6"/><text x="32" y="160" font-size="13" fill="#374151">月初 baseline · 手動儲存</text><rect x="306" y="146" width="86" height="18" rx="9" fill="#DBEAFE" stroke="#BFDBFE" stroke-width="1"/><text x="349" y="159" font-size="11" font-weight="500" fill="#1D4ED8" text-anchor="middle">Release</text><text x="464" y="159" font-size="11" fill="#9CA3AF" text-anchor="end">5/1 09:00</text>
+<circle cx="20" cy="187" r="4" fill="#3B82F6"/><text x="32" y="192" font-size="13" fill="#374151">自動取樣 (30 分鐘)</text><text x="464" y="191" font-size="11" fill="#9CA3AF" text-anchor="end">4/30 18:30</text>
+</svg>
