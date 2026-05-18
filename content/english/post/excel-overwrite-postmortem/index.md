@@ -82,11 +82,11 @@ What Chen got for her subscription fee was a confirmation. The file isn't coming
 
 ## Parallel timeline: what would happen at 9:14 if Keeply were on that PC {#h2-6-keeply-counterfactual}
 
-If Keeply had been on Chen's machine, the Keeply vault would already contain a snapshot named "2026/05/17 18:00 morning baseline" at the moment of the 9:14 incident.
+If Keeply had been on Chen's machine, the Keeply vault would already contain a snapshot named "2026/05/17 18:00 evening close" at the moment of the 9:14 incident.
 
 Keeply does two things:
 
-1. Takes a snapshot automatically every 30 minutes in the background
+1. Auto-saves in the background (you choose the interval: 15, 30, or 60 minutes; default 30; Chen's machine is set to 15)
 2. Lets you manually hit "Save Version" before closing Excel
 
 Each snapshot is stored separately in the vault. No overwriting. The 9:14 Ctrl+S happens inside Excel — Keeply watches from outside and isn't affected.
@@ -94,14 +94,14 @@ Each snapshot is stored separately in the vault. No overwriting. The 9:14 Ctrl+S
 9:14:16. You realize "wait, I just clobbered it." What you do:
 
 1. Open Keeply.
-2. In the left timeline, click yesterday's 6 PM version of `month_end_close_2026_05.xlsx`.
+2. In the left timeline, click yesterday's 6 PM evening close version of `month_end_close_2026_05.xlsx`.
 3. Hit "Restore this version."
 
-![Keeply timeline for month_end_close_2026_05.xlsx: yesterday's 6 PM morning baseline + 30-min auto snapshots](timeline.svg)
+![Keeply timeline for month_end_close_2026_05.xlsx: yesterday's 6 PM evening close + 15-min auto-saves](timeline.svg)
 
 Keeply doesn't overwrite your current file. It pulls a copy out of the vault under a new filename (`month_end_close_2026_05_RESTORED_5-17.xlsx`). You open it, check the contents are right, then decide whether to replace the original. Whole thing takes 30 seconds.
 
-The interface uses no git terminology. Two things to remember: a snapshot is taken in the background every 30 minutes, and you can hit "Save Version" yourself at important moments.
+The interface uses no git terminology. Two things to remember: it auto-saves in the background every 15 to 60 minutes (you choose), and you can hit "Save Version" yourself at important moments.
 
 ![Keeply Save Version dialog: note input + Save button for manual snapshot](save-dialog.svg)
 
@@ -109,7 +109,7 @@ The interface uses no git terminology. Two things to remember: a snapshot is tak
 
 Keeply is not magic. There are three situations where Keeply also won't save you.
 
-1. **Incident happens within 30 minutes of installing Keeply**. The first automatic snapshot hasn't run yet. On install day, manually hit "Save Version" once at the start of work as a baseline. This blind spot closes.
+1. **Incident happens before Keeply's first auto-save runs after install** (your interval setting: 15 to 60 min). On install day, manually hit "Save Version" once at the start of work as a baseline. This blind spot closes.
 2. **Excel files on a shared network drive**. Keeply runs on your personal computer. It doesn't watch what others do on a shared drive. For shared drives, the team needs a separate Keeply mirror vault.
 3. **Excel is still open and someone overwrites the cloud copy from another device**. Keeply tracks local changes on your machine. A colleague overwriting the same SharePoint file from a different PC needs SharePoint's own version history.
 
@@ -121,17 +121,21 @@ The forensic record ends here. I'll cover preventing this next time in a separat
 
 ## FAQ {#faq}
 
+**Q. How does Keeply close the gap these 4 recovery layers leave?**
+
+A. By putting the version history layer in place before the incident, not after. Keeply auto-saves in the background (15 / 30 / 60 minute interval, your choice) + you can hit "Save Version" manually at important moments + each snapshot lives in its own vault without overwriting the others. When an incident happens, open Keeply, pick the previous version, hit "Restore this version" — 30 seconds. The four layers above (AutoRecover / OneDrive Version History / Time Machine / recovery software) are all post-event rescue; each fails in its own interval gap by design. Keeply is pre-event defense, not another post-event option.
+
 **Q. Can I recover the previous version after overwriting an Excel file?**
 
 A. It depends. If it's a OneDrive for Business synced file with a discrete save point before the incident, you can recover from SharePoint version history. For local Excel files (not OneDrive), it's only partially possible if Windows Shadow Copy is on AND you're not on an SSD. The longer you wait, the worse the odds.
 
 **Q. Can Excel AutoRecover restore the version I overwrote?**
 
-A. No. AutoRecover is designed for Excel crashes. The moment a file closes normally, AutoRecover temp files are deleted. AutoRecover does not help after an overwrite-then-close.
+A. No. AutoRecover is designed for Excel crashes. The moment a file closes normally, AutoRecover temp files are deleted. AutoRecover does not help after an overwrite-then-close. To rescue the pre-overwrite version, you need an independent version vault in place before the incident; that's the layer Keeply fills.
 
 **Q. Can recovery software recover overwritten Excel files?**
 
-A. Very unlikely on SSDs (per NIST SP 800-88r1). You need "HDD + just overwritten + filesystem not yet overwritten" simultaneously. Most work PCs are SSD, so in practice, don't count on it.
+A. Very unlikely on SSDs (per NIST SP 800-88r1). You need "HDD + just overwritten + filesystem not yet overwritten" simultaneously. Most work PCs are SSD, so in practice, don't count on it. Keeply keeps the version layer at the application level, above the SSD-write path — sidestepping the TRIM physical limit, so the previous version's bytes stay intact in the vault.
 
 **Q. How do I view old versions of a OneDrive-synced Excel file?**
 
@@ -139,7 +143,7 @@ A. Open OneDrive in a browser, right-click the file, choose "Version History." G
 
 **Q. Can Time Machine save Excel files overwritten within an hour?**
 
-A. Not at the default 1-hour interval. The overwrite happens between the incident and the next snapshot, which captures the already-clobbered file. Unless you set Time Machine to local snapshots at high frequency, or you take manual snapshots, default Macs from IT won't help.
+A. Not at the default 1-hour interval. The overwrite happens between the incident and the next snapshot, which captures the already-clobbered file. Unless you set Time Machine to local snapshots at high frequency, or you take manual snapshots, default Macs from IT won't help. Keeply's auto-save interval goes as short as 15 minutes — much tighter than Time Machine's default 1-hour. The 9:14 incident has a 9:00 snapshot sitting right there in the Keeply vault.
 
 ## Related
 
