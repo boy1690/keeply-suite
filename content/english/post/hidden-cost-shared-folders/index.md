@@ -81,6 +81,12 @@ Tomorrow morning you open the folder and it only contains a clean `Floorplan.dwg
 
 You open the file, edit, save, close. No hesitation, no renaming, no desktop backup, no group-chat announcement. The system has quietly remembered every change underneath. If a subcontractor accidentally overwrites yesterday's design, you don't have to panic. You open the timeline and pull the version back in three seconds.
 
+When you switch out of the current project folder before saving, Keeply nudges you so the afternoon's work doesn't sit on an 18-minute-old auto-save alone:
+
+![Keeply unsaved-changes prompt when switching folders: Floorplan.dwg has unsaved changes, last auto-save was 18 minutes ago, three buttons — save a version then switch / switch without saving / cancel](unsaved-changes-dialog.svg)
+
+You hit "Save a version then switch", which freezes the afternoon's edits as a named version instead of leaving them at the mercy of the next auto-save.
+
 Lay the methods your team currently uses side by side, and you see they each cover a completely different layer:
 
 | Method | What it solves | What it doesn't | Right fit for a team? |

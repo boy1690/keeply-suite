@@ -81,6 +81,12 @@ Domani mattina apri la cartella e dentro c'è solo una `Planimetria.dwg`, una `B
 
 Apri il file, modifichi, salvi, chiudi. Nessuna esitazione, niente rinominare, niente backup sulla scrivania, niente annunci in chat. Il sistema sotto ha già ricordato in silenzio ogni modifica. Se un subappaltatore per errore sovrascrive il design di ieri, non devi andare nel panico. Apri la timeline e in tre secondi recuperi la versione.
 
+Quando passi a un'altra cartella di progetto senza aver salvato, Keeply ti avvisa, così il lavoro del pomeriggio non resta appeso solo a un auto-save di 18 minuti fa:
+
+![Avviso Keeply di modifiche non salvate al cambio cartella: Planimetria.dwg ha modifiche non salvate, ultimo salvataggio automatico 18 minuti fa, tre pulsanti — salva una versione poi cambia / cambia senza salvare / annulla](unsaved-changes-dialog.svg)
+
+Premi "Salva una versione poi cambia" e le modifiche del pomeriggio vengono congelate come versione con nome, invece di restare in balia del prossimo auto-save.
+
 Metti uno accanto all'altro i metodi che il tuo team sta usando, e vedi che ognuno copre un livello completamente diverso:
 
 | Metodo | Cosa risolve | Cosa non risolve | Adatto a un team? |
