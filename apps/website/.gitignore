@@ -8,7 +8,9 @@
 /_dev/baseline.css
 /_dev/verify.css
 /_dev/seo/.env
-CLAUDE.md
+# CLAUDE.md was previously local-only; post-keeply-suite-merge (2026-05-19) it's
+# tracked as shared per-app Claude agent rules — see suite root CLAUDE.md.
+!CLAUDE.md
 .claude/
 .specify/
 specs/
