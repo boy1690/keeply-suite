@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" font-family="'Inter','Noto Sans TC','PingFang TC','Noto Sans JP','Noto Sans KR',-apple-system,system-ui,sans-serif">
+<rect x="0" y="0" width="640" height="340" rx="8" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+<text x="20" y="30" font-size="15" font-weight="700" fill="#111827">30 일 경과 후: 4 가지 복구 경로와 실제 성공률</text>
+<text x="20" y="72" font-size="12" font-weight="600" fill="#374151">Time Machine / 파일 기록</text>
+<text x="20" y="88" font-size="10" fill="#6B7280">최선 — 사전 설정한 경우</text>
+<rect x="340" y="66" width="240" height="20" rx="3" fill="#F3F4F6"/>
+<rect x="340" y="66" width="204" height="20" rx="3" fill="#34D399" opacity="0.85"/>
+<text x="588" y="80" font-size="11" font-weight="600" fill="#34D399">~85%</text>
+<text x="20" y="128" font-size="12" font-weight="600" fill="#374151">Dropbox 고객지원 에스컬레이션</text>
+<text x="20" y="144" font-size="10" fill="#6B7280">Business/Enterprise 에서 가끔 성공</text>
+<rect x="340" y="122" width="240" height="20" rx="3" fill="#F3F4F6"/>
+<rect x="340" y="122" width="84" height="20" rx="3" fill="#FBBF24" opacity="0.85"/>
+<text x="588" y="136" font-size="11" font-weight="600" fill="#FBBF24">~35%</text>
+<text x="20" y="184" font-size="12" font-weight="600" fill="#374151">로컬 sync 캐시 잔여물</text>
+<text x="20" y="200" font-size="10" fill="#6B7280">OS 캐시 상태에 따라 다름</text>
+<rect x="340" y="178" width="240" height="20" rx="3" fill="#F3F4F6"/>
+<rect x="340" y="178" width="48" height="20" rx="3" fill="#FB923C" opacity="0.85"/>
+<text x="588" y="192" font-size="11" font-weight="600" fill="#FB923C">~20%</text>
+<text x="20" y="240" font-size="12" font-weight="600" fill="#374151">디스크 복구 소프트웨어 (SSD + TRIM)</text>
+<text x="20" y="256" font-size="10" fill="#6B7280">최신 SSD 에서는 거의 불가능</text>
+<rect x="340" y="234" width="240" height="20" rx="3" fill="#F3F4F6"/>
+<rect x="340" y="234" width="12" height="20" rx="3" fill="#F87171" opacity="0.85"/>
+<text x="588" y="248" font-size="11" font-weight="600" fill="#F87171">~5%</text>
+<text x="20" y="320" font-size="11" font-style="italic" fill="#6B7280">⚠ 4 가지 중 3 가지는 사전 준비가 필요. 나머지 1 가지는 운에 달렸음.</text>
+</svg>

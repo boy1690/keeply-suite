@@ -1,0 +1,224 @@
+{
+  "_schema": "8 欄位 × N locales。新增語言照填即可，跑 i18n-apply.py 產生 SVG。",
+  "_fields": {
+    "font": "SVG font-family（CJK/RTL/Cyrillic 需對應字型）",
+    "eyebrow": "頂部分類（常留英文 EDITORIAL + 在地副名）",
+    "label_big": "大數字下方主標籤（原：小時／年）",
+    "label_small": "大數字下方副標籤（原：HOURS PER YEAR）",
+    "subtitle_1": "左欄副標第一行",
+    "subtitle_2": "左欄副標第二行（含 amber 強調詞）",
+    "amber_highlight": "第二行中要塗琥珀色的子字串（必須出現於 subtitle_2）",
+    "filename_warn": "警示檔名最後一段（原：千萬別動）",
+    "bottom_note": "右下場景註解"
+  },
+
+  "en": {
+    "font": "'Inter','SF Pro Display',-apple-system,system-ui,sans-serif",
+    "eyebrow": "MICRO-PANIC TAX · EDITORIAL",
+    "label_big": "HOURS / YEAR",
+    "label_small": "LOST TO FILE-ANXIETY",
+    "subtitle_1": "The tax you pay to wonder,",
+    "subtitle_2": "\"did I overwrite someone's work?\"",
+    "amber_highlight": "overwrite",
+    "filename_warn": "DO_NOT_TOUCH",
+    "bottom_note": "4 designers  ·  1 folder  ·  1.6 hrs / week on defense"
+  },
+  "zh-tw": {
+    "font": "'Noto Sans TC','PingFang TC','Microsoft JhengHei',system-ui,sans-serif",
+    "eyebrow": "微型恐慌稅 · EDITORIAL",
+    "label_big": "小時／年",
+    "label_small": "HOURS PER YEAR",
+    "subtitle_1": "你替「會不會蓋掉同事檔案」",
+    "subtitle_2": "每天繳的微型恐慌稅",
+    "amber_highlight": "微型恐慌稅",
+    "filename_warn": "千萬別動",
+    "bottom_note": "4 位設計師　·　1 個資料夾　·　每週 1.6 小時防禦"
+  },
+  "zh-cn": {
+    "font": "'Noto Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif",
+    "eyebrow": "微型恐慌税 · EDITORIAL",
+    "label_big": "小时／年",
+    "label_small": "HOURS PER YEAR",
+    "subtitle_1": "你替「会不会覆盖同事文件」",
+    "subtitle_2": "每天缴的微型恐慌税",
+    "amber_highlight": "微型恐慌税",
+    "filename_warn": "千万别动",
+    "bottom_note": "4 位设计师　·　1 个文件夹　·　每周 1.6 小时防御"
+  },
+  "ja": {
+    "font": "'Noto Sans JP','Hiragino Sans','Yu Gothic','Meiryo',system-ui,sans-serif",
+    "eyebrow": "マイクロ不安税 · EDITORIAL",
+    "label_big": "時間／年",
+    "label_small": "HOURS PER YEAR",
+    "subtitle_1": "「同僚のファイルを上書きするかも」",
+    "subtitle_2": "と毎日払うマイクロ不安税",
+    "amber_highlight": "マイクロ不安税",
+    "filename_warn": "絶対触らないで",
+    "bottom_note": "デザイナー4人　·　フォルダ1つ　·　週1.6時間の防衛"
+  },
+  "ko": {
+    "font": "'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif",
+    "eyebrow": "마이크로 불안세 · EDITORIAL",
+    "label_big": "시간 / 년",
+    "label_small": "HOURS PER YEAR",
+    "subtitle_1": "「동료 파일을 덮어쓸까」",
+    "subtitle_2": "매일 내는 마이크로 불안세",
+    "amber_highlight": "마이크로 불안세",
+    "filename_warn": "절대_건들지마",
+    "bottom_note": "디자이너 4명  ·  폴더 1개  ·  주 1.6시간의 방어"
+  },
+  "de": {
+    "font": "'Inter','Segoe UI',system-ui,sans-serif",
+    "eyebrow": "MIKRO-PANIK-STEUER · EDITORIAL",
+    "label_big": "STUNDEN / JAHR",
+    "label_small": "VERLOREN AN DATEI-ANGST",
+    "subtitle_1": "Die Steuer, die Sie täglich zahlen:",
+    "subtitle_2": "„habe ich die Datei überschrieben?\"",
+    "amber_highlight": "überschrieben",
+    "filename_warn": "NICHT_BERUEHREN",
+    "bottom_note": "4 Designer  ·  1 Ordner  ·  1,6 Std/Woche Verteidigung"
+  },
+  "es": {
+    "font": "'Inter','Segoe UI',system-ui,sans-serif",
+    "eyebrow": "IMPUESTO DE MICROPÁNICO · EDITORIAL",
+    "label_big": "HORAS / AÑO",
+    "label_small": "PERDIDAS POR ANSIEDAD",
+    "subtitle_1": "El impuesto que pagas a diario,",
+    "subtitle_2": "\"¿habré sobrescrito el archivo de alguien?\"",
+    "amber_highlight": "sobrescrito",
+    "filename_warn": "NO_TOCAR",
+    "bottom_note": "4 diseñadores  ·  1 carpeta  ·  1,6 h/sem defendiendo"
+  },
+  "fr": {
+    "font": "'Inter','Segoe UI',system-ui,sans-serif",
+    "eyebrow": "IMPÔT DE MICRO-PANIQUE · EDITORIAL",
+    "label_big": "HEURES / AN",
+    "label_small": "PERDUES EN ANGOISSE",
+    "subtitle_1": "L'impôt que vous payez pour vous demander :",
+    "subtitle_2": "« ai-je écrasé le fichier d'un collègue ? »",
+    "amber_highlight": "écrasé",
+    "filename_warn": "NE_PAS_TOUCHER",
+    "bottom_note": "4 designers  ·  1 dossier  ·  1,6 h/sem en défense"
+  },
+  "it": {
+    "font": "'Inter','Segoe UI',system-ui,sans-serif",
+    "eyebrow": "TASSA DI MICRO-PANICO · EDITORIAL",
+    "label_big": "ORE / ANNO",
+    "label_small": "PERSE IN ANSIA",
+    "subtitle_1": "La tassa che paghi ogni giorno chiedendoti:",
+    "subtitle_2": "\"avrò sovrascritto il file di un collega?\"",
+    "amber_highlight": "sovrascritto",
+    "filename_warn": "NON_TOCCARE",
+    "bottom_note": "4 designer  ·  1 cartella  ·  1,6 h/sett difendendo"
+  },
+  "pt": {
+    "font": "'Inter','Segoe UI',system-ui,sans-serif",
+    "eyebrow": "IMPOSTO DE MICROPÂNICO · EDITORIAL",
+    "label_big": "HORAS / ANO",
+    "label_small": "PERDIDAS EM ANSIEDADE",
+    "subtitle_1": "O imposto que você paga diariamente:",
+    "subtitle_2": "\"será que sobrescrevi o arquivo de alguém?\"",
+    "amber_highlight": "sobrescrevi",
+    "filename_warn": "NAO_MEXA",
+    "bottom_note": "4 designers  ·  1 pasta  ·  1,6 h/semana defendendo"
+  },
+  "nl": {
+    "font": "'Inter','Segoe UI',system-ui,sans-serif",
+    "eyebrow": "MICRO-PANIEKBELASTING · EDITORIAL",
+    "label_big": "UREN / JAAR",
+    "label_small": "VERLOREN AAN ANGST",
+    "subtitle_1": "De belasting die je dagelijks betaalt:",
+    "subtitle_2": "\"heb ik het bestand van een collega overschreven?\"",
+    "amber_highlight": "overschreven",
+    "filename_warn": "NIET_AANRAKEN",
+    "bottom_note": "4 designers  ·  1 map  ·  1,6 u/week verdedigen"
+  },
+  "pl": {
+    "font": "'Inter','Segoe UI',system-ui,sans-serif",
+    "eyebrow": "PODATEK MIKROPANIKI · EDITORIAL",
+    "label_big": "GODZ. / ROK",
+    "label_small": "STRACONYCH NA LĘK",
+    "subtitle_1": "Podatek, który płacisz codziennie:",
+    "subtitle_2": "„czy nadpisałem plik kolegi?\"",
+    "amber_highlight": "nadpisałem",
+    "filename_warn": "NIE_DOTYKAC",
+    "bottom_note": "4 projektantów  ·  1 folder  ·  1,6 h/tydz. obrony"
+  },
+  "tr": {
+    "font": "'Inter','Segoe UI',system-ui,sans-serif",
+    "eyebrow": "MİKRO-PANİK VERGİSİ · EDITORIAL",
+    "label_big": "SAAT / YIL",
+    "label_small": "DOSYA KAYGISINA KAYIP",
+    "subtitle_1": "Her gün ödediğiniz vergi:",
+    "subtitle_2": "\"meslektaşımın dosyasına mı yazdım?\"",
+    "amber_highlight": "yazdım",
+    "filename_warn": "DOKUNMA",
+    "bottom_note": "4 tasarımcı  ·  1 klasör  ·  haftada 1,6 saat savunma"
+  },
+  "vi": {
+    "font": "'Inter','Segoe UI',system-ui,sans-serif",
+    "eyebrow": "THUẾ HOẢNG LOẠN VI MÔ · EDITORIAL",
+    "label_big": "GIỜ / NĂM",
+    "label_small": "MẤT VÌ LO LẮNG",
+    "subtitle_1": "Khoản thuế bạn trả mỗi ngày:",
+    "subtitle_2": "\"mình có ghi đè file của đồng nghiệp không?\"",
+    "amber_highlight": "ghi đè",
+    "filename_warn": "DUNG_DONG",
+    "bottom_note": "4 nhà thiết kế  ·  1 thư mục  ·  1,6 giờ/tuần phòng thủ"
+  },
+  "id": {
+    "font": "'Inter','Segoe UI',system-ui,sans-serif",
+    "eyebrow": "PAJAK MIKRO-PANIK · EDITORIAL",
+    "label_big": "JAM / TAHUN",
+    "label_small": "HILANG KARENA CEMAS",
+    "subtitle_1": "Pajak yang kau bayar tiap hari:",
+    "subtitle_2": "\"apakah aku menimpa file rekan?\"",
+    "amber_highlight": "menimpa",
+    "filename_warn": "JANGAN_SENTUH",
+    "bottom_note": "4 desainer  ·  1 folder  ·  1,6 jam/minggu bertahan"
+  },
+  "th": {
+    "font": "'Noto Sans Thai','Sarabun',system-ui,sans-serif",
+    "eyebrow": "ภาษีตื่นตระหนกไมโคร · EDITORIAL",
+    "label_big": "ชั่วโมง / ปี",
+    "label_small": "สูญเสียกับความกังวล",
+    "subtitle_1": "ภาษีที่คุณจ่ายทุกวัน:",
+    "subtitle_2": "\"เราเขียนทับไฟล์เพื่อนร่วมงานหรือเปล่า?\"",
+    "amber_highlight": "เขียนทับ",
+    "filename_warn": "ห้ามแตะ",
+    "bottom_note": "นักออกแบบ 4 คน  ·  โฟลเดอร์ 1  ·  1.6 ชม/สัปดาห์ ป้องกัน"
+  },
+  "ru": {
+    "font": "'Inter','Segoe UI',system-ui,sans-serif",
+    "eyebrow": "МИКРО-ПАНИЧЕСКИЙ НАЛОГ · EDITORIAL",
+    "label_big": "ЧАСОВ / ГОД",
+    "label_small": "ПОТЕРЯНО В ТРЕВОГЕ",
+    "subtitle_1": "Налог, который вы платите каждый день:",
+    "subtitle_2": "«не перезаписал ли я файл коллеги?»",
+    "amber_highlight": "перезаписал",
+    "filename_warn": "NE_TROGAT",
+    "bottom_note": "4 дизайнера  ·  1 папка  ·  1,6 ч/нед защиты"
+  },
+  "ar": {
+    "font": "'Noto Sans Arabic','Tahoma',system-ui,sans-serif",
+    "eyebrow": "ضريبة الذعر الصغرى · EDITORIAL",
+    "label_big": "ساعة / سنة",
+    "label_small": "HOURS PER YEAR",
+    "subtitle_1": "الضريبة التي تدفعها يوميا:",
+    "subtitle_2": "«هل استبدلت ملف زميل؟»",
+    "amber_highlight": "استبدلت",
+    "filename_warn": "لا_تلمس",
+    "bottom_note": "٤ مصممين  ·  مجلد واحد  ·  ١٫٦ ساعة/أسبوع دفاع"
+  },
+  "hi": {
+    "font": "'Noto Sans Devanagari','Mangal',system-ui,sans-serif",
+    "eyebrow": "माइक्रो-पैनिक टैक्स · EDITORIAL",
+    "label_big": "घंटे / वर्ष",
+    "label_small": "चिंता में खोए",
+    "subtitle_1": "आप हर दिन चुकाते हैं यह टैक्स:",
+    "subtitle_2": "\"क्या मैंने सहकर्मी की फाइल अधिलेखित कर दी?\"",
+    "amber_highlight": "अधिलेखित",
+    "filename_warn": "मत_छुएं",
+    "bottom_note": "4 डिज़ाइनर  ·  1 फ़ोल्डर  ·  1.6 घंटे/सप्ताह बचाव"
+  }
+}

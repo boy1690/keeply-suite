@@ -1,0 +1,131 @@
+<!-- Image 3: 還原前 vs 還原後對比：檔案樹 + 跑測試指令的綠燈 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" fill="none"
+     font-family="'Inter','Noto Sans TC',system-ui,sans-serif">
+  <defs>
+    <linearGradient id="g-indigo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#4338CA"/>
+    </linearGradient>
+    <linearGradient id="g-amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFB300"/><stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="g-red" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EF4444"/><stop offset="1" stop-color="#DC2626"/>
+    </linearGradient>
+    <linearGradient id="g-green" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#34D399"/><stop offset="1" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="g-paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8F7FF"/><stop offset="1" stop-color="#EEF2FF"/>
+    </linearGradient>
+    <pattern id="grid" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#4338CA" stroke-width="1" opacity="0.05"/>
+    </pattern>
+    <filter id="shadow"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#312E81" flood-opacity="0.14"/></filter>
+  </defs>
+
+  <rect width="1200" height="600" fill="url(#g-paper)"/>
+  <rect width="1200" height="600" fill="url(#grid)"/>
+
+  <text x="600" y="48" font-size="13" font-weight="800" fill="#312E81" text-anchor="middle" letter-spacing="3">還原前 · 30 秒 · 還原後</text>
+
+  <!-- BEFORE: 失控狀態 -->
+  <g transform="translate(60, 90)" filter="url(#shadow)">
+    <rect width="460" height="430" rx="10" fill="#ffffff" stroke="url(#g-red)" stroke-width="2"/>
+    <rect width="460" height="42" rx="10" fill="url(#g-red)"/>
+    <rect y="28" width="460" height="14" fill="url(#g-red)"/>
+    <text x="20" y="28" font-size="14" font-weight="700" fill="#ffffff" font-family="system-ui,sans-serif">還原前 · 14:23</text>
+
+    <!-- file tree -->
+    <g font-family="'JetBrains Mono',ui-monospace,monospace" transform="translate(20, 70)">
+      <text x="0" y="0" font-size="12" font-weight="700" fill="#4338CA">my-project/</text>
+      <text x="20" y="22" font-size="11" fill="#DC2626" font-weight="700">├── src/handler.ts</text>
+      <text x="200" y="22" font-size="10" fill="#DC2626">+18/-7 ⚠️</text>
+      <text x="20" y="40" font-size="11" fill="#DC2626" font-weight="700">├── src/utils.ts</text>
+      <text x="200" y="40" font-size="10" fill="#DC2626">+9/-3 ⚠️</text>
+      <text x="20" y="58" font-size="11" fill="#DC2626" font-weight="700">├── src/config.ts</text>
+      <text x="200" y="58" font-size="10" fill="#DC2626">+12/-1 ⚠️</text>
+      <text x="20" y="76" font-size="11" fill="#DC2626" font-weight="700">├── src/helper.ts (NEW)</text>
+      <text x="200" y="76" font-size="10" fill="#DC2626">+47 ⚠️</text>
+      <text x="20" y="94" font-size="11" fill="#DC2626" font-weight="700">├── src/auth.ts</text>
+      <text x="200" y="94" font-size="10" fill="#DC2626">+3 ⚠️</text>
+      <text x="20" y="112" font-size="11" fill="#DC2626" font-weight="700">├── src/index.ts</text>
+      <text x="200" y="112" font-size="10" fill="#DC2626">+5/-2 ⚠️</text>
+      <text x="20" y="130" font-size="11" fill="#DC2626" font-weight="700">├── .env</text>
+      <text x="200" y="130" font-size="10" fill="#DC2626">touched ⚠️</text>
+      <text x="20" y="148" font-size="11" fill="#DC2626" font-weight="700">└── package.json</text>
+      <text x="200" y="148" font-size="10" fill="#DC2626">+1 ⚠️</text>
+    </g>
+
+    <!-- terminal -->
+    <g transform="translate(20, 250)">
+      <rect width="420" height="120" rx="6" fill="#1E1B4B"/>
+      <text x="14" y="22" font-size="12" font-weight="700" fill="#A5B4FC" font-family="'JetBrains Mono',ui-monospace,monospace">$ npm test</text>
+      <text x="14" y="44" font-size="11" font-weight="700" fill="#FCA5A5" font-family="'JetBrains Mono',ui-monospace,monospace">FAIL  src/handler.ts</text>
+      <text x="14" y="62" font-size="11" font-weight="700" fill="#FCA5A5" font-family="'JetBrains Mono',ui-monospace,monospace">FAIL  src/utils.ts</text>
+      <text x="14" y="80" font-size="11" font-weight="700" fill="#FCA5A5" font-family="'JetBrains Mono',ui-monospace,monospace">FAIL  src/config.ts (NEW)</text>
+      <text x="14" y="100" font-size="11" font-weight="700" fill="#FCA5A5" font-family="'JetBrains Mono',ui-monospace,monospace">7 tests failed</text>
+    </g>
+
+    <g transform="translate(120, 386)">
+      <rect width="220" height="32" rx="4" fill="url(#g-red)"/>
+      <text x="110" y="22" font-size="13" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="2" font-family="system-ui,sans-serif">build fail</text>
+    </g>
+  </g>
+
+  <!-- ARROW with 30 sec label -->
+  <g transform="translate(560, 290)">
+    <path d="M0 30 L40 30 L40 14 L80 38 L40 62 L40 46 L0 46 Z" fill="url(#g-amber)" filter="url(#shadow)"/>
+    <text x="40" y="-8" font-size="12" font-weight="800" fill="#312E81" text-anchor="middle" letter-spacing="2" font-family="system-ui,sans-serif">30 秒</text>
+    <text x="40" y="98" font-size="11" font-weight="600" fill="#4338CA" text-anchor="middle" font-family="system-ui,sans-serif" opacity="0.7">右鍵 → 還原</text>
+  </g>
+
+  <!-- AFTER: 還原回 13:00 狀態 -->
+  <g transform="translate(680, 90)" filter="url(#shadow)">
+    <rect width="460" height="430" rx="10" fill="#ffffff" stroke="url(#g-green)" stroke-width="2"/>
+    <rect width="460" height="42" rx="10" fill="url(#g-green)"/>
+    <rect y="28" width="460" height="14" fill="url(#g-green)"/>
+    <text x="20" y="28" font-size="14" font-weight="700" fill="#ffffff" font-family="system-ui,sans-serif">還原後 · 回到 13:00</text>
+
+    <!-- file tree (clean) -->
+    <g font-family="'JetBrains Mono',ui-monospace,monospace" transform="translate(20, 70)">
+      <text x="0" y="0" font-size="12" font-weight="700" fill="#4338CA">my-project/</text>
+      <text x="20" y="22" font-size="11" fill="#312E81">├── src/handler.ts</text>
+      <text x="200" y="22" font-size="10" fill="#059669">✓ clean</text>
+      <text x="20" y="40" font-size="11" fill="#312E81">├── src/utils.ts</text>
+      <text x="200" y="40" font-size="10" fill="#059669">✓ clean</text>
+      <text x="20" y="58" font-size="11" fill="#312E81">├── src/auth.ts</text>
+      <text x="200" y="58" font-size="10" fill="#059669">✓ clean</text>
+      <text x="20" y="76" font-size="11" fill="#312E81">├── src/index.ts</text>
+      <text x="200" y="76" font-size="10" fill="#059669">✓ clean</text>
+      <text x="20" y="94" font-size="11" fill="#312E81">├── .env</text>
+      <text x="200" y="94" font-size="10" fill="#059669">✓ clean</text>
+      <text x="20" y="112" font-size="11" fill="#312E81">└── package.json</text>
+      <text x="200" y="112" font-size="10" fill="#059669">✓ clean</text>
+
+      <!-- explicit gone files -->
+      <g opacity="0.55">
+        <text x="20" y="138" font-size="10" fill="#6F6AF0">─────────────────</text>
+        <text x="20" y="156" font-size="10" font-style="italic" fill="#6F6AF0">helper.ts (AI 偷加的) → 沒了</text>
+        <text x="20" y="172" font-size="10" font-style="italic" fill="#6F6AF0">config.ts (AI 改的) → 復原</text>
+      </g>
+    </g>
+
+    <!-- terminal (green) -->
+    <g transform="translate(20, 250)">
+      <rect width="420" height="120" rx="6" fill="#1E1B4B"/>
+      <text x="14" y="22" font-size="12" font-weight="700" fill="#A5B4FC" font-family="'JetBrains Mono',ui-monospace,monospace">$ npm test</text>
+      <text x="14" y="44" font-size="11" font-weight="700" fill="#34D399" font-family="'JetBrains Mono',ui-monospace,monospace">PASS  src/handler.ts</text>
+      <text x="14" y="62" font-size="11" font-weight="700" fill="#34D399" font-family="'JetBrains Mono',ui-monospace,monospace">PASS  src/utils.ts</text>
+      <text x="14" y="80" font-size="11" font-weight="700" fill="#34D399" font-family="'JetBrains Mono',ui-monospace,monospace">PASS  src/auth.ts</text>
+      <text x="14" y="100" font-size="11" font-weight="700" fill="#34D399" font-family="'JetBrains Mono',ui-monospace,monospace">7 tests passed (143ms) ✓</text>
+    </g>
+
+    <g transform="translate(120, 386)">
+      <rect width="220" height="32" rx="4" fill="url(#g-green)"/>
+      <text x="110" y="22" font-size="13" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="2" font-family="system-ui,sans-serif">build OK</text>
+    </g>
+  </g>
+
+  <text x="600" y="568" font-size="14" font-weight="700" fill="#312E81" text-anchor="middle" letter-spacing="2">所有檔案 · 所有結構 · 所有 config 全部一起回去</text>
+
+</svg>

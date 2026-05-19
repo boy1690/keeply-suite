@@ -1,0 +1,350 @@
+{
+  "en": {
+    "tags": [
+      "cloud sync",
+      "file recovery",
+      "keeply tutorial",
+      "operator error",
+      "tool comparison",
+      "version control"
+    ],
+    "usage": {
+      "version control": [
+        "3-2-1-backup-rule",
+        "autocad-wrong-version-crew",
+        "dropbox-conflicted-copy",
+        "excel-version-history-limits",
+        "file-version-management-complete-guide",
+        "keeply-first-week-workflow",
+        "restore-without-panic",
+        "thesis-single-point-of-failure",
+        "too-many-file-versions",
+        "version-control-software-non-developer"
+      ],
+      "operator error": [
+        "3-2-1-backup-rule",
+        "client-asked-which-version",
+        "hidden-cost-shared-folders",
+        "recover-overwritten-file",
+        "too-many-file-versions"
+      ],
+      "tool comparison": [
+        "3-2-1-backup-rule",
+        "version-control-software-non-developer",
+        "what-keeply-saves-vs-backup-cloud"
+      ],
+      "file recovery": [
+        "autocad-wrong-version-crew",
+        "client-asked-which-version",
+        "dropbox-conflicted-copy",
+        "excel-version-history-limits",
+        "recover-overwritten-file",
+        "restore-without-panic",
+        "vibe-coding-rollback"
+      ],
+      "cloud sync": [
+        "dropbox-conflicted-copy",
+        "excel-version-history-limits",
+        "file-version-management-complete-guide",
+        "hidden-cost-shared-folders"
+      ],
+      "keeply tutorial": [
+        "install-keeply-windows-mac",
+        "keeply-first-week-workflow",
+        "keeply-getting-started-from-zero",
+        "vibe-coding-rollback",
+        "what-keeply-saves-vs-backup-cloud"
+      ]
+    }
+  },
+  "zh-tw": {
+    "tags": [
+      "工具比較",
+      "版本控制",
+      "雲端同步",
+      "操作失誤",
+      "檔案還原",
+      "Keeply 教學"
+    ],
+    "usage": {
+      "版本控制": [
+        "3-2-1-backup-rule",
+        "autocad-wrong-version-crew",
+        "dropbox-conflicted-copy",
+        "excel-version-history-limits",
+        "file-version-management-complete-guide",
+        "keeply-first-week-workflow",
+        "restore-without-panic",
+        "thesis-single-point-of-failure",
+        "too-many-file-versions",
+        "version-control-software-non-developer"
+      ],
+      "操作失誤": [
+        "3-2-1-backup-rule",
+        "client-asked-which-version",
+        "hidden-cost-shared-folders",
+        "recover-overwritten-file",
+        "too-many-file-versions"
+      ],
+      "工具比較": [
+        "3-2-1-backup-rule",
+        "version-control-software-non-developer",
+        "what-keeply-saves-vs-backup-cloud"
+      ],
+      "檔案還原": [
+        "autocad-wrong-version-crew",
+        "client-asked-which-version",
+        "dropbox-conflicted-copy",
+        "excel-version-history-limits",
+        "recover-overwritten-file",
+        "restore-without-panic",
+        "vibe-coding-rollback"
+      ],
+      "雲端同步": [
+        "dropbox-conflicted-copy",
+        "excel-version-history-limits",
+        "file-version-management-complete-guide",
+        "hidden-cost-shared-folders"
+      ],
+      "Keeply 教學": [
+        "install-keeply-windows-mac",
+        "keeply-first-week-workflow",
+        "keeply-getting-started-from-zero",
+        "vibe-coding-rollback",
+        "what-keeply-saves-vs-backup-cloud"
+      ]
+    }
+  },
+  "zh-cn": {
+    "tags": [
+      "工具对比",
+      "云端同步",
+      "文件恢复",
+      "版本控制",
+      "操作失误",
+      "Keeply 教程"
+    ],
+    "usage": {
+      "版本控制": [
+        "3-2-1-backup-rule",
+        "autocad-wrong-version-crew",
+        "dropbox-conflicted-copy",
+        "excel-version-history-limits",
+        "file-version-management-complete-guide",
+        "keeply-first-week-workflow",
+        "restore-without-panic",
+        "thesis-single-point-of-failure",
+        "too-many-file-versions",
+        "version-control-software-non-developer"
+      ],
+      "操作失误": [
+        "3-2-1-backup-rule",
+        "client-asked-which-version",
+        "hidden-cost-shared-folders",
+        "recover-overwritten-file",
+        "too-many-file-versions"
+      ],
+      "工具对比": [
+        "3-2-1-backup-rule",
+        "version-control-software-non-developer",
+        "what-keeply-saves-vs-backup-cloud"
+      ],
+      "文件恢复": [
+        "autocad-wrong-version-crew",
+        "client-asked-which-version",
+        "dropbox-conflicted-copy",
+        "excel-version-history-limits",
+        "recover-overwritten-file",
+        "restore-without-panic",
+        "vibe-coding-rollback"
+      ],
+      "云端同步": [
+        "dropbox-conflicted-copy",
+        "excel-version-history-limits",
+        "file-version-management-complete-guide",
+        "hidden-cost-shared-folders"
+      ],
+      "Keeply 教程": [
+        "install-keeply-windows-mac",
+        "keeply-first-week-workflow",
+        "keeply-getting-started-from-zero",
+        "vibe-coding-rollback",
+        "what-keeply-saves-vs-backup-cloud"
+      ]
+    }
+  },
+  "ja": {
+    "tags": [
+      "操作ミス",
+      "Keeply チュートリアル",
+      "クラウド同期",
+      "ツール比較",
+      "バージョン管理",
+      "ファイル復元"
+    ],
+    "usage": {
+      "バージョン管理": [
+        "3-2-1-backup-rule",
+        "autocad-wrong-version-crew",
+        "dropbox-conflicted-copy",
+        "excel-version-history-limits",
+        "file-version-management-complete-guide",
+        "keeply-first-week-workflow",
+        "restore-without-panic",
+        "thesis-single-point-of-failure",
+        "too-many-file-versions",
+        "version-control-software-non-developer"
+      ],
+      "操作ミス": [
+        "3-2-1-backup-rule",
+        "client-asked-which-version",
+        "hidden-cost-shared-folders",
+        "recover-overwritten-file",
+        "too-many-file-versions"
+      ],
+      "ツール比較": [
+        "3-2-1-backup-rule",
+        "version-control-software-non-developer",
+        "what-keeply-saves-vs-backup-cloud"
+      ],
+      "ファイル復元": [
+        "autocad-wrong-version-crew",
+        "client-asked-which-version",
+        "dropbox-conflicted-copy",
+        "excel-version-history-limits",
+        "recover-overwritten-file",
+        "restore-without-panic",
+        "vibe-coding-rollback"
+      ],
+      "クラウド同期": [
+        "dropbox-conflicted-copy",
+        "excel-version-history-limits",
+        "file-version-management-complete-guide",
+        "hidden-cost-shared-folders"
+      ],
+      "Keeply チュートリアル": [
+        "install-keeply-windows-mac",
+        "keeply-first-week-workflow",
+        "keeply-getting-started-from-zero",
+        "vibe-coding-rollback",
+        "what-keeply-saves-vs-backup-cloud"
+      ]
+    }
+  },
+  "ko": {
+    "tags": [
+      "Keeply 튜토리얼",
+      "도구 비교",
+      "버전 관리",
+      "작업 오류",
+      "클라우드 동기화",
+      "파일 복구"
+    ],
+    "usage": {
+      "버전 관리": [
+        "3-2-1-backup-rule",
+        "autocad-wrong-version-crew",
+        "dropbox-conflicted-copy",
+        "excel-version-history-limits",
+        "file-version-management-complete-guide",
+        "keeply-first-week-workflow",
+        "restore-without-panic",
+        "thesis-single-point-of-failure",
+        "too-many-file-versions",
+        "version-control-software-non-developer"
+      ],
+      "작업 오류": [
+        "3-2-1-backup-rule",
+        "client-asked-which-version",
+        "hidden-cost-shared-folders",
+        "recover-overwritten-file",
+        "too-many-file-versions"
+      ],
+      "도구 비교": [
+        "3-2-1-backup-rule",
+        "version-control-software-non-developer",
+        "what-keeply-saves-vs-backup-cloud"
+      ],
+      "파일 복구": [
+        "autocad-wrong-version-crew",
+        "client-asked-which-version",
+        "dropbox-conflicted-copy",
+        "excel-version-history-limits",
+        "recover-overwritten-file",
+        "restore-without-panic",
+        "vibe-coding-rollback"
+      ],
+      "클라우드 동기화": [
+        "dropbox-conflicted-copy",
+        "excel-version-history-limits",
+        "file-version-management-complete-guide",
+        "hidden-cost-shared-folders"
+      ],
+      "Keeply 튜토리얼": [
+        "install-keeply-windows-mac",
+        "keeply-first-week-workflow",
+        "keeply-getting-started-from-zero",
+        "vibe-coding-rollback",
+        "what-keeply-saves-vs-backup-cloud"
+      ]
+    }
+  },
+  "it": {
+    "tags": [
+      "confronto strumenti",
+      "controllo versione",
+      "errore utente",
+      "guida Keeply",
+      "recupero file",
+      "sincronizzazione cloud"
+    ],
+    "usage": {
+      "controllo versione": [
+        "3-2-1-backup-rule",
+        "autocad-wrong-version-crew",
+        "dropbox-conflicted-copy",
+        "excel-version-history-limits",
+        "file-version-management-complete-guide",
+        "keeply-first-week-workflow",
+        "restore-without-panic",
+        "thesis-single-point-of-failure",
+        "too-many-file-versions",
+        "version-control-software-non-developer"
+      ],
+      "errore utente": [
+        "3-2-1-backup-rule",
+        "client-asked-which-version",
+        "hidden-cost-shared-folders",
+        "recover-overwritten-file",
+        "too-many-file-versions"
+      ],
+      "confronto strumenti": [
+        "3-2-1-backup-rule",
+        "version-control-software-non-developer",
+        "what-keeply-saves-vs-backup-cloud"
+      ],
+      "recupero file": [
+        "autocad-wrong-version-crew",
+        "client-asked-which-version",
+        "dropbox-conflicted-copy",
+        "excel-version-history-limits",
+        "recover-overwritten-file",
+        "restore-without-panic",
+        "vibe-coding-rollback"
+      ],
+      "sincronizzazione cloud": [
+        "dropbox-conflicted-copy",
+        "excel-version-history-limits",
+        "file-version-management-complete-guide",
+        "hidden-cost-shared-folders"
+      ],
+      "guida Keeply": [
+        "install-keeply-windows-mac",
+        "keeply-first-week-workflow",
+        "keeply-getting-started-from-zero",
+        "vibe-coding-rollback",
+        "what-keeply-saves-vs-backup-cloud"
+      ]
+    }
+  }
+}

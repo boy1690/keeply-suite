@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">PowerShell 視窗執行 winget install Boy1690.Keeply 指令</title>
+  <desc id="desc">示意圖：Windows Terminal 深灰黑背景，輸入 winget install Boy1690.Keeply，輸出顯示找到 Keeply、彩虹進度條下載、安裝成功。</desc>
+  <defs>
+    <linearGradient id="rainbow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="16%" stop-color="#f39c12"/>
+      <stop offset="33%" stop-color="#f1c40f"/>
+      <stop offset="50%" stop-color="#2ecc71"/>
+      <stop offset="66%" stop-color="#3498db"/>
+      <stop offset="83%" stop-color="#9b59b6"/>
+      <stop offset="100%" stop-color="#e91e63"/>
+    </linearGradient>
+    <style>
+      .bg { fill: #f7f8fb; }
+      .term-bg { fill: #0c0c0c; }
+      .titlebar { fill: #1f1f1f; }
+      .titletext { fill: #cccccc; font: 13px 'Segoe UI', system-ui, sans-serif; }
+      .prompt { fill: #d1d1d1; font: 14px Consolas, 'Courier New', monospace; }
+      .cmd { fill: #ffffff; font: 14px Consolas, 'Courier New', monospace; }
+      .output { fill: #cccccc; font: 13px Consolas, 'Courier New', monospace; }
+      .pkg-name { fill: #f1c40f; font: 13px Consolas, 'Courier New', monospace; }
+      .url { fill: #61afef; font: 13px Consolas, 'Courier New', monospace; }
+      .ok { fill: #4ade80; font: 13px Consolas, 'Courier New', monospace; }
+      .progress-track { fill: #2a2a2a; }
+      .annotation { fill: #f59e0b; font: 600 16px 'Noto Sans TC', system-ui, sans-serif; }
+      .highlight-rect { fill: none; stroke: #f59e0b; stroke-width: 2.5; rx: 4; ry: 4; }
+      .dot-r { fill: #ff5f57; }
+      .dot-y { fill: #febc2e; }
+      .dot-g { fill: #28c840; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="800" height="500"/>
+
+  <!-- Terminal window -->
+  <rect class="term-bg" x="80" y="60" width="640" height="380" rx="8" ry="8"/>
+
+  <!-- Title bar -->
+  <rect class="titlebar" x="80" y="60" width="640" height="32" rx="8" ry="8"/>
+  <rect class="titlebar" x="80" y="76" width="640" height="16"/>
+  <text class="titletext" x="400" y="82" text-anchor="middle">Windows PowerShell</text>
+
+  <!-- Command -->
+  <text class="prompt" x="100" y="125">PS C:\Users\you&gt;</text>
+  <text class="cmd" x="245" y="125">winget install </text>
+  <text class="pkg-name" x="375" y="125">Boy1690.Keeply</text>
+
+  <!-- Highlight box around command -->
+  <rect class="highlight-rect" x="240" y="108" width="240" height="24"/>
+
+  <!-- Output: Found -->
+  <text class="output" x="100" y="170">Found </text>
+  <text class="pkg-name" x="160" y="170">Keeply [Boy1690.Keeply]</text>
+  <text class="output" x="350" y="170">Version 1.x.x</text>
+
+  <text class="output" x="100" y="195">This application is licensed to you by its owner.</text>
+
+  <!-- Downloading -->
+  <text class="output" x="100" y="235">Downloading </text>
+  <text class="url" x="200" y="235">https://keeply.work/download/...</text>
+
+  <!-- Rainbow progress bar -->
+  <rect class="progress-track" x="100" y="252" width="400" height="14" rx="2" ry="2"/>
+  <rect x="100" y="252" width="280" height="14" rx="2" ry="2" fill="url(#rainbow)"/>
+  <text class="output" x="510" y="264">42.0 MB / 60.0 MB</text>
+
+  <!-- Verify + install -->
+  <text class="output" x="100" y="305">Successfully verified installer hash</text>
+  <text class="output" x="100" y="330">Starting package install ...</text>
+  <text class="ok" x="100" y="355">Successfully installed</text>
+
+  <!-- New prompt with cursor -->
+  <text class="prompt" x="100" y="395">PS C:\Users\you&gt;</text>
+  <rect x="245" y="380" width="9" height="18" fill="#ffffff"/>
+
+  <!-- Annotation -->
+  <text class="annotation" x="400" y="475" text-anchor="middle">One command, 30 seconds, no blue screen</text>
+</svg>

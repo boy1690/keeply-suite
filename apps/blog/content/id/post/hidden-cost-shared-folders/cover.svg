@@ -1,0 +1,208 @@
+<!-- =============================================================
+     Cover: hidden-cost-shared-folders
+     Kit version: 0.1
+     Recipe: 成本/數字 + 共享衝突 hybrid
+     Layout: 編輯雜誌式左右分欄（左文右圖，互不重疊）
+     用到零件: #person-focused, #person-anxious, #person-approaching,
+              #folder-shared, #keeply-lockup
+     ============================================================= -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none"
+     font-family="'Inter','Segoe UI',system-ui,sans-serif">
+
+  <!-- ============ INLINED LIBRARY ============ -->
+  <defs>
+    <linearGradient id="grad-indigo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#4338CA"/>
+    </linearGradient>
+    <linearGradient id="grad-indigo-deep" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4338CA"/><stop offset="1" stop-color="#312E81"/>
+    </linearGradient>
+    <linearGradient id="grad-indigo-soft" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9C98FF"/><stop offset="1" stop-color="#6F6AF0"/>
+    </linearGradient>
+    <linearGradient id="grad-amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFB300"/><stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="grad-paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8F7FF"/><stop offset="1" stop-color="#EEF2FF"/>
+    </linearGradient>
+    <linearGradient id="grad-screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E0E7FF"/><stop offset="1" stop-color="#C7D2FE"/>
+    </linearGradient>
+    <linearGradient id="grad-number" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4338CA"/><stop offset="1" stop-color="#312E81"/>
+    </linearGradient>
+    <pattern id="pat-grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#4338CA" stroke-width="1" opacity="0.05"/>
+    </pattern>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#312E81" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <symbol id="person-focused" viewBox="0 0 200 240">
+    <rect x="20" y="190" width="160" height="8" rx="2" fill="#9C98FF" opacity="0.35"/>
+    <rect x="110" y="182" width="70" height="6" rx="2" fill="#4338CA"/>
+    <path d="M115 182 L115 140 Q115 134 121 134 L175 134 Q181 134 181 140 L181 182 Z" fill="url(#grad-indigo)"/>
+    <rect x="121" y="140" width="54" height="36" rx="2" fill="url(#grad-screen)"/>
+    <rect x="126" y="146" width="30" height="3" rx="1" fill="#4338CA" opacity="0.45"/>
+    <rect x="126" y="154" width="40" height="3" rx="1" fill="#4338CA" opacity="0.35"/>
+    <rect x="126" y="162" width="24" height="3" rx="1" fill="#4338CA" opacity="0.35"/>
+    <rect x="54" y="150" width="10" height="60" rx="3" fill="#9C98FF" opacity="0.5"/>
+    <path d="M62 186 Q62 150 92 150 L110 150 Q110 186 110 196 L62 196 Z" fill="url(#grad-indigo)"/>
+    <path d="M100 168 Q115 168 115 178 L115 186 L100 186 Z" fill="url(#grad-indigo-soft)"/>
+    <circle cx="92" cy="124" r="24" fill="url(#grad-indigo-soft)"/>
+    <path d="M70 116 Q70 100 92 100 Q114 100 114 116 Q102 112 92 112 Q82 112 70 116 Z" fill="#4338CA" opacity="0.55"/>
+  </symbol>
+
+  <symbol id="person-anxious" viewBox="0 0 200 240">
+    <rect x="20" y="190" width="160" height="8" rx="2" fill="#9C98FF" opacity="0.35"/>
+    <rect x="110" y="182" width="70" height="6" rx="2" fill="#4338CA"/>
+    <path d="M115 182 L115 140 Q115 134 121 134 L175 134 Q181 134 181 140 L181 182 Z" fill="url(#grad-indigo)"/>
+    <rect x="121" y="140" width="54" height="36" rx="2" fill="url(#grad-screen)"/>
+    <circle cx="148" cy="158" r="9" fill="url(#grad-amber)"/>
+    <text x="148" y="163" font-size="14" font-weight="900" text-anchor="middle" fill="#312E81" font-family="system-ui,sans-serif">!</text>
+    <rect x="54" y="150" width="10" height="60" rx="3" fill="#9C98FF" opacity="0.5"/>
+    <path d="M60 186 Q58 148 90 148 L108 150 Q108 186 108 196 L60 196 Z" fill="url(#grad-indigo)"/>
+    <path d="M72 140 Q66 108 88 100 L92 110 Q78 118 84 142 Z" fill="url(#grad-indigo-soft)"/>
+    <circle cx="92" cy="122" r="24" fill="url(#grad-indigo-soft)"/>
+    <path d="M70 114 Q70 98 92 98 Q114 98 114 114 Q102 110 92 110 Q82 110 70 114 Z" fill="#4338CA" opacity="0.55"/>
+    <circle cx="150" cy="70" r="24" fill="#ffffff" stroke="url(#grad-amber)" stroke-width="3"/>
+    <text x="150" y="80" font-size="32" font-weight="900" text-anchor="middle" fill="#F59E0B" font-family="system-ui,sans-serif">?</text>
+    <circle cx="130" cy="98" r="4" fill="#ffffff" stroke="url(#grad-amber)" stroke-width="2"/>
+  </symbol>
+
+  <symbol id="person-approaching" viewBox="0 0 200 240">
+    <rect x="74" y="222" width="20" height="10" rx="3" fill="#312E81"/>
+    <rect x="104" y="224" width="22" height="8" rx="3" fill="#312E81"/>
+    <rect x="76" y="170" width="18" height="58" rx="4" fill="#4338CA"/>
+    <rect x="104" y="170" width="22" height="58" rx="4" fill="url(#grad-indigo-deep)"/>
+    <path d="M68 176 Q68 130 100 130 L120 130 Q128 130 128 138 L128 176 Z" fill="url(#grad-indigo)"/>
+    <rect x="96" y="148" width="22" height="34" rx="4" fill="url(#grad-indigo-deep)"/>
+    <rect x="100" y="152" width="14" height="24" rx="1" fill="url(#grad-screen)"/>
+    <circle cx="107" cy="164" r="2" fill="url(#grad-amber)"/>
+    <path d="M90 138 Q85 150 98 154 L100 148 Z" fill="url(#grad-indigo-soft)"/>
+    <circle cx="100" cy="108" r="24" fill="url(#grad-indigo-soft)"/>
+    <path d="M78 100 Q78 84 100 84 Q122 84 122 100 Q110 96 100 96 Q90 96 78 100 Z" fill="#4338CA" opacity="0.55"/>
+  </symbol>
+
+  <symbol id="folder-shared" viewBox="0 0 480 360">
+    <ellipse cx="240" cy="340" rx="180" ry="12" fill="#312E81" opacity="0.10"/>
+    <path d="M20 90 Q20 70 40 70 L160 70 L190 100 L440 100 Q460 100 460 120 L460 320 Q460 340 440 340 L40 340 Q20 340 20 320 Z" fill="url(#grad-indigo-deep)"/>
+    <path d="M20 130 Q20 110 40 110 L440 110 Q460 110 460 130 L460 320 Q460 340 440 340 L40 340 Q20 340 20 320 Z" fill="url(#grad-indigo)"/>
+    <rect x="40" y="130" width="80" height="6" rx="3" fill="url(#grad-amber)"/>
+  </symbol>
+
+  <symbol id="keeply-mark" viewBox="0 0 512 512">
+    <path d="M396 129C429 159 448 200 448 255C448 363 360 451 252 451C145 451 58 368 56 263C55 206 75 158 111 123" stroke="url(#grad-indigo)" stroke-width="44" stroke-linecap="round" fill="none"/>
+    <path d="M111 123C145 91 190 72 239 72C253 72 265 73 278 76" stroke="url(#grad-amber)" stroke-width="44" stroke-linecap="round" fill="none"/>
+    <path d="M236 54L313 79L254 134L236 54Z" fill="url(#grad-amber)"/>
+    <rect x="220" y="150" width="152" height="206" rx="32" fill="url(#grad-indigo-soft)" opacity="0.48"/>
+    <rect x="192" y="167" width="152" height="206" rx="32" fill="url(#grad-indigo-soft)" opacity="0.72"/>
+    <rect x="164" y="184" width="152" height="206" rx="32" fill="url(#grad-indigo)"/>
+  </symbol>
+
+  <symbol id="keeply-lockup" viewBox="0 0 260 64">
+    <g transform="translate(0,4) scale(0.11)"><use href="#keeply-mark"/></g>
+    <text x="66" y="28" font-size="24" font-weight="800" fill="#312E81" font-family="system-ui,sans-serif" letter-spacing="0.2">Keeply</text>
+    <text x="66" y="50" font-size="11" font-weight="600" fill="#4338CA" opacity="0.72" font-family="system-ui,sans-serif" letter-spacing="1.5">KEEPLY.WORK</text>
+  </symbol>
+
+  <!-- ============ COMPOSITION (editorial split: left text / right scene) ============ -->
+
+  <!-- 背景 -->
+  <rect width="1600" height="900" fill="url(#grad-paper)"/>
+  <rect width="1600" height="900" fill="url(#pat-grid)"/>
+
+  <!-- 背景氛圍色斑（只出現在圖面區） -->
+  <circle cx="1450" cy="780" r="200" fill="#FDE68A" opacity="0.28"/>
+  <circle cx="1180" cy="200" r="240" fill="#DDD6FE" opacity="0.30"/>
+
+  <!-- 左右分隔的細垂直線（保險：分欄感） -->
+  <line x1="720" y1="120" x2="720" y2="780" stroke="#C7D2FE" stroke-width="1" opacity="0.55" stroke-dasharray="4 8"/>
+
+  <!-- ============ 左欄：純文字 ============ -->
+
+  <!-- Eyebrow -->
+  <g transform="translate(120, 120)">
+    <rect x="0" y="2" width="14" height="14" fill="url(#grad-amber)"/>
+    <text x="28" y="14" font-size="17" font-weight="800" fill="#312E81" letter-spacing="4">THE HIDDEN COST</text>
+    <text x="28" y="40" font-size="14" font-weight="600" fill="#4338CA" opacity="0.72" letter-spacing="2">PAJAK MIKRO-PANIK · EDITORIAL</text>
+  </g>
+
+  <!-- 大數字 83 -->
+  <g transform="translate(120, 210)">
+    <text x="0" y="310" font-size="400" font-weight="900" fill="url(#grad-number)" letter-spacing="-20">83</text>
+    <!-- 琥珀底線 -->
+    <path d="M0 334 L380 334" stroke="url(#grad-amber)" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <!-- 數字下方標籤 -->
+  <g transform="translate(120, 580)">
+    <text x="0" y="0" font-size="32" font-weight="800" fill="#312E81">JAM / TAHUN</text>
+    <text x="0" y="38" font-size="17" font-weight="500" fill="#4338CA" opacity="0.75">HILANG KARENA CEMAS</text>
+  </g>
+
+  <!-- 左欄副標（解釋 83 是什麼） -->
+  <g transform="translate(120, 680)">
+    <text x="0" y="0" font-size="20" font-weight="700" fill="#312E81">Pajak yang kau bayar tiap hari:</text>
+    <text x="0" y="30" font-size="20" font-weight="700" fill="#312E81">"apakah aku  file rekan?"<tspan fill="#F59E0B">menimpa</tspan></text>
+  </g>
+
+  <!-- 左下：Keeply lockup -->
+  <use href="#keeply-lockup" x="120" y="780" width="200" height="50"/>
+
+  <!-- ============ 右欄：純場景 ============ -->
+
+  <!-- 連接線：3 位角色都伸向中央資料夾 -->
+  <g stroke="#9C98FF" stroke-width="2" stroke-dasharray="6 8" fill="none" opacity="0.55">
+    <path d="M870 650 Q930 560 1020 480"/>
+    <path d="M1120 630 Q1120 540 1120 470"/>
+    <path d="M1420 600 Q1340 520 1240 470"/>
+  </g>
+
+  <!-- 中央資料夾 -->
+  <use href="#folder-shared" x="900" y="160" width="420" height="320"/>
+
+  <!-- 資料夾中央：混亂檔名卡片 -->
+  <g transform="translate(940, 240)" filter="url(#soft-shadow)">
+    <g transform="translate(0,150) rotate(-4)" opacity="0.55">
+      <rect width="330" height="40" rx="7" fill="#ffffff"/>
+      <rect x="14" y="13" width="10" height="14" fill="#C7D2FE"/>
+      <text x="36" y="26" font-size="14" font-weight="500" fill="#6F6AF0" font-family="'JetBrains Mono',monospace">Floorplan_v6.dwg</text>
+    </g>
+    <g transform="translate(15,100) rotate(2)" opacity="0.72">
+      <rect width="340" height="40" rx="7" fill="#ffffff"/>
+      <rect x="14" y="13" width="10" height="14" fill="#C7D2FE"/>
+      <text x="36" y="26" font-size="14" font-weight="500" fill="#6F6AF0" font-family="'JetBrains Mono',monospace">Floorplan_v7_Client.dwg</text>
+    </g>
+    <g transform="translate(8,50) rotate(-2)" opacity="0.9">
+      <rect width="350" height="40" rx="7" fill="#ffffff"/>
+      <rect x="14" y="13" width="10" height="14" fill="#C7D2FE"/>
+      <text x="36" y="26" font-size="14" font-weight="500" fill="#6F6AF0" font-family="'JetBrains Mono',monospace">Floorplan_v7_FINAL.dwg</text>
+    </g>
+    <g transform="translate(4,0) rotate(3)">
+      <rect x="-3" y="-3" width="366" height="46" rx="10" fill="none" stroke="url(#grad-amber)" stroke-width="3"/>
+      <rect width="360" height="40" rx="7" fill="#ffffff"/>
+      <rect x="14" y="13" width="10" height="14" fill="url(#grad-amber)"/>
+      <text x="36" y="26" font-size="14" font-weight="700" fill="#312E81" font-family="'JetBrains Mono',monospace">Floorplan_v7_FINAL_JANGAN_SENTUH.dwg</text>
+    </g>
+  </g>
+
+  <!-- 三個角色：底部對齊地板線 y=760 -->
+  <!-- 左：同事 A（專注，坐姿）  -->
+  <use href="#person-focused" x="770" y="562" width="200" height="240"/>
+  <!-- 中：主角（困惑，略大以作為焦點，坐姿）  -->
+  <use href="#person-anxious" x="1020" y="542" width="220" height="264"/>
+  <!-- 右：PM（走過來，站姿）  -->
+  <use href="#person-approaching" x="1340" y="528" width="180" height="240"/>
+
+  <!-- 地板線 -->
+  <line x1="740" y1="760" x2="1520" y2="760" stroke="#C7D2FE" stroke-width="1.5" opacity="0.55"/>
+
+  <!-- 右下：場景註解（小字，不與 lockup 爭） -->
+  <g transform="translate(760, 800)">
+    <text x="0" y="0" font-size="14" font-weight="600" fill="#4338CA" opacity="0.72" letter-spacing="1">4 desainer  ·  1 folder  ·  1,6 jam/minggu bertahan</text>
+  </g>
+
+</svg>

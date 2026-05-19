@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 224" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',-apple-system,system-ui,sans-serif">
+<rect x="0" y="0" width="480" height="224" rx="8" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+<circle cx="20" cy="32" r="4" fill="#3B82F6"/>
+<text x="32" y="37" font-size="13" fill="#374151">クライアント承認 — proposal_acme.docx</text>
+<rect x="306" y="23" width="86" height="18" rx="9" fill="#DBEAFE" stroke="#BFDBFE" stroke-width="1"/>
+<text x="349" y="36" font-size="11" font-weight="500" fill="#1D4ED8" text-anchor="middle">顧客 v1</text>
+<text x="464" y="36" font-size="11" fill="#9CA3AF" text-anchor="end">Day 7 09:14</text>
+<circle cx="20" cy="64" r="4" fill="#3B82F6"/>
+<text x="32" y="69" font-size="13" fill="#374151">SLA 修正 + 自動保存</text>
+<text x="464" y="68" font-size="11" fill="#9CA3AF" text-anchor="end">Day 5 17:40</text>
+<circle cx="20" cy="96" r="4" fill="#3B82F6"/>
+<text x="32" y="101" font-size="13" fill="#374151">test_doc 復元 — 救出成功</text>
+<rect x="338" y="87" width="54" height="18" rx="9" fill="#DBEAFE" stroke="#BFDBFE" stroke-width="1"/>
+<text x="365" y="100" font-size="11" font-weight="500" fill="#1D4ED8" text-anchor="middle">復元</text>
+<text x="464" y="100" font-size="11" fill="#9CA3AF" text-anchor="end">Day 5 14:35</text>
+<circle cx="20" cy="128" r="4" fill="#3B82F6"/>
+<text x="32" y="133" font-size="13" fill="#374151">最終価格</text>
+<rect x="338" y="119" width="54" height="18" rx="9" fill="#DBEAFE" stroke="#BFDBFE" stroke-width="1"/>
+<text x="365" y="132" font-size="11" font-weight="500" fill="#1D4ED8" text-anchor="middle">価格</text>
+<text x="464" y="132" font-size="11" fill="#9CA3AF" text-anchor="end">Day 2 16:55</text>
+<circle cx="20" cy="160" r="4" fill="#3B82F6"/>
+<text x="32" y="165" font-size="13" fill="#374151">新規ファイル proposal_acme.docx</text>
+<text x="464" y="164" font-size="11" fill="#9CA3AF" text-anchor="end">Day 1 09:14</text>
+<circle cx="20" cy="192" r="4" fill="#3B82F6"/>
+<text x="32" y="197" font-size="13" fill="#374151">Keeply インストール</text>
+<rect x="292" y="183" width="100" height="18" rx="9" fill="#DBEAFE" stroke="#BFDBFE" stroke-width="1"/>
+<text x="342" y="196" font-size="11" font-weight="500" fill="#1D4ED8" text-anchor="middle">セットアップ</text>
+<text x="464" y="196" font-size="11" fill="#9CA3AF" text-anchor="end">Day 1 08:30</text>
+</svg>

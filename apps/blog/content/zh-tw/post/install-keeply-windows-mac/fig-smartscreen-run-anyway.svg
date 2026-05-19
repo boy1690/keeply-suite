@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">點完「其他資訊」後出現「仍要執行」按鈕</title>
+  <desc id="desc">示意圖：藍色 SmartScreen 警告下半部，amber 圓圈框出「仍要執行」按鈕。兩顆按鈕同款式，靠右下對齊。</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7f8fb; }
+      .smartscreen-bg { fill: #1e2a78; }
+      .ss-header { fill: #ffffff; font: 600 14px 'Segoe UI', system-ui, sans-serif; }
+      .ss-title { fill: #ffffff; font: 600 26px 'Segoe UI', system-ui, sans-serif; }
+      .ss-body { fill: #d1d5db; font: 13px 'Segoe UI', system-ui, sans-serif; }
+      .ss-publisher { fill: #ffffff; font: 13px 'Segoe UI', system-ui, sans-serif; }
+      .btn { fill: #ffffff; rx: 2; ry: 2; }
+      .btn-text { fill: #1e2a78; font: 600 14px 'Segoe UI', system-ui, sans-serif; }
+      .annotation { fill: #f59e0b; font: 600 18px 'Noto Sans TC', system-ui, sans-serif; }
+      .highlight-circle { fill: none; stroke: #f59e0b; stroke-width: 3; }
+      .arrow { stroke: #f59e0b; stroke-width: 2.5; fill: none; }
+      .arrow-head { fill: #f59e0b; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="800" height="500"/>
+
+  <!-- SmartScreen window -->
+  <rect class="smartscreen-bg" x="180" y="60" width="440" height="340" rx="6" ry="6"/>
+
+  <!-- Title bar -->
+  <text class="ss-header" x="200" y="90">Microsoft Defender SmartScreen</text>
+
+  <!-- Big title -->
+  <text class="ss-title" x="200" y="135">Windows 已保護你的電腦</text>
+
+  <!-- Body text -->
+  <text class="ss-body" x="200" y="170">Microsoft Defender SmartScreen 已封鎖無法辨識</text>
+  <text class="ss-body" x="200" y="190">的應用程式啟動。執行此應用程式可能會讓你的</text>
+  <text class="ss-body" x="200" y="210">電腦處於風險中。</text>
+
+  <!-- App / Publisher info (revealed after clicking More info) -->
+  <text class="ss-body" x="200" y="250">應用程式：</text>
+  <text class="ss-publisher" x="280" y="250">Keeply-Setup.exe</text>
+  <text class="ss-body" x="200" y="270">發行者：</text>
+  <text class="ss-publisher" x="280" y="270">Boy1690</text>
+
+  <!-- Buttons: bottom-right, both same style -->
+  <!-- Run anyway (left) -->
+  <rect class="btn" x="375" y="345" width="105" height="38"/>
+  <text class="btn-text" x="427" y="370" text-anchor="middle">仍要執行</text>
+
+  <!-- Don't run (right) -->
+  <rect class="btn" x="490" y="345" width="100" height="38"/>
+  <text class="btn-text" x="540" y="370" text-anchor="middle">不執行</text>
+
+  <!-- Highlight on 仍要執行 -->
+  <ellipse class="highlight-circle" cx="427" cy="364" rx="65" ry="26"/>
+
+  <!-- Annotation -->
+  <path class="arrow" d="M 427 440 L 427 395" />
+  <polygon class="arrow-head" points="427,395 421,405 433,405" />
+  <text class="annotation" x="427" y="475" text-anchor="middle">按這顆，安裝精靈接手</text>
+</svg>

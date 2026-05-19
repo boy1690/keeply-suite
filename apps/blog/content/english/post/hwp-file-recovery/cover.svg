@@ -1,0 +1,157 @@
+<!-- =============================================================
+     Cover: hwp-file-recovery (english)
+     Recipe: side-by-side-comparison — 左 3 機制全敗 vs 右 Keeply timeline
+     ============================================================= -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none"
+     font-family="'Inter','Helvetica Neue',Arial,system-ui,sans-serif">
+
+  <defs>
+    <linearGradient id="grad-indigo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#312E81"/>
+    </linearGradient>
+    <linearGradient id="grad-amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFB300"/><stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="grad-paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F8F7FF"/><stop offset="1" stop-color="#E4E3FF"/>
+    </linearGradient>
+    <linearGradient id="grad-red" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FEE2E2"/><stop offset="1" stop-color="#FECACA"/>
+    </linearGradient>
+
+    <symbol id="keeply-lockup" viewBox="0 0 200 50">
+      <circle cx="22" cy="25" r="16" fill="url(#grad-indigo)"/>
+      <path d="M16 18 L16 32 M16 25 L26 18 M16 25 L26 32" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <text x="48" y="33" font-size="22" font-weight="800" fill="#312E81">Keeply</text>
+    </symbol>
+
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#312E81" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#grad-paper)"/>
+
+  <!-- Eyebrow -->
+  <g transform="translate(120, 80)">
+    <text x="0" y="0" font-size="15" font-weight="700" fill="#4338CA" letter-spacing="3">FILE MANAGEMENT · EDITORIAL</text>
+  </g>
+
+  <!-- Title -->
+  <g transform="translate(120, 130)">
+    <text x="0" y="0" font-size="44" font-weight="900" fill="#312E81" letter-spacing="-0.5">한글 파일 복구</text>
+    <text x="0" y="55" font-size="22" font-weight="600" fill="#4338CA" opacity="0.7">3 recovery mechanisms vs Keeply timeline layer</text>
+  </g>
+
+  <!-- LEFT SIDE: HWP 3 mechanisms -->
+  <g transform="translate(80, 290)">
+    <text x="0" y="0" font-size="14" font-weight="700" fill="#7F1D1D" letter-spacing="2">HWP BUILT-IN · ALL FAIL</text>
+
+    <g transform="translate(0, 30)" filter="url(#soft-shadow)">
+      <rect width="540" height="120" fill="url(#grad-red)" rx="10"/>
+      <rect x="0" y="0" width="6" height="120" fill="#DC2626" rx="2"/>
+      <text x="28" y="38" font-size="20" font-weight="800" fill="#7F1D1D">자동 저장 (Autosave)</text>
+      <text x="28" y="65" font-size="14" font-weight="500" fill="#991B1B">Every 10 min to ~AutoSave/</text>
+      <text x="28" y="90" font-size="14" font-weight="500" fill="#991B1B">Crash only, not '3 weeks ago'</text>
+      <g transform="translate(490, 60)">
+        <circle cx="0" cy="0" r="20" fill="#DC2626"/>
+        <text x="0" y="6" font-size="18" font-weight="900" fill="white" text-anchor="middle">✕</text>
+      </g>
+    </g>
+
+    <g transform="translate(0, 165)" filter="url(#soft-shadow)">
+      <rect width="540" height="120" fill="url(#grad-red)" rx="10"/>
+      <rect x="0" y="0" width="6" height="120" fill="#DC2626" rx="2"/>
+      <text x="28" y="38" font-size="20" font-weight="800" fill="#7F1D1D">임시 저장 .bak</text>
+      <text x="28" y="65" font-size="14" font-weight="500" fill="#991B1B">Overwritten on next save</text>
+      <text x="28" y="90" font-size="14" font-weight="500" fill="#991B1B">1 version only, no stacking</text>
+      <g transform="translate(490, 60)">
+        <circle cx="0" cy="0" r="20" fill="#DC2626"/>
+        <text x="0" y="6" font-size="18" font-weight="900" fill="white" text-anchor="middle">✕</text>
+      </g>
+    </g>
+
+    <g transform="translate(0, 300)" filter="url(#soft-shadow)">
+      <rect width="540" height="120" fill="url(#grad-red)" rx="10"/>
+      <rect x="0" y="0" width="6" height="120" fill="#DC2626" rx="2"/>
+      <text x="28" y="38" font-size="20" font-weight="800" fill="#7F1D1D">백업파일</text>
+      <text x="28" y="65" font-size="14" font-weight="500" fill="#991B1B">Configurable, 1-2 version limit</text>
+      <text x="28" y="90" font-size="14" font-weight="500" fill="#991B1B">Not true version history</text>
+      <g transform="translate(490, 60)">
+        <circle cx="0" cy="0" r="20" fill="#DC2626"/>
+        <text x="0" y="6" font-size="18" font-weight="900" fill="white" text-anchor="middle">✕</text>
+      </g>
+    </g>
+
+    <text x="270" y="465" font-size="16" font-weight="700" fill="#7F1D1D" text-anchor="middle">'3 weeks ago' — all 3 fail</text>
+  </g>
+
+  <!-- Vertical divider + VS badge -->
+  <line x1="800" y1="290" x2="800" y2="760" stroke="#312E81" stroke-width="2" stroke-dasharray="4 6" opacity="0.3"/>
+  <g transform="translate(800, 525)">
+    <circle cx="0" cy="0" r="28" fill="white" stroke="#312E81" stroke-width="2"/>
+    <text x="0" y="6" font-size="18" font-weight="900" fill="#312E81" text-anchor="middle">VS</text>
+  </g>
+
+  <!-- RIGHT SIDE: Keeply timeline -->
+  <g transform="translate(880, 290)">
+    <text x="0" y="0" font-size="14" font-weight="700" fill="#065F46" letter-spacing="2">KEEPLY · CROSS-TOOL TIMELINE</text>
+
+    <g transform="translate(0, 30)" filter="url(#soft-shadow)">
+      <rect width="600" height="420" fill="white" rx="14" stroke="#A7F3D0" stroke-width="2"/>
+      <line x1="40" y1="40" x2="40" y2="380" stroke="#4F46E5" stroke-width="2"/>
+
+      <g transform="translate(40, 50)">
+        <circle cx="0" cy="0" r="8" fill="#4F46E5"/>
+        <text x="24" y="6" font-size="15" font-weight="600" fill="#312E81">Auto-save — chapter 5 edits</text>
+        <text x="24" y="28" font-size="12" font-weight="500" fill="#9CA3AF">30 min ago</text>
+      </g>
+
+      <g transform="translate(40, 120)">
+        <circle cx="0" cy="0" r="12" fill="url(#grad-amber)" stroke="#F59E0B" stroke-width="3"/>
+        <text x="28" y="6" font-size="17" font-weight="800" fill="#312E81">Submitted to supervisor v2</text>
+        <g transform="translate(28, 30)">
+          <rect x="0" y="-12" width="70" height="22" fill="url(#grad-amber)" rx="11"/>
+          <text x="35" y="3" font-size="12" font-weight="800" fill="#7F1D1D" text-anchor="middle">RELEASE</text>
+          <text x="84" y="3" font-size="12" font-weight="500" fill="#065F46">3 weeks ago · Release frozen</text>
+        </g>
+      </g>
+
+      <g transform="translate(40, 210)">
+        <circle cx="0" cy="0" r="8" fill="#4F46E5"/>
+        <text x="24" y="6" font-size="15" font-weight="600" fill="#312E81">CFO third-round edits</text>
+        <text x="24" y="28" font-size="12" font-weight="500" fill="#9CA3AF">3 weeks ago</text>
+      </g>
+
+      <g transform="translate(40, 275)">
+        <circle cx="0" cy="0" r="8" fill="#4F46E5"/>
+        <text x="24" y="6" font-size="15" font-weight="600" fill="#312E81">Month-start proposal version</text>
+        <text x="24" y="28" font-size="12" font-weight="500" fill="#9CA3AF">1 month ago</text>
+      </g>
+
+      <g transform="translate(40, 340)">
+        <circle cx="0" cy="0" r="8" fill="#4F46E5"/>
+        <text x="24" y="6" font-size="15" font-weight="600" fill="#312E81">Project kickoff draft</text>
+        <text x="24" y="28" font-size="12" font-weight="500" fill="#9CA3AF">2 months ago</text>
+      </g>
+    </g>
+
+    <g transform="translate(300, 480)">
+      <circle cx="-150" cy="-4" r="14" fill="#10B981"/>
+      <text x="-150" y="2" font-size="14" font-weight="900" fill="white" text-anchor="middle">✓</text>
+      <text x="-130" y="2" font-size="16" font-weight="700" fill="#065F46">「3 weeks ago那版」Release tag 一鍵找到</text>
+    </g>
+  </g>
+
+  <!-- Bottom subtitle -->
+  <g transform="translate(120, 800)">
+    <text x="0" y="0" font-size="26" font-weight="700" fill="#312E81">Time dimension — HWP missing, <tspan fill="#F59E0B">Keeply fills it</tspan>。</text>
+  </g>
+
+  <g transform="translate(120, 855)">
+    <text x="0" y="0" font-size="11" font-weight="600" fill="#4338CA" opacity="0.5" letter-spacing="1.5">HANCOM 한글 · 자동 저장 · 임시 저장 · 백업파일 · 시간 축 차원의 격차</text>
+  </g>
+
+  <use href="#keeply-lockup" x="1380" y="845" width="160" height="40"/>
+
+</svg>

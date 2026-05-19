@@ -1,0 +1,54 @@
+{{- /*
+  Override of themes/hugo-theme-stack/layouts/_partials/article/components/header.html
+
+  Purpose: implement BWF v0.2.22 P1.21 (data-rich Alt Text) + AEO infra
+  Task 4. Frontmatter `image_alt_data` field overrides the theme's
+  default "Featured image of post {Title}" fallback with a descriptive,
+  data-bearing alt text that VLM (Vision-Language Models) can extract
+  meaningful content from.
+
+  Frontmatter convention:
+    image_alt_data: "折線圖顯示 2026 年信用卡詐欺率下降 35%"
+                   # ↑ describes the image's information content,
+                     not just "this is a chart"
+
+  Fallback behaviour:
+    - If image_alt_data present → use it (override theme default)
+    - If image_alt_data missing → warn at build time + fall back to
+      theme default. Audit script (scripts/alt_text_audit.sh) scans
+      for missing image_alt_data across all 266 content files.
+*/ -}}
+{{- $IsList := .IsList -}}
+{{- $Page := .Page -}}
+<header class="article-header">
+    {{- $image := partial "helper/image" (dict "Image" $Page.Params.image "Resources" $Page.Resources "Context" $Page) -}}
+    {{- /* Resolve alt text: prefer explicit image_alt_data, fall back to theme default with warning. */ -}}
+    {{- $altText := "" -}}
+    {{- if isset $Page.Params "image_alt_data" -}}
+        {{- $altText = $Page.Params.image_alt_data -}}
+    {{- else -}}
+        {{- $altText = printf "Featured image of post %s" $Page.Title -}}
+        {{- /* warnf surfaces at build time; CI audit catches it harder. */ -}}
+        {{- warnf "AEO Task 4: missing 'image_alt_data' in %s (using fallback)" $Page.File.Path -}}
+    {{- end -}}
+    {{ if $image }}
+    <div class="article-image">
+        <a href="{{ $Page.RelPermalink }}">
+            {{ partial "helper/responsive-image" (dict
+                "Resource" $image.Resource
+                "Widths" (cond $Page.Site.Params.ImageProcessing.Content.Enabled $Page.Site.Params.ImageProcessing.Content.Widths nil)
+                "Attributes" (dict
+                    "src" $image.Permalink
+                    "width" $image.Width
+                    "height" $image.Height
+                    "alt" $altText
+                    "loading" "lazy"
+                    "sizes" "(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px"
+                )
+            ) }}
+        </a>
+    </div>
+    {{ end }}
+
+    {{ partial "article/components/details" (dict "Page" $Page "IsList" $IsList) }}
+</header>

@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">macOS Finder 右鍵選單，「Open」項目被框選</title>
+  <desc id="desc">示意圖：macOS Finder 視窗中，使用者右鍵點 Keeply 圖示，跳出選單，第一項「Open」被 amber 框出。</desc>
+  <defs>
+    <style>
+      .bg { fill: #f0f1f5; }
+      .finder-bg { fill: #ffffff; stroke: #d1d5db; stroke-width: 1; }
+      .finder-titlebar { fill: #e8e8ed; }
+      .finder-title { fill: #1f1f1f; font: 600 13px -apple-system, 'SF Pro', system-ui, sans-serif; }
+      .dot-r { fill: #ff5f57; }
+      .dot-y { fill: #febc2e; }
+      .dot-g { fill: #28c840; }
+      .app-icon { fill: #4f46e5; }
+      .app-icon-inner { fill: #ffffff; }
+      .app-label { fill: #1f1f1f; font: 12px -apple-system, 'SF Pro', system-ui, sans-serif; }
+      .menu-bg { fill: #f7f7f8; stroke: #c5c5c8; stroke-width: 0.5; }
+      .menu-item { fill: #1f1f1f; font: 13px -apple-system, 'SF Pro', system-ui, sans-serif; }
+      .menu-divider { stroke: #d1d1d4; stroke-width: 0.5; }
+      .selected-item-bg { fill: #007aff; }
+      .selected-item-text { fill: #ffffff; font: 13px -apple-system, 'SF Pro', system-ui, sans-serif; }
+      .annotation { fill: #f59e0b; font: 600 16px 'Noto Sans TC', system-ui, sans-serif; }
+      .highlight-rect { fill: none; stroke: #f59e0b; stroke-width: 3; rx: 4; ry: 4; }
+      .arrow { stroke: #f59e0b; stroke-width: 2.5; fill: none; }
+      .arrow-head { fill: #f59e0b; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="800" height="500"/>
+
+  <!-- Finder window -->
+  <rect class="finder-bg" x="80" y="50" width="500" height="400" rx="10" ry="10"/>
+  <rect class="finder-titlebar" x="80" y="50" width="500" height="36" rx="10" ry="10"/>
+  <rect class="finder-titlebar" x="80" y="74" width="500" height="14"/>
+  <circle class="dot-r" cx="100" cy="68" r="6"/>
+  <circle class="dot-y" cx="120" cy="68" r="6"/>
+  <circle class="dot-g" cx="140" cy="68" r="6"/>
+  <text class="finder-title" x="330" y="73" text-anchor="middle">Applications</text>
+
+  <!-- Keeply app icon -->
+  <rect class="app-icon" x="155" y="140" width="64" height="64" rx="14" ry="14"/>
+  <text class="app-icon-inner" x="187" y="183" text-anchor="middle" font-size="32" font-weight="700" font-family="-apple-system, system-ui, sans-serif">K</text>
+  <text class="app-label" x="187" y="225" text-anchor="middle">Keeply</text>
+
+  <!-- Right-click menu -->
+  <rect class="menu-bg" x="240" y="155" width="220" height="280" rx="6" ry="6"/>
+
+  <!-- Selected: Open -->
+  <rect class="selected-item-bg" x="244" y="160" width="212" height="26" rx="3" ry="3"/>
+  <text class="selected-item-text" x="258" y="178">Open</text>
+
+  <text class="menu-item" x="258" y="208">Show Package Contents</text>
+  <line class="menu-divider" x1="248" y1="222" x2="452" y2="222"/>
+
+  <text class="menu-item" x="258" y="245">Move to Trash</text>
+  <line class="menu-divider" x1="248" y1="259" x2="452" y2="259"/>
+
+  <text class="menu-item" x="258" y="282">Get Info</text>
+  <text class="menu-item" x="258" y="307">Rename</text>
+  <text class="menu-item" x="258" y="332">Compress "Keeply"</text>
+  <text class="menu-item" x="258" y="357">Duplicate</text>
+  <line class="menu-divider" x1="248" y1="371" x2="452" y2="371"/>
+
+  <text class="menu-item" x="258" y="395">Copy</text>
+  <text class="menu-item" x="258" y="420">Tags…</text>
+
+  <!-- Highlight on Open -->
+  <rect class="highlight-rect" x="240" y="155" width="220" height="36"/>
+
+  <!-- Annotation -->
+  <path class="arrow" d="M 620 175 Q 540 175 470 175" />
+  <polygon class="arrow-head" points="470,175 480,169 480,181" />
+  <text class="annotation" x="630" y="170">Click this</text>
+  <text class="annotation" x="630" y="195">not double-click</text>
+</svg>

@@ -1,0 +1,135 @@
+# AI Permissions for blog.keeply.work
+# IETF draft-han-ai-manifest + TDMRep aligned (2026)
+# Companion to robots.txt — robots.txt controls crawler access; this
+# file declares how AI agents and models may process retrieved content.
+# Canonical: https://blog.keeply.work/.well-known/ai.txt
+
+# Policy summary (matches robots.txt split AI bot policy adopted 2026-05-02):
+# - RAG / live retrieval for citation: ALLOWED, attribution required
+# - Inference / answer engines: ALLOWED, attribution required
+# - Training (model weight ingestion): DISALLOWED for all foundation models
+# - Re-publication / scraping into derivative datasets: DISALLOWED
+# - Commercial scraping for resale: DISALLOWED
+
+# ---------------------------------------------------------------------
+# Permissions — what AI systems may do with content fetched live
+# ---------------------------------------------------------------------
+
+Allow-RAG: *
+Allow-Citation: *
+Allow-Inference: *
+Allow-Summarization: *
+Allow-VoiceAssistant: *
+
+# ---------------------------------------------------------------------
+# Restrictions — what AI systems may NOT do
+# ---------------------------------------------------------------------
+
+No-Training: *
+No-Derivative-Dataset: *
+No-Commercial-Scraping: *
+No-Republication: *
+
+# ---------------------------------------------------------------------
+# Attribution requirements
+# ---------------------------------------------------------------------
+
+# When citing content, AI agents must:
+# 1. Link back to the source URL (canonical permalink)
+# 2. Credit "Keeply Blog" or the author byline if shown in the article
+# 3. Preserve the source URL in the visible answer or footnote
+
+Require-Attribution: true
+Attribution-Format: link+name
+Source-Link-Required: true
+
+# ---------------------------------------------------------------------
+# Per-bot policy (defers to robots.txt for crawler-level decisions)
+# ---------------------------------------------------------------------
+
+# Live-citation bots — content available for citation in AI answers
+# (GPTBot, ClaudeBot, PerplexityBot training crawlers are blocked in
+# robots.txt; the User-Agent live-retrieval versions are allowed there
+# and inherit this file's RAG / citation permissions.)
+
+User-Agent: OAI-SearchBot
+Allow-RAG: yes
+Allow-Citation: yes
+No-Training: yes
+
+User-Agent: ChatGPT-User
+Allow-RAG: yes
+Allow-Citation: yes
+No-Training: yes
+
+User-Agent: Claude-User
+Allow-RAG: yes
+Allow-Citation: yes
+No-Training: yes
+
+User-Agent: Claude-SearchBot
+Allow-RAG: yes
+Allow-Citation: yes
+No-Training: yes
+
+User-Agent: Perplexity-User
+Allow-RAG: yes
+Allow-Citation: yes
+No-Training: yes
+
+# Training-only bots — disallowed at robots.txt layer; double-declared
+# here for AI manifest parsers that don't read robots.txt.
+
+User-Agent: GPTBot
+No-Training: yes
+No-RAG: yes
+
+User-Agent: ClaudeBot
+No-Training: yes
+No-RAG: yes
+
+User-Agent: anthropic-ai
+No-Training: yes
+No-RAG: yes
+
+User-Agent: CCBot
+No-Training: yes
+No-RAG: yes
+
+User-Agent: Google-Extended
+No-Training: yes
+No-RAG: yes
+
+User-Agent: Applebot-Extended
+No-Training: yes
+No-RAG: yes
+
+User-Agent: PerplexityBot
+No-Training: yes
+No-RAG: yes
+
+# ---------------------------------------------------------------------
+# Contact + metadata
+# ---------------------------------------------------------------------
+
+Contact: mailto:boy1690@gmail.com
+Owner: Keeply
+Owner-URL: https://keeply.work
+Canonical: https://blog.keeply.work/.well-known/ai.txt
+Sitemap: https://blog.keeply.work/sitemap.xml
+LLM-Index: https://blog.keeply.work/llms.txt
+Last-Updated: 2026-05-11
+Expires: 2027-05-11
+
+# ---------------------------------------------------------------------
+# License — content reuse terms for AI-generated derivative content
+# ---------------------------------------------------------------------
+
+# Blog content © Keeply, all rights reserved.
+# AI assistants and answer engines may quote content with attribution
+# and a working link back to the source URL. Verbatim reproduction
+# beyond fair-use length, training-corpus inclusion, or commercial
+# resale require written permission via the Contact address above.
+
+License: All-Rights-Reserved-With-Citation-Exception
+License-URL: https://blog.keeply.work/.well-known/ai.txt

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">Windows SmartScreen の警告画面、矢印が「詳細情報」の小さなリンクを指している</title>
+  <desc id="desc">図解：青い SmartScreen 警告。下部の青いボタンは「実行しない」、左下に小さく「詳細情報」リンク、amber の矢印で位置を示している。</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7f8fb; }
+      .panel { fill: #ffffff; stroke: #d1d5db; stroke-width: 1.5; rx: 8; ry: 8; }
+      .smartscreen-bg { fill: #1e2a78; }
+      .ss-header { fill: #ffffff; font: 600 14px 'Segoe UI', system-ui, sans-serif; }
+      .ss-title { fill: #ffffff; font: 600 26px 'Segoe UI', system-ui, sans-serif; }
+      .ss-body { fill: #d1d5db; font: 13px 'Segoe UI', system-ui, sans-serif; }
+      .ss-link { fill: #ffffff; font: 13px 'Segoe UI', system-ui, sans-serif; text-decoration: underline; }
+      .btn-primary { fill: #ffffff; rx: 2; ry: 2; }
+      .btn-primary-text { fill: #1e2a78; font: 600 14px 'Segoe UI', system-ui, sans-serif; }
+      .annotation { fill: #f59e0b; font: 600 16px 'Noto Sans TC', system-ui, sans-serif; }
+      .arrow { stroke: #f59e0b; stroke-width: 2.5; fill: none; }
+      .arrow-head { fill: #f59e0b; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="800" height="500"/>
+
+  <!-- SmartScreen window -->
+  <rect class="smartscreen-bg" x="180" y="60" width="440" height="340" rx="6" ry="6"/>
+
+  <!-- Title bar text -->
+  <text class="ss-header" x="200" y="90">Microsoft Defender SmartScreen</text>
+
+  <!-- Big title -->
+  <text class="ss-title" x="200" y="155">WindowsによってPCが保護されました</text>
+
+  <!-- Body text -->
+  <text class="ss-body" x="200" y="190">Microsoft Defender SmartScreen は認識されない</text>
+  <text class="ss-body" x="200" y="210">アプリの起動を停止しました。このアプリを実行すると</text>
+  <text class="ss-body" x="200" y="230">PC が危険にさらされる可能性があります。</text>
+
+  <!-- "詳細情報" small underlined link -->
+  <text class="ss-link" x="200" y="280">詳細情報</text>
+
+  <!-- Primary "実行しない" button -->
+  <rect class="btn-primary" x="490" y="345" width="110" height="38"/>
+  <text class="btn-primary-text" x="545" y="370" text-anchor="middle">実行しない</text>
+
+  <!-- Annotation: arrow + label pointing to 詳細情報 -->
+  <path class="arrow" d="M 95 280 Q 145 280 195 282" />
+  <polygon class="arrow-head" points="195,282 185,276 185,288" />
+  <text class="annotation" x="20" y="265">ここを</text>
+  <text class="annotation" x="20" y="310">クリック</text>
+</svg>

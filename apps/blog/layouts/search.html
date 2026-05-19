@@ -1,0 +1,42 @@
+{{- /*
+  Search page — Pagefind static index hosted at /pagefind/ (generated
+  post-Hugo by .github/workflows/deploy.yml `Build Pagefind search index`
+  step).
+
+  Pagefind ships its own UI bundle (CSS + JS at /pagefind/pagefind-ui.*)
+  + a JSON index sharded per page, all served as static assets from
+  the same origin. Zero backend, full-text search across all locales.
+
+  The search page itself is noindex'd (Hugo frontmatter robots) since
+  it's a tool surface, not content.
+*/ -}}
+{{ define "main" }}
+<div class="max-w-3xl mx-auto px-4 py-12">
+  <h1 class="text-3xl font-bold mb-8 text-gray-900">{{ .Title }}</h1>
+  <link rel="stylesheet" href="{{ "pagefind/pagefind-ui.css" | absURL }}" />
+  <div id="search"></div>
+  <script src="{{ "pagefind/pagefind-ui.js" | absURL }}" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      new PagefindUI({
+        element: "#search",
+        showSubResults: true,
+        showImages: false,
+        translations: {
+          placeholder: "{{ T "search_placeholder" | default "Search articles..." }}",
+          clear_search: "{{ T "search_clear" | default "Clear" }}",
+          load_more: "{{ T "search_load_more" | default "Load more" }}",
+          search_label: "{{ T "search_label" | default "Search" }}",
+          filters_label: "{{ T "search_filters" | default "Filters" }}",
+          zero_results: "{{ T "search_zero" | default "No results for [SEARCH_TERM]" }}",
+          many_results: "{{ T "search_many" | default "[COUNT] results for [SEARCH_TERM]" }}",
+          one_result: "{{ T "search_one" | default "1 result for [SEARCH_TERM]" }}",
+          alt_search: "{{ T "search_alt" | default "No results for [SEARCH_TERM]. Did you mean [DIFFERENT_TERM]?" }}",
+          search_suggestion: "{{ T "search_suggestion" | default "No results for [SEARCH_TERM]. Try one of these searches: [DIFFERENT_TERMS]" }}",
+          searching: "{{ T "search_searching" | default "Searching for [SEARCH_TERM]..." }}"
+        }
+      });
+    });
+  </script>
+</div>
+{{ end }}

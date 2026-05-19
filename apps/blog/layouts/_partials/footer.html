@@ -1,0 +1,31 @@
+<footer class="bg-gray-900 text-gray-400 py-12 mt-20">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" class="w-7 h-7">
+          <path d="M396 129C429 159 448 200 448 255C448 363 360 451 252 451C145 451 58 368 56 263C55 206 75 158 111 123" stroke="#6366f1" stroke-width="44" stroke-linecap="round"/>
+          <path d="M111 123C145 91 190 72 239 72C253 72 265 73 278 76" stroke="#fbbf24" stroke-width="44" stroke-linecap="round"/>
+          <path d="M236 54L313 79L254 134L236 54Z" fill="#fbbf24"/>
+          <rect x="164" y="184" width="152" height="206" rx="32" fill="#6366f1"/>
+        </svg>
+        <span class="text-white font-bold">Keeply Blog</span>
+      </div>
+      <div class="flex items-center gap-5 md:gap-6 text-sm flex-wrap justify-center">
+        <a href="https://keeply.work/" class="hover:text-white transition-colors">{{ i18n "footer_site" }}</a>
+        {{- with .OutputFormats.Get "rss" -}}
+          <a href="{{ .Permalink }}" class="hover:text-white transition-colors">{{ i18n "footer_rss" }}</a>
+        {{- else -}}
+          {{- with $.Site.Home.OutputFormats.Get "rss" -}}
+            <a href="{{ .Permalink }}" class="hover:text-white transition-colors">{{ i18n "footer_rss" }}</a>
+          {{- end -}}
+        {{- end -}}
+        {{- with $.Site.GetPage "/categories" -}}
+          <a href="{{ .RelPermalink }}" class="hover:text-white transition-colors">{{ i18n "footer_all_categories" }}</a>
+        {{- end -}}
+        <a href="https://keeply.work/privacy.html" class="hover:text-white transition-colors">{{ i18n "footer_privacy" }}</a>
+        <a href="https://keeply.work/buy.html" class="text-amber-400 hover:text-amber-300 font-semibold transition-colors">{{ i18n "footer_buy" }}</a>
+      </div>
+      <p class="text-sm">&copy; {{ now.Format "2006" }} Keeply. {{ i18n "footer_tagline" }}</p>
+    </div>
+  </div>
+</footer>

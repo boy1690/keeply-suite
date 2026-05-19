@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 200" font-family="'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif">
+<rect x="0" y="0" width="360" height="200" rx="8" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1" filter="drop-shadow(0 6px 16px rgba(15,23,42,0.12))"/>
+<rect x="0" y="0" width="360" height="44" fill="#0078D4" rx="8"/>
+<rect x="0" y="36" width="360" height="8" fill="#0078D4"/>
+<circle cx="22" cy="22" r="12" fill="white"/>
+<path d="M14 22 Q14 16 20 16 Q22 14 26 14 Q32 14 32 22 Q32 26 28 28 L18 28 Q14 26 14 22 Z" fill="#0078D4"/>
+<text x="44" y="28" font-size="14" font-weight="700" fill="white">OneDrive</text>
+<text x="338" y="28" font-size="12" fill="white" opacity="0.85" text-anchor="end">✕</text>
+<g transform="translate(20, 64)">
+  <circle cx="14" cy="14" r="12" fill="#10B981"/>
+  <path d="M9 14 L13 18 L20 11" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="38" y="14" font-size="14" font-weight="600" fill="#0F172A">모두 최신 상태입니다</text>
+  <text x="38" y="32" font-size="11" fill="#64748B">마지막 동기화: 14:32:47</text>
+</g>
+<rect x="0" y="116" width="360" height="1" fill="#E5E7EB"/>
+<g transform="translate(20, 130)">
+  <rect width="14" height="18" fill="#107C41" rx="2"/>
+  <text x="7" y="13" font-size="9" font-weight="700" fill="white" text-anchor="middle">X</text>
+  <text x="26" y="14" font-size="11" font-weight="500" fill="#0F172A">제안_고객A_v3.xlsx</text>
+  <text x="320" y="14" font-size="11" fill="#10B981" text-anchor="end">✓ 동기화 완료</text>
+</g>
+<rect x="0" y="168" width="360" height="32" fill="#FEF3C7"/>
+<text x="180" y="188" font-size="11" font-weight="500" fill="#92400E" text-anchor="middle">⚠ 「동기화됨」 ≠ 「데이터가 안전」</text>
+</svg>

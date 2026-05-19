@@ -1,0 +1,7 @@
+{{- /* Manual inline CTA shortcode. Usage in markdown:
+         {{< cta-inline >}}
+         {{< cta-inline pitch="不要當下一個丟失 v3 的客戶。" >}}
+       Renders the same visual as auto-injected CTAs (via render-heading.html).
+       The shortcode arg `pitch` overrides frontmatter + i18n defaults. */ -}}
+{{- $ctx := dict "Page" .Page "pitchOverride" (.Get "pitch") -}}
+{{ partial "cta-inline.html" $ctx }}

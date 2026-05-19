@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" font-family="'Inter','Noto Sans TC','PingFang TC','Noto Sans JP','Noto Sans KR',-apple-system,system-ui,sans-serif">
+<rect x="0" y="0" width="640" height="340" rx="8" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+<text x="20" y="30" font-size="15" font-weight="700" fill="#111827">Past day 30: 4 recovery paths and realistic outcomes</text>
+<text x="20" y="72" font-size="12" font-weight="600" fill="#374151">Time Machine / File History</text>
+<text x="20" y="88" font-size="10" fill="#6B7280">Best — if you set it up before</text>
+<rect x="340" y="66" width="240" height="20" rx="3" fill="#F3F4F6"/>
+<rect x="340" y="66" width="204" height="20" rx="3" fill="#34D399" opacity="0.85"/>
+<text x="588" y="80" font-size="11" font-weight="600" fill="#34D399">~85%</text>
+<text x="20" y="128" font-size="12" font-weight="600" fill="#374151">Dropbox support escalation</text>
+<text x="20" y="144" font-size="10" fill="#6B7280">Sometimes works for Business/Enterprise</text>
+<rect x="340" y="122" width="240" height="20" rx="3" fill="#F3F4F6"/>
+<rect x="340" y="122" width="84" height="20" rx="3" fill="#FBBF24" opacity="0.85"/>
+<text x="588" y="136" font-size="11" font-weight="600" fill="#FBBF24">~35%</text>
+<text x="20" y="184" font-size="12" font-weight="600" fill="#374151">Local sync cache scraping</text>
+<text x="20" y="200" font-size="10" fill="#6B7280">Depends on OS cache state</text>
+<rect x="340" y="178" width="240" height="20" rx="3" fill="#F3F4F6"/>
+<rect x="340" y="178" width="48" height="20" rx="3" fill="#FB923C" opacity="0.85"/>
+<text x="588" y="192" font-size="11" font-weight="600" fill="#FB923C">~20%</text>
+<text x="20" y="240" font-size="12" font-weight="600" fill="#374151">Disk recovery software (SSD + TRIM)</text>
+<text x="20" y="256" font-size="10" fill="#6B7280">Near-impossible on modern SSDs</text>
+<rect x="340" y="234" width="240" height="20" rx="3" fill="#F3F4F6"/>
+<rect x="340" y="234" width="12" height="20" rx="3" fill="#F87171" opacity="0.85"/>
+<text x="588" y="248" font-size="11" font-weight="600" fill="#F87171">~5%</text>
+<text x="20" y="320" font-size="11" font-style="italic" fill="#6B7280">⚠ Three of the four require setup before the incident. The fourth is luck.</text>
+</svg>

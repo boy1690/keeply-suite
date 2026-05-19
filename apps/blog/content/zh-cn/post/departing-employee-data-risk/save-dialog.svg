@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 288" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',-apple-system,system-ui,sans-serif">
+<rect x="0" y="0" width="360" height="288" rx="8" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+<text x="12" y="18" font-size="12" fill="#6B7280">全部勾选</text>
+<text x="82" y="18" font-size="12" fill="#9CA3AF">3/3</text>
+<text x="348" y="18" font-size="12" fill="#9CA3AF" text-anchor="end">⟳ 刷新</text>
+<rect x="0" y="28" width="360" height="1" fill="#E5E7EB"/>
+<rect x="12" y="37" width="14" height="14" rx="3" fill="#2563EB" stroke="#2563EB" stroke-width="1"/>
+<path d="M 15 44 L 18 47 L 23 41" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="34" y="48" font-size="13" fill="#374151" font-family="'JetBrains Mono',ui-monospace,monospace">brand-book/logo.ai</text>
+<rect x="304" y="35" width="44" height="18" rx="3" fill="#D1FAE5"/>
+<text x="326" y="48" font-size="11" font-weight="600" fill="#047857" text-anchor="middle">新增</text>
+<rect x="12" y="69" width="14" height="14" rx="3" fill="#2563EB" stroke="#2563EB" stroke-width="1"/>
+<path d="M 15 76 L 18 79 L 23 73" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="34" y="80" font-size="13" fill="#374151" font-family="'JetBrains Mono',ui-monospace,monospace">brand-book/colors.pdf</text>
+<rect x="304" y="67" width="44" height="18" rx="3" fill="#D1FAE5"/>
+<text x="326" y="80" font-size="11" font-weight="600" fill="#047857" text-anchor="middle">新增</text>
+<rect x="12" y="101" width="14" height="14" rx="3" fill="#2563EB" stroke="#2563EB" stroke-width="1"/>
+<path d="M 15 108 L 18 111 L 23 105" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="34" y="112" font-size="13" fill="#374151" font-family="'JetBrains Mono',ui-monospace,monospace">brand-book/guidelines.docx</text>
+<rect x="304" y="99" width="44" height="18" rx="3" fill="#D1FAE5"/>
+<text x="326" y="112" font-size="11" font-weight="600" fill="#047857" text-anchor="middle">新增</text>
+<rect x="0" y="128" width="360" height="1" fill="#E5E7EB"/>
+<rect x="12" y="140" width="336" height="60" rx="6" fill="white" stroke="#D1D5DB" stroke-width="1"/>
+<text x="22" y="162" font-size="13" fill="#374151">4 月 brand-book 交付完整集 — 已交给业主</text>
+<text x="16" y="214" font-size="11" fill="#9CA3AF">例如：「业主要求加大柱断面」</text>
+<rect x="12" y="228" width="336" height="38" rx="6" fill="#2563EB"/>
+<text x="160" y="253" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">保存全部 3 个文件</text>
+<rect x="298" y="238" width="36" height="18" rx="3" fill="rgba(255,255,255,0.2)"/>
+<text x="316" y="251" font-size="11" font-weight="600" fill="white" font-family="ui-monospace,monospace" text-anchor="middle">⌘ S</text>
+</svg>

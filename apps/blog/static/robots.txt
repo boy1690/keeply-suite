@@ -1,0 +1,110 @@
+# Keeply Blog robots.txt
+#
+# Policy (2026-05-17 update — supersedes the 2026-05-02 split policy):
+# Open all major AI crawlers (training + live-retrieval) to maximize
+# GEO citation surface. Trade-off accepted: content enters model training
+# corpora in exchange for being citable in ChatGPT / Claude / Perplexity /
+# Gemini / Apple Intelligence answers. Bytespider stays blocked (poor
+# robots.txt compliance + low ROI for our target locales).
+
+# --- Default: allow indexing for search engines ---
+User-agent: *
+Allow: /
+
+# --- Social media link-preview scrapers (OG cards on shares) ---
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: facebookcatalog
+Allow: /
+
+User-agent: meta-externalfetcher
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Slackbot-LinkExpanding
+Allow: /
+
+User-agent: Slackbot
+Allow: /
+
+User-agent: Discordbot
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: line-poker
+Allow: /
+
+User-agent: Pinterestbot
+Allow: /
+
+# --- AI live-retrieval bots (cite in AI answers when user triggers search) ---
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# --- AI training crawlers (absorb content into model training corpora) ---
+# Opened 2026-05-17 to maximize AI citation surface. Google-Extended and
+# Applebot-Extended use REVERSE default — must be explicitly Allowed or
+# they treat the site as blocked.
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# --- Still blocked: poor compliance / low ROI for our locales ---
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: ImagesiftBot
+Disallow: /
+
+# --- Sitemap ---
+Sitemap: https://blog.keeply.work/sitemap.xml

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 224" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',-apple-system,system-ui,sans-serif">
+<rect x="0" y="0" width="360" height="224" rx="8" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+<text x="12" y="18" font-size="12" fill="#6B7280">すべて選択</text>
+<text x="82" y="18" font-size="12" fill="#9CA3AF">1/1</text>
+<text x="348" y="18" font-size="12" fill="#9CA3AF" text-anchor="end">⟳ 更新</text>
+<rect x="0" y="28" width="360" height="1" fill="#E5E7EB"/>
+<rect x="12" y="37" width="14" height="14" rx="3" fill="#2563EB" stroke="#2563EB" stroke-width="1"/>
+<path d="M 15 44 L 18 47 L 23 41" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="34" y="48" font-size="13" fill="#374151" font-family="'JetBrains Mono',ui-monospace,monospace">proposal_acme.docx</text>
+<rect x="304" y="35" width="44" height="18" rx="3" fill="#D1FAE5"/>
+<text x="326" y="48" font-size="11" font-weight="600" fill="#047857" text-anchor="middle">新增</text>
+<rect x="0" y="64" width="360" height="1" fill="#E5E7EB"/>
+<rect x="12" y="76" width="336" height="60" rx="6" fill="white" stroke="#D1D5DB" stroke-width="1"/>
+<text x="22" y="98" font-size="13" fill="#374151">Acme RFP 提案 — 初版ドラフト</text>
+<text x="16" y="150" font-size="11" fill="#9CA3AF">例:「キックオフ後の初版」</text>
+<rect x="12" y="164" width="336" height="38" rx="6" fill="#2563EB"/>
+<text x="160" y="189" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">1 ファイルすべて保存</text>
+<rect x="298" y="174" width="36" height="18" rx="3" fill="rgba(255,255,255,0.2)"/>
+<text x="316" y="187" font-size="11" font-weight="600" fill="white" font-family="ui-monospace,monospace" text-anchor="middle">⌘ S</text>
+</svg>

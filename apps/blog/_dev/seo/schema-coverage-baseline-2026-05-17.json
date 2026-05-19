@@ -1,0 +1,48 @@
+{
+  "generated_at": "2026-05-17T00:08:49.844Z",
+  "summary": [
+    {
+      "locale": "en",
+      "total": 27,
+      "faq": "19/27 (70%)",
+      "howto": "5/27",
+      "howto_candidates_missing": 0
+    },
+    {
+      "locale": "zh-tw",
+      "total": 26,
+      "faq": "19/26 (73%)",
+      "howto": "5/26",
+      "howto_candidates_missing": 0
+    },
+    {
+      "locale": "zh-cn",
+      "total": 26,
+      "faq": "19/26 (73%)",
+      "howto": "5/26",
+      "howto_candidates_missing": 0
+    },
+    {
+      "locale": "ja",
+      "total": 26,
+      "faq": "18/26 (69%)",
+      "howto": "5/26",
+      "howto_candidates_missing": 0
+    },
+    {
+      "locale": "ko",
+      "total": 27,
+      "faq": "19/27 (70%)",
+      "howto": "5/27",
+      "howto_candidates_missing": 0
+    },
+    {
+      "locale": "it",
+      "total": 26,
+      "faq": "18/26 (69%)",
+      "howto": "5/26",
+      "howto_candidates_missing": 0
+    }
+  ],
+  "missing": null
+}

@@ -1,0 +1,55 @@
+# German i18n strings (flat format for Hugo go-i18n v2)
+
+nav_posts = "Beiträge"
+nav_categories = "Kategorien"
+nav_search = "Suche"
+nav_download = "Kostenlos laden"
+
+hero_badge = "Keeply Blog · wöchentliche Updates"
+hero_title_1 = "Echte Geschichten zur"
+hero_title_2 = "Dateiverwaltung."
+hero_subtitle = "Dateiverwaltungssoftware für Projektteams. Kein Fachjargon, keine Workflow-Änderungen — nur Lösungen für die Büroprobleme, die du jeden Tag hast."
+
+section_featured = "Empfohlen"
+section_latest = "Neueste Beiträge"
+section_browse = "Nach Kategorie"
+section_related = "Das könnte dich auch interessieren"
+section_tags = "Tags"
+
+see_all = "Alle ansehen"
+read_more = "Weiterlesen"
+reading_time = "{{ .count }} Min. Lesezeit"
+posts_count = "{{ .count }} Artikel"
+
+page_previous = "Zurück"
+page_next = "Weiter"
+
+toc_title = "Inhaltsverzeichnis"
+
+cta_title = "Bereit, Keeply zu testen?"
+cta_subtitle = "Kostenloser Download. In 30 Sekunden startklar."
+cta_button = "Keeply herunterladen"
+cta_sidebar_label = "Keeply ausprobieren"
+cta_sidebar_title = "Gib deinen Dateien eine Zeitmaschine"
+
+footer_site = "Hauptseite"
+footer_rss = "RSS-Feed"
+footer_all_categories = "Alle Kategorien"
+footer_privacy = "Datenschutz"
+footer_buy = "Lifetime-Lizenz kaufen"
+footer_tagline = "Deine Dateien haben eine Geschichte."
+
+empty_no_posts = "Beiträge sind unterwegs"
+empty_no_posts_sub = "Wir arbeiten gerade daran. Schau bald wieder vorbei oder "
+empty_try_keeply = "probier Keeply"
+empty_no_posts_end = " in der Zwischenzeit aus."
+
+breadcrumb_home = "Start"
+by_author = "Von"
+
+cta_inline_pitch = "Let Keeply keep every version, so you're not hunting for it next time."
+cta_inline_subtitle = "Free · 30 seconds to start"
+
+cta_inline_pitch_soft = "If you do one thing today, let a tool keep every version for you."
+cta_inline_pitch_medium = "Free + 30 seconds to set up. No reason not to try."
+cta_inline_pitch_hard = "Still overwriting old files? 30 seconds saves you the next file hunt."

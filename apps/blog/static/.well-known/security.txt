@@ -1,0 +1,7 @@
+# Security Policy for blog.keeply.work
+# RFC 9116 — https://securitytxt.org/
+
+Contact: mailto:boy1690@gmail.com
+Expires: 2027-04-27T00:00:00.000Z
+Preferred-Languages: zh-TW, en
+Canonical: https://blog.keeply.work/.well-known/security.txt

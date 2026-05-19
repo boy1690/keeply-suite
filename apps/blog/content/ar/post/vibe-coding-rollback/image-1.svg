@@ -1,0 +1,119 @@
+<!-- Image 1: AI agent 對話視窗 vs 你電腦上實際被改的檔案數對比 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" fill="none"
+     font-family="'Inter','Noto Sans TC',system-ui,sans-serif">
+  <defs>
+    <linearGradient id="g-indigo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#4338CA"/>
+    </linearGradient>
+    <linearGradient id="g-amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFB300"/><stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="g-red" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EF4444"/><stop offset="1" stop-color="#DC2626"/>
+    </linearGradient>
+    <linearGradient id="g-paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8F7FF"/><stop offset="1" stop-color="#EEF2FF"/>
+    </linearGradient>
+    <pattern id="grid" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#4338CA" stroke-width="1" opacity="0.05"/>
+    </pattern>
+    <filter id="shadow"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#312E81" flood-opacity="0.14"/></filter>
+  </defs>
+
+  <rect width="1200" height="600" fill="url(#g-paper)"/>
+  <rect width="1200" height="600" fill="url(#grid)"/>
+
+  <text x="600" y="48" font-size="13" font-weight="800" fill="#312E81" text-anchor="middle" letter-spacing="3">AI 講的 · vs · AI 實際做的</text>
+
+  <!-- LEFT: AI agent chat -->
+  <g transform="translate(80, 90)" filter="url(#shadow)">
+    <rect width="500" height="430" rx="10" fill="#ffffff"/>
+    <rect width="500" height="42" rx="10" fill="url(#g-indigo)"/>
+    <rect y="28" width="500" height="14" fill="url(#g-indigo)"/>
+    <text x="20" y="28" font-size="14" font-weight="700" fill="#ffffff" font-family="system-ui,sans-serif">AI agent — 對話視窗</text>
+
+    <!-- chat bubbles -->
+    <g font-family="system-ui,sans-serif" transform="translate(20, 70)">
+      <!-- user msg -->
+      <g>
+        <rect x="200" y="0" width="260" height="38" rx="8" fill="#EEF2FF"/>
+        <text x="216" y="24" font-size="13" fill="#312E81">「修那個 error」</text>
+      </g>
+      <!-- AI msg -->
+      <g transform="translate(0, 56)">
+        <rect width="320" height="62" rx="8" fill="#F8F7FF" stroke="#E0E7FF"/>
+        <text x="16" y="24" font-size="13" font-weight="700" fill="#312E81">✓ Done. Modified 3 files:</text>
+        <text x="16" y="42" font-size="12" fill="#6F6AF0">- handler.ts</text>
+        <text x="16" y="58" font-size="12" fill="#6F6AF0">- utils.ts, config.ts</text>
+      </g>
+
+      <!-- user msg 2 -->
+      <g transform="translate(0, 142)">
+        <rect x="240" y="0" width="220" height="38" rx="8" fill="#EEF2FF"/>
+        <text x="256" y="24" font-size="13" fill="#312E81">「還是有 error」</text>
+      </g>
+      <!-- AI msg 2 -->
+      <g transform="translate(0, 198)">
+        <rect width="380" height="62" rx="8" fill="#F8F7FF" stroke="#E0E7FF"/>
+        <text x="16" y="24" font-size="13" font-weight="700" fill="#312E81">✓ Fixed. Modified 5 files now.</text>
+        <text x="16" y="42" font-size="12" fill="#6F6AF0">Should work this time. Run tests</text>
+        <text x="16" y="58" font-size="12" fill="#6F6AF0">to verify.</text>
+      </g>
+
+      <!-- AI 自信 caption -->
+      <g transform="translate(40, 290)">
+        <rect width="380" height="36" rx="6" fill="#FEE2E2" stroke="#DC2626" stroke-width="1"/>
+        <text x="190" y="22" font-size="12" font-weight="700" fill="#DC2626" text-anchor="middle">AI 不會主動說「我可能寫崩了」</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- VS divider -->
+  <g transform="translate(600, 290)">
+    <circle cx="0" cy="0" r="32" fill="url(#g-amber)" filter="url(#shadow)"/>
+    <text x="0" y="6" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="1">VS</text>
+  </g>
+
+  <!-- RIGHT: 你電腦上實際被改的檔案 -->
+  <g transform="translate(660, 90)" filter="url(#shadow)">
+    <rect width="460" height="430" rx="10" fill="#ffffff" stroke="url(#g-red)" stroke-width="2"/>
+    <rect width="460" height="42" rx="10" fill="url(#g-red)"/>
+    <rect y="28" width="460" height="14" fill="url(#g-red)"/>
+    <text x="20" y="28" font-size="14" font-weight="700" fill="#ffffff" font-family="system-ui,sans-serif">你電腦上的實際變動</text>
+
+    <!-- file tree -->
+    <g font-family="'JetBrains Mono',ui-monospace,monospace" transform="translate(20, 70)">
+      <text x="0" y="0" font-size="12" font-weight="700" fill="#4338CA" letter-spacing="1">my-project/</text>
+
+      <text x="20" y="22" font-size="12" fill="#312E81">├── src/</text>
+      <text x="40" y="40" font-size="12" fill="#DC2626" font-weight="700">│   ├── handler.ts</text>
+      <text x="200" y="40" font-size="11" fill="#DC2626" opacity="0.85">+18 / -7</text>
+      <text x="40" y="58" font-size="12" fill="#DC2626" font-weight="700">│   ├── utils.ts</text>
+      <text x="200" y="58" font-size="11" fill="#DC2626" opacity="0.85">+9 / -3</text>
+      <text x="40" y="76" font-size="12" fill="#DC2626" font-weight="700">│   ├── config.ts</text>
+      <text x="200" y="76" font-size="11" fill="#DC2626" opacity="0.85">+12 / -1</text>
+      <text x="40" y="94" font-size="12" fill="#DC2626" font-weight="700">│   ├── helper.ts (NEW)</text>
+      <text x="200" y="94" font-size="11" fill="#DC2626" opacity="0.85">+47 / -0</text>
+      <text x="40" y="112" font-size="12" fill="#DC2626" font-weight="700">│   ├── auth.ts</text>
+      <text x="200" y="112" font-size="11" fill="#DC2626" opacity="0.85">+3 / -0</text>
+      <text x="40" y="130" font-size="12" fill="#DC2626" font-weight="700">│   └── index.ts</text>
+      <text x="200" y="130" font-size="11" fill="#DC2626" opacity="0.85">+5 / -2</text>
+
+      <text x="20" y="152" font-size="12" fill="#DC2626" font-weight="700">├── .env (touched)</text>
+      <text x="20" y="170" font-size="12" fill="#DC2626" font-weight="700">├── package.json</text>
+      <text x="200" y="170" font-size="11" fill="#DC2626" opacity="0.85">+1 / -0</text>
+      <text x="20" y="188" font-size="12" fill="#312E81" opacity="0.55">├── README.md</text>
+      <text x="20" y="206" font-size="12" fill="#312E81" opacity="0.55">└── tests/</text>
+    </g>
+
+    <!-- 7 個檔案 stamp -->
+    <g transform="translate(110, 350)">
+      <rect width="240" height="44" rx="6" fill="url(#g-red)" filter="url(#shadow)"/>
+      <text x="120" y="20" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="1" opacity="0.85">AI 說 5 個 · 實際動了</text>
+      <text x="120" y="38" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="1">7 個檔案 + .env</text>
+    </g>
+  </g>
+
+  <text x="600" y="568" font-size="14" font-weight="700" fill="#312E81" text-anchor="middle" letter-spacing="2">AI 的記憶只有 context window · 你的檔案才知道全部</text>
+
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 328" font-family="'Inter','Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans JP','Noto Sans KR',-apple-system,system-ui,sans-serif">
+<rect x="0" y="0" width="480" height="328" rx="8" fill="#FFFFFF" stroke="#E5E7EB"/>
+<rect x="0" y="0" width="480" height="40" rx="8" fill="#F9FAFB"/>
+<rect x="0" y="32" width="480" height="9" fill="#F9FAFB"/>
+<line x1="0" y1="40" x2="480" y2="40" stroke="#E5E7EB"/>
+<text x="16" y="26" font-size="14" font-weight="700" fill="#374151">🗑️ 最近刪除的檔案</text>
+<text x="464" y="26" font-size="11" fill="#9CA3AF" text-anchor="end">過去 30 天</text>
+<text x="16" y="60" font-size="10" font-weight="700" fill="#9CA3AF" letter-spacing="1">今天</text>
+<rect x="0" y="68" width="480" height="44" fill="#EEF2FF" opacity="0.5"/>
+<text x="16" y="86" font-size="14">📄</text>
+<text x="36" y="86" font-size="13" fill="#374151" font-weight="600">proposal_v3_FINAL.docx</text>
+<text x="36" y="100" font-size="10" fill="#9CA3AF">/Client/Acme/ — 11:14 5 分鐘前</text>
+<text x="464" y="92" font-size="11" fill="#3B82F6" font-weight="600" text-anchor="end">還原 →</text>
+<line x1="0" y1="112" x2="480" y2="112" stroke="#F3F4F6"/>
+<text x="16" y="132" font-size="10" font-weight="700" fill="#9CA3AF" letter-spacing="1">昨天</text>
+<text x="16" y="158" font-size="14">📊</text>
+<text x="36" y="158" font-size="13" fill="#374151" font-weight="600">Q1_budget_draft.xlsx</text>
+<text x="36" y="172" font-size="10" fill="#9CA3AF">/Finance/ — 昨天 16:42</text>
+<text x="464" y="164" font-size="11" fill="#3B82F6" font-weight="600" text-anchor="end">還原 →</text>
+<line x1="0" y1="184" x2="480" y2="184" stroke="#F3F4F6"/>
+<text x="16" y="204" font-size="10" font-weight="700" fill="#9CA3AF" letter-spacing="1">本週</text>
+<text x="16" y="230" font-size="14">📕</text>
+<text x="36" y="230" font-size="13" fill="#374151" font-weight="600">contract_v2_signed.pdf</text>
+<text x="36" y="244" font-size="10" fill="#9CA3AF">/Legal/2026/ — 3 天前</text>
+<text x="464" y="236" font-size="11" fill="#3B82F6" font-weight="600" text-anchor="end">還原 →</text>
+<line x1="0" y1="256" x2="480" y2="256" stroke="#F3F4F6"/>
+<text x="16" y="276" font-size="10" font-weight="700" fill="#9CA3AF" letter-spacing="1">更早</text>
+<text x="16" y="302" font-size="14">🖼️</text>
+<text x="36" y="302" font-size="13" fill="#374151" font-weight="600">moodboard_v1.png</text>
+<text x="36" y="316" font-size="10" fill="#9CA3AF">/Design/ — 12 天前</text>
+<text x="464" y="308" font-size="11" fill="#3B82F6" font-weight="600" text-anchor="end">還原 →</text>
+</svg>

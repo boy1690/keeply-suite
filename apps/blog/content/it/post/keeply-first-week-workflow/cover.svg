@@ -1,0 +1,177 @@
+<!-- =============================================================
+     Cover: keeply-first-week-workflow (it)
+     ============================================================= -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none"
+     font-family="'Inter','Segoe UI',system-ui,sans-serif">
+
+  <defs>
+    <linearGradient id="grad-indigo" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#4338CA"/></linearGradient>
+    <linearGradient id="grad-indigo-deep" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4338CA"/><stop offset="1" stop-color="#312E81"/></linearGradient>
+    <linearGradient id="grad-amber" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFB300"/><stop offset="1" stop-color="#F59E0B"/></linearGradient>
+    <linearGradient id="grad-paper" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F8F7FF"/><stop offset="1" stop-color="#EEF2FF"/></linearGradient>
+    <linearGradient id="grad-number" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4338CA"/><stop offset="1" stop-color="#312E81"/></linearGradient>
+    <pattern id="pat-grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#4338CA" stroke-width="1" opacity="0.05"/></pattern>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#312E81" flood-opacity="0.12"/></filter>
+  </defs>
+
+  <symbol id="keeply-mark" viewBox="0 0 512 512">
+    <path d="M396 129C429 159 448 200 448 255C448 363 360 451 252 451C145 451 58 368 56 263C55 206 75 158 111 123" stroke="url(#grad-indigo)" stroke-width="44" stroke-linecap="round" fill="none"/>
+    <path d="M111 123C145 91 190 72 239 72C253 72 265 73 278 76" stroke="url(#grad-amber)" stroke-width="44" stroke-linecap="round" fill="none"/>
+    <path d="M236 54L313 79L254 134L236 54Z" fill="url(#grad-amber)"/>
+    <rect x="220" y="150" width="152" height="206" rx="32" fill="url(#grad-indigo-deep)" opacity="0.48"/>
+    <rect x="192" y="167" width="152" height="206" rx="32" fill="url(#grad-indigo-deep)" opacity="0.72"/>
+    <rect x="164" y="184" width="152" height="206" rx="32" fill="url(#grad-indigo)"/>
+  </symbol>
+
+  <symbol id="keeply-lockup" viewBox="0 0 260 64">
+    <g transform="translate(0,4) scale(0.11)"><use href="#keeply-mark"/></g>
+    <text x="66" y="28" font-size="24" font-weight="800" fill="#312E81" font-family="system-ui,sans-serif" letter-spacing="0.2">Keeply</text>
+    <text x="66" y="50" font-size="11" font-weight="600" fill="#4338CA" opacity="0.72" font-family="system-ui,sans-serif" letter-spacing="1.5">KEEPLY.WORK</text>
+  </symbol>
+
+  <rect width="1600" height="900" fill="url(#grad-paper)"/>
+  <rect width="1600" height="900" fill="url(#pat-grid)"/>
+  <circle cx="1450" cy="780" r="200" fill="#FDE68A" opacity="0.28"/>
+  <circle cx="1180" cy="200" r="240" fill="#DDD6FE" opacity="0.30"/>
+  <line x1="720" y1="120" x2="720" y2="780" stroke="#C7D2FE" stroke-width="1" opacity="0.55" stroke-dasharray="4 8"/>
+
+  <g transform="translate(120, 120)">
+    <rect x="0" y="2" width="14" height="14" fill="url(#grad-amber)"/>
+    <text x="28" y="14" font-size="17" font-weight="800" fill="#312E81" letter-spacing="4">THE TRIAL DIARY</text>
+    <text x="28" y="40" font-size="14" font-weight="600" fill="#4338CA" opacity="0.72" letter-spacing="2">DIARIO DI 7 GIORNI · EDITORIAL</text>
+  </g>
+
+  <g transform="translate(120, 210)">
+    <text x="0" y="310" font-size="400" font-weight="900" fill="url(#grad-number)" letter-spacing="-20">7</text>
+    <path d="M0 334 L380 334" stroke="url(#grad-amber)" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(120, 580)">
+    <text x="0" y="0" font-size="32" font-weight="800" fill="#312E81">GIORNI</text>
+    <text x="0" y="38" font-size="17" font-weight="500" fill="#4338CA" opacity="0.75">DIARIO DI PROVA · INSTALL → DECIDE</text>
+  </g>
+
+  <g transform="translate(120, 660)">
+    <text x="0" y="0" font-size="18" font-weight="700" fill="#312E81">Dopo l'installazione, non fare nulla ——</text>
+    <text x="0" y="30" font-size="18" font-weight="700" fill="#312E81">lascia che la tua settimana di lavoro <tspan fill="#F59E0B">faccia da test</tspan>.</text>
+  </g>
+
+  <use href="#keeply-lockup" x="120" y="790" width="200" height="50"/>
+
+  <g transform="translate(820, 130)">
+    <text x="0" y="14" font-size="11" font-weight="700" fill="#4338CA" opacity="0.72" letter-spacing="2">OSSERVAZIONE DI 7 GIORNI — 3 SEGNALI REALI</text>
+    <text x="700" y="14" font-size="11" font-weight="700" fill="#F59E0B" opacity="0.95" letter-spacing="2" text-anchor="end">★ DISINSTALLA AL DAY 7</text>
+  </g>
+
+  <g transform="translate(820, 170)">
+    <g transform="translate(0, 0)" filter="url(#soft-shadow)">
+      <rect x="0" y="0" width="100" height="120" rx="10" fill="url(#grad-amber)"/>
+      <text x="50" y="32" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="1">DAY 1</text>
+      <line x1="14" y1="42" x2="86" y2="42" stroke="#ffffff" stroke-width="1" opacity="0.6"/>
+      <text x="50" y="64" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">SEGNALE #1</text>
+      <text x="50" y="84" font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">Versioning</text>
+      <text x="50" y="100" font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">automatico</text>
+      <text x="50" y="115" font-size="10" font-weight="600" fill="#ffffff" opacity="0.85" text-anchor="middle">parte</text>
+    </g>
+    <g transform="translate(110, 0)" filter="url(#soft-shadow)">
+      <rect x="0" y="0" width="100" height="120" rx="10" fill="#ffffff"/>
+      <rect x="0" y="0" width="100" height="120" rx="10" fill="none" stroke="#C7D2FE" stroke-width="1"/>
+      <text x="50" y="32" font-size="13" font-weight="700" fill="#4338CA" text-anchor="middle" letter-spacing="1">DAY 2</text>
+      <line x1="14" y1="42" x2="86" y2="42" stroke="#C7D2FE" stroke-width="1"/>
+      <text x="50" y="76" font-size="10" font-weight="500" fill="#4338CA" opacity="0.7" text-anchor="middle">Lavoro</text>
+      <text x="50" y="92" font-size="10" font-weight="500" fill="#4338CA" opacity="0.7" text-anchor="middle">normale,</text>
+      <text x="50" y="108" font-size="10" font-weight="500" fill="#4338CA" opacity="0.7" text-anchor="middle">niente da fare</text>
+    </g>
+    <g transform="translate(220, 0)" filter="url(#soft-shadow)">
+      <rect x="0" y="0" width="100" height="120" rx="10" fill="url(#grad-amber)"/>
+      <text x="50" y="32" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="1">DAY 3</text>
+      <line x1="14" y1="42" x2="86" y2="42" stroke="#ffffff" stroke-width="1" opacity="0.6"/>
+      <text x="50" y="64" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">SEGNALE #2</text>
+      <text x="50" y="84" font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">Ritmo</text>
+      <text x="50" y="100" font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">di edit</text>
+      <text x="50" y="115" font-size="10" font-weight="600" fill="#ffffff" opacity="0.85" text-anchor="middle">visibile</text>
+    </g>
+    <g transform="translate(330, 0)" filter="url(#soft-shadow)">
+      <rect x="0" y="0" width="100" height="120" rx="10" fill="#ffffff"/>
+      <rect x="0" y="0" width="100" height="120" rx="10" fill="none" stroke="#C7D2FE" stroke-width="1"/>
+      <text x="50" y="32" font-size="13" font-weight="700" fill="#4338CA" text-anchor="middle" letter-spacing="1">DAY 4</text>
+      <line x1="14" y1="42" x2="86" y2="42" stroke="#C7D2FE" stroke-width="1"/>
+      <text x="50" y="76" font-size="11" font-weight="500" fill="#4338CA" opacity="0.7" text-anchor="middle">Versioni</text>
+      <text x="50" y="92" font-size="11" font-weight="500" fill="#4338CA" opacity="0.7" text-anchor="middle">si accumulano</text>
+      <text x="50" y="108" font-size="11" font-weight="500" fill="#4338CA" opacity="0.7" text-anchor="middle">in silenzio</text>
+    </g>
+    <g transform="translate(440, 0)" filter="url(#soft-shadow)">
+      <rect x="0" y="0" width="100" height="120" rx="10" fill="#ffffff"/>
+      <rect x="0" y="0" width="100" height="120" rx="10" fill="none" stroke="#C7D2FE" stroke-width="1"/>
+      <text x="50" y="32" font-size="13" font-weight="700" fill="#4338CA" text-anchor="middle" letter-spacing="1">DAY 5</text>
+      <line x1="14" y1="42" x2="86" y2="42" stroke="#C7D2FE" stroke-width="1"/>
+      <text x="50" y="76" font-size="11" font-weight="500" fill="#4338CA" opacity="0.7" text-anchor="middle">Sovrascrivi</text>
+      <text x="50" y="92" font-size="11" font-weight="500" fill="#4338CA" opacity="0.7" text-anchor="middle">un file per</text>
+      <text x="50" y="108" font-size="11" font-weight="500" fill="#4338CA" opacity="0.7" text-anchor="middle">sbaglio</text>
+    </g>
+    <g transform="translate(550, 0)" filter="url(#soft-shadow)">
+      <rect x="0" y="0" width="100" height="120" rx="10" fill="#ffffff"/>
+      <rect x="0" y="0" width="100" height="120" rx="10" fill="none" stroke="#C7D2FE" stroke-width="1"/>
+      <text x="50" y="32" font-size="13" font-weight="700" fill="#4338CA" text-anchor="middle" letter-spacing="1">DAY 6</text>
+      <line x1="14" y1="42" x2="86" y2="42" stroke="#C7D2FE" stroke-width="1"/>
+      <text x="50" y="76" font-size="11" font-weight="500" fill="#4338CA" opacity="0.7" text-anchor="middle">Vuoi tornare</text>
+      <text x="50" y="92" font-size="11" font-weight="500" fill="#4338CA" opacity="0.7" text-anchor="middle">alla versione</text>
+      <text x="50" y="108" font-size="11" font-weight="500" fill="#4338CA" opacity="0.7" text-anchor="middle">precedente</text>
+    </g>
+    <g transform="translate(660, 0)" filter="url(#soft-shadow)">
+      <rect x="0" y="0" width="100" height="120" rx="10" fill="url(#grad-amber)"/>
+      <text x="50" y="32" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="1">DAY 7</text>
+      <line x1="14" y1="42" x2="86" y2="42" stroke="#ffffff" stroke-width="1" opacity="0.6"/>
+      <text x="50" y="64" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">SEGNALE #3</text>
+      <text x="50" y="84" font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">Ripristino</text>
+      <text x="50" y="104" font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">verificabile</text>
+    </g>
+  </g>
+
+  <g transform="translate(820, 290)">
+    <path d="M50 4 L710 4" stroke="#9C98FF" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="6 6" opacity="0.5"/>
+  </g>
+
+  <g transform="translate(820, 320)">
+    <text x="0" y="0" font-size="14" font-weight="700" fill="#312E81" letter-spacing="2">3 SEGNALI / WHAT YOU SHOULD SEE BY DAY 7</text>
+  </g>
+
+  <g transform="translate(820, 350)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="700" height="76" rx="12" fill="#ffffff"/>
+    <circle cx="36" cy="38" r="18" fill="url(#grad-amber)"/>
+    <text x="36" y="44" font-size="18" font-weight="900" fill="#ffffff" text-anchor="middle">1</text>
+    <text x="68" y="32" font-size="16" font-weight="800" fill="#312E81">Il versioning automatico è partito?</text>
+    <text x="68" y="56" font-size="13" font-weight="500" fill="#4338CA" opacity="0.75">— Apri, modifica, salva: la timeline cresce da sola?</text>
+  </g>
+
+  <g transform="translate(820, 440)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="700" height="76" rx="12" fill="#ffffff"/>
+    <circle cx="36" cy="38" r="18" fill="url(#grad-amber)"/>
+    <text x="36" y="44" font-size="18" font-weight="900" fill="#ffffff" text-anchor="middle">2</text>
+    <text x="68" y="32" font-size="16" font-weight="800" fill="#312E81">Vedi chiaramente il tuo ritmo di edit?</text>
+    <text x="68" y="56" font-size="13" font-weight="500" fill="#4338CA" opacity="0.75">— Quali file si sono mossi, quando — tutto a colpo d'occhio</text>
+  </g>
+
+  <g transform="translate(820, 530)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="700" height="76" rx="12" fill="#ffffff"/>
+    <circle cx="36" cy="38" r="18" fill="url(#grad-amber)"/>
+    <text x="36" y="44" font-size="18" font-weight="900" fill="#ffffff" text-anchor="middle">3</text>
+    <text x="68" y="32" font-size="15" font-weight="800" fill="#312E81">Dopo un errore, puoi recuperare la versione precedente?</text>
+    <text x="68" y="56" font-size="12" font-weight="500" fill="#4338CA" opacity="0.75">— Doppio click sulla vecchia versione. Niente software di recupero, niente domande ai colleghi.</text>
+  </g>
+
+  <g transform="translate(820, 640)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="700" height="68" rx="12" fill="#FFFBEB" stroke="url(#grad-amber)" stroke-width="2"/>
+    <g transform="translate(20, 16)">
+      <circle cx="18" cy="18" r="18" fill="url(#grad-amber)"/>
+      <text x="18" y="24" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">✓</text>
+    </g>
+    <text x="76" y="30" font-size="14" font-weight="800" fill="#312E81">Anche solo uno dei 3 segnali non ti convince? →</text>
+    <text x="76" y="56" font-size="13" font-weight="700" fill="#F59E0B">Disinstalla al Day 7. Il disco torna pulito. Zero impegno.</text>
+  </g>
+
+  <g transform="translate(820, 820)">
+    <text x="0" y="0" font-size="12" font-weight="600" fill="#4338CA" opacity="0.72" letter-spacing="1">installa　→　non fare nulla　→　osserva　→　decidi　·　prova senza impegno</text>
+  </g>
+
+</svg>

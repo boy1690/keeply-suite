@@ -1,0 +1,133 @@
+<!-- Image 6: Current vs Ideal version UI — the missing "why" column -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" fill="none"
+     font-family="'Inter','Noto Sans SC','PingFang SC',system-ui,sans-serif">
+  <defs>
+    <linearGradient id="g-indigo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#4338CA"/>
+    </linearGradient>
+    <linearGradient id="g-indigo-deep" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4338CA"/><stop offset="1" stop-color="#312E81"/>
+    </linearGradient>
+    <linearGradient id="g-amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFB300"/><stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="g-paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8F7FF"/><stop offset="1" stop-color="#EEF2FF"/>
+    </linearGradient>
+    <pattern id="grid" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#4338CA" stroke-width="1" opacity="0.05"/>
+    </pattern>
+    <filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#312E81" flood-opacity="0.16"/></filter>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="7" refY="7" orient="auto">
+      <path d="M0 0 L14 7 L0 14 L4 7 Z" fill="url(#g-amber)"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="600" fill="url(#g-paper)"/>
+  <rect width="1200" height="600" fill="url(#grid)"/>
+
+  <!-- Headers -->
+  <g transform="translate(60, 60)">
+    <text x="0" y="0" font-size="13" font-weight="800" fill="#DC2626" letter-spacing="3">CURRENT — WHAT YOU GET</text>
+  </g>
+  <g transform="translate(640, 60)">
+    <text x="0" y="0" font-size="13" font-weight="800" fill="#F59E0B" letter-spacing="3">IDEAL — WHAT YOU NEED</text>
+  </g>
+
+  <!-- LEFT: Current UI (2 columns: date, user) -->
+  <g transform="translate(60, 110)" filter="url(#shadow)">
+    <rect width="500" height="400" rx="10" fill="#ffffff" stroke="#FCA5A5" stroke-width="2"/>
+    <rect width="500" height="46" rx="10" fill="#312E81"/>
+    <rect y="32" width="500" height="14" fill="#312E81"/>
+    <text x="20" y="30" font-size="14" font-weight="600" fill="#ffffff" font-family="system-ui,sans-serif">Version history</text>
+
+    <!-- Header row -->
+    <rect y="46" width="500" height="38" fill="#F8F7FF"/>
+    <text x="24" y="70" font-size="12" font-weight="700" fill="#4338CA" letter-spacing="2" font-family="system-ui,sans-serif">DATE MODIFIED</text>
+    <text x="280" y="70" font-size="12" font-weight="700" fill="#4338CA" letter-spacing="2" font-family="system-ui,sans-serif">MODIFIED BY</text>
+    <line x1="0" y1="84" x2="500" y2="84" stroke="#E0E7FF"/>
+
+    <!-- Rows -->
+    <g font-family="'JetBrains Mono',ui-monospace,monospace">
+      <rect y="84" width="500" height="50" fill="#ffffff"/>
+      <text x="24" y="114" font-size="14" font-weight="500" fill="#312E81">2025-04-15 14:23</text>
+      <text x="280" y="114" font-size="14" font-weight="500" fill="#312E81">Anna</text>
+      <rect y="134" width="500" height="50" fill="#F8F7FF"/>
+      <text x="24" y="164" font-size="14" font-weight="500" fill="#312E81">2025-04-14 09:45</text>
+      <text x="280" y="164" font-size="14" font-weight="500" fill="#312E81">Brian</text>
+      <rect y="184" width="500" height="50" fill="#ffffff"/>
+      <text x="24" y="214" font-size="14" font-weight="500" fill="#312E81">2025-04-12 16:08</text>
+      <text x="280" y="214" font-size="14" font-weight="500" fill="#312E81">Anna</text>
+      <rect y="234" width="500" height="50" fill="#F8F7FF"/>
+      <text x="24" y="264" font-size="14" font-weight="500" fill="#312E81">2025-04-11 11:30</text>
+      <text x="280" y="264" font-size="14" font-weight="500" fill="#312E81">Carol</text>
+      <rect y="284" width="500" height="50" fill="#ffffff"/>
+      <text x="24" y="314" font-size="14" font-weight="500" fill="#312E81">2025-04-10 17:50</text>
+      <text x="280" y="314" font-size="14" font-weight="500" fill="#312E81">Brian</text>
+      <rect y="334" width="500" height="50" fill="#F8F7FF"/>
+      <text x="24" y="364" font-size="14" font-weight="500" fill="#312E81">2025-04-08 10:14</text>
+      <text x="280" y="364" font-size="14" font-weight="500" fill="#312E81">Anna</text>
+    </g>
+
+    <!-- Stamp -->
+    <g transform="translate(140, 200)" opacity="0.9">
+      <rect x="0" y="0" width="220" height="60" rx="8" fill="#FEE2E2" stroke="#DC2626" stroke-width="2" transform="rotate(-8)"/>
+      <text x="110" y="38" font-size="20" font-weight="800" fill="#DC2626" text-anchor="middle" font-family="system-ui,sans-serif" transform="rotate(-8)">WHAT? WHY?</text>
+    </g>
+  </g>
+
+  <!-- Arrow between (clean chevron shape, left-shifted per user feedback) -->
+  <g transform="translate(545, 290)">
+    <path d="M0 30 L40 30 L40 18 L72 38 L40 58 L40 46 L0 46 Z"
+          fill="url(#g-amber)" filter="url(#shadow)"/>
+  </g>
+
+  <!-- RIGHT: Ideal UI (3 columns: date, user, why) -->
+  <g transform="translate(640, 110)" filter="url(#shadow)">
+    <rect width="500" height="400" rx="10" fill="#ffffff" stroke="url(#g-amber)" stroke-width="3"/>
+    <rect width="500" height="46" rx="10" fill="url(#g-amber)"/>
+    <rect y="32" width="500" height="14" fill="url(#g-amber)"/>
+    <text x="20" y="30" font-size="14" font-weight="600" fill="#ffffff" font-family="system-ui,sans-serif">Version history (ideal)</text>
+
+    <!-- Header row -->
+    <rect y="46" width="500" height="38" fill="#FFFBEB"/>
+    <text x="20" y="70" font-size="11" font-weight="700" fill="#4338CA" letter-spacing="1" font-family="system-ui,sans-serif">DATE</text>
+    <text x="160" y="70" font-size="11" font-weight="700" fill="#4338CA" letter-spacing="1" font-family="system-ui,sans-serif">BY</text>
+    <text x="240" y="70" font-size="11" font-weight="800" fill="url(#g-amber)" letter-spacing="1" font-family="system-ui,sans-serif">WHY CHANGED</text>
+    <line x1="0" y1="84" x2="500" y2="84" stroke="#E0E7FF"/>
+    <!-- Vertical highlight on Why column -->
+    <rect x="234" y="46" width="266" height="354" fill="#FFFBEB" opacity="0.5"/>
+
+    <!-- Rows with WHY data -->
+    <g font-family="system-ui,sans-serif">
+      <rect y="84" width="500" height="50" fill="#ffffff"/>
+      <text x="20" y="114" font-size="13" font-weight="500" fill="#312E81" font-family="'JetBrains Mono',ui-monospace,monospace">04-15 14:23</text>
+      <text x="160" y="114" font-size="13" font-weight="500" fill="#312E81">Anna</text>
+      <text x="240" y="114" font-size="13" font-weight="600" fill="#312E81">layer 3 opacity adjusted</text>
+      <rect y="134" width="500" height="50" fill="#F8F7FF"/>
+      <text x="20" y="164" font-size="13" font-weight="500" fill="#312E81" font-family="'JetBrains Mono',ui-monospace,monospace">04-14 09:45</text>
+      <text x="160" y="164" font-size="13" font-weight="500" fill="#312E81">Brian</text>
+      <text x="240" y="164" font-size="13" font-weight="600" fill="#312E81">renamed client section</text>
+      <rect y="184" width="500" height="50" fill="#ffffff"/>
+      <text x="20" y="214" font-size="13" font-weight="500" fill="#312E81" font-family="'JetBrains Mono',ui-monospace,monospace">04-12 16:08</text>
+      <text x="160" y="214" font-size="13" font-weight="500" fill="#312E81">Anna</text>
+      <text x="240" y="214" font-size="13" font-weight="600" fill="#312E81">clause 7: shall → may</text>
+      <rect y="234" width="500" height="50" fill="#F8F7FF"/>
+      <text x="20" y="264" font-size="13" font-weight="500" fill="#312E81" font-family="'JetBrains Mono',ui-monospace,monospace">04-11 11:30</text>
+      <text x="160" y="264" font-size="13" font-weight="500" fill="#312E81">Carol</text>
+      <text x="240" y="264" font-size="13" font-weight="600" fill="#312E81">added Q4 numbers</text>
+      <rect y="284" width="500" height="50" fill="#ffffff"/>
+      <text x="20" y="314" font-size="13" font-weight="500" fill="#312E81" font-family="'JetBrains Mono',ui-monospace,monospace">04-10 17:50</text>
+      <text x="160" y="314" font-size="13" font-weight="500" fill="#312E81">Brian</text>
+      <text x="240" y="314" font-size="13" font-weight="600" fill="#312E81">fixed typo in title</text>
+      <rect y="334" width="500" height="50" fill="#F8F7FF"/>
+      <text x="20" y="364" font-size="13" font-weight="500" fill="#312E81" font-family="'JetBrains Mono',ui-monospace,monospace">04-08 10:14</text>
+      <text x="160" y="364" font-size="13" font-weight="500" fill="#312E81">Anna</text>
+      <text x="240" y="364" font-size="13" font-weight="600" fill="#312E81">first draft</text>
+    </g>
+  </g>
+
+  <!-- Bottom caption -->
+  <text x="600" y="560" font-size="16" font-weight="700" fill="#312E81" text-anchor="middle" letter-spacing="2">THE MISSING COLUMN · WHAT TURNS BACKUP INTO VERSION MANAGEMENT</text>
+
+</svg>

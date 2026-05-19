@@ -1,0 +1,55 @@
+# Vietnamese i18n strings (flat format for Hugo go-i18n v2)
+
+nav_posts = "Bài viết"
+nav_categories = "Danh mục"
+nav_search = "Tìm kiếm"
+nav_download = "Tải miễn phí"
+
+hero_badge = "Keeply Blog · cập nhật hàng tuần"
+hero_title_1 = "Câu chuyện thật về"
+hero_title_2 = "quản lý tệp."
+hero_subtitle = "Phần mềm quản lý tệp dành cho các nhóm dự án. Không thuật ngữ, không thay đổi quy trình — chỉ giải quyết những vấn đề văn phòng bạn gặp mỗi ngày."
+
+section_featured = "Nổi bật"
+section_latest = "Bài mới nhất"
+section_browse = "Duyệt theo danh mục"
+section_related = "Có thể bạn cũng thích"
+section_tags = "Thẻ"
+
+see_all = "Xem tất cả"
+read_more = "Đọc tiếp"
+reading_time = "Đọc trong {{ .count }} phút"
+posts_count = "{{ .count }} bài viết"
+
+page_previous = "Trước"
+page_next = "Tiếp"
+
+toc_title = "Mục lục"
+
+cta_title = "Sẵn sàng thử Keeply chưa?"
+cta_subtitle = "Tải miễn phí. Bắt đầu trong 30 giây."
+cta_button = "Tải Keeply"
+cta_sidebar_label = "Thử Keeply"
+cta_sidebar_title = "Cho tệp của bạn một cỗ máy thời gian"
+
+footer_site = "Trang chính"
+footer_rss = "Kênh RSS"
+footer_all_categories = "Tất cả danh mục"
+footer_privacy = "Quyền riêng tư"
+footer_buy = "Mua giấy phép trọn đời"
+footer_tagline = "Tệp của bạn có một câu chuyện."
+
+empty_no_posts = "Bài viết sắp ra mắt"
+empty_no_posts_sub = "Chúng tôi đang viết. Quay lại sớm nhé, hoặc "
+empty_try_keeply = "thử Keeply"
+empty_no_posts_end = " trong lúc đó."
+
+breadcrumb_home = "Trang chủ"
+by_author = "Bởi"
+
+cta_inline_pitch = "Let Keeply keep every version, so you're not hunting for it next time."
+cta_inline_subtitle = "Free · 30 seconds to start"
+
+cta_inline_pitch_soft = "If you do one thing today, let a tool keep every version for you."
+cta_inline_pitch_medium = "Free + 30 seconds to set up. No reason not to try."
+cta_inline_pitch_hard = "Still overwriting old files? 30 seconds saves you the next file hunt."

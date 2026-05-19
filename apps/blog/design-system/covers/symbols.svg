@@ -1,0 +1,226 @@
+<!-- =============================================================
+     Keeply Cover Kit — Master Symbol Library
+     Version 0.1 · 2026-04-23
+
+     所有封面共用的 SVG 零件。新增零件請更新 README.md 的清單。
+     使用方式：見 README.md。不要直接引用本檔（瀏覽器跨檔 <use> 會壞）；
+     請把需要的 <defs> + <symbol> 區塊 inline 複製到目標封面。
+     ============================================================= -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+
+  <!-- ================================================================
+       GRADIENTS & PATTERNS（永遠要先 inline 這塊）
+       ================================================================ -->
+  <defs>
+    <linearGradient id="grad-indigo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4F46E5"/>
+      <stop offset="1" stop-color="#4338CA"/>
+    </linearGradient>
+    <linearGradient id="grad-indigo-deep" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4338CA"/>
+      <stop offset="1" stop-color="#312E81"/>
+    </linearGradient>
+    <linearGradient id="grad-indigo-soft" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9C98FF"/>
+      <stop offset="1" stop-color="#6F6AF0"/>
+    </linearGradient>
+    <linearGradient id="grad-amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFB300"/>
+      <stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="grad-paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8F7FF"/>
+      <stop offset="1" stop-color="#EEF2FF"/>
+    </linearGradient>
+    <linearGradient id="grad-screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E0E7FF"/>
+      <stop offset="1" stop-color="#C7D2FE"/>
+    </linearGradient>
+
+    <pattern id="pat-grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#4338CA" stroke-width="1" opacity="0.06"/>
+    </pattern>
+
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#312E81" flood-opacity="0.12"/>
+    </filter>
+    <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#312E81" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <!-- ================================================================
+       CHARACTERS · 角色
+       所有角色 viewBox = 0 0 200 240
+       預設面朝右。水平翻轉用 transform="scale(-1,1) translate(-200,0)"
+       ================================================================ -->
+
+  <!-- 專注工作的人（坐姿，面朝右） -->
+  <symbol id="person-focused" viewBox="0 0 200 240">
+    <!-- 桌面 -->
+    <rect x="20" y="190" width="160" height="8" rx="2" fill="#9C98FF" opacity="0.35"/>
+    <!-- 筆電底座 -->
+    <rect x="110" y="182" width="70" height="6" rx="2" fill="#4338CA"/>
+    <!-- 筆電螢幕 -->
+    <path d="M115 182 L115 140 Q115 134 121 134 L175 134 Q181 134 181 140 L181 182 Z" fill="url(#grad-indigo)"/>
+    <rect x="121" y="140" width="54" height="36" rx="2" fill="url(#grad-screen)"/>
+    <!-- 螢幕內容線條 -->
+    <rect x="126" y="146" width="30" height="3" rx="1" fill="#4338CA" opacity="0.45"/>
+    <rect x="126" y="154" width="40" height="3" rx="1" fill="#4338CA" opacity="0.35"/>
+    <rect x="126" y="162" width="24" height="3" rx="1" fill="#4338CA" opacity="0.35"/>
+    <!-- 椅背 -->
+    <rect x="54" y="150" width="10" height="60" rx="3" fill="#9C98FF" opacity="0.5"/>
+    <!-- 身體（肩膀+軀幹） -->
+    <path d="M62 186 Q62 150 92 150 L110 150 Q110 186 110 196 L62 196 Z" fill="url(#grad-indigo)"/>
+    <!-- 手臂延伸到鍵盤 -->
+    <path d="M100 168 Q115 168 115 178 L115 186 L100 186 Z" fill="url(#grad-indigo-soft)"/>
+    <!-- 頭 -->
+    <circle cx="92" cy="124" r="24" fill="url(#grad-indigo-soft)"/>
+    <!-- 頭髮/頂部微暗 -->
+    <path d="M70 116 Q70 100 92 100 Q114 100 114 116 Q102 112 92 112 Q82 112 70 116 Z" fill="#4338CA" opacity="0.55"/>
+  </symbol>
+
+  <!-- 困惑的人（坐姿，頭上問號泡泡） -->
+  <symbol id="person-anxious" viewBox="0 0 200 240">
+    <!-- 桌面 -->
+    <rect x="20" y="190" width="160" height="8" rx="2" fill="#9C98FF" opacity="0.35"/>
+    <!-- 筆電 -->
+    <rect x="110" y="182" width="70" height="6" rx="2" fill="#4338CA"/>
+    <path d="M115 182 L115 140 Q115 134 121 134 L175 134 Q181 134 181 140 L181 182 Z" fill="url(#grad-indigo)"/>
+    <rect x="121" y="140" width="54" height="36" rx="2" fill="url(#grad-screen)"/>
+    <!-- 螢幕警示 -->
+    <circle cx="148" cy="158" r="9" fill="url(#grad-amber)"/>
+    <text x="148" y="163" font-size="14" font-weight="900" text-anchor="middle" fill="#312E81" font-family="system-ui, sans-serif">!</text>
+    <!-- 椅背 -->
+    <rect x="54" y="150" width="10" height="60" rx="3" fill="#9C98FF" opacity="0.5"/>
+    <!-- 身體（身體稍後仰） -->
+    <path d="M60 186 Q58 148 90 148 L108 150 Q108 186 108 196 L60 196 Z" fill="url(#grad-indigo)"/>
+    <!-- 手舉起抓頭（抽象） -->
+    <path d="M72 140 Q66 108 88 100 L92 110 Q78 118 84 142 Z" fill="url(#grad-indigo-soft)"/>
+    <!-- 頭 -->
+    <circle cx="92" cy="122" r="24" fill="url(#grad-indigo-soft)"/>
+    <path d="M70 114 Q70 98 92 98 Q114 98 114 114 Q102 110 92 110 Q82 110 70 114 Z" fill="#4338CA" opacity="0.55"/>
+    <!-- 問號泡泡（右上） -->
+    <circle cx="150" cy="70" r="24" fill="#ffffff" stroke="url(#grad-amber)" stroke-width="3"/>
+    <text x="150" y="80" font-size="32" font-weight="900" text-anchor="middle" fill="#F59E0B" font-family="system-ui, sans-serif">?</text>
+    <circle cx="130" cy="98" r="4" fill="#ffffff" stroke="url(#grad-amber)" stroke-width="2"/>
+  </symbol>
+
+  <!-- 走過來的人（站姿，手持手機） -->
+  <symbol id="person-approaching" viewBox="0 0 200 240">
+    <!-- 腳/鞋 -->
+    <rect x="74" y="222" width="20" height="10" rx="3" fill="#312E81"/>
+    <rect x="104" y="224" width="22" height="8" rx="3" fill="#312E81"/>
+    <!-- 腿 -->
+    <rect x="76" y="170" width="18" height="58" rx="4" fill="#4338CA"/>
+    <rect x="104" y="170" width="22" height="58" rx="4" fill="url(#grad-indigo-deep)"/>
+    <!-- 身體（走路稍傾） -->
+    <path d="M68 176 Q68 130 100 130 L120 130 Q128 130 128 138 L128 176 Z" fill="url(#grad-indigo)"/>
+    <!-- 手持手機 -->
+    <rect x="96" y="148" width="22" height="34" rx="4" fill="url(#grad-indigo-deep)"/>
+    <rect x="100" y="152" width="14" height="24" rx="1" fill="url(#grad-screen)"/>
+    <circle cx="107" cy="164" r="2" fill="url(#grad-amber)"/>
+    <!-- 手臂 -->
+    <path d="M90 138 Q85 150 98 154 L100 148 Z" fill="url(#grad-indigo-soft)"/>
+    <!-- 頭 -->
+    <circle cx="100" cy="108" r="24" fill="url(#grad-indigo-soft)"/>
+    <path d="M78 100 Q78 84 100 84 Q122 84 122 100 Q110 96 100 96 Q90 96 78 100 Z" fill="#4338CA" opacity="0.55"/>
+  </symbol>
+
+  <!-- ================================================================
+       PROPS · 道具
+       ================================================================ -->
+
+  <!-- 中央大資料夾（可疊檔案卡在裡面） -->
+  <symbol id="folder-shared" viewBox="0 0 480 360">
+    <!-- 陰影 -->
+    <ellipse cx="240" cy="340" rx="180" ry="12" fill="#312E81" opacity="0.10"/>
+    <!-- 資料夾背板（露出的後層） -->
+    <path d="M20 90 Q20 70 40 70 L160 70 L190 100 L440 100 Q460 100 460 120 L460 320 Q460 340 440 340 L40 340 Q20 340 20 320 Z"
+          fill="url(#grad-indigo-deep)"/>
+    <!-- 資料夾前板（主體） -->
+    <path d="M20 130 Q20 110 40 110 L440 110 Q460 110 460 130 L460 320 Q460 340 440 340 L40 340 Q20 340 20 320 Z"
+          fill="url(#grad-indigo)"/>
+    <!-- 資料夾 label 色帶 -->
+    <rect x="40" y="130" width="80" height="6" rx="3" fill="url(#grad-amber)"/>
+  </symbol>
+
+  <!-- 單張檔名卡（內容透過 <use> 外面補） -->
+  <symbol id="file-card" viewBox="0 0 300 60">
+    <rect x="0" y="0" width="300" height="60" rx="10" fill="#ffffff" stroke="#E4E3FF" stroke-width="1.5"/>
+    <rect x="16" y="22" width="16" height="16" rx="2" fill="#C7D2FE"/>
+    <path d="M28 22 L32 26 L28 26 Z" fill="#9C98FF"/>
+  </symbol>
+
+  <!-- 檔名卡（警示版：琥珀邊框） -->
+  <symbol id="file-card-alert" viewBox="0 0 300 60">
+    <rect x="-2" y="-2" width="304" height="64" rx="11" fill="none" stroke="url(#grad-amber)" stroke-width="3"/>
+    <rect x="0" y="0" width="300" height="60" rx="10" fill="#ffffff" stroke="#E4E3FF" stroke-width="1.5"/>
+    <rect x="16" y="22" width="16" height="16" rx="2" fill="url(#grad-amber)"/>
+  </symbol>
+
+  <!-- 檔案亂飛群組（無字；字在外層 text 加） -->
+  <symbol id="file-chaos" viewBox="0 0 400 300">
+    <g transform="translate(20,200) rotate(-6)" opacity="0.5">
+      <rect width="320" height="50" rx="8" fill="#ffffff" stroke="#E4E3FF"/>
+      <rect x="14" y="17" width="12" height="16" fill="#C7D2FE"/>
+    </g>
+    <g transform="translate(40,140) rotate(3)" opacity="0.7">
+      <rect width="340" height="50" rx="8" fill="#ffffff" stroke="#E4E3FF"/>
+      <rect x="14" y="17" width="12" height="16" fill="#C7D2FE"/>
+    </g>
+    <g transform="translate(30,80) rotate(-3)" opacity="0.88">
+      <rect width="360" height="50" rx="8" fill="#ffffff" stroke="#E4E3FF"/>
+      <rect x="14" y="17" width="12" height="16" fill="#C7D2FE"/>
+    </g>
+    <g transform="translate(50,20) rotate(5)">
+      <rect x="-3" y="-3" width="366" height="56" rx="11" fill="none" stroke="url(#grad-amber)" stroke-width="3"/>
+      <rect width="360" height="50" rx="8" fill="#ffffff" stroke="#E4E3FF"/>
+      <rect x="14" y="17" width="12" height="16" fill="url(#grad-amber)"/>
+    </g>
+  </symbol>
+
+  <!-- 琥珀閃電（logo 呼應 / 警示） -->
+  <symbol id="lightning" viewBox="0 0 60 120">
+    <path d="M36 0 L10 60 L28 60 L20 120 L50 50 L32 50 Z" fill="url(#grad-amber)" stroke="#F59E0B" stroke-width="1.5" stroke-linejoin="round"/>
+  </symbol>
+
+  <!-- 對話泡 -->
+  <symbol id="speech-bubble" viewBox="0 0 120 100">
+    <path d="M10 10 Q0 10 0 20 L0 70 Q0 80 10 80 L40 80 L35 95 L55 80 L110 80 Q120 80 120 70 L120 20 Q120 10 110 10 Z"
+          fill="#ffffff" stroke="#C7D2FE" stroke-width="2"/>
+  </symbol>
+
+  <!-- 思考泡 -->
+  <symbol id="thought-bubble" viewBox="0 0 120 100">
+    <ellipse cx="60" cy="40" rx="55" ry="28" fill="#ffffff" stroke="#C7D2FE" stroke-width="2"/>
+    <circle cx="40" cy="78" r="6" fill="#ffffff" stroke="#C7D2FE" stroke-width="2"/>
+    <circle cx="30" cy="92" r="3" fill="#ffffff" stroke="#C7D2FE" stroke-width="1.5"/>
+  </symbol>
+
+  <!-- ================================================================
+       BRAND · 品牌
+       ================================================================ -->
+
+  <!-- Keeply logo mark -->
+  <symbol id="keeply-mark" viewBox="0 0 512 512">
+    <path d="M396 129C429 159 448 200 448 255C448 363 360 451 252 451C145 451 58 368 56 263C55 206 75 158 111 123"
+          stroke="url(#grad-indigo)" stroke-width="44" stroke-linecap="round" fill="none"/>
+    <path d="M111 123C145 91 190 72 239 72C253 72 265 73 278 76"
+          stroke="url(#grad-amber)" stroke-width="44" stroke-linecap="round" fill="none"/>
+    <path d="M236 54L313 79L254 134L236 54Z" fill="url(#grad-amber)"/>
+    <rect x="220" y="150" width="152" height="206" rx="32" fill="url(#grad-indigo-soft)" opacity="0.48"/>
+    <rect x="192" y="167" width="152" height="206" rx="32" fill="url(#grad-indigo-soft)" opacity="0.72"/>
+    <rect x="164" y="184" width="152" height="206" rx="32" fill="url(#grad-indigo)"/>
+  </symbol>
+
+  <!-- Keeply 橫式 lockup（mark + wordmark + tagline 槽） -->
+  <symbol id="keeply-lockup" viewBox="0 0 260 64">
+    <g transform="translate(0,4) scale(0.11)">
+      <use href="#keeply-mark"/>
+    </g>
+    <text x="66" y="28" font-size="24" font-weight="800" fill="#312E81" font-family="system-ui, -apple-system, sans-serif" letter-spacing="0.2">Keeply</text>
+    <text x="66" y="50" font-size="11" font-weight="600" fill="#4338CA" opacity="0.72" font-family="system-ui, -apple-system, sans-serif" letter-spacing="1.5">KEEPLY.WORK</text>
+  </symbol>
+
+</svg>

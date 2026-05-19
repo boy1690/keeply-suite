@@ -1,0 +1,55 @@
+# Dutch i18n strings (flat format for Hugo go-i18n v2)
+
+nav_posts = "Berichten"
+nav_categories = "Categorieën"
+nav_search = "Zoeken"
+nav_download = "Gratis download"
+
+hero_badge = "Keeply Blog · wekelijkse updates"
+hero_title_1 = "Echte verhalen over"
+hero_title_2 = "bestandsbeheer."
+hero_subtitle = "Software voor bestandsbeheer, gebouwd voor projectteams. Geen jargon, geen wijzigingen aan je workflow — gewoon de kantoorproblemen oplossen waar je elke dag tegenaan loopt."
+
+section_featured = "Uitgelicht"
+section_latest = "Nieuwste berichten"
+section_browse = "Op categorie"
+section_related = "Misschien vind je dit ook leuk"
+section_tags = "Tags"
+
+see_all = "Bekijk alles"
+read_more = "Lees verder"
+reading_time = "{{ .count }} min leestijd"
+posts_count = "{{ .count }} artikelen"
+
+page_previous = "Vorige"
+page_next = "Volgende"
+
+toc_title = "Inhoudsopgave"
+
+cta_title = "Keeply uitproberen?"
+cta_subtitle = "Gratis download. In 30 seconden aan de slag."
+cta_button = "Keeply downloaden"
+cta_sidebar_label = "Probeer Keeply"
+cta_sidebar_title = "Geef je bestanden een tijdmachine"
+
+footer_site = "Hoofdsite"
+footer_rss = "RSS-feed"
+footer_all_categories = "Alle categorieën"
+footer_privacy = "Privacy"
+footer_buy = "Levenslange licentie kopen"
+footer_tagline = "Je bestanden hebben een verhaal."
+
+empty_no_posts = "Berichten komen eraan"
+empty_no_posts_sub = "We zijn aan het schrijven. Kom snel terug, of "
+empty_try_keeply = "probeer Keeply"
+empty_no_posts_end = " in de tussentijd."
+
+breadcrumb_home = "Home"
+by_author = "Door"
+
+cta_inline_pitch = "Let Keeply keep every version, so you're not hunting for it next time."
+cta_inline_subtitle = "Free · 30 seconds to start"
+
+cta_inline_pitch_soft = "If you do one thing today, let a tool keep every version for you."
+cta_inline_pitch_medium = "Free + 30 seconds to set up. No reason not to try."
+cta_inline_pitch_hard = "Still overwriting old files? 30 seconds saves you the next file hunt."

@@ -1,0 +1,4 @@
+{
+  "specsDir": "Z:/keeply-blog",
+  "_note": "Specs live on a network share for cross-machine sync. IBV hooks resolve via IBV_SPECS_DIR env var first (set in .claude/settings.json), then this file as fallback."
+}

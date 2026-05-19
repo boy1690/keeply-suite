@@ -1,0 +1,158 @@
+# Handoff: Schema.org JSON-LD for `keeply.work` main site — ⚠️ OBSOLETE
+
+> **Created 2026-05-13. Marked obsolete same day after re-audit.**
+>
+> The original audit probe was wrong: `grep '"@type":"[A-Za-z]+"'` missed
+> the schema because production HTML uses pretty-printed JSON with a
+> space after `:`. The schema HAS been present all along, and is in
+> fact MORE comprehensive than the blog's (SoftwareApplication with
+> price/Offer + FAQPage in addition to Organization + WebSite).
+>
+> Verified 2026-05-13 via:
+>
+> ```bash
+> curl -s --compressed https://keeply.work/ | grep -A 30 'application/ld+json'
+> ```
+>
+> Result: full Organization + WebSite + SoftwareApplication (price
+> 599 USD, downloadUrl to GitHub releases, OS Windows/macOS,
+> applicationCategory UtilitiesApplication) + FAQPage with 8 Q&As.
+>
+> **No action required** on this front.
+>
+> See instead: `handoff-keeply-website-integration-audit-2026-05-13.md`
+> for the actual main-site gaps that DO need work (font preload,
+> per-locale install page, compare-page localization, HSTS headers).
+>
+> Original (incorrect) spec below preserved for traceability.
+
+---
+
+## Why this matters
+
+The 2026 SEO checklist treats Schema.org JSON-LD as a hard
+prerequisite for AI Overview / SGE / Perplexity / ChatGPT Search
+entity recognition. The blog already ships full schema:
+
+- `BlogPosting` per article
+- `BreadcrumbList`, `FAQPage`, `Organization`, `Person`, `ImageObject`,
+  `WebPage`
+
+The main site landing page (`https://keeply.work/`) has **zero**
+JSON-LD. That's the only gap on otherwise-strong SEO infrastructure.
+
+Audit command used:
+
+```bash
+curl -s https://keeply.work/ | grep -oE '"@type":"[A-Za-z]+"' | sort -u
+# (empty output = no JSON-LD present)
+```
+
+## What to add
+
+### Required pieces
+
+1. **Organization** on every page (most critical for entity SEO)
+2. **WebSite** on landing page (enables sitelinks search box)
+3. **SoftwareApplication** on landing page (product is a desktop app)
+4. **BreadcrumbList** on subpages (already present? worth verifying)
+
+### Suggested JSON-LD (drop into `<head>` of every page)
+
+```html
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://keeply.work/#org",
+      "name": "Keeply",
+      "url": "https://keeply.work/",
+      "logo": "https://keeply.work/logo.svg",
+      "sameAs": [
+        "https://github.com/boy1690",
+        "https://blog.keeply.work/"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Tsao Ting Wei",
+        "alternateName": "曹庭維",
+        "jobTitle": "Founder",
+        "url": "https://github.com/boy1690"
+      },
+      "description": "File management software for project management teams. Built-in version history, multi-location storage (3-2-1 compliant), and multi-repo Release."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://keeply.work/#site",
+      "url": "https://keeply.work/",
+      "name": "Keeply",
+      "publisher": { "@id": "https://keeply.work/#org" },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Keeply",
+      "applicationCategory": "ProductivityApplication",
+      "operatingSystem": "Windows, macOS",
+      "url": "https://keeply.work/",
+      "image": "https://keeply.work/og-image.png",
+      "publisher": { "@id": "https://keeply.work/#org" },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Your file history guardian. Built-in version history, 3-2-1 multi-location storage, multi-repo Release — no git terminology required."
+    }
+  ]
+}
+</script>
+```
+
+Adjust `founder` / `sameAs` / pricing fields based on what the
+website team prefers to expose.
+
+### Per-locale variant
+
+`keeply.work` is multilingual (19 locales like the blog). Each locale
+should have its own JSON-LD with the locale-specific `description` and
+`inLanguage` value. Mirror the blog's pattern.
+
+## Verification
+
+After deploy:
+
+```bash
+# Should show all three @types
+curl -s https://keeply.work/ | grep -oE '"@type":"[A-Za-z]+"' | sort -u
+# expected: Organization, SoftwareApplication, WebSite, plus Person inside Organization
+```
+
+Or paste the page URL into Google's [Rich Results Test](https://search.google.com/test/rich-results)
+— should detect Organization + SoftwareApplication.
+
+## Effort estimate
+
+~30 min for one engineer who knows the keeply-website Hugo/Astro/Next
+templates. The JSON-LD goes into the head partial alongside whatever
+meta tags already live there.
+
+## Why this is here, not in keeply-website
+
+`d:\tools\doing\keeply-blog\CLAUDE.md` P0 cross-repo boundary:
+
+> 本 repo（`d:\tools\doing\keeply-blog\`）**只能寫自己**。三個外部 repo
+> 一律 OFF-LIMITS … `d:\tools\doing\keeply-website\` keeply.work
+> 主站 — **絕對禁寫**。
+
+So this spec sits in the blog repo (where it surfaced) and waits for
+the keeply-website maintainer to action.
+
+## Status
+
+- [ ] Spec reviewed by keeply-website maintainer
+- [ ] JSON-LD merged in keeply-website head partial
+- [ ] Verified via Rich Results Test on production URL
+- [ ] (Optional) Per-locale `description` + `inLanguage` filled in

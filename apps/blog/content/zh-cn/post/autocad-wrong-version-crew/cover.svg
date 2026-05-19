@@ -1,0 +1,107 @@
+<!-- =============================================================
+     Cover v2: 为什么发给施工队的 AutoCAD 图纸总是错的 (zh-cn)
+     Kit version: 0.1
+     Recipe: three misaligned timelines
+     Layout: large type top-left + timelines bottom-right, whitespace-heavy
+     Localization notes:
+       - 主标题 3 行：保持视觉平衡。用 "施工队" (PRC 常用，vs zh-tw "工班")；
+         用 "图纸" 而非 "图档"（PRC 建筑行业更惯用）。
+       - 字体栈：Noto Sans SC 优先 (Google Noto Simplified Chinese)，
+         PingFang SC (Apple), Microsoft YaHei (Windows fallback).
+       - Eyebrow "AUTOCAD · EDITORIAL" 保留英文（品牌感 + 跨语言一致）。
+       - KEEPLY / KEEPLY.WORK 保留英文（品牌）。
+       - Timeline 标签用 设计 / 办公室 / 现场；描述词用 PRC 简体口语。
+       - NOW 标记翻成 "此刻" (避免中英混排突兀)。
+     ============================================================= -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none"
+     font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+
+  <defs>
+    <linearGradient id="bg-paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8F7FF"/>
+      <stop offset="1" stop-color="#EEF2FF"/>
+    </linearGradient>
+    <linearGradient id="grad-indigo-deep" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4338CA"/><stop offset="1" stop-color="#312E81"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="1600" height="900" fill="url(#bg-paper)"/>
+
+  <!-- 左上：eyebrow -->
+  <g transform="translate(120, 120)">
+    <rect x="0" y="0" width="20" height="4" fill="#F59E0B"/>
+    <text x="32" y="6" font-size="14" font-weight="700" fill="#4338CA" letter-spacing="3" opacity="0.72">AUTOCAD · EDITORIAL</text>
+  </g>
+
+  <!-- 主标题（3 行，视觉平衡） -->
+  <text x="120" y="260" font-size="74" font-weight="900" fill="#312E81" letter-spacing="-2">你的施工队总是</text>
+  <text x="120" y="350" font-size="74" font-weight="900" fill="#312E81" letter-spacing="-2">拿到错的</text>
+  <text x="120" y="440" font-size="74" font-weight="900" fill="url(#grad-indigo-deep)" letter-spacing="-2">AutoCAD 图纸。</text>
+
+  <!-- 副标题 -->
+  <text x="120" y="510" font-size="24" font-weight="500" fill="#6F6AF0">办公室有新版。现场没有。</text>
+
+  <!-- 右侧：三条时间线（错位可视化） -->
+  <g transform="translate(920, 260)">
+
+    <!-- Timeline 1: 设计（五个实心点，走最远） -->
+    <g>
+      <line x1="0" y1="0" x2="520" y2="0" stroke="#4F46E5" stroke-width="2" opacity="0.35"/>
+      <circle cx="40"  cy="0" r="9" fill="#4F46E5"/>
+      <circle cx="150" cy="0" r="9" fill="#4F46E5"/>
+      <circle cx="260" cy="0" r="9" fill="#4F46E5"/>
+      <circle cx="370" cy="0" r="9" fill="#4F46E5"/>
+      <circle cx="480" cy="0" r="11" fill="#4F46E5"/>
+      <text x="540" y="5" font-size="20" font-weight="700" fill="#4F46E5">设计</text>
+      <text x="540" y="26" font-size="12" font-weight="500" fill="#4F46E5" opacity="0.7" letter-spacing="1">已出 5 版</text>
+    </g>
+
+    <!-- Timeline 2: 办公室（三个实心 + 两个空心虚线，跟丢两版） -->
+    <g transform="translate(0, 120)">
+      <line x1="0" y1="0" x2="520" y2="0" stroke="#4338CA" stroke-width="2" opacity="0.35"/>
+      <circle cx="40"  cy="0" r="9" fill="#4338CA"/>
+      <circle cx="150" cy="0" r="9" fill="#4338CA"/>
+      <circle cx="260" cy="0" r="9" fill="#4338CA"/>
+      <circle cx="370" cy="0" r="9" fill="none" stroke="#4338CA" stroke-width="2" stroke-dasharray="3 3" opacity="0.5"/>
+      <circle cx="480" cy="0" r="11" fill="none" stroke="#4338CA" stroke-width="2" stroke-dasharray="3 3" opacity="0.5"/>
+      <text x="540" y="5" font-size="20" font-weight="700" fill="#4338CA">办公室</text>
+      <text x="540" y="26" font-size="12" font-weight="500" fill="#4338CA" opacity="0.7" letter-spacing="1">漏了最后两版</text>
+    </g>
+
+    <!-- Timeline 3: 现场（两个实心 + 三个空心，跟最远） -->
+    <g transform="translate(0, 240)">
+      <line x1="0" y1="0" x2="520" y2="0" stroke="#F59E0B" stroke-width="2" opacity="0.35"/>
+      <circle cx="40"  cy="0" r="9" fill="#F59E0B"/>
+      <circle cx="150" cy="0" r="9" fill="#F59E0B"/>
+      <circle cx="260" cy="0" r="9" fill="none" stroke="#F59E0B" stroke-width="2" stroke-dasharray="3 3" opacity="0.5"/>
+      <circle cx="370" cy="0" r="9" fill="none" stroke="#F59E0B" stroke-width="2" stroke-dasharray="3 3" opacity="0.5"/>
+      <circle cx="480" cy="0" r="11" fill="none" stroke="#F59E0B" stroke-width="2" stroke-dasharray="3 3" opacity="0.5"/>
+      <text x="540" y="5" font-size="20" font-weight="700" fill="#F59E0B">现场</text>
+      <text x="540" y="26" font-size="12" font-weight="500" fill="#D97706" opacity="0.85" letter-spacing="1">还在用第 2 版</text>
+    </g>
+
+    <!-- NOW 垂直虚线（穿过三条线） -->
+    <line x1="480" y1="-50" x2="480" y2="280" stroke="#312E81" stroke-width="2" stroke-dasharray="6 6" opacity="0.55"/>
+    <text x="490" y="-26" font-size="13" font-weight="800" fill="#312E81" letter-spacing="4">此刻</text>
+  </g>
+
+  <!-- 底部说明（第一行） -->
+  <text x="120" y="760" font-size="20" font-weight="600" fill="#4338CA" opacity="0.82">
+    三条时间线 · 最容易断的那条。
+  </text>
+
+  <!-- 底部说明（第二行） -->
+  <text x="120" y="790" font-size="14" font-weight="500" fill="#6F6AF0" opacity="0.7" letter-spacing="1">
+    新版进办公室 · 没人通知现场 · 工人照旧版做。
+  </text>
+
+  <!-- 底部右：Keeply wordmark -->
+  <g transform="translate(1380, 800)">
+    <rect x="0" y="-14" width="6" height="38" fill="#F59E0B"/>
+    <text x="18" y="8" font-size="26" font-weight="900" fill="#312E81" letter-spacing="2">KEEPLY</text>
+    <text x="18" y="28" font-size="11" font-weight="600" fill="#4338CA" opacity="0.65" letter-spacing="3">KEEPLY.WORK</text>
+  </g>
+
+</svg>

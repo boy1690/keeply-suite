@@ -1,0 +1,92 @@
+<!-- Image 5: 第一週 mental model 變化Timeline -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" fill="none"
+     font-family="'Inter','SF Pro Display',-apple-system,system-ui,sans-serif">
+  <defs>
+    <linearGradient id="g-indigo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#4338CA"/>
+    </linearGradient>
+    <linearGradient id="g-amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFB300"/><stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="g-paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8F7FF"/><stop offset="1" stop-color="#EEF2FF"/>
+    </linearGradient>
+    <pattern id="grid" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#4338CA" stroke-width="1" opacity="0.05"/>
+    </pattern>
+    <filter id="shadow"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#312E81" flood-opacity="0.14"/></filter>
+  </defs>
+
+  <rect width="1200" height="600" fill="url(#g-paper)"/>
+  <rect width="1200" height="600" fill="url(#grid)"/>
+
+  <text x="600" y="48" font-size="13" font-weight="800" fill="#312E81" text-anchor="middle" letter-spacing="3">First week · what you'll experience</text>
+
+  <!-- Timeline主線 -->
+  <line x1="160" y1="290" x2="1040" y2="290" stroke="url(#g-indigo)" stroke-width="3"/>
+
+  <!-- Day 1 -->
+  <g transform="translate(220, 290)">
+    <circle cx="0" cy="0" r="14" fill="url(#g-indigo)" stroke="#ffffff" stroke-width="3"/>
+    <text x="0" y="-44" font-size="32" font-weight="900" fill="url(#g-indigo)" text-anchor="middle" font-family="system-ui,sans-serif">DAY 1</text>
+
+    <g transform="translate(-130, 50)" filter="url(#shadow)">
+      <rect width="260" height="180" rx="10" fill="#ffffff" stroke="#E0E7FF"/>
+      <rect width="260" height="36" rx="10" fill="url(#g-indigo)"/>
+      <rect y="22" width="260" height="14" fill="url(#g-indigo)"/>
+      <text x="130" y="24" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="system-ui,sans-serif" letter-spacing="1">Day 1</text>
+
+      <text x="20" y="68" font-size="14" font-weight="700" fill="#312E81">Action</text>
+      <text x="20" y="90" font-size="13" font-weight="500" fill="#4338CA">Drag in a project → save</text>
+
+      <text x="20" y="124" font-size="14" font-weight="700" fill="#312E81">Inner state</text>
+      <text x="20" y="146" font-size="13" font-weight="500" fill="#4338CA" opacity="0.8">"Don't feel any different"</text>
+      <text x="20" y="164" font-size="11" font-weight="500" fill="#6F6AF0" opacity="0.6">This is what right feels like</text>
+    </g>
+  </g>
+
+  <!-- Day 3 -->
+  <g transform="translate(600, 290)">
+    <circle cx="0" cy="0" r="14" fill="url(#g-amber)" stroke="#ffffff" stroke-width="3"/>
+    <text x="0" y="-44" font-size="32" font-weight="900" fill="url(#g-amber)" text-anchor="middle" font-family="system-ui,sans-serif">DAY 3</text>
+
+    <g transform="translate(-130, 50)" filter="url(#shadow)">
+      <rect width="260" height="180" rx="10" fill="#ffffff" stroke="url(#g-amber)" stroke-width="2"/>
+      <rect width="260" height="36" rx="10" fill="url(#g-amber)"/>
+      <rect y="22" width="260" height="14" fill="url(#g-amber)"/>
+      <text x="130" y="24" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="system-ui,sans-serif" letter-spacing="1">Days 2–3</text>
+
+      <text x="20" y="68" font-size="14" font-weight="700" fill="#312E81">Action</text>
+      <text x="20" y="90" font-size="13" font-weight="500" fill="#4338CA">Edit 200 words → save</text>
+
+      <text x="20" y="124" font-size="14" font-weight="700" fill="#312E81">Inner state</text>
+      <text x="20" y="146" font-size="13" font-weight="500" fill="#4338CA" opacity="0.8">"Oh, I can go back"</text>
+      <text x="20" y="164" font-size="11" font-weight="500" fill="url(#g-amber)" opacity="0.85">Click the Timeline, see your own notes</text>
+    </g>
+  </g>
+
+  <!-- Day 7 -->
+  <g transform="translate(980, 290)">
+    <circle cx="0" cy="0" r="16" fill="url(#g-amber)" stroke="#ffffff" stroke-width="3"/>
+    <path d="M-7 0 L-2 5 L8 -6" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <text x="0" y="-44" font-size="32" font-weight="900" fill="url(#g-amber)" text-anchor="middle" font-family="system-ui,sans-serif">DAY 7</text>
+
+    <g transform="translate(-130, 50)" filter="url(#shadow)">
+      <rect width="260" height="180" rx="10" fill="#ffffff" stroke="url(#g-amber)" stroke-width="2"/>
+      <rect width="260" height="36" rx="10" fill="url(#g-amber)"/>
+      <rect y="22" width="260" height="14" fill="url(#g-amber)"/>
+      <text x="130" y="24" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="system-ui,sans-serif" letter-spacing="1">Days 4–7</text>
+
+      <text x="20" y="68" font-size="14" font-weight="700" fill="#312E81">Action</text>
+      <text x="20" y="90" font-size="13" font-weight="500" fill="#4338CA">More saves, more file notes</text>
+
+      <text x="20" y="124" font-size="14" font-weight="700" fill="#312E81">Inner state</text>
+      <text x="20" y="146" font-size="14" font-weight="800" fill="url(#g-amber)">"Nice"</text>
+      <text x="20" y="166" font-size="11" font-weight="500" fill="#6F6AF0" opacity="0.7">You haven't read any docs</text>
+    </g>
+  </g>
+
+  <!-- Bottom caption -->
+  <text x="600" y="568" font-size="14" font-weight="700" fill="#312E81" text-anchor="middle" letter-spacing="2">No need to be an expert first · intuitive use · on board day 1</text>
+
+</svg>

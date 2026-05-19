@@ -1,0 +1,110 @@
+<!-- Image 4: NAS folder with multiple _v3_final variants — human-built version history -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" fill="none"
+     font-family="'Inter','Noto Sans TC',system-ui,sans-serif">
+  <defs>
+    <linearGradient id="g-indigo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#4338CA"/>
+    </linearGradient>
+    <linearGradient id="g-indigo-deep" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4338CA"/><stop offset="1" stop-color="#312E81"/>
+    </linearGradient>
+    <linearGradient id="g-amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFB300"/><stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="g-paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8F7FF"/><stop offset="1" stop-color="#EEF2FF"/>
+    </linearGradient>
+    <pattern id="grid" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#4338CA" stroke-width="1" opacity="0.05"/>
+    </pattern>
+    <filter id="shadow"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#312E81" flood-opacity="0.18"/></filter>
+  </defs>
+
+  <rect width="1200" height="600" fill="url(#g-paper)"/>
+  <rect width="1200" height="600" fill="url(#grid)"/>
+
+  <!-- Top label -->
+  <g transform="translate(60, 60)">
+    <text x="0" y="0" font-size="14" font-weight="800" fill="#312E81" letter-spacing="3">COMPANY NAS · DESIGN PROJECT FOLDER</text>
+  </g>
+
+  <!-- NAS folder window -->
+  <g transform="translate(80, 110)" filter="url(#shadow)">
+    <rect width="1040" height="430" rx="10" fill="#ffffff"/>
+    <!-- Title bar -->
+    <rect width="1040" height="46" rx="10" fill="url(#g-indigo-deep)"/>
+    <rect y="32" width="1040" height="14" fill="url(#g-indigo-deep)"/>
+    <text x="24" y="30" font-size="15" font-weight="700" fill="#ffffff" font-family="system-ui,sans-serif">📁 NAS › Design › Cover Q4</text>
+    <!-- Window controls -->
+    <g transform="translate(950, 12)" stroke="#ffffff" stroke-width="2" opacity="0.7">
+      <line x1="0" y1="14" x2="14" y2="14" stroke-linecap="round"/>
+      <rect x="26" y="0" width="14" height="14" rx="1" fill="none"/>
+      <line x1="56" y1="0" x2="68" y2="14" stroke-linecap="round"/>
+      <line x1="68" y1="0" x2="56" y2="14" stroke-linecap="round"/>
+    </g>
+
+    <!-- Header row -->
+    <rect y="46" width="1040" height="36" fill="#F8F7FF"/>
+    <text x="28" y="68" font-size="11" font-weight="700" fill="#4338CA" letter-spacing="2" font-family="system-ui,sans-serif">NAME</text>
+    <text x="700" y="68" font-size="11" font-weight="700" fill="#4338CA" letter-spacing="2" font-family="system-ui,sans-serif">MODIFIED</text>
+    <text x="900" y="68" font-size="11" font-weight="700" fill="#4338CA" letter-spacing="2" font-family="system-ui,sans-serif">SIZE</text>
+    <line x1="0" y1="82" x2="1040" y2="82" stroke="#E0E7FF"/>
+
+    <!-- File rows: progression of _v3_final chaos -->
+    <g font-family="'JetBrains Mono','Fira Code',ui-monospace,monospace">
+      <!-- Row 1 -->
+      <rect y="82" width="1040" height="44" fill="#ffffff"/>
+      <g transform="translate(28,94)"><rect width="22" height="28" rx="2" fill="url(#g-indigo)"/></g>
+      <text x="64" y="110" font-size="16" font-weight="500" fill="#312E81">cover.psd</text>
+      <text x="700" y="110" font-size="13" font-weight="500" fill="#6F6AF0" opacity="0.7" font-family="system-ui,sans-serif">Mar 8</text>
+      <text x="900" y="110" font-size="13" font-weight="500" fill="#6F6AF0" opacity="0.7" font-family="system-ui,sans-serif">220 MB</text>
+      <!-- Row 2 -->
+      <rect y="126" width="1040" height="44" fill="#F8F7FF"/>
+      <g transform="translate(28,138)"><rect width="22" height="28" rx="2" fill="url(#g-indigo)"/></g>
+      <text x="64" y="154" font-size="16" font-weight="500" fill="#312E81">cover_v2.psd</text>
+      <text x="700" y="154" font-size="13" font-weight="500" fill="#6F6AF0" opacity="0.7" font-family="system-ui,sans-serif">Mar 12</text>
+      <text x="900" y="154" font-size="13" font-weight="500" fill="#6F6AF0" opacity="0.7" font-family="system-ui,sans-serif">232 MB</text>
+      <!-- Row 3 -->
+      <rect y="170" width="1040" height="44" fill="#ffffff"/>
+      <g transform="translate(28,182)"><rect width="22" height="28" rx="2" fill="url(#g-indigo)"/></g>
+      <text x="64" y="198" font-size="16" font-weight="500" fill="#312E81">cover_v3.psd</text>
+      <text x="700" y="198" font-size="13" font-weight="500" fill="#6F6AF0" opacity="0.7" font-family="system-ui,sans-serif">Mar 19</text>
+      <text x="900" y="198" font-size="13" font-weight="500" fill="#6F6AF0" opacity="0.7" font-family="system-ui,sans-serif">248 MB</text>
+      <!-- Row 4 -->
+      <rect y="214" width="1040" height="44" fill="#F8F7FF"/>
+      <g transform="translate(28,226)"><rect width="22" height="28" rx="2" fill="url(#g-indigo)"/></g>
+      <text x="64" y="242" font-size="16" font-weight="500" fill="#312E81">cover_v3_final.psd</text>
+      <text x="700" y="242" font-size="13" font-weight="500" fill="#6F6AF0" opacity="0.7" font-family="system-ui,sans-serif">Mar 24</text>
+      <text x="900" y="242" font-size="13" font-weight="500" fill="#6F6AF0" opacity="0.7" font-family="system-ui,sans-serif">256 MB</text>
+      <!-- Row 5 -->
+      <rect y="258" width="1040" height="44" fill="#ffffff"/>
+      <g transform="translate(28,270)"><rect width="22" height="28" rx="2" fill="url(#g-indigo)"/></g>
+      <text x="64" y="286" font-size="16" font-weight="500" fill="#312E81">cover_v3_final_real.psd</text>
+      <text x="700" y="286" font-size="13" font-weight="500" fill="#6F6AF0" opacity="0.7" font-family="system-ui,sans-serif">Mar 28</text>
+      <text x="900" y="286" font-size="13" font-weight="500" fill="#6F6AF0" opacity="0.7" font-family="system-ui,sans-serif">261 MB</text>
+      <!-- Row 6 (highlight: _v3_final_FINAL) -->
+      <rect y="302" width="1040" height="44" fill="#FFFBEB"/>
+      <rect y="302" width="6" height="44" fill="url(#g-amber)"/>
+      <g transform="translate(28,314)"><rect width="22" height="28" rx="2" fill="url(#g-amber)"/></g>
+      <text x="64" y="330" font-size="16" font-weight="700" fill="#312E81">cover_v3_final_<tspan fill="#F59E0B">FINAL</tspan>.psd</text>
+      <text x="700" y="330" font-size="13" font-weight="700" fill="#F59E0B" font-family="system-ui,sans-serif">Apr 2</text>
+      <text x="900" y="330" font-size="13" font-weight="700" fill="#F59E0B" font-family="system-ui,sans-serif">268 MB</text>
+      <!-- Row 7 -->
+      <rect y="346" width="1040" height="44" fill="#F8F7FF"/>
+      <g transform="translate(28,358)"><rect width="22" height="28" rx="2" fill="url(#g-indigo)"/></g>
+      <text x="64" y="374" font-size="16" font-weight="500" fill="#312E81">cover_v3_finalfinal.psd</text>
+      <text x="700" y="374" font-size="13" font-weight="500" fill="#6F6AF0" opacity="0.7" font-family="system-ui,sans-serif">Apr 4</text>
+      <text x="900" y="374" font-size="13" font-weight="500" fill="#6F6AF0" opacity="0.7" font-family="system-ui,sans-serif">271 MB</text>
+      <!-- Row 8 (final mockery) -->
+      <rect y="390" width="1040" height="44" fill="#ffffff"/>
+      <g transform="translate(28,402)"><rect width="22" height="28" rx="2" fill="url(#g-indigo)"/></g>
+      <text x="64" y="418" font-size="16" font-weight="500" fill="#312E81">cover_USE_THIS_ONE.psd</text>
+      <text x="700" y="418" font-size="13" font-weight="500" fill="#6F6AF0" opacity="0.7" font-family="system-ui,sans-serif">Apr 5</text>
+      <text x="900" y="418" font-size="13" font-weight="500" fill="#6F6AF0" opacity="0.7" font-family="system-ui,sans-serif">271 MB</text>
+    </g>
+  </g>
+
+  <!-- Bottom caption -->
+  <text x="600" y="570" font-size="16" font-weight="700" fill="#312E81" text-anchor="middle" letter-spacing="2">8 FILES · ALL THE SAME PROJECT · THIS IS YOUR VERSION HISTORY</text>
+
+</svg>

@@ -1,0 +1,107 @@
+<!-- Image 2: SaaS onboarding 文件 50 頁 vs Keeply Day 1 上手 對比 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" fill="none"
+     font-family="'Inter','Noto Sans TC',system-ui,sans-serif">
+  <defs>
+    <linearGradient id="g-indigo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#4338CA"/>
+    </linearGradient>
+    <linearGradient id="g-amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFB300"/><stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="g-paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8F7FF"/><stop offset="1" stop-color="#EEF2FF"/>
+    </linearGradient>
+    <pattern id="grid" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#4338CA" stroke-width="1" opacity="0.05"/>
+    </pattern>
+    <filter id="shadow"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#312E81" flood-opacity="0.14"/></filter>
+  </defs>
+
+  <rect width="1200" height="600" fill="url(#g-paper)"/>
+  <rect width="1200" height="600" fill="url(#grid)"/>
+
+  <text x="600" y="48" font-size="13" font-weight="800" fill="#312E81" text-anchor="middle" letter-spacing="3">學完才能用 · vs · 用了才會學</text>
+
+  <!-- LEFT: 50 頁 onboarding 文件 stack -->
+  <g transform="translate(140, 100)" filter="url(#shadow)">
+    <text x="20" y="-10" font-size="13" font-weight="800" fill="#DC2626" letter-spacing="2">▪ 傳統 SaaS</text>
+
+    <!-- 紙張堆疊（5 層） -->
+    <g transform="translate(0, 20)">
+      <rect x="20" y="20" width="320" height="380" rx="6" fill="#ffffff" stroke="#E0E7FF" opacity="0.9"/>
+      <rect x="14" y="14" width="320" height="380" rx="6" fill="#ffffff" stroke="#E0E7FF" opacity="0.94"/>
+      <rect x="8" y="8" width="320" height="380" rx="6" fill="#ffffff" stroke="#E0E7FF" opacity="0.97"/>
+      <rect x="2" y="2" width="320" height="380" rx="6" fill="#ffffff" stroke="#E0E7FF"/>
+      <rect width="320" height="380" rx="6" fill="#ffffff" stroke="#6F6AF0" stroke-width="1.5"/>
+
+      <!-- 文件內容線條 -->
+      <g transform="translate(28, 36)" opacity="0.45">
+        <text x="0" y="0" font-size="14" font-weight="800" fill="#312E81">Chapter 1: Getting Started</text>
+        <line x1="0" y1="20" x2="240" y2="20" stroke="#4338CA" stroke-width="1.5"/>
+        <line x1="0" y1="36" x2="260" y2="36" stroke="#4338CA" stroke-width="1.5"/>
+        <line x1="0" y1="52" x2="220" y2="52" stroke="#4338CA" stroke-width="1.5"/>
+        <line x1="0" y1="68" x2="240" y2="68" stroke="#4338CA" stroke-width="1.5"/>
+        <line x1="0" y1="84" x2="200" y2="84" stroke="#4338CA" stroke-width="1.5"/>
+        <line x1="0" y1="100" x2="240" y2="100" stroke="#4338CA" stroke-width="1.5"/>
+        <text x="0" y="140" font-size="12" font-weight="700" fill="#312E81">1.2 Authentication setup</text>
+        <line x1="0" y1="160" x2="220" y2="160" stroke="#4338CA" stroke-width="1.5"/>
+        <line x1="0" y1="176" x2="240" y2="176" stroke="#4338CA" stroke-width="1.5"/>
+        <line x1="0" y1="192" x2="180" y2="192" stroke="#4338CA" stroke-width="1.5"/>
+        <text x="0" y="232" font-size="12" font-weight="700" fill="#312E81">1.3 Configuration options</text>
+        <line x1="0" y1="252" x2="240" y2="252" stroke="#4338CA" stroke-width="1.5"/>
+        <line x1="0" y1="268" x2="220" y2="268" stroke="#4338CA" stroke-width="1.5"/>
+        <line x1="0" y1="284" x2="200" y2="284" stroke="#4338CA" stroke-width="1.5"/>
+        <line x1="0" y1="300" x2="240" y2="300" stroke="#4338CA" stroke-width="1.5"/>
+      </g>
+
+      <!-- 50 頁 stamp -->
+      <g transform="translate(180, 320)">
+        <rect width="120" height="40" rx="6" fill="#FEE2E2" stroke="#DC2626" stroke-width="1.5"/>
+        <text x="60" y="20" font-size="11" font-weight="700" fill="#DC2626" text-anchor="middle" letter-spacing="1">總頁數</text>
+        <text x="60" y="36" font-size="16" font-weight="900" fill="#DC2626" text-anchor="middle">50 頁</text>
+      </g>
+
+      <!-- scrollbar (hint at length) -->
+      <rect x="312" y="0" width="6" height="380" rx="3" fill="#E0E7FF"/>
+      <rect x="312" y="0" width="6" height="32" rx="3" fill="#6F6AF0"/>
+    </g>
+  </g>
+
+  <!-- ARROW -->
+  <g transform="translate(580, 290)">
+    <path d="M0 30 L40 30 L40 18 L72 38 L40 58 L40 46 L0 46 Z" fill="url(#g-amber)" filter="url(#shadow)"/>
+  </g>
+
+  <!-- RIGHT: Day 1 直接上手 -->
+  <g transform="translate(720, 100)" filter="url(#shadow)">
+    <text x="20" y="-10" font-size="13" font-weight="800" fill="url(#g-amber)" letter-spacing="2">▪ KEEPLY</text>
+
+    <g transform="translate(0, 20)">
+      <rect width="340" height="380" rx="10" fill="#ffffff" stroke="url(#g-amber)" stroke-width="2"/>
+
+      <!-- Day 1 大字 -->
+      <text x="170" y="100" font-size="64" font-weight="900" fill="url(#g-indigo)" text-anchor="middle" font-family="system-ui,sans-serif">DAY 1</text>
+      <text x="170" y="130" font-size="14" font-weight="600" fill="#4338CA" text-anchor="middle" opacity="0.7" letter-spacing="2">第一天</text>
+
+      <!-- check mark -->
+      <g transform="translate(170, 200)">
+        <circle cx="0" cy="0" r="38" fill="url(#g-amber)" filter="url(#shadow)"/>
+        <path d="M-16 0 L-4 12 L18 -12" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </g>
+
+      <!-- 狀態 -->
+      <text x="170" y="280" font-size="20" font-weight="800" fill="#312E81" text-anchor="middle" font-family="system-ui,sans-serif">已上手</text>
+      <text x="170" y="306" font-size="13" font-weight="500" fill="#4338CA" text-anchor="middle" opacity="0.7" font-family="system-ui,sans-serif">沒讀任何文件 · 沒看影片</text>
+
+      <!-- 第 1 天 stamp -->
+      <g transform="translate(110, 332)">
+        <rect width="120" height="36" rx="6" fill="#FFFBEB" stroke="url(#g-amber)" stroke-width="1.5"/>
+        <text x="60" y="22" font-size="13" font-weight="800" fill="url(#g-amber)" text-anchor="middle" letter-spacing="1">第 1 天就有 value</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Bottom caption -->
+  <text x="600" y="568" font-size="14" font-weight="700" fill="#312E81" text-anchor="middle" letter-spacing="2">14 天 · 對比 · 第 1 天</text>
+
+</svg>

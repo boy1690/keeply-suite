@@ -1,0 +1,55 @@
+# Simplified Chinese i18n strings (flat format for Hugo go-i18n v2)
+
+nav_posts = "文章"
+nav_categories = "分类"
+nav_search = "搜索"
+nav_download = "免费下载"
+
+hero_badge = "Keeply 博客 · 每周更新"
+hero_title_1 = "文件管理的"
+hero_title_2 = "真实故事。"
+hero_subtitle = "为项目管理团队设计的文件管理软件。不用学术语，不用改流程，只解决你每天办公室会遇到的问题。"
+
+section_featured = "精选文章"
+section_latest = "最新文章"
+section_browse = "按主题浏览"
+section_related = "你可能也会喜欢"
+section_tags = "标签"
+
+see_all = "查看全部"
+read_more = "继续阅读"
+reading_time = "{{ .count }} 分钟阅读"
+posts_count = "共 {{ .count }} 篇文章"
+
+page_previous = "上一页"
+page_next = "下一页"
+
+toc_title = "目录"
+
+cta_title = "准备好试试 Keeply 了吗？"
+cta_subtitle = "免费下载，30 秒上手。"
+cta_button = "免费下载 Keeply"
+cta_sidebar_label = "试试 Keeply"
+cta_sidebar_title = "给你的文件一个时光机"
+
+footer_site = "主站"
+footer_rss = "RSS 订阅"
+footer_all_categories = "所有分类"
+footer_privacy = "隐私权政策"
+footer_buy = "购买永久授权"
+footer_tagline = "你的文件有故事。"
+
+empty_no_posts = "文章即将上线"
+empty_no_posts_sub = "我们正在努力创作中，稍后再回来看看，或先 "
+empty_try_keeply = "试试 Keeply"
+empty_no_posts_end = "。"
+
+breadcrumb_home = "首页"
+by_author = "作者："
+
+cta_inline_pitch = "让 Keeply 替你保留每个版本，免得下次又找不到。"
+cta_inline_subtitle = "免费 · 30 秒装好"
+
+cta_inline_pitch_soft = "如果今天只能做一件事，就是让工具替你记下每个版本。"
+cta_inline_pitch_medium = "免费 + 30 秒装好。没理由不试一次。"
+cta_inline_pitch_hard = "还在覆盖旧版？这 30 秒可省你下次的找文件时间。"

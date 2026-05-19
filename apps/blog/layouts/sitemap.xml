@@ -1,0 +1,32 @@
+{{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{{- /*
+  Per-locale sitemap (overrides Hugo default).
+  Filters:
+    - Only emit URLs for core 6 locales (en / zh-tw / zh-cn / ja / ko / it).
+    - Skip listing hubs: /post/, /tags/, /categories/ (Kind = section / taxonomy).
+    - Skip ALL term pages (Kind = term) — tightened 2026-05-08 to match
+      head.html which now noindex's all term pages. Tag/category pages are
+      navigation, not SERP landing; emitting them in sitemap while marking
+      noindex creates a contradicting signal pair.
+    - Always emit: home + post bundles only.
+  Per spec seo-indexability-l2 FR-001 / FR-002.
+*/ -}}
+{{- $coreLocales := slice "en" "zh-tw" "zh-cn" "ja" "ko" "it" -}}
+{{- if in $coreLocales .Site.Language.Lang -}}
+{{- range .Data.Pages -}}
+  {{- $include := false -}}
+  {{- if eq .Kind "page" -}}{{- $include = true -}}{{- end -}}
+  {{- if eq .Kind "home" -}}{{- $include = true -}}{{- end -}}
+  {{- if $include }}
+  <url>
+    <loc>{{ .Permalink }}</loc>{{ if not .Lastmod.IsZero }}
+    <lastmod>{{ safeHTML (.Lastmod.Format "2006-01-02T15:04:05-07:00") }}</lastmod>{{ end }}{{ with .Sitemap.ChangeFreq }}
+    <changefreq>{{ . }}</changefreq>{{ end }}{{ if ge .Sitemap.Priority 0.0 }}
+    <priority>{{ .Sitemap.Priority }}</priority>{{ end }}
+  </url>
+  {{- end -}}
+{{- end -}}
+{{- end -}}
+</urlset>

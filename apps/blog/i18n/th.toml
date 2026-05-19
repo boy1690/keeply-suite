@@ -1,0 +1,55 @@
+# Thai i18n strings (flat format for Hugo go-i18n v2)
+
+nav_posts = "บทความ"
+nav_categories = "หมวดหมู่"
+nav_search = "ค้นหา"
+nav_download = "ดาวน์โหลดฟรี"
+
+hero_badge = "Keeply Blog · อัปเดตทุกสัปดาห์"
+hero_title_1 = "เรื่องจริงของ"
+hero_title_2 = "การจัดการไฟล์"
+hero_subtitle = "ซอฟต์แวร์จัดการไฟล์ที่ออกแบบสำหรับทีมจัดการโครงการ ไม่มีศัพท์เทคนิค ไม่ต้องเปลี่ยน workflow — แค่แก้ปัญหาออฟฟิศที่คุณเจอทุกวัน"
+
+section_featured = "แนะนำ"
+section_latest = "บทความล่าสุด"
+section_browse = "เลือกตามหมวด"
+section_related = "คุณอาจชอบเรื่องนี้ด้วย"
+section_tags = "แท็ก"
+
+see_all = "ดูทั้งหมด"
+read_more = "อ่านต่อ"
+reading_time = "อ่าน {{ .count }} นาที"
+posts_count = "{{ .count }} บทความ"
+
+page_previous = "ก่อนหน้า"
+page_next = "ถัดไป"
+
+toc_title = "สารบัญ"
+
+cta_title = "พร้อมลอง Keeply หรือยัง?"
+cta_subtitle = "ดาวน์โหลดฟรี เริ่มได้ใน 30 วินาที"
+cta_button = "ดาวน์โหลด Keeply"
+cta_sidebar_label = "ลอง Keeply"
+cta_sidebar_title = "มอบไทม์แมชชีนให้กับไฟล์ของคุณ"
+
+footer_site = "เว็บไซต์หลัก"
+footer_rss = "RSS feed"
+footer_all_categories = "ทุกหมวดหมู่"
+footer_privacy = "ความเป็นส่วนตัว"
+footer_buy = "ซื้อ License ตลอดชีพ"
+footer_tagline = "ไฟล์ของคุณมีเรื่องราว"
+
+empty_no_posts = "บทความกำลังจะมา"
+empty_no_posts_sub = "เรากำลังเขียนอยู่ แวะมาดูใหม่อีกครั้ง หรือ "
+empty_try_keeply = "ลอง Keeply"
+empty_no_posts_end = " ระหว่างนี้"
+
+breadcrumb_home = "หน้าแรก"
+by_author = "โดย"
+
+cta_inline_pitch = "Let Keeply keep every version, so you're not hunting for it next time."
+cta_inline_subtitle = "Free · 30 seconds to start"
+
+cta_inline_pitch_soft = "If you do one thing today, let a tool keep every version for you."
+cta_inline_pitch_medium = "Free + 30 seconds to set up. No reason not to try."
+cta_inline_pitch_hard = "Still overwriting old files? 30 seconds saves you the next file hunt."

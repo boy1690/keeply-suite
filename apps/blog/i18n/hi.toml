@@ -1,0 +1,55 @@
+# Hindi i18n strings (flat format for Hugo go-i18n v2)
+
+nav_posts = "लेख"
+nav_categories = "श्रेणियाँ"
+nav_search = "खोजें"
+nav_download = "मुफ्त डाउनलोड"
+
+hero_badge = "Keeply ब्लॉग · साप्ताहिक अपडेट"
+hero_title_1 = "फ़ाइल प्रबंधन की"
+hero_title_2 = "असली कहानियाँ।"
+hero_subtitle = "प्रोजेक्ट प्रबंधन टीमों के लिए बनाया गया फ़ाइल प्रबंधन सॉफ़्टवेयर। न जारगन, न वर्कफ़्लो बदलना — बस वह ऑफिस की समस्याएँ जो आप हर दिन झेलते हैं, उन्हें हल करना।"
+
+section_featured = "विशेष"
+section_latest = "नवीनतम लेख"
+section_browse = "श्रेणी से ब्राउज़ करें"
+section_related = "आपको ये भी पसंद आ सकता है"
+section_tags = "टैग"
+
+see_all = "सभी देखें"
+read_more = "और पढ़ें"
+reading_time = "{{ .count }} मिनट पढ़ने का समय"
+posts_count = "{{ .count }} लेख"
+
+page_previous = "पिछला"
+page_next = "अगला"
+
+toc_title = "विषय-सूची"
+
+cta_title = "Keeply आज़माने के लिए तैयार हैं?"
+cta_subtitle = "मुफ्त डाउनलोड। 30 सेकंड में शुरू करें।"
+cta_button = "Keeply डाउनलोड करें"
+cta_sidebar_label = "Keeply आज़माएँ"
+cta_sidebar_title = "अपनी फ़ाइलों को टाइम मशीन दें"
+
+footer_site = "मुख्य साइट"
+footer_rss = "RSS फ़ीड"
+footer_all_categories = "सभी श्रेणियाँ"
+footer_privacy = "गोपनीयता"
+footer_buy = "लाइफटाइम लाइसेंस खरीदें"
+footer_tagline = "आपकी फ़ाइलों की एक कहानी है।"
+
+empty_no_posts = "लेख जल्द ही आ रहे हैं"
+empty_no_posts_sub = "हम सक्रिय रूप से लिख रहे हैं। जल्द ही दोबारा देखें, या "
+empty_try_keeply = "Keeply आज़माएँ"
+empty_no_posts_end = " इस बीच।"
+
+breadcrumb_home = "मुखपृष्ठ"
+by_author = "लेखक:"
+
+cta_inline_pitch = "Let Keeply keep every version, so you're not hunting for it next time."
+cta_inline_subtitle = "Free · 30 seconds to start"
+
+cta_inline_pitch_soft = "If you do one thing today, let a tool keep every version for you."
+cta_inline_pitch_medium = "Free + 30 seconds to set up. No reason not to try."
+cta_inline_pitch_hard = "Still overwriting old files? 30 seconds saves you the next file hunt."

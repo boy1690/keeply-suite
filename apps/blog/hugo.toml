@@ -1,0 +1,192 @@
+baseURL = "https://blog.keeply.work/"
+languageCode = "en"
+title = "Keeply Blog"
+theme = "hugo-theme-stack"
+
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true  # 英文也走 /en/ 子路徑，19 語言一致
+
+# 啟用 emoji
+enableEmoji = true
+
+# R2 (2026-05-18 GSC audit): disable taxonomy + term kind entirely.
+# Evidence: 9 visible /tags/ + /categories/ URLs in GSC 90-day report = 0 clicks
+# (across both core + auto-translate locales). Cluster pillar in-body links
+# (P1.15) already provide stronger internal nav signal than tag listings.
+# 2026 Google posture: tag/archive pages "favored to be blocked"
+# (research-backed, see ~/.claude/skills/gsc-index-audit Phase 4.5 R2).
+# Must be top-level (before any [table]) — TOML scopes subsequent keys to
+# the last opened table.
+disableKinds = ["taxonomy", "term"]
+
+# Build 優化
+[build]
+  writeStats = true
+
+[services]
+  [services.googleAnalytics]
+    ID = "G-W08QHBQWDK"
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true  # 允許 HTML in markdown
+  [markup.highlight]
+    noClasses = false
+    lineNos = true
+
+# Taxonomies — explicit override of Hugo default (which would enable both
+# `tag` and `category`). 2026-05-12 GSC audit reported 14 URLs in
+# "Duplicate, Google chose different canonical" — 100% were /categories/X/
+# being deduped against /tags/X/ across 13 auto-translate locales (same
+# slug, same article membership). Disabling categories eliminates the
+# duplicate URL surface entirely. 218 articles still carry `categories:`
+# in frontmatter; Hugo silently ignores them with no taxonomy declared.
+[taxonomies]
+  tag = "tags"
+
+# Outputs — strip RSS from listing kinds. GSC reported 3 URLs in
+# "Duplicate without user-selected canonical" — all were /categories/X/index.xml
+# (RSS feeds for category taxonomy pages, which couldn't carry canonical/noindex
+# meta). Removing the taxonomy + dropping RSS from term/section/taxonomy
+# kills the entire feed surface for navigation pages. Per-post + home RSS
+# preserved.
+[outputs]
+  home = ["HTML", "RSS", "LLMSFULL"]
+  page = ["HTML"]
+  section = ["HTML"]
+
+# llms-full.txt — full-content companion to /llms.txt for LLM grounding.
+# Spec: https://llmstxt.org/  (optional "full" variant embedding article bodies)
+[outputFormats.LLMSFULL]
+  mediaType = "text/plain"
+  baseName = "llms-full"
+  isPlainText = true
+  notAlternative = true
+
+[params]
+  mainSections = ["post"]
+  featuredImageField = "image"
+  rssFullContent = true
+  clarityProjectID = "wknecyjli8"
+  # Site-wide fallback meta description — used when a page (notably the
+  # homepage / list pages) has no own `.Description` or `.Summary`. Added
+  # 2026-05-17 after av8d-levelup scan revealed homepage shipped without
+  # any meta description, dragging SEO Meta-Tags sub-score to 30 / 100.
+  # Per-language override below in [languages.{code}.params].
+  description = "Keeply Blog — version control, file backup, and recovery field notes for non-developers. Practical guides on Word / Excel / OneDrive / SharePoint version history limits, Time Machine vs Dropbox, and how to never lose a version again."
+
+  # Author identity for JSON-LD Person schema (BWF P1.13: real human + E-E-A-T).
+  # url: prefer /about page when it exists; falls back to GitHub for now.
+  # sameAs: append every owned profile (LinkedIn, X, etc.) as you create them.
+  [params.author]
+    name = "Tsao Ting Wei"
+    alternateName = "曹庭維"
+    jobTitle = "Founder"
+    url = "https://github.com/boy1690"
+    sameAs = [
+      "https://github.com/boy1690",
+      "https://www.linkedin.com/in/ting-wei-tsao-b57480152/"
+    ]
+
+  # Organization identity for JSON-LD Organization sameAs (Knowledge Graph).
+  # Append every owned brand-level URL: main site, social pages, LinkedIn
+  # company, X brand handle, etc. Personal accounts go in [params.author].
+  # 2026-05-17: Expanded to feed AI engines' entity-disambiguation graph
+  # (GEO 平台優化 + 品牌權威 signals). Add LinkedIn company page / X brand
+  # handle / Crunchbase / Wikidata when they exist.
+  [params.organization]
+    name = "Keeply"
+    url = "https://keeply.work"
+    sameAs = [
+      "https://keeply.work",
+      "https://blog.keeply.work",
+      "https://github.com/boy1690/keeply-releases",
+      "https://www.linkedin.com/in/ting-wei-tsao-b57480152/"
+    ]
+
+  [params.footer]
+    since = 2026
+    customText = "Keeply — Your files have a story."
+
+  [params.sidebar]
+    compact = false
+    emoji = "📂"
+    subtitle = "Your file-management guardian"
+
+  # avatar is a string path to an image in assets/
+  # [params.sidebar.avatar] — disabled until we add assets/img/avatar.png
+
+  [params.article]
+    math = false
+    toc = true
+    readingTime = true
+
+  [params.comments]
+    enabled = false  # Phase 1 不開
+
+# 19 語言設定
+[languages]
+  [languages.en]
+    languageName = "English"
+    title = "Keeply Blog"
+    weight = 1
+    contentDir = "content/english"
+    [languages.en.params]
+      description = "Keeply Blog — version control, file backup, and recovery field notes for non-developers. Practical guides on Word / Excel / OneDrive / SharePoint version history limits, Time Machine vs Dropbox, and how to never lose a version again."
+  [languages.zh-tw]
+    languageCode = "zh-Hant-TW"
+    languageName = "繁體中文"
+    title = "Keeply 部落格"
+    weight = 2
+    contentDir = "content/zh-tw"
+    [languages.zh-tw.params]
+      description = "Keeply 部落格 — 設計師、建築師、律師、會計師都看得懂的檔案版本管理與還原指南。Word / Excel / OneDrive / SharePoint 版本歷史限制、Time Machine vs Dropbox、雲端同步陷阱，一次拆給你看。"
+    [languages.zh-tw.params.sidebar]
+      subtitle = "你的檔案管理守護神"
+  [languages.zh-cn]
+    languageName = "简体中文"
+    title = "Keeply 博客"
+    weight = 3
+    contentDir = "content/zh-cn"
+    [languages.zh-cn.params]
+      description = "Keeply 博客 — 设计师、建筑师、律师、会计师都看得懂的文件版本管理与还原指南。Word / Excel / OneDrive / SharePoint 版本历史限制、Time Machine vs Dropbox、云端同步陷阱，一次拆给你看。"
+    [languages.zh-cn.params.sidebar]
+      subtitle = "你的文件管理守护神"
+  [languages.ja]
+    languageName = "日本語"
+    title = "Keeply ブログ"
+    weight = 4
+    contentDir = "content/ja"
+    [languages.ja.params]
+      description = "Keeply ブログ — デザイナー・建築士・士業向けのファイルバージョン管理と復元の実践ガイド。Word / Excel / OneDrive / SharePoint のバージョン履歴の落とし穴、Time Machine vs Dropbox の使い分けまで解説。"
+    [languages.ja.params.sidebar]
+      subtitle = "ファイル管理の守り神"
+  [languages.ko]
+    languageName = "한국어"
+    title = "Keeply 블로그"
+    weight = 5
+    contentDir = "content/ko"
+    [languages.ko.params]
+      description = "Keeply 블로그 — 디자이너 · 건축사 · 변호사 · 회계사를 위한 파일 버전 관리와 복구 가이드. Word / Excel / OneDrive / SharePoint 버전 기록의 한계, Time Machine vs Dropbox 비교까지 한 번에 정리합니다."
+  [languages.it]
+    languageName = "Italiano"
+    title = "Keeply Blog"
+    weight = 6
+    contentDir = "content/it"
+    [languages.it.params]
+      description = "Keeply Blog — Guida pratica al controllo versioni, backup e recupero file per chi non scrive codice. Limiti della cronologia di Word / Excel / OneDrive / SharePoint, Time Machine vs Dropbox e altre trappole della sincronizzazione cloud."
+  # R1 (2026-05-18 GSC audit): 11 zero-click auto-translate locales removed
+  # from build entirely. Evidence: 90-day GSC data showed only pt + es had any
+  # clicks (1 each); de/fr/ru/nl/pl/tr/vi/th/id/ar/hi all 0 clicks. All 11
+  # redirect to /en/ via CF Bulk Redirect subpath_matching.
+  # 2026-05-18 follow-up: pt + es 也砍 (Q3 高階模型 verdict 75% confidence).
+  # Reason: 1 click/90d 屬 noise floor; Mueller 2024 仍標 unreviewed MT 為
+  # quality risk; same-slug 301 to /en/ 保留 link equity 零成本. See
+  # _dev/seo/SEO operational decision.md Q3 evidence notes.
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Keeply 主站"
+    url = "https://keeply.work"
+    weight = -100

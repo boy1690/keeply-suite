@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 208" font-family="'Inter','Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans JP','Noto Sans KR',-apple-system,system-ui,sans-serif">
+<rect x="0" y="0" width="480" height="208" rx="8" fill="#FFFFFF" stroke="#E5E7EB"/>
+<rect x="0" y="0" width="480" height="40" rx="8" fill="#F9FAFB"/>
+<rect x="0" y="32" width="480" height="9" fill="#F9FAFB"/>
+<line x1="0" y1="40" x2="480" y2="40" stroke="#E5E7EB"/>
+<text x="16" y="26" font-size="13" font-weight="700" fill="#374151">A-05_排水溝.dwg · v3 現場承認版 → v5 最新版</text>
+<text x="464" y="26" font-size="11" fill="#9CA3AF" text-anchor="end">2 ファイル · +24 / -9</text>
+<rect x="0" y="50" width="480" height="40" fill="#EFF6FF" opacity="0.4"/>
+<text x="16" y="74" font-size="10" font-weight="700" fill="#2563EB">M</text>
+<text x="32" y="74" font-size="13" fill="#374151">A-05_排水溝.dwg</text>
+<text x="464" y="74" font-size="11" fill="#2563EB" text-anchor="end">+18 / -7</text>
+<rect x="32" y="90" width="432" height="70" fill="#F9FAFB" stroke="#E5E7EB"/>
+<text x="56" y="100" font-size="10" font-family="Menlo,monospace" fill="#9CA3AF">—</text>
+<text x="80" y="100" font-size="10" font-family="Menlo,monospace" fill="#374151">[レイヤー：蓋仕様]</text>
+<rect x="38" y="106" width="420" height="14" fill="#FEE2E2"/>
+<text x="44" y="114" font-size="10" font-family="Menlo,monospace" fill="#DC2626">-</text>
+<text x="56" y="114" font-size="10" font-family="Menlo,monospace" fill="#9CA3AF">v3</text>
+<text x="80" y="114" font-size="10" font-family="Menlo,monospace" fill="#B91C1C">蓋：12mm 鋳鉄、600×600</text>
+<rect x="38" y="120" width="420" height="14" fill="#DCFCE7"/>
+<text x="44" y="128" font-size="10" font-family="Menlo,monospace" fill="#16A34A">+</text>
+<text x="56" y="128" font-size="10" font-family="Menlo,monospace" fill="#9CA3AF">v5</text>
+<text x="80" y="128" font-size="10" font-family="Menlo,monospace" fill="#15803D">蓋：15mm 鋳鉄、600×600</text>
+<rect x="38" y="134" width="420" height="14" fill="#FEE2E2"/>
+<text x="44" y="142" font-size="10" font-family="Menlo,monospace" fill="#DC2626">-</text>
+<text x="56" y="142" font-size="10" font-family="Menlo,monospace" fill="#9CA3AF">v3</text>
+<text x="80" y="142" font-size="10" font-family="Menlo,monospace" fill="#B91C1C">鉄筋間隔：200mm</text>
+<rect x="38" y="148" width="420" height="14" fill="#DCFCE7"/>
+<text x="44" y="156" font-size="10" font-family="Menlo,monospace" fill="#16A34A">+</text>
+<text x="56" y="156" font-size="10" font-family="Menlo,monospace" fill="#9CA3AF">v5</text>
+<text x="80" y="156" font-size="10" font-family="Menlo,monospace" fill="#15803D">鉄筋間隔：150mm（技師レビュー後）</text>
+<line x1="0" y1="168" x2="480" y2="168" stroke="#F3F4F6"/>
+<text x="16" y="192" font-size="10" font-weight="700" fill="#2563EB">M</text>
+<text x="32" y="192" font-size="13" fill="#374151">A-05_排水溝.pdf</text>
+<text x="464" y="192" font-size="11" fill="#2563EB" text-anchor="end">+6 / -2</text>
+</svg>

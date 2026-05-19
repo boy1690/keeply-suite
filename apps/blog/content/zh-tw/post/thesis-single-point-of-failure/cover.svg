@@ -1,0 +1,166 @@
+<!-- =============================================================
+     Cover: 碩士論文的單點故障（zh-TW）
+     Kit version: 0.1
+     Recipe: solo-dilemma 變體（獨角 + 檔名卡群 + 大字被劃線）
+     Concept: 大字 v6 被琥珀刪除線 = 你找不到的那一版（差異記憶）
+     用到零件: #person-anxious, #keeply-lockup, #keeply-mark
+     ============================================================= -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none"
+     font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',system-ui,sans-serif">
+
+  <!-- ============ INLINED LIBRARY ============ -->
+  <defs>
+    <linearGradient id="grad-indigo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#4338CA"/>
+    </linearGradient>
+    <linearGradient id="grad-indigo-deep" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4338CA"/><stop offset="1" stop-color="#312E81"/>
+    </linearGradient>
+    <linearGradient id="grad-indigo-soft" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9C98FF"/><stop offset="1" stop-color="#6F6AF0"/>
+    </linearGradient>
+    <linearGradient id="grad-amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFB300"/><stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="grad-paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8F7FF"/><stop offset="1" stop-color="#EEF2FF"/>
+    </linearGradient>
+    <linearGradient id="grad-screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E0E7FF"/><stop offset="1" stop-color="#C7D2FE"/>
+    </linearGradient>
+    <linearGradient id="grad-number-faded" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9C98FF"/><stop offset="1" stop-color="#6F6AF0" stop-opacity="0.55"/>
+    </linearGradient>
+    <pattern id="pat-grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#4338CA" stroke-width="1" opacity="0.05"/>
+    </pattern>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#312E81" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <symbol id="person-anxious" viewBox="0 0 200 240">
+    <rect x="20" y="190" width="160" height="8" rx="2" fill="#9C98FF" opacity="0.35"/>
+    <rect x="110" y="182" width="70" height="6" rx="2" fill="#4338CA"/>
+    <path d="M115 182 L115 140 Q115 134 121 134 L175 134 Q181 134 181 140 L181 182 Z" fill="url(#grad-indigo)"/>
+    <rect x="121" y="140" width="54" height="36" rx="2" fill="url(#grad-screen)"/>
+    <circle cx="148" cy="158" r="9" fill="url(#grad-amber)"/>
+    <text x="148" y="163" font-size="14" font-weight="900" text-anchor="middle" fill="#312E81" font-family="system-ui,sans-serif">!</text>
+    <rect x="54" y="150" width="10" height="60" rx="3" fill="#9C98FF" opacity="0.5"/>
+    <path d="M60 186 Q58 148 90 148 L108 150 Q108 186 108 196 L60 196 Z" fill="url(#grad-indigo)"/>
+    <path d="M72 140 Q66 108 88 100 L92 110 Q78 118 84 142 Z" fill="url(#grad-indigo-soft)"/>
+    <circle cx="92" cy="122" r="24" fill="url(#grad-indigo-soft)"/>
+    <path d="M70 114 Q70 98 92 98 Q114 98 114 114 Q102 110 92 110 Q82 110 70 114 Z" fill="#4338CA" opacity="0.55"/>
+    <circle cx="150" cy="70" r="24" fill="#ffffff" stroke="url(#grad-amber)" stroke-width="3"/>
+    <text x="150" y="80" font-size="32" font-weight="900" text-anchor="middle" fill="#F59E0B" font-family="system-ui,sans-serif">?</text>
+    <circle cx="130" cy="98" r="4" fill="#ffffff" stroke="url(#grad-amber)" stroke-width="2"/>
+  </symbol>
+
+  <symbol id="keeply-mark" viewBox="0 0 512 512">
+    <path d="M396 129C429 159 448 200 448 255C448 363 360 451 252 451C145 451 58 368 56 263C55 206 75 158 111 123" stroke="url(#grad-indigo)" stroke-width="44" stroke-linecap="round" fill="none"/>
+    <path d="M111 123C145 91 190 72 239 72C253 72 265 73 278 76" stroke="url(#grad-amber)" stroke-width="44" stroke-linecap="round" fill="none"/>
+    <path d="M236 54L313 79L254 134L236 54Z" fill="url(#grad-amber)"/>
+    <rect x="220" y="150" width="152" height="206" rx="32" fill="url(#grad-indigo-soft)" opacity="0.48"/>
+    <rect x="192" y="167" width="152" height="206" rx="32" fill="url(#grad-indigo-soft)" opacity="0.72"/>
+    <rect x="164" y="184" width="152" height="206" rx="32" fill="url(#grad-indigo)"/>
+  </symbol>
+
+  <symbol id="keeply-lockup" viewBox="0 0 260 64">
+    <g transform="translate(0,4) scale(0.11)"><use href="#keeply-mark"/></g>
+    <text x="66" y="28" font-size="24" font-weight="800" fill="#312E81" font-family="system-ui,sans-serif" letter-spacing="0.2">Keeply</text>
+    <text x="66" y="50" font-size="11" font-weight="600" fill="#4338CA" opacity="0.72" font-family="system-ui,sans-serif" letter-spacing="1.5">KEEPLY.WORK</text>
+  </symbol>
+
+  <!-- ============ COMPOSITION (editorial split: left text / right scene) ============ -->
+
+  <rect width="1600" height="900" fill="url(#grad-paper)"/>
+  <rect width="1600" height="900" fill="url(#pat-grid)"/>
+
+  <!-- 背景氛圍色斑（只出現在圖面區） -->
+  <circle cx="1450" cy="780" r="200" fill="#FDE68A" opacity="0.24"/>
+  <circle cx="1180" cy="200" r="240" fill="#DDD6FE" opacity="0.30"/>
+
+  <!-- 左右分隔的細垂直線 -->
+  <line x1="720" y1="120" x2="720" y2="780" stroke="#C7D2FE" stroke-width="1" opacity="0.55" stroke-dasharray="4 8"/>
+
+  <!-- ============ 左欄：純文字 ============ -->
+
+  <!-- Eyebrow -->
+  <g transform="translate(120, 120)">
+    <rect x="0" y="2" width="14" height="14" fill="url(#grad-amber)"/>
+    <text x="28" y="14" font-size="17" font-weight="800" fill="#312E81" letter-spacing="4">SINGLE POINT OF FAILURE</text>
+    <text x="28" y="40" font-size="14" font-weight="600" fill="#4338CA" opacity="0.72" letter-spacing="2">碩士論文 · 差異記憶 · EDITORIAL</text>
+  </g>
+
+  <!-- 大字 v6（被劃線） -->
+  <g transform="translate(120, 210)">
+    <text x="0" y="310" font-size="400" font-weight="900" fill="url(#grad-number-faded)" letter-spacing="-16">v6</text>
+    <!-- 琥珀刪除線（橫跨 v6）-->
+    <path d="M20 180 L420 180" stroke="url(#grad-amber)" stroke-width="14" stroke-linecap="round" opacity="0.92"/>
+  </g>
+
+  <!-- 大字下方標籤 -->
+  <g transform="translate(120, 580)">
+    <text x="0" y="0" font-size="32" font-weight="800" fill="#312E81">你找不到的那一版</text>
+    <text x="0" y="38" font-size="17" font-weight="500" fill="#4338CA" opacity="0.75">THE VERSION YOU CAN'T FIND</text>
+  </g>
+
+  <!-- 左欄副標 -->
+  <g transform="translate(120, 680)">
+    <text x="0" y="0" font-size="20" font-weight="700" fill="#312E81">論文真正的風險不是寫不完，</text>
+    <text x="0" y="30" font-size="20" font-weight="700" fill="#312E81">是你<tspan fill="#F59E0B">忘了差異是什麼</tspan>。</text>
+  </g>
+
+  <!-- 左下：Keeply lockup -->
+  <use href="#keeply-lockup" x="120" y="780" width="200" height="50"/>
+
+  <!-- ============ 右欄：純場景 ============ -->
+
+  <!-- 視線連接：主角看向散落的檔名卡 -->
+  <g stroke="#9C98FF" stroke-width="2" stroke-dasharray="6 8" fill="none" opacity="0.45">
+    <path d="M1240 580 Q1100 500 960 400"/>
+    <path d="M1240 600 Q1200 520 1160 380"/>
+    <path d="M1240 620 Q1330 540 1440 430"/>
+  </g>
+
+  <!-- 散落的檔名卡（4 張，由遠到近疊起來）-->
+  <g filter="url(#soft-shadow)">
+    <!-- v5（最遠，最淡）-->
+    <g transform="translate(820, 230) rotate(-6)" opacity="0.48">
+      <rect width="280" height="38" rx="7" fill="#ffffff"/>
+      <rect x="12" y="12" width="10" height="14" fill="#C7D2FE"/>
+      <text x="32" y="25" font-size="13" font-weight="500" fill="#6F6AF0" font-family="'JetBrains Mono',monospace">thesis_v5.docx</text>
+    </g>
+    <!-- v6（第二淡，是主角找的那一份）-->
+    <g transform="translate(900, 290) rotate(3)" opacity="0.62">
+      <rect width="300" height="38" rx="7" fill="#ffffff"/>
+      <rect x="12" y="12" width="10" height="14" fill="#C7D2FE"/>
+      <text x="32" y="25" font-size="13" font-weight="500" fill="#6F6AF0" font-family="'JetBrains Mono',monospace">thesis_v6.docx</text>
+    </g>
+    <!-- v7_fix -->
+    <g transform="translate(1350, 260) rotate(5)" opacity="0.78">
+      <rect width="300" height="38" rx="7" fill="#ffffff"/>
+      <rect x="12" y="12" width="10" height="14" fill="#C7D2FE"/>
+      <text x="32" y="25" font-size="13" font-weight="500" fill="#6F6AF0" font-family="'JetBrains Mono',monospace">thesis_v7_fix.docx</text>
+    </g>
+    <!-- v7_final（突出，琥珀框線）-->
+    <g transform="translate(1320, 340) rotate(-3)">
+      <rect x="-3" y="-3" width="346" height="46" rx="10" fill="none" stroke="url(#grad-amber)" stroke-width="3"/>
+      <rect width="340" height="40" rx="7" fill="#ffffff"/>
+      <rect x="14" y="13" width="10" height="14" fill="url(#grad-amber)"/>
+      <text x="36" y="27" font-size="14" font-weight="700" fill="#312E81" font-family="'JetBrains Mono',monospace">thesis_final_真的最終.docx</text>
+    </g>
+  </g>
+
+  <!-- 主角：困惑的研究生（置中，大一些）-->
+  <use href="#person-anxious" x="1100" y="480" width="280" height="336"/>
+
+  <!-- 地板線 -->
+  <line x1="800" y1="790" x2="1520" y2="790" stroke="#C7D2FE" stroke-width="1.5" opacity="0.55"/>
+
+  <!-- 右下：場景註解 -->
+  <g transform="translate(820, 830)">
+    <text x="0" y="0" font-size="14" font-weight="600" fill="#4338CA" opacity="0.72" letter-spacing="1">一台筆電　·　兩年心血　·　v? 不見了</text>
+  </g>
+
+</svg>

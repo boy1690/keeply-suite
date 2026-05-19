@@ -1,0 +1,144 @@
+---
+# Content-aware CTA pitch pool.
+#
+# Resolution order in cta-inline.html partial:
+#   1. shortcode arg `pitch=`        (per-call manual override)
+#   2. frontmatter `cta_inline_pitch` (single override for whole article)
+#   3. data/cta-pools.yml[topic][locale][variant]   (this file)
+#   4. data/cta-pools.yml[default][locale][variant] (this file)
+#   5. i18n cta_inline_pitch_{soft,medium,hard}     (global last resort)
+#
+# Topic is set per-article via frontmatter `cta_topic: <topic>`.
+# Variants cycle by H2 position (soft → medium → hard).
+#
+# Core 6 launch locales hand-tuned. Other 13 locales fall back to en.
+
+backup:
+  zh-TW:
+    soft: "備份不是有就好。3-2-1 規則需要工具替你跑。"
+    medium: "Keeply 自動跑 3-2-1。免費,30 秒裝好。"
+    hard: "下次硬碟掛掉那刻,你會慶幸今天裝了它。"
+  zh-CN:
+    soft: "备份不是有就好。3-2-1 规则需要工具替你跑。"
+    medium: "Keeply 自动跑 3-2-1。免费,30 秒装好。"
+    hard: "下次硬盘挂掉那刻,你会庆幸今天装了它。"
+  en:
+    soft: "Having a backup isn't enough. The 3-2-1 rule needs a tool that runs it for you."
+    medium: "Keeply runs 3-2-1 automatically. Free, 30 seconds to install."
+    hard: "The moment your drive dies, you'll be glad you installed it today."
+  ja:
+    soft: "バックアップは「ある」だけでは足りない。3-2-1 ルールはツールに任せる時代。"
+    medium: "Keeply なら 3-2-1 を自動実行。無料・30 秒でインストール。"
+    hard: "ドライブが死んだ瞬間、今日入れておいてよかったと思う。"
+  ko:
+    soft: "백업은 있다고만 안전하지 않다. 3-2-1 규칙은 도구가 대신 돌려야 한다."
+    medium: "Keeply 가 3-2-1 을 자동으로 실행. 무료, 30 초면 설치 끝."
+    hard: "드라이브가 죽는 그 순간, 오늘 깔아둔 게 다행이라고 느낀다."
+  it:
+    soft: "Avere un backup non basta. La regola 3-2-1 ha bisogno di uno strumento che la esegua per te."
+    medium: "Keeply esegue il 3-2-1 in automatico. Gratis, 30 secondi per installarlo."
+    hard: "Quando l'hard disk muore, sarai contento di averlo installato oggi."
+
+versioning:
+  zh-TW:
+    soft: "覆蓋掉的檔案,從來不是「不小心」,是缺少版本史。"
+    medium: "Keeply 自動留每次存檔點。免費,30 秒裝好。"
+    hard: "不要當下個丟失 v3 的客戶。今天的 30 秒換以後不用熬夜重做。"
+  zh-CN:
+    soft: "覆盖掉的文件,从来不是「不小心」,是缺少版本史。"
+    medium: "Keeply 自动留每次存档点。免费,30 秒装好。"
+    hard: "别成为下一个弄丢 v3 的客户。今天的 30 秒换以后不用熬夜重做。"
+  en:
+    soft: "Files don't get overwritten by accident — they get overwritten because there's no version history."
+    medium: "Keeply saves a checkpoint at every save. Free, 30 seconds to install."
+    hard: "Don't be the next person who loses v3. 30 seconds today saves an all-nighter later."
+  ja:
+    soft: "上書きで消えるのは「うっかり」ではない。バージョン履歴が無いだけ。"
+    medium: "Keeply は保存のたびにチェックポイントを残す。無料・30 秒で導入。"
+    hard: "次に v3 を失う人にならない。今日の 30 秒で徹夜の作り直しを防ぐ。"
+  ko:
+    soft: "덮어쓰기는 「실수」가 아니다. 버전 히스토리가 없을 뿐이다."
+    medium: "Keeply 가 저장할 때마다 체크포인트를 남긴다. 무료, 30 초면 설치."
+    hard: "v3 를 잃은 다음 사람이 되지 마라. 오늘 30 초가 밤샘 재작업을 막는다."
+  it:
+    soft: "I file non vengono sovrascritti per caso — vengono sovrascritti perché manca lo storico delle versioni."
+    medium: "Keeply salva un checkpoint a ogni save. Gratis, 30 secondi per installarlo."
+    hard: "Non essere il prossimo che perde la v3. 30 secondi oggi ti evitano una nottata di rifacimento."
+
+install:
+  zh-TW:
+    soft: "讀完不裝,下週又要再讀一次。今天裝起來。"
+    medium: "免費下載,Win/Mac 都有,30 秒裝完。"
+    hard: "把這篇加入書籤的人,99% 沒回頭裝。你不要當那 99%。"
+  zh-CN:
+    soft: "读完不装,下周又要再读一次。今天装起来。"
+    medium: "免费下载,Win/Mac 都有,30 秒装完。"
+    hard: "把这篇加入书签的人,99% 没回头装。你别当那 99%。"
+  en:
+    soft: "Reading without installing means reading the same thing next week. Install today."
+    medium: "Free download, Windows + Mac, 30 seconds to install."
+    hard: "99% of people who bookmark this never come back to install. Don't be the 99%."
+  ja:
+    soft: "読むだけで入れないと、来週また同じ記事を読む羽目になる。今日、入れる。"
+    medium: "無料ダウンロード、Win/Mac 両対応、30 秒でインストール。"
+    hard: "ブックマークした人の 99% は戻ってこない。あなたは 99% にならないでほしい。"
+  ko:
+    soft: "읽고 설치 안 하면 다음 주에 또 같은 글을 읽게 된다. 오늘 설치하자."
+    medium: "무료 다운로드, Windows · Mac 모두 지원, 30 초면 설치 끝."
+    hard: "북마크만 한 사람의 99% 는 다시 안 돌아온다. 그 99% 가 되지 마라."
+  it:
+    soft: "Leggere senza installare significa rileggere lo stesso articolo la settimana prossima. Installa oggi."
+    medium: "Download gratis, Windows + Mac, 30 secondi per installarlo."
+    hard: "Il 99% di chi mette nei segnalibri non torna mai a installarlo. Non essere quel 99%."
+
+recovery:
+  zh-TW:
+    soft: "救檔的最佳時機是「還沒丟」。第二好的時機是現在。"
+    medium: "Keeply 自動留版本史,免費,救一次就值得。"
+    hard: "今天裝,下次案子掛掉那一刻你還救得回來。"
+  zh-CN:
+    soft: "救档的最佳时机是「还没丢」。第二好的时机是现在。"
+    medium: "Keeply 自动留版本史,免费,救一次就值得。"
+    hard: "今天装,下次项目挂掉那一刻你还救得回来。"
+  en:
+    soft: "The best time to be able to recover a file is before you lose it. The second-best time is now."
+    medium: "Keeply auto-saves version history. Free. One recovery makes it worth it."
+    hard: "Install today and the next time a project blows up, you can still rescue it."
+  ja:
+    soft: "ファイルを復元できる最高のタイミングは「失う前」。次に良いのは今。"
+    medium: "Keeply はバージョン履歴を自動で残す。無料、一度復元できれば元が取れる。"
+    hard: "今日入れておけば、次にプロジェクトが吹っ飛んだ瞬間でも救い出せる。"
+  ko:
+    soft: "파일을 살릴 수 있는 가장 좋은 타이밍은 「잃기 전」. 그다음은 지금이다."
+    medium: "Keeply 가 버전 히스토리를 자동으로 남긴다. 무료, 한 번만 살려도 본전 이상."
+    hard: "오늘 깔아두면 다음에 프로젝트가 터지는 순간에도 건져낼 수 있다."
+  it:
+    soft: "Il momento migliore per poter recuperare un file è prima di perderlo. Il secondo migliore è adesso."
+    medium: "Keeply salva la cronologia versioni in automatico. Gratis. Basta un recupero per ripagarsi."
+    hard: "Installalo oggi e la prossima volta che un progetto salta, puoi ancora salvarlo."
+
+default:
+  zh-TW:
+    soft: "如果今天只能做一件事,就是讓工具替你記下每個版本。"
+    medium: "免費 + 30 秒裝好。沒理由不試一次。"
+    hard: "還在覆蓋舊版?這 30 秒可省你下次的找檔時間。"
+  zh-CN:
+    soft: "如果今天只能做一件事,就是让工具替你记下每个版本。"
+    medium: "免费 + 30 秒装好。没理由不试一次。"
+    hard: "还在覆盖旧版?这 30 秒能省你下次找档的时间。"
+  en:
+    soft: "If you do one thing today, let a tool remember every version of every file."
+    medium: "Free + 30 seconds to install. No reason not to try."
+    hard: "Still overwriting old versions? 30 seconds today saves the next file-hunt."
+  ja:
+    soft: "今日ひとつだけやるなら、ファイルのすべてのバージョンをツールに任せること。"
+    medium: "無料、30 秒でインストール。試さない理由がない。"
+    hard: "まだ上書き保存だけ?30 秒で次回のファイル探しを節約できる。"
+  ko:
+    soft: "오늘 한 가지만 한다면, 모든 파일의 모든 버전을 도구에게 맡기는 것이다."
+    medium: "무료, 30 초면 설치. 한 번 안 써볼 이유가 없다."
+    hard: "아직도 덮어쓰기만? 오늘 30 초가 다음 파일 찾기 시간을 아껴준다."
+  it:
+    soft: "Se oggi fai una sola cosa, lascia che sia uno strumento a ricordare ogni versione di ogni file."
+    medium: "Gratis, 30 secondi per installarlo. Non c'è motivo di non provarlo."
+    hard: "Sovrascrivi ancora le vecchie versioni? 30 secondi oggi ti risparmiano la prossima caccia al file."

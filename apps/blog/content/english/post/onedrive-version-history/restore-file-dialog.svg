@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 280" font-family="'Inter','Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans JP','Noto Sans KR',-apple-system,system-ui,sans-serif">
+<rect x="0" y="0" width="480" height="280" fill="#F3F4F6"/>
+<rect x="40" y="40" width="400" height="200" rx="8" fill="#FFFFFF" stroke="#E5E7EB" filter="drop-shadow(0 4px 8px rgba(0,0,0,.1))"/>
+<text x="56" y="68" font-size="15" font-weight="700" fill="#1F2937">Restore this file to this version?</text>
+<rect x="56" y="84" width="368" height="56" rx="6" fill="#F9FAFB" stroke="#E5E7EB"/>
+<text x="68" y="104" font-size="13" fill="#374151" font-weight="600">📄 proposal.docx</text>
+<text x="68" y="124" font-size="11" fill="#9CA3AF">Source: a3f9c4d2 · Client signed v2.3 — 5/4</text>
+<rect x="56" y="152" width="368" height="32" rx="4" fill="#FEF3C7" stroke="#FBBF24"/>
+<text x="68" y="173" font-size="11" fill="#78350F">💡 Current version auto-snapshotted first — Undo any time</text>
+<rect x="276" y="196" width="64" height="32" rx="6" fill="#FFFFFF" stroke="#D1D5DB"/>
+<text x="308" y="217" font-size="12" fill="#374151" text-anchor="middle">Cancel</text>
+<rect x="348" y="196" width="76" height="32" rx="6" fill="#3B82F6"/>
+<text x="386" y="217" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">Restore</text>
+</svg>

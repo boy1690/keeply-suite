@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" font-family="'Inter','Noto Sans TC','PingFang TC','Noto Sans JP','Noto Sans KR',-apple-system,system-ui,sans-serif">
+<rect x="0" y="0" width="600" height="320" rx="8" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+<text x="20" y="30" font-size="15" font-weight="700" fill="#111827">Dropbox deletion retention by plan</text>
+<text x="20" y="74" font-size="12" font-weight="600" fill="#374151">Basic / Plus / Family</text>
+<rect x="200" y="60" width="26" height="22" rx="3" fill="#FECACA" stroke="#F87171" stroke-width="1"/>
+<text x="208" y="75" font-size="11" font-weight="600" fill="#7F1D1D">30 days</text>
+<text x="20" y="124" font-size="12" font-weight="600" fill="#374151">Professional / Standard</text>
+<rect x="200" y="110" width="157" height="22" rx="3" fill="#FDE68A" stroke="#FBBF24" stroke-width="1"/>
+<text x="208" y="125" font-size="11" font-weight="600" fill="#78350F">180 days</text>
+<text x="20" y="174" font-size="12" font-weight="600" fill="#374151">Business Plus / Advanced</text>
+<rect x="200" y="160" width="320" height="22" rx="3" fill="#A7F3D0" stroke="#34D399" stroke-width="1"/>
+<text x="208" y="175" font-size="11" font-weight="600" fill="#065F46">365 days</text>
+<text x="20" y="224" font-size="12" font-weight="600" fill="#374151">Enterprise</text>
+<rect x="200" y="210" width="320" height="22" rx="3" fill="#A5F3FC" stroke="#22D3EE" stroke-width="1"/>
+<text x="208" y="225" font-size="11" font-weight="600" fill="#0E7490">365 days (configurable)</text>
+<text x="200" y="270" font-size="10" fill="#9CA3AF">0 days</text>
+<text x="520" y="270" font-size="10" fill="#9CA3AF" text-anchor="end">365 days</text>
+<text x="20" y="300" font-size="11" font-style="italic" fill="#6B7280">⚠ Your clock starts at deletion, not at upgrade.</text>
+</svg>

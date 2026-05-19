@@ -1,0 +1,20 @@
+URL,Target URL,Status,Preserve query string,Include subdomains,Subpath matching,Preserve path suffix
+https://blog.keeply.work/en/tags/data-backup/,https://blog.keeply.work/en/post/3-2-1-backup-rule/,301,false,false,false,false
+https://blog.keeply.work/en/categories/backup-strategy/,https://blog.keeply.work/en/post/3-2-1-backup-rule/,301,false,false,false,false
+https://blog.keeply.work/zh-tw/tags/onedrive/,https://blog.keeply.work/zh-tw/post/dropbox-conflicted-copy/,301,false,false,false,false
+https://blog.keeply.work/zh-tw/tags/%E5%B7%A5%E5%9C%B0%E7%AE%A1%E7%90%86/,https://blog.keeply.work/zh-tw/post/autocad-wrong-version-crew/,301,false,false,false,false
+https://blog.keeply.work/zh-tw/tags/delivery-note/,https://blog.keeply.work/zh-tw/post/client-asked-which-version/,301,false,false,false,false
+https://blog.keeply.work/zh-tw/tags/time-machine/,https://blog.keeply.work/zh-tw/post/file-version-management-complete-guide/,301,false,false,false,false
+https://blog.keeply.work/zh-cn/tags/onedrive/,https://blog.keeply.work/zh-cn/post/dropbox-conflicted-copy/,301,false,false,false,false
+https://blog.keeply.work/zh-cn/tags/keeply/,https://blog.keeply.work/zh-cn/post/keeply-getting-started-from-zero/,301,false,false,false,false
+https://blog.keeply.work/zh-cn/tags/excel/,https://blog.keeply.work/zh-cn/post/excel-version-history-limits/,301,false,false,false,false
+https://blog.keeply.work/zh-cn/tags/delivery-note/,https://blog.keeply.work/zh-cn/post/client-asked-which-version/,301,false,false,false,false
+https://blog.keeply.work/ja/tags/%E7%89%88%E6%95%B0%E5%B1%A5%E6%AD%B4/,https://blog.keeply.work/ja/post/file-version-management-complete-guide/,301,false,false,false,false
+https://blog.keeply.work/ja/tags/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%90%E3%83%83%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97/,https://blog.keeply.work/ja/post/3-2-1-backup-rule/,301,false,false,false,false
+https://blog.keeply.work/ja/tags/autosave/,https://blog.keeply.work/ja/post/photoshop-autosave-not-version-history/,301,false,false,false,false
+https://blog.keeply.work/ja/tags/autocad/,https://blog.keeply.work/ja/post/autocad-wrong-version-crew/,301,false,false,false,false
+https://blog.keeply.work/ja/tags/delivery-note/,https://blog.keeply.work/ja/post/client-asked-which-version/,301,false,false,false,false
+https://blog.keeply.work/ko/tags/%ED%98%84%EC%9E%A5-%EA%B4%80%EB%A6%AC/,https://blog.keeply.work/ko/post/autocad-wrong-version-crew/,301,false,false,false,false
+https://blog.keeply.work/ko/tags/delivery-note/,https://blog.keeply.work/ko/post/client-asked-which-version/,301,false,false,false,false
+https://blog.keeply.work/ko/tags/macos/,https://blog.keeply.work/ko/post/install-keeply-windows-mac/,301,false,false,false,false
+https://blog.keeply.work/it/tags/software-per-note-sui-file/,https://blog.keeply.work/it/post/file-version-management-complete-guide/,301,false,false,false,false

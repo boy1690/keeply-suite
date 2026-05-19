@@ -1,0 +1,461 @@
+{{- $isHome := .IsHome -}}
+{{- $title := "" -}}
+{{- if $isHome -}}
+  {{- $title = .Site.Title -}}
+{{- else if .IsPage -}}
+  {{/* Single posts: title only — saves 15 chars for SERP, freeing room for primary_keyword + hook. */}}
+  {{- $title = .Title -}}
+{{- else -}}
+  {{/* List pages (categories/tags/section): keep suffix so users can tell which site. */}}
+  {{- $title = printf "%s · %s" .Title .Site.Title -}}
+{{- end -}}
+{{- $description := or .Description .Summary .Site.Params.description -}}
+{{- /* OG image: prefer og_image, fallback to image. Resolve via page bundle if possible (raster preferred for social scrapers). */ -}}
+{{- $ogParam := or .Params.og_image .Params.image -}}
+{{- $ogImage := "/og-image.png" | absURL -}}
+{{- $ogImageWidth := "1600" -}}
+{{- $ogImageHeight := "900" -}}
+{{- $ogImageType := "image/png" -}}
+{{- with $ogParam -}}
+  {{- $res := $.Resources.GetMatch . -}}
+  {{- if $res -}}
+    {{- $ogImage = $res.Permalink -}}
+    {{- with $res.MediaType -}}{{- $ogImageType = .Type -}}{{- end -}}
+    {{- /* Hugo decodes raster images; .Width/.Height are 0 for SVG. */ -}}
+    {{- if and $res.Width $res.Height -}}
+      {{- $ogImageWidth = string $res.Width -}}
+      {{- $ogImageHeight = string $res.Height -}}
+    {{- end -}}
+  {{- else -}}
+    {{- $ogImage = . | absURL -}}
+  {{- end -}}
+{{- end -}}
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#4F46E5" />
+<meta name="yandex-verification" content="93bf441a67605176" />
+<title>{{ $title }}</title>
+<meta name="description" content="{{ $description | plainify }}" />
+
+{{- /* DNS prefetch + preconnect for third-party origins shipped on every
+       page (GA4 + Clarity + Cloudflare Insights). preconnect for the
+       analytics endpoints that actually return data; dns-prefetch for
+       the rest (cheap + covered as fallback for older browsers). */ -}}
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+<link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
+<link rel="preconnect" href="https://www.clarity.ms" crossorigin />
+<link rel="dns-prefetch" href="https://static.cloudflareinsights.com" />
+<link rel="dns-prefetch" href="https://cloudflareinsights.com" />
+
+{{- /* Canonical */ -}}
+<link rel="canonical" href="{{ .Permalink }}" />
+
+{{- /*
+  Robots meta — indexability gate per spec seo-indexability-l2 FR-003/004/005.
+  noindex when:
+    - locale is auto-translate (not in core 6) — FR-005 → noindex,NOfollow
+      (2026-05-15: tightened from "follow" → "nofollow" to break the
+      discovery loop where 13 auto-translate locales link to each other
+      via language switcher, generating endless GSC noise and crawl-budget
+      bleed. Hreflang in head still informs multilingual graph; nofollow
+      only affects in-body link following.)
+    - page is a listing hub: /post/, /tags/, /categories/ index — FR-003
+    - page is any term page (tag/category) — FR-003 tightened 2026-05-08
+    - paginated child pages (/page/N/)
+  Listing/term/page-N pages within CORE locale stay noindex,FOLLOW so
+  Google still walks them to discover real articles.
+  Otherwise default (no robots meta = indexable, follow).
+  Hreflang block below is unaffected so multilingual graph remains intact.
+*/ -}}
+{{- $coreLocales := slice "en" "zh-tw" "zh-cn" "ja" "ko" "it" -}}
+{{- $isAutoTranslate := not (in $coreLocales .Site.Language.Lang) -}}
+{{- $noindex := false -}}
+{{- if $isAutoTranslate -}}{{- $noindex = true -}}{{- end -}}
+{{- if eq .Kind "section" -}}{{- $noindex = true -}}{{- end -}}
+{{- if eq .Kind "taxonomy" -}}{{- $noindex = true -}}{{- end -}}
+{{- if eq .Kind "term" -}}{{- $noindex = true -}}{{- end -}}
+{{- if findRE "/page/[0-9]+/" .RelPermalink -}}{{- $noindex = true -}}{{- end -}}
+{{- $paramRobots := .Params.robots -}}
+{{- if $paramRobots }}
+<meta name="robots" content="{{ $paramRobots }}" />
+{{- else if $noindex }}
+{{- if $isAutoTranslate }}
+<meta name="robots" content="noindex,nofollow" />
+{{- else }}
+<meta name="robots" content="noindex,follow" />
+{{- end }}
+{{- end }}
+
+{{- /* Hreflang for all languages */ -}}
+{{- if .IsTranslated -}}
+  {{- range .AllTranslations -}}
+    <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}" />
+  {{- end -}}
+  <link rel="alternate" hreflang="x-default" href="{{ (index .AllTranslations 0).Permalink }}" />
+{{- end -}}
+
+{{- /* Favicons */ -}}
+<link rel="icon" href="{{ "favicon.ico" | absURL }}" sizes="32x32" />
+<link rel="icon" href="{{ "favicon.svg" | absURL }}" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | absURL }}" />
+<link rel="manifest" href="{{ "manifest.webmanifest" | absURL }}" />
+
+{{- /* Open Graph */ -}}
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:title" content="{{ $title }}" />
+<meta property="og:description" content="{{ $description | plainify }}" />
+<meta property="og:image" content="{{ $ogImage }}" />
+<meta property="og:image:secure_url" content="{{ $ogImage }}" />
+<meta property="og:image:type" content="{{ $ogImageType }}" />
+<meta property="og:image:width" content="{{ $ogImageWidth }}" />
+<meta property="og:image:height" content="{{ $ogImageHeight }}" />
+<meta property="og:image:alt" content="{{ $title | plainify }}" />
+<meta property="og:site_name" content="{{ .Site.Title }}" />
+{{- /* og:locale must follow ll_CC convention (region uppercase) per Facebook
+       OG spec; e.g. zh_TW not zh_tw. Hugo's .Language.Lang is lowercase
+       ll-cc, so split and uppercase the region. Falls back to bare language
+       code when no region present (e.g. "ja" → "ja", "ko" → "ko"). */ -}}
+{{- $lang := .Language.Lang -}}
+{{- $parts := split $lang "-" -}}
+{{- $ogLocale := index $parts 0 -}}
+{{- if gt (len $parts) 1 -}}
+  {{- $ogLocale = printf "%s_%s" (index $parts 0) (upper (index $parts 1)) -}}
+{{- else -}}
+  {{- /* Map bare language codes to their primary region for Facebook. */ -}}
+  {{- $regionMap := dict "en" "US" "ja" "JP" "ko" "KR" "de" "DE" "fr" "FR" "es" "ES" "it" "IT" "pt" "PT" "ru" "RU" "nl" "NL" "pl" "PL" "tr" "TR" "vi" "VN" "th" "TH" "id" "ID" "ar" "AR" "hi" "IN" -}}
+  {{- with index $regionMap $lang -}}
+    {{- $ogLocale = printf "%s_%s" $lang . -}}
+  {{- end -}}
+{{- end -}}
+<meta property="og:locale" content="{{ $ogLocale }}" />
+
+{{- /* Twitter */ -}}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ $title }}" />
+<meta name="twitter:description" content="{{ $description | plainify }}" />
+<meta name="twitter:image" content="{{ $ogImage }}" />
+<meta name="twitter:image:alt" content="{{ $title | plainify }}" />
+
+{{- /* Article-specific meta */ -}}
+{{- if .IsPage -}}
+  {{- with .PublishDate -}}
+    <meta property="article:published_time" content="{{ .Format "2006-01-02T15:04:05Z07:00" }}" />
+  {{- end -}}
+  {{- with .Lastmod -}}
+    <meta property="article:modified_time" content="{{ .Format "2006-01-02T15:04:05Z07:00" }}" />
+  {{- end -}}
+  {{- range .Params.tags -}}
+    <meta property="article:tag" content="{{ . }}" />
+  {{- end -}}
+{{- end -}}
+
+{{- /* RSS */ -}}
+{{- with .OutputFormats.Get "rss" -}}
+  <link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ $.Site.Title }}" />
+{{- end -}}
+
+{{- /* Preload LCP cover image — only when cover is NOT inlined as SVG.
+       After Round B-1.3, .svg covers are inlined into post body, so they
+       don't need preload (the SVG markup IS in the HTML). For non-SVG
+       covers (PNG/JPG/WebP), preload remains the LCP win. */ -}}
+{{- if and .IsPage .Params.image -}}
+  {{- if ne (path.Ext .Params.image) ".svg" -}}
+    {{- $res := .Resources.GetMatch .Params.image -}}
+    {{- $src := .Params.image | absURL -}}
+    {{- if $res -}}{{- $src = $res.RelPermalink -}}{{- end -}}
+    <link rel="preload" as="image" href="{{ $src }}" fetchpriority="high" />
+  {{- end -}}
+{{- end -}}
+
+{{- /* Preload Regular + Bold fonts. After Round B-1.3 inlined cover SVG,
+       there's no longer image-bandwidth competition; Bold preload restored
+       because H1 (LCP element on single posts after SVG inline) renders in
+       Bold weight. Without Bold preload, Lighthouse's LCP measurement was
+       waiting on the font path in the network dependency tree even with
+       font-display: swap. Medium weight stays lazy via CSS @font-face. */ -}}
+<link rel="preload" href="{{ "fonts/MPLUSRounded1c-Regular-v2.woff2" | absURL }}" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="{{ "fonts/MPLUSRounded1c-Bold-v2.woff2" | absURL }}" as="font" type="font/woff2" crossorigin />
+
+{{- /* Content Security Policy fallback (defence-in-depth; Cloudflare header
+       CSP is authoritative). frame-ancestors / HSTS / Permissions-Policy are
+       header-only and live in the Cloudflare Transform Rule. */ -}}
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://static.cloudflareinsights.com https://*.clarity.ms; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com https://*.clarity.ms; font-src 'self'; connect-src 'self' https://docs.google.com https://*.google-analytics.com https://*.analytics.google.com https://cloudflareinsights.com https://*.clarity.ms; form-action 'self' https://docs.google.com; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+
+{{- /* Google Analytics 4 — externalised init (avoids 'unsafe-inline' in script-src).
+       Loader is async; init is `defer` so it executes after parse but before
+       DOMContentLoaded (analytics doesn't need to fire mid-parse). Removes
+       the init script from the render-blocking critical path. */ -}}
+{{- with site.Config.Services.GoogleAnalytics.ID -}}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+  {{- $gaInit := resources.Get "js/ga-init.js" | resources.ExecuteAsTemplate "js/ga-init.js" . | resources.Fingerprint "sha384" -}}
+  <script defer src="{{ $gaInit.RelPermalink }}" integrity="{{ $gaInit.Data.Integrity }}" crossorigin="anonymous"></script>
+{{- end -}}
+
+{{- /* Microsoft Clarity — externalised init (mirrors GA pattern; defer'd).
+       The IIFE injects www.clarity.ms/tag/{id}.js dynamically — no separate
+       loader tag needed. */ -}}
+{{- with .Site.Params.clarityProjectID -}}
+  {{- $clarityInit := resources.Get "js/clarity-init.js" | resources.ExecuteAsTemplate "js/clarity-init.js" . | resources.Fingerprint "sha384" -}}
+  <script defer src="{{ $clarityInit.RelPermalink }}" integrity="{{ $clarityInit.Data.Integrity }}" crossorigin="anonymous"></script>
+{{- end -}}
+
+{{- /* Cross-subdomain locale cookie — writes keeply_locale on .keeply.work
+       so the apex (keeply.work) and any subdomain land on the same language
+       on next navigation. Paired with layouts/alias.html root redirect. */ -}}
+{{- $localeSync := resources.Get "js/locale-cookie-sync.js" | resources.Fingerprint "sha384" -}}
+<script defer src="{{ $localeSync.RelPermalink }}" integrity="{{ $localeSync.Data.Integrity }}" crossorigin="anonymous"></script>
+
+{{- /* Inline stylesheet (Round B-1.2): eliminates the render-blocking
+       network round-trip for CSS. Tailwind purged output is ~5.5KB
+       gzipped — small enough to inline without significant HTML bloat,
+       gain is one fewer round-trip on the critical render path. CSP
+       `style-src 'self' 'unsafe-inline'` already allows inline style.
+       SRI is not applicable to inline content (no fetch happens). */ -}}
+{{- $css := resources.Get "css/style.css" -}}
+<style>{{ $css.Content | safeCSS }}</style>
+
+{{- /* JSON-LD (article / website).
+       NOTE: Go html/template applies JS-string escaping to anything inside
+       <script> regardless of `type` attribute. Wrap jsonify output in
+       `safeJS` to bypass and emit valid JSON. Without safeJS, every
+       jsonify'd value gets its surrounding quotes double-escaped to \". */ -}}
+{{- if .IsPage -}}
+  {{- /* Word count + reading time computed from .Plain (text only, no
+         markup). Hugo's .WordCount is whitespace-split — works for
+         en/ja/ko but undercounts CJK. For zh-tw / zh-cn / ja / ko we
+         use rune count / locale-specific reading rate instead. */ -}}
+  {{- $isCjk := in (slice "zh-tw" "zh-cn" "zh-hant" "zh-hans" "ja" "ko") .Language.Lang -}}
+  {{- $wordCount := .WordCount -}}
+  {{- $runeCount := len .Plain -}}
+  {{- if $isCjk -}}{{- $wordCount = $runeCount -}}{{- end -}}
+  {{- $wpm := cond $isCjk 350 220 -}}
+  {{- $readingTime := math.Ceil (div (float $wordCount) $wpm) -}}
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": {{ .Title | jsonify | safeJS }},
+    "description": {{ $description | plainify | jsonify | safeJS }},
+    "datePublished": "{{ .PublishDate.Format "2006-01-02" }}",
+    "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
+    "inLanguage": {{ .Language.Lang | jsonify | safeJS }},
+    "wordCount": {{ $wordCount }},
+    "timeRequired": "PT{{ $readingTime }}M",
+    {{- /* Speakable schema: signals which parts of the page voice assistants
+           (Google Assistant) and AI search engines (Perplexity / ChatGPT)
+           should read aloud. Target H2/H3 and the article body. */ -}}
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["h1", "h2", "h3", ".article-content p:first-of-type", ".prose-keeply p:first-of-type"]
+    },
+    {{- with .Params.tags -}}
+    "keywords": {{ . | jsonify | safeJS }},
+    {{- end }}
+    "author": {
+      "@type": "Person",
+      "name": {{ .Site.Params.author.name | jsonify | safeJS }},
+      "alternateName": {{ .Site.Params.author.alternateName | jsonify | safeJS }},
+      "jobTitle": {{ .Site.Params.author.jobTitle | jsonify | safeJS }},
+      "url": {{ .Site.Params.author.url | jsonify | safeJS }},
+      "sameAs": {{ .Site.Params.author.sameAs | jsonify | safeJS }}
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": {{ .Site.Params.organization.name | jsonify | safeJS }},
+      "logo": { "@type": "ImageObject", "url": {{ "logo.svg" | absURL | jsonify | safeJS }} }
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": {{ .Permalink | jsonify | safeJS }} }
+  }
+  </script>
+
+  {{- /* BreadcrumbList: Home → Section(s) → Title (skipped on homepage).
+         Section names use i18n keys (nav_posts) so each locale shows the
+         localised label, not the capitalised section name. */ -}}
+  {{- $crumbs := slice (dict "name" .Site.Title "url" (printf "%s%s/" .Site.BaseURL .Language.Lang)) -}}
+  {{- range .Ancestors.Reverse -}}
+    {{- if not .IsHome -}}
+      {{- $name := .Title -}}
+      {{- if eq .Section "post" -}}{{- $name = i18n "nav_posts" -}}{{- end -}}
+      {{- $crumbs = $crumbs | append (dict "name" $name "url" .Permalink) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $crumbs = $crumbs | append (dict "name" .Title "url" .Permalink) -}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {{- range $i, $c := $crumbs }}
+      {{- if $i }},{{ end }}
+      { "@type": "ListItem", "position": {{ add $i 1 }}, "name": {{ $c.name | jsonify | safeJS }}, "item": {{ $c.url | jsonify | safeJS }} }
+      {{- end }}
+    ]
+  }
+  </script>
+
+  {{- /* FAQPage Schema (AEO v0.2.22 — answer engine Query Fan-out target).
+         Activated when frontmatter declares:
+           faq_schema:
+             - q: "問題完整句"
+               a: "完整答案 80-120 chars"
+             - q: "..."
+               a: "..."
+         Aligns with BWF P1.22 (question-based H2) — typically these Q/A
+         pairs mirror the article's H2 questions + Executive Answer
+         paragraphs (P1.23). Google AI Overviews + ChatGPT + Perplexity
+         actively extract FAQPage entries for direct answer surfaces. */ -}}
+  {{- with .Params.faq_schema -}}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {{- range $i, $faq := . }}
+        {{- if $i }},{{ end }}
+        {
+          "@type": "Question",
+          "name": {{ $faq.q | jsonify | safeJS }},
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": {{ $faq.a | jsonify | safeJS }}
+          }
+        }
+        {{- end }}
+      ]
+    }
+    </script>
+  {{- end -}}
+
+  {{- /* HowTo Schema (AEO v0.2.22 — tutorial / step-by-step content).
+         Activated when frontmatter declares:
+           howto_schema:
+             name: "完整教學名稱"
+             totalTime: "PT30M"          # ISO 8601 duration (optional)
+             steps:
+               - name: "Step 1 short title"
+                 text: "Step 1 detailed instruction"
+                 url: "#anchor-id"        # optional in-page anchor
+               - name: "..."
+                 text: "..."
+         Google + Copilot + Perplexity extract HowTo for "如何 X" queries. */ -}}
+  {{- with .Params.howto_schema -}}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": {{ .name | jsonify | safeJS }},
+      {{- with .totalTime }}
+      "totalTime": {{ . | jsonify | safeJS }},
+      {{- end }}
+      "step": [
+        {{- range $i, $step := .steps }}
+        {{- if $i }},{{ end }}
+        {
+          "@type": "HowToStep",
+          "position": {{ add $i 1 }},
+          "name": {{ $step.name | jsonify | safeJS }},
+          "text": {{ $step.text | jsonify | safeJS }}
+          {{- with $step.url }},
+          "url": {{ . | jsonify | safeJS }}
+          {{- end }}
+        }
+        {{- end }}
+      ]
+    }
+    </script>
+  {{- end -}}
+{{- else -}}
+  {{- /* Homepage / list pages: Blog + WebSite (with SearchAction fallback to
+         Google site: search since no internal search exists) + Organization
+         (with sameAs for entity disambiguation). Kept as separate blocks for
+         clarity; Google parses each independently.
+
+         Taxonomy term pages (/tags/<tag>/, /categories/<cat>/) get an extra
+         CollectionPage block listing the contained articles via ItemList —
+         tells Google + AI search "this URL is a curated topical list, here
+         are its members" instead of falling back to generic Blog type. */ -}}
+  {{- if eq .Kind "term" -}}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": {{ .Title | jsonify | safeJS }},
+      "url": {{ .Permalink | jsonify | safeJS }},
+      "inLanguage": {{ .Language.Lang | jsonify | safeJS }},
+      "isPartOf": { "@type": "WebSite", "url": {{ .Site.BaseURL | jsonify | safeJS }}, "name": {{ .Site.Title | jsonify | safeJS }} },
+      "mainEntity": {
+        "@type": "ItemList",
+        "numberOfItems": {{ len .Pages }},
+        "itemListElement": [
+          {{- $first := true -}}
+          {{- range $i, $p := .Pages -}}
+            {{- if not $first }},{{ end -}}
+            { "@type": "ListItem", "position": {{ add $i 1 }}, "url": {{ $p.Permalink | jsonify | safeJS }}, "name": {{ $p.Title | jsonify | safeJS }} }
+            {{- $first = false -}}
+          {{- end }}
+        ]
+      }
+    }
+    </script>
+  {{- end -}}
+  {{- /* @graph payload — promotes Organization + Person to top-level
+         @type so simple scanners (av8d-levelup, lower-tier AI bots) that
+         don't dive into nested .publisher / .author counts catch the
+         entity signal. Also adds Person (founder) directly on homepage
+         so E-E-A-T attaches to a real human, not just an Organization. */ -}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "{{ .Site.BaseURL }}#organization",
+        "name": {{ .Site.Params.organization.name | jsonify | safeJS }},
+        "url": {{ .Site.Params.organization.url | jsonify | safeJS }},
+        "logo": { "@type": "ImageObject", "url": {{ "logo.svg" | absURL | jsonify | safeJS }} },
+        "sameAs": {{ .Site.Params.organization.sameAs | jsonify | safeJS }}
+      },
+      {
+        "@type": "Person",
+        "@id": "{{ .Site.BaseURL }}#founder",
+        "name": {{ .Site.Params.author.name | jsonify | safeJS }},
+        "alternateName": {{ .Site.Params.author.alternateName | jsonify | safeJS }},
+        "jobTitle": {{ .Site.Params.author.jobTitle | jsonify | safeJS }},
+        "url": {{ .Site.Params.author.url | jsonify | safeJS }},
+        "sameAs": {{ .Site.Params.author.sameAs | jsonify | safeJS }},
+        "worksFor": { "@id": "{{ .Site.BaseURL }}#organization" }
+      },
+      {
+        "@type": "Blog",
+        "@id": "{{ .Permalink }}#blog",
+        "name": {{ .Site.Title | jsonify | safeJS }},
+        "url": {{ .Permalink | jsonify | safeJS }},
+        "description": {{ (or .Site.Params.description "Keeply Blog") | jsonify | safeJS }},
+        "inLanguage": {{ .Language.Lang | jsonify | safeJS }},
+        "publisher": { "@id": "{{ .Site.BaseURL }}#organization" },
+        "author": { "@id": "{{ .Site.BaseURL }}#founder" }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "{{ .Site.BaseURL }}#website",
+        "name": {{ .Site.Title | jsonify | safeJS }},
+        "url": {{ .Site.BaseURL | jsonify | safeJS }},
+        "inLanguage": {{ .Language.Lang | jsonify | safeJS }},
+        "publisher": { "@id": "{{ .Site.BaseURL }}#organization" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "{{ .Site.BaseURL | strings.TrimRight "/" }}/{{ .Language.Lang }}/search/?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
+  }
+  </script>
+{{- end -}}

@@ -1,0 +1,109 @@
+<!-- Image 1: 3 personas / shorter filenames / + old/ folder common pattern -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" fill="none"
+     font-family="'Inter','SF Pro Display',-apple-system,system-ui,sans-serif">
+  <defs>
+    <linearGradient id="g-indigo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#4338CA"/>
+    </linearGradient>
+    <linearGradient id="g-amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFB300"/><stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="g-paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8F7FF"/><stop offset="1" stop-color="#EEF2FF"/>
+    </linearGradient>
+    <pattern id="grid" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#4338CA" stroke-width="1" opacity="0.05"/>
+    </pattern>
+    <filter id="shadow"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#312E81" flood-opacity="0.15"/></filter>
+  </defs>
+
+  <rect width="1200" height="600" fill="url(#g-paper)"/>
+  <rect width="1200" height="600" fill="url(#grid)"/>
+
+  <!-- Top label -->
+  <text x="600" y="50" font-size="14" font-weight="800" fill="#312E81" text-anchor="middle" letter-spacing="3">DIFFERENT JOBS · SAME PATTERN</text>
+
+  <!-- 3 persona cards (top row, shorter filenames) -->
+  <g font-family="'JetBrains Mono','Fira Code',ui-monospace,monospace">
+
+    <!-- Designer -->
+    <g transform="translate(60, 90)" filter="url(#shadow)">
+      <rect width="340" height="220" rx="12" fill="#ffffff"/>
+      <rect width="340" height="42" rx="12" fill="url(#g-indigo)"/>
+      <rect y="30" width="340" height="12" fill="url(#g-indigo)"/>
+      <text x="20" y="28" font-size="13" font-weight="700" fill="#ffffff" letter-spacing="2" font-family="system-ui,sans-serif">DESIGNER</text>
+      <g transform="translate(28, 70)">
+        <rect width="36" height="44" rx="3" fill="url(#g-indigo)"/>
+        <text x="18" y="30" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle" font-family="system-ui,sans-serif">PSD</text>
+      </g>
+      <text x="80" y="100" font-size="20" font-weight="700" fill="#312E81">cover_v3_</text>
+      <text x="80" y="128" font-size="20" font-weight="800" fill="url(#g-amber)">FINAL</text>
+      <text x="190" y="128" font-size="20" font-weight="700" fill="#312E81">.psd</text>
+      <text x="28" y="170" font-size="13" font-weight="500" fill="#6F6AF0" opacity="0.7" font-family="system-ui,sans-serif">PSD · 2.4 GB · April 4</text>
+      <text x="28" y="194" font-size="11" font-weight="500" fill="#6F6AF0" opacity="0.55" font-family="system-ui,sans-serif">+ 5 older versions in /old/</text>
+    </g>
+
+    <!-- Lawyer -->
+    <g transform="translate(430, 90)" filter="url(#shadow)">
+      <rect width="340" height="220" rx="12" fill="#ffffff"/>
+      <rect width="340" height="42" rx="12" fill="url(#g-indigo)"/>
+      <rect y="30" width="340" height="12" fill="url(#g-indigo)"/>
+      <text x="20" y="28" font-size="13" font-weight="700" fill="#ffffff" letter-spacing="2" font-family="system-ui,sans-serif">LAWYER</text>
+      <g transform="translate(28, 70)">
+        <rect width="36" height="44" rx="3" fill="url(#g-indigo)"/>
+        <text x="18" y="30" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle" font-family="system-ui,sans-serif">DOC</text>
+      </g>
+      <text x="80" y="100" font-size="18" font-weight="700" fill="#312E81">contract_v7_</text>
+      <text x="80" y="124" font-size="18" font-weight="800" fill="url(#g-amber)">REAL</text>
+      <text x="148" y="124" font-size="18" font-weight="700" fill="#312E81">.docx</text>
+      <text x="28" y="170" font-size="13" font-weight="500" fill="#6F6AF0" opacity="0.7" font-family="system-ui,sans-serif">DOCX · 187 KB · April 15</text>
+      <text x="28" y="194" font-size="11" font-weight="500" fill="#6F6AF0" opacity="0.55" font-family="system-ui,sans-serif">+ 4 older versions in /old/</text>
+    </g>
+
+    <!-- Student -->
+    <g transform="translate(800, 90)" filter="url(#shadow)">
+      <rect width="340" height="220" rx="12" fill="#ffffff"/>
+      <rect width="340" height="42" rx="12" fill="url(#g-indigo)"/>
+      <rect y="30" width="340" height="12" fill="url(#g-indigo)"/>
+      <text x="20" y="28" font-size="13" font-weight="700" fill="#ffffff" letter-spacing="2" font-family="system-ui,sans-serif">STUDENT</text>
+      <g transform="translate(28, 70)">
+        <rect width="36" height="44" rx="3" fill="url(#g-indigo)"/>
+        <text x="18" y="30" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle" font-family="system-ui,sans-serif">DOC</text>
+      </g>
+      <text x="80" y="100" font-size="18" font-weight="700" fill="#312E81">thesis_v3_</text>
+      <text x="80" y="124" font-size="18" font-weight="800" fill="url(#g-amber)">TRULY</text>
+      <text x="160" y="124" font-size="18" font-weight="700" fill="#312E81">.docx</text>
+      <text x="28" y="170" font-size="13" font-weight="500" fill="#6F6AF0" opacity="0.7" font-family="system-ui,sans-serif">DOCX · 3.1 MB · April 12</text>
+      <text x="28" y="194" font-size="11" font-weight="500" fill="#6F6AF0" opacity="0.55" font-family="system-ui,sans-serif">+ 7 older versions in /old/</text>
+    </g>
+
+  </g>
+
+  <!-- Down arrows pointing to common destination -->
+  <g stroke="#9C98FF" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.6">
+    <path d="M230 320 L230 380" stroke-dasharray="4 6"/>
+    <path d="M600 320 L600 380" stroke-dasharray="4 6"/>
+    <path d="M970 320 L970 380" stroke-dasharray="4 6"/>
+  </g>
+  <g fill="#9C98FF" opacity="0.6">
+    <path d="M222 380 L230 392 L238 380 Z"/>
+    <path d="M592 380 L600 392 L608 380 Z"/>
+    <path d="M962 380 L970 392 L978 380 Z"/>
+  </g>
+
+  <!-- Common destination: old/ folder -->
+  <g transform="translate(360, 410)" filter="url(#shadow)">
+    <rect width="480" height="120" rx="14" fill="#FFFBEB" stroke="url(#g-amber)" stroke-width="3"/>
+    <!-- folder icon -->
+    <g transform="translate(36, 30)">
+      <path d="M0 16 Q0 8 8 8 L40 8 L52 22 L100 22 Q108 22 108 30 L108 76 Q108 84 100 84 L8 84 Q0 84 0 76 Z" fill="url(#g-amber)"/>
+    </g>
+    <text x="180" y="56" font-size="32" font-weight="800" fill="#312E81" font-family="'JetBrains Mono','Fira Code',ui-monospace,monospace">old/</text>
+    <text x="180" y="86" font-size="14" font-weight="600" fill="#F59E0B" font-family="system-ui,sans-serif">where every past version ends up</text>
+    <text x="180" y="106" font-size="12" font-weight="500" fill="#6F6AF0" opacity="0.8" font-family="system-ui,sans-serif">because deleting on a NAS is forever</text>
+  </g>
+
+  <!-- Bottom caption -->
+  <text x="600" y="568" font-size="14" font-weight="700" fill="#312E81" text-anchor="middle" letter-spacing="2">SAME SYMPTOM · ACROSS EVERY KNOWLEDGE WORKER</text>
+
+</svg>

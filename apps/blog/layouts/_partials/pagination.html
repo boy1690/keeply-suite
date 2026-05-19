@@ -1,0 +1,28 @@
+{{- $paginator := .Paginator -}}
+{{- if gt $paginator.TotalPages 1 -}}
+<nav class="pt-8 flex items-center justify-center gap-2" aria-label="Pagination">
+  {{- if $paginator.HasPrev -}}
+    <a href="{{ $paginator.Prev.URL }}" class="px-4 py-2 text-sm text-brand-600 hover:text-brand-700 font-medium">
+      ← {{ i18n "page_previous" }}
+    </a>
+  {{- else -}}
+    <span class="px-4 py-2 text-sm text-gray-300">← {{ i18n "page_previous" }}</span>
+  {{- end -}}
+
+  {{- range $paginator.Pagers -}}
+    {{- if eq . $paginator -}}
+      <span class="w-10 h-10 rounded-full bg-brand-600 text-white font-medium flex items-center justify-center">{{ .PageNumber }}</span>
+    {{- else -}}
+      <a href="{{ .URL }}" class="w-10 h-10 rounded-full text-gray-600 hover:bg-gray-50 font-medium flex items-center justify-center">{{ .PageNumber }}</a>
+    {{- end -}}
+  {{- end -}}
+
+  {{- if $paginator.HasNext -}}
+    <a href="{{ $paginator.Next.URL }}" class="px-4 py-2 text-sm text-brand-600 hover:text-brand-700 font-medium">
+      {{ i18n "page_next" }} →
+    </a>
+  {{- else -}}
+    <span class="px-4 py-2 text-sm text-gray-300">{{ i18n "page_next" }} →</span>
+  {{- end -}}
+</nav>
+{{- end -}}

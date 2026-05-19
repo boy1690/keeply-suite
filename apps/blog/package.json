@@ -1,0 +1,31 @@
+{
+  "name": "keeply-blog",
+  "private": true,
+  "description": "Keeply Blog — Hugo static site with Tailwind CSS styling aligned to keeply-website",
+  "scripts": {
+    "css:build": "tailwindcss -i ./assets/css/input.css -o ./assets/css/style.css --minify",
+    "css:watch": "tailwindcss -i ./assets/css/input.css -o ./assets/css/style.css --watch",
+    "dev": "hugo server -D",
+    "build": "npm run css:build && hugo --gc --minify",
+    "seo:fetch:gsc": "node _dev/seo/fetch-gsc.js",
+    "seo:fetch:bwt": "node _dev/seo/fetch-bwt.js",
+    "seo:fetch:yandex": "node _dev/seo/fetch-yandex.js",
+    "seo:fetch:ga4": "node _dev/seo/fetch-ga4.js",
+    "seo:health": "node _dev/seo/health-check.js",
+    "seo:report": "node _dev/seo/build-report.js",
+    "seo:audit": "npx --yes unlighthouse-ci@latest --site https://blog.keeply.work/ --build-static --reporter jsonExpanded --output-path _dev/seo/audit-output",
+    "seo:audit:images": "node _dev/seo/audit-images.js",
+    "seo:audit:images:verbose": "node _dev/seo/audit-images.js --verbose",
+    "seo:audit:links": "node _dev/seo/audit-internal-links.js",
+    "seo:audit:links:verbose": "node _dev/seo/audit-internal-links.js --verbose",
+    "seo:audit:staleness": "node _dev/seo/audit-content-staleness.js",
+    "seo:audit:noindex": "node _dev/seo/audit-noindex-enforcement.js",
+    "seo:backlinks:delta": "node _dev/seo/fetch-backlinks.js",
+    "seo:sync-gsc": "node _dev/seo/sync-gsc-to-serpbear.js",
+    "seo:sync-gsc:dry": "node -e \"process.env.SYNC_DRY_RUN='1';require('./_dev/seo/sync-gsc-to-serpbear.js')\""
+  },
+  "devDependencies": {
+    "googleapis": "^144.0.0",
+    "tailwindcss": "^3.4.19"
+  }
+}

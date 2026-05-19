@@ -1,0 +1,49 @@
+# NOTE: This file is NOT auto-honored by GitHub Pages + Cloudflare CDN.
+#
+# It's kept here as:
+# 1. Documentation of intended MIME types for AI infra files
+# 2. Reference for future Cloudflare Pages migration (CF Pages honors _headers)
+# 3. Spec for the equivalent Cloudflare Transform Rule that should be deployed
+#    at zone level (see Cloudflare → Rules → Transform Rules → "Modify Response Header")
+#
+# Current state (2026-05-11):
+# - GitHub Pages serves /.well-known/ai.txt + /llms.txt as text/plain by default
+# - Most AI parsers (Anthropic, Perplexity, OpenAI) accept text/plain llms.txt
+# - text/markdown Content-Type would be marginally better for llms.txt but
+#   not blocking for current AI agent compat
+#
+# To deploy these headers via Cloudflare Transform Rule, create a rule with:
+#   When:  http.request.uri.path eq "/llms.txt"
+#   Then:  Set static Content-Type: text/markdown; charset=utf-8
+#
+# Repeat per path. Or wait until Cloudflare Pages migration if planned.
+
+# ---------------------------------------------------------------------
+# /llms.txt — AI agent navigation index (Markdown format)
+# ---------------------------------------------------------------------
+/llms.txt
+  Content-Type: text/markdown; charset=utf-8
+  Cache-Control: public, max-age=3600
+  X-Robots-Tag: noindex
+
+# ---------------------------------------------------------------------
+# /.well-known/ai.txt — AI permissions manifest (plain text)
+# ---------------------------------------------------------------------
+/.well-known/ai.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=3600
+  X-Robots-Tag: noindex
+
+# ---------------------------------------------------------------------
+# /.well-known/security.txt — RFC 9116 (plain text)
+# ---------------------------------------------------------------------
+/.well-known/security.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=86400
+
+# ---------------------------------------------------------------------
+# /robots.txt — plain text (override default)
+# ---------------------------------------------------------------------
+/robots.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=86400

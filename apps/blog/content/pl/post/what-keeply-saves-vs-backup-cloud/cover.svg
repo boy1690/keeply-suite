@@ -1,0 +1,188 @@
+<!-- Cover: what-keeply-saves-vs-backup-cloud
+     Recipe: 三類工具 mental model 對比 — 三件不同事 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none"
+     font-family="'Inter','Noto Sans TC','PingFang TC',system-ui,sans-serif">
+
+  <defs>
+    <linearGradient id="grad-indigo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#4338CA"/>
+    </linearGradient>
+    <linearGradient id="grad-amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFB300"/><stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="grad-paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8F7FF"/><stop offset="1" stop-color="#EEF2FF"/>
+    </linearGradient>
+    <linearGradient id="grad-blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#60A5FA"/><stop offset="1" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="grad-teal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5EEAD4"/><stop offset="1" stop-color="#14B8A6"/>
+    </linearGradient>
+    <pattern id="pat-grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#4338CA" stroke-width="1" opacity="0.05"/>
+    </pattern>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#312E81" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <symbol id="keeply-mark" viewBox="0 0 512 512">
+    <path d="M396 129C429 159 448 200 448 255C448 363 360 451 252 451C145 451 58 368 56 263C55 206 75 158 111 123" stroke="url(#grad-indigo)" stroke-width="44" stroke-linecap="round" fill="none"/>
+    <path d="M111 123C145 91 190 72 239 72C253 72 265 73 278 76" stroke="url(#grad-amber)" stroke-width="44" stroke-linecap="round" fill="none"/>
+    <path d="M236 54L313 79L254 134L236 54Z" fill="url(#grad-amber)"/>
+    <rect x="164" y="184" width="152" height="206" rx="32" fill="url(#grad-indigo)"/>
+  </symbol>
+
+  <symbol id="keeply-lockup" viewBox="0 0 280 70">
+    <g transform="translate(0,4) scale(0.13)"><use href="#keeply-mark"/></g>
+    <text x="78" y="32" font-size="28" font-weight="800" fill="#312E81" font-family="system-ui,sans-serif" letter-spacing="0.2">Keeply</text>
+    <text x="78" y="56" font-size="12" font-weight="600" fill="#4338CA" opacity="0.72" font-family="system-ui,sans-serif" letter-spacing="1.5">KEEPLY.WORK</text>
+  </symbol>
+
+  <rect width="1600" height="900" fill="url(#grad-paper)"/>
+  <rect width="1600" height="900" fill="url(#pat-grid)"/>
+  <circle cx="200" cy="200" r="220" fill="#DDD6FE" opacity="0.28"/>
+  <circle cx="1400" cy="700" r="260" fill="#FDE68A" opacity="0.26"/>
+
+  <!-- Eyebrow -->
+  <g transform="translate(120, 88)">
+    <rect x="0" y="2" width="14" height="14" fill="url(#grad-amber)"/>
+    <text x="28" y="14" font-size="17" font-weight="800" fill="#312E81" letter-spacing="4">CLUSTER · KEEPLY GETTING STARTED</text>
+    <text x="28" y="40" font-size="14" font-weight="600" fill="#4338CA" opacity="0.72" letter-spacing="2">三件不同事 · KEEPLY VS BACKUP VS CLOUD</text>
+  </g>
+
+  <!-- 3 column comparison -->
+  <!-- Column 1: KEEPLY (歷史) -->
+  <g transform="translate(120, 220)" filter="url(#soft-shadow)">
+    <rect width="440" height="500" rx="14" fill="#ffffff" stroke="url(#grad-amber)" stroke-width="3"/>
+    <rect width="440" height="56" rx="14" fill="url(#grad-amber)"/>
+    <rect y="38" width="440" height="18" fill="url(#grad-amber)"/>
+
+    <text x="220" y="36" font-size="20" font-weight="800" fill="#ffffff" text-anchor="middle" font-family="system-ui,sans-serif" letter-spacing="2">KEEPLY</text>
+    <text x="220" y="98" font-size="42" font-weight="900" fill="url(#grad-amber)" text-anchor="middle" font-family="system-ui,sans-serif">歷史</text>
+    <text x="220" y="124" font-size="13" font-weight="600" fill="#4338CA" text-anchor="middle" letter-spacing="2" opacity="0.7" font-family="system-ui,sans-serif">每個檔案的每次變動</text>
+
+    <!-- Mini timeline visual -->
+    <g transform="translate(40, 160)">
+      <line x1="20" y1="0" x2="20" y2="280" stroke="url(#grad-amber)" stroke-width="3"/>
+      <g font-family="'JetBrains Mono',ui-monospace,monospace" font-size="11">
+        <circle cx="20" cy="20" r="7" fill="url(#grad-amber)"/>
+        <text x="42" y="24" fill="#312E81" font-weight="700">14:23 — proposal.docx</text>
+        <text x="42" y="40" fill="#4338CA" opacity="0.65">+ 200 字 / -50 字</text>
+
+        <circle cx="20" cy="80" r="7" fill="url(#grad-amber)"/>
+        <text x="42" y="84" fill="#312E81" font-weight="700">11:50 — proposal.docx</text>
+        <text x="42" y="100" fill="#4338CA" opacity="0.65">+ 80 字</text>
+
+        <circle cx="20" cy="140" r="7" fill="url(#grad-amber)"/>
+        <text x="42" y="144" fill="#312E81" font-weight="700">10:12 — proposal.docx</text>
+        <text x="42" y="160" fill="#4338CA" opacity="0.65">第一次寫</text>
+
+        <circle cx="20" cy="200" r="7" fill="url(#grad-amber)"/>
+        <text x="42" y="204" fill="#312E81" font-weight="700">昨天 — design.psd</text>
+        <text x="42" y="220" fill="#4338CA" opacity="0.65">+ 圖層 5</text>
+
+        <circle cx="20" cy="260" r="7" fill="url(#grad-amber)"/>
+        <text x="42" y="264" fill="#312E81" font-weight="700">前天 — config.yaml</text>
+        <text x="42" y="280" fill="#4338CA" opacity="0.65">改 timeout</text>
+      </g>
+    </g>
+
+    <text x="220" y="476" font-size="12" font-weight="600" fill="#312E81" text-anchor="middle" font-family="system-ui,sans-serif">回到任何一天的單一檔案</text>
+  </g>
+
+  <!-- Column 2: BACKUP (磁碟) -->
+  <g transform="translate(580, 220)" filter="url(#soft-shadow)">
+    <rect width="440" height="500" rx="14" fill="#ffffff" stroke="url(#grad-blue)" stroke-width="2"/>
+    <rect width="440" height="56" rx="14" fill="url(#grad-blue)"/>
+    <rect y="38" width="440" height="18" fill="url(#grad-blue)"/>
+
+    <text x="220" y="36" font-size="20" font-weight="800" fill="#ffffff" text-anchor="middle" font-family="system-ui,sans-serif" letter-spacing="2">備份</text>
+    <text x="220" y="98" font-size="42" font-weight="900" fill="url(#grad-blue)" text-anchor="middle" font-family="system-ui,sans-serif">磁碟</text>
+    <text x="220" y="124" font-size="13" font-weight="600" fill="#4338CA" text-anchor="middle" letter-spacing="2" opacity="0.7" font-family="system-ui,sans-serif">某時間點整顆磁碟快照</text>
+
+    <!-- Disk snapshot stack -->
+    <g transform="translate(95, 170)">
+      <!-- 3 stacked disks -->
+      <g transform="translate(20, 60)" opacity="0.6">
+        <ellipse cx="100" cy="20" rx="100" ry="14" fill="#3B82F6" opacity="0.6"/>
+        <rect x="0" y="20" width="200" height="38" fill="#3B82F6" opacity="0.6"/>
+        <ellipse cx="100" cy="58" rx="100" ry="14" fill="#1E40AF" opacity="0.7"/>
+      </g>
+      <g transform="translate(20, 30)" opacity="0.85">
+        <ellipse cx="100" cy="20" rx="100" ry="14" fill="#3B82F6"/>
+        <rect x="0" y="20" width="200" height="38" fill="#3B82F6"/>
+        <ellipse cx="100" cy="58" rx="100" ry="14" fill="#1E40AF"/>
+      </g>
+      <g transform="translate(20, 0)">
+        <ellipse cx="100" cy="20" rx="100" ry="14" fill="url(#grad-blue)"/>
+        <rect x="0" y="20" width="200" height="38" fill="url(#grad-blue)"/>
+        <ellipse cx="100" cy="58" rx="100" ry="14" fill="#1E40AF"/>
+        <text x="100" y="48" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="system-ui,sans-serif">Today</text>
+      </g>
+
+      <text x="120" y="170" font-size="11" font-weight="600" fill="#3B82F6" text-anchor="middle" font-family="system-ui,sans-serif" opacity="0.85">每天一份</text>
+      <text x="120" y="190" font-size="11" font-weight="500" fill="#312E81" text-anchor="middle" font-family="system-ui,sans-serif" opacity="0.65">OS · 應用程式 · 設定</text>
+      <text x="120" y="210" font-size="11" font-weight="500" fill="#312E81" text-anchor="middle" font-family="system-ui,sans-serif" opacity="0.65">所有資料夾，全部一起</text>
+    </g>
+
+    <text x="220" y="416" font-size="12" font-weight="500" fill="#312E81" text-anchor="middle" font-family="system-ui,sans-serif" opacity="0.7">Time Machine / Acronis / Backblaze</text>
+    <text x="220" y="476" font-size="12" font-weight="600" fill="#312E81" text-anchor="middle" font-family="system-ui,sans-serif">救整台壞掉的電腦</text>
+  </g>
+
+  <!-- Column 3: CLOUD (最新版) -->
+  <g transform="translate(1040, 220)" filter="url(#soft-shadow)">
+    <rect width="440" height="500" rx="14" fill="#ffffff" stroke="url(#grad-teal)" stroke-width="2"/>
+    <rect width="440" height="56" rx="14" fill="url(#grad-teal)"/>
+    <rect y="38" width="440" height="18" fill="url(#grad-teal)"/>
+
+    <text x="220" y="36" font-size="20" font-weight="800" fill="#ffffff" text-anchor="middle" font-family="system-ui,sans-serif" letter-spacing="2">雲端</text>
+    <text x="220" y="98" font-size="42" font-weight="900" fill="url(#grad-teal)" text-anchor="middle" font-family="system-ui,sans-serif">最新版</text>
+    <text x="220" y="124" font-size="13" font-weight="600" fill="#4338CA" text-anchor="middle" letter-spacing="2" opacity="0.7" font-family="system-ui,sans-serif">跨裝置同步同一份</text>
+
+    <!-- 3 devices syncing one file -->
+    <g transform="translate(60, 170)">
+      <!-- 3 devices -->
+      <g transform="translate(0, 60)">
+        <rect x="0" y="0" width="80" height="58" rx="6" fill="url(#grad-teal)"/>
+        <rect x="6" y="6" width="68" height="40" rx="3" fill="#ffffff"/>
+        <text x="40" y="68" font-size="10" font-weight="600" fill="#312E81" text-anchor="middle" font-family="system-ui,sans-serif">A 電腦</text>
+      </g>
+
+      <g transform="translate(120, 0)">
+        <rect x="0" y="0" width="80" height="58" rx="6" fill="url(#grad-teal)"/>
+        <rect x="6" y="6" width="68" height="40" rx="3" fill="#ffffff"/>
+        <text x="40" y="68" font-size="10" font-weight="600" fill="#312E81" text-anchor="middle" font-family="system-ui,sans-serif">B 電腦</text>
+      </g>
+
+      <g transform="translate(240, 60)">
+        <rect x="0" y="0" width="56" height="80" rx="8" fill="url(#grad-teal)"/>
+        <rect x="6" y="10" width="44" height="60" rx="3" fill="#ffffff"/>
+        <text x="28" y="92" font-size="10" font-weight="600" fill="#312E81" text-anchor="middle" font-family="system-ui,sans-serif">手機</text>
+      </g>
+
+      <!-- sync arrows -->
+      <g stroke="url(#grad-teal)" stroke-width="2.5" fill="none" opacity="0.6" stroke-linecap="round">
+        <path d="M80 90 Q 130 50 140 30"/>
+        <path d="M200 30 Q 230 50 240 90"/>
+        <path d="M40 90 Q 100 130 200 130 Q 240 130 264 100" stroke-dasharray="3 4"/>
+      </g>
+
+      <text x="160" y="200" font-size="11" font-weight="600" fill="#14B8A6" text-anchor="middle" font-family="system-ui,sans-serif" opacity="0.85">同一份檔案 · 三處同步</text>
+      <text x="160" y="222" font-size="11" font-weight="500" fill="#312E81" text-anchor="middle" font-family="system-ui,sans-serif" opacity="0.65">歷史通常 30 天就刪</text>
+    </g>
+
+    <text x="220" y="416" font-size="12" font-weight="500" fill="#312E81" text-anchor="middle" font-family="system-ui,sans-serif" opacity="0.7">Dropbox / iCloud / OneDrive / Google Drive</text>
+    <text x="220" y="476" font-size="12" font-weight="600" fill="#312E81" text-anchor="middle" font-family="system-ui,sans-serif">多裝置間同步最新版</text>
+  </g>
+
+  <!-- Title -->
+  <g transform="translate(120, 800)">
+    <text x="0" y="0" font-size="34" font-weight="800" fill="#312E81" letter-spacing="1">Keeply 到底存什麼？跟<tspan fill="url(#grad-blue)">備份</tspan>、<tspan fill="url(#grad-teal)">雲端</tspan>有什麼不一樣</text>
+    <text x="0" y="32" font-size="15" font-weight="500" fill="#4338CA" opacity="0.72" letter-spacing="1">三件不同事 · 互補不互斥 · 看你最常遇到哪個情境</text>
+  </g>
+
+  <use href="#keeply-lockup" x="1380" y="790" width="180" height="48"/>
+
+</svg>

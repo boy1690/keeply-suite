@@ -1,0 +1,53 @@
+nav_posts = "文章"
+nav_categories = "分類"
+nav_search = "搜尋"
+nav_download = "免費下載"
+
+hero_badge = "Keeply 部落格 · 每週更新"
+hero_title_1 = "檔案管理的"
+hero_title_2 = "真實故事。"
+hero_subtitle = "設計給專案管理團隊的檔案管理軟體。不用學術語，不用改流程，只解決你每天辦公室會遇到的問題。"
+
+section_featured = "精選文章"
+section_latest = "最新文章"
+section_browse = "依主題瀏覽"
+section_related = "你可能也會喜歡"
+section_tags = "標籤"
+
+see_all = "看全部"
+read_more = "繼續閱讀"
+reading_time = "{{ .count }} 分鐘閱讀"
+posts_count = "共 {{ .count }} 篇文章"
+
+page_previous = "上一頁"
+page_next = "下一頁"
+
+toc_title = "目錄"
+
+cta_title = "準備好試試看了嗎？"
+cta_subtitle = "免費下載 Keeply，30 秒開始。"
+cta_button = "免費下載 Keeply"
+cta_sidebar_label = "試試 Keeply"
+cta_sidebar_title = "給你的檔案一個時光機"
+
+footer_site = "主站"
+footer_rss = "訂閱 RSS"
+footer_all_categories = "所有分類"
+footer_privacy = "隱私權政策"
+footer_buy = "購買永久授權"
+footer_tagline = "你的檔案有故事。"
+
+empty_no_posts = "文章即將上線"
+empty_no_posts_sub = "我們正在努力寫作中，稍後再回來看看，或先 "
+empty_try_keeply = "試試 Keeply"
+empty_no_posts_end = "。"
+
+breadcrumb_home = "首頁"
+by_author = "作者："
+
+cta_inline_pitch = "讓 Keeply 替你保留每個版本，免得下次又找不到。"
+cta_inline_subtitle = "免費 · 30 秒裝好"
+
+cta_inline_pitch_soft = "如果今天只能做一件事，就是讓工具替你記下每個版本。"
+cta_inline_pitch_medium = "免費 + 30 秒裝好。沒理由不試一次。"
+cta_inline_pitch_hard = "還在覆蓋舊版？這 30 秒可省你下次的找檔時間。"

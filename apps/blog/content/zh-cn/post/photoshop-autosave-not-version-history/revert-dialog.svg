@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 280" font-family="'Inter','Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans JP','Noto Sans KR',-apple-system,system-ui,sans-serif">
+<rect x="0" y="0" width="480" height="280" fill="#F3F4F6"/>
+<rect x="40" y="32" width="400" height="216" rx="8" fill="#FFFFFF" stroke="#E5E7EB" filter="drop-shadow(0 4px 8px rgba(0,0,0,.1))"/>
+<text x="56" y="60" font-size="15" font-weight="700" fill="#1F2937">把 campaign_v2.psd 还原到这一版？</text>
+<rect x="56" y="76" width="368" height="68" rx="6" fill="#F9FAFB" stroke="#E5E7EB"/>
+<text x="68" y="96" font-size="12" fill="#9CA3AF">5/14 09:42 · 自动保存版本</text>
+<text x="68" y="116" font-size="13" fill="#374151" font-weight="600">客户确认版 — v2 主色完稿</text>
+<text x="68" y="134" font-size="11" fill="#6B7280">campaign_v2.psd · 384 MB</text>
+<rect x="56" y="156" width="368" height="40" rx="4" fill="#FEF3C7" stroke="#FBBF24"/>
+<text x="68" y="174" font-size="11" fill="#78350F">5/14 14:30 后的修改会另存为一个新版本。</text>
+<text x="68" y="189" font-size="10" fill="#92400E">旧版不会被覆盖，两版都保留在版本历史。</text>
+<rect x="268" y="204" width="72" height="32" rx="6" fill="#FFFFFF" stroke="#D1D5DB"/>
+<text x="304" y="225" font-size="12" fill="#374151" text-anchor="middle">取消</text>
+<rect x="348" y="204" width="76" height="32" rx="6" fill="#DC2626"/>
+<text x="386" y="225" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">⏪ 还原这版</text>
+</svg>

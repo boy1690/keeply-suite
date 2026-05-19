@@ -1,0 +1,119 @@
+<!-- Image 1: Keeply 時間軸 zoom — 一個檔案的多筆變動 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" fill="none"
+     font-family="'Inter','Noto Sans TC',system-ui,sans-serif">
+  <defs>
+    <linearGradient id="g-indigo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#4338CA"/>
+    </linearGradient>
+    <linearGradient id="g-amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFB300"/><stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="g-paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8F7FF"/><stop offset="1" stop-color="#EEF2FF"/>
+    </linearGradient>
+    <pattern id="grid" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#4338CA" stroke-width="1" opacity="0.05"/>
+    </pattern>
+    <filter id="shadow"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#312E81" flood-opacity="0.14"/></filter>
+  </defs>
+
+  <rect width="1200" height="600" fill="url(#g-paper)"/>
+  <rect width="1200" height="600" fill="url(#grid)"/>
+
+  <text x="600" y="48" font-size="13" font-weight="800" fill="#312E81" text-anchor="middle" letter-spacing="3">KEEPLY 存什麼 · 一個檔案的每次變動</text>
+
+  <!-- Single file timeline -->
+  <g transform="translate(80, 100)" filter="url(#shadow)">
+    <rect width="1040" height="430" rx="10" fill="#ffffff"/>
+    <path d="M0 10 Q0 0 10 0 L1030 0 Q1040 0 1040 10 L1040 50 L0 50 Z" fill="url(#g-indigo)"/>
+    <text x="20" y="32" font-size="14" font-weight="600" fill="#ffffff" font-family="system-ui,sans-serif">Keeply — proposal.docx 的時間軸</text>
+
+    <!-- Timeline visual (vertical) -->
+    <g transform="translate(80, 90)">
+      <line x1="20" y1="0" x2="20" y2="320" stroke="url(#g-amber)" stroke-width="4"/>
+
+      <!-- Each variation point -->
+      <g font-family="system-ui,sans-serif">
+        <!-- 14:23 -->
+        <circle cx="20" cy="20" r="10" fill="url(#g-amber)" stroke="#ffffff" stroke-width="3"/>
+        <g transform="translate(60, 0)">
+          <rect width="380" height="50" rx="6" fill="#FFFBEB" stroke="url(#g-amber)" stroke-width="1.5"/>
+          <text x="16" y="22" font-size="14" font-weight="700" fill="#312E81" font-family="'JetBrains Mono',ui-monospace,monospace">14:23 (今天)</text>
+          <text x="16" y="40" font-size="12" font-weight="500" fill="#4338CA">客戶反饋第三項調整 · +200 字 / -50 字</text>
+        </g>
+
+        <!-- 11:50 -->
+        <circle cx="20" cy="90" r="9" fill="url(#g-amber)" opacity="0.85" stroke="#ffffff" stroke-width="3"/>
+        <g transform="translate(60, 70)" opacity="0.85">
+          <rect width="380" height="50" rx="6" fill="#FFFBEB" stroke="url(#g-amber)" stroke-width="1"/>
+          <text x="16" y="22" font-size="14" font-weight="700" fill="#312E81" font-family="'JetBrains Mono',ui-monospace,monospace">11:50 (今天)</text>
+          <text x="16" y="40" font-size="12" font-weight="500" fill="#4338CA">加附錄 B · +80 字</text>
+        </g>
+
+        <!-- 10:12 -->
+        <circle cx="20" cy="160" r="9" fill="url(#g-amber)" opacity="0.7" stroke="#ffffff" stroke-width="3"/>
+        <g transform="translate(60, 140)" opacity="0.75">
+          <rect width="380" height="50" rx="6" fill="#FFFBEB" stroke="url(#g-amber)" stroke-width="1"/>
+          <text x="16" y="22" font-size="14" font-weight="700" fill="#312E81" font-family="'JetBrains Mono',ui-monospace,monospace">10:12 (今天)</text>
+          <text x="16" y="40" font-size="12" font-weight="500" fill="#4338CA">第一次寫 · 全文 1850 字</text>
+        </g>
+
+        <!-- 昨天 -->
+        <circle cx="20" cy="230" r="8" fill="#9C98FF" stroke="#ffffff" stroke-width="3"/>
+        <g transform="translate(60, 210)" opacity="0.7">
+          <rect width="380" height="50" rx="6" fill="#F8F7FF" stroke="#E0E7FF" stroke-width="1"/>
+          <text x="16" y="22" font-size="14" font-weight="700" fill="#312E81" font-family="'JetBrains Mono',ui-monospace,monospace">昨天 19:08</text>
+          <text x="16" y="40" font-size="12" font-weight="500" fill="#4338CA">大綱草稿 · 4 個重點</text>
+        </g>
+
+        <!-- 前天 -->
+        <circle cx="20" cy="300" r="8" fill="#9C98FF" stroke="#ffffff" stroke-width="3" opacity="0.6"/>
+        <g transform="translate(60, 280)" opacity="0.55">
+          <rect width="380" height="50" rx="6" fill="#F8F7FF" stroke="#E0E7FF" stroke-width="1"/>
+          <text x="16" y="22" font-size="14" font-weight="700" fill="#312E81" font-family="'JetBrains Mono',ui-monospace,monospace">前天 14:50</text>
+          <text x="16" y="40" font-size="12" font-weight="500" fill="#4338CA">起點：開新檔</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Right panel — 還原 button / 你能做的 -->
+    <g transform="translate(620, 90)">
+      <text x="0" y="0" font-size="14" font-weight="800" fill="#312E81">點任一筆 → 30 秒回那個版本</text>
+
+      <g transform="translate(0, 30)" filter="url(#shadow)">
+        <rect width="380" height="220" rx="10" fill="#FFFBEB" stroke="url(#g-amber)" stroke-width="2"/>
+        <text x="20" y="28" font-size="13" font-weight="700" fill="url(#g-amber)" letter-spacing="1">14:23 還原預覽</text>
+        <line x1="20" y1="40" x2="360" y2="40" stroke="#FDE68A"/>
+
+        <g font-family="system-ui,sans-serif" transform="translate(20, 60)">
+          <text x="0" y="0" font-size="12" font-weight="700" fill="#312E81">本檔案會回到 14:23 狀態</text>
+          <text x="0" y="22" font-size="11" font-weight="500" fill="#4338CA" opacity="0.75">↓ 拿掉這些變動</text>
+
+          <g transform="translate(0, 36)">
+            <rect width="340" height="22" fill="#FEE2E2" opacity="0.4"/>
+            <text x="8" y="16" font-size="11" font-weight="500" fill="#DC2626" font-family="'JetBrains Mono',ui-monospace,monospace">- 客戶反饋第三項調整 200 字</text>
+          </g>
+          <g transform="translate(0, 64)">
+            <rect width="340" height="22" fill="#FEE2E2" opacity="0.4"/>
+            <text x="8" y="16" font-size="11" font-weight="500" fill="#DC2626" font-family="'JetBrains Mono',ui-monospace,monospace">- 附錄 B 80 字</text>
+          </g>
+
+          <text x="0" y="108" font-size="11" font-weight="500" fill="#4338CA" opacity="0.75">↓ 留下這些</text>
+          <g transform="translate(0, 122)">
+            <rect width="340" height="22" fill="#D1FAE5" opacity="0.4"/>
+            <text x="8" y="16" font-size="11" font-weight="500" fill="#059669" font-family="'JetBrains Mono',ui-monospace,monospace">+ 第一次寫的 1850 字</text>
+          </g>
+        </g>
+      </g>
+
+      <!-- 還原 button -->
+      <g transform="translate(80, 270)" filter="url(#shadow)">
+        <rect width="220" height="44" rx="22" fill="url(#g-amber)"/>
+        <text x="110" y="28" font-size="14" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="2" font-family="system-ui,sans-serif">↶ 還原到 14:23</text>
+      </g>
+    </g>
+  </g>
+
+  <text x="600" y="568" font-size="14" font-weight="700" fill="#312E81" text-anchor="middle" letter-spacing="2">每個檔案 · 每次變動 · 全部留著</text>
+
+</svg>

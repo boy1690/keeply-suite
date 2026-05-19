@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 224" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',-apple-system,system-ui,sans-serif">
+<rect x="0" y="0" width="480" height="224" rx="8" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+<circle cx="20" cy="32" r="4" fill="#3B82F6"/>
+<text x="32" y="37" font-size="13" fill="#374151">Auto-save — last revision</text>
+<text x="464" y="36" font-size="11" fill="#9CA3AF" text-anchor="end">1 hour ago</text>
+<circle cx="20" cy="64" r="4" fill="#3B82F6"/>
+<text x="32" y="69" font-size="13" fill="#374151">Client-approved v2.3 — sign…</text>
+<rect x="278" y="55" width="114" height="18" rx="9" fill="#DBEAFE" stroke="#BFDBFE" stroke-width="1"/>
+<text x="335" y="68" font-size="11" font-weight="500" fill="#1D4ED8" text-anchor="middle">Release</text>
+<text x="464" y="68" font-size="11" fill="#9CA3AF" text-anchor="end">Tue PM</text>
+<circle cx="20" cy="96" r="4" fill="#3B82F6"/>
+<text x="32" y="101" font-size="13" fill="#374151">Auto-save — pre-client-call</text>
+<text x="464" y="100" font-size="11" fill="#9CA3AF" text-anchor="end">Tue AM</text>
+<circle cx="20" cy="128" r="4" fill="#3B82F6"/>
+<text x="32" y="133" font-size="13" fill="#374151">Boss third round edits</text>
+<rect x="320" y="119" width="72" height="18" rx="9" fill="#DBEAFE" stroke="#BFDBFE" stroke-width="1"/>
+<text x="356" y="132" font-size="11" font-weight="500" fill="#1D4ED8" text-anchor="middle">Boss</text>
+<text x="464" y="132" font-size="11" fill="#9CA3AF" text-anchor="end">Mon</text>
+<circle cx="20" cy="160" r="4" fill="#3B82F6"/>
+<text x="32" y="165" font-size="13" fill="#374151">Client first feedback round</text>
+<rect x="292" y="151" width="100" height="18" rx="9" fill="#DBEAFE" stroke="#BFDBFE" stroke-width="1"/>
+<text x="342" y="164" font-size="11" font-weight="500" fill="#1D4ED8" text-anchor="middle">Client</text>
+<text x="464" y="164" font-size="11" fill="#9CA3AF" text-anchor="end">last Thu</text>
+<circle cx="20" cy="192" r="4" fill="#3B82F6"/>
+<text x="32" y="197" font-size="13" fill="#374151">First draft</text>
+<rect x="306" y="183" width="86" height="18" rx="9" fill="#DBEAFE" stroke="#BFDBFE" stroke-width="1"/>
+<text x="349" y="196" font-size="11" font-weight="500" fill="#1D4ED8" text-anchor="middle">Draft</text>
+<text x="464" y="196" font-size="11" fill="#9CA3AF" text-anchor="end">2 weeks ago</text>
+</svg>

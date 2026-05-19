@@ -1,0 +1,35 @@
+<!-- Keeply K — ACTIVE state (spell casting, magic halo) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="140" height="140">
+  <defs>
+    <radialGradient id="cyan-aura" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#22D3EE" stop-opacity="0.8"/>
+      <stop offset="0.4" stop-color="#22D3EE" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Cyan magic aura (outer halo) -->
+  <circle cx="70" cy="70" r="60" fill="url(#cyan-aura)"/>
+  <!-- Inner glow ring -->
+  <circle cx="70" cy="70" r="38" fill="none" stroke="#22D3EE" stroke-width="2" opacity="0.7" filter="url(#glow)"/>
+  <!-- Magic sparkles around K -->
+  <circle cx="30" cy="40" r="3" fill="#67E8F9" opacity="0.9"/>
+  <circle cx="115" cy="50" r="2.5" fill="#67E8F9" opacity="0.8"/>
+  <circle cx="105" cy="105" r="3" fill="#67E8F9" opacity="0.9"/>
+  <circle cx="25" cy="100" r="2" fill="#67E8F9" opacity="0.7"/>
+  <circle cx="70" cy="20" r="2.5" fill="#67E8F9" opacity="0.8"/>
+  <!-- K letter — slightly glowing dark navy -->
+  <path d="M 50 42 L 50 98 M 50 70 L 84 42 M 50 70 L 84 98"
+        stroke="#1E1B3A" stroke-width="12" fill="none"
+        stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+  <!-- K inner highlight (giving 3D glow effect) -->
+  <path d="M 50 42 L 50 98 M 50 70 L 84 42 M 50 70 L 84 98"
+        stroke="#67E8F9" stroke-width="3" fill="none"
+        stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+</svg>

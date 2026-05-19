@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}" dir="{{ default `ltr` .Language.LanguageDirection }}" class="scroll-smooth">
+<head>
+  {{- partial "head.html" . -}}
+  {{- block "head" . -}}{{- end -}}
+</head>
+<body class="bg-white text-gray-900 font-sans antialiased">
+
+{{- /* Reading progress bar — only on single article pages */ -}}
+{{- if .IsPage -}}
+  <div class="reading-progress" id="reading-progress"></div>
+{{- end -}}
+
+{{- partial "nav.html" . -}}
+
+<main class="pt-16">
+  {{- block "main" . -}}{{- end -}}
+</main>
+
+{{- partial "footer.html" . -}}
+
+{{- /* Sticky bottom CTA (mobile only) — only on single article pages */ -}}
+{{- if .IsPage -}}
+  {{- partial "cta-sticky-mobile.html" . -}}
+{{- end -}}
+
+{{- /* Reading progress bar + TOC active link + sticky CTA show/hide logic
+       — external so CSP can drop 'unsafe-inline'. */ -}}
+{{- if .IsPage -}}
+  {{- $js := resources.Get "js/blog-interactions.js" | resources.Fingerprint "sha384" -}}
+  <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" crossorigin="anonymous" defer></script>
+{{- end -}}
+
+</body>
+</html>

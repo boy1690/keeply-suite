@@ -1,0 +1,178 @@
+{{ define "main" }}
+{{- $showToc := .Params.toc | default .Site.Params.article.toc -}}
+
+<article>
+  <!-- ARTICLE HERO -->
+  <header class="relative pt-16 pb-12 overflow-hidden">
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute top-0 left-1/3 w-96 h-96 bg-brand-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
+      <div class="absolute top-20 right-1/4 w-80 h-80 bg-amber-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+    </div>
+    <div class="max-w-3xl mx-auto px-6">
+      <nav class="text-sm text-gray-400 mb-6 flex items-center flex-wrap gap-2">
+        <a href="{{ .Site.Home.RelPermalink }}" class="hover:text-brand-600">{{ i18n "breadcrumb_home" }}</a>
+        {{- with (.Site.GetPage "/post") -}}
+          <span>/</span>
+          <a href="{{ .RelPermalink }}" class="hover:text-brand-600">{{ i18n "nav_posts" }}</a>
+        {{- end -}}
+        {{- /* Breadcrumb 不再 link 到 /categories/{slug}/ — 2026-05-12 移除 categories
+               taxonomy（GSC duplicate canonical 修復）。category 名稱仍以下方 badge 顯示。 */ -}}
+        {{- with .Params.categories -}}
+          {{- $cat := index . 0 -}}
+          <span>/</span>
+          <span>{{ $cat }}</span>
+        {{- end -}}
+      </nav>
+      {{- with .Params.categories -}}
+        {{- $cat := index . 0 -}}
+        <div class="inline-flex items-center gap-2 bg-brand-50 text-brand-700 text-sm font-medium px-4 py-1.5 rounded-full mb-5 border border-brand-100">
+          <span class="w-2 h-2 bg-amber-400 rounded-full"></span>
+          <span>{{ $cat }}</span>
+        </div>
+      {{- end -}}
+      <h1 class="text-4xl md:text-5xl font-bold leading-tight tracking-tight text-gray-900">
+        {{ .Title }}
+      </h1>
+      {{- with .Description -}}
+        <p class="mt-5 text-xl text-gray-500 leading-relaxed">{{ . }}</p>
+      {{- end -}}
+      <div class="mt-8 flex items-center gap-4 pb-6 border-b border-gray-100">
+        <div class="w-11 h-11 rounded-full bg-gradient-to-br from-brand-400 to-brand-600 flex items-center justify-center text-white font-bold flex-shrink-0">K</div>
+        <div class="flex-1 min-w-0">
+          <p class="text-sm font-medium text-gray-700">{{ with .Params.author }}{{ . }}{{ else }}Keeply{{ end }}</p>
+          {{- /* Locale-aware reading time: Hugo's .WordCount is whitespace-split
+                 and undercounts CJK ~10×. Override with rune count / 350 cpm
+                 for CJK locales; keep .WordCount / 220 wpm for European. */ -}}
+          {{- $isCjk := in (slice "zh-tw" "zh-cn" "zh-hant" "zh-hans" "ja" "ko") .Language.Lang -}}
+          {{- $wordCount := .WordCount -}}
+          {{- if $isCjk -}}{{- $wordCount = len .Plain -}}{{- end -}}
+          {{- $wpm := cond $isCjk 350 220 -}}
+          {{- $readingTime := int (math.Ceil (div (float $wordCount) $wpm)) -}}
+          <p class="text-xs text-gray-400">
+            <time datetime="{{ .PublishDate.Format "2006-01-02" }}">{{ .PublishDate.Format "2006-01-02" }}</time>
+            · {{ i18n "reading_time" (dict "count" $readingTime) }}
+            · {{ $wordCount }} {{ cond $isCjk "字" "words" }}
+          </p>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title | safeURL }}" target="_blank" rel="noopener" class="w-9 h-9 rounded-full border border-gray-200 hover:border-brand-300 hover:text-brand-600 text-gray-400 flex items-center justify-center" aria-label="Share">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ARTICLE BODY -->
+  <div class="max-w-6xl mx-auto px-6 {{ if $showToc }}grid lg:grid-cols-[1fr_220px] gap-12{{ end }}">
+
+    <div class="max-w-2xl mx-auto w-full prose-keeply">
+      {{- with .Params.image -}}
+        {{- $res := $.Resources.GetMatch . -}}
+        {{- if and $res (eq (path.Ext .) ".svg") -}}
+          {{- /* Inline SVG cover (Round B-1.3): eliminates the LCP image
+                 network round-trip. SVG sits directly in HTML — LCP element
+                 is discoverable immediately at parse time. Adds ~6-13KB to
+                 single-post HTML; acceptable for the LCP gain. Tailwind
+                 [&>svg]:w-full applies to direct svg child for proper sizing. */ -}}
+          <div class="aspect-[16/9] rounded-2xl overflow-hidden mb-8 bg-brand-50/30 [&>svg]:w-full [&>svg]:h-full" role="img" aria-label="{{ $.Title }}">
+            {{- $res.Content | safeHTML -}}
+          </div>
+        {{- else -}}
+          {{- /* Non-SVG cover: keep external <img> with LCP hints. */ -}}
+          {{- $src := . | absURL -}}
+          {{- if $res -}}{{- $src = $res.RelPermalink -}}{{- end -}}
+          <div class="aspect-[16/9] rounded-2xl overflow-hidden mb-8">
+            <img src="{{ $src }}" alt="{{ $.Title }}" class="w-full h-full object-contain bg-brand-50/30" width="1600" height="900" fetchpriority="high" decoding="async" />
+          </div>
+        {{- end -}}
+      {{- end -}}
+      {{ .Content }}
+    </div>
+
+    {{- if $showToc -}}
+    <aside class="hidden lg:block">
+      <div class="toc-fixed">
+        <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider px-3 mb-3">{{ i18n "toc_title" }}</p>
+        {{ .TableOfContents }}
+        <div class="mt-6 mx-3 p-5 bg-gradient-to-br from-brand-600 to-brand-800 rounded-2xl text-white shadow-xl shadow-brand-600/20 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-20 h-20 bg-amber-400/30 rounded-full blur-2xl"></div>
+          <div class="relative">
+            <p class="text-xs font-semibold text-amber-300 uppercase tracking-wider mb-2">{{ i18n "cta_sidebar_label" }}</p>
+            <p class="text-base font-bold leading-tight mb-4">{{ i18n "cta_sidebar_title" }}</p>
+            <a href="https://keeply.work/" class="block text-center bg-amber-400 hover:bg-amber-300 text-brand-900 font-bold px-4 py-2.5 rounded-full text-sm transition-all hover:scale-105">
+              {{ i18n "nav_download" }} →
+            </a>
+            <p class="text-[10px] text-brand-200 text-center mt-2">30 秒開始</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+    {{- end -}}
+
+  </div>
+</article>
+
+<!-- PRIMARY CTA — placed immediately after article body to capture peak reading intent.
+     Order rationale: user finishes reading → conversion intent peaks → CTA visible without
+     having to scroll past tags/author/related-posts distractors. Tags + author + related
+     follow AFTER the CTA for users who need more context but don't want to convert. -->
+{{ partial "cta-download.html" . }}
+
+<!-- TAGS & AUTHOR CARD -->
+<section class="max-w-3xl mx-auto px-6 mt-12 pt-8 border-t border-gray-100">
+  {{- with .Params.tags -}}
+    <div class="flex flex-wrap items-center gap-2 mb-8">
+      <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider mr-2">{{ i18n "section_tags" }}</span>
+      {{- range . -}}
+        <a href="{{ "tags/" | relLangURL }}{{ . | urlize }}/" class="text-sm px-3 py-1 rounded-full bg-gray-50 text-gray-600 border border-gray-100 hover:border-brand-200 hover:text-brand-700 transition-colors">
+          {{ . }}
+        </a>
+      {{- end -}}
+    </div>
+  {{- end -}}
+
+  <div class="bg-gradient-to-br from-brand-50 to-amber-50/40 rounded-2xl p-6 border border-brand-100">
+    <div class="flex items-center gap-4">
+      <div class="w-14 h-14 rounded-full bg-gradient-to-br from-brand-400 to-brand-600 flex items-center justify-center text-white font-bold text-lg flex-shrink-0">K</div>
+      <div class="flex-1 min-w-0">
+        <p class="font-bold text-gray-900">{{ with .Params.author }}{{ . }}{{ else }}Keeply{{ end }}</p>
+        <p class="text-sm text-gray-500 mt-1">{{ i18n "hero_subtitle" }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED POSTS -->
+{{- $currentPath := .RelPermalink -}}
+{{- $page := . -}}
+{{- $related := slice -}}
+{{- with .Params.categories -}}
+  {{- $cat := index . 0 -}}
+  {{- range (where $page.Site.RegularPages "Params.categories" "intersect" (slice $cat)) -}}
+    {{- if ne .RelPermalink $currentPath -}}
+      {{- $related = $related | append . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if lt (len $related) 3 -}}
+  {{- range (where $page.Site.RegularPages "Section" "post") -}}
+    {{- if and (ne .RelPermalink $currentPath) (not (in $related .)) -}}
+      {{- $related = $related | append . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $related = first 3 $related -}}
+{{- if $related -}}
+<section class="max-w-6xl mx-auto px-6 mt-16 pt-12 border-t border-gray-100 mb-16">
+  <h2 class="text-2xl font-bold text-gray-900 mb-6">{{ i18n "section_related" }}</h2>
+  <div class="grid md:grid-cols-3 gap-6">
+    {{- range $related -}}
+      {{ partial "article-card.html" . }}
+    {{- end -}}
+  </div>
+</section>
+{{- end -}}
+{{ end }}

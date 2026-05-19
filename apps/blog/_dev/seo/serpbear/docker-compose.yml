@@ -1,0 +1,34 @@
+services:
+  serpbear:
+    image: towfiqi/serpbear:latest
+    container_name: keeply-serpbear
+    restart: unless-stopped
+    ports:
+      - "${SERPBEAR_PORT:-3001}:3000"
+    environment:
+      # Basic auth — UI login
+      USER: ${SERPBEAR_USER}
+      PASSWORD: ${SERPBEAR_PASSWORD}
+
+      # JWT signing — any random 32+ char string, never commit
+      SECRET: ${SERPBEAR_SECRET}
+      APIKEY: ${SERPBEAR_APIKEY}
+
+      # Public URL — used in email links and CORS
+      NEXT_PUBLIC_APP_URL: ${SERPBEAR_PUBLIC_URL:-http://localhost:3001}
+
+      # Optional: email notifications on rank changes
+      SMTP_HOST: ${SERPBEAR_SMTP_HOST:-}
+      SMTP_PORT: ${SERPBEAR_SMTP_PORT:-}
+      SMTP_USERNAME: ${SERPBEAR_SMTP_USER:-}
+      SMTP_PASSWORD: ${SERPBEAR_SMTP_PASS:-}
+      NOTIFICATION_EMAIL_FROM: ${SERPBEAR_EMAIL_FROM:-}
+      NOTIFICATION_EMAIL_FROM_NAME: "Keeply SerpBear"
+
+      # Optional: Google Search Console integration
+      # Paste the *contents* of the service-account JSON's private_key field
+      # (with literal \n inside) into SEARCH_CONSOLE_PRIVATE_KEY
+      SEARCH_CONSOLE_PRIVATE_KEY: ${SERPBEAR_GSC_PRIVATE_KEY:-}
+      SEARCH_CONSOLE_CLIENT_EMAIL: ${SERPBEAR_GSC_CLIENT_EMAIL:-}
+    volumes:
+      - ./data:/app/data

@@ -1,0 +1,55 @@
+# Korean i18n strings (flat format for Hugo go-i18n v2)
+
+nav_posts = "글"
+nav_categories = "카테고리"
+nav_search = "검색"
+nav_download = "무료 다운로드"
+
+hero_badge = "Keeply 블로그 · 매주 업데이트"
+hero_title_1 = "파일 관리의"
+hero_title_2 = "진짜 이야기."
+hero_subtitle = "프로젝트 관리 팀을 위해 설계된 파일 관리 소프트웨어. 전문 용어도, 워크플로 변경도 필요 없습니다—매일 부딪히는 사무실 문제를 해결합니다."
+
+section_featured = "추천 글"
+section_latest = "최신 글"
+section_browse = "카테고리별 보기"
+section_related = "함께 보면 좋은 글"
+section_tags = "태그"
+
+see_all = "전체 보기"
+read_more = "더 읽기"
+reading_time = "{{ .count }}분 읽기"
+posts_count = "총 {{ .count }}개의 글"
+
+page_previous = "이전"
+page_next = "다음"
+
+toc_title = "목차"
+
+cta_title = "Keeply를 시작해 보세요"
+cta_subtitle = "무료 다운로드. 30초면 시작."
+cta_button = "Keeply 다운로드"
+cta_sidebar_label = "Keeply 사용해보기"
+cta_sidebar_title = "파일에 타임머신을 선물하세요"
+
+footer_site = "메인 사이트"
+footer_rss = "RSS 피드"
+footer_all_categories = "모든 카테고리"
+footer_privacy = "개인정보 정책"
+footer_buy = "평생 라이선스 구매"
+footer_tagline = "당신의 파일에는 이야기가 있습니다."
+
+empty_no_posts = "곧 새 글이 올라옵니다"
+empty_no_posts_sub = "현재 글을 작성 중입니다. 곧 다시 방문해주세요. 또는 먼저 "
+empty_try_keeply = "Keeply 사용해보기"
+empty_no_posts_end = "도 좋습니다."
+
+breadcrumb_home = "홈"
+by_author = "작성자:"
+
+cta_inline_pitch = "다음에 다시 찾을 필요가 없도록, Keeply에 모든 버전을 맡기세요."
+cta_inline_subtitle = "무료 · 30 초면 시작"
+
+cta_inline_pitch_soft = "오늘 한 가지만 한다면, 도구에 모든 버전을 맡기세요."
+cta_inline_pitch_medium = "무료 + 30 초면 설정 완료. 시도하지 않을 이유가 없습니다."
+cta_inline_pitch_hard = "아직도 옛 파일을 덮어쓰고 있나요? 이 30 초가 다음 파일 찾기 시간을 아껴줍니다."
