@@ -30,8 +30,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          submodules: recursive  # hugo-theme-stack is a submodule
+        # hugo-theme-stack is now vendored at apps/blog/themes/hugo-theme-stack/
+        # (removed submodule on 2026-05-19 after subtree-merge cross-boundary fragility)
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
