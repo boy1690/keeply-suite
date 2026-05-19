@@ -1,0 +1,66 @@
+name: Deploy apps/blog to Cloudflare Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'apps/blog/**'
+      - '.github/workflows/deploy-blog.yml'
+  workflow_dispatch:
+  schedule:
+    # Daily rebuild at 01:00 UTC = 09:00 Asia/Taipei.
+    # Hugo skips posts whose `date` is in the future, so a post with
+    # `date: 2026-05-12T09:00:00+08:00` first appears in the build that runs
+    # on/after that timestamp — native scheduled publishing, no extra tooling.
+    - cron: "0 1 * * *"
+
+permissions:
+  contents: read
+  deployments: write
+
+concurrency:
+  group: "cf-pages-blog"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.160.1
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive  # hugo-theme-stack is a submodule
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: apps/blog/package-lock.json
+
+      - name: Install npm deps (Tailwind)
+        working-directory: apps/blog
+        run: npm ci
+
+      - name: Build Tailwind CSS
+        working-directory: apps/blog
+        run: npm run css:build
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: ${{ env.HUGO_VERSION }}
+          extended: true
+
+      - name: Build Hugo site
+        working-directory: apps/blog
+        run: hugo --gc --minify --baseURL "https://blog.keeply.work/"
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy apps/blog/public --project-name=keeply-blog --branch=main --commit-dirty=true --commit-message="${{ github.event.head_commit.message }}"

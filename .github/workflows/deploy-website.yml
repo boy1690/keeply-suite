@@ -1,0 +1,65 @@
+name: Deploy apps/website to Cloudflare Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'apps/website/**'
+      - '.github/workflows/deploy-website.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  deployments: write
+
+concurrency:
+  group: "cf-pages-website"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: apps/website/package-lock.json
+
+      - name: Install npm deps
+        working-directory: apps/website
+        run: npm ci
+
+      - name: Build (8-step pipeline)
+        working-directory: apps/website
+        # Fetches latest SHA-256 checksums from GitHub releases, compiles
+        # Tailwind CSS, regenerates localized pages, injects JSON-LD, and
+        # recomputes SRI hashes. Mirrors original keeply-website deploy.yml.
+        run: npm run build
+
+      - name: Stage deployable assets (exclude node_modules / dev tooling)
+        run: |
+          mkdir -p _stage_website
+          rsync -a \
+            --exclude='node_modules' \
+            --exclude='_dev' \
+            --exclude='cloudflare/' \
+            --exclude='package*.json' \
+            --exclude='fingerprint-manifest.json' \
+            --exclude='sri-manifest.json' \
+            --exclude='CLAUDE.md' \
+            --exclude='KEEPLY_*.md' \
+            --exclude='RELEASE_*.md' \
+            --exclude='.git*' \
+            apps/website/ _stage_website/
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy _stage_website --project-name=keeply-website --branch=main --commit-dirty=true --commit-message="${{ github.event.head_commit.message }}"

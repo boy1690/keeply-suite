@@ -11,3 +11,9 @@
 ~$*
 Thumbs.db
 .cache/
+
+# Local wrangler state (per-machine CF auth, do not commit)
+.wrangler/
+
+# Local staging dir for website deploy (recreated each deploy run)
+_stage_website/
