@@ -1,0 +1,458 @@
+/**
+ * Keeply i18n Engine (v5 — globe dropdown, 19 languages, browser-local detection)
+ *
+ * How it works:
+ *   1. Language packs register themselves on window.__i18n
+ *   2. This script reads from window.__i18n — no fetch, works on file:// protocol
+ *   3. HTML is a pure template — elements use data-i18n / data-i18n-html attributes
+ *   4. Globe icon in nav opens a dropdown to pick language
+ *
+ * Language detection is 100% browser-local (navigator.language). No third-party
+ * geolocation calls are made. localStorage is written only when the visitor
+ * takes an explicit action (clicks the language menu or visits a locale URL).
+ * See /law/products/keeply/governance/2026-04-23-remove-ipapi-geolocation.md.
+ *
+ * To add a new language:
+ *   1. Create i18n/{locale}.js
+ *   2. Add <script src="i18n/{locale}.js"></script> in each HTML page
+ *   3. Add entry to LANGUAGES below
+ */
+(function () {
+  var LANGUAGES = [
+    { code: 'zh-TW', label: '繁體中文' },
+    { code: 'zh-CN', label: '简体中文' },
+    { code: 'en',    label: 'English' },
+    { code: 'ja',    label: '日本語' },
+    { code: 'ko',    label: '한국어' },
+    { code: 'de',    label: 'Deutsch' },
+    { code: 'fr',    label: 'Français' },
+    { code: 'es',    label: 'Español' },
+    { code: 'pt',    label: 'Português' },
+    { code: 'it',    label: 'Italiano' },
+    { code: 'nl',    label: 'Nederlands' },
+    { code: 'pl',    label: 'Polski' },
+    { code: 'cs',    label: 'Čeština' },
+    { code: 'hu',    label: 'Magyar' },
+    { code: 'tr',    label: 'Türkçe' },
+    { code: 'fi',    label: 'Suomi' },
+    { code: 'sv',    label: 'Svenska' },
+    { code: 'no',    label: 'Norsk' },
+    { code: 'da',    label: 'Dansk' }
+  ];
+  var SUPPORTED = LANGUAGES.map(function (l) { return l.code; });
+  var DEFAULT = 'en';
+  var STORAGE_KEY = 'keeply-lang';
+  var currentLang = null;
+  var data = window.__i18n || {};
+
+  // Deep-freeze the i18n tree to prevent runtime mutation of translation
+  // strings (defence against supply-chain script compromise and prototype
+  // pollution attacks that would otherwise poison DOM insertions via
+  // data-i18n-html). i18n-loader.js guarantees all locale packs have
+  // registered onto window.__i18n before i18n.js is loaded, so freezing
+  // here cannot race with pack registration. See spec 018.
+  (function deepFreezeI18n(root) {
+    if (!root || typeof Object.freeze !== 'function') return;
+    var keys = Object.keys(root);
+    for (var i = 0; i < keys.length; i++) {
+      var v = root[keys[i]];
+      if (v && typeof v === 'object') { Object.freeze(v); }
+    }
+    Object.freeze(root);
+  })(data);
+
+  // Map lang codes to HTML lang attribute values
+  var HTML_LANG_MAP = {
+    'zh-TW': 'zh-Hant', 'zh-CN': 'zh-Hans',
+    'ja': 'ja', 'ko': 'ko', 'en': 'en',
+    'de': 'de', 'fr': 'fr', 'es': 'es', 'pt': 'pt', 'it': 'it',
+    'nl': 'nl', 'pl': 'pl', 'cs': 'cs', 'hu': 'hu', 'tr': 'tr',
+    'fi': 'fi', 'sv': 'sv', 'no': 'no', 'da': 'da'
+  };
+
+  function detectLangFromBrowser() {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    for (var i = 0; i < SUPPORTED.length; i++) {
+      if (nav === SUPPORTED[i].toLowerCase()) return SUPPORTED[i];
+    }
+    var prefix = nav.split('-')[0];
+    if (prefix === 'zh') return 'zh-TW';
+    for (var j = 0; j < SUPPORTED.length; j++) {
+      if (SUPPORTED[j].toLowerCase() === prefix) return SUPPORTED[j];
+    }
+    return DEFAULT;
+  }
+
+  function detectLang() {
+    // Priority 1: User's prior explicit choice (localStorage)
+    try {
+      var stored = localStorage.getItem(STORAGE_KEY);
+      if (stored && SUPPORTED.indexOf(stored) !== -1) return stored;
+    } catch (e) { /* private browsing */ }
+    // Priority 2: Browser-reported language — fully local, no network call
+    // Priority 3 (inside detectLangFromBrowser): fall back to DEFAULT
+    return detectLangFromBrowser();
+  }
+
+  // ---- HTML sanitizer (spec 018 / security audit #5) -------------------
+  // Allowlist-based inline sanitizer used for every data-i18n-html value.
+  // Defence-in-depth against supply-chain script compromise or prototype
+  // pollution mutating window.__i18n. Works purely client-side via DOMParser.
+  //
+  // Allowed tags: <strong> <b> <em> <i> <br> <span> <a>
+  // Allowed attrs: class (global); href/target/rel (on <a>). href must be
+  //   http(s)/mailto (relative URLs resolve via location.href).
+  // Disallowed tags: unwrap (keep text), except <script>/<style> which are
+  //   dropped entirely so their body is never displayed as plain text.
+  // Allowlist derived from actual translation usage (survey run 2026-04-23:
+  // only A, CODE, LI, P, SPAN, STRONG, UL appear). B/EM/I/BR/OL/H3/H4 are
+  // kept because they are safe (text-formatting only, no attributes of
+  // concern) and commonly needed for future translations.
+  var SAN_ALLOWED_TAGS = {
+    'STRONG': true, 'B': true, 'EM': true, 'I': true, 'BR': true,
+    'SPAN': true, 'A': true, 'CODE': true, 'P': true,
+    'UL': true, 'OL': true, 'LI': true,
+    'H3': true, 'H4': true
+  };
+  var SAN_DROP_WITH_CONTENT = {
+    'SCRIPT': true, 'STYLE': true, 'IFRAME': true, 'OBJECT': true,
+    'EMBED': true, 'LINK': true, 'META': true
+  };
+  var SAN_GLOBAL_ATTRS = { 'class': true };
+  var SAN_TAG_ATTRS = {
+    'A': { 'class': true, 'href': true, 'target': true, 'rel': true }
+  };
+  var SAN_URL_OK = /^(https?:|mailto:)/i;
+
+  function sanCleanAttrs(el) {
+    var attrs = Array.prototype.slice.call(el.attributes);
+    var tagAttrs = SAN_TAG_ATTRS[el.tagName] || null;
+    for (var i = 0; i < attrs.length; i++) {
+      var name = attrs[i].name;
+      var val = attrs[i].value;
+      var ok = SAN_GLOBAL_ATTRS[name] === true ||
+               (tagAttrs && tagAttrs[name] === true);
+      if (!ok) { el.removeAttribute(name); continue; }
+      if (name === 'href') {
+        var abs = null;
+        try { abs = new URL(val, location.href); } catch (e) { /* bad URL */ }
+        if (!abs || !SAN_URL_OK.test(abs.protocol)) {
+          el.removeAttribute('href');
+        }
+      }
+    }
+  }
+
+  function sanWalk(node) {
+    var children = Array.prototype.slice.call(node.childNodes);
+    for (var i = 0; i < children.length; i++) {
+      var child = children[i];
+      if (child.nodeType === 3) { continue; } // text — keep
+      if (child.nodeType !== 1) { node.removeChild(child); continue; } // comment/other
+      var tag = child.tagName;
+      if (SAN_DROP_WITH_CONTENT[tag]) { node.removeChild(child); continue; }
+      // Recurse first so that if this child turns out to be disallowed and
+      // gets unwrapped, the hoisted grandchildren have already been cleaned
+      // (fixes <svg><script>...</script></svg> leaking through).
+      sanWalk(child);
+      if (SAN_ALLOWED_TAGS[tag]) {
+        sanCleanAttrs(child);
+      } else {
+        // unwrap: move (already-cleaned) children out, then drop the element
+        while (child.firstChild) { node.insertBefore(child.firstChild, child); }
+        node.removeChild(child);
+      }
+    }
+  }
+
+  function sanitizeHtml(html) {
+    if (html == null) return '';
+    var s = String(html);
+    if (s === '') return '';
+    var doc = new DOMParser().parseFromString(
+      '<!doctype html><body><div id="__san">' + s + '</div>', 'text/html'
+    );
+    var root = doc.getElementById('__san');
+    if (!root) return '';
+    sanWalk(root);
+    return root.innerHTML;
+  }
+  // ---- end sanitizer ----------------------------------------------------
+
+  function applyTranslations(translations) {
+    if (!translations) return;
+    var els = document.querySelectorAll('[data-i18n]');
+    for (var i = 0; i < els.length; i++) {
+      var key = els[i].getAttribute('data-i18n');
+      if (translations[key] != null) {
+        if (els[i].tagName === 'INPUT' || els[i].tagName === 'TEXTAREA') {
+          els[i].placeholder = translations[key];
+        } else {
+          els[i].textContent = translations[key];
+        }
+      }
+    }
+    var htmlEls = document.querySelectorAll('[data-i18n-html]');
+    for (var j = 0; j < htmlEls.length; j++) {
+      var hkey = htmlEls[j].getAttribute('data-i18n-html');
+      if (translations[hkey] != null) {
+        htmlEls[j].innerHTML = sanitizeHtml(translations[hkey]);
+      }
+    }
+    var titleKey = document.documentElement.getAttribute('data-i18n-title');
+    if (titleKey && translations[titleKey]) {
+      document.title = translations[titleKey];
+    }
+    var metaDesc = document.querySelector('meta[name="description"]');
+    var descKey = document.documentElement.getAttribute('data-i18n-desc');
+    if (metaDesc && descKey && translations[descKey]) {
+      metaDesc.setAttribute('content', translations[descKey]);
+    }
+  }
+
+  function getLangLabel(code) {
+    for (var i = 0; i < LANGUAGES.length; i++) {
+      if (LANGUAGES[i].code === code) return LANGUAGES[i].label;
+    }
+    return code;
+  }
+
+  // Detect if we're in a locale subdirectory (e.g. /en/, /zh-TW/)
+  function detectLocaleFromUrl() {
+    var match = location.pathname.match(/^\/([a-z]{2}(?:-[A-Z]{2})?)\//);
+    return match ? match[1] : null;
+  }
+
+  // Get current page filename (e.g. 'privacy.html', 'index.html')
+  function getCurrentPage() {
+    var parts = location.pathname.split('/').filter(Boolean);
+    var last = parts[parts.length - 1] || '';
+    if (last && last.indexOf('.html') !== -1) return last;
+    return 'index.html';
+  }
+
+  // Spec 043 bug-fix: 取得「邏輯路徑」——locale 子目錄以外的整段 path。
+  //   /                            → ''
+  //   /index.html                  → ''
+  //   /buy.html                    → 'buy.html'
+  //   /compare/time-machine.html   → 'compare/time-machine.html'
+  //   /en/install.html             → 'install.html'
+  //   /zh-TW/compare/dropbox.html  → 'compare/dropbox.html'
+  function getLogicalPath() {
+    var path = location.pathname.replace(/^\//, '');
+    var localeMatch = path.match(/^([a-z]{2}(?:-[A-Z]{2})?)\/(.*)$/);
+    if (localeMatch) path = localeMatch[2];
+    if (path === '' || path.endsWith('/')) {
+      // /foo/ → /foo/ index 還是首頁？ /compare/ 是 hub 首頁，/zh-TW/ 是 zh-TW 首頁
+      // 對 compare hub，保留路徑；對 locale root，去除
+      // 此處 path 已剝掉 locale prefix，所以剩下 'compare/' 就是 compare hub
+      // 而 '' 就是 locale 首頁
+      return path;
+    }
+    return path;
+  }
+
+  // 根據目標語言 + 當前邏輯路徑，算出該語言對應的 URL。
+  // 處理「不是所有 locale 都有此頁」的 fallback。
+  //   compare/* 只在 en (root) 與 zh-TW 有
+  //   install.html 只在 en, zh-TW, zh-CN, ja, ko, it 有完整翻譯
+  function getLocalizedUrlFor(lang, relPath) {
+    // compare 系列：en 在 root（/compare/...），zh-TW 在 /zh-TW/compare/...
+    if (relPath === 'compare/' || relPath.indexOf('compare/') === 0) {
+      if (lang === 'en') return '/' + relPath;
+      if (lang === 'zh-TW') return '/zh-TW/' + relPath;
+      // 其他 locale 沒 compare → 回到該 locale 首頁，避免 404
+      return '/' + lang + '/';
+    }
+
+    // locale 首頁
+    if (relPath === '' || relPath === 'index.html') {
+      return '/' + lang + '/';
+    }
+
+    // install.html 翻譯 locale 範圍（spec 043 D）
+    if (relPath === 'install.html') {
+      var INSTALL_AVAILABLE = ['en', 'zh-TW', 'zh-CN', 'ja', 'ko', 'it'];
+      if (INSTALL_AVAILABLE.indexOf(lang) === -1) {
+        return '/en/install.html'; // fallback
+      }
+    }
+
+    // 預設：所有 19 locale 都有此頁（index/privacy/terms/contact/buy/refund/activate）
+    return '/' + lang + '/' + relPath;
+  }
+
+  // setLang(lang, persist)
+  //   persist === true  → write the choice to localStorage
+  //                       (use when the change reflects an explicit user action:
+  //                        dropdown click, URL-locale navigation)
+  //   persist === false → apply in-page only
+  //                       (use for first-visit auto-detection, so we do not
+  //                        write storage before the visitor has chosen — see
+  //                        /law Privacy §2.4)
+  //
+  // The default is non-persisting because the safer behaviour for ambiguous
+  // call-sites is to not persist.
+  function setLang(lang, persist) {
+    if (SUPPORTED.indexOf(lang) === -1) lang = DEFAULT;
+    if (persist === true) {
+      try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) { /* ignore */ }
+    }
+
+    // 切換語言：根據邏輯路徑 + 目標語言推算正確 URL（spec 043 bug-fix）。
+    // 處理：
+    //   - locale 子目錄 → 換成 /<lang>/<relPath>
+    //   - root /compare/* → en/zh-TW 切換正確路徑；其他 locale fallback 到 /<lang>/
+    //   - root /foo.html → /<lang>/foo.html
+    //   - root / → /<lang>/
+    var urlLocale = detectLocaleFromUrl();
+    var relPath = getLogicalPath();
+    var targetUrl = getLocalizedUrlFor(lang, relPath);
+    var currentUrl = location.pathname;
+    // 已在目標 locale 對應的 URL → 不導航，做 in-page 替換（root + zh-TW 互通的 edge case 也算）
+    var alreadyAtTarget = (urlLocale === lang) || (currentUrl === targetUrl);
+    if (!alreadyAtTarget) {
+      window.location.href = targetUrl;
+      return;
+    }
+
+    // Fallback: in-page replacement (for root page or same locale)
+    currentLang = lang;
+    document.documentElement.lang = HTML_LANG_MAP[lang] || lang;
+
+    // Update globe button label
+    var label = document.getElementById('lang-label');
+    if (label) label.textContent = getLangLabel(lang);
+
+    // Update active state in dropdown
+    var items = document.querySelectorAll('[data-lang-code]');
+    for (var i = 0; i < items.length; i++) {
+      var code = items[i].getAttribute('data-lang-code');
+      if (code === lang) {
+        items[i].classList.add('font-bold', 'text-brand-600');
+        items[i].classList.remove('text-gray-700');
+      } else {
+        items[i].classList.remove('font-bold', 'text-brand-600');
+        items[i].classList.add('text-gray-700');
+      }
+    }
+
+    applyTranslations(data[lang]);
+  }
+
+  function buildDropdown() {
+    var container = document.getElementById('lang-switcher');
+    if (!container) return;
+
+    var dropdown = document.getElementById('lang-dropdown');
+    if (dropdown) return; // already built
+
+    // Create dropdown panel
+    dropdown = document.createElement('div');
+    dropdown.id = 'lang-dropdown';
+    dropdown.className = 'absolute right-0 top-full mt-2 bg-white border border-gray-200 rounded-xl shadow-xl py-2 z-[100] w-48 max-h-80 overflow-y-auto hidden';
+    dropdown.style.scrollbarWidth = 'thin';
+
+    // spec 043 bug-fix：dropdown 連結用 logical path + 各語言可用性 fallback，
+    // 避免 /compare/time-machine.html → 切到 ja → /ja/time-machine.html (404)。
+    var relPath = getLogicalPath();
+
+    for (var i = 0; i < LANGUAGES.length; i++) {
+      var lang = LANGUAGES[i];
+      var item = document.createElement('a');
+      item.href = getLocalizedUrlFor(lang.code, relPath);
+      item.className = 'block w-full text-left px-4 py-2 text-sm hover:bg-brand-50 transition-colors text-gray-700';
+      item.setAttribute('data-lang-code', lang.code);
+      item.textContent = lang.label;
+      item.addEventListener('click', (function (code) {
+        return function (e) {
+          // Explicit user action — persist the preference before the
+          // <a href="/{code}/..."> navigates. The landing page's init() will
+          // also see the URL locale and re-persist, which is idempotent.
+          try { localStorage.setItem(STORAGE_KEY, code); } catch (ex) {}
+        };
+      })(lang.code));
+      dropdown.appendChild(item);
+    }
+
+    container.style.position = 'relative';
+    container.appendChild(dropdown);
+
+    // Toggle dropdown on globe button click
+    var btn = document.getElementById('lang-toggle');
+    if (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        dropdown.classList.toggle('hidden');
+      });
+    }
+
+    // Close on outside click
+    document.addEventListener('click', function (e) {
+      if (!container.contains(e.target)) {
+        dropdown.classList.add('hidden');
+      }
+    });
+  }
+
+  // <html lang> → 我們的 SUPPORTED code
+  //   zh-Hant → zh-TW
+  //   zh-Hans → zh-CN
+  //   其餘原樣回（en, ja, ko, de, fr, ...）
+  function htmlLangToCode(htmlLang) {
+    if (!htmlLang) return null;
+    var map = { 'zh-Hant': 'zh-TW', 'zh-Hans': 'zh-CN' };
+    return map[htmlLang] || htmlLang;
+  }
+
+  function init() {
+    // 決定 currentLang 的優先序（spec 043 bug-fix）：
+    //   1. URL locale prefix (/zh-TW/, /en/, ...) — 最權威
+    //   2. <html lang> — 頁面內容語言，build 時決定，與 body 一致
+    //   3. localStorage / navigator.language — 用戶過往偏好（fallback）
+    //
+    // 之前只有 1 + 3，導致 root + /compare/* 等沒 locale prefix 的頁面
+    // 直接走 localStorage，與 <html lang> 不符 → nav 翻譯與 body 語言混雜。
+    var urlLocale = detectLocaleFromUrl();
+    var persistOnApply;
+    if (urlLocale && SUPPORTED.indexOf(urlLocale) !== -1) {
+      currentLang = urlLocale;
+      persistOnApply = true;
+    } else {
+      var pageLang = htmlLangToCode(document.documentElement.lang);
+      if (pageLang && SUPPORTED.indexOf(pageLang) !== -1) {
+        // <html lang> 是 build 時決定的「該頁面 body 語言」，必須讓 nav/footer
+        // 與其一致。不寫 localStorage（這只是頁面 lang 推導，不算用戶選擇）。
+        currentLang = pageLang;
+        persistOnApply = false;
+      } else {
+        currentLang = detectLang();
+        persistOnApply = false;
+      }
+    }
+    buildDropdown();
+    setLang(currentLang, persistOnApply);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+
+  window.__keeplyI18n = {
+    setLang: setLang,
+    currentLang: function () { return currentLang; },
+    sanitizeHtml: sanitizeHtml,
+    // Re-run translation pass — needed when DOM is mutated after initial load
+    // (e.g. cookie-banner.js injects the panel on demand).
+    apply: function () { applyTranslations(data[currentLang]); },
+    // Translate a single key — for attributes (aria-label, etc) that data-i18n
+    // can't currently target.
+    t: function (key) {
+      var pack = data[currentLang] || {};
+      return pack[key] != null ? pack[key] : key;
+    }
+  };
+})();

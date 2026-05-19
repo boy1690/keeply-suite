@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth" data-i18n-title="index.meta.title" data-i18n-desc="index.meta.description">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#4F46E5" />
+  <!-- Content Security Policy (spec 019). frame-ancestors / HSTS / Permissions-Policy
+       are header-only and deferred to future Cloudflare migration (audit #8). -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://static.cloudflareinsights.com https://*.clarity.ms https://cdn.paddle.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com https://*.clarity.ms; font-src 'self'; connect-src 'self' https://docs.google.com https://*.google-analytics.com https://*.analytics.google.com https://cloudflareinsights.com https://*.clarity.ms; form-action 'self' https://docs.google.com; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <title>Keeply — Twoje pliki mają historie. Keeply pamięta je wszystkie.</title>
+  <meta name="description" content="Najprostszy sposób dla użytkowników nietechnicznych na zarządzanie wersjami plików. Pobierz za darmo, zacznij w 30 sekund." />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://keeply.work/pl/" />
+
+  <!-- Hreflang (19 languages + x-default) -->
+  <link rel="alternate" hreflang="zh-TW" href="https://keeply.work/zh-TW/" />
+  <link rel="alternate" hreflang="zh-CN" href="https://keeply.work/zh-CN/" />
+  <link rel="alternate" hreflang="en" href="https://keeply.work/en/" />
+  <link rel="alternate" hreflang="ja" href="https://keeply.work/ja/" />
+  <link rel="alternate" hreflang="ko" href="https://keeply.work/ko/" />
+  <link rel="alternate" hreflang="de" href="https://keeply.work/de/" />
+  <link rel="alternate" hreflang="fr" href="https://keeply.work/fr/" />
+  <link rel="alternate" hreflang="es" href="https://keeply.work/es/" />
+  <link rel="alternate" hreflang="pt" href="https://keeply.work/pt/" />
+  <link rel="alternate" hreflang="it" href="https://keeply.work/it/" />
+  <link rel="alternate" hreflang="nl" href="https://keeply.work/nl/" />
+  <link rel="alternate" hreflang="pl" href="https://keeply.work/pl/" />
+  <link rel="alternate" hreflang="cs" href="https://keeply.work/cs/" />
+  <link rel="alternate" hreflang="hu" href="https://keeply.work/hu/" />
+  <link rel="alternate" hreflang="tr" href="https://keeply.work/tr/" />
+  <link rel="alternate" hreflang="fi" href="https://keeply.work/fi/" />
+  <link rel="alternate" hreflang="sv" href="https://keeply.work/sv/" />
+  <link rel="alternate" hreflang="no" href="https://keeply.work/no/" />
+  <link rel="alternate" hreflang="da" href="https://keeply.work/da/" />
+  <link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+  <!-- Hreflang (19 languages + x-default) -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Favicon -->
+  <link rel="icon" href="../favicon.ico" sizes="32x32" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://keeply.work/pl/" />
+  <meta property="og:title" content="Keeply — Twoje pliki mają historie. Keeply pamięta je wszystkie." />
+  <meta property="og:description" content="Najprostszy sposób dla użytkowników nietechnicznych na zarządzanie wersjami plików. Pobierz za darmo, zacznij w 30 sekund." />
+  <meta property="og:image" content="https://keeply.work/og-image.png" />
+  <meta property="og:image:secure_url" content="https://keeply.work/og-image.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Keeply — Twoje pliki mają historie. Keeply pamięta je wszystkie." />
+  <meta property="og:site_name" content="Keeply" />
+  <meta property="og:locale" content="pl_PL" />
+  <meta property="og:locale:alternate" content="zh_TW" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="ja_JP" />
+  <meta property="og:locale:alternate" content="ko_KR" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:locale:alternate" content="es_ES" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="it_IT" />
+  <meta property="og:locale:alternate" content="nl_NL" />
+  <meta property="og:locale:alternate" content="cs_CZ" />
+  <meta property="og:locale:alternate" content="hu_HU" />
+  <meta property="og:locale:alternate" content="tr_TR" />
+  <meta property="og:locale:alternate" content="fi_FI" />
+  <meta property="og:locale:alternate" content="sv_SE" />
+  <meta property="og:locale:alternate" content="nb_NO" />
+  <meta property="og:locale:alternate" content="da_DK" />
+<!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Keeply — Twoje pliki mają historie. Keeply pamięta je wszystkie." />
+  <meta name="twitter:description" content="Najprostszy sposób dla użytkowników nietechnicznych na zarządzanie wersjami plików. Pobierz za darmo, zacznij w 30 sekund." />
+  <meta name="twitter:image" content="https://keeply.work/og-image.png" />
+  <meta name="twitter:image:alt" content="Keeply — Twoje pliki mają historie. Keeply pamięta je wszystkie." />
+
+  <!-- Tailwind CSS (compiled) -->
+  <link rel="preload" href="../style.css" as="style" integrity="sha384-StVcXtMksUhM8v9Z5e/ptrBnGyMvDgaZCTHXZ85oaFKXvrtpXmx3F2fSXUe3lcuY" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../style.css" integrity="sha384-StVcXtMksUhM8v9Z5e/ptrBnGyMvDgaZCTHXZ85oaFKXvrtpXmx3F2fSXUe3lcuY" crossorigin="anonymous" />
+
+  <!-- M PLUS Rounded 1c font preload (eliminates CLS from late font discovery) -->
+  <link rel="preload" href="../fonts/MPLUSRounded1c-Regular-v2.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+  <link rel="preload" href="../fonts/MPLUSRounded1c-Medium-v2.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+  <link rel="preload" href="../fonts/MPLUSRounded1c-Bold-v2.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+
+  <!-- M PLUS Rounded 1c (self-hosted via input.css @font-face) -->
+
+  <!-- JSON-LD Structured Data injected post-build by _dev/inject-schema.js (spec 017) -->  <!-- Schema.org JSON-LD (injected by _dev/inject-schema.js) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://keeply.work/#organization",
+        "name": "Keeply",
+        "url": "https://keeply.work",
+        "logo": "https://keeply.work/logo.svg",
+        "sameAs": [
+          "https://keeply.work",
+          "https://blog.keeply.work",
+          "https://github.com/boy1690/keeply-releases",
+          "https://www.linkedin.com/in/ting-wei-tsao-b57480152/"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://keeply.work/#website",
+        "url": "https://keeply.work/pl/",
+        "name": "Keeply",
+        "inLanguage": "pl",
+        "publisher": {
+          "@id": "https://keeply.work/#organization"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://keeply.work/#software",
+        "name": "Keeply",
+        "operatingSystem": "Windows, macOS",
+        "applicationCategory": "UtilitiesApplication",
+        "softwareVersion": "1.0.10",
+        "description": "Najprostszy sposób dla użytkowników nietechnicznych na zarządzanie wersjami plików. Pobierz za darmo, zacznij w 30 sekund.",
+        "url": "https://keeply.work/pl/",
+        "downloadUrl": "https://github.com/boy1690/keeply-releases/releases/latest",
+        "screenshot": "https://keeply.work/og-image.png",
+        "offers": {
+          "@type": "Offer",
+          "price": "599",
+          "priceCurrency": "USD",
+          "url": "https://keeply.work/pl/buy.html"
+        },
+        "publisher": {
+          "@id": "https://keeply.work/#organization"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://keeply.work/#founder",
+        "name": "Tsao Ting Wei",
+        "alternateName": "曹庭維",
+        "jobTitle": "Founder, Keeply",
+        "url": "https://keeply.work/about",
+        "sameAs": [
+          "https://github.com/boy1690",
+          "https://www.linkedin.com/in/ting-wei-tsao-b57480152/"
+        ],
+        "worksFor": {
+          "@id": "https://keeply.work/#organization"
+        }
+      },
+      {
+        "@type": "HowTo",
+        "@id": "https://keeply.work/pl/#install-howto",
+        "name": "Jak zacząć korzystać z Keeply i ile to zajmuje?",
+        "totalTime": "PT30S",
+        "supply": [
+          {
+            "@type": "HowToSupply",
+            "name": "Windows 10/11 or macOS (Apple Silicon)"
+          }
+        ],
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "Pobierz i zainstaluj",
+            "text": "Gotowe w 30 sekund. Obsługuje Windows 10+ i macOS.",
+            "url": "https://keeply.work/pl/#download"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "Wybierz folder",
+            "text": "Dowolny folder, w którym pracujesz — projekty, umowy, pliki graficzne."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Zacznij chronić",
+            "text": "Od teraz każda zmiana jest zapamiętywana. Chcesz wrócić? Jedno kliknięcie."
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://keeply.work/pl/#faq",
+        "inLanguage": "pl",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Czy Keeply działa offline?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tak. Keeply to w pełni lokalne oprogramowanie — bez chmury, bez konta, bez zależności od sieci. Twoje pliki projektów, historia wersji i notatki zostają na twoim dysku twardym lub NAS. Możesz używać Keeply w trybie samolotowym, w piwnicy albo na komputerze całkowicie odciętym od sieci. Jedyny moment, w którym Keeply łączy się z internetem, to sprawdzanie aktualizacji App — i to też możesz wyłączyć."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czym Keeply różni się od Dropbox czy Google Drive?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Dropbox i Google Drive synchronizują aktualny stan plików; Keeply zapisuje każdą wersję jako osobny snapshot. Dropbox i Drive pobierają opłatę za użytkownika miesięcznie; Keeply jest darmowe dla osób indywidualnych i będzie miało stałą cenę $25/month w planie Team (wkrótce), niezależnie od wielkości zespołu. Twoje pliki żyją na twoim dysku, a nie na serwerze dostawcy, więc nie jesteś zamknięty w subskrypcji."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Co stanie się z moimi plikami, jeśli przestanę płacić?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nic. Pliki Keeply są przechowywane na twoim dysku twardym lub NAS w standardowej strukturze folderów, którą kontrolujesz. Nawet jeśli odinstalujesz Keeply, pliki i ich historia wersji pozostają czytelne dla dowolnego menedżera plików. Nie płacisz za dostęp do własnej pracy — licencja Founding Member to jednorazowa płatność wieczysta, a darmowy plan pozostaje darmowy na zawsze."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy mój zespół może dzielić się plikami bez licencji per użytkownik?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tak. W darmowym planie zespoły już dzielą jeden folder vault przez NAS lub dysk współdzielony — Keeply nie liczy miejsc. Nadchodzący Team plan ($25/month stałe, planowane) dodaje onboarding przez kod zaproszenia i panel administratora, ale nadal bez opłat per użytkownik. Porównaj to z Dropbox Business za $20 za miejsce miesięcznie, co wychodzi $120/month dla 6-person team."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Jakie typy plików obsługuje Keeply?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Dowolne. Keeply pokazuje wizualny diff obok siebie dla Word, Excel, PowerPoint, PDF i obrazów. Dla każdego innego typu pliku — Blender, PSD, wideo, CAD, modele 3D, kod źródłowy — Keeply śledzi wersje i pozwala przywrócić dowolny punkt w kilka sekund. Pliki większe niż 10MB oraz 38 znanych formatów binarnych są automatycznie wykrywane i kierowane do magazynu dużych plików bez żadnej konfiguracji LFS."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy jest wersja na Linux?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Keeply jest obecnie dostępne na Windows 10 lub nowszy oraz macOS na Apple Silicon. Wersja na Linux jest w roadmap, ale jeszcze się nie ukazała. Jeśli obsługa Linux jest kluczowa dla twojego workflow, daj nam znać przez formularz kontaktowy — priorytetyzujemy obsługę platform na podstawie realnego zapotrzebowania użytkowników, a każde zgłoszenie jest rejestrowane."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czym jest plan Founding Member za $599?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "To jednorazowa płatność za licencję wieczystą, ograniczona do pierwszych 500 kupujących. Dostajesz aktualne funkcje Keeply na zawsze, plus wszystkie funkcje Team plan automatycznie, gdy Team plan zostanie wydany. Bez cyklicznych płatności, bez nagłych podwyżek. Dla porównania: $25/month przez 24 miesiące to $600 — Founding Member zwraca się w niecałe dwa lata i działa dalej."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+
+</head>
+
+<body class="bg-white text-gray-900 font-sans antialiased">
+
+  <!-- Nav (injected by components.js) -->
+  <div id="nav-root"></div>
+
+  <!-- ============================================ -->
+  <!-- HERO SECTION                                 -->
+  <!-- ============================================ -->
+  <section class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
+    <!-- Background decoration -->
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute top-20 left-1/4 w-96 h-96 bg-brand-100 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-gradient"></div>
+      <div class="absolute top-40 right-1/4 w-96 h-96 bg-amber-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-gradient" style="animation-delay: 4s;"></div>
+    </div>
+
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 bg-brand-50 text-brand-700 text-sm font-medium px-4 py-1.5 rounded-full mb-8 border border-brand-100">
+        <span class="w-2 h-2 bg-amber-400 rounded-full"></span>
+        <span data-i18n="index.hero.badge">Windows · macOS Aplikacja desktopowa · Pobierz za darmo</span>
+      </div>
+
+      <!-- Main headline -->
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight">
+        <span class="text-gray-900" data-i18n="index.hero.title.1">Twoje pliki mają historie.</span><br />
+        <span class="bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent" data-i18n="index.hero.title.2">Keeply pamięta je wszystkie.</span>
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="mt-6 text-lg md:text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed" data-i18n="index.hero.subtitle">Każda edycja, każda decyzja, każda notatka, którą zostawiasz, staje się pamięcią Twojego projektu. Za sześć miesięcy te wspomnienia Cię uratują.</p>
+
+      <!-- CTA Buttons -->
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#download" class="group bg-brand-600 hover:bg-brand-700 text-white font-medium px-8 py-4 rounded-full text-lg transition-all hover:shadow-xl hover:shadow-brand-600/25 flex items-center gap-2">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+          <span data-i18n="index.hero.cta">Pobierz za darmo</span>
+        </a>
+        <span class="text-sm text-gray-400" data-i18n="index.hero.cta.note">Zacznij w 30 sekund, bez konta</span>
+      </div>
+
+      <!-- Hero Visual: App screenshot placeholder -->
+      <div class="mt-16 relative">
+        <div class="bg-gradient-to-b from-brand-50 to-white rounded-2xl border border-gray-200 shadow-2xl shadow-brand-900/5 overflow-hidden mx-auto max-w-3xl">
+          <!-- Mock app window -->
+          <div class="bg-gray-50 border-b border-gray-200 px-4 py-3 flex items-center gap-2">
+            <div class="flex gap-1.5">
+              <div class="w-3 h-3 rounded-full bg-red-300"></div>
+              <div class="w-3 h-3 rounded-full bg-amber-300"></div>
+              <div class="w-3 h-3 rounded-full bg-green-300"></div>
+            </div>
+            <div class="flex-1 text-center">
+              <span class="text-xs text-gray-400 font-medium" data-i18n="index.hero.mock.status">📂 Mój Projekt — Chroniony ✓</span>
+            </div>
+          </div>
+          <!-- Mock content -->
+          <div class="p-8 md:p-12 space-y-4">
+            <div class="flex items-center gap-3 text-sm">
+              <span class="bg-amber-100 text-amber-700 px-3 py-1 rounded-full font-medium" data-i18n="index.hero.mock.unsaved">⚡ 3 pliki z niezapisanymi zmianami</span>
+              <button class="bg-brand-600 text-white px-4 py-1.5 rounded-full text-sm font-medium" data-i18n="index.hero.mock.save">💾 Zapisz bieżący postęp</button>
+            </div>
+            <div class="mt-6 space-y-3">
+              <p class="text-xs text-gray-400 font-medium uppercase tracking-wider" data-i18n="index.hero.mock.history">Historia</p>
+              <div class="bg-white border border-gray-100 rounded-xl p-4 flex items-start gap-4">
+                <div class="w-1 h-12 bg-brand-400 rounded-full flex-shrink-0 mt-0.5"></div>
+                <div>
+                  <p class="text-sm font-medium text-gray-800" data-i18n="index.hero.mock.today">Dziś 16:30 · 3 pliki zmienione</p>
+                  <p class="text-xs text-gray-400 mt-1" data-i18n="index.hero.mock.today.note">Klient poprosił o zmiany w projekcie okładki — zmieniono na kolory marki</p>
+                  <div class="mt-2 flex gap-2">
+                    <span class="text-xs bg-green-50 text-green-600 px-2 py-0.5 rounded" data-i18n-html="index.hero.mock.file1">Proposal_v2.pptx <strong>Dodano</strong></span>
+                    <span class="text-xs bg-blue-50 text-blue-600 px-2 py-0.5 rounded" data-i18n-html="index.hero.mock.file2">Project_Timeline.xlsx <strong>Zmodyfikowano</strong></span>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-white border border-gray-100 rounded-xl p-4 flex items-start gap-4 opacity-60">
+                <div class="w-1 h-12 bg-gray-200 rounded-full flex-shrink-0 mt-0.5"></div>
+                <div>
+                  <p class="text-sm font-medium text-gray-800" data-i18n="index.hero.mock.yesterday">Wczoraj 14:15 · 1 plik zmieniony</p>
+                  <p class="text-xs text-gray-400 mt-1" data-i18n="index.hero.mock.yesterday.note">Zaktualizowano kolory okładki i układ strony</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Glow effect behind the card -->
+        <div class="absolute inset-0 -z-10 bg-gradient-to-b from-brand-100/50 via-transparent to-transparent rounded-2xl blur-2xl scale-105"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- FEATURES (3 selling points) — HIDDEN         -->
+  <!-- ============================================ -->
+  <section id="features" class="py-20 md:py-32 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900" data-i18n-html="index.features.title">Dlaczego Keeply to coś więcej niż narzędzie do kopii zapasowych?</h2>
+        <p class="mt-4 text-gray-500 text-lg max-w-xl mx-auto" data-i18n="index.features.subtitle">Narzędzia do kopii zapasowych pamiętają tylko „bieżący&quot; plik; Keeply pamięta każdą wersję, każdą notatkę, każdą podjętą decyzję. Sześć miesięcy później, gdy klient pyta „kto to zdecydował?&quot;, otwierasz Keeply i znajdujesz odpowiedź w kilka sekund — to coś, czego kopie zapasowe nie potrafią dać.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Feature 1: Remember WHY -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-100 glow-hover transition-all duration-300 animate-float">
+          <div class="w-14 h-14 bg-brand-100 rounded-2xl flex items-center justify-center text-2xl mb-6">
+            💡
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="index.features.1.title">Pamiętaj DLACZEGO</h3>
+          <p class="text-gray-500 leading-relaxed mb-4" data-i18n="index.features.1.desc">Nie pamiętaj tylko co się zmieniło — pamiętaj dlaczego to zmieniłeś.</p>
+          <p class="text-sm text-gray-400 leading-relaxed" data-i18n="index.features.1.detail">Sześć miesięcy później, gdy klient zapyta &quot;Kto podjął tę decyzję?&quot; nie będziesz musiał przekopywać e-maili. Otwórz Keeply — odpowiedź jest na miejscu.</p>
+        </div>
+
+        <!-- Feature 2: Time Machine -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-100 glow-hover transition-all duration-300 animate-float-delayed">
+          <div class="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center text-2xl mb-6">
+            ⏪
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="index.features.2.title">Wehikuł czasu Twojego projektu</h3>
+          <p class="text-gray-500 leading-relaxed mb-4" data-i18n="index.features.2.desc">Każdy zapis to jak zrobienie zdjęcia. Wróć do dowolnego dnia, w dowolnym momencie.</p>
+          <p class="text-sm text-gray-400 leading-relaxed" data-i18n="index.features.2.detail">Popełniłeś błąd? Po prostu wróć. Klient zmienił zdanie? Znajdź starą wersję w trzy sekundy. Czas audytu? Kompletne zapisy tutaj.</p>
+        </div>
+
+        <!-- Feature 3: Bold Changes -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-100 glow-hover transition-all duration-300 animate-float-delayed-2">
+          <div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center text-2xl mb-6">
+            🛡️
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="index.features.3.title">Edytuj śmiało, my pamiętamy wszystko</h3>
+          <p class="text-gray-500 leading-relaxed mb-4" data-i18n="index.features.3.desc">Koniec z wybieraniem między &quot;ulepszaniem&quot; a &quot;strachem przed zmianą.&quot;</p>
+          <p class="text-sm text-gray-400 leading-relaxed" data-i18n="index.features.3.detail">Keeply chroni każdą wersję, więc możesz swobodnie eksperymentować. Bez względu na to, co zmienisz, zawsze możesz wrócić.</p>
+        </div>
+
+        <!-- Feature 4: Visual Diff (spec 027 MISSING M1) -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-100 glow-hover transition-all duration-300 animate-float">
+          <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center text-2xl mb-6">
+            🔍
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="index.features.4.title">Zobacz każdą zmianę obok siebie</h3>
+          <p class="text-gray-500 leading-relaxed mb-4" data-i18n="index.features.4.desc">Wizualne porównanie dla Word, Excel, PowerPoint, PDF i obrazów.</p>
+          <p class="text-sm text-gray-400 leading-relaxed" data-i18n="index.features.4.detail">To nie tylko lista zmodyfikowanych plików — Keeply pokazuje ci dokładnie, co się zmieniło, wyświetlając dokumenty Office, PDF i obrazy obok siebie z podświetlonymi różnicami. Dla każdego innego typu pliku możesz śledzić wersje i przywrócić dowolny moment w kilka sekund.</p>
+        </div>
+
+        <!-- Feature 5: Silent LFS (spec 027 MISSING M2) -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-100 glow-hover transition-all duration-300 animate-float-delayed">
+          <div class="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center text-2xl mb-6">
+            📦
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="index.features.5.title">Obsługuje duże pliki bezgłośnie</h3>
+          <p class="text-gray-500 leading-relaxed mb-4" data-i18n="index.features.5.desc">Blender, PSD, wideo — wszystko działa od ręki.</p>
+          <p class="text-sm text-gray-400 leading-relaxed" data-i18n="index.features.5.detail">Keeply automatycznie wykrywa 38 binarnych formatów plików oraz każdy plik powyżej 10 MB, kierując je do magazynu dużych plików bez ani jednego kroku konfiguracji. Bez konfigurowania LFS, bez puchnięcia repo, bez uszkodzonych zapisów w dużych projektach.</p>
+        </div>
+
+        <!-- Feature 6: Work Copies (spec 027 MISSING M3) -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-100 glow-hover transition-all duration-300 animate-float-delayed-2">
+          <div class="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center text-2xl mb-6">
+            🌿
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="index.features.6.title">Wypróbuj śmiałe zmiany bezpiecznie</h3>
+          <p class="text-gray-500 leading-relaxed mb-4" data-i18n="index.features.6.desc">Utwórz kopię roboczą, eksperymentuj, a potem scal z powrotem.</p>
+          <p class="text-sm text-gray-400 leading-relaxed" data-i18n="index.features.6.detail">Kopie robocze pozwalają ci odgałęzić się od projektu, by wypróbować radykalnie nowy projekt lub ryzykowny refaktoring, a następnie scalić zmiany z powrotem, gdy będą gotowe — lub usunąć kopię roboczą, jeśli eksperyment się nie powiódł. Twój główny projekt pozostaje przez cały czas nietknięty.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- USE CASES — HIDDEN                           -->
+  <!-- ============================================ -->
+  <section class="py-20 md:py-32">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900" data-i18n-html="index.usecases.title">Kto używa Keeply i do jakich zadań jest stworzony?</h2>
+        <p class="mt-4 text-gray-500 text-lg max-w-2xl mx-auto" data-i18n="index.usecases.answer">Menedżerowie projektów, projektanci, prawnicy, akademicy, inżynierowie i zespoły zdalne — każdy, kto potrzebuje długiej historii wersji, kontekstu decyzji lub ucieczki od chaosu nazw „final_v3&quot;. Pliki pozostają na Twoim dysku, pod Twoją kontrolą, nigdy na serwerze dostawcy.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Use case cards -->
+        <div class="group bg-gradient-to-br from-brand-50 to-white rounded-2xl p-8 border border-brand-100 hover:shadow-lg transition-all">
+          <div class="text-3xl mb-4">📋</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2" data-i18n="index.usecases.pm.title">Zarządzanie projektami</h3>
+          <p class="text-gray-500 text-sm leading-relaxed" data-i18n="index.usecases.pm.desc">Każdy plik w Twoim projekcie ma swoją historię. Jedna notatka sprzed sześciu miesięcy może uratować cały projekt.</p>
+        </div>
+
+        <div class="group bg-gradient-to-br from-amber-50 to-white rounded-2xl p-8 border border-amber-100 hover:shadow-lg transition-all">
+          <div class="text-3xl mb-4">🎨</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2" data-i18n="index.usecases.design.title">Design i kreacja</h3>
+          <p class="text-gray-500 text-sm leading-relaxed" data-i18n="index.usecases.design.desc">Gdy klient mówi &quot;Właściwie wolę pierwszą wersję&quot; — potrzebujesz tylko trzech sekund. Każda wersja jest na miejscu.</p>
+        </div>
+
+        <div class="group bg-gradient-to-br from-green-50 to-white rounded-2xl p-8 border border-green-100 hover:shadow-lg transition-all">
+          <div class="text-3xl mb-4">⚖️</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2" data-i18n="index.usecases.legal.title">Prawo i umowy</h3>
+          <p class="text-gray-500 text-sm leading-relaxed" data-i18n="index.usecases.legal.desc">Siedemnaście wersji umowy, a każda jest zachowana. Kto zmienił, kiedy i dlaczego — krystalicznie jasne.</p>
+        </div>
+
+        <div class="group bg-gradient-to-br from-purple-50 to-white rounded-2xl p-8 border border-purple-100 hover:shadow-lg transition-all">
+          <div class="text-3xl mb-4">📚</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2" data-i18n="index.usecases.academic.title">Badania naukowe</h3>
+          <p class="text-gray-500 text-sm leading-relaxed" data-i18n="index.usecases.academic.desc">Praca_dyplomowa_ostateczna_NAPRAWDE_ostateczna_v3.docx? Śledź z Keeply i nigdy więcej się nie pogub.</p>
+        </div>
+
+        <div class="group bg-gradient-to-br from-orange-50 to-white rounded-2xl p-8 border border-orange-100 hover:shadow-lg transition-all">
+          <div class="text-3xl mb-4">🏗️</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2" data-i18n="index.usecases.construction.title">Budownictwo i AEC</h3>
+          <p class="text-gray-500 text-sm leading-relaxed" data-i18n="index.usecases.construction.desc">Inżynier budowy bierze pendrive USB na spotkanie z klientem. Administrator zatwierdza lokalizację kopii zapasowej — i cofa ją, gdy projekt się kończy.</p>
+        </div>
+
+        <div class="group bg-gradient-to-br from-cyan-50 to-white rounded-2xl p-8 border border-cyan-100 hover:shadow-lg transition-all">
+          <div class="text-3xl mb-4">🌐</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2" data-i18n="index.usecases.remote.title">Zespoły zdalne i hybrydowe</h3>
+          <p class="text-gray-500 text-sm leading-relaxed" data-i18n="index.usecases.remote.desc">Zespół biurowy na NAS, zdalny projektant na GitHub. Ten sam sejf, ta sama historia wersji — wszyscy pozostają zsynchronizowani.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- HOW IT WORKS — HIDDEN                        -->
+  <!-- ============================================ -->
+  <section class="py-20 md:py-32 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900" data-i18n-html="index.howto.title">Jak zacząć korzystać z Keeply i ile to zajmuje?</h2>
+        <p class="mt-4 text-gray-500 text-lg" data-i18n="index.howto.subtitle">Trzy kroki: pobierz i zainstaluj (30 sekund), wybierz folder, zacznij chronić. Bez konta, bez serwera, bez poleceń do nauczenia. Działa na Windows 10+ i macOS Apple Silicon. Chcesz cofnąć zmianę? Jedno kliknięcie.</p>
+      </div>
+
+      <div class="space-y-8">
+        <div class="flex items-start gap-6">
+          <div class="w-12 h-12 bg-brand-600 text-white rounded-full flex items-center justify-center text-lg font-bold flex-shrink-0">1</div>
+          <div>
+            <h3 class="text-lg font-bold text-gray-900" data-i18n="index.howto.step1.title">Pobierz i zainstaluj</h3>
+            <p class="text-gray-500 mt-1" data-i18n="index.howto.step1.desc">Gotowe w 30 sekund. Obsługuje Windows 10+ i macOS.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-6">
+          <div class="w-12 h-12 bg-brand-600 text-white rounded-full flex items-center justify-center text-lg font-bold flex-shrink-0">2</div>
+          <div>
+            <h3 class="text-lg font-bold text-gray-900" data-i18n="index.howto.step2.title">Wybierz folder</h3>
+            <p class="text-gray-500 mt-1" data-i18n="index.howto.step2.desc">Dowolny folder, w którym pracujesz — projekty, umowy, pliki graficzne.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-6">
+          <div class="w-12 h-12 bg-amber-500 text-white rounded-full flex items-center justify-center text-lg font-bold flex-shrink-0">3</div>
+          <div>
+            <h3 class="text-lg font-bold text-gray-900" data-i18n="index.howto.step3.title">Zacznij chronić</h3>
+            <p class="text-gray-500 mt-1" data-i18n="index.howto.step3.desc">Od teraz każda zmiana jest zapamiętywana. Chcesz wrócić? Jedno kliknięcie.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- COMPARE WITH… (spec 043 B1: 6 對手卡片入口)   -->
+  <!-- ============================================ -->
+  <section id="compare-cards" class="py-20 md:py-28 bg-gray-50/50">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900" data-i18n="index.compare.title">Czym Keeply różni się od Dropbox, Google Drive lub Git?</h2>
+        <p class="mt-4 text-gray-500 text-lg max-w-2xl mx-auto" data-i18n="index.compare.subtitle">Dropbox i Google Drive synchronizują bieżący plik i kasują historię wersji po 30 dniach; Git jest dla inżynierów ze stromą krzywą uczenia się. Keeply przepisuje kontrolę wersji dla plików lokalnych: każda wersja przechowywana na zawsze, brak uzależnienia od chmury, brak bariery technicznej, zainstaluj i działaj.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <a href="/compare/filename-chaos.html" class="group bg-white p-5 rounded-2xl border border-gray-100 hover:border-brand-200 hover:shadow-md transition-all flex items-center gap-4">
+          <span class="flex-shrink-0 w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center text-2xl">📁</span>
+          <span class="flex-1">
+            <span class="block text-base font-bold text-gray-900 group-hover:text-brand-700 transition-colors">vs v1/v2/FINAL</span>
+            <span class="block text-xs text-gray-400 mt-0.5" data-i18n="index.compare.card.filename-chaos.sub">Chaos nazw plików</span>
+          </span>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-brand-500 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+        </a>
+
+        <a href="/compare/dropbox.html" class="group bg-white p-5 rounded-2xl border border-gray-100 hover:border-brand-200 hover:shadow-md transition-all flex items-center gap-4">
+          <span class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center text-2xl">📘</span>
+          <span class="flex-1">
+            <span class="block text-base font-bold text-gray-900 group-hover:text-brand-700 transition-colors">vs Dropbox</span>
+            <span class="block text-xs text-gray-400 mt-0.5" data-i18n="index.compare.card.dropbox.sub">Limit 30 dni</span>
+          </span>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-brand-500 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+        </a>
+
+        <a href="/compare/google-drive.html" class="group bg-white p-5 rounded-2xl border border-gray-100 hover:border-brand-200 hover:shadow-md transition-all flex items-center gap-4">
+          <span class="flex-shrink-0 w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center text-2xl">🟢</span>
+          <span class="flex-1">
+            <span class="block text-base font-bold text-gray-900 group-hover:text-brand-700 transition-colors">vs Google Drive</span>
+            <span class="block text-xs text-gray-400 mt-0.5" data-i18n="index.compare.card.google-drive.sub">Historia ukryta w menu</span>
+          </span>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-brand-500 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+        </a>
+
+        <a href="/compare/time-machine.html" class="group bg-white p-5 rounded-2xl border border-gray-100 hover:border-brand-200 hover:shadow-md transition-all flex items-center gap-4">
+          <span class="flex-shrink-0 w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center text-2xl">🍎</span>
+          <span class="flex-1">
+            <span class="block text-base font-bold text-gray-900 group-hover:text-brand-700 transition-colors">vs Time Machine</span>
+            <span class="block text-xs text-gray-400 mt-0.5" data-i18n="index.compare.card.time-machine.sub">Poziom systemu, brak widoku projektu</span>
+          </span>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-brand-500 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+        </a>
+
+        <a href="/compare/snowtrack.html" class="group bg-white p-5 rounded-2xl border border-gray-100 hover:border-brand-200 hover:shadow-md transition-all flex items-center gap-4">
+          <span class="flex-shrink-0 w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center text-2xl">🎨</span>
+          <span class="flex-1">
+            <span class="block text-base font-bold text-gray-900 group-hover:text-brand-700 transition-colors">vs Snowtrack</span>
+            <span class="block text-xs text-gray-400 mt-0.5" data-i18n="index.compare.card.snowtrack.sub">Teraz tylko enterprise (P4 One)</span>
+          </span>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-brand-500 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+        </a>
+
+        <a href="/compare/email-usb.html" class="group bg-white p-5 rounded-2xl border border-gray-100 hover:border-brand-200 hover:shadow-md transition-all flex items-center gap-4">
+          <span class="flex-shrink-0 w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center text-2xl">📧</span>
+          <span class="flex-1">
+            <span class="block text-base font-bold text-gray-900 group-hover:text-brand-700 transition-colors">vs Email / USB</span>
+            <span class="block text-xs text-gray-400 mt-0.5" data-i18n="index.compare.card.email-usb.sub">Automatyzacja kopii ręcznych</span>
+          </span>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-brand-500 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+        </a>
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="/compare/" class="inline-flex items-center gap-2 text-sm font-medium text-brand-600 hover:text-brand-700 transition-colors">
+          <span data-i18n="index.compare.cta">Zobacz wszystkie porównania</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- PRICING — HIDDEN                             -->
+  <!-- ============================================ -->
+  <section id="pricing" class="py-20 md:py-32">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900" data-i18n-html="index.pricing.title">Ile kosztuje Keeply i czy zespoły płacą za użytkownika?</h2>
+        <p class="mt-4 text-gray-500 text-lg max-w-xl mx-auto" data-i18n="index.pricing.subtitle">Wersja indywidualna jest darmowa na zawsze, bez wygaśnięcia; plan Team to ryczałtowe 25 $/miesiąc (bez limitu użytkowników) z plikami na własnym NAS. Founding Member to jednorazowa wieczysta licencja za 599 $, ograniczona do 500 kupujących. Bez subskrypcji, bez opłat za stanowisko.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+        <!-- Free -->
+        <div class="bg-white rounded-2xl border-2 border-gray-100 p-8 text-center">
+          <div class="text-sm font-medium text-gray-400 mb-2" data-i18n="index.pricing.free.label">Darmowy</div>
+          <div class="text-5xl font-bold text-gray-900" data-i18n="index.pricing.free.price">Za darmo</div>
+          <div class="text-sm text-gray-400 mt-2 mb-8" data-i18n="index.pricing.free.desc">Dla osób indywidualnych i małych studiów. Za darmo na zawsze.</div>
+          <ul class="text-sm text-gray-600 space-y-3 text-left mb-8">
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.free.feat.1">Nieograniczona historia wersji</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.free.feat.2">Przywracanie jednym kliknięciem do dowolnej wersji</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.free.feat.3">Porównanie zmian</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.free.feat.4">Notatki do wersji</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.free.feat.5">Pamięć lokalna i NAS (tryb Standardowy lub Chroniony)</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.free.feat.6">Porównywanie plików</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.free.feat.7">Nieograniczona liczba użytkowników</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.free.feat.8">1 Canonical + 1 Shared Mirror + nieograniczone wydania</span></li>
+          </ul>
+          <a href="#download" class="block border-2 border-gray-200 hover:border-brand-300 text-gray-700 hover:text-brand-700 font-medium py-3.5 rounded-full transition-all" data-i18n="index.pricing.free.cta">Pobierz za darmo</a>
+        </div>
+
+        <!-- Team -->
+        <div class="bg-white rounded-2xl border-2 border-brand-500 p-8 text-center relative shadow-lg shadow-brand-500/10">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-500 text-white text-xs font-bold px-4 py-1 rounded-full" data-i18n="index.pricing.team.badge">Wkrótce</div>
+          <div class="text-sm font-medium text-brand-600 mb-2" data-i18n="index.pricing.team.label">Zespół</div>
+          <div class="flex items-baseline justify-center gap-1">
+            <span class="text-5xl font-bold text-gray-900" data-i18n="index.pricing.team.price">$25</span>
+            <span class="text-lg text-gray-400" data-i18n="index.pricing.team.period">/mies.</span>
+          </div>
+          <div class="text-sm text-gray-400 mt-2 mb-1" data-i18n="index.pricing.team.annual">lub $250/rok (oszczędź 2 miesiące)</div>
+          <div class="text-xs text-brand-500 mb-8" data-i18n="index.pricing.team.flat">Jedna cena, bez opłat za użytkownika</div>
+          <ul class="text-sm text-gray-600 space-y-3 text-left mb-8">
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.team.feat.1">Wszystko z Free</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.team.feat.2">Zarządzanie zespołem przez kod zaproszenia</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.team.feat.3">Panel administratora vault z prośbami o lokalizację (planowane)</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.team.feat.4">Priorytetowe wsparcie techniczne</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.team.feat.5">30-dniowa gwarancja zwrotu pieniędzy</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.team.feat.6">Licencja wieczysta po 12 miesiącach</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.team.feat.7">Zarządzanie Shared Mirror: kontrola administratora, zapobieganie przypadkowym zmianom Canonical (planowane)</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.team.feat.8">Wykrywanie i rozwiązywanie konfliktów</span></li>
+          </ul>
+          <p class="text-sm text-gray-500 mb-3" data-i18n="index.pricing.team.coming">Obecnie w trakcie rozwoju. Zostaw swój email, aby otrzymać powiadomienie o premierze.</p>
+          <form id="team-notify-form">
+            <div class="grid grid-cols-2 gap-2 mb-2">
+              <input type="text" id="tn-name" required placeholder="Name" data-i18n="index.pricing.team.name.placeholder" class="border border-gray-200 rounded-full px-4 py-3 text-sm focus:outline-none focus:border-brand-400" />
+              <input type="email" id="tn-email" required placeholder="your@email.com" data-i18n="index.pricing.team.placeholder" class="border border-gray-200 rounded-full px-4 py-3 text-sm focus:outline-none focus:border-brand-400" />
+            </div>
+            <label class="flex items-center gap-2 text-xs text-gray-400 cursor-pointer mb-3">
+              <input type="checkbox" id="tn-newsletter" class="rounded border-gray-300" />
+              <span data-i18n="index.pricing.team.newsletter">Chcę też otrzymywać aktualizacje produktu i newsletter Keeply</span>
+            </label>
+            <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-medium py-3 rounded-full transition-all text-sm" data-i18n="index.pricing.team.cta.notify">Powiadom mnie</button>
+          </form>
+          <p id="team-notify-thanks" class="text-sm text-green-600 font-medium" style="display:none" data-i18n="index.pricing.team.thanks">Otrzymano! Powiadomimy Cię, gdy plan Team zostanie uruchomiony.</p>
+        </div>
+      </div>
+
+      <!-- Early Access Perpetual -->
+      <div class="mt-8 max-w-3xl mx-auto">
+        <div class="bg-gradient-to-r from-amber-50 to-brand-50 border border-amber-200 rounded-2xl px-8 py-6 text-center">
+          <div class="inline-flex items-center gap-2 bg-amber-500 text-white text-xs font-bold px-4 py-1 rounded-full mb-3" data-i18n="index.pricing.perpetual.badge">Early Access · Limit 500 sztuk</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-1" data-i18n="index.pricing.perpetual.title">Licencja wieczysta — $599 jednorazowy zakup</h3>
+          <p class="text-sm text-gray-500 max-w-lg mx-auto leading-relaxed mb-5" data-i18n="index.pricing.perpetual.desc">Zawiera wszystkie funkcje Zespołu, używaj wersji z daty zakupu na zawsze. Do wyczerpania zapasów.</p>
+          <a href="buy.html" class="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 active:bg-amber-700 text-white font-bold px-7 py-3 rounded-full shadow-lg shadow-amber-500/30 transition-all" data-i18n="index.pricing.perpetual.cta">Kup teraz — $599</a>
+        </div>
+      </div>
+
+      <!-- Team Vault explanation -->
+      <div class="mt-12 max-w-3xl mx-auto">
+        <div class="bg-gray-50 border border-gray-200 rounded-2xl px-8 py-6">
+          <p class="text-sm font-bold text-brand-600 mb-1" data-i18n="index.teamvault.tagline">Jeden sejf. Jeden zespół. Pełna kontrola.</p>
+          <h3 class="text-lg font-bold text-gray-900 mb-3" data-i18n="index.teamvault.title">Czym jest &quot;Sejf Zespołowy&quot;?</h3>
+          <p class="text-sm text-gray-600 leading-relaxed mb-3" data-i18n="index.teamvault.desc">Team Vault korzysta z topologii „1 Canonical + 1 Shared Mirror&quot;: Canonical jest źródłem prawdy dla wersji projektu (NAS, folder współdzielony lub dysk zewnętrzny); Shared Mirror to pełna migawka synchronizowana z Canonical, dzięki czemu każdy członek zespołu może szybko uzyskać najnowszą wersję. Każdy członek ma także własną kopię roboczą. Format danych może być w trybie Standardowym (przeglądanie i edycja plików bezpośrednio) lub w trybie Chronionym (zapobieganie destrukcyjnym zmianom historii).</p>
+          <p class="text-sm text-brand-600 font-medium mb-3" data-i18n="index.teamvault.highlight">Bez uzależnienia od chmury. Bez opłat za użytkownika. Twoje dane zostają na twoim sprzęcie.</p>
+          <div class="grid md:grid-cols-2 gap-3 mt-3">
+            <div class="bg-white rounded-lg px-4 py-3 border border-gray-100">
+              <p class="text-xs font-bold text-gray-500 mb-1">Free</p>
+              <p class="text-sm text-gray-600" data-i18n="index.teamvault.free">Darmowy: 1 Canonical + 1 Shared Mirror, w pełni samodzielnie zarządzane. Bez konieczności zatwierdzania, bez okresów oczekiwania.</p>
+            </div>
+            <div class="bg-white rounded-lg px-4 py-3 border border-brand-100">
+              <p class="text-xs font-bold text-brand-500 mb-1">Team</p>
+              <p class="text-sm text-gray-600" data-i18n="index.teamvault.team">Plan Zespołowy (planowany): ta sama topologia 1 Canonical + 1 Shared Mirror, dodatkowo zarządzanie członkami, zarządzanie lokalizacją Shared Mirror (zatwierdzanie przez administratora i ograniczanie częstotliwości zmian, aby lokalizacja nie była lekkomyślnie zmieniana zakłócając pracę zespołu), wykrywanie konfliktów oraz dzienniki aktywności zespołu.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- DOWNLOAD CTA                                 -->
+  <!-- ============================================ -->
+  <section id="download" class="py-20 md:py-32 bg-gradient-to-br from-brand-600 via-brand-700 to-brand-800 text-white relative overflow-hidden">
+    <!-- Decorative -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-amber-400/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-brand-400/20 rounded-full blur-3xl"></div>
+
+    <div class="max-w-3xl mx-auto px-6 text-center relative">
+      <h2 class="text-3xl md:text-5xl font-bold leading-tight" data-i18n="index.download.title">Jak pobrać Keeply i czy jest płatny?</h2>
+      <p class="mt-6 text-brand-200 text-lg max-w-xl mx-auto leading-relaxed" data-i18n="index.download.subtitle">Darmowe pobieranie, instalacja w 30 sekund, gotowy do użycia. Obsługuje Windows 10/11 i macOS Apple Silicon. Bez karty kredytowej, bez wygaśnięcia okresu próbnego, bez zakładania konta. Po instalacji otwórz dowolny folder — każde zapisanie staje się automatycznie śledzoną wersją.</p>
+
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-4">
+        <!-- Windows column -->
+        <div class="flex flex-col items-center gap-2 max-w-sm w-full">
+          <a id="download-btn-win"
+             href="https://github.com/boy1690/keeply-releases/releases/download/v1.0.10/Keeply_1.0.10_x64-setup.exe"
+             class="group bg-white text-brand-700 font-bold px-8 py-4 rounded-full text-lg transition-all hover:shadow-xl hover:shadow-black/10 flex items-center justify-center gap-3 min-w-[260px]">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M3 5.479L10.5 4.5V11.5H3V5.479zM11.5 4.363L21 3V11.5H11.5V4.363zM3 12.5H10.5V19.521L3 18.521V12.5zM11.5 12.5H21V21L11.5 19.637V12.5z"/>
+            </svg>
+            <span data-i18n="index.download.cta.win">Pobierz za darmo dla Windows</span>
+          </a>
+          <p class="text-xs text-brand-300" data-i18n="index.download.note.win">Windows 10 lub nowszy</p>
+          <details class="mt-3 text-left verify-disclosure w-full">
+            <summary class="verify-summary"><span class="verify-arrow">›</span><span data-i18n="index.download.verify.label">🔐 Zweryfikuj integralność pobrania</span></summary>
+            <div class="mt-3 verify-box">
+              <div class="verify-section">
+                <div class="verify-label">SHA-256</div>
+                <code class="verify-code">7d0b0c8797c87b38f34611c20b12d680ee0d24ab5ad14d6b8117cc666024f59b</code>
+              </div>
+              <div class="verify-section">
+                <div class="verify-label" data-i18n="index.download.verify.cmdLabel.win">Polecenie weryfikacji PowerShell</div>
+                <code class="verify-code">Get-FileHash $HOME\Downloads\Keeply_1.0.10_x64-setup.exe -Algorithm SHA256</code>
+              </div>
+              <p class="verify-note" data-i18n="index.download.verify.howto">Wynikowa wartość skrótu powinna być zgodna z wartością powyżej — jeśli jest zgodna, plik jest oficjalny i niezmodyfikowany.</p>
+            </div>
+          </details>
+          <details class="mt-2 text-left verify-disclosure w-full">
+            <summary class="verify-summary"><span class="verify-arrow">›</span><span data-i18n="index.download.winget.label">📦 Zainstaluj przez winget</span></summary>
+            <div class="mt-3 verify-box">
+              <div class="verify-section">
+                <div class="verify-label" data-i18n="index.download.winget.cmdLabel">Polecenie PowerShell</div>
+                <code class="verify-code">winget install Boy1690.Keeply</code>
+              </div>
+              <p class="verify-note" data-i18n="index.download.winget.howto">Wymaga Windows Package Manager (wbudowanego w Windows 10 1809+ / Windows 11). Pakiet opublikowany w oficjalnym repo microsoft/winget-pkgs.</p>
+            </div>
+          </details>
+        </div>
+
+        <!-- Mac column -->
+        <div class="flex flex-col items-center gap-2 max-w-sm w-full">
+          <a id="download-btn-mac"
+             href="https://github.com/boy1690/keeply-releases/releases/download/v1.0.10/Keeply_1.0.10_aarch64.dmg"
+             class="group bg-white text-brand-700 font-bold px-8 py-4 rounded-full text-lg transition-all hover:shadow-xl hover:shadow-black/10 flex items-center justify-center gap-3 min-w-[260px]">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+            <span data-i18n="index.download.cta.mac">Pobierz za darmo dla macOS</span>
+          </a>
+          <p class="text-xs text-brand-300" data-i18n="index.download.note.mac">Tylko Apple Silicon</p>
+          <details class="mt-3 text-left verify-disclosure w-full">
+            <summary class="verify-summary"><span class="verify-arrow">›</span><span data-i18n="index.download.verify.label">🔐 Zweryfikuj integralność pobrania</span></summary>
+            <div class="mt-3 verify-box">
+              <div class="verify-section">
+                <div class="verify-label">SHA-256</div>
+                <code class="verify-code">3a8a4df481521971506792f87d53e014018387d9bc4dd8bf2ec15ad7a9ee883a</code>
+              </div>
+              <div class="verify-section">
+                <div class="verify-label" data-i18n="index.download.verify.cmdLabel.mac">Polecenie weryfikacji w Terminalu</div>
+                <code class="verify-code">shasum -a 256 ~/Downloads/Keeply_1.0.10_aarch64.dmg</code>
+              </div>
+              <p class="verify-note" data-i18n="index.download.verify.howto">Wynikowa wartość skrótu powinna być zgodna z wartością powyżej — jeśli jest zgodna, plik jest oficjalny i niezmodyfikowany.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <p class="mt-8 text-sm text-brand-300" data-i18n="index.download.note.shared">Za darmo do użytku osobistego, na zawsze.</p>
+
+      <p class="mt-3 text-xs text-brand-400">
+        <a href="https://github.com/boy1690/keeply-releases/releases/latest" class="underline hover:text-white transition-colors" data-i18n="index.download.allversions">Zobacz wszystkie wydania</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- FAQ (spec 029 — Homepage FAQPage schema)      -->
+  <!-- ============================================ -->
+  <section id="faq" class="py-16 md:py-20 bg-gray-50">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center" data-i18n="index.faq.title">Najczęściej zadawane pytania</h2>
+      <div class="space-y-3">
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.1.q">Czy Keeply działa offline?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.1.a">Tak. Keeply to w pełni lokalne oprogramowanie — bez chmury, bez konta, bez zależności od sieci. Twoje pliki projektów, historia wersji i notatki zostają na twoim dysku twardym lub NAS. Możesz używać Keeply w trybie samolotowym, w piwnicy albo na komputerze całkowicie odciętym od sieci. Jedyny moment, w którym Keeply łączy się z internetem, to sprawdzanie aktualizacji App — i to też możesz wyłączyć.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.2.q">Czym Keeply różni się od Dropbox czy Google Drive?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.2.a">Dropbox i Google Drive synchronizują aktualny stan plików; Keeply zapisuje każdą wersję jako osobny snapshot. Dropbox i Drive pobierają opłatę za użytkownika miesięcznie; Keeply jest darmowe dla osób indywidualnych i będzie miało stałą cenę $25/month w planie Team (wkrótce), niezależnie od wielkości zespołu. Twoje pliki żyją na twoim dysku, a nie na serwerze dostawcy, więc nie jesteś zamknięty w subskrypcji.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.3.q">Co stanie się z moimi plikami, jeśli przestanę płacić?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.3.a">Nic. Pliki Keeply są przechowywane na twoim dysku twardym lub NAS w standardowej strukturze folderów, którą kontrolujesz. Nawet jeśli odinstalujesz Keeply, pliki i ich historia wersji pozostają czytelne dla dowolnego menedżera plików. Nie płacisz za dostęp do własnej pracy — licencja Founding Member to jednorazowa płatność wieczysta, a darmowy plan pozostaje darmowy na zawsze.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.4.q">Czy mój zespół może dzielić się plikami bez licencji per użytkownik?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.4.a">Tak. W darmowym planie zespoły już dzielą jeden folder vault przez NAS lub dysk współdzielony — Keeply nie liczy miejsc. Nadchodzący Team plan ($25/month stałe, planowane) dodaje onboarding przez kod zaproszenia i panel administratora, ale nadal bez opłat per użytkownik. Porównaj to z Dropbox Business za $20 za miejsce miesięcznie, co wychodzi $120/month dla 6-person team.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.5.q">Jakie typy plików obsługuje Keeply?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.5.a">Dowolne. Keeply pokazuje wizualny diff obok siebie dla Word, Excel, PowerPoint, PDF i obrazów. Dla każdego innego typu pliku — Blender, PSD, wideo, CAD, modele 3D, kod źródłowy — Keeply śledzi wersje i pozwala przywrócić dowolny punkt w kilka sekund. Pliki większe niż 10MB oraz 38 znanych formatów binarnych są automatycznie wykrywane i kierowane do magazynu dużych plików bez żadnej konfiguracji LFS.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.6.q">Czy jest wersja na Linux?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.6.a">Keeply jest obecnie dostępne na Windows 10 lub nowszy oraz macOS na Apple Silicon. Wersja na Linux jest w roadmap, ale jeszcze się nie ukazała. Jeśli obsługa Linux jest kluczowa dla twojego workflow, daj nam znać przez formularz kontaktowy — priorytetyzujemy obsługę platform na podstawie realnego zapotrzebowania użytkowników, a każde zgłoszenie jest rejestrowane.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.7.q">Czym jest plan Founding Member za $599?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.7.a">To jednorazowa płatność za licencję wieczystą, ograniczona do pierwszych 500 kupujących. Dostajesz aktualne funkcje Keeply na zawsze, plus wszystkie funkcje Team plan automatycznie, gdy Team plan zostanie wydany. Bez cyklicznych płatności, bez nagłych podwyżek. Dla porównania: $25/month przez 24 miesiące to $600 — Founding Member zwraca się w niecałe dwa lata i działa dalej.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (injected by components.js) -->
+  <div id="footer-root"></div>
+
+  <!-- Shared components + i18n + consent (spec 023) -->
+  <script src="../consent-api.b29ceadb9e.js" defer integrity="sha384-AgMsIGCbo9mV0oP2ebvR5aNCzNPtSkIGXG5v29yY6A+vEktkTMAOZtlK0WiKSEUR" crossorigin="anonymous"></script>
+  <script src="../components.a5dd3847dd.js" defer integrity="sha384-BdwwJdZy8d/q4lISMhozafEB4OYKFnqFwBsorzvEe5asU6ZWR4QN+keuXZNXxUKy" crossorigin="anonymous"></script>
+  <script src="../cookie-banner.8a90f5095a.js" defer integrity="sha384-FkrIUHI4EiKuF7c0lI0I+k/SpAC6SN6GAiU3tqGZBNs1nvMH4R/g+hpuVB/UGk63" crossorigin="anonymous"></script>
+  <script src="../ga4-loader.f5ebaf533f.js" defer integrity="sha384-U+G0F+gL0htHsJ1w1r/1uHQ1cyT+IbcPNBAtAN3Gx37qoxqkn9eBS7VsV04cuebt" crossorigin="anonymous"></script>
+  <script src="../clarity-loader.60a9a5160f.js" defer integrity="sha384-rdROtDi/pws+RrJtXaeyRY20mP1RJMaVL3DuCPi4UU7tkWHea6vyx01XW/4tbkL/" crossorigin="anonymous"></script>
+  <script src="../i18n-loader.60a9511617.js" defer integrity="sha384-vrXulbm1vtNZF9G412NN3Ll2B+Am3PVt6yq5HKpmdpEbVA1qzagN3rtzt2hz+hQt" crossorigin="anonymous"></script>
+  <script src="../team-notify.73d70ab047.js" defer integrity="sha384-kQUIeDWtAKHyIrSPoncROrE3SSvzakx5e3Ll8GT1Zjgqqr7nAyhVHZ7qyXYC+wVU" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

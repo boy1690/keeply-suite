@@ -1,0 +1,52 @@
+# Keeply main site robots.txt — 2026-05-17 policy
+# Mirror of keeply-blog/static/robots.txt: open all major AI crawlers
+# (training + retrieval) to maximize citation surface.
+User-agent: *
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+User-agent: Twitterbot
+Allow: /
+User-agent: LinkedInBot
+Allow: /
+User-agent: Slackbot
+Allow: /
+User-agent: Discordbot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: Claude-User
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+
+# REVERSE DEFAULT - 必須顯式 Allow
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: CCBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Amazonbot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Disallow: /
+User-agent: Diffbot
+Disallow: /
+
+Sitemap: https://keeply.work/sitemap.xml

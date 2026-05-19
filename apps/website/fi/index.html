@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="fi" class="scroll-smooth" data-i18n-title="index.meta.title" data-i18n-desc="index.meta.description">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#4F46E5" />
+  <!-- Content Security Policy (spec 019). frame-ancestors / HSTS / Permissions-Policy
+       are header-only and deferred to future Cloudflare migration (audit #8). -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://static.cloudflareinsights.com https://*.clarity.ms https://cdn.paddle.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com https://*.clarity.ms; font-src 'self'; connect-src 'self' https://docs.google.com https://*.google-analytics.com https://*.analytics.google.com https://cloudflareinsights.com https://*.clarity.ms; form-action 'self' https://docs.google.com; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <title>Keeply — Tiedostoillasi on tarinoita. Keeply muistaa ne kaikki.</title>
+  <meta name="description" content="Helpoin tapa hallita tiedostoversioita ilman teknistä osaamista. Lataa ilmaiseksi, valmis 30 sekunnissa." />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://keeply.work/fi/" />
+
+  <!-- Hreflang (19 languages + x-default) -->
+  <link rel="alternate" hreflang="zh-TW" href="https://keeply.work/zh-TW/" />
+  <link rel="alternate" hreflang="zh-CN" href="https://keeply.work/zh-CN/" />
+  <link rel="alternate" hreflang="en" href="https://keeply.work/en/" />
+  <link rel="alternate" hreflang="ja" href="https://keeply.work/ja/" />
+  <link rel="alternate" hreflang="ko" href="https://keeply.work/ko/" />
+  <link rel="alternate" hreflang="de" href="https://keeply.work/de/" />
+  <link rel="alternate" hreflang="fr" href="https://keeply.work/fr/" />
+  <link rel="alternate" hreflang="es" href="https://keeply.work/es/" />
+  <link rel="alternate" hreflang="pt" href="https://keeply.work/pt/" />
+  <link rel="alternate" hreflang="it" href="https://keeply.work/it/" />
+  <link rel="alternate" hreflang="nl" href="https://keeply.work/nl/" />
+  <link rel="alternate" hreflang="pl" href="https://keeply.work/pl/" />
+  <link rel="alternate" hreflang="cs" href="https://keeply.work/cs/" />
+  <link rel="alternate" hreflang="hu" href="https://keeply.work/hu/" />
+  <link rel="alternate" hreflang="tr" href="https://keeply.work/tr/" />
+  <link rel="alternate" hreflang="fi" href="https://keeply.work/fi/" />
+  <link rel="alternate" hreflang="sv" href="https://keeply.work/sv/" />
+  <link rel="alternate" hreflang="no" href="https://keeply.work/no/" />
+  <link rel="alternate" hreflang="da" href="https://keeply.work/da/" />
+  <link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+  <!-- Hreflang (19 languages + x-default) -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Favicon -->
+  <link rel="icon" href="../favicon.ico" sizes="32x32" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://keeply.work/fi/" />
+  <meta property="og:title" content="Keeply — Tiedostoillasi on tarinoita. Keeply muistaa ne kaikki." />
+  <meta property="og:description" content="Helpoin tapa hallita tiedostoversioita ilman teknistä osaamista. Lataa ilmaiseksi, valmis 30 sekunnissa." />
+  <meta property="og:image" content="https://keeply.work/og-image.png" />
+  <meta property="og:image:secure_url" content="https://keeply.work/og-image.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Keeply — Tiedostoillasi on tarinoita. Keeply muistaa ne kaikki." />
+  <meta property="og:site_name" content="Keeply" />
+  <meta property="og:locale" content="fi_FI" />
+  <meta property="og:locale:alternate" content="zh_TW" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="ja_JP" />
+  <meta property="og:locale:alternate" content="ko_KR" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:locale:alternate" content="es_ES" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="it_IT" />
+  <meta property="og:locale:alternate" content="nl_NL" />
+  <meta property="og:locale:alternate" content="pl_PL" />
+  <meta property="og:locale:alternate" content="cs_CZ" />
+  <meta property="og:locale:alternate" content="hu_HU" />
+  <meta property="og:locale:alternate" content="tr_TR" />
+  <meta property="og:locale:alternate" content="sv_SE" />
+  <meta property="og:locale:alternate" content="nb_NO" />
+  <meta property="og:locale:alternate" content="da_DK" />
+<!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Keeply — Tiedostoillasi on tarinoita. Keeply muistaa ne kaikki." />
+  <meta name="twitter:description" content="Helpoin tapa hallita tiedostoversioita ilman teknistä osaamista. Lataa ilmaiseksi, valmis 30 sekunnissa." />
+  <meta name="twitter:image" content="https://keeply.work/og-image.png" />
+  <meta name="twitter:image:alt" content="Keeply — Tiedostoillasi on tarinoita. Keeply muistaa ne kaikki." />
+
+  <!-- Tailwind CSS (compiled) -->
+  <link rel="preload" href="../style.css" as="style" integrity="sha384-StVcXtMksUhM8v9Z5e/ptrBnGyMvDgaZCTHXZ85oaFKXvrtpXmx3F2fSXUe3lcuY" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../style.css" integrity="sha384-StVcXtMksUhM8v9Z5e/ptrBnGyMvDgaZCTHXZ85oaFKXvrtpXmx3F2fSXUe3lcuY" crossorigin="anonymous" />
+
+  <!-- M PLUS Rounded 1c font preload (eliminates CLS from late font discovery) -->
+  <link rel="preload" href="../fonts/MPLUSRounded1c-Regular-v2.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+  <link rel="preload" href="../fonts/MPLUSRounded1c-Medium-v2.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+  <link rel="preload" href="../fonts/MPLUSRounded1c-Bold-v2.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+
+  <!-- M PLUS Rounded 1c (self-hosted via input.css @font-face) -->
+
+  <!-- JSON-LD Structured Data injected post-build by _dev/inject-schema.js (spec 017) -->  <!-- Schema.org JSON-LD (injected by _dev/inject-schema.js) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://keeply.work/#organization",
+        "name": "Keeply",
+        "url": "https://keeply.work",
+        "logo": "https://keeply.work/logo.svg",
+        "sameAs": [
+          "https://keeply.work",
+          "https://blog.keeply.work",
+          "https://github.com/boy1690/keeply-releases",
+          "https://www.linkedin.com/in/ting-wei-tsao-b57480152/"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://keeply.work/#website",
+        "url": "https://keeply.work/fi/",
+        "name": "Keeply",
+        "inLanguage": "fi",
+        "publisher": {
+          "@id": "https://keeply.work/#organization"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://keeply.work/#software",
+        "name": "Keeply",
+        "operatingSystem": "Windows, macOS",
+        "applicationCategory": "UtilitiesApplication",
+        "softwareVersion": "1.0.10",
+        "description": "Helpoin tapa hallita tiedostoversioita ilman teknistä osaamista. Lataa ilmaiseksi, valmis 30 sekunnissa.",
+        "url": "https://keeply.work/fi/",
+        "downloadUrl": "https://github.com/boy1690/keeply-releases/releases/latest",
+        "screenshot": "https://keeply.work/og-image.png",
+        "offers": {
+          "@type": "Offer",
+          "price": "599",
+          "priceCurrency": "USD",
+          "url": "https://keeply.work/fi/buy.html"
+        },
+        "publisher": {
+          "@id": "https://keeply.work/#organization"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://keeply.work/#founder",
+        "name": "Tsao Ting Wei",
+        "alternateName": "曹庭維",
+        "jobTitle": "Founder, Keeply",
+        "url": "https://keeply.work/about",
+        "sameAs": [
+          "https://github.com/boy1690",
+          "https://www.linkedin.com/in/ting-wei-tsao-b57480152/"
+        ],
+        "worksFor": {
+          "@id": "https://keeply.work/#organization"
+        }
+      },
+      {
+        "@type": "HowTo",
+        "@id": "https://keeply.work/fi/#install-howto",
+        "name": "Miten aloitan Keeplyn käytön, ja kuinka kauan se kestää?",
+        "totalTime": "PT30S",
+        "supply": [
+          {
+            "@type": "HowToSupply",
+            "name": "Windows 10/11 or macOS (Apple Silicon)"
+          }
+        ],
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "Lataa ja asenna",
+            "text": "Valmis 30 sekunnissa. Yhteensopiva Windows 10+ ja macOS kanssa.",
+            "url": "https://keeply.work/fi/#download"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "Valitse kansio",
+            "text": "Mikä tahansa kansio, jossa työskentelet — piirustukset, sopimukset, suunnittelutiedostot."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Aloita suojaaminen",
+            "text": "Tästä lähtien jokainen muutos kirjataan. Haluatko palata? Yksi napsautus."
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://keeply.work/fi/#faq",
+        "inLanguage": "fi",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Toimiiko Keeply offline-tilassa?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Kyllä. Keeply on täysin paikallinen ohjelmisto — ei pilveä, ei tiliä, ei verkkoriippuvuutta. Projektitiedostosi, versiohistoriasi ja muistiinpanosi pysyvät kovalevylläsi tai NAS-laitteessasi. Voit käyttää Keeplyä lentokonetilassa, kellarissa tai täysin verkosta eristetyllä koneella. Ainoa hetki, jolloin Keeply ottaa yhteyttä verkkoon, on App-päivitysten tarkistus, ja senkin voit kytkeä pois päältä."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Miten Keeply eroaa Dropboxista tai Google Drivesta?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Dropbox ja Google Drive synkronoivat tiedostojen nykytilan; Keeply tallentaa jokaisen version erillisenä tilannekuvana. Dropbox ja Drive veloittavat käyttäjää kohti kuukaudessa; Keeply on ilmainen yksityishenkilöille ja tarjoaa kiinteähintaisen $25/month Team plan -paketin (tulossa) tiimin koosta riippumatta. Tiedostosi sijaitsevat omalla levylläsi, ei toimittajan palvelimella, joten et ole sidottu mihinkään tilaukseen."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Mitä tiedostoilleni tapahtuu, jos lopetan maksamisen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ei mitään. Keeply-tiedostot tallennetaan kovalevyllesi tai NAS-laitteeseesi tavalliseen kansiorakenteeseen, jota itse hallitset. Vaikka poistaisit Keeplyn, tiedostot ja niiden versiohistoria ovat luettavissa millä tahansa tiedostonhallinnalla. Et maksa pääsystä omaan työhösi — Founding Member -lisenssi on kertaluonteinen pysyvä maksu, ja ilmaistaso pysyy ilmaisena ikuisesti."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Voiko tiimini jakaa tiedostoja ilman käyttäjäpaikkamaksuja?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Kyllä. Ilmaistasolla tiimit jakavat jo nyt yhden kassakaappikansion NAS-laitteen tai jaetun aseman kautta — Keeply ei laske käyttäjäpaikkoja. Tuleva Team plan ($25/month kiinteä, suunnitteilla) lisää kutsukoodipohjaisen käyttöönoton ja ylläpitäjän hallintapaneelin, mutta edelleen ilman käyttäjäpaikkamaksuja. Vertaa tätä Dropbox Business -palveluun hintaan $20 per käyttäjä kuukaudessa, mikä tekee $120/month kuuden hengen tiimille."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Mitä tiedostotyyppejä Keeply tukee?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Kaikkia. Keeply näyttää rinnakkaisen visuaalisen diff-näkymän tiedostoille Word, Excel, PowerPoint, PDF ja kuvat. Kaikille muille tiedostotyypeille — Blender, PSD, video, CAD, 3D-mallit, lähdekoodi — Keeply seuraa versioita ja antaa sinun palauttaa minkä tahansa pisteen sekunneissa. Yli 10MB tiedostot ja 38 tunnettua binäärimuotoa tunnistetaan automaattisesti ja ohjataan suurten tiedostojen tallennukseen ilman mitään asetuksia tai LFS-konfiguraatiota."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Onko Linux-versiota?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Keeply toimitetaan tällä hetkellä Windows 10 -käyttöjärjestelmälle tai uudemmalle sekä macOS-järjestelmälle Apple Silicon -laitteilla. Linux-versio on roadmapissa, mutta sitä ei ole vielä julkaistu. Jos Linux-tuki on kriittistä työnkulullesi, kerro siitä yhteydenottolomakkeen kautta — priorisoimme alustatukea todellisen käyttäjäkysynnän perusteella, ja jokainen pyyntö kirjataan."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Mikä on $599 Founding Member -paketti?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Kertamaksu pysyvästä lisenssistä, rajattuna 500 ensimmäiselle ostajalle. Saat Keeplyn nykyiset ominaisuudet ikuisesti, plus kaikki Team plan -ominaisuudet automaattisesti, kun Team plan julkaistaan. Ei toistuvaa laskutusta, ei yllätyshinnankorotuksia. Vertailun vuoksi: $25/month 24 kuukauden ajalta on $600 — Founding Member maksaa itsensä takaisin alle kahdessa vuodessa ja jatkaa siitä eteenpäin."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+
+</head>
+
+<body class="bg-white text-gray-900 font-sans antialiased">
+
+  <!-- Nav (injected by components.js) -->
+  <div id="nav-root"></div>
+
+  <!-- ============================================ -->
+  <!-- HERO SECTION                                 -->
+  <!-- ============================================ -->
+  <section class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
+    <!-- Background decoration -->
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute top-20 left-1/4 w-96 h-96 bg-brand-100 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-gradient"></div>
+      <div class="absolute top-40 right-1/4 w-96 h-96 bg-amber-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-gradient" style="animation-delay: 4s;"></div>
+    </div>
+
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 bg-brand-50 text-brand-700 text-sm font-medium px-4 py-1.5 rounded-full mb-8 border border-brand-100">
+        <span class="w-2 h-2 bg-amber-400 rounded-full"></span>
+        <span data-i18n="index.hero.badge">Windows · macOS Työpöytäsovellus · Lataa ilmaiseksi</span>
+      </div>
+
+      <!-- Main headline -->
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight">
+        <span class="text-gray-900" data-i18n="index.hero.title.1">Tiedostoillasi on tarinoita.</span><br />
+        <span class="bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent" data-i18n="index.hero.title.2">Keeply muistaa ne kaikki.</span>
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="mt-6 text-lg md:text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed" data-i18n="index.hero.subtitle">Jokainen muokkaus, jokainen päätös, jokainen jättämäsi muistiinpano muodostaa projektisi muistin. Kuuden kuukauden kuluttua nämä muistot pelastavat sinut.</p>
+
+      <!-- CTA Buttons -->
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#download" class="group bg-brand-600 hover:bg-brand-700 text-white font-medium px-8 py-4 rounded-full text-lg transition-all hover:shadow-xl hover:shadow-brand-600/25 flex items-center gap-2">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+          <span data-i18n="index.hero.cta">Lataa ilmaiseksi</span>
+        </a>
+        <span class="text-sm text-gray-400" data-i18n="index.hero.cta.note">Valmis 30 sekunnissa, tiliä ei tarvita</span>
+      </div>
+
+      <!-- Hero Visual: App screenshot placeholder -->
+      <div class="mt-16 relative">
+        <div class="bg-gradient-to-b from-brand-50 to-white rounded-2xl border border-gray-200 shadow-2xl shadow-brand-900/5 overflow-hidden mx-auto max-w-3xl">
+          <!-- Mock app window -->
+          <div class="bg-gray-50 border-b border-gray-200 px-4 py-3 flex items-center gap-2">
+            <div class="flex gap-1.5">
+              <div class="w-3 h-3 rounded-full bg-red-300"></div>
+              <div class="w-3 h-3 rounded-full bg-amber-300"></div>
+              <div class="w-3 h-3 rounded-full bg-green-300"></div>
+            </div>
+            <div class="flex-1 text-center">
+              <span class="text-xs text-gray-400 font-medium" data-i18n="index.hero.mock.status">📂 Projektini — Suojattu ✓</span>
+            </div>
+          </div>
+          <!-- Mock content -->
+          <div class="p-8 md:p-12 space-y-4">
+            <div class="flex items-center gap-3 text-sm">
+              <span class="bg-amber-100 text-amber-700 px-3 py-1 rounded-full font-medium" data-i18n="index.hero.mock.unsaved">⚡ 3 tiedostossa tallentamattomia muutoksia</span>
+              <button class="bg-brand-600 text-white px-4 py-1.5 rounded-full text-sm font-medium" data-i18n="index.hero.mock.save">💾 Tallenna nykyinen edistyminen</button>
+            </div>
+            <div class="mt-6 space-y-3">
+              <p class="text-xs text-gray-400 font-medium uppercase tracking-wider" data-i18n="index.hero.mock.history">Historia</p>
+              <div class="bg-white border border-gray-100 rounded-xl p-4 flex items-start gap-4">
+                <div class="w-1 h-12 bg-brand-400 rounded-full flex-shrink-0 mt-0.5"></div>
+                <div>
+                  <p class="text-sm font-medium text-gray-800" data-i18n="index.hero.mock.today">Tänään 16:30 · 3 tiedostoa muutettu</p>
+                  <p class="text-xs text-gray-400 mt-1" data-i18n="index.hero.mock.today.note">Asiakas pyysi muutoksia kansileiskelmään — vaihdettu brändiväreille</p>
+                  <div class="mt-2 flex gap-2">
+                    <span class="text-xs bg-green-50 text-green-600 px-2 py-0.5 rounded" data-i18n-html="index.hero.mock.file1">Proposal_v2.pptx <strong>Lisätty</strong></span>
+                    <span class="text-xs bg-blue-50 text-blue-600 px-2 py-0.5 rounded" data-i18n-html="index.hero.mock.file2">Project_Timeline.xlsx <strong>Muokattu</strong></span>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-white border border-gray-100 rounded-xl p-4 flex items-start gap-4 opacity-60">
+                <div class="w-1 h-12 bg-gray-200 rounded-full flex-shrink-0 mt-0.5"></div>
+                <div>
+                  <p class="text-sm font-medium text-gray-800" data-i18n="index.hero.mock.yesterday">Eilen 14:15 · 1 tiedosto muutettu</p>
+                  <p class="text-xs text-gray-400 mt-1" data-i18n="index.hero.mock.yesterday.note">Kannen värit ja sivuasettelu päivitetty</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Glow effect behind the card -->
+        <div class="absolute inset-0 -z-10 bg-gradient-to-b from-brand-100/50 via-transparent to-transparent rounded-2xl blur-2xl scale-105"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- FEATURES (3 selling points) — HIDDEN         -->
+  <!-- ============================================ -->
+  <section id="features" class="py-20 md:py-32 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900" data-i18n-html="index.features.title">Miksi Keeply on enemmän kuin varmuuskopiointityökalu?</h2>
+        <p class="mt-4 text-gray-500 text-lg max-w-xl mx-auto" data-i18n="index.features.subtitle">Varmuuskopiointityökalut muistavat vain &quot;nykyisen&quot; tiedoston; Keeply muistaa jokaisen version, jokaisen muistiinpanon, jokaisen tekemäsi päätöksen. Puoli vuotta myöhemmin, kun asiakas kysyy &quot;kuka tämän päätti?&quot;, avaat Keeplyn ja löydät vastauksen sekunneissa — sitä varmuuskopiot eivät pysty tarjoamaan.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Feature 1: Remember WHY -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-100 glow-hover transition-all duration-300 animate-float">
+          <div class="w-14 h-14 bg-brand-100 rounded-2xl flex items-center justify-center text-2xl mb-6">
+            💡
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="index.features.1.title">Muista MIKSI</h3>
+          <p class="text-gray-500 leading-relaxed mb-4" data-i18n="index.features.1.desc">Älä muista vain mitä muuttui — muista miksi muutit sen.</p>
+          <p class="text-sm text-gray-400 leading-relaxed" data-i18n="index.features.1.detail">Kuuden kuukauden kuluttua, kun asiakas kysyy «Kuka teki tämän päätöksen?», sinun ei tarvitse etsiä sähköposteista. Avaa Keeply — vastaus on siellä.</p>
+        </div>
+
+        <!-- Feature 2: Time Machine -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-100 glow-hover transition-all duration-300 animate-float-delayed">
+          <div class="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center text-2xl mb-6">
+            ⏪
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="index.features.2.title">Projektisi aikakone</h3>
+          <p class="text-gray-500 leading-relaxed mb-4" data-i18n="index.features.2.desc">Jokainen tallennus on kuin valokuvan ottaminen. Palaa mihin tahansa päivään, mihin tahansa hetkeen.</p>
+          <p class="text-sm text-gray-400 leading-relaxed" data-i18n="index.features.2.detail">Teitkö virheen? Palaa vain taaksepäin. Asiakas muutti mieltään? Löydä edellinen versio kolmessa sekunnissa. Tarkastuksen aika? Täydelliset tietueet tässä.</p>
+        </div>
+
+        <!-- Feature 3: Bold Changes -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-100 glow-hover transition-all duration-300 animate-float-delayed-2">
+          <div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center text-2xl mb-6">
+            🛡️
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="index.features.3.title">Muokkaa luottavaisesti, me muistamme kaiken</h3>
+          <p class="text-gray-500 leading-relaxed mb-4" data-i18n="index.features.3.desc">Ei enää valintaa «parannellaan» ja «parempi olla koskematta» välillä.</p>
+          <p class="text-sm text-gray-400 leading-relaxed" data-i18n="index.features.3.detail">Keeply suojaa jokaisen version, joten voit kokeilla vapaasti. Riippumatta siitä mitä muutat, voit aina palata takaisin.</p>
+        </div>
+
+        <!-- Feature 4: Visual Diff (spec 027 MISSING M1) -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-100 glow-hover transition-all duration-300 animate-float">
+          <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center text-2xl mb-6">
+            🔍
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="index.features.4.title">Näe jokainen muutos rinnakkain</h3>
+          <p class="text-gray-500 leading-relaxed mb-4" data-i18n="index.features.4.desc">Visuaalinen vertailu Word-, Excel-, PowerPoint-, PDF- ja kuvatiedostoille.</p>
+          <p class="text-sm text-gray-400 leading-relaxed" data-i18n="index.features.4.detail">Ei pelkkä lista muutetuista tiedostoista — Keeply näyttää sinulle tarkalleen, mikä muuttui: Office-dokumentit, PDF:t ja kuvat näkyvät rinnakkain korostetuilla eroilla. Kaikille muille tiedostotyypeille voit seurata versioita ja palauttaa minkä tahansa ajankohdan sekunneissa.</p>
+        </div>
+
+        <!-- Feature 5: Silent LFS (spec 027 MISSING M2) -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-100 glow-hover transition-all duration-300 animate-float-delayed">
+          <div class="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center text-2xl mb-6">
+            📦
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="index.features.5.title">Käsittelee suuret tiedostot huomaamattomasti</h3>
+          <p class="text-gray-500 leading-relaxed mb-4" data-i18n="index.features.5.desc">Blender, PSD, video — kaikki toimivat heti.</p>
+          <p class="text-sm text-gray-400 leading-relaxed" data-i18n="index.features.5.detail">Keeply tunnistaa automaattisesti 38 binääritiedostomuotoa ja kaikki yli 10 MB:n tiedostot ohjaten ne suurten tiedostojen tallennustilaan ilman yhtäkään määritysvaihetta. Ei LFS-asetuksia, ei repo-pullistumaa, ei rikkoutuneita tallennuksia suurissa projekteissa.</p>
+        </div>
+
+        <!-- Feature 6: Work Copies (spec 027 MISSING M3) -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-100 glow-hover transition-all duration-300 animate-float-delayed-2">
+          <div class="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center text-2xl mb-6">
+            🌿
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="index.features.6.title">Kokeile rohkeita muutoksia turvallisesti</h3>
+          <p class="text-gray-500 leading-relaxed mb-4" data-i18n="index.features.6.desc">Luo työkopio, kokeile ja yhdistä sitten takaisin.</p>
+          <p class="text-sm text-gray-400 leading-relaxed" data-i18n="index.features.6.detail">Työkopioiden avulla voit haarautua projektistasi kokeillaksesi radikaalia uutta suunnittelua tai riskialtista refaktorointia ja yhdistää muutokset takaisin, kun ne ovat valmiita — tai poistaa työkopion, jos kokeilu ei onnistunut. Pääprojektisi pysyy koskemattomana koko ajan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- USE CASES — HIDDEN                           -->
+  <!-- ============================================ -->
+  <section class="py-20 md:py-32">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900" data-i18n-html="index.usecases.title">Kuka käyttää Keeplyä, ja mihin töihin se on tarkoitettu?</h2>
+        <p class="mt-4 text-gray-500 text-lg max-w-2xl mx-auto" data-i18n="index.usecases.answer">Projektipäälliköt, suunnittelijat, juristit, tutkijat, insinöörit ja etätiimit — kuka tahansa, jonka työ vaatii pitkäaikaista versiohistoriaa, päätösten kontekstia tai pakoa &quot;final_v3&quot;-tiedostonimien kaaoksesta. Tiedostot pysyvät levylläsi, sinun hallinnassasi, eivät koskaan toimittajan palvelimella.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Use case cards -->
+        <div class="group bg-gradient-to-br from-brand-50 to-white rounded-2xl p-8 border border-brand-100 hover:shadow-lg transition-all">
+          <div class="text-3xl mb-4">📋</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2" data-i18n="index.usecases.pm.title">Projektinhallinta</h3>
+          <p class="text-gray-500 text-sm leading-relaxed" data-i18n="index.usecases.pm.desc">Jokaisella projektitiedostollasi on tarina. Yksi muistiinpano kuuden kuukauden takaa voi pelastaa koko projektin.</p>
+        </div>
+
+        <div class="group bg-gradient-to-br from-amber-50 to-white rounded-2xl p-8 border border-amber-100 hover:shadow-lg transition-all">
+          <div class="text-3xl mb-4">🎨</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2" data-i18n="index.usecases.design.title">Suunnittelu ja luova työ</h3>
+          <p class="text-gray-500 text-sm leading-relaxed" data-i18n="index.usecases.design.desc">Kun asiakas sanoo «Itse asiassa pidin enemmän ensimmäisestä versiosta» — tarvitset vain kolme sekuntia. Jokainen versio on tallessa.</p>
+        </div>
+
+        <div class="group bg-gradient-to-br from-green-50 to-white rounded-2xl p-8 border border-green-100 hover:shadow-lg transition-all">
+          <div class="text-3xl mb-4">⚖️</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2" data-i18n="index.usecases.legal.title">Lakiasiat ja sopimukset</h3>
+          <p class="text-gray-500 text-sm leading-relaxed" data-i18n="index.usecases.legal.desc">Seitsemäntoista sopimusversiota, jokainen säilytettynä. Kuka muutti, milloin ja miksi — täysin selvää.</p>
+        </div>
+
+        <div class="group bg-gradient-to-br from-purple-50 to-white rounded-2xl p-8 border border-purple-100 hover:shadow-lg transition-all">
+          <div class="text-3xl mb-4">📚</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2" data-i18n="index.usecases.academic.title">Akateeminen tutkimus</h3>
+          <p class="text-gray-500 text-sm leading-relaxed" data-i18n="index.usecases.academic.desc">Gradu_lopullinen_OIKEASTI_lopullinen_v3.docx? Hallinnoi Keeplyn avulla äläkä enää koskaan sekoita versioita.</p>
+        </div>
+
+        <div class="group bg-gradient-to-br from-orange-50 to-white rounded-2xl p-8 border border-orange-100 hover:shadow-lg transition-all">
+          <div class="text-3xl mb-4">🏗️</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2" data-i18n="index.usecases.construction.title">Rakentaminen ja AEC</h3>
+          <p class="text-gray-500 text-sm leading-relaxed" data-i18n="index.usecases.construction.desc">Työmaan insinööri ottaa USB-muistitikun mukaan asiakastapaamiseen. Ylläpitäjä hyväksyy varmuuskopiointisijainnin — ja peruuttaa sen projektin päättyessä.</p>
+        </div>
+
+        <div class="group bg-gradient-to-br from-cyan-50 to-white rounded-2xl p-8 border border-cyan-100 hover:shadow-lg transition-all">
+          <div class="text-3xl mb-4">🌐</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2" data-i18n="index.usecases.remote.title">Etä- ja hybriditiimit</h3>
+          <p class="text-gray-500 text-sm leading-relaxed" data-i18n="index.usecases.remote.desc">Toimistotiimi NAS:lla, etäsuunnittelija GitHubissa. Sama holvi, sama versiohistoria — kaikki pysyvät synkronoituina.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- HOW IT WORKS — HIDDEN                        -->
+  <!-- ============================================ -->
+  <section class="py-20 md:py-32 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900" data-i18n-html="index.howto.title">Miten aloitan Keeplyn käytön, ja kuinka kauan se kestää?</h2>
+        <p class="mt-4 text-gray-500 text-lg" data-i18n="index.howto.subtitle">Kolme askelta: lataa ja asenna (30 sekuntia), valitse kansio, aloita suojaaminen. Ei tiliä, ei palvelinta, ei opeteltavia komentoja. Toimii Windows 10+:ssa ja macOS Apple Siliconilla. Haluatko peruuttaa muutoksen? Yksi klikkaus.</p>
+      </div>
+
+      <div class="space-y-8">
+        <div class="flex items-start gap-6">
+          <div class="w-12 h-12 bg-brand-600 text-white rounded-full flex items-center justify-center text-lg font-bold flex-shrink-0">1</div>
+          <div>
+            <h3 class="text-lg font-bold text-gray-900" data-i18n="index.howto.step1.title">Lataa ja asenna</h3>
+            <p class="text-gray-500 mt-1" data-i18n="index.howto.step1.desc">Valmis 30 sekunnissa. Yhteensopiva Windows 10+ ja macOS kanssa.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-6">
+          <div class="w-12 h-12 bg-brand-600 text-white rounded-full flex items-center justify-center text-lg font-bold flex-shrink-0">2</div>
+          <div>
+            <h3 class="text-lg font-bold text-gray-900" data-i18n="index.howto.step2.title">Valitse kansio</h3>
+            <p class="text-gray-500 mt-1" data-i18n="index.howto.step2.desc">Mikä tahansa kansio, jossa työskentelet — piirustukset, sopimukset, suunnittelutiedostot.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-6">
+          <div class="w-12 h-12 bg-amber-500 text-white rounded-full flex items-center justify-center text-lg font-bold flex-shrink-0">3</div>
+          <div>
+            <h3 class="text-lg font-bold text-gray-900" data-i18n="index.howto.step3.title">Aloita suojaaminen</h3>
+            <p class="text-gray-500 mt-1" data-i18n="index.howto.step3.desc">Tästä lähtien jokainen muutos kirjataan. Haluatko palata? Yksi napsautus.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- COMPARE WITH… (spec 043 B1: 6 對手卡片入口)   -->
+  <!-- ============================================ -->
+  <section id="compare-cards" class="py-20 md:py-28 bg-gray-50/50">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900" data-i18n="index.compare.title">Miten Keeply eroaa Dropboxista, Google Drivesta tai Gitistä?</h2>
+        <p class="mt-4 text-gray-500 text-lg max-w-2xl mx-auto" data-i18n="index.compare.subtitle">Dropbox ja Google Drive synkronoivat nykyisen tiedoston ja poistavat versiohistorian 30 päivän jälkeen; Git on insinööreille, ja sen oppimiskäyrä on jyrkkä. Keeply kirjoittaa versionhallinnan paikallisille tiedostoille uudelleen: jokainen versio säilyy ikuisesti, ei pilvi­lukitusta, ei teknistä estettä, asenna ja käytä.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <a href="/compare/filename-chaos.html" class="group bg-white p-5 rounded-2xl border border-gray-100 hover:border-brand-200 hover:shadow-md transition-all flex items-center gap-4">
+          <span class="flex-shrink-0 w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center text-2xl">📁</span>
+          <span class="flex-1">
+            <span class="block text-base font-bold text-gray-900 group-hover:text-brand-700 transition-colors">vs v1/v2/FINAL</span>
+            <span class="block text-xs text-gray-400 mt-0.5" data-i18n="index.compare.card.filename-chaos.sub">Tiedostonimisotku</span>
+          </span>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-brand-500 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+        </a>
+
+        <a href="/compare/dropbox.html" class="group bg-white p-5 rounded-2xl border border-gray-100 hover:border-brand-200 hover:shadow-md transition-all flex items-center gap-4">
+          <span class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center text-2xl">📘</span>
+          <span class="flex-1">
+            <span class="block text-base font-bold text-gray-900 group-hover:text-brand-700 transition-colors">vs Dropbox</span>
+            <span class="block text-xs text-gray-400 mt-0.5" data-i18n="index.compare.card.dropbox.sub">30 päivän versioraja</span>
+          </span>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-brand-500 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+        </a>
+
+        <a href="/compare/google-drive.html" class="group bg-white p-5 rounded-2xl border border-gray-100 hover:border-brand-200 hover:shadow-md transition-all flex items-center gap-4">
+          <span class="flex-shrink-0 w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center text-2xl">🟢</span>
+          <span class="flex-1">
+            <span class="block text-base font-bold text-gray-900 group-hover:text-brand-700 transition-colors">vs Google Drive</span>
+            <span class="block text-xs text-gray-400 mt-0.5" data-i18n="index.compare.card.google-drive.sub">Versiohistoria piilossa valikossa</span>
+          </span>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-brand-500 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+        </a>
+
+        <a href="/compare/time-machine.html" class="group bg-white p-5 rounded-2xl border border-gray-100 hover:border-brand-200 hover:shadow-md transition-all flex items-center gap-4">
+          <span class="flex-shrink-0 w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center text-2xl">🍎</span>
+          <span class="flex-1">
+            <span class="block text-base font-bold text-gray-900 group-hover:text-brand-700 transition-colors">vs Time Machine</span>
+            <span class="block text-xs text-gray-400 mt-0.5" data-i18n="index.compare.card.time-machine.sub">OS-tason, ei projektikohtaista</span>
+          </span>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-brand-500 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+        </a>
+
+        <a href="/compare/snowtrack.html" class="group bg-white p-5 rounded-2xl border border-gray-100 hover:border-brand-200 hover:shadow-md transition-all flex items-center gap-4">
+          <span class="flex-shrink-0 w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center text-2xl">🎨</span>
+          <span class="flex-1">
+            <span class="block text-base font-bold text-gray-900 group-hover:text-brand-700 transition-colors">vs Snowtrack</span>
+            <span class="block text-xs text-gray-400 mt-0.5" data-i18n="index.compare.card.snowtrack.sub">Nyt vain yritys (P4 One)</span>
+          </span>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-brand-500 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+        </a>
+
+        <a href="/compare/email-usb.html" class="group bg-white p-5 rounded-2xl border border-gray-100 hover:border-brand-200 hover:shadow-md transition-all flex items-center gap-4">
+          <span class="flex-shrink-0 w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center text-2xl">📧</span>
+          <span class="flex-1">
+            <span class="block text-base font-bold text-gray-900 group-hover:text-brand-700 transition-colors">vs Email / USB</span>
+            <span class="block text-xs text-gray-400 mt-0.5" data-i18n="index.compare.card.email-usb.sub">Manuaalisen varmuuskopion automatisointi</span>
+          </span>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-brand-500 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+        </a>
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="/compare/" class="inline-flex items-center gap-2 text-sm font-medium text-brand-600 hover:text-brand-700 transition-colors">
+          <span data-i18n="index.compare.cta">Katso kaikki vertailut</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- PRICING — HIDDEN                             -->
+  <!-- ============================================ -->
+  <section id="pricing" class="py-20 md:py-32">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900" data-i18n-html="index.pricing.title">Paljonko Keeply maksaa, ja maksavatko tiimit per käyttäjä?</h2>
+        <p class="mt-4 text-gray-500 text-lg max-w-xl mx-auto" data-i18n="index.pricing.subtitle">Yksilöversio on ikuisesti ilmainen ilman vanhenemista; Team-paketti on kiinteä 25 $/kk (ei käyttäjärajaa) tiedostojen kanssa omalla NAS-laitteellasi. Founding Member on kertaluonteinen ikuislisenssi 599 $, rajoitettu 500 ostajaan. Ei tilauksia, ei käyttäjäkohtaisia maksuja.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+        <!-- Free -->
+        <div class="bg-white rounded-2xl border-2 border-gray-100 p-8 text-center">
+          <div class="text-sm font-medium text-gray-400 mb-2" data-i18n="index.pricing.free.label">Ilmainen</div>
+          <div class="text-5xl font-bold text-gray-900" data-i18n="index.pricing.free.price">Ilmainen</div>
+          <div class="text-sm text-gray-400 mt-2 mb-8" data-i18n="index.pricing.free.desc">Yksityishenkilöille ja pienille studioille. Ikuisesti ilmainen.</div>
+          <ul class="text-sm text-gray-600 space-y-3 text-left mb-8">
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.free.feat.1">Rajaton versiohistoria</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.free.feat.2">Palautus mihin tahansa versioon yhdellä napsautuksella</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.free.feat.3">Muutosten vertailu</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.free.feat.4">Versiomuistiinpanot</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.free.feat.5">Paikallinen ja NAS-tallennus (Standard- tai Suojattu tila)</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.free.feat.6">Tiedostojen vertailu</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.free.feat.7">Rajattomat käyttäjät</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.free.feat.8">1 Canonical + 1 Shared Mirror + rajattomat julkaisut</span></li>
+          </ul>
+          <a href="#download" class="block border-2 border-gray-200 hover:border-brand-300 text-gray-700 hover:text-brand-700 font-medium py-3.5 rounded-full transition-all" data-i18n="index.pricing.free.cta">Lataa ilmaiseksi</a>
+        </div>
+
+        <!-- Team -->
+        <div class="bg-white rounded-2xl border-2 border-brand-500 p-8 text-center relative shadow-lg shadow-brand-500/10">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-500 text-white text-xs font-bold px-4 py-1 rounded-full" data-i18n="index.pricing.team.badge">Tulossa pian</div>
+          <div class="text-sm font-medium text-brand-600 mb-2" data-i18n="index.pricing.team.label">Tiimi</div>
+          <div class="flex items-baseline justify-center gap-1">
+            <span class="text-5xl font-bold text-gray-900" data-i18n="index.pricing.team.price">$25</span>
+            <span class="text-lg text-gray-400" data-i18n="index.pricing.team.period">/kk</span>
+          </div>
+          <div class="text-sm text-gray-400 mt-2 mb-1" data-i18n="index.pricing.team.annual">tai $250/vuosi (säästä 2 kuukautta)</div>
+          <div class="text-xs text-brand-500 mb-8" data-i18n="index.pricing.team.flat">Yksi hinta, ei käyttäjäkohtaisia maksuja</div>
+          <ul class="text-sm text-gray-600 space-y-3 text-left mb-8">
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.team.feat.1">Kaikki Free-versiosta</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.team.feat.2">Kutsukoodipohjainen tiiminhallinta</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.team.feat.3">Pääkäyttäjän vault-koontinäyttö sijaintipyynnöillä (suunnitteilla)</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.team.feat.4">Ensisijainen tekninen tuki</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.team.feat.5">30 päivän rahat takaisin -takuu</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.team.feat.6">Pysyvä varalisenssi 12 kuukauden jälkeen</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.team.feat.7">Shared Mirror -hallinta: pääkäyttäjän valvonta, estää tahattomat Canonical-muutokset (suunnitteilla)</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.team.feat.8">Ristiriitojen tunnistus ja ratkaisu</span></li>
+          </ul>
+          <p class="text-sm text-gray-500 mb-3" data-i18n="index.pricing.team.coming">Kehitteillä. Jätä sähköpostiosoitteesi saadaksesi ilmoituksen julkaisusta.</p>
+          <form id="team-notify-form">
+            <div class="grid grid-cols-2 gap-2 mb-2">
+              <input type="text" id="tn-name" required placeholder="Name" data-i18n="index.pricing.team.name.placeholder" class="border border-gray-200 rounded-full px-4 py-3 text-sm focus:outline-none focus:border-brand-400" />
+              <input type="email" id="tn-email" required placeholder="your@email.com" data-i18n="index.pricing.team.placeholder" class="border border-gray-200 rounded-full px-4 py-3 text-sm focus:outline-none focus:border-brand-400" />
+            </div>
+            <label class="flex items-center gap-2 text-xs text-gray-400 cursor-pointer mb-3">
+              <input type="checkbox" id="tn-newsletter" class="rounded border-gray-300" />
+              <span data-i18n="index.pricing.team.newsletter">Haluan myös saada Keeply-tuotepäivityksiä ja uutiskirjeen</span>
+            </label>
+            <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-medium py-3 rounded-full transition-all text-sm" data-i18n="index.pricing.team.cta.notify">Ilmoita minulle</button>
+          </form>
+          <p id="team-notify-thanks" class="text-sm text-green-600 font-medium" style="display:none" data-i18n="index.pricing.team.thanks">Vastaanotettu! Ilmoitamme sinulle, kun Team-paketti julkaistaan.</p>
+        </div>
+      </div>
+
+      <!-- Early Access Perpetual -->
+      <div class="mt-8 max-w-3xl mx-auto">
+        <div class="bg-gradient-to-r from-amber-50 to-brand-50 border border-amber-200 rounded-2xl px-8 py-6 text-center">
+          <div class="inline-flex items-center gap-2 bg-amber-500 text-white text-xs font-bold px-4 py-1 rounded-full mb-3" data-i18n="index.pricing.perpetual.badge">Early Access · Rajoitettu 500 kappaleeseen</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-1" data-i18n="index.pricing.perpetual.title">Pysyvä lisenssi — $599 kertaosto</h3>
+          <p class="text-sm text-gray-500 max-w-lg mx-auto leading-relaxed mb-5" data-i18n="index.pricing.perpetual.desc">Sisältää kaikki Tiimi-ominaisuudet, käytä ostohetken versiota ikuisesti. Niin kauan kuin varastoa riittää.</p>
+          <a href="buy.html" class="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 active:bg-amber-700 text-white font-bold px-7 py-3 rounded-full shadow-lg shadow-amber-500/30 transition-all" data-i18n="index.pricing.perpetual.cta">Osta nyt — $599</a>
+        </div>
+      </div>
+
+      <!-- Team Vault explanation -->
+      <div class="mt-12 max-w-3xl mx-auto">
+        <div class="bg-gray-50 border border-gray-200 rounded-2xl px-8 py-6">
+          <p class="text-sm font-bold text-brand-600 mb-1" data-i18n="index.teamvault.tagline">Yksi holvi. Yksi tiimi. Täysi hallinta.</p>
+          <h3 class="text-lg font-bold text-gray-900 mb-3" data-i18n="index.teamvault.title">Mikä on &quot;Tiimiholvi&quot;?</h3>
+          <p class="text-sm text-gray-600 leading-relaxed mb-3" data-i18n="index.teamvault.desc">Team Vault käyttää &quot;1 Canonical + 1 Shared Mirror&quot; -topologiaa: Canonical on projektin versioiden tiedon lähde (NAS, jaettu kansio tai ulkoinen asema); Shared Mirror on Canonicalista synkronoitu täysi tilannevedos, joten kuka tahansa tiimin jäsen voi nopeasti hakea uusimman version. Jokaisella jäsenellä on myös oma työkopionsa. Datamuoto voi olla Standard-tila (tiedostojen suora selaaminen ja muokkaaminen) tai Suojattu tila (estää tuhoavat historiamuutokset).</p>
+          <p class="text-sm text-brand-600 font-medium mb-3" data-i18n="index.teamvault.highlight">Ei pilvilukitusta. Ei käyttäjäkohtaisia maksuja. Tietosi pysyvät omassa laitteistossasi.</p>
+          <div class="grid md:grid-cols-2 gap-3 mt-3">
+            <div class="bg-white rounded-lg px-4 py-3 border border-gray-100">
+              <p class="text-xs font-bold text-gray-500 mb-1">Free</p>
+              <p class="text-sm text-gray-600" data-i18n="index.teamvault.free">Ilmainen: 1 Canonical + 1 Shared Mirror, täysin itse hallinnoitavissa. Ei tarvitse hyväksyntää, ei jäähdytysaikoja.</p>
+            </div>
+            <div class="bg-white rounded-lg px-4 py-3 border border-brand-100">
+              <p class="text-xs font-bold text-brand-500 mb-1">Team</p>
+              <p class="text-sm text-gray-600" data-i18n="index.teamvault.team">Tiimi-tilaus (suunnitteilla): sama 1 Canonical + 1 Shared Mirror -topologia, plus jäsenten hallinta, Shared Mirror -sijainnin hallinta (järjestelmänvalvojan hyväksyntäportti ja muutosnopeuden rajoitus, jotta sijaintia ei muuteta huolimattomasti tiimiä häiriten), konfliktien tunnistus ja tiimin toimintalokit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- DOWNLOAD CTA                                 -->
+  <!-- ============================================ -->
+  <section id="download" class="py-20 md:py-32 bg-gradient-to-br from-brand-600 via-brand-700 to-brand-800 text-white relative overflow-hidden">
+    <!-- Decorative -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-amber-400/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-brand-400/20 rounded-full blur-3xl"></div>
+
+    <div class="max-w-3xl mx-auto px-6 text-center relative">
+      <h2 class="text-3xl md:text-5xl font-bold leading-tight" data-i18n="index.download.title">Miten lataan Keeplyn, ja onko se maksullinen?</h2>
+      <p class="mt-6 text-brand-200 text-lg max-w-xl mx-auto leading-relaxed" data-i18n="index.download.subtitle">Ilmainen lataus, 30 sekunnin asennus, heti käyttövalmis. Tukee Windows 10/11 ja macOS Apple Silicon. Ei luottokorttia, ei kokeilun päättymistä, ei tilin luomista. Asennuksen jälkeen avaa mikä tahansa kansio — jokainen tallennus tulee automaattisesti seuratuksi versioksi.</p>
+
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-4">
+        <!-- Windows column -->
+        <div class="flex flex-col items-center gap-2 max-w-sm w-full">
+          <a id="download-btn-win"
+             href="https://github.com/boy1690/keeply-releases/releases/download/v1.0.10/Keeply_1.0.10_x64-setup.exe"
+             class="group bg-white text-brand-700 font-bold px-8 py-4 rounded-full text-lg transition-all hover:shadow-xl hover:shadow-black/10 flex items-center justify-center gap-3 min-w-[260px]">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M3 5.479L10.5 4.5V11.5H3V5.479zM11.5 4.363L21 3V11.5H11.5V4.363zM3 12.5H10.5V19.521L3 18.521V12.5zM11.5 12.5H21V21L11.5 19.637V12.5z"/>
+            </svg>
+            <span data-i18n="index.download.cta.win">Lataa ilmaiseksi Windowsille</span>
+          </a>
+          <p class="text-xs text-brand-300" data-i18n="index.download.note.win">Windows 10 tai uudempi</p>
+          <details class="mt-3 text-left verify-disclosure w-full">
+            <summary class="verify-summary"><span class="verify-arrow">›</span><span data-i18n="index.download.verify.label">🔐 Tarkista latauksen eheys</span></summary>
+            <div class="mt-3 verify-box">
+              <div class="verify-section">
+                <div class="verify-label">SHA-256</div>
+                <code class="verify-code">7d0b0c8797c87b38f34611c20b12d680ee0d24ab5ad14d6b8117cc666024f59b</code>
+              </div>
+              <div class="verify-section">
+                <div class="verify-label" data-i18n="index.download.verify.cmdLabel.win">PowerShell-tarkistuskomento</div>
+                <code class="verify-code">Get-FileHash $HOME\Downloads\Keeply_1.0.10_x64-setup.exe -Algorithm SHA256</code>
+              </div>
+              <p class="verify-note" data-i18n="index.download.verify.howto">Tulostettavan tiivisteen on vastattava yllä olevaa arvoa — jos ne täsmäävät, tiedosto on virallinen eikä sitä ole muokattu.</p>
+            </div>
+          </details>
+          <details class="mt-2 text-left verify-disclosure w-full">
+            <summary class="verify-summary"><span class="verify-arrow">›</span><span data-i18n="index.download.winget.label">📦 Asenna winget kautta</span></summary>
+            <div class="mt-3 verify-box">
+              <div class="verify-section">
+                <div class="verify-label" data-i18n="index.download.winget.cmdLabel">PowerShell-komento</div>
+                <code class="verify-code">winget install Boy1690.Keeply</code>
+              </div>
+              <p class="verify-note" data-i18n="index.download.winget.howto">Vaatii Windows Package Managerin (sisäänrakennettu Windows 10 1809+ / Windows 11 -versioihin). Paketti julkaistu viralliseen microsoft/winget-pkgs repo:on.</p>
+            </div>
+          </details>
+        </div>
+
+        <!-- Mac column -->
+        <div class="flex flex-col items-center gap-2 max-w-sm w-full">
+          <a id="download-btn-mac"
+             href="https://github.com/boy1690/keeply-releases/releases/download/v1.0.10/Keeply_1.0.10_aarch64.dmg"
+             class="group bg-white text-brand-700 font-bold px-8 py-4 rounded-full text-lg transition-all hover:shadow-xl hover:shadow-black/10 flex items-center justify-center gap-3 min-w-[260px]">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+            <span data-i18n="index.download.cta.mac">Lataa ilmaiseksi macOS:lle</span>
+          </a>
+          <p class="text-xs text-brand-300" data-i18n="index.download.note.mac">Vain Apple Silicon</p>
+          <details class="mt-3 text-left verify-disclosure w-full">
+            <summary class="verify-summary"><span class="verify-arrow">›</span><span data-i18n="index.download.verify.label">🔐 Tarkista latauksen eheys</span></summary>
+            <div class="mt-3 verify-box">
+              <div class="verify-section">
+                <div class="verify-label">SHA-256</div>
+                <code class="verify-code">3a8a4df481521971506792f87d53e014018387d9bc4dd8bf2ec15ad7a9ee883a</code>
+              </div>
+              <div class="verify-section">
+                <div class="verify-label" data-i18n="index.download.verify.cmdLabel.mac">Terminaalin tarkistuskomento</div>
+                <code class="verify-code">shasum -a 256 ~/Downloads/Keeply_1.0.10_aarch64.dmg</code>
+              </div>
+              <p class="verify-note" data-i18n="index.download.verify.howto">Tulostettavan tiivisteen on vastattava yllä olevaa arvoa — jos ne täsmäävät, tiedosto on virallinen eikä sitä ole muokattu.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <p class="mt-8 text-sm text-brand-300" data-i18n="index.download.note.shared">Ilmainen henkilökohtaiseen käyttöön, ikuisesti.</p>
+
+      <p class="mt-3 text-xs text-brand-400">
+        <a href="https://github.com/boy1690/keeply-releases/releases/latest" class="underline hover:text-white transition-colors" data-i18n="index.download.allversions">Näytä kaikki versiot</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- FAQ (spec 029 — Homepage FAQPage schema)      -->
+  <!-- ============================================ -->
+  <section id="faq" class="py-16 md:py-20 bg-gray-50">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center" data-i18n="index.faq.title">Usein kysytyt kysymykset</h2>
+      <div class="space-y-3">
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.1.q">Toimiiko Keeply offline-tilassa?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.1.a">Kyllä. Keeply on täysin paikallinen ohjelmisto — ei pilveä, ei tiliä, ei verkkoriippuvuutta. Projektitiedostosi, versiohistoriasi ja muistiinpanosi pysyvät kovalevylläsi tai NAS-laitteessasi. Voit käyttää Keeplyä lentokonetilassa, kellarissa tai täysin verkosta eristetyllä koneella. Ainoa hetki, jolloin Keeply ottaa yhteyttä verkkoon, on App-päivitysten tarkistus, ja senkin voit kytkeä pois päältä.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.2.q">Miten Keeply eroaa Dropboxista tai Google Drivesta?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.2.a">Dropbox ja Google Drive synkronoivat tiedostojen nykytilan; Keeply tallentaa jokaisen version erillisenä tilannekuvana. Dropbox ja Drive veloittavat käyttäjää kohti kuukaudessa; Keeply on ilmainen yksityishenkilöille ja tarjoaa kiinteähintaisen $25/month Team plan -paketin (tulossa) tiimin koosta riippumatta. Tiedostosi sijaitsevat omalla levylläsi, ei toimittajan palvelimella, joten et ole sidottu mihinkään tilaukseen.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.3.q">Mitä tiedostoilleni tapahtuu, jos lopetan maksamisen?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.3.a">Ei mitään. Keeply-tiedostot tallennetaan kovalevyllesi tai NAS-laitteeseesi tavalliseen kansiorakenteeseen, jota itse hallitset. Vaikka poistaisit Keeplyn, tiedostot ja niiden versiohistoria ovat luettavissa millä tahansa tiedostonhallinnalla. Et maksa pääsystä omaan työhösi — Founding Member -lisenssi on kertaluonteinen pysyvä maksu, ja ilmaistaso pysyy ilmaisena ikuisesti.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.4.q">Voiko tiimini jakaa tiedostoja ilman käyttäjäpaikkamaksuja?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.4.a">Kyllä. Ilmaistasolla tiimit jakavat jo nyt yhden kassakaappikansion NAS-laitteen tai jaetun aseman kautta — Keeply ei laske käyttäjäpaikkoja. Tuleva Team plan ($25/month kiinteä, suunnitteilla) lisää kutsukoodipohjaisen käyttöönoton ja ylläpitäjän hallintapaneelin, mutta edelleen ilman käyttäjäpaikkamaksuja. Vertaa tätä Dropbox Business -palveluun hintaan $20 per käyttäjä kuukaudessa, mikä tekee $120/month kuuden hengen tiimille.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.5.q">Mitä tiedostotyyppejä Keeply tukee?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.5.a">Kaikkia. Keeply näyttää rinnakkaisen visuaalisen diff-näkymän tiedostoille Word, Excel, PowerPoint, PDF ja kuvat. Kaikille muille tiedostotyypeille — Blender, PSD, video, CAD, 3D-mallit, lähdekoodi — Keeply seuraa versioita ja antaa sinun palauttaa minkä tahansa pisteen sekunneissa. Yli 10MB tiedostot ja 38 tunnettua binäärimuotoa tunnistetaan automaattisesti ja ohjataan suurten tiedostojen tallennukseen ilman mitään asetuksia tai LFS-konfiguraatiota.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.6.q">Onko Linux-versiota?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.6.a">Keeply toimitetaan tällä hetkellä Windows 10 -käyttöjärjestelmälle tai uudemmalle sekä macOS-järjestelmälle Apple Silicon -laitteilla. Linux-versio on roadmapissa, mutta sitä ei ole vielä julkaistu. Jos Linux-tuki on kriittistä työnkulullesi, kerro siitä yhteydenottolomakkeen kautta — priorisoimme alustatukea todellisen käyttäjäkysynnän perusteella, ja jokainen pyyntö kirjataan.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.7.q">Mikä on $599 Founding Member -paketti?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.7.a">Kertamaksu pysyvästä lisenssistä, rajattuna 500 ensimmäiselle ostajalle. Saat Keeplyn nykyiset ominaisuudet ikuisesti, plus kaikki Team plan -ominaisuudet automaattisesti, kun Team plan julkaistaan. Ei toistuvaa laskutusta, ei yllätyshinnankorotuksia. Vertailun vuoksi: $25/month 24 kuukauden ajalta on $600 — Founding Member maksaa itsensä takaisin alle kahdessa vuodessa ja jatkaa siitä eteenpäin.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (injected by components.js) -->
+  <div id="footer-root"></div>
+
+  <!-- Shared components + i18n + consent (spec 023) -->
+  <script src="../consent-api.b29ceadb9e.js" defer integrity="sha384-AgMsIGCbo9mV0oP2ebvR5aNCzNPtSkIGXG5v29yY6A+vEktkTMAOZtlK0WiKSEUR" crossorigin="anonymous"></script>
+  <script src="../components.a5dd3847dd.js" defer integrity="sha384-BdwwJdZy8d/q4lISMhozafEB4OYKFnqFwBsorzvEe5asU6ZWR4QN+keuXZNXxUKy" crossorigin="anonymous"></script>
+  <script src="../cookie-banner.8a90f5095a.js" defer integrity="sha384-FkrIUHI4EiKuF7c0lI0I+k/SpAC6SN6GAiU3tqGZBNs1nvMH4R/g+hpuVB/UGk63" crossorigin="anonymous"></script>
+  <script src="../ga4-loader.f5ebaf533f.js" defer integrity="sha384-U+G0F+gL0htHsJ1w1r/1uHQ1cyT+IbcPNBAtAN3Gx37qoxqkn9eBS7VsV04cuebt" crossorigin="anonymous"></script>
+  <script src="../clarity-loader.60a9a5160f.js" defer integrity="sha384-rdROtDi/pws+RrJtXaeyRY20mP1RJMaVL3DuCPi4UU7tkWHea6vyx01XW/4tbkL/" crossorigin="anonymous"></script>
+  <script src="../i18n-loader.60a9511617.js" defer integrity="sha384-vrXulbm1vtNZF9G412NN3Ll2B+Am3PVt6yq5HKpmdpEbVA1qzagN3rtzt2hz+hQt" crossorigin="anonymous"></script>
+  <script src="../team-notify.73d70ab047.js" defer integrity="sha384-kQUIeDWtAKHyIrSPoncROrE3SSvzakx5e3Ll8GT1Zjgqqr7nAyhVHZ7qyXYC+wVU" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

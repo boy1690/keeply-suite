@@ -1,0 +1,581 @@
+#!/usr/bin/env node
+/**
+ * Keeply i18n Build Script
+ *
+ * Reads HTML templates from templates/ and i18n JSON files from i18n/,
+ * generates static localized pages in subdirectories (en/, ja/, zh-TW/, etc.),
+ * and produces a sitemap.xml with hreflang cross-references.
+ *
+ * Usage: node _dev/build.js
+ */
+
+const fs = require('fs');
+const path = require('path');
+
+// ─── Configuration ───────────────────────────────────────────────────────────
+
+const ROOT_DIR = path.join(__dirname, '..');
+
+const RELEASE_CONFIG_PATH = path.join(__dirname, 'release-config.json');
+
+const LOCALES = [
+  'zh-TW', 'zh-CN', 'en', 'ja', 'ko',
+  'de', 'fr', 'es', 'pt', 'it',
+  'nl', 'pl', 'cs', 'hu', 'tr',
+  'fi', 'sv', 'no', 'da'
+];
+
+const PAGES = ['index.html', 'privacy.html', 'terms.html', 'contact.html', 'install.html'];
+
+// Pages that exist per-locale but are NOT template-driven (maintained as static
+// copies in each {locale}/ directory). Listed in sitemap.xml for SEO.
+// Spec 025: was missing before, caused Google/Bing to not discover these pages.
+const EXTRA_SITEMAP_PAGES = ['buy.html', 'refund.html', 'activate.html'];
+
+// Spec 028: compare pages exist only for en + zh-TW (bilingual scope).
+// Sitemap entries are generated separately with hreflang cross-refs limited to these 2 locales.
+const COMPARE_LOCALES = ['en', 'zh-TW'];
+const COMPARISONS_DIR = path.join(__dirname, 'comparisons');
+
+const BASE_URL = 'https://keeply.work';
+const TEMPLATE_DIR = path.join(__dirname, 'templates');
+const I18N_DIR = path.join(ROOT_DIR, 'i18n');
+const OUTPUT_DIR = ROOT_DIR;
+
+// Map locale codes → HTML lang attribute values
+const HTML_LANG_MAP = {
+  'zh-TW': 'zh-Hant', 'zh-CN': 'zh-Hans',
+  'en': 'en', 'ja': 'ja', 'ko': 'ko',
+  'de': 'de', 'fr': 'fr', 'es': 'es', 'pt': 'pt', 'it': 'it',
+  'nl': 'nl', 'pl': 'pl', 'cs': 'cs', 'hu': 'hu', 'tr': 'tr',
+  'fi': 'fi', 'sv': 'sv', 'no': 'no', 'da': 'da'
+};
+
+// Map locale codes → OG locale format
+const OG_LOCALE_MAP = {
+  'zh-TW': 'zh_TW', 'zh-CN': 'zh_CN', 'en': 'en_US',
+  'ja': 'ja_JP', 'ko': 'ko_KR', 'de': 'de_DE', 'fr': 'fr_FR',
+  'es': 'es_ES', 'pt': 'pt_PT', 'it': 'it_IT', 'nl': 'nl_NL',
+  'pl': 'pl_PL', 'cs': 'cs_CZ', 'hu': 'hu_HU', 'tr': 'tr_TR',
+  'fi': 'fi_FI', 'sv': 'sv_SE', 'no': 'nb_NO', 'da': 'da_DK'
+};
+
+// Map page filename → meta key prefix
+const PAGE_META_PREFIX = {
+  'index.html': 'index',
+  'privacy.html': 'privacy',
+  'terms.html': 'terms',
+  'contact.html': 'contact',
+  'install.html': 'install'
+};
+
+// ─── Helpers ─────────────────────────────────────────────────────────────────
+
+function escapeHtml(str) {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+function escapeAttr(str) {
+  return str.replace(/"/g, '&quot;').replace(/&/g, '&amp;');
+}
+
+function loadReleaseConfig() {
+  if (!fs.existsSync(RELEASE_CONFIG_PATH)) {
+    console.error(`ERROR: release-config.json not found at ${RELEASE_CONFIG_PATH}`);
+    console.error('Create it with shape: { "version": "1.0.2", "versionTag": "v1.0.2" }');
+    process.exit(1);
+  }
+  const cfg = JSON.parse(fs.readFileSync(RELEASE_CONFIG_PATH, 'utf8'));
+  if (!cfg.version || !cfg.versionTag) {
+    console.error('ERROR: release-config.json must contain non-empty "version" and "versionTag" fields');
+    process.exit(1);
+  }
+  if (!cfg.versionTag.startsWith('v')) {
+    console.warn(`WARNING: versionTag "${cfg.versionTag}" does not start with 'v' — expected GitHub release tag convention`);
+  }
+  return cfg;
+}
+
+function applyVersionSubstitution(html, cfg) {
+  // Replace longer keys first to avoid being shadowed by partial matches.
+  // Order: VERSION_TAG → SHA256_* → VERSION
+  const checksums = (cfg.checksums && typeof cfg.checksums === 'object') ? cfg.checksums : {};
+  return html
+    .replace(/\{\{VERSION_TAG\}\}/g, cfg.versionTag)
+    .replace(/\{\{SHA256_WIN\}\}/g, checksums.WIN || '')
+    .replace(/\{\{SHA256_MAC\}\}/g, checksums.MAC || '')
+    .replace(/\{\{SHA256_MSI\}\}/g, checksums.MSI || '')
+    .replace(/\{\{SHA256_APPTAR\}\}/g, checksums.APPTAR || '')
+    .replace(/\{\{VERSION\}\}/g, cfg.version);
+}
+
+function loadTranslations() {
+  const translations = {};
+  for (const locale of LOCALES) {
+    const jsonPath = path.join(I18N_DIR, `${locale}.json`);
+    if (fs.existsSync(jsonPath)) {
+      translations[locale] = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
+    } else {
+      console.warn(`WARNING: Missing translation file: ${jsonPath}`);
+      translations[locale] = {};
+    }
+  }
+  return translations;
+}
+
+function getTranslation(translations, locale, key, fallbackLocale) {
+  if (translations[locale] && translations[locale][key] != null) {
+    return translations[locale][key];
+  }
+  if (fallbackLocale && translations[fallbackLocale] && translations[fallbackLocale][key] != null) {
+    console.warn(`  FALLBACK: ${locale} missing key "${key}", using ${fallbackLocale}`);
+    return translations[fallbackLocale][key];
+  }
+  return null;
+}
+
+// ─── HTML Transformations ────────────────────────────────────────────────────
+
+function replaceHtmlLang(html, locale) {
+  const langVal = HTML_LANG_MAP[locale] || locale;
+  return html.replace(/(<html[^>]*\s)lang="[^"]*"/, `$1lang="${langVal}"`);
+}
+
+function replaceTitle(html, translations, locale, pagePrefix) {
+  const titleKey = `${pagePrefix}.meta.title`;
+  const title = getTranslation(translations, locale, titleKey, 'en');
+  if (title) {
+    html = html.replace(/<title>[^<]*<\/title>/, `<title>${escapeHtml(title)}</title>`);
+  }
+  return html;
+}
+
+function replaceMetaDescription(html, translations, locale, pagePrefix) {
+  const descKey = `${pagePrefix}.meta.description`;
+  const desc = getTranslation(translations, locale, descKey, 'en');
+  if (desc) {
+    html = html.replace(
+      /(<meta\s+name="description"\s+content=")[^"]*(")/,
+      `$1${escapeAttr(desc)}$2`
+    );
+  }
+  return html;
+}
+
+function replaceCanonical(html, locale, page) {
+  const pagePath = page === 'index.html' ? '' : page;
+  const url = `${BASE_URL}/${locale}/${pagePath}`;
+  return html.replace(
+    /(<link\s+rel="canonical"\s+href=")[^"]*(")/,
+    `$1${url}$2`
+  );
+}
+
+function replaceHreflangTags(html, locale, page) {
+  const pagePath = page === 'index.html' ? '' : page;
+
+  // Remove all existing hreflang link tags
+  html = html.replace(/\s*<link\s+rel="alternate"\s+hreflang="[^"]*"\s+href="[^"]*"\s*\/?\s*>\s*/g, '\n');
+
+  // Build new hreflang tags
+  let hreflangTags = '';
+  for (const loc of LOCALES) {
+    const url = `${BASE_URL}/${loc}/${pagePath}`;
+    hreflangTags += `  <link rel="alternate" hreflang="${loc}" href="${url}" />\n`;
+  }
+  hreflangTags += `  <link rel="alternate" hreflang="x-default" href="${BASE_URL}/" />\n`;
+
+  // Insert after canonical
+  html = html.replace(
+    /(<link\s+rel="canonical"[^>]*>)\n*/,
+    `$1\n\n  <!-- Hreflang (19 languages + x-default) -->\n${hreflangTags}`
+  );
+
+  return html;
+}
+
+function replaceOgTags(html, translations, locale, page, pagePrefix) {
+  const pagePath = page === 'index.html' ? '' : page;
+  const url = `${BASE_URL}/${locale}/${pagePath}`;
+  const ogLocale = OG_LOCALE_MAP[locale] || locale;
+
+  // og:url
+  html = html.replace(
+    /(<meta\s+property="og:url"\s+content=")[^"]*(")/,
+    `$1${url}$2`
+  );
+
+  // og:title
+  const title = getTranslation(translations, locale, `${pagePrefix}.meta.title`, 'en');
+  if (title) {
+    html = html.replace(
+      /(<meta\s+property="og:title"\s+content=")[^"]*(")/,
+      `$1${escapeAttr(title)}$2`
+    );
+  }
+
+  // og:description
+  const desc = getTranslation(translations, locale, `${pagePrefix}.meta.description`, 'en');
+  if (desc) {
+    html = html.replace(
+      /(<meta\s+property="og:description"\s+content=")[^"]*(")/,
+      `$1${escapeAttr(desc)}$2`
+    );
+  }
+
+  // og:image:alt — mirror og:title so each locale's preview alt-text matches its title
+  if (title) {
+    html = html.replace(
+      /(<meta\s+property="og:image:alt"\s+content=")[^"]*(")/,
+      `$1${escapeAttr(title)}$2`
+    );
+  }
+
+  // og:locale — replace primary and remove alternates, then add correct ones
+  html = html.replace(
+    /(<meta\s+property="og:locale"\s+content=")[^"]*(")/,
+    `$1${ogLocale}$2`
+  );
+  // Remove existing og:locale:alternate tags
+  html = html.replace(/\s*<meta\s+property="og:locale:alternate"\s+content="[^"]*"\s*\/?\s*>\s*/g, '\n');
+  // Add og:locale:alternate for other locales
+  let ogAlternates = '';
+  for (const loc of LOCALES) {
+    if (loc !== locale) {
+      const altOgLocale = OG_LOCALE_MAP[loc] || loc;
+      ogAlternates += `  <meta property="og:locale:alternate" content="${altOgLocale}" />\n`;
+    }
+  }
+  html = html.replace(
+    /(<meta\s+property="og:locale"\s+content="[^"]*"\s*\/?\s*>)\n*/,
+    `$1\n${ogAlternates}`
+  );
+
+  // Twitter Card title + description
+  if (title) {
+    html = html.replace(
+      /(<meta\s+name="twitter:title"\s+content=")[^"]*(")/,
+      `$1${escapeAttr(title)}$2`
+    );
+  }
+  if (desc) {
+    html = html.replace(
+      /(<meta\s+name="twitter:description"\s+content=")[^"]*(")/,
+      `$1${escapeAttr(desc)}$2`
+    );
+  }
+
+  // twitter:image:alt — same locale-aware alt as og:image:alt
+  if (title) {
+    html = html.replace(
+      /(<meta\s+name="twitter:image:alt"\s+content=")[^"]*(")/,
+      `$1${escapeAttr(title)}$2`
+    );
+  }
+
+  return html;
+}
+
+// Spec 043 bug-fix B1：homepage compare 卡片用 __COMPARE_PATH__ placeholder，
+// 依 locale 替換為對應 compare hub 路徑（避免 zh-TW 用戶點卡片進 EN 版）。
+//   en + 13 其他 locale → /compare（en compare 是 root level，無 locale prefix）
+//   zh-TW → /zh-TW/compare
+// 注意：對 13 其他 locale，本意是 fallback 到 en compare（與 components.js
+// COMPARE_LOCALES 一致）。
+function applyComparePath(html, locale) {
+  const comparePath = locale === 'zh-TW' ? '/zh-TW/compare' : '/compare';
+  return html.replace(/__COMPARE_PATH__/g, comparePath);
+}
+
+function replaceDataI18n(html, translations, locale) {
+  const t = translations[locale] || {};
+  const fallback = translations['en'] || {};
+
+  // Replace data-i18n="key" elements (textContent)
+  // Matches: <TAG ... data-i18n="key" ...>content</TAG>
+  html = html.replace(
+    /(<(\w+)\s[^>]*?data-i18n="([^"]+)"[^>]*>)([\s\S]*?)(<\/\2>)/g,
+    function (match, openTag, tagName, key, content, closeTag) {
+      var val = t[key] != null ? t[key] : (fallback[key] != null ? fallback[key] : null);
+      if (val == null) return match;
+      // For input/textarea, set placeholder attribute instead
+      if (tagName === 'input' || tagName === 'textarea') {
+        openTag = openTag.replace(/placeholder="[^"]*"/, `placeholder="${escapeAttr(val)}"`);
+        return openTag + content + closeTag;
+      }
+      return openTag + escapeHtml(val) + closeTag;
+    }
+  );
+
+  // Replace data-i18n-html="key" elements (innerHTML)
+  html = html.replace(
+    /(<(\w+)\s[^>]*?data-i18n-html="([^"]+)"[^>]*>)([\s\S]*?)(<\/\2>)/g,
+    function (match, openTag, tagName, key, content, closeTag) {
+      var val = t[key] != null ? t[key] : (fallback[key] != null ? fallback[key] : null);
+      if (val == null) return match;
+      return openTag + val + closeTag;
+    }
+  );
+
+  return html;
+}
+
+function fixResourcePaths(html) {
+  // Fix stylesheet links
+  html = html.replace(/(href=")style\.css(")/g, '$1../style.css$2');
+  html = html.replace(/(href=")input\.css(")/g, '$1../input.css$2');
+
+  // Fix preload links
+  html = html.replace(/(<link\s+rel="preload"\s+href=")style\.css(")/g, '$1../style.css$2');
+
+  // Fix script sources
+  html = html.replace(/(src=")components\.js(")/g, '$1../components.js$2');
+  html = html.replace(/(src=")i18n-loader\.js(")/g, '$1../i18n-loader.js$2');
+  html = html.replace(/(src=")i18n\.js(")/g, '$1../i18n.js$2');
+  html = html.replace(/(src=")consent-api\.js(")/g, '$1../consent-api.js$2');   // spec 023
+  html = html.replace(/(src=")cookie-banner\.js(")/g, '$1../cookie-banner.js$2'); // spec 023
+  html = html.replace(/(src=")ga4-loader\.js(")/g, '$1../ga4-loader.js$2');     // spec 024
+  html = html.replace(/(src=")clarity-loader\.js(")/g, '$1../clarity-loader.js$2'); // 2026-05-03 Microsoft Clarity Consent Mode v2
+  html = html.replace(/(src=")team-notify\.js(")/g, '$1../team-notify.js$2');       // spec 031
+  html = html.replace(/(src=")paddle-checkout\.js(")/g, '$1../paddle-checkout.js$2'); // spec 031
+  html = html.replace(/(src=")activate-license\.js(")/g, '$1../activate-license.js$2'); // spec 031
+
+  // Fix favicon links
+  html = html.replace(/(href=")favicon\.ico(")/g, '$1../favicon.ico$2');
+  html = html.replace(/(href=")favicon\.svg(")/g, '$1../favicon.svg$2');
+  html = html.replace(/(href=")apple-touch-icon\.png(")/g, '$1../apple-touch-icon.png$2');
+  html = html.replace(/(href=")site\.webmanifest(")/g, '$1../site.webmanifest$2');
+
+  // Fix image sources
+  html = html.replace(/(src=")og-image\.png(")/g, '$1../og-image.png$2');
+  html = html.replace(/(src=")logo\.svg(")/g, '$1../logo.svg$2');
+  html = html.replace(/(src=")logo-dark\.svg(")/g, '$1../logo-dark.svg$2');
+
+  // Fix OG image URL (absolute, should not be changed)
+  // Already absolute with https://keeply.work/, so no fix needed
+
+  return html;
+}
+
+// ─── Sitemap Generation ─────────────────────────────────────────────────────
+
+/**
+ * Spec 028: collect compare hub + sub-page sitemap entries.
+ * English lives at /compare/ (no locale prefix, matches build-comparisons.js output).
+ * zh-TW lives at /zh-TW/compare/. Hreflang cross-refs limited to these 2 locales.
+ */
+function generateCompareSitemapEntries(today) {
+  if (!fs.existsSync(COMPARISONS_DIR)) return '';
+
+  const slugs = fs.readdirSync(COMPARISONS_DIR)
+    .filter(f => f.endsWith('.json') && !f.startsWith('_'))
+    .map(f => f.replace(/\.json$/, ''))
+    .sort();
+
+  // Entries: hub (path '') + one per slug.
+  const entries = [{ path: '', priority: '0.9' }]
+    .concat(slugs.map(slug => ({ path: `${slug}.html`, priority: '0.85' })));
+
+  // URL builder mirrors canonical URLs produced by build-comparisons.js.
+  const urlFor = (locale, entryPath) => locale === 'en'
+    ? `${BASE_URL}/compare/${entryPath}`
+    : `${BASE_URL}/${locale}/compare/${entryPath}`;
+
+  let xml = '';
+  for (const locale of COMPARE_LOCALES) {
+    for (const entry of entries) {
+      const url = urlFor(locale, entry.path);
+      xml += '  <url>\n';
+      xml += `    <loc>${url}</loc>\n`;
+      xml += `    <lastmod>${today}</lastmod>\n`;
+      xml += '    <changefreq>monthly</changefreq>\n';
+      xml += `    <priority>${entry.priority}</priority>\n`;
+
+      for (const altLocale of COMPARE_LOCALES) {
+        xml += `    <xhtml:link rel="alternate" hreflang="${altLocale}" href="${urlFor(altLocale, entry.path)}" />\n`;
+      }
+      xml += `    <xhtml:link rel="alternate" hreflang="x-default" href="${urlFor('en', entry.path)}" />\n`;
+      xml += '  </url>\n';
+    }
+  }
+  return xml;
+}
+
+function generateSitemap() {
+  let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
+  xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n';
+  xml += '        xmlns:xhtml="http://www.w3.org/1999/xhtml">\n';
+
+  const today = new Date().toISOString().split('T')[0];
+
+  // All pages that should appear in sitemap: template-driven + extra static pages.
+  const sitemapPages = PAGES.concat(EXTRA_SITEMAP_PAGES);
+
+  for (const page of sitemapPages) {
+    for (const locale of LOCALES) {
+      const pagePath = page === 'index.html' ? '' : page;
+      const url = `${BASE_URL}/${locale}/${pagePath}`;
+      const priority = page === 'index.html' ? '1.0' : (page === 'buy.html' ? '0.8' : '0.5');
+      const changefreq = page === 'index.html' ? 'weekly' : 'monthly';
+
+      xml += '  <url>\n';
+      xml += `    <loc>${url}</loc>\n`;
+      xml += `    <lastmod>${today}</lastmod>\n`;
+      xml += `    <changefreq>${changefreq}</changefreq>\n`;
+      xml += `    <priority>${priority}</priority>\n`;
+
+      // Hreflang cross-references for all locales
+      for (const altLocale of LOCALES) {
+        const altPath = page === 'index.html' ? '' : page;
+        const altUrl = `${BASE_URL}/${altLocale}/${altPath}`;
+        xml += `    <xhtml:link rel="alternate" hreflang="${altLocale}" href="${altUrl}" />\n`;
+      }
+      xml += `    <xhtml:link rel="alternate" hreflang="x-default" href="${BASE_URL}/" />\n`;
+
+      xml += '  </url>\n';
+    }
+  }
+
+  // Also add root language selector page
+  xml += '  <url>\n';
+  xml += `    <loc>${BASE_URL}/</loc>\n`;
+  xml += `    <lastmod>${today}</lastmod>\n`;
+  xml += '    <changefreq>monthly</changefreq>\n';
+  xml += '    <priority>0.8</priority>\n';
+  xml += '  </url>\n';
+
+  // Spec 028: compare hub + sub-pages (en + zh-TW).
+  xml += generateCompareSitemapEntries(today);
+
+  // Spec 042: install pages (Stage 1 = root + en only, expand later).
+  xml += generateInstallSitemapEntries(today);
+
+  xml += '</urlset>\n';
+  return xml;
+}
+
+// Spec 043 D (Stage 2): install.html template-driven + 6 core locale 翻譯。
+// 其他 13 locale 透過 components.js INSTALL_LOCALES fallback 到 /en/install.html。
+function generateInstallSitemapEntries(today) {
+  const installLocales = ['en', 'zh-TW', 'zh-CN', 'ja', 'ko', 'it'];
+  const rootUrl = `${BASE_URL}/install.html`;
+
+  // Cross-ref block shared by root + each locale entry.
+  const altLinks = installLocales.map(loc =>
+    `    <xhtml:link rel="alternate" hreflang="${loc}" href="${BASE_URL}/${loc}/install.html" />`
+  ).join('\n') +
+    `\n    <xhtml:link rel="alternate" hreflang="x-default" href="${rootUrl}" />\n`;
+
+  let xml = '';
+  // Root install page (x-default).
+  xml += '  <url>\n';
+  xml += `    <loc>${rootUrl}</loc>\n`;
+  xml += `    <lastmod>${today}</lastmod>\n`;
+  xml += '    <changefreq>monthly</changefreq>\n';
+  xml += '    <priority>0.7</priority>\n';
+  xml += altLinks;
+  xml += '  </url>\n';
+
+  // Per-locale install pages.
+  for (const loc of installLocales) {
+    xml += '  <url>\n';
+    xml += `    <loc>${BASE_URL}/${loc}/install.html</loc>\n`;
+    xml += `    <lastmod>${today}</lastmod>\n`;
+    xml += '    <changefreq>monthly</changefreq>\n';
+    xml += '    <priority>0.7</priority>\n';
+    xml += altLinks;
+    xml += '  </url>\n';
+  }
+
+  return xml;
+}
+
+// ─── Main ────────────────────────────────────────────────────────────────────
+
+function main() {
+  console.log('=== Keeply i18n Build ===\n');
+
+  // Load release config
+  const releaseConfig = loadReleaseConfig();
+  console.log(`Release version: ${releaseConfig.versionTag} (${releaseConfig.version})\n`);
+
+  // Load translations
+  const translations = loadTranslations();
+  console.log(`Loaded ${Object.keys(translations).length} locales\n`);
+
+  let fileCount = 0;
+
+  for (const locale of LOCALES) {
+    const localeDir = path.join(OUTPUT_DIR, locale);
+    if (!fs.existsSync(localeDir)) {
+      fs.mkdirSync(localeDir, { recursive: true });
+    }
+
+    for (const page of PAGES) {
+      const templatePath = path.join(TEMPLATE_DIR, page);
+      if (!fs.existsSync(templatePath)) {
+        console.error(`ERROR: Template not found: ${templatePath}`);
+        process.exit(1);
+      }
+
+      let html = fs.readFileSync(templatePath, 'utf8');
+      const pagePrefix = PAGE_META_PREFIX[page];
+
+      // Apply transformations in order
+      html = applyVersionSubstitution(html, releaseConfig);
+      html = replaceHtmlLang(html, locale);
+      html = replaceTitle(html, translations, locale, pagePrefix);
+      html = replaceMetaDescription(html, translations, locale, pagePrefix);
+      html = replaceCanonical(html, locale, page);
+      html = replaceHreflangTags(html, locale, page);
+      html = replaceOgTags(html, translations, locale, page, pagePrefix);
+      html = replaceDataI18n(html, translations, locale);
+      html = applyComparePath(html, locale);
+      html = fixResourcePaths(html);
+
+      // Write output
+      const outputPath = path.join(localeDir, page);
+      fs.writeFileSync(outputPath, html, 'utf8');
+      fileCount++;
+    }
+  }
+
+  // Generate sitemap
+  const sitemap = generateSitemap();
+  fs.writeFileSync(path.join(OUTPUT_DIR, 'sitemap.xml'), sitemap, 'utf8');
+  const sitemapCount = (sitemap.match(/<url>/g) || []).length;
+  console.log(`Generated sitemap.xml (${sitemapCount} URLs)\n`);
+
+  // Spec 36: locale pack .js generation moved to _dev/build-fingerprint.js,
+  // which synthesizes pack content from i18n/*.json in-memory and writes
+  // only the hashed file. No intermediate i18n/<locale>.js is produced.
+
+  // Copy templates to root as fallback pages (spec 043 C).
+  // 所有 root pages 統一套 zh-TW.json（root 顯示繁中，與站內主語言一致）。
+  // 包含 install.html（spec 043 D 原 EN override 在 bug-fix 時撤銷，
+  // 因為 root 應該整體一致 = zh-TW，不應該 install 例外英文）。
+  //
+  // Spec 045: root compare path 強制套 /compare (EN canonical) 而非 /zh-TW/compare。
+  // 根因：root 是 site 最高權重頁面（canonical https://keeply.work/，x-default
+  // hreflang 目標），若 root compare 卡片連 /zh-TW/compare/*，EN canonical compare
+  // 從 root 拿到的 PageRank 訊號 = 0，導致 GSC「discovered but not crawled」。
+  // UX 取捨：root 訪客看繁中卡片標題但點下去進英文 compare 頁；繁中流量正常
+  // 路徑會從 nav 切 /zh-TW/，那邊 compare 卡片仍正確指 /zh-TW/compare/。
+  const ROOT_LOCALE = 'zh-TW';
+  for (const page of PAGES) {
+    let rootHtml = fs.readFileSync(path.join(TEMPLATE_DIR, page), 'utf8');
+    rootHtml = applyVersionSubstitution(rootHtml, releaseConfig);
+    rootHtml = replaceDataI18n(rootHtml, translations, ROOT_LOCALE);
+    rootHtml = rootHtml.replace(/__COMPARE_PATH__/g, '/compare');
+    fs.writeFileSync(path.join(OUTPUT_DIR, page), rootHtml, 'utf8');
+  }
+  console.log(`Copied ${PAGES.length} templates to root (${ROOT_LOCALE} i18n applied, EN compare path)`);
+
+  console.log(`\nBuild complete: ${fileCount} files generated across ${LOCALES.length} locales`);
+}
+
+main();

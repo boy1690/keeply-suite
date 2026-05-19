@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="hu" class="scroll-smooth" data-i18n-title="index.meta.title" data-i18n-desc="index.meta.description">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#4F46E5" />
+  <!-- Content Security Policy (spec 019). frame-ancestors / HSTS / Permissions-Policy
+       are header-only and deferred to future Cloudflare migration (audit #8). -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://static.cloudflareinsights.com https://*.clarity.ms https://cdn.paddle.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com https://*.clarity.ms; font-src 'self'; connect-src 'self' https://docs.google.com https://*.google-analytics.com https://*.analytics.google.com https://cloudflareinsights.com https://*.clarity.ms; form-action 'self' https://docs.google.com; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <title>Keeply — A fájljaidnak történeteik vannak. A Keeply mindegyikre emlékszik.</title>
+  <meta name="description" content="A legegyszerűbb módja, hogy nem technikai felhasználók kezeljék a fájlverziókat. Ingyenes letöltés, indulás 30 másodperc alatt." />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://keeply.work/hu/" />
+
+  <!-- Hreflang (19 languages + x-default) -->
+  <link rel="alternate" hreflang="zh-TW" href="https://keeply.work/zh-TW/" />
+  <link rel="alternate" hreflang="zh-CN" href="https://keeply.work/zh-CN/" />
+  <link rel="alternate" hreflang="en" href="https://keeply.work/en/" />
+  <link rel="alternate" hreflang="ja" href="https://keeply.work/ja/" />
+  <link rel="alternate" hreflang="ko" href="https://keeply.work/ko/" />
+  <link rel="alternate" hreflang="de" href="https://keeply.work/de/" />
+  <link rel="alternate" hreflang="fr" href="https://keeply.work/fr/" />
+  <link rel="alternate" hreflang="es" href="https://keeply.work/es/" />
+  <link rel="alternate" hreflang="pt" href="https://keeply.work/pt/" />
+  <link rel="alternate" hreflang="it" href="https://keeply.work/it/" />
+  <link rel="alternate" hreflang="nl" href="https://keeply.work/nl/" />
+  <link rel="alternate" hreflang="pl" href="https://keeply.work/pl/" />
+  <link rel="alternate" hreflang="cs" href="https://keeply.work/cs/" />
+  <link rel="alternate" hreflang="hu" href="https://keeply.work/hu/" />
+  <link rel="alternate" hreflang="tr" href="https://keeply.work/tr/" />
+  <link rel="alternate" hreflang="fi" href="https://keeply.work/fi/" />
+  <link rel="alternate" hreflang="sv" href="https://keeply.work/sv/" />
+  <link rel="alternate" hreflang="no" href="https://keeply.work/no/" />
+  <link rel="alternate" hreflang="da" href="https://keeply.work/da/" />
+  <link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+  <!-- Hreflang (19 languages + x-default) -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Favicon -->
+  <link rel="icon" href="../favicon.ico" sizes="32x32" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://keeply.work/hu/" />
+  <meta property="og:title" content="Keeply — A fájljaidnak történeteik vannak. A Keeply mindegyikre emlékszik." />
+  <meta property="og:description" content="A legegyszerűbb módja, hogy nem technikai felhasználók kezeljék a fájlverziókat. Ingyenes letöltés, indulás 30 másodperc alatt." />
+  <meta property="og:image" content="https://keeply.work/og-image.png" />
+  <meta property="og:image:secure_url" content="https://keeply.work/og-image.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Keeply — A fájljaidnak történeteik vannak. A Keeply mindegyikre emlékszik." />
+  <meta property="og:site_name" content="Keeply" />
+  <meta property="og:locale" content="hu_HU" />
+  <meta property="og:locale:alternate" content="zh_TW" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="ja_JP" />
+  <meta property="og:locale:alternate" content="ko_KR" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:locale:alternate" content="es_ES" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="it_IT" />
+  <meta property="og:locale:alternate" content="nl_NL" />
+  <meta property="og:locale:alternate" content="pl_PL" />
+  <meta property="og:locale:alternate" content="cs_CZ" />
+  <meta property="og:locale:alternate" content="tr_TR" />
+  <meta property="og:locale:alternate" content="fi_FI" />
+  <meta property="og:locale:alternate" content="sv_SE" />
+  <meta property="og:locale:alternate" content="nb_NO" />
+  <meta property="og:locale:alternate" content="da_DK" />
+<!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Keeply — A fájljaidnak történeteik vannak. A Keeply mindegyikre emlékszik." />
+  <meta name="twitter:description" content="A legegyszerűbb módja, hogy nem technikai felhasználók kezeljék a fájlverziókat. Ingyenes letöltés, indulás 30 másodperc alatt." />
+  <meta name="twitter:image" content="https://keeply.work/og-image.png" />
+  <meta name="twitter:image:alt" content="Keeply — A fájljaidnak történeteik vannak. A Keeply mindegyikre emlékszik." />
+
+  <!-- Tailwind CSS (compiled) -->
+  <link rel="preload" href="../style.css" as="style" integrity="sha384-StVcXtMksUhM8v9Z5e/ptrBnGyMvDgaZCTHXZ85oaFKXvrtpXmx3F2fSXUe3lcuY" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../style.css" integrity="sha384-StVcXtMksUhM8v9Z5e/ptrBnGyMvDgaZCTHXZ85oaFKXvrtpXmx3F2fSXUe3lcuY" crossorigin="anonymous" />
+
+  <!-- M PLUS Rounded 1c font preload (eliminates CLS from late font discovery) -->
+  <link rel="preload" href="../fonts/MPLUSRounded1c-Regular-v2.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+  <link rel="preload" href="../fonts/MPLUSRounded1c-Medium-v2.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+  <link rel="preload" href="../fonts/MPLUSRounded1c-Bold-v2.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+
+  <!-- M PLUS Rounded 1c (self-hosted via input.css @font-face) -->
+
+  <!-- JSON-LD Structured Data injected post-build by _dev/inject-schema.js (spec 017) -->  <!-- Schema.org JSON-LD (injected by _dev/inject-schema.js) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://keeply.work/#organization",
+        "name": "Keeply",
+        "url": "https://keeply.work",
+        "logo": "https://keeply.work/logo.svg",
+        "sameAs": [
+          "https://keeply.work",
+          "https://blog.keeply.work",
+          "https://github.com/boy1690/keeply-releases",
+          "https://www.linkedin.com/in/ting-wei-tsao-b57480152/"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://keeply.work/#website",
+        "url": "https://keeply.work/hu/",
+        "name": "Keeply",
+        "inLanguage": "hu",
+        "publisher": {
+          "@id": "https://keeply.work/#organization"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://keeply.work/#software",
+        "name": "Keeply",
+        "operatingSystem": "Windows, macOS",
+        "applicationCategory": "UtilitiesApplication",
+        "softwareVersion": "1.0.10",
+        "description": "A legegyszerűbb módja, hogy nem technikai felhasználók kezeljék a fájlverziókat. Ingyenes letöltés, indulás 30 másodperc alatt.",
+        "url": "https://keeply.work/hu/",
+        "downloadUrl": "https://github.com/boy1690/keeply-releases/releases/latest",
+        "screenshot": "https://keeply.work/og-image.png",
+        "offers": {
+          "@type": "Offer",
+          "price": "599",
+          "priceCurrency": "USD",
+          "url": "https://keeply.work/hu/buy.html"
+        },
+        "publisher": {
+          "@id": "https://keeply.work/#organization"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://keeply.work/#founder",
+        "name": "Tsao Ting Wei",
+        "alternateName": "曹庭維",
+        "jobTitle": "Founder, Keeply",
+        "url": "https://keeply.work/about",
+        "sameAs": [
+          "https://github.com/boy1690",
+          "https://www.linkedin.com/in/ting-wei-tsao-b57480152/"
+        ],
+        "worksFor": {
+          "@id": "https://keeply.work/#organization"
+        }
+      },
+      {
+        "@type": "HowTo",
+        "@id": "https://keeply.work/hu/#install-howto",
+        "name": "Hogyan kezdjem el a Keeply használatát és mennyi időt vesz igénybe?",
+        "totalTime": "PT30S",
+        "supply": [
+          {
+            "@type": "HowToSupply",
+            "name": "Windows 10/11 or macOS (Apple Silicon)"
+          }
+        ],
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "Letöltés és telepítés",
+            "text": "Kész 30 másodperc alatt. Windows 10+ és macOS támogatás.",
+            "url": "https://keeply.work/hu/#download"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "Válassz egy mappát",
+            "text": "Bármely mappa, amelyben dolgozol — tervek, szerződések, design fájlok."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Kezdd el a védelmet",
+            "text": "Mostantól minden változás megjegyezhető. Vissza akarsz menni? Egy kattintás."
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://keeply.work/hu/#faq",
+        "inLanguage": "hu",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Működik a Keeply offline?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Igen. A Keeply teljesen helyi szoftver — nincs felhő, nincs fiók, nincs hálózati függőség. A projektfájljaid, verziótörténeted és jegyzeteid mind a merevlemezeden vagy NAS-on maradnak. Használhatod a Keeply-t repülő üzemmódban, pincében vagy hálózatról teljesen leválasztott gépen. Az egyetlen alkalom, amikor a Keeply hálózathoz nyúl, az App-frissítések ellenőrzése — és ezt is kikapcsolhatod."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Miben különbözik a Keeply a Dropbox-tól vagy a Google Drive-tól?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A Dropbox és a Google Drive a fájlok aktuális állapotát szinkronizálja; a Keeply minden verziót külön snapshot-ként rögzít. A Dropbox és a Drive felhasználónként havonta számláz; a Keeply egyéneknek ingyenes, és lapos $25/month árú Team plan tarifája lesz (hamarosan), a csapat méretétől függetlenül. A fájljaid a saját lemezeden élnek, nem egy szolgáltató szerverén, így nem ragadsz be egy előfizetésbe."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Mi történik a fájljaimmal, ha nem fizetek tovább?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Semmi. A Keeply fájljai a merevlemezeden vagy NAS-on vannak tárolva egy szabványos, általad kontrollált mappastruktúrában. Még ha el is távolítod a Keeply-t, a fájlok és a verziótörténetük bármelyik fájlkezelővel olvashatók maradnak. Nem a saját munkádhoz való hozzáférésért fizetsz — a Founding Member licenc egyszeri, örökös fizetés, az ingyenes szint pedig örökre ingyenes marad."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Megoszthatja a csapatom a fájlokat felhasználónkénti licencelés nélkül?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Igen. Az ingyenes szinten a csapatok már most egyetlen vault mappát osztanak meg NAS-on vagy megosztott meghajtón — a Keeply nem számol felhasználói helyeket. A közelgő Team plan ($25/month lapos ár, tervezett) meghívókódos onboardingot és admin dashboard-ot ad hozzá, de továbbra is felhasználónkénti díj nélkül. Hasonlítsd ezt össze a Dropbox Business havi $20 felhasználói árával, ami egy 6-person team esetén $120/month."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Milyen fájltípusokat támogat a Keeply?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Bármilyet. A Keeply egymás melletti vizuális diff-et mutat Word, Excel, PowerPoint, PDF és képek esetén. Minden más fájltípusnál — Blender, PSD, videó, CAD, 3D modellek, forráskód — a Keeply verziókat követ, és bármelyik pontra másodpercek alatt visszaállíthatsz. A 10MB-nál nagyobb fájlokat és 38 ismert bináris formátumot a rendszer automatikusan felismeri és nagyfájl-tárolóba irányítja, mindenfajta LFS konfiguráció nélkül."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Van Linux verzió?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A Keeply jelenleg Windows 10 vagy újabbra és Apple Silicon-os macOS-re jelenik meg. Linux build van a roadmap-en, de még nem szállítottuk. Ha a Linux támogatás kritikus a workflow-d szempontjából, kérlek jelezd a kapcsolati űrlapon — a platformtámogatást a valós felhasználói igények alapján priorizáljuk, és minden kérést rögzítünk."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Mi az a $599-os Founding Member csomag?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Egyszeri fizetés örökös licencért, az első 500 vásárlóra korlátozva. Örökre megkapod a jelenlegi Keeply-funkciókat, plusz minden Team plan funkciót automatikusan, amint a Team plan elindul. Nincs ismétlődő számlázás, nincs meglepetésszerű árdrágulás. Összehasonlításul: $25/month 24 hónapon át $600 — a Founding Member két évnél hamarabb megtérül, és utána is megy tovább."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+
+</head>
+
+<body class="bg-white text-gray-900 font-sans antialiased">
+
+  <!-- Nav (injected by components.js) -->
+  <div id="nav-root"></div>
+
+  <!-- ============================================ -->
+  <!-- HERO SECTION                                 -->
+  <!-- ============================================ -->
+  <section class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
+    <!-- Background decoration -->
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute top-20 left-1/4 w-96 h-96 bg-brand-100 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-gradient"></div>
+      <div class="absolute top-40 right-1/4 w-96 h-96 bg-amber-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-gradient" style="animation-delay: 4s;"></div>
+    </div>
+
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 bg-brand-50 text-brand-700 text-sm font-medium px-4 py-1.5 rounded-full mb-8 border border-brand-100">
+        <span class="w-2 h-2 bg-amber-400 rounded-full"></span>
+        <span data-i18n="index.hero.badge">Windows · macOS Asztali alkalmazás · Ingyenes letöltés</span>
+      </div>
+
+      <!-- Main headline -->
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight">
+        <span class="text-gray-900" data-i18n="index.hero.title.1">A fájljaidnak történeteik vannak.</span><br />
+        <span class="bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent" data-i18n="index.hero.title.2">A Keeply mindegyikre emlékszik.</span>
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="mt-6 text-lg md:text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed" data-i18n="index.hero.subtitle">Minden szerkesztés, minden döntés, minden megjegyzés, amit hagysz, a projekted emlékezetévé válik. Hat hónap múlva ezek az emlékek megmentenek.</p>
+
+      <!-- CTA Buttons -->
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#download" class="group bg-brand-600 hover:bg-brand-700 text-white font-medium px-8 py-4 rounded-full text-lg transition-all hover:shadow-xl hover:shadow-brand-600/25 flex items-center gap-2">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+          <span data-i18n="index.hero.cta">Ingyenes letöltés</span>
+        </a>
+        <span class="text-sm text-gray-400" data-i18n="index.hero.cta.note">Indulás 30 másodperc alatt, fiók nélkül</span>
+      </div>
+
+      <!-- Hero Visual: App screenshot placeholder -->
+      <div class="mt-16 relative">
+        <div class="bg-gradient-to-b from-brand-50 to-white rounded-2xl border border-gray-200 shadow-2xl shadow-brand-900/5 overflow-hidden mx-auto max-w-3xl">
+          <!-- Mock app window -->
+          <div class="bg-gray-50 border-b border-gray-200 px-4 py-3 flex items-center gap-2">
+            <div class="flex gap-1.5">
+              <div class="w-3 h-3 rounded-full bg-red-300"></div>
+              <div class="w-3 h-3 rounded-full bg-amber-300"></div>
+              <div class="w-3 h-3 rounded-full bg-green-300"></div>
+            </div>
+            <div class="flex-1 text-center">
+              <span class="text-xs text-gray-400 font-medium" data-i18n="index.hero.mock.status">📂 Projektem — Védett ✓</span>
+            </div>
+          </div>
+          <!-- Mock content -->
+          <div class="p-8 md:p-12 space-y-4">
+            <div class="flex items-center gap-3 text-sm">
+              <span class="bg-amber-100 text-amber-700 px-3 py-1 rounded-full font-medium" data-i18n="index.hero.mock.unsaved">⚡ 3 fájl mentetlen módosításokkal</span>
+              <button class="bg-brand-600 text-white px-4 py-1.5 rounded-full text-sm font-medium" data-i18n="index.hero.mock.save">💾 Jelenlegi haladás mentése</button>
+            </div>
+            <div class="mt-6 space-y-3">
+              <p class="text-xs text-gray-400 font-medium uppercase tracking-wider" data-i18n="index.hero.mock.history">Előzmények</p>
+              <div class="bg-white border border-gray-100 rounded-xl p-4 flex items-start gap-4">
+                <div class="w-1 h-12 bg-brand-400 rounded-full flex-shrink-0 mt-0.5"></div>
+                <div>
+                  <p class="text-sm font-medium text-gray-800" data-i18n="index.hero.mock.today">Ma 16:30 · 3 fájl módosult</p>
+                  <p class="text-xs text-gray-400 mt-1" data-i18n="index.hero.mock.today.note">Az ügyfél borítóterv módosítást kért — váltás a márka színeire</p>
+                  <div class="mt-2 flex gap-2">
+                    <span class="text-xs bg-green-50 text-green-600 px-2 py-0.5 rounded" data-i18n-html="index.hero.mock.file1">Proposal_v2.pptx <strong>Hozzáadva</strong></span>
+                    <span class="text-xs bg-blue-50 text-blue-600 px-2 py-0.5 rounded" data-i18n-html="index.hero.mock.file2">Project_Timeline.xlsx <strong>Módosítva</strong></span>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-white border border-gray-100 rounded-xl p-4 flex items-start gap-4 opacity-60">
+                <div class="w-1 h-12 bg-gray-200 rounded-full flex-shrink-0 mt-0.5"></div>
+                <div>
+                  <p class="text-sm font-medium text-gray-800" data-i18n="index.hero.mock.yesterday">Tegnap 14:15 · 1 fájl módosult</p>
+                  <p class="text-xs text-gray-400 mt-1" data-i18n="index.hero.mock.yesterday.note">Borítószínek és oldalelrendezés frissítve</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Glow effect behind the card -->
+        <div class="absolute inset-0 -z-10 bg-gradient-to-b from-brand-100/50 via-transparent to-transparent rounded-2xl blur-2xl scale-105"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- FEATURES (3 selling points) — HIDDEN         -->
+  <!-- ============================================ -->
+  <section id="features" class="py-20 md:py-32 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900" data-i18n-html="index.features.title">Miért több a Keeply, mint egy biztonsági mentő eszköz?</h2>
+        <p class="mt-4 text-gray-500 text-lg max-w-xl mx-auto" data-i18n="index.features.subtitle">A biztonsági mentő eszközök csak a „jelenlegi&quot; fájlt jegyzik meg; a Keeply minden verziót, minden jegyzetet, minden döntésedet megjegyzi. Fél év múlva, amikor egy ügyfél azt kérdezi, „ki döntött erről?&quot;, megnyitod a Keeply-t és másodpercek alatt megtalálod a választ — ezt a mentések nem tudják adni.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Feature 1: Remember WHY -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-100 glow-hover transition-all duration-300 animate-float">
+          <div class="w-14 h-14 bg-brand-100 rounded-2xl flex items-center justify-center text-2xl mb-6">
+            💡
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="index.features.1.title">Emlékezz a MIÉRT-re</h3>
+          <p class="text-gray-500 leading-relaxed mb-4" data-i18n="index.features.1.desc">Ne csak arra emlékezz, mi változott — emlékezz, miért változtattad meg.</p>
+          <p class="text-sm text-gray-400 leading-relaxed" data-i18n="index.features.1.detail">Hat hónap múlva, amikor egy ügyfél megkérdezi: &quot;Ki hozta ezt a döntést?&quot; nem kell e-maileket böngészned. Nyisd meg a Keeply-t — a válasz ott van.</p>
+        </div>
+
+        <!-- Feature 2: Time Machine -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-100 glow-hover transition-all duration-300 animate-float-delayed">
+          <div class="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center text-2xl mb-6">
+            ⏪
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="index.features.2.title">A projekted időgépe</h3>
+          <p class="text-gray-500 leading-relaxed mb-4" data-i18n="index.features.2.desc">Minden mentés olyan, mint egy fénykép. Menj vissza bármelyik napra, bármikor.</p>
+          <p class="text-sm text-gray-400 leading-relaxed" data-i18n="index.features.2.detail">Hibáztál? Csak menj vissza. Az ügyfél meggondolta magát? Találd meg a régi verziót három másodperc alatt. Audit ideje? Teljes nyilvántartás itt.</p>
+        </div>
+
+        <!-- Feature 3: Bold Changes -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-100 glow-hover transition-all duration-300 animate-float-delayed-2">
+          <div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center text-2xl mb-6">
+            🛡️
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="index.features.3.title">Szerkessz bátran, mi mindenre emlékezünk</h3>
+          <p class="text-gray-500 leading-relaxed mb-4" data-i18n="index.features.3.desc">Nem kell többé választani a &quot;jobbá tenni&quot; és a &quot;félni a változtatástól&quot; között.</p>
+          <p class="text-sm text-gray-400 leading-relaxed" data-i18n="index.features.3.detail">A Keeply minden verziót megvéd, így szabadon kísérletezhetsz. Bármit is változtatsz, mindig visszamehetsz.</p>
+        </div>
+
+        <!-- Feature 4: Visual Diff (spec 027 MISSING M1) -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-100 glow-hover transition-all duration-300 animate-float">
+          <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center text-2xl mb-6">
+            🔍
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="index.features.4.title">Lásd minden változást egymás mellett</h3>
+          <p class="text-gray-500 leading-relaxed mb-4" data-i18n="index.features.4.desc">Vizuális diff Word, Excel, PowerPoint, PDF és képek számára.</p>
+          <p class="text-sm text-gray-400 leading-relaxed" data-i18n="index.features.4.detail">Nem csupán a módosított fájlok listája — a Keeply pontosan megmutatja, mi változott: az Office-dokumentumok, PDF-ek és képek egymás mellett jelennek meg kiemelt eltérésekkel. Minden más fájltípusnál követheted a verziókat, és másodpercek alatt visszaállíthatsz bármelyik pontot.</p>
+        </div>
+
+        <!-- Feature 5: Silent LFS (spec 027 MISSING M2) -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-100 glow-hover transition-all duration-300 animate-float-delayed">
+          <div class="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center text-2xl mb-6">
+            📦
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="index.features.5.title">Csendben kezeli a nagy fájlokat</h3>
+          <p class="text-gray-500 leading-relaxed mb-4" data-i18n="index.features.5.desc">Blender, PSD, videó — minden azonnal működik.</p>
+          <p class="text-sm text-gray-400 leading-relaxed" data-i18n="index.features.5.detail">A Keeply automatikusan felismer 38 bináris fájlformátumot és minden 10 MB-nál nagyobb fájlt, és egyetlen konfigurációs lépés nélkül a nagyfájl-tárolón keresztül kezeli őket. Nincs LFS-beállítás, nincs felpuffadt repo, nincsenek elrontott mentések a nagy projekteknél.</p>
+        </div>
+
+        <!-- Feature 6: Work Copies (spec 027 MISSING M3) -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-100 glow-hover transition-all duration-300 animate-float-delayed-2">
+          <div class="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center text-2xl mb-6">
+            🌿
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="index.features.6.title">Próbálj ki bátor változtatásokat biztonságosan</h3>
+          <p class="text-gray-500 leading-relaxed mb-4" data-i18n="index.features.6.desc">Hozz létre egy munkamásolatot, kísérletezz, majd egyesítsd vissza.</p>
+          <p class="text-sm text-gray-400 leading-relaxed" data-i18n="index.features.6.detail">A munkamásolatokkal leágazhatsz a projektedről, hogy kipróbálj egy radikálisan új dizájnt vagy egy kockázatos refaktort, majd visszafűzheted a változtatásokat, ha készen állnak — vagy törölheted a munkamásolatot, ha a kísérlet nem jött be. A fő projekted végig érintetlen marad.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- USE CASES — HIDDEN                           -->
+  <!-- ============================================ -->
+  <section class="py-20 md:py-32">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900" data-i18n-html="index.usecases.title">Ki használja a Keeply-t, és milyen munkákra való?</h2>
+        <p class="mt-4 text-gray-500 text-lg max-w-2xl mx-auto" data-i18n="index.usecases.answer">Projektmenedzserek, tervezők, jogászok, akadémikusok, mérnökök és távoli csapatok — bárki, akinek hosszú távú verziótörténetre, döntési kontextusra vagy a „final_v3&quot; fájlnévkáoszból való menekülésre van szüksége. A fájlok a saját lemezeden maradnak, a te irányításod alatt, soha nem egy szolgáltató szerverén.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Use case cards -->
+        <div class="group bg-gradient-to-br from-brand-50 to-white rounded-2xl p-8 border border-brand-100 hover:shadow-lg transition-all">
+          <div class="text-3xl mb-4">📋</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2" data-i18n="index.usecases.pm.title">Projektmenedzsment</h3>
+          <p class="text-gray-500 text-sm leading-relaxed" data-i18n="index.usecases.pm.desc">A projekted minden fájljának van története. Egy hat hónapos megjegyzés megmentheti az egész projektet.</p>
+        </div>
+
+        <div class="group bg-gradient-to-br from-amber-50 to-white rounded-2xl p-8 border border-amber-100 hover:shadow-lg transition-all">
+          <div class="text-3xl mb-4">🎨</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2" data-i18n="index.usecases.design.title">Design és kreativitás</h3>
+          <p class="text-gray-500 text-sm leading-relaxed" data-i18n="index.usecases.design.desc">Amikor egy ügyfél azt mondja: &quot;Tulajdonképpen az első verzió jobban tetszett&quot; — csak három másodpercre van szükséged. Minden verzió megvan.</p>
+        </div>
+
+        <div class="group bg-gradient-to-br from-green-50 to-white rounded-2xl p-8 border border-green-100 hover:shadow-lg transition-all">
+          <div class="text-3xl mb-4">⚖️</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2" data-i18n="index.usecases.legal.title">Jogi és szerződések</h3>
+          <p class="text-gray-500 text-sm leading-relaxed" data-i18n="index.usecases.legal.desc">Tizenhét verzió egy szerződésből, és mindegyik megőrizve. Ki módosította, mikor és miért — kristálytiszta.</p>
+        </div>
+
+        <div class="group bg-gradient-to-br from-purple-50 to-white rounded-2xl p-8 border border-purple-100 hover:shadow-lg transition-all">
+          <div class="text-3xl mb-4">📚</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2" data-i18n="index.usecases.academic.title">Tudományos kutatás</h3>
+          <p class="text-gray-500 text-sm leading-relaxed" data-i18n="index.usecases.academic.desc">Szakdolgozat_vegleges_TENYLEG_vegleges_v3.docx? Kövesd a Keeply-vel és soha többé ne keveredj össze.</p>
+        </div>
+
+        <div class="group bg-gradient-to-br from-orange-50 to-white rounded-2xl p-8 border border-orange-100 hover:shadow-lg transition-all">
+          <div class="text-3xl mb-4">🏗️</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2" data-i18n="index.usecases.construction.title">Építőipar és AEC</h3>
+          <p class="text-gray-500 text-sm leading-relaxed" data-i18n="index.usecases.construction.desc">A helyszíni mérnök fog egy USB meghajtót az ügyféltárgyalásra. Az adminisztrátor jóváhagyja a biztonsági mentési helyet — és visszavonja, amikor a projekt véget ér.</p>
+        </div>
+
+        <div class="group bg-gradient-to-br from-cyan-50 to-white rounded-2xl p-8 border border-cyan-100 hover:shadow-lg transition-all">
+          <div class="text-3xl mb-4">🌐</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2" data-i18n="index.usecases.remote.title">Távoli és Hibrid Csapatok</h3>
+          <p class="text-gray-500 text-sm leading-relaxed" data-i18n="index.usecases.remote.desc">Az irodai csapat a NAS-on, a távoli tervező a GitHubon. Ugyanaz a széf, ugyanaz a verzióelőzmény — mindenki szinkronban marad.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- HOW IT WORKS — HIDDEN                        -->
+  <!-- ============================================ -->
+  <section class="py-20 md:py-32 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900" data-i18n-html="index.howto.title">Hogyan kezdjem el a Keeply használatát és mennyi időt vesz igénybe?</h2>
+        <p class="mt-4 text-gray-500 text-lg" data-i18n="index.howto.subtitle">Három lépés: letöltés és telepítés (30 másodperc), válassz egy mappát, kezdd el a védelmet. Nincs fiók, nincs szerver, nincsenek tanulandó parancsok. Windows 10+ és macOS Apple Silicon támogatása. Vissza akarsz vonni egy módosítást? Egy kattintás.</p>
+      </div>
+
+      <div class="space-y-8">
+        <div class="flex items-start gap-6">
+          <div class="w-12 h-12 bg-brand-600 text-white rounded-full flex items-center justify-center text-lg font-bold flex-shrink-0">1</div>
+          <div>
+            <h3 class="text-lg font-bold text-gray-900" data-i18n="index.howto.step1.title">Letöltés és telepítés</h3>
+            <p class="text-gray-500 mt-1" data-i18n="index.howto.step1.desc">Kész 30 másodperc alatt. Windows 10+ és macOS támogatás.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-6">
+          <div class="w-12 h-12 bg-brand-600 text-white rounded-full flex items-center justify-center text-lg font-bold flex-shrink-0">2</div>
+          <div>
+            <h3 class="text-lg font-bold text-gray-900" data-i18n="index.howto.step2.title">Válassz egy mappát</h3>
+            <p class="text-gray-500 mt-1" data-i18n="index.howto.step2.desc">Bármely mappa, amelyben dolgozol — tervek, szerződések, design fájlok.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-6">
+          <div class="w-12 h-12 bg-amber-500 text-white rounded-full flex items-center justify-center text-lg font-bold flex-shrink-0">3</div>
+          <div>
+            <h3 class="text-lg font-bold text-gray-900" data-i18n="index.howto.step3.title">Kezdd el a védelmet</h3>
+            <p class="text-gray-500 mt-1" data-i18n="index.howto.step3.desc">Mostantól minden változás megjegyezhető. Vissza akarsz menni? Egy kattintás.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- COMPARE WITH… (spec 043 B1: 6 對手卡片入口)   -->
+  <!-- ============================================ -->
+  <section id="compare-cards" class="py-20 md:py-28 bg-gray-50/50">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900" data-i18n="index.compare.title">Miben különbözik a Keeply a Dropbox, Google Drive vagy Git megoldásoktól?</h2>
+        <p class="mt-4 text-gray-500 text-lg max-w-2xl mx-auto" data-i18n="index.compare.subtitle">A Dropbox és a Google Drive a jelenlegi fájlt szinkronizálja, és 30 nap után törli a verzió­előzményeket; a Git mérnököknek készült, meredek tanulási görbével. A Keeply újraírja a verziókezelést helyi fájlokhoz: minden verzió örökre megmarad, nincs felhőfüggőség, nincs technikai akadály, telepítsd és használd.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <a href="/compare/filename-chaos.html" class="group bg-white p-5 rounded-2xl border border-gray-100 hover:border-brand-200 hover:shadow-md transition-all flex items-center gap-4">
+          <span class="flex-shrink-0 w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center text-2xl">📁</span>
+          <span class="flex-1">
+            <span class="block text-base font-bold text-gray-900 group-hover:text-brand-700 transition-colors">vs v1/v2/FINAL</span>
+            <span class="block text-xs text-gray-400 mt-0.5" data-i18n="index.compare.card.filename-chaos.sub">Fájlnév-káosz</span>
+          </span>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-brand-500 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+        </a>
+
+        <a href="/compare/dropbox.html" class="group bg-white p-5 rounded-2xl border border-gray-100 hover:border-brand-200 hover:shadow-md transition-all flex items-center gap-4">
+          <span class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center text-2xl">📘</span>
+          <span class="flex-1">
+            <span class="block text-base font-bold text-gray-900 group-hover:text-brand-700 transition-colors">vs Dropbox</span>
+            <span class="block text-xs text-gray-400 mt-0.5" data-i18n="index.compare.card.dropbox.sub">30 napos verziókorlát</span>
+          </span>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-brand-500 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+        </a>
+
+        <a href="/compare/google-drive.html" class="group bg-white p-5 rounded-2xl border border-gray-100 hover:border-brand-200 hover:shadow-md transition-all flex items-center gap-4">
+          <span class="flex-shrink-0 w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center text-2xl">🟢</span>
+          <span class="flex-1">
+            <span class="block text-base font-bold text-gray-900 group-hover:text-brand-700 transition-colors">vs Google Drive</span>
+            <span class="block text-xs text-gray-400 mt-0.5" data-i18n="index.compare.card.google-drive.sub">Verziótörténet a menüben</span>
+          </span>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-brand-500 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+        </a>
+
+        <a href="/compare/time-machine.html" class="group bg-white p-5 rounded-2xl border border-gray-100 hover:border-brand-200 hover:shadow-md transition-all flex items-center gap-4">
+          <span class="flex-shrink-0 w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center text-2xl">🍎</span>
+          <span class="flex-1">
+            <span class="block text-base font-bold text-gray-900 group-hover:text-brand-700 transition-colors">vs Time Machine</span>
+            <span class="block text-xs text-gray-400 mt-0.5" data-i18n="index.compare.card.time-machine.sub">OS szintű, nincs projektnézet</span>
+          </span>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-brand-500 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+        </a>
+
+        <a href="/compare/snowtrack.html" class="group bg-white p-5 rounded-2xl border border-gray-100 hover:border-brand-200 hover:shadow-md transition-all flex items-center gap-4">
+          <span class="flex-shrink-0 w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center text-2xl">🎨</span>
+          <span class="flex-1">
+            <span class="block text-base font-bold text-gray-900 group-hover:text-brand-700 transition-colors">vs Snowtrack</span>
+            <span class="block text-xs text-gray-400 mt-0.5" data-i18n="index.compare.card.snowtrack.sub">Most csak vállalati (P4 One)</span>
+          </span>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-brand-500 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+        </a>
+
+        <a href="/compare/email-usb.html" class="group bg-white p-5 rounded-2xl border border-gray-100 hover:border-brand-200 hover:shadow-md transition-all flex items-center gap-4">
+          <span class="flex-shrink-0 w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center text-2xl">📧</span>
+          <span class="flex-1">
+            <span class="block text-base font-bold text-gray-900 group-hover:text-brand-700 transition-colors">vs Email / USB</span>
+            <span class="block text-xs text-gray-400 mt-0.5" data-i18n="index.compare.card.email-usb.sub">Kézi mentés automatizálása</span>
+          </span>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-brand-500 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+        </a>
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="/compare/" class="inline-flex items-center gap-2 text-sm font-medium text-brand-600 hover:text-brand-700 transition-colors">
+          <span data-i18n="index.compare.cta">Összes összehasonlítás</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- PRICING — HIDDEN                             -->
+  <!-- ============================================ -->
+  <section id="pricing" class="py-20 md:py-32">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900" data-i18n-html="index.pricing.title">Mennyibe kerül a Keeply, és a csapatok fejenként fizetnek?</h2>
+        <p class="mt-4 text-gray-500 text-lg max-w-xl mx-auto" data-i18n="index.pricing.subtitle">Az egyéni verzió örökre ingyenes, lejárat nélkül; a Team csomag fix 25 $/hó (felhasználói korlát nélkül) a fájlokkal a saját NAS-odon. A Founding Member egyszeri élethosszig tartó licenc 599 $-ért, 500 vásárlóra korlátozva. Nincs előfizetés, nincs ülésdíj.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+        <!-- Free -->
+        <div class="bg-white rounded-2xl border-2 border-gray-100 p-8 text-center">
+          <div class="text-sm font-medium text-gray-400 mb-2" data-i18n="index.pricing.free.label">Ingyenes</div>
+          <div class="text-5xl font-bold text-gray-900" data-i18n="index.pricing.free.price">Ingyenes</div>
+          <div class="text-sm text-gray-400 mt-2 mb-8" data-i18n="index.pricing.free.desc">Egyéni felhasználók és kis stúdiók számára. Örökre ingyenes.</div>
+          <ul class="text-sm text-gray-600 space-y-3 text-left mb-8">
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.free.feat.1">Korlátlan verziótörténet</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.free.feat.2">Egykattintásos visszaállítás bármely verzióra</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.free.feat.3">Változás-összehasonlítás</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.free.feat.4">Verzió megjegyzések</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.free.feat.5">Helyi és NAS tárhely (Standard vagy Védett mód)</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.free.feat.6">Fájl-összehasonlítás</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.free.feat.7">Korlátlan felhasználók</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.free.feat.8">1 Canonical + 1 Shared Mirror + korlátlan kiadás</span></li>
+          </ul>
+          <a href="#download" class="block border-2 border-gray-200 hover:border-brand-300 text-gray-700 hover:text-brand-700 font-medium py-3.5 rounded-full transition-all" data-i18n="index.pricing.free.cta">Ingyenes letöltés</a>
+        </div>
+
+        <!-- Team -->
+        <div class="bg-white rounded-2xl border-2 border-brand-500 p-8 text-center relative shadow-lg shadow-brand-500/10">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-500 text-white text-xs font-bold px-4 py-1 rounded-full" data-i18n="index.pricing.team.badge">Hamarosan</div>
+          <div class="text-sm font-medium text-brand-600 mb-2" data-i18n="index.pricing.team.label">Csapat</div>
+          <div class="flex items-baseline justify-center gap-1">
+            <span class="text-5xl font-bold text-gray-900" data-i18n="index.pricing.team.price">$25</span>
+            <span class="text-lg text-gray-400" data-i18n="index.pricing.team.period">/hó</span>
+          </div>
+          <div class="text-sm text-gray-400 mt-2 mb-1" data-i18n="index.pricing.team.annual">vagy $250/év (2 hónapot spórol)</div>
+          <div class="text-xs text-brand-500 mb-8" data-i18n="index.pricing.team.flat">Egy ár, nincs felhasználónkénti díj</div>
+          <ul class="text-sm text-gray-600 space-y-3 text-left mb-8">
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.team.feat.1">Minden a Free-ből</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.team.feat.2">Meghívókódos csapatkezelés</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.team.feat.3">Adminisztrátori vault irányítópult helyszínkérésekkel (tervezett)</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.team.feat.4">Elsőbbségi technikai támogatás</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.team.feat.5">30 napos pénzvisszafizetési garancia</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.team.feat.6">Állandó visszaesési jog 12 hónap után</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.team.feat.7">Shared Mirror irányítás: adminisztrátori kapuőrzés, megakadályozza a véletlen Canonical módosításokat (tervezett)</span></li>
+            <li class="flex items-start gap-2"><span class="text-brand-500 mt-0.5">✓</span> <span data-i18n="index.pricing.team.feat.8">Ütközésfelismerés és -feloldás</span></li>
+          </ul>
+          <p class="text-sm text-gray-500 mb-3" data-i18n="index.pricing.team.coming">Jelenleg fejlesztés alatt. Hagyja meg email címét, és értesítjük az induláskor.</p>
+          <form id="team-notify-form">
+            <div class="grid grid-cols-2 gap-2 mb-2">
+              <input type="text" id="tn-name" required placeholder="Name" data-i18n="index.pricing.team.name.placeholder" class="border border-gray-200 rounded-full px-4 py-3 text-sm focus:outline-none focus:border-brand-400" />
+              <input type="email" id="tn-email" required placeholder="your@email.com" data-i18n="index.pricing.team.placeholder" class="border border-gray-200 rounded-full px-4 py-3 text-sm focus:outline-none focus:border-brand-400" />
+            </div>
+            <label class="flex items-center gap-2 text-xs text-gray-400 cursor-pointer mb-3">
+              <input type="checkbox" id="tn-newsletter" class="rounded border-gray-300" />
+              <span data-i18n="index.pricing.team.newsletter">Szeretnék Keeply termékfrissítéseket és hírlevelet is kapni</span>
+            </label>
+            <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-medium py-3 rounded-full transition-all text-sm" data-i18n="index.pricing.team.cta.notify">Értesítsen</button>
+          </form>
+          <p id="team-notify-thanks" class="text-sm text-green-600 font-medium" style="display:none" data-i18n="index.pricing.team.thanks">Megkaptuk! Értesítjük, amikor a Team csomag elindul.</p>
+        </div>
+      </div>
+
+      <!-- Early Access Perpetual -->
+      <div class="mt-8 max-w-3xl mx-auto">
+        <div class="bg-gradient-to-r from-amber-50 to-brand-50 border border-amber-200 rounded-2xl px-8 py-6 text-center">
+          <div class="inline-flex items-center gap-2 bg-amber-500 text-white text-xs font-bold px-4 py-1 rounded-full mb-3" data-i18n="index.pricing.perpetual.badge">Early Access · 500 darabra limitált</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-1" data-i18n="index.pricing.perpetual.title">Állandó licensz — $599 egyszeri vásárlás</h3>
+          <p class="text-sm text-gray-500 max-w-lg mx-auto leading-relaxed mb-5" data-i18n="index.pricing.perpetual.desc">Tartalmazza a Csapat összes funkcióját, a vásárlás időpontjában elérhető verziót használhatod örökké. Készlet erejéig.</p>
+          <a href="buy.html" class="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 active:bg-amber-700 text-white font-bold px-7 py-3 rounded-full shadow-lg shadow-amber-500/30 transition-all" data-i18n="index.pricing.perpetual.cta">Vásárlás most — $599</a>
+        </div>
+      </div>
+
+      <!-- Team Vault explanation -->
+      <div class="mt-12 max-w-3xl mx-auto">
+        <div class="bg-gray-50 border border-gray-200 rounded-2xl px-8 py-6">
+          <p class="text-sm font-bold text-brand-600 mb-1" data-i18n="index.teamvault.tagline">Egy széf. Egy csapat. Teljes kontroll.</p>
+          <h3 class="text-lg font-bold text-gray-900 mb-3" data-i18n="index.teamvault.title">Mi az a &quot;Csapat Széf&quot;?</h3>
+          <p class="text-sm text-gray-600 leading-relaxed mb-3" data-i18n="index.teamvault.desc">A Team Vault „1 Canonical + 1 Shared Mirror&quot; topológiát használ: a Canonical a projektverziók igazságforrása (NAS, megosztott mappa vagy külső meghajtó); a Shared Mirror egy teljes pillanatkép, amelyet a Canonical szinkronizál, így bármely csapattag gyorsan elérheti a legújabb verziót. Minden tag rendelkezik saját munkamásolattal is. Az adatformátum lehet Standard mód (fájlok közvetlen böngészése és szerkesztése) vagy Védett mód (megakadályozza a destruktív előzményváltozásokat).</p>
+          <p class="text-sm text-brand-600 font-medium mb-3" data-i18n="index.teamvault.highlight">Nincs felhőfüggőség. Nincs felhasználónkénti díj. Az adatai a saját hardverén maradnak.</p>
+          <div class="grid md:grid-cols-2 gap-3 mt-3">
+            <div class="bg-white rounded-lg px-4 py-3 border border-gray-100">
+              <p class="text-xs font-bold text-gray-500 mb-1">Free</p>
+              <p class="text-sm text-gray-600" data-i18n="index.teamvault.free">Ingyenes: 1 Canonical + 1 Shared Mirror, teljesen önállóan kezelhető. Nincs jóváhagyás szükséges, nincsenek várakozási idők.</p>
+            </div>
+            <div class="bg-white rounded-lg px-4 py-3 border border-brand-100">
+              <p class="text-xs font-bold text-brand-500 mb-1">Team</p>
+              <p class="text-sm text-gray-600" data-i18n="index.teamvault.team">Csapat csomag (tervezett): ugyanaz az 1 Canonical + 1 Shared Mirror topológia, plusz tagkezelés, Shared Mirror helyszín-irányítás (rendszergazdai jóváhagyási kapuőrzés és változási ütem korlátozás, hogy a helyszín ne legyen meggondolatlanul módosítva, megzavarva a csapatot), konfliktusészlelés és csapataktivitási naplók.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- DOWNLOAD CTA                                 -->
+  <!-- ============================================ -->
+  <section id="download" class="py-20 md:py-32 bg-gradient-to-br from-brand-600 via-brand-700 to-brand-800 text-white relative overflow-hidden">
+    <!-- Decorative -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-amber-400/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-brand-400/20 rounded-full blur-3xl"></div>
+
+    <div class="max-w-3xl mx-auto px-6 text-center relative">
+      <h2 class="text-3xl md:text-5xl font-bold leading-tight" data-i18n="index.download.title">Hogyan tölthetem le a Keeply-t, és fizetős?</h2>
+      <p class="mt-6 text-brand-200 text-lg max-w-xl mx-auto leading-relaxed" data-i18n="index.download.subtitle">Ingyenes letöltés, 30 másodperces telepítés, azonnal használható. Támogatja a Windows 10/11 és macOS Apple Silicon rendszereket. Nincs hitelkártya, nincs próbaverzió lejárat, nincs fióklétrehozás. Telepítés után nyiss meg bármelyik mappát — minden mentés automatikusan verziókövetett lesz.</p>
+
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-4">
+        <!-- Windows column -->
+        <div class="flex flex-col items-center gap-2 max-w-sm w-full">
+          <a id="download-btn-win"
+             href="https://github.com/boy1690/keeply-releases/releases/download/v1.0.10/Keeply_1.0.10_x64-setup.exe"
+             class="group bg-white text-brand-700 font-bold px-8 py-4 rounded-full text-lg transition-all hover:shadow-xl hover:shadow-black/10 flex items-center justify-center gap-3 min-w-[260px]">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M3 5.479L10.5 4.5V11.5H3V5.479zM11.5 4.363L21 3V11.5H11.5V4.363zM3 12.5H10.5V19.521L3 18.521V12.5zM11.5 12.5H21V21L11.5 19.637V12.5z"/>
+            </svg>
+            <span data-i18n="index.download.cta.win">Ingyenes letöltés Windowsra</span>
+          </a>
+          <p class="text-xs text-brand-300" data-i18n="index.download.note.win">Windows 10 vagy újabb</p>
+          <details class="mt-3 text-left verify-disclosure w-full">
+            <summary class="verify-summary"><span class="verify-arrow">›</span><span data-i18n="index.download.verify.label">🔐 Letöltés hitelességének ellenőrzése</span></summary>
+            <div class="mt-3 verify-box">
+              <div class="verify-section">
+                <div class="verify-label">SHA-256</div>
+                <code class="verify-code">7d0b0c8797c87b38f34611c20b12d680ee0d24ab5ad14d6b8117cc666024f59b</code>
+              </div>
+              <div class="verify-section">
+                <div class="verify-label" data-i18n="index.download.verify.cmdLabel.win">PowerShell-ellenőrző parancs</div>
+                <code class="verify-code">Get-FileHash $HOME\Downloads\Keeply_1.0.10_x64-setup.exe -Algorithm SHA256</code>
+              </div>
+              <p class="verify-note" data-i18n="index.download.verify.howto">A kapott hash-értéknek egyeznie kell a fenti értékkel — ha egyezik, a fájl hivatalos és nem módosították.</p>
+            </div>
+          </details>
+          <details class="mt-2 text-left verify-disclosure w-full">
+            <summary class="verify-summary"><span class="verify-arrow">›</span><span data-i18n="index.download.winget.label">📦 Telepítés winget segítségével</span></summary>
+            <div class="mt-3 verify-box">
+              <div class="verify-section">
+                <div class="verify-label" data-i18n="index.download.winget.cmdLabel">PowerShell parancs</div>
+                <code class="verify-code">winget install Boy1690.Keeply</code>
+              </div>
+              <p class="verify-note" data-i18n="index.download.winget.howto">Windows Package Manager szükséges (a Windows 10 1809+ / Windows 11 része). A csomag a hivatalos microsoft/winget-pkgs repóban van közzétéve.</p>
+            </div>
+          </details>
+        </div>
+
+        <!-- Mac column -->
+        <div class="flex flex-col items-center gap-2 max-w-sm w-full">
+          <a id="download-btn-mac"
+             href="https://github.com/boy1690/keeply-releases/releases/download/v1.0.10/Keeply_1.0.10_aarch64.dmg"
+             class="group bg-white text-brand-700 font-bold px-8 py-4 rounded-full text-lg transition-all hover:shadow-xl hover:shadow-black/10 flex items-center justify-center gap-3 min-w-[260px]">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+            <span data-i18n="index.download.cta.mac">Ingyenes letöltés macOS-re</span>
+          </a>
+          <p class="text-xs text-brand-300" data-i18n="index.download.note.mac">Csak Apple Silicon</p>
+          <details class="mt-3 text-left verify-disclosure w-full">
+            <summary class="verify-summary"><span class="verify-arrow">›</span><span data-i18n="index.download.verify.label">🔐 Letöltés hitelességének ellenőrzése</span></summary>
+            <div class="mt-3 verify-box">
+              <div class="verify-section">
+                <div class="verify-label">SHA-256</div>
+                <code class="verify-code">3a8a4df481521971506792f87d53e014018387d9bc4dd8bf2ec15ad7a9ee883a</code>
+              </div>
+              <div class="verify-section">
+                <div class="verify-label" data-i18n="index.download.verify.cmdLabel.mac">Terminál-ellenőrző parancs</div>
+                <code class="verify-code">shasum -a 256 ~/Downloads/Keeply_1.0.10_aarch64.dmg</code>
+              </div>
+              <p class="verify-note" data-i18n="index.download.verify.howto">A kapott hash-értéknek egyeznie kell a fenti értékkel — ha egyezik, a fájl hivatalos és nem módosították.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <p class="mt-8 text-sm text-brand-300" data-i18n="index.download.note.shared">Személyes használatra örökre ingyenes.</p>
+
+      <p class="mt-3 text-xs text-brand-400">
+        <a href="https://github.com/boy1690/keeply-releases/releases/latest" class="underline hover:text-white transition-colors" data-i18n="index.download.allversions">Összes kiadás megtekintése</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- FAQ (spec 029 — Homepage FAQPage schema)      -->
+  <!-- ============================================ -->
+  <section id="faq" class="py-16 md:py-20 bg-gray-50">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center" data-i18n="index.faq.title">Gyakran ismételt kérdések</h2>
+      <div class="space-y-3">
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.1.q">Működik a Keeply offline?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.1.a">Igen. A Keeply teljesen helyi szoftver — nincs felhő, nincs fiók, nincs hálózati függőség. A projektfájljaid, verziótörténeted és jegyzeteid mind a merevlemezeden vagy NAS-on maradnak. Használhatod a Keeply-t repülő üzemmódban, pincében vagy hálózatról teljesen leválasztott gépen. Az egyetlen alkalom, amikor a Keeply hálózathoz nyúl, az App-frissítések ellenőrzése — és ezt is kikapcsolhatod.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.2.q">Miben különbözik a Keeply a Dropbox-tól vagy a Google Drive-tól?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.2.a">A Dropbox és a Google Drive a fájlok aktuális állapotát szinkronizálja; a Keeply minden verziót külön snapshot-ként rögzít. A Dropbox és a Drive felhasználónként havonta számláz; a Keeply egyéneknek ingyenes, és lapos $25/month árú Team plan tarifája lesz (hamarosan), a csapat méretétől függetlenül. A fájljaid a saját lemezeden élnek, nem egy szolgáltató szerverén, így nem ragadsz be egy előfizetésbe.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.3.q">Mi történik a fájljaimmal, ha nem fizetek tovább?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.3.a">Semmi. A Keeply fájljai a merevlemezeden vagy NAS-on vannak tárolva egy szabványos, általad kontrollált mappastruktúrában. Még ha el is távolítod a Keeply-t, a fájlok és a verziótörténetük bármelyik fájlkezelővel olvashatók maradnak. Nem a saját munkádhoz való hozzáférésért fizetsz — a Founding Member licenc egyszeri, örökös fizetés, az ingyenes szint pedig örökre ingyenes marad.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.4.q">Megoszthatja a csapatom a fájlokat felhasználónkénti licencelés nélkül?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.4.a">Igen. Az ingyenes szinten a csapatok már most egyetlen vault mappát osztanak meg NAS-on vagy megosztott meghajtón — a Keeply nem számol felhasználói helyeket. A közelgő Team plan ($25/month lapos ár, tervezett) meghívókódos onboardingot és admin dashboard-ot ad hozzá, de továbbra is felhasználónkénti díj nélkül. Hasonlítsd ezt össze a Dropbox Business havi $20 felhasználói árával, ami egy 6-person team esetén $120/month.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.5.q">Milyen fájltípusokat támogat a Keeply?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.5.a">Bármilyet. A Keeply egymás melletti vizuális diff-et mutat Word, Excel, PowerPoint, PDF és képek esetén. Minden más fájltípusnál — Blender, PSD, videó, CAD, 3D modellek, forráskód — a Keeply verziókat követ, és bármelyik pontra másodpercek alatt visszaállíthatsz. A 10MB-nál nagyobb fájlokat és 38 ismert bináris formátumot a rendszer automatikusan felismeri és nagyfájl-tárolóba irányítja, mindenfajta LFS konfiguráció nélkül.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.6.q">Van Linux verzió?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.6.a">A Keeply jelenleg Windows 10 vagy újabbra és Apple Silicon-os macOS-re jelenik meg. Linux build van a roadmap-en, de még nem szállítottuk. Ha a Linux támogatás kritikus a workflow-d szempontjából, kérlek jelezd a kapcsolati űrlapon — a platformtámogatást a valós felhasználói igények alapján priorizáljuk, és minden kérést rögzítünk.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.7.q">Mi az a $599-os Founding Member csomag?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.7.a">Egyszeri fizetés örökös licencért, az első 500 vásárlóra korlátozva. Örökre megkapod a jelenlegi Keeply-funkciókat, plusz minden Team plan funkciót automatikusan, amint a Team plan elindul. Nincs ismétlődő számlázás, nincs meglepetésszerű árdrágulás. Összehasonlításul: $25/month 24 hónapon át $600 — a Founding Member két évnél hamarabb megtérül, és utána is megy tovább.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (injected by components.js) -->
+  <div id="footer-root"></div>
+
+  <!-- Shared components + i18n + consent (spec 023) -->
+  <script src="../consent-api.b29ceadb9e.js" defer integrity="sha384-AgMsIGCbo9mV0oP2ebvR5aNCzNPtSkIGXG5v29yY6A+vEktkTMAOZtlK0WiKSEUR" crossorigin="anonymous"></script>
+  <script src="../components.a5dd3847dd.js" defer integrity="sha384-BdwwJdZy8d/q4lISMhozafEB4OYKFnqFwBsorzvEe5asU6ZWR4QN+keuXZNXxUKy" crossorigin="anonymous"></script>
+  <script src="../cookie-banner.8a90f5095a.js" defer integrity="sha384-FkrIUHI4EiKuF7c0lI0I+k/SpAC6SN6GAiU3tqGZBNs1nvMH4R/g+hpuVB/UGk63" crossorigin="anonymous"></script>
+  <script src="../ga4-loader.f5ebaf533f.js" defer integrity="sha384-U+G0F+gL0htHsJ1w1r/1uHQ1cyT+IbcPNBAtAN3Gx37qoxqkn9eBS7VsV04cuebt" crossorigin="anonymous"></script>
+  <script src="../clarity-loader.60a9a5160f.js" defer integrity="sha384-rdROtDi/pws+RrJtXaeyRY20mP1RJMaVL3DuCPi4UU7tkWHea6vyx01XW/4tbkL/" crossorigin="anonymous"></script>
+  <script src="../i18n-loader.60a9511617.js" defer integrity="sha384-vrXulbm1vtNZF9G412NN3Ll2B+Am3PVt6yq5HKpmdpEbVA1qzagN3rtzt2hz+hQt" crossorigin="anonymous"></script>
+  <script src="../team-notify.73d70ab047.js" defer integrity="sha384-kQUIeDWtAKHyIrSPoncROrE3SSvzakx5e3Ll8GT1Zjgqqr7nAyhVHZ7qyXYC+wVU" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "build:checksums": "node _dev/build-checksums.js",
+    "build:css": "tailwindcss -c _dev/tailwind.config.js -i _dev/input.css -o style.css --minify",
+    "build:pages": "node _dev/build.js",
+    "build:comparisons": "node _dev/build-comparisons.js",
+    "build:schema": "node _dev/inject-schema.js",
+    "build:fingerprint": "node _dev/build-fingerprint.js",
+    "build:sri": "node _dev/build-sri.js",
+    "build:font-preload": "node _dev/inject-font-preload.js",
+    "build": "npm run build:checksums && npm run build:css && npm run build:pages && npm run build:comparisons && npm run build:schema && npm run build:fingerprint && npm run build:sri && npm run build:font-preload",
+    "audit:orphans": "node _dev/audit-orphan-pages.js",
+    "ping:indexnow": "node _dev/ping-indexnow.js",
+    "seo:purge": "node _dev/seo/cf-purge.js"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}
