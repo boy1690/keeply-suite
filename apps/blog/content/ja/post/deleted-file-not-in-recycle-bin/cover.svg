@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="leftBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c2d12"/>
+      <stop offset="100%" stop-color="#991b1b"/>
+    </linearGradient>
+    <linearGradient id="rightBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Top headline band -->
+  <rect x="0" y="0" width="1200" height="120" fill="#1e293b"/>
+  <text x="600" y="78" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Hiragino Sans, Yu Gothic, Noto Sans CJK JP, Noto Sans CJK KR, Microsoft JhengHei, sans-serif" font-size="42" font-weight="700" fill="#f8fafc">削除したファイルがゴミ箱にない</text>
+
+  <!-- Left panel: after-the-fact -->
+  <rect x="0" y="120" width="600" height="430" fill="url(#leftBg)"/>
+  <text x="60" y="170" font-family="-apple-system, sans-serif" font-size="18" font-weight="600" fill="#fed7aa" opacity="0.85">事後対応</text>
+  <text x="60" y="218" font-family="-apple-system, BlinkMacSystemFont, Hiragino Sans, Yu Gothic, Noto Sans CJK JP, Noto Sans CJK KR, Microsoft JhengHei, sans-serif" font-size="38" font-weight="700" fill="#fef3f2">復元ソフト</text>
+  <text x="60" y="250" font-family="-apple-system, BlinkMacSystemFont, Hiragino Sans, Yu Gothic, Noto Sans CJK JP, Noto Sans CJK KR, Microsoft JhengHei, sans-serif" font-size="20" fill="#fecaca" opacity="0.9">成功率 30-70%</text>
+  <text x="60" y="280" font-family="-apple-system, BlinkMacSystemFont, Hiragino Sans, Yu Gothic, Noto Sans CJK JP, Noto Sans CJK KR, Microsoft JhengHei, sans-serif" font-size="22" fill="#fef3f2" opacity="0.92">✕ Shift+Delete</text>
+<text x="60" y="322" font-family="-apple-system, BlinkMacSystemFont, Hiragino Sans, Yu Gothic, Noto Sans CJK JP, Noto Sans CJK KR, Microsoft JhengHei, sans-serif" font-size="22" fill="#fef3f2" opacity="0.92">✕ 容量超過</text>
+<text x="60" y="364" font-family="-apple-system, BlinkMacSystemFont, Hiragino Sans, Yu Gothic, Noto Sans CJK JP, Noto Sans CJK KR, Microsoft JhengHei, sans-serif" font-size="22" fill="#fef3f2" opacity="0.92">✕ ネットワークドライブ</text>
+<text x="60" y="406" font-family="-apple-system, BlinkMacSystemFont, Hiragino Sans, Yu Gothic, Noto Sans CJK JP, Noto Sans CJK KR, Microsoft JhengHei, sans-serif" font-size="22" fill="#fef3f2" opacity="0.92">✕ OneDrive 同期</text>
+<text x="60" y="448" font-family="-apple-system, BlinkMacSystemFont, Hiragino Sans, Yu Gothic, Noto Sans CJK JP, Noto Sans CJK KR, Microsoft JhengHei, sans-serif" font-size="22" fill="#fef3f2" opacity="0.92">✕ 保存期間切れ</text>
+
+  <!-- Right panel: save-before-loss -->
+  <rect x="600" y="120" width="600" height="430" fill="url(#rightBg)"/>
+  <text x="660" y="170" font-family="-apple-system, sans-serif" font-size="18" font-weight="600" fill="#a7f3d0" opacity="0.85">事前保存</text>
+  <text x="660" y="218" font-family="-apple-system, BlinkMacSystemFont, Hiragino Sans, Yu Gothic, Noto Sans CJK JP, Noto Sans CJK KR, Microsoft JhengHei, sans-serif" font-size="38" font-weight="700" fill="#ecfdf5">Keeply</text>
+  <text x="660" y="250" font-family="-apple-system, BlinkMacSystemFont, Hiragino Sans, Yu Gothic, Noto Sans CJK JP, Noto Sans CJK KR, Microsoft JhengHei, sans-serif" font-size="20" fill="#bbf7d0" opacity="0.9">常に履歴あり</text>
+  <text x="660" y="280" font-family="-apple-system, BlinkMacSystemFont, Hiragino Sans, Yu Gothic, Noto Sans CJK JP, Noto Sans CJK KR, Microsoft JhengHei, sans-serif" font-size="22" fill="#ecfdf5" opacity="0.95">✓ 30 分ごと自動保存</text>
+<text x="660" y="322" font-family="-apple-system, BlinkMacSystemFont, Hiragino Sans, Yu Gothic, Noto Sans CJK JP, Noto Sans CJK KR, Microsoft JhengHei, sans-serif" font-size="22" fill="#ecfdf5" opacity="0.95">✓ 削除されても無事</text>
+<text x="660" y="364" font-family="-apple-system, BlinkMacSystemFont, Hiragino Sans, Yu Gothic, Noto Sans CJK JP, Noto Sans CJK KR, Microsoft JhengHei, sans-serif" font-size="22" fill="#ecfdf5" opacity="0.95">✓ Shift+Delete 関係なし</text>
+<text x="660" y="406" font-family="-apple-system, BlinkMacSystemFont, Hiragino Sans, Yu Gothic, Noto Sans CJK JP, Noto Sans CJK KR, Microsoft JhengHei, sans-serif" font-size="22" fill="#ecfdf5" opacity="0.95">✓ OneDrive 関係なし</text>
+<text x="660" y="448" font-family="-apple-system, BlinkMacSystemFont, Hiragino Sans, Yu Gothic, Noto Sans CJK JP, Noto Sans CJK KR, Microsoft JhengHei, sans-serif" font-size="22" fill="#ecfdf5" opacity="0.95">✓ 完全タイムライン</text>
+
+  <!-- VS badge -->
+  <circle cx="600" cy="335" r="48" fill="#fafafa" filter="url(#shadow)"/>
+  <text x="600" y="350" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="32" font-weight="800" fill="#1e293b">vs</text>
+
+  <!-- Footer band -->
+  <rect x="0" y="550" width="1200" height="80" fill="#0f172a"/>
+  <text x="600" y="600" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Hiragino Sans, Yu Gothic, Noto Sans CJK JP, Noto Sans CJK KR, Microsoft JhengHei, sans-serif" font-size="22" fill="#cbd5e1" opacity="0.9">ゴミ箱が頼れないなら、別レイヤーで履歴を持つ</text>
+</svg>
