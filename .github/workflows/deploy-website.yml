@@ -62,4 +62,4 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy _stage_website --project-name=keeply-website --branch=main --commit-dirty=true --commit-message="${{ github.event.head_commit.message }}"
+          command: pages deploy _stage_website --project-name=keeply-website --branch=main --commit-dirty=true
