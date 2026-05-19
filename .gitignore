@@ -1,0 +1,13 @@
+# Root-level ignores. Per-app .gitignore lives at apps/{blog,website}/.gitignore
+.DS_Store
+*.log
+.env
+.env.local
+.env.*.local
+.idea/
+.vscode/
+*.swp
+*.swo
+~$*
+Thumbs.db
+.cache/
