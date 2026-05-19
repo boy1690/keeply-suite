@@ -2,17 +2,5 @@
   "env": {
     "IBV_SPECS_DIR": "Z:/keeply-blog"
   },
-  "hooks": {
-    "PreToolUse": [
-      {
-        "matcher": "Bash",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "python D:/tools/doing/keeply-suite/apps/blog/.claude/hooks/keeply-mock-audit.py"
-          }
-        ]
-      }
-    ]
-  }
+  "hooks": {}
 }
