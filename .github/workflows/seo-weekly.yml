@@ -1,0 +1,117 @@
+name: SEO Weekly Report
+
+on:
+  schedule:
+    # Mondays 01:00 UTC = 09:00 Asia/Taipei. Public-runner queue may delay
+    # by ~30 min on busy mornings; acceptable for a weekly report.
+    - cron: "0 1 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+defaults:
+  run:
+    working-directory: apps/blog
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    env:
+      SEO_DATA_DIR: /tmp/seo-data
+      GA4_PROPERTY_ID: "534326745"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: apps/blog/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Prepare data dir
+        run: mkdir -p "$SEO_DATA_DIR"
+
+      - name: Fetch Google Search Console
+        env:
+          GOOGLE_ADC_JSON: ${{ secrets.GOOGLE_ADC_JSON }}
+        run: node _dev/seo/fetch-gsc.js > "$SEO_DATA_DIR/gsc.json" || echo '{"error":"fetch-gsc failed"}' > "$SEO_DATA_DIR/gsc.json"
+
+      - name: Fetch Bing Webmaster
+        env:
+          BWT_API_KEY: ${{ secrets.BWT_API_KEY }}
+        run: node _dev/seo/fetch-bwt.js > "$SEO_DATA_DIR/bwt.json" || echo '{"error":"fetch-bwt failed"}' > "$SEO_DATA_DIR/bwt.json"
+
+      - name: Fetch Yandex Webmaster
+        env:
+          YANDEX_OAUTH_TOKEN: ${{ secrets.YANDEX_OAUTH_TOKEN }}
+        run: node _dev/seo/fetch-yandex.js > "$SEO_DATA_DIR/yandex.json" || echo '{"error":"fetch-yandex failed"}' > "$SEO_DATA_DIR/yandex.json"
+
+      - name: Fetch GA4
+        env:
+          GOOGLE_ADC_JSON: ${{ secrets.GOOGLE_ADC_JSON }}
+        run: node _dev/seo/fetch-ga4.js > "$SEO_DATA_DIR/ga4.json" || echo '{"error":"fetch-ga4 failed"}' > "$SEO_DATA_DIR/ga4.json"
+
+      - name: Fetch CrUX (real-user Web Vitals + INP)
+        env:
+          CRUX_API_KEY: ${{ secrets.CRUX_API_KEY }}
+        run: node _dev/seo/fetch-crux.js > "$SEO_DATA_DIR/crux.json" || echo '{"error":"fetch-crux failed"}' > "$SEO_DATA_DIR/crux.json"
+
+      - name: External health check
+        run: node _dev/seo/health-check.js > "$SEO_DATA_DIR/health.json"
+
+      - name: Audit schema coverage (faq_schema / howto_schema)
+        # Non-blocking — exit code 1 means <90% coverage on a core locale.
+        # We capture JSON for the report; CI failure is opt-in (uncomment
+        # the `|| true` removal to enforce).
+        run: node _dev/seo/audit-schema-coverage.js --json > "$SEO_DATA_DIR/schema-coverage.json" || true
+
+      - name: Build markdown report
+        run: node _dev/seo/build-report.js > report.md
+
+      - name: Fetch GSC retrofit queue (page × query)
+        env:
+          GOOGLE_ADC_JSON: ${{ secrets.GOOGLE_ADC_JSON }}
+        run: node _dev/seo/gsc-retrofit-queue.js > "$SEO_DATA_DIR/gsc-retrofit.json" || echo '{"error":"retrofit-queue failed","articles":[],"totals":{},"thresholds":{},"window":{}}' > "$SEO_DATA_DIR/gsc-retrofit.json"
+
+      - name: Build retrofit report
+        run: node _dev/seo/build-retrofit-report.js < "$SEO_DATA_DIR/gsc-retrofit.json" > retrofit-report.md
+
+      - name: Upload report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-weekly-report
+          path: |
+            apps/blog/report.md
+            apps/blog/retrofit-report.md
+            ${{ env.SEO_DATA_DIR }}/*.json
+
+      - name: Open GitHub Issue with the report
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          DATE=$(date -u +%Y-%m-%d)
+          gh issue create \
+            --title "SEO weekly — $DATE" \
+            --body-file report.md \
+            --label seo-weekly \
+            --repo "${{ github.repository }}" \
+            || echo "Issue creation failed (label may not exist; create label 'seo-weekly' once)"
+
+      - name: Open GitHub Issue with retrofit queue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          DATE=$(date -u +%Y-%m-%d)
+          gh issue create \
+            --title "SEO retrofit queue — $DATE" \
+            --body-file retrofit-report.md \
+            --label seo-retrofit \
+            --repo "${{ github.repository }}" \
+            || echo "Issue creation failed (label may not exist; create label 'seo-retrofit' once)"

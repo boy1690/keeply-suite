@@ -72,8 +72,14 @@ disableKinds = ["taxonomy", "term"]
   # homepage / list pages) has no own `.Description` or `.Summary`. Added
   # 2026-05-17 after av8d-levelup scan revealed homepage shipped without
   # any meta description, dragging SEO Meta-Tags sub-score to 30 / 100.
+  # 2026-05-18 (v0.3.1a GATE-0 sweep): rewrote entity framing to align with
+  # the "file-management guardian" tagline anchor used by sidebar subtitle
+  # and brand-tagline memory. Removed prior framing that violated project
+  # CLAUDE.md P0.2 — exact forbidden lineage intentionally not quoted in this
+  # comment so GATE-0 checkpoint 4 grep audits of hugo.toml stay clean.
+  # Target length: 140-160 char per GATE-0 checkpoint 4.
   # Per-language override below in [languages.{code}.params].
-  description = "Keeply Blog — version control, file backup, and recovery field notes for non-developers. Practical guides on Word / Excel / OneDrive / SharePoint version history limits, Time Machine vs Dropbox, and how to never lose a version again."
+  description = "Keeply Blog — your file-management guardian. Field notes on file history, version recovery, and the tactics that stop you losing a working copy."
 
   # Author identity for JSON-LD Person schema (BWF P1.13: real human + E-E-A-T).
   # url: prefer /about page when it exists; falls back to GitHub for now.
@@ -132,7 +138,7 @@ disableKinds = ["taxonomy", "term"]
     weight = 1
     contentDir = "content/english"
     [languages.en.params]
-      description = "Keeply Blog — version control, file backup, and recovery field notes for non-developers. Practical guides on Word / Excel / OneDrive / SharePoint version history limits, Time Machine vs Dropbox, and how to never lose a version again."
+      description = "Keeply Blog — your file-management guardian. Field notes on file history, version recovery, and the tactics that stop you losing a working copy."
   [languages.zh-tw]
     languageCode = "zh-Hant-TW"
     languageName = "繁體中文"
@@ -174,7 +180,7 @@ disableKinds = ["taxonomy", "term"]
     weight = 6
     contentDir = "content/it"
     [languages.it.params]
-      description = "Keeply Blog — Guida pratica al controllo versioni, backup e recupero file per chi non scrive codice. Limiti della cronologia di Word / Excel / OneDrive / SharePoint, Time Machine vs Dropbox e altre trappole della sincronizzazione cloud."
+      description = "Keeply Blog — il tuo guardiano della gestione file. Appunti sul campo su cronologia versioni, recupero file e le tattiche per non perdere mai una versione."
   # R1 (2026-05-18 GSC audit): 11 zero-click auto-translate locales removed
   # from build entirely. Evidence: 90-day GSC data showed only pt + es had any
   # clicks (1 each); de/fr/ru/nl/pl/tr/vi/th/id/ar/hi all 0 clicks. All 11

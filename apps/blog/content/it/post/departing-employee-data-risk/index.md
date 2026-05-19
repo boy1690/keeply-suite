@@ -86,9 +86,9 @@ Su Keeply, quando Tina cancella un file, non devi frugare in nessun cestino. Apr
 
 E come fa chi prende in carico il lavoro a portarsi davvero quelle versioni dal laptop di Tina sulla propria macchina? Keeply ha una finestra chiamata "cherry-pick" che ti permette di applicare versioni specifiche da un'altra macchina o da un altro vault.
 
-![Finestra di dialogo Keeply cherry-pick: applica la versione di consegna del 12 aprile dal vault brand-book sul laptop di Tina, 12 file più nota di Release-freeze](cherry-pick-dialog.svg)
+![Finestra di dialogo Keeply cherry-pick: applica la versione di consegna del 12 aprile dal vault brand-book sul laptop di Tina, 12 file più nota di Blocco Release](cherry-pick-dialog.svg)
 
-Il nuovo collega apre Keeply, sceglie il vault brand-book dal laptop di Tina, vede la riga della consegna del 12 aprile, scrive "brand-book consegna cliente — set completo approvato" nelle note e clicca "Applica". Dodici file — logos, guidelines.pdf, color-tokens.json — arrivano insieme nella cartella di lavoro sulla nuova macchina. Anche l'attributo Release-freeze li segue, così nessuno potrà cancellarli per errore in seguito.
+Il nuovo collega apre Keeply, sceglie il vault brand-book dal laptop di Tina, vede la riga della consegna del 12 aprile, scrive "brand-book consegna cliente — set completo approvato" nelle note e clicca "Applica". Dodici file — logos, guidelines.pdf, color-tokens.json — arrivano insieme nella cartella di lavoro sulla nuova macchina. Anche l'attributo Blocco Release li segue, così nessuno potrà cancellarli per errore in seguito.
 
 ---
 
