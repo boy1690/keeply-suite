@@ -187,11 +187,17 @@
 {{- /* Google Analytics 4 — externalised init (avoids 'unsafe-inline' in script-src).
        Loader is async; init is `defer` so it executes after parse but before
        DOMContentLoaded (analytics doesn't need to fire mid-parse). Removes
-       the init script from the render-blocking critical path. */ -}}
+       the init script from the render-blocking critical path.
+       Production-only gate: `hugo server` (local preview) runs in the
+       development environment, so GA4 never loads there — this keeps
+       localhost / 127.0.0.1 dev traffic out of the live GA4 property
+       (2026-05-20: prior dev sessions inflated 127.0.0.1 to 27 sessions). */ -}}
+{{- if hugo.IsProduction -}}
 {{- with site.Config.Services.GoogleAnalytics.ID -}}
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
   {{- $gaInit := resources.Get "js/ga-init.js" | resources.ExecuteAsTemplate "js/ga-init.js" . | resources.Fingerprint "sha384" -}}
   <script defer src="{{ $gaInit.RelPermalink }}" integrity="{{ $gaInit.Data.Integrity }}" crossorigin="anonymous"></script>
+{{- end -}}
 {{- end -}}
 
 {{- /* Microsoft Clarity — externalised init (mirrors GA pattern; defer'd).

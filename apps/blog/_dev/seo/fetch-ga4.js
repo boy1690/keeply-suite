@@ -39,6 +39,19 @@ const property = `properties/${PROPERTY_ID}`;
 const CURRENT = { startDate: daysAgo(7), endDate: daysAgo(1) };
 const PREVIOUS = { startDate: daysAgo(14), endDate: daysAgo(8) };
 
+// Exclude local-dev hosts (hugo server / python http.server preview) from
+// every report so localhost traffic never inflates the weekly numbers.
+// Belt-and-suspenders with the production-only GA4 gate in the blog's
+// head.html (2026-05-20: dev sessions had pushed 127.0.0.1 to 27 sessions).
+const EXCLUDE_DEV_HOSTS = {
+  notExpression: {
+    filter: {
+      fieldName: 'hostName',
+      inListFilter: { values: ['localhost', '127.0.0.1'] },
+    },
+  },
+};
+
 async function runReport(ad, requestBody) {
   const r = await ad.properties.runReport({ property, requestBody });
   return r.data.rows || [];
@@ -69,6 +82,7 @@ async function main() {
         { name: 'engagedSessions' },
         { name: 'screenPageViews' },
       ],
+      dimensionFilter: EXCLUDE_DEV_HOSTS,
     })
   );
 
@@ -84,9 +98,16 @@ async function main() {
       ],
       metrics: [{ name: 'sessions' }, { name: 'totalUsers' }],
       dimensionFilter: {
-        filter: {
-          fieldName: 'sessionDefaultChannelGroup',
-          stringFilter: { value: 'Organic Search' },
+        andGroup: {
+          expressions: [
+            {
+              filter: {
+                fieldName: 'sessionDefaultChannelGroup',
+                stringFilter: { value: 'Organic Search' },
+              },
+            },
+            EXCLUDE_DEV_HOSTS,
+          ],
         },
       },
     })
@@ -97,6 +118,7 @@ async function main() {
       dateRanges: [CURRENT],
       dimensions: [{ name: 'hostName' }, { name: 'pagePath' }],
       metrics: [{ name: 'sessions' }, { name: 'screenPageViews' }],
+      dimensionFilter: EXCLUDE_DEV_HOSTS,
       orderBys: [{ metric: { metricName: 'sessions' }, desc: true }],
       limit: 20,
     })
@@ -107,6 +129,7 @@ async function main() {
       dateRanges: [CURRENT],
       dimensions: [{ name: 'country' }],
       metrics: [{ name: 'sessions' }],
+      dimensionFilter: EXCLUDE_DEV_HOSTS,
       orderBys: [{ metric: { metricName: 'sessions' }, desc: true }],
       limit: 10,
     })
@@ -117,6 +140,7 @@ async function main() {
       dateRanges: [CURRENT],
       dimensions: [{ name: 'sessionSourceMedium' }],
       metrics: [{ name: 'sessions' }],
+      dimensionFilter: EXCLUDE_DEV_HOSTS,
       orderBys: [{ metric: { metricName: 'sessions' }, desc: true }],
       limit: 10,
     })
