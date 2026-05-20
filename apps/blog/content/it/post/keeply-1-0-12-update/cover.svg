@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" font-family="Inter,'Segoe UI',system-ui,sans-serif">
+<!-- Cover: keeply-1-0-12-update (it) -->
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4F46E5"/><stop offset="0.55" stop-color="#4338CA"/><stop offset="1" stop-color="#312E81"/></linearGradient>
+  <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFB300"/><stop offset="1" stop-color="#F59E0B"/></linearGradient>
+  <linearGradient id="k-ring" x1="80" y1="404" x2="434" y2="112" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#A5B4FC"/><stop offset="1" stop-color="#C7D2FE"/></linearGradient>
+  <linearGradient id="k-amber" x1="115" y1="171" x2="270" y2="82" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#F59E0B"/><stop offset="1" stop-color="#FFB300"/></linearGradient>
+  <linearGradient id="k-docfront" x1="166" y1="164" x2="308" y2="372" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#A5B4FC"/><stop offset="1" stop-color="#818CF8"/></linearGradient>
+</defs>
+<rect width="1600" height="900" fill="url(#bg)"/>
+<g opacity="0.10" transform="translate(980,150) scale(1.25)" fill="none">
+  <path d="M396 129C429 159 448 200 448 255C448 363 360 451 252 451C145 451 58 368 56 263C55 206 75 158 111 123" stroke="#FFFFFF" stroke-width="40" stroke-linecap="round"/>
+  <path d="M111 123C145 91 190 72 239 72C253 72 265 73 278 76" stroke="#FFFFFF" stroke-width="40" stroke-linecap="round"/>
+  <path d="M236 54L313 79L254 134L236 54Z" fill="#FFFFFF"/>
+  <rect x="164" y="184" width="152" height="206" rx="32" fill="#FFFFFF"/>
+</g>
+<rect x="100" y="104" width="14" height="14" rx="3" fill="url(#amber)"/>
+<text x="126" y="116" fill="#C7D2FE" font-size="24" font-weight="700" letter-spacing="3">AGGIORNAMENTO PRODOTTO · CHANGELOG KEEPLY</text>
+<text x="98" y="300" fill="#A5B4FC" font-size="46" font-weight="700" letter-spacing="2">Keeply</text>
+<text x="92" y="470" fill="#FFFFFF" font-size="200" font-weight="800" letter-spacing="-2">1.0.12</text>
+<text x="640" y="300" fill="#FFB300" font-size="40" font-weight="700">1.0.10 &#8594;</text>
+<text x="100" y="600" fill="#FFFFFF" font-size="42" font-weight="800">Apri col tasto destro. <tspan fill="#FFD24D">Team</tspan> più maturi.</text>
+<text x="100" y="688" fill="#C7D2FE" font-size="30" font-weight="600">Apri col destro　·　Inviti al team　·　Più sicuro</text>
+<g transform="translate(1318,792)">
+  <g transform="scale(0.085)" fill="none">
+    <path d="M396 129C429 159 448 200 448 255C448 363 360 451 252 451C145 451 58 368 56 263C55 206 75 158 111 123" stroke="url(#k-ring)" stroke-width="44" stroke-linecap="round"/>
+    <path d="M111 123C145 91 190 72 239 72C253 72 265 73 278 76" stroke="url(#k-amber)" stroke-width="44" stroke-linecap="round"/>
+    <path d="M236 54L313 79L254 134L236 54Z" fill="url(#k-amber)"/>
+    <rect x="164" y="184" width="152" height="206" rx="32" fill="url(#k-docfront)"/>
+  </g>
+  <text x="58" y="30" fill="#FFFFFF" font-size="30" font-weight="800" letter-spacing="0.5">Keeply</text>
+  <text x="58" y="52" fill="#A5B4FC" font-size="13" font-weight="600" letter-spacing="2">KEEPLY.WORK</text>
+</g>
+<text x="100" y="832" fill="#A5B4FC" font-size="22" font-weight="500">blog.keeply.work · novità</text>
+</svg>
