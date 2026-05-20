@@ -1,0 +1,56 @@
+name: Content lint
+
+# Non-bypassable backstop for the content-quality gates. The local PreToolUse
+# hooks (.claude/hooks/*.js) give fast feedback while editing, but are gitignored,
+# can be skipped with --no-verify, and don't run on direct pushes. This workflow
+# re-runs the same checks in CI on every push to main + PRs, so a bad asset can't
+# reach blog.keeply.work / keeply.work unnoticed.
+#
+# All checks use only Node/Python stdlib — no dependency install needed.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'apps/**'
+      - '.github/workflows/content-lint.yml'
+  pull_request:
+    paths:
+      - 'apps/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: "content-lint-${{ github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  website:
+    name: website (i18n parity + download URL)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: i18n key parity (every locale must match en.json)
+        run: node apps/website/_dev/check-i18n-parity.js
+      - name: download URL guard (no private boy1690/Keeply repo in shipped assets)
+        run: node apps/website/_dev/check-download-url.js
+
+  blog:
+    name: blog (cover leak + language consistency)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: cover-leak audit (no duplicate / missing cover.svg)
+        working-directory: apps/blog
+        run: python _dev/design/audit_covers.py
+      - name: cross-locale language consistency (no English tech-term leaks)
+        working-directory: apps/blog
+        run: python _dev/blog/language-consistency-audit.py
