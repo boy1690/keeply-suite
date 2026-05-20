@@ -29,12 +29,12 @@ jobs:
       HUGO_VERSION: 0.160.1
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         # hugo-theme-stack is now vendored at apps/blog/themes/hugo-theme-stack/
         # (removed submodule on 2026-05-19 after subtree-merge cross-boundary fragility)
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: '20'
           cache: 'npm'

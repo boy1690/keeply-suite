@@ -47,11 +47,11 @@ jobs:
 
       - name: Checkout
         if: env.SKIP != 'true'
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Node.js
         if: env.SKIP != 'true'
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: "20"
 
@@ -178,7 +178,7 @@ jobs:
 
       - name: Upload audit artifact
         if: env.SKIP != 'true' && always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: seo-audit-report-${{ matrix.site.name }}
           path: ${{ env.OUT_DIR }}
