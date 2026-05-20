@@ -27,6 +27,15 @@
 (function () {
   'use strict';
 
+  // Never load analytics on local-dev hosts (site preview via
+  // `python -m http.server` on localhost / 127.0.0.1). Keeps dev traffic out
+  // of the live GA4 property even if the cookie banner is accepted while
+  // testing — mirrors the blog's production-only GA4 gate. (spec 109)
+  var devHost = location.hostname;
+  if (devHost === 'localhost' || devHost === '127.0.0.1' || devHost === '0.0.0.0') {
+    return;
+  }
+
   var MEASUREMENT_ID = 'G-V3SZDGJ06D';
   var GTAG_SRC = 'https://www.googletagmanager.com/gtag/js?id=' + MEASUREMENT_ID;
 
