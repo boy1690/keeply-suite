@@ -225,6 +225,7 @@
     + '<a href="https://github.com/boy1690/keeply-releases/releases/latest" class="hover:text-white transition-colors" data-i18n="footer.download">下載</a>'
     + '<a href="#cookie-settings" data-cookie-settings class="hover:text-white transition-colors" data-i18n="footer.cookie-settings">Cookie 設定</a>'
     + '<a href="' + localePrefix + 'contact.html" class="hover:text-white transition-colors" data-i18n="footer.contact">聯繫我們</a>'
+    + '<a href="' + localePrefix + 'about.html" class="hover:text-white transition-colors" data-i18n="footer.about">關於</a>'
     + '</div>'
     + '<div class="flex flex-col items-center md:items-end text-sm gap-1">'
     + '<p data-i18n="footer.copyright">&copy; 2026 Keeply. All rights reserved.</p>'

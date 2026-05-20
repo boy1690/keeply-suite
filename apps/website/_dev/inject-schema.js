@@ -34,7 +34,7 @@ const RELEASE_CONFIG_PATH = path.join(__dirname, 'release-config.json');
 const BASE_URL = 'https://keeply.work';
 
 // Pages that may exist in root + each locale dir.
-const ROOT_PAGES = ['index.html', 'buy.html', 'privacy.html', 'terms.html', 'refund.html', 'contact.html', 'activate.html'];
+const ROOT_PAGES = ['index.html', 'buy.html', 'privacy.html', 'terms.html', 'refund.html', 'contact.html', 'activate.html', 'about.html'];
 const INDEX_PAGE = 'index.html';
 
 // Spec 028: comparison pages at /compare/{slug}.html + /zh-TW/compare/{slug}.html
@@ -60,7 +60,7 @@ const ORG = {
 const FOUNDER = {
   '@type': 'Person',
   '@id': `${BASE_URL}/#founder`,
-  name: 'Tsao Ting Wei',
+  name: 'Ting-Wei Tsao',
   alternateName: '曹庭維',
   jobTitle: 'Founder, Keeply',
   url: `${BASE_URL}/about`,
@@ -86,7 +86,8 @@ const PAGE_META_PREFIX = {
   'terms.html': 'terms',
   'refund.html': 'refund',
   'contact.html': 'contact',
-  'activate.html': 'activate'
+  'activate.html': 'activate',
+  'about.html': 'about'
 };
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
@@ -282,6 +283,31 @@ function buildIndexGraph({ canonicalUrl, htmlLang, locale, translations, release
   ];
 }
 
+// Spec 049: about page → AboutPage centered on the founder Person node (E-E-A-T).
+// The page is the canonical home of the FOUNDER entity (FOUNDER.url = /about),
+// so AboutPage.about + .mainEntity both point at #founder.
+function buildAboutGraph({ canonicalUrl, htmlLang, locale, translations }) {
+  const name = getTranslation(translations, locale || 'en', 'about.meta.title') || 'About — Keeply';
+  const description = getTranslation(translations, locale || 'en', 'about.meta.description') || '';
+
+  return [
+    ORG,
+    {
+      '@type': 'AboutPage',
+      '@id': `${canonicalUrl}#webpage`,
+      url: canonicalUrl,
+      name,
+      description,
+      inLanguage: htmlLang,
+      isPartOf: { '@id': `${BASE_URL}/#website` },
+      about: { '@id': `${BASE_URL}/#founder` },
+      mainEntity: { '@id': `${BASE_URL}/#founder` },
+      publisher: { '@id': `${BASE_URL}/#organization` }
+    },
+    FOUNDER
+  ];
+}
+
 function buildInnerGraph({ canonicalUrl, htmlLang, locale, page, translations }) {
   const pagePrefix = PAGE_META_PREFIX[page];
   const title = getTranslation(translations, locale || 'en', `${pagePrefix}.meta.title`) || 'Keeply';
@@ -375,6 +401,13 @@ function processFile(filePath, ctx) {
       locale,
       translations: ctx.translations,
       releaseConfig: ctx.releaseConfig
+    });
+  } else if (page === 'about.html') {
+    graph = buildAboutGraph({
+      canonicalUrl,
+      htmlLang,
+      locale,
+      translations: ctx.translations
     });
   } else {
     graph = buildInnerGraph({

@@ -25,7 +25,7 @@ const LOCALES = [
   'fi', 'sv', 'no', 'da'
 ];
 
-const PAGES = ['index.html', 'privacy.html', 'terms.html', 'contact.html', 'install.html'];
+const PAGES = ['index.html', 'privacy.html', 'terms.html', 'contact.html', 'install.html', 'about.html'];
 
 // Pages that exist per-locale but are NOT template-driven (maintained as static
 // copies in each {locale}/ directory). Listed in sitemap.xml for SEO.
@@ -66,7 +66,8 @@ const PAGE_META_PREFIX = {
   'privacy.html': 'privacy',
   'terms.html': 'terms',
   'contact.html': 'contact',
-  'install.html': 'install'
+  'install.html': 'install',
+  'about.html': 'about'
 };
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
