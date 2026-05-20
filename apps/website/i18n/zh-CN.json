@@ -1,5 +1,4 @@
 {
-  "__todo_terms_iter2__": "TODO: translate new terms.s7.20_* and terms.s3.7.15_* keys from English, added 2026-04-21",
   "nav.download": "免费下载",
   "footer.privacy": "隐私政策",
   "footer.terms": "服务条款",
@@ -545,7 +544,6 @@
   "cookie.panel.aria.dialog": "Cookie 偏好设置对话框",
   "cookie.panel.aria.close": "关闭",
   "footer.cookie-settings": "Cookie 设置",
-  "__todo_cookie_v1__": "TODO: translate cookie.* + footer.cookie-settings keys from English to this locale, added 2026-04-23 (spec 023)",
   "terms.s3.5.p2c": "(c) \"Release\" means a version snapshot produced from the Canonical at a specific point in time; unlimited in number;",
   "terms.s3.5.p2d": "(d) \"Clone\" means a local working copy derived from the Canonical on a member's device; unlimited in number.",
   "terms.s3.5.p3": "The data form of a Vault Location may be selected at creation time: \"Standard mode\" allows direct browsing and editing of the Canonical via the file explorer, and the Canonical may be modified by any user with access to that folder; \"Protected mode\" uses a protected repository format, where the Canonical contents may only be modified through the Software interface and destructive history-changing operations are rejected. Both Standard and Protected modes are available on the Free and Team plans. Personal workflows (version history, file diff, Release publishing, unlimited users, etc.) are identical between the two plans; the Team plan's distinguishing features are team governance tools, not increased capacity or additional locations.",
