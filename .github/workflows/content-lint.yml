@@ -54,3 +54,14 @@ jobs:
       - name: cross-locale language consistency (no English tech-term leaks)
         working-directory: apps/blog
         run: python _dev/blog/language-consistency-audit.py
+
+  cross-refs:
+    name: blog → keeply.work cross-refs resolve
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+      - name: blog cross-ref links return 2xx (no 404 to main site)
+        run: node apps/blog/_dev/seo/check-cross-refs.js
