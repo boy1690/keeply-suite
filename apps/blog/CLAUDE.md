@@ -50,6 +50,16 @@ After the 2026-05-19 merge into `keeply-suite`, the "Cross-Repo Boundary" rule c
 
 ---
 
+## Release-notes series (`/release-notes`)
+
+Version "What's New" posts (e.g. `keeply-1-0-12-update`) are a `/blg` **standalone** sub-type — not SEO clusters. Use the local command **`/release-notes <version>`** (`.claude/commands/release-notes.md`, gitignored): pulls the real changelog from `D:/tools/doing/Keeply` git log → grouped feature menu → 6-locale post in the locked template (🆕 新功能 / ✨ 體驗改進 / 🛡️ 修復與安全 / ⬇️ 下載, "我們" voice).
+
+- `article_type: release-notes`, `series: keeply-release-notes`, `skip_touch_5: true`. Reference impl: `specs/keeply-1-0-12-update/`.
+- Hard rules (from 2026-05-20 ship): no dev-tool names (npm/cargo) in copy · don't manufacture user-relevance by attaching Keeply to incidental features (the "Keeply vs Excel?" trap) · CJK「bug」→「問題」· real screenshots ≫ hand-drawn mocks (clipboard-grab + paint out DEV badges) · UI screenshots in English shared across all locales, only cover + body per-locale.
+- SEO-cluster gates **don't apply**: title prefix / year / primary-keyword / T13-56b ≥3 first-person / T12-49c intent fields. byline + "我們" voice suffice.
+
+---
+
 ## BWF PROJECT_CONSTRAINTS
 
 ## P0 — 絕對規則（零容忍）
