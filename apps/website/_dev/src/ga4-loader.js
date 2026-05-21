@@ -31,8 +31,11 @@
   // `python -m http.server` on localhost / 127.0.0.1). Keeps dev traffic out
   // of the live GA4 property even if the cookie banner is accepted while
   // testing — mirrors the blog's production-only GA4 gate. (spec 109)
+  // Also skip *.pages.dev preview deploys (Cloudflare Pages): they run a full
+  // production build, so they'd otherwise pollute the live property with
+  // preview/self-referral sessions. (spec 110; mirrors the blog's ga-init.js)
   var devHost = location.hostname;
-  if (devHost === 'localhost' || devHost === '127.0.0.1' || devHost === '0.0.0.0') {
+  if (devHost === 'localhost' || devHost === '127.0.0.1' || devHost === '0.0.0.0' || /\.pages\.dev$/.test(devHost)) {
     return;
   }
 
