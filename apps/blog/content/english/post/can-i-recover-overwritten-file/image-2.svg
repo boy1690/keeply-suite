@@ -1,0 +1,67 @@
+<!-- Image 2: a version-history panel (host-app / OS restore UI) — restore the version from before the overwrite. en. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" fill="none"
+     font-family="'Inter','SF Pro Display',-apple-system,system-ui,sans-serif">
+  <defs>
+    <linearGradient id="g-indigo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#4338CA"/>
+    </linearGradient>
+    <linearGradient id="g-paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8F7FF"/><stop offset="1" stop-color="#EEF2FF"/>
+    </linearGradient>
+    <pattern id="grid" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#4338CA" stroke-width="1" opacity="0.05"/>
+    </pattern>
+    <filter id="shadow"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#312E81" flood-opacity="0.14"/></filter>
+  </defs>
+
+  <rect width="1200" height="600" fill="url(#g-paper)"/>
+  <rect width="1200" height="600" fill="url(#grid)"/>
+
+  <text x="600" y="46" font-size="13" font-weight="800" fill="#312E81" text-anchor="middle" letter-spacing="3">VERSION HISTORY · RESTORE THE COPY FROM BEFORE THE OVERWRITE</text>
+
+  <g transform="translate(230, 80)" filter="url(#shadow)">
+    <rect width="740" height="476" rx="12" fill="#ffffff"/>
+
+    <!-- window title bar -->
+    <path d="M0 12 Q0 0 12 0 L728 0 Q740 0 740 12 L740 52 L0 52 Z" fill="#F1F5F9"/>
+    <circle cx="24" cy="26" r="6" fill="#E2E8F0"/><circle cx="44" cy="26" r="6" fill="#E2E8F0"/><circle cx="64" cy="26" r="6" fill="#E2E8F0"/>
+    <text x="370" y="31" font-size="14" font-weight="600" fill="#475569" text-anchor="middle">Version history — proposal.docx</text>
+    <line x1="0" y1="52" x2="740" y2="52" stroke="#E2E8F0" stroke-width="1"/>
+
+    <!-- current (the overwrite) -->
+    <g transform="translate(0,52)">
+      <rect x="24" y="20" width="692" height="64" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="44" y="46" font-size="15" font-weight="700" fill="#0F172A">Today, 4:50 PM</text>
+      <text x="44" y="68" font-size="13" fill="#64748B">Current version — this is what your overwrite created</text>
+      <rect x="586" y="38" width="110" height="30" rx="15" fill="#F1F5F9"/>
+      <text x="641" y="58" font-size="13" font-weight="600" fill="#94A3B8" text-anchor="middle">Current</text>
+    </g>
+
+    <!-- the version to restore (highlighted) -->
+    <g transform="translate(0,136)">
+      <rect x="24" y="20" width="692" height="72" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="2"/>
+      <circle cx="48" cy="56" r="7" fill="url(#g-indigo)"/>
+      <text x="68" y="50" font-size="15" font-weight="700" fill="#312E81">Today, 4:12 PM</text>
+      <text x="68" y="74" font-size="13" fill="#4338CA">The last save before the overwrite — restore this one</text>
+      <rect x="586" y="40" width="110" height="32" rx="16" fill="url(#g-indigo)"/>
+      <text x="641" y="61" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">Restore</text>
+    </g>
+
+    <!-- older versions -->
+    <g transform="translate(0,228)" font-family="system-ui,sans-serif">
+      <rect x="24" y="20" width="692" height="56" rx="8" fill="#ffffff" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="44" y="53" font-size="14" font-weight="600" fill="#334155">Today, 2:30 PM</text>
+      <text x="586" y="53" font-size="13" font-weight="600" fill="#6366F1">Restore</text>
+
+      <rect x="24" y="86" width="692" height="56" rx="8" fill="#ffffff" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="44" y="119" font-size="14" font-weight="600" fill="#334155">Yesterday, 6:05 PM</text>
+      <text x="586" y="119" font-size="13" font-weight="600" fill="#6366F1">Restore</text>
+
+      <rect x="24" y="152" width="692" height="56" rx="8" fill="#ffffff" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="44" y="185" font-size="14" font-weight="600" fill="#334155">Mon, 9:18 AM</text>
+      <text x="586" y="185" font-size="13" font-weight="600" fill="#6366F1">Restore</text>
+    </g>
+  </g>
+
+  <text x="600" y="586" font-size="12" fill="#6366F1" text-anchor="middle">Works only if the file lived in a synced cloud folder — or a backup ran before the overwrite</text>
+</svg>

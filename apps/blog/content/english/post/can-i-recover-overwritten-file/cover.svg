@@ -1,0 +1,85 @@
+<!-- =============================================================
+     Cover: can-i-recover-overwritten-file (en — single launch locale)
+     Recipe: verdict-hero — headline + 3 colour-coded storage-locus fate cards
+     Distinct from sibling recover-overwritten-file (cost-hero / 19:30 timestamp)
+     ============================================================= -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none"
+     font-family="'Inter','SF Pro Display',-apple-system,system-ui,sans-serif">
+
+  <defs>
+    <linearGradient id="grad-indigo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#312E81"/>
+    </linearGradient>
+    <linearGradient id="grad-amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFB300"/><stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="grad-paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F8F7FF"/><stop offset="1" stop-color="#E4E3FF"/>
+    </linearGradient>
+    <pattern id="cover-grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#4338CA" stroke-width="1" opacity="0.04"/>
+    </pattern>
+
+    <symbol id="keeply-lockup" viewBox="0 0 200 50">
+      <circle cx="22" cy="25" r="16" fill="url(#grad-indigo)"/>
+      <path d="M16 18 L16 32 M16 25 L26 18 M16 25 L26 32" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <text x="48" y="33" font-size="22" font-weight="800" fill="#312E81">Keeply</text>
+    </symbol>
+
+    <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#312E81" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#grad-paper)"/>
+  <rect width="1600" height="900" fill="url(#cover-grid)"/>
+
+  <!-- eyebrow -->
+  <text x="120" y="110" font-size="15" font-weight="700" fill="#4338CA" letter-spacing="3">FILE RECOVERY · EDITORIAL</text>
+
+  <!-- headline -->
+  <g transform="translate(120, 300)">
+    <text x="0" y="0" font-size="74" font-weight="900" fill="url(#grad-indigo)" letter-spacing="-1">You saved over it.</text>
+    <text x="0" y="92" font-size="40" font-weight="800" fill="#312E81">Whether it comes back depends</text>
+    <text x="0" y="146" font-size="40" font-weight="800" fill="#312E81">on <tspan fill="#F59E0B">where the file lived.</tspan></text>
+  </g>
+
+  <!-- subtitle / framework -->
+  <g transform="translate(120, 560)">
+    <text x="0" y="0" font-size="22" font-weight="600" fill="#6366F1">The Storage-Locus Test — three checks, one verdict, in under a minute.</text>
+  </g>
+
+  <!-- 3 colour-coded fate cards -->
+  <g transform="translate(940, 196)">
+    <!-- ✅ cloud -->
+    <g filter="url(#card-shadow)">
+      <rect x="0" y="0" width="540" height="150" rx="16" fill="#ffffff"/>
+      <rect x="0" y="0" width="8" height="150" rx="4" fill="#16A34A"/>
+      <text x="36" y="60" font-size="26" font-weight="800" fill="#312E81">In the cloud</text>
+      <text x="36" y="96" font-size="16" fill="#6366F1">Dropbox · OneDrive · Google · backed up</text>
+      <text x="36" y="126" font-size="18" font-weight="800" fill="#15803D">✓ Usually comes back</text>
+    </g>
+    <!-- ⚠️ local HDD no backup -->
+    <g transform="translate(0,176)" filter="url(#card-shadow)">
+      <rect x="0" y="0" width="540" height="150" rx="16" fill="#ffffff"/>
+      <rect x="0" y="0" width="8" height="150" rx="4" fill="#F59E0B"/>
+      <text x="36" y="60" font-size="26" font-weight="800" fill="#312E81">Local hard drive, no backup</text>
+      <text x="36" y="96" font-size="16" fill="#6366F1">No TRIM — a slim, fast-closing window</text>
+      <text x="36" y="126" font-size="18" font-weight="800" fill="#B45309">! Maybe — act now</text>
+    </g>
+    <!-- ❌ local SSD no backup -->
+    <g transform="translate(0,352)" filter="url(#card-shadow)">
+      <rect x="0" y="0" width="540" height="150" rx="16" fill="#FEF2F2"/>
+      <rect x="0" y="0" width="8" height="150" rx="4" fill="#DC2626"/>
+      <text x="36" y="60" font-size="26" font-weight="800" fill="#991B1B">Local SSD, no backup</text>
+      <text x="36" y="96" font-size="16" fill="#B91C1C">TRIM already wiped the freed blocks</text>
+      <text x="36" y="126" font-size="18" font-weight="800" fill="#DC2626">✕ Gone — stop spending</text>
+    </g>
+  </g>
+
+  <!-- Keeply lockup -->
+  <use href="#keeply-lockup" x="120" y="760" width="200" height="50"/>
+
+  <!-- bottom note -->
+  <text x="1480" y="800" font-size="14" fill="#6366F1" text-anchor="end" letter-spacing="1">WHERE YOUR FILE LIVED DECIDES THE VERDICT · 2026</text>
+</svg>
