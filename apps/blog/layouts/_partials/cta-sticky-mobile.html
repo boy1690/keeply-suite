@@ -5,7 +5,7 @@
          - user hasn't dismissed (localStorage flag, 7-day expiry)
        Logic lives in assets/js/blog-interactions.js (deferred + SRI).
        safe-area-inset-bottom honors iOS notch / home-indicator. */ -}}
-<div id="sticky-cta-mobile" class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-gradient-to-r from-brand-600 to-brand-700 text-white shadow-2xl shadow-brand-600/40 transform translate-y-full transition-transform duration-300 ease-out" style="padding-bottom: env(safe-area-inset-bottom);">
+<div id="sticky-cta-mobile" data-cta="sticky-mobile" class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-gradient-to-r from-brand-600 to-brand-700 text-white shadow-2xl shadow-brand-600/40 transform translate-y-full transition-transform duration-300 ease-out" style="padding-bottom: env(safe-area-inset-bottom);">
   <div class="max-w-3xl mx-auto px-4 py-3 flex items-center gap-3">
     <div class="flex-1 min-w-0">
       <p class="text-sm font-bold leading-tight">{{ i18n "cta_sidebar_title" }}</p>

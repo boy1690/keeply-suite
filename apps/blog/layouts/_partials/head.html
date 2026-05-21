@@ -214,6 +214,14 @@
 {{- $localeSync := resources.Get "js/locale-cookie-sync.js" | resources.Fingerprint "sha384" -}}
 <script defer src="{{ $localeSync.RelPermalink }}" integrity="{{ $localeSync.Data.Integrity }}" crossorigin="anonymous"></script>
 
+{{- /* CTA click tracking — fires `cta_click` for clicks to keeply.work so the
+       blog → product hand-off is measurable (the download_click event only
+       exists on the apex). Always loaded; no-ops when GA4 isn't active
+       (window.gtag absent on non-production / blocked). CSP `script-src 'self'`
+       already covers this self-hosted fingerprinted script. */ -}}
+{{- $ctaTrack := resources.Get "js/cta-tracking.js" | resources.Fingerprint "sha384" -}}
+<script defer src="{{ $ctaTrack.RelPermalink }}" integrity="{{ $ctaTrack.Data.Integrity }}" crossorigin="anonymous"></script>
+
 {{- /* Inline stylesheet (Round B-1.2): eliminates the render-blocking
        network round-trip for CSS. Tailwind purged output is ~5.5KB
        gzipped — small enough to inline without significant HTML bloat,
