@@ -44,13 +44,16 @@ jobs:
       - name: Stage deployable assets (exclude node_modules / dev tooling)
         run: |
           mkdir -p _stage_website
+          # NOTE (spec 111): sri-manifest.json is NOT excluded — i18n-loader.js
+          # fetches it at runtime to apply SRI to dynamically-injected i18n
+          # packs. fingerprint-manifest.json IS build-only (inlined into
+          # i18n-loader at build time) so it stays excluded.
           rsync -a \
             --exclude='node_modules' \
             --exclude='_dev' \
             --exclude='cloudflare/' \
             --exclude='package*.json' \
             --exclude='fingerprint-manifest.json' \
-            --exclude='sri-manifest.json' \
             --exclude='CLAUDE.md' \
             --exclude='KEEPLY_*.md' \
             --exclude='RELEASE_*.md' \
