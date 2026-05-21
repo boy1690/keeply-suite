@@ -15,6 +15,9 @@ Thumbs.db
 # Local wrangler state (per-machine CF auth, do not commit)
 .wrangler/
 
+# Playwright MCP screenshot/snapshot output (per-session scratch, do not commit)
+.playwright-mcp/
+
 # Local staging dir for website deploy (recreated each deploy run)
 _stage_website/
 
