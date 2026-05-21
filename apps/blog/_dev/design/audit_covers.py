@@ -106,10 +106,14 @@ def audit(repo_root: Path, slug_filter: str | None, locale_filter: str | None) -
                     f"{', '.join(sibling_slugs)} (copy-paste — re-design before ship)"
                 )
 
-            # F3 — identifier names some OTHER post's slug (high-precision copy-paste signal)
+            # F3 — identifier names some OTHER post's slug (high-precision copy-paste signal).
+            # Strip the current slug from the identifier FIRST: a sibling slug that is merely a
+            # substring of this slug (e.g. recover-overwritten-file ⊂ can-i-recover-overwritten-file)
+            # must NOT false-positive; a genuinely copy-pasted other slug survives the strip.
             ident = identifier_line(svg)
+            ident_wo_self = ident.replace(slug, "")
             for other in all_slugs:
-                if other != slug and other in ident:
+                if other != slug and other in ident_wo_self:
                     failures.append(
                         f"[F3 wrong-slug-in-identifier] {locale}/{slug}: cover.svg identifier "
                         f"is `{ident[:80]}` — names `{other}`, not `{slug}`"
