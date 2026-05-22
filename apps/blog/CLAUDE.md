@@ -64,14 +64,12 @@ Version "What's New" posts (e.g. `keeply-1-0-12-update`) are a `/blg` **standalo
 
 ## P0 — 絕對規則（零容忍）
 
-- **P0.1** 禁用 Git 術語。永不。散文、隱喻、類比都不行。
-  禁用詞：commit、branch、rebase、merge、HEAD、diff、push、pull、stash、repository、checkout、master、main、origin
-  - **P0.1 dev-audience SOP**（v0.2.12，從 vibe-coding-rollback cluster 抽出）：當文章針對 dev / vibe coder / AI-pair programmer 受眾時，**作者 + 翻譯 agent 都必須**：
-    1. **替代詞表**：commit → 存檔點 / 自動儲存點 / "save point"；diff → 變動內容 / 變更內容 / "changes"；revert / checkout → 還原 / "restore"；stash → 暫存區（避免使用）；branch → 分支（避免）；merge（version-control 意義）→ 合併（避免）
-    2. **Keeply 定位句**：「**任何檔案的 history 守護網**」（含 code / config / data / AI 生成輸出，比一般 dev tool 範圍更廣），**不是**「給非開發者的 Git」
-    3. **翻譯 agent 必加**：dispatch 翻譯 dev-audience cluster 時，agent prompt 必含 forbidden term list（locale-specific：en + zh-CN 簡體 + ja 含 katakana 形式），agent self-audit 0 violations 才能 finalize
-    4. **驗證**：finalize 前跑 `grep -i "commit\|branch\|rebase\|stash\|repository\|checkout"` 對 final 文件，必須 0 命中
-- **P0.2** 永不把 Keeply 定位為「給非開發者的 Git」。Keeply 不是 Git-derived，是為了讓不學 Git 的人也能管檔案歷史。
+- **P0.1** Git 術語**僅限「揭露 Keeply 自身架構」時可用**（修訂 2026-05-22；舊版 v0.2.12 為「全禁 / 零容忍」，已推翻）。可寫「Keeply 底層是 git engine」「Release 凍結 = git commit + tag」「commit hash / git history 不可竄改」這類**架構揭露** — 這是展現「真的怎麼做的」+ 對技術讀者的 credibility / E-E-A-T 信號，是差異化，不該藏。
+  **仍禁止兩件事**：
+    1. **把 git 流程當讀者的操作心智模型** — 不要叫讀者「打 `git stash` + `git checkout` / `HEAD~3`」當操作步驟（對非技術讀者沒用；那不是「Keeply 怎麼做」，是「要你照 git 想」）。
+    2. **把 git 或其他 CS 術語借來解釋「別的東西」** — 用普通人的話。非 git 替代詞表：last-writer-wins → 誰最後存就蓋掉誰；race condition／競爭條件 → 同步還沒跑完的空窗；commit semantics（描述 Office 共編）→ 共編的存檔判定；per-session → 只在這次開檔期間；cascade 公式 → 連動公式；cap → 上限；snapshot → 快照／版本。
+  - **驗證**：finalize 前人工確認 git 詞**只**出現在「描述 Keeply 架構」語境（非讀者操作、非借喻解釋他物）；非 git CS 術語在地化、grep 0 命中。
+- **P0.2** 永不把 Keeply **定位**為「給非開發者的 Git／不會寫 code 的人的 Git」。用**工作**定位（看得到檔案的版本歷史、交付追蹤、版本守護），受眾是專案管理團隊。注意 vs P0.1：**揭露**底層用 git（贏技術尊重）≠ 把產品**定位**成「簡化版 Git」（把技術讀者推走）——前者可、後者禁。
   - **事故紀錄 2026-05-11**：shipped `hidden-cost-shared-folders` v1 line 57「軟體工程師幾十年前就用 **Git** 享受著這種平靜；但在營建、建築與設計產業，我們卻還在用手動加 `_v7` 對抗災難」直接踩 P0.2 + T7 #26。Audit 沒抓到。修復方向：v2 改寫為「軟體業早就靠版本控制工具解決；但這層工具一直沒被搬到營建、設計、研究產業」（描述 category gap，不點 Git 名）。BWF v0.2.20 加入 T7 enforcement grep + T19 MT-glitch trap，防止此類事故再次無聲流出。
 - **P0.3** 禁寫競品 hit-piece。比較文必須事實、具體、承認對方何時是對的選擇。
 - **P0.4** 禁捏造統計。每個數字必須有外部可訪問 URL 引用（學術、機構、大廠公開調查）。內部估算不得作為論證主幹；只能在已有外部引用旁做補充運算（例：外部研究顯示 X → 本文換算 Y）。若找不到外部引用，刪掉數字用定性論述。
