@@ -22,9 +22,33 @@ Usage:
 Exit 0 = no HIGH findings. Exit 1 = HIGH found (or any, with --strict).
 """
 import argparse
+import hashlib
 import re
 import sys
 from pathlib import Path
+
+# Default allowlist: HIGH findings accepted as non-bugs (LEAVE-cases, false-positives,
+# and known localization debt queued for the translation flow). A finding is
+# allowlisted by a content signature so it survives line-number shifts but a NEW /
+# changed misframe is NOT masked. Regenerate with --update-allowlist.
+DEFAULT_ALLOWLIST = Path(__file__).with_name("keeply-mechanism-allowlist.txt")
+
+
+def _sig(locale: str, slug: str, line: str) -> str:
+    """Stable signature for an allowlist entry — locale+slug+normalized line text."""
+    norm = " ".join(line.split())
+    return hashlib.sha1(f"{locale}|{slug}|{norm}".encode("utf-8")).hexdigest()
+
+
+def load_allowlist(path: Path) -> set:
+    if not path or not path.exists():
+        return set()
+    sigs = set()
+    for ln in path.read_text(encoding="utf-8").splitlines():
+        ln = ln.strip()
+        if ln and not ln.startswith("#"):
+            sigs.add(ln.split()[0])
+    return sigs
 
 # EVERY / PER-save quantifier on a save action (multilingual). This is the trigger.
 QUANT = re.compile(
@@ -92,14 +116,22 @@ def main() -> int:
     ap.add_argument("--content-dir", default="./content")
     ap.add_argument("--slug", action="append", default=None)
     ap.add_argument("--strict", action="store_true", help="exit 1 on REVIEW lines too")
+    ap.add_argument("--allowlist", default=str(DEFAULT_ALLOWLIST),
+                    help="file of accepted-finding signatures (default: sibling keeply-mechanism-allowlist.txt)")
+    ap.add_argument("--no-allowlist", action="store_true", help="ignore the allowlist (show every HIGH)")
+    ap.add_argument("--update-allowlist", action="store_true",
+                    help="rewrite the allowlist to exactly the current HIGH findings, then exit 0")
     args = ap.parse_args()
 
     root = Path(args.content_dir).resolve()
     if not root.exists():
         print(f"mechanism-audit: {root} not found (skipped)."); return 0
 
+    allow = set() if (args.no_allowlist or args.update_allowlist) else load_allowlist(Path(args.allowlist))
+
     results = {}  # (slug, locale) -> (high, review)
-    nhigh = nreview = 0
+    nblock = naccept = nreview = 0
+    accepted_sigs = []  # (sig, locale, slug, line) for --update-allowlist
     for md in sorted(root.glob("*/post/*/index.md")):
         locale, slug = md.parts[-4], md.parts[-2]
         if args.slug and slug not in args.slug:
@@ -107,7 +139,24 @@ def main() -> int:
         high, review = audit(md.read_text(encoding="utf-8", errors="replace"))
         if high or review:
             results[(slug, locale)] = (high, review)
-            nhigh += len(high); nreview += len(review)
+            nreview += len(review)
+            for ln, line in high:
+                sig = _sig(locale, slug, line)
+                if sig in allow:
+                    naccept += 1
+                else:
+                    nblock += 1
+                accepted_sigs.append((sig, locale, slug, line))
+
+    if args.update_allowlist:
+        lines = ["# keeply-mechanism allowlist — accepted HIGH findings (LEAVE-cases /",
+                 "# false-positives / localization debt). Regenerate: --update-allowlist.",
+                 "# format: <sha1>  <locale>/<slug>  <line excerpt>", ""]
+        for sig, loc, slug, line in accepted_sigs:
+            lines.append(f"{sig}  {loc}/{slug}  {' '.join(line.split())[:70]}")
+        Path(args.allowlist).write_text("\n".join(lines) + "\n", encoding="utf-8")
+        print(f"✅ allowlist updated: {len(accepted_sigs)} finding(s) -> {args.allowlist}")
+        return 0
 
     print("=" * 72)
     print("Keeply capture-mechanism audit — 'every save -> Keeply versions it' framing")
@@ -115,26 +164,29 @@ def main() -> int:
     if not results:
         print("✅ Clean — no per-save/per-Cmd+S Keeply-capture framing found."); return 0
 
-    print(f"\n💥 {nhigh} HIGH (quantifier + capture verb)  +  {nreview} REVIEW (quantifier only)\n")
-    # group by slug
+    print(f"\n💥 {nblock} BLOCKING HIGH  +  {naccept} allowlisted  +  {nreview} REVIEW\n")
     by_slug = {}
     for (slug, loc), v in results.items():
         by_slug.setdefault(slug, {})[loc] = v
     for slug in sorted(by_slug, key=lambda s: -sum(len(h) for h, _ in by_slug[s].values())):
         locs = by_slug[slug]
-        hi = sum(len(h) for h, _ in locs.values())
         print(f"### {slug}  (HIGH in: {', '.join(sorted(l for l,(h,_) in locs.items() if h)) or '—'})")
         for loc in sorted(locs):
             high, review = locs[loc]
             for ln, line in high:
-                print(f"  [HIGH {loc}] L{ln}: {line[:108]}")
+                tag = "ok  " if _sig(loc, slug, line) in allow else "HIGH"
+                print(f"  [{tag} {loc}] L{ln}: {line[:104]}")
             for ln, line in review:
-                print(f"  [rev  {loc}] L{ln}: {line[:108]}")
+                print(f"  [rev  {loc}] L{ln}: {line[:104]}")
         print()
 
-    print("Fix → reframe to: manual 'save version' + note (primary) + opt-in interval")
-    print("auto-save 15/30/60 min (secondary). Keeply does NOT version every save.")
-    return 1 if (nhigh or (args.strict and nreview)) else 0
+    if nblock:
+        print("Fix → reframe to: manual 'save version' + note (primary) + opt-in interval")
+        print("auto-save 15/30/60 min (secondary). Keeply does NOT version every save.")
+        print("(If a flagged line is a genuine LEAVE-case, accept it via --update-allowlist.)")
+    else:
+        print("✅ No NEW misframing — all HIGH are allowlisted (accepted baseline).")
+    return 1 if (nblock or (args.strict and nreview)) else 0
 
 
 if __name__ == "__main__":

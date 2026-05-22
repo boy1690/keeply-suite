@@ -1,0 +1,16 @@
+# keeply-mechanism allowlist — accepted HIGH findings (LEAVE-cases /
+# false-positives / localization debt). Regenerate: --update-allowlist.
+# format: <sha1>  <locale>/<slug>  <line excerpt>
+
+7717e39934c7f65a386decd39b302616c89c9613  english/windows-file-history-wrong-version  **Intent-driven** — your decision marks the capture, not the clock. Yo
+6ca2e676a0564240d02c121d4ccebe1dbf7b76b4  it/keeply-first-week-workflow  - "Imposta la frequenza degli snapshot giornaliera / settimanale / per
+7b60de36b8cf77a306ac07435b5b8d772313505a  it/keeply-first-week-workflow  Domanda: quante versioni dovrebbe tenere lo strumento? Troppe (una per
+5e87c187d433d0d6cb7290b94b6dfd492672a161  it/thesis-single-point-of-failure  Gli studenti che trattano la tesi come "file", scrivendo, accumulano e
+45a012e1d614ea241c7fcb1d443b898bb05e84c8  it/windows-file-history-wrong-version  **Guidato dall'intenzione** — è la tua decisione a segnare la cattura,
+6a932a53192f0171ff768d46aed2e36078810018  it/windows-file-history-wrong-version  - Ti aspetti che «ogni salvataggio» sia catturato (non è — è ogni snap
+ec9326531d74a41e37cfd74c6f23049179df5c02  ko/keeply-first-week-workflow  문제: 버전 관리 도구가 몇 개 버전을 남겨야 할까? 너무 많이 (Cmd+S 마다 하나) 남기면 밤에 17 개의 거의 똑같은 
+c761d935569f0cc7189de8cf52083b2fc227d5c8  zh-cn/keeply-getting-started-from-zero  text: 照平常習慣改檔案、存檔，Keeply 自動在時間軸記錄每次存檔變動，不需要按任何按鈕或記憶快捷鍵。
+5259bd6766cf5184b13d2194ecd1d9f08f8bc72f  zh-cn/keeply-getting-started-from-zero  text: 第 2 到第 3 天打開 Keeply 時間軸，確認每次存檔筆記已累積出現，點進任一筆可看到新增或刪除了哪些內容。
+79947cffd96122e3249515488f56da120b14bb37  zh-cn/photoshop-autosave-not-version-history  历史记录面板其实是「操作日志」——「你照这个顺序做了这些事」。它记的是动作序列、每次保存不会在这上面留任何记号、因为它没被设计来做这个。
+5ff41b122a970b43d5435a4c12903d3b84833804  zh-cn/restore-without-panic  a: 事後救援依賴「發現的時機」，TRIM 觸發後磁區立即被標記可覆寫，每多拖一小時成功率急速下降。SSD 加 BitLocker 加密的環
+c7a901af62968791dea3bb88e3bd5bfce8d5c59e  zh-cn/why-i-built-keeply  a: Git 是给写程序的人设计的：每一次保存要主动下命令、要学分支跟合并概念、要管 repository。Keeply 把同样的「版本历史
