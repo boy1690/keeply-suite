@@ -106,7 +106,7 @@ SharePoint の「バージョン履歴」は実際 3 つの異なるものが 1 
 
 ## 自動削除 4 段階：500 / 100 / 50 / 期限カットオフの実コスト {#auto-delete}
 
-Microsoft が 2024 年末に SharePoint 管理センターの [バージョン履歴自動削除設定](https://learn.microsoft.com/en-us/sharepoint/version-history-limits) をリリース、IT 管理者は次から選択：
+Microsoft が 2024 年末に SharePoint 管理センターの [バージョン履歴自動削除設定](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits) をリリース、IT 管理者は次から選択：
 
 | 段階 | 保持バージョン数 | 適合シーン | 失うもの |
 |---|---|---|---|

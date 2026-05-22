@@ -53,7 +53,7 @@ Most of the time, the OS has no recovery trace to work with.
 
 What recovery software does is "sector scanning" — sweep the disk for uncovered bytes and try to reassemble files. That made sense ten years ago in the HDD era. On modern computers, the road is mostly closed.
 
-Most modern computers run SSDs (solid-state drives), and Windows 7+ has TRIM enabled by default ([Microsoft Learn](https://learn.microsoft.com/en-us/windows-hardware/drivers/storage/standard-inquiry-data-vpd-page)). When you delete a file, the OS immediately sends a TRIM command telling the SSD to mark that block as free for reuse.
+Most modern computers run SSDs (solid-state drives), and Windows 7+ has TRIM enabled by default. When you delete a file, the OS immediately sends a TRIM command telling the SSD to mark that block as free for reuse.
 
 That means when the recovery software scans, it sees zeros. The data recovery firm Hetman put it bluntly: "If a recovery company claims they can pull deleted files off a TRIM-enabled SSD, they're either incompetent or lying to the customer." ([Hetman's own writeup](https://hetmanrecovery.com/recovery_news/data-recovery-is-impossible-ssd-cloud-and-online-services.htm)) I've since talked with several recovery engineers myself; they all said the same thing.
 

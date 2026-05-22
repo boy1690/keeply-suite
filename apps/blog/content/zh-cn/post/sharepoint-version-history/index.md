@@ -106,7 +106,7 @@ SharePoint 讲“版本历史”是 3 件不同的事被混在一起：
 
 ## 自动删除 4 段位：500 / 100 / 50 / 期限 截止 真实成本 {#auto-delete}
 
-Microsoft 2024-Q4 推出 SharePoint 管理中心 的 [version history 自动删除 settings](https://learn.microsoft.com/en-us/sharepoint/version-history-limits)、IT 管理员 可选：
+Microsoft 2024-Q4 推出 SharePoint 管理中心 的 [version history 自动删除 settings](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits)、IT 管理员 可选：
 
 | 段位 | 保留版本数 | 适合场景 | 失去什么 |
 |---|---|---|---|

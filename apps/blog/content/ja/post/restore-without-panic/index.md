@@ -53,7 +53,7 @@ Delete を押した。ゴミ箱を開けた。空だ。
 
 復元ソフトがやっているのは「セクタースキャン (Sector Scanning)」だ——ディスク上で上書きされていないバイト列を探し、ファイルを再構成しようとする。10 年前の HDD 時代なら理にかなった話だが、現代のコンピューターではこの道はほぼ封じられている。
 
-現代のコンピューターは多くが SSD（ソリッドステートドライブ）で、Windows 7 以降は TRIM がデフォルトで有効になっている（[Microsoft Learn 公式ドキュメント](https://learn.microsoft.com/en-us/windows-hardware/drivers/storage/standard-inquiry-data-vpd-page)）。ファイルを削除すると、OS はすぐに TRIM コマンドを発し、その領域を「再利用可能」と SSD に伝える。
+現代のコンピューターは多くが SSD（ソリッドステートドライブ）で、Windows 7 以降は TRIM がデフォルトで有効になっている。ファイルを削除すると、OS はすぐに TRIM コマンドを発し、その領域を「再利用可能」と SSD に伝える。
 
 つまり、復元ソフトがスキャンしても見えるのはゼロの羅列だけだ。データ復元会社 Hetman は率直にこう書いている。「TRIM 有効な SSD から削除済みファイルを復元できると謳う復元会社は、無能か顧客を欺いているかのどちらかだ。」（[Hetman 公式記事](https://hetmanrecovery.com/recovery_news/data-recovery-is-impossible-ssd-cloud-and-online-services.htm)）私自身も後でデータ復元エンジニアと何度か話したが、答えは皆同じだった。
 

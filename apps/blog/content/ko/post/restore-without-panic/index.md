@@ -53,7 +53,7 @@ Delete를 눌렀다. 휴지통을 열었다. 비어 있다.
 
 복구 프로그램이 하는 일은 "섹터 스캔(Sector Scanning)"이다 — 디스크에서 아직 덮어쓰이지 않은 바이트를 찾아 파일을 재조립하려는 시도다. 10년 전 HDD 시대라면 이치에 맞는 이야기였지만, 현대 컴퓨터에서는 그 길이 거의 막혀 있다.
 
-현대 컴퓨터의 대부분은 SSD(솔리드 스테이트 드라이브)를 쓰고, Windows 7 이후로는 TRIM이 기본으로 활성화되어 있다([Microsoft Learn 공식 문서](https://learn.microsoft.com/en-us/windows-hardware/drivers/storage/standard-inquiry-data-vpd-page)). 당신이 파일을 삭제하면, OS는 즉시 TRIM 명령을 보내 그 블록을 "재사용 가능"으로 SSD에 알린다.
+현대 컴퓨터의 대부분은 SSD(솔리드 스테이트 드라이브)를 쓰고, Windows 7 이후로는 TRIM이 기본으로 활성화되어 있다. 당신이 파일을 삭제하면, OS는 즉시 TRIM 명령을 보내 그 블록을 "재사용 가능"으로 SSD에 알린다.
 
 그러니까 복구 프로그램이 스캔해도 보이는 건 0의 나열뿐이다. 데이터 복구 회사 Hetman은 솔직하게 이렇게 적었다. "TRIM이 활성화된 SSD에서 삭제된 파일을 복구할 수 있다고 주장하는 복구 회사는, 무능하거나 고객을 속이고 있는 것이다." ([Hetman 공식 글](https://hetmanrecovery.com/recovery_news/data-recovery-is-impossible-ssd-cloud-and-online-services.htm)) 나도 나중에 데이터 복구 엔지니어 몇 명과 직접 이야기해 봤는데, 답은 다 같았다.
 

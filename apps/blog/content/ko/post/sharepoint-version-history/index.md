@@ -99,7 +99,7 @@ SharePoint의 "버전 기록"은 실제로는 3가지가 하나의 용어에 혼
 
 ## 자동 삭제 4단계 {#auto-delete}
 
-Microsoft가 2024년 말에 [버전 기록 자동 삭제 설정](https://learn.microsoft.com/en-us/sharepoint/version-history-limits) 출시. IT 관리자 선택:
+Microsoft가 2024년 말에 [버전 기록 자동 삭제 설정](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits) 출시. IT 관리자 선택:
 
 | 단계 | 유지 버전 | 적합 시나리오 | 잃는 것 |
 |---|---|---|---|

@@ -97,7 +97,7 @@ SharePoint dice "cronologia versioni" ma in realtà sono 3 cose diverse mescolat
 
 ## Eliminazione automatica a 4 livelli: costo reale {#auto-delete}
 
-Microsoft ha lanciato a fine 2024 le [impostazioni eliminazione automatica](https://learn.microsoft.com/en-us/sharepoint/version-history-limits). Gli IT admin scelgono:
+Microsoft ha lanciato a fine 2024 le [impostazioni eliminazione automatica](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits). Gli IT admin scelgono:
 
 | Livello | Versioni mantenute | Adatto a | Cosa si perde |
 |---|---|---|---|

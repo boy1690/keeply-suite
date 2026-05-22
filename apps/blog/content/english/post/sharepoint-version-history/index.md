@@ -106,7 +106,7 @@ Three different things — confused as one, you'll look in the wrong layer. "Can
 
 ## Auto-delete 4 tiers: 500 / 100 / 50 / cutoff real cost {#auto-delete}
 
-Microsoft launched the [version history auto-delete settings](https://learn.microsoft.com/en-us/sharepoint/version-history-limits) in late 2024. IT admins pick from:
+Microsoft launched the [version history auto-delete settings](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits) in late 2024. IT admins pick from:
 
 | Tier | Versions kept | Best for | What you lose |
 |---|---|---|---|

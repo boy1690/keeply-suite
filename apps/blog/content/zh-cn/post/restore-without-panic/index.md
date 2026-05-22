@@ -53,7 +53,7 @@ faq_schema:
 
 那些恢复软件做的是「扇区扫描（Sector Scanning）」，试图找出磁盘上没被覆盖的字节来重组文件。这在十年前的传统 HDD 时代听起来很合理，但在现代电脑上，这条路几乎已被封死。
 
-现代电脑多数使用 SSD（固态硬盘），而 Windows 7 之后默认开启了 TRIM 机制（[Microsoft Learn 官方文档](https://learn.microsoft.com/en-us/windows-hardware/drivers/storage/standard-inquiry-data-vpd-page)）。当你删除文件时，OS 会立刻发送 TRIM 指令，告诉 SSD 把那个区块标记为空白可重用。
+现代电脑多数使用 SSD（固态硬盘），而 Windows 7 之后默认开启了 TRIM 机制。当你删除文件时，OS 会立刻发送 TRIM 指令，告诉 SSD 把那个区块标记为空白可重用。
 
 这代表恢复软件扫描过去，看到的只会是一片零。数据恢复公司 Hetman 曾直言：「如果恢复公司声称能从启用 TRIM 的 SSD 救出已删文件，他多半不是无能，就是在骗客户。」（[Hetman 官方说明](https://hetmanrecovery.com/recovery_news/data-recovery-is-impossible-ssd-cloud-and-online-services.htm)）我自己后来也跟几位数据恢复工程师聊过，得到的答案都一样。
 

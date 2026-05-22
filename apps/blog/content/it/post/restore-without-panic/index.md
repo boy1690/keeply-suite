@@ -53,7 +53,7 @@ La maggior parte delle volte, il sistema operativo non ha lasciato alcuna tracci
 
 Quello che fa il software di recupero è una "scansione dei settori (Sector Scanning)" — spazza il disco alla ricerca di byte non sovrascritti per provare a riassemblare i file. Dieci anni fa nell'era HDD aveva senso. Sui computer moderni, quella strada è praticamente chiusa.
 
-La maggior parte dei computer moderni usa SSD (Solid-State Drive), e da Windows 7 in poi TRIM è abilitato per impostazione predefinita ([documento ufficiale Microsoft Learn](https://learn.microsoft.com/en-us/windows-hardware/drivers/storage/standard-inquiry-data-vpd-page)). Quando cancelli un file, il sistema operativo invia immediatamente il comando TRIM all'SSD per marcare quel blocco come riutilizzabile.
+La maggior parte dei computer moderni usa SSD (Solid-State Drive), e da Windows 7 in poi TRIM è abilitato per impostazione predefinita. Quando cancelli un file, il sistema operativo invia immediatamente il comando TRIM all'SSD per marcare quel blocco come riutilizzabile.
 
 Quindi quando il software di recupero fa la scansione, vede solo zeri. La società di recupero dati Hetman lo ha detto senza giri di parole: "Se una società di recupero afferma di poter tirare fuori file cancellati da un SSD con TRIM attivo, o è incompetente o sta mentendo al cliente." ([articolo ufficiale di Hetman](https://hetmanrecovery.com/recovery_news/data-recovery-is-impossible-ssd-cloud-and-online-services.htm)) Io stesso ne ho poi parlato con vari ingegneri del recupero dati, e la risposta è sempre stata la stessa.
 
