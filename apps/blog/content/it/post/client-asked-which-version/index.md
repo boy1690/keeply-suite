@@ -16,16 +16,16 @@ locales_required: [en, zh-TW, zh-CN, ja, ko, it]
 cta_topic: versioning
 image_alt_data: "Orologio alle 11:23 accanto a tre file — proposal_v3_FINAL.docx, v3_FINAL_v2.docx, v3_FINAL_final.docx — nessuno riconducibile alla consegna di marzo chiesta dal cliente; Salvataggio automatico di Word e OneDrive non raggiungono 3 mesi indietro"
 faq_schema:
-  - q: Word 內建版本歷史能做什麼？
-    a: Word 有三種機制：AutoRecover（當機救援，關閉即清除）、自動儲存（邊打邊存至雲端）、OneDrive 版本歷史（保留約 500 個版本快照）。三種都是短期儲存事故救援，設計目標不包含 3 個月後的交付版本追蹤。
-  - q: AutoRecover、OneDrive 和 Time Machine 各能保留多久？
-    a: AutoRecover 在檔案正常關閉後即清除；OneDrive 版本歷史預設約 500 個版本，超過自動刪最舊；Mac Time Machine 每小時快照保留 24 小時、每天快照保留 30 天。每種機制都有保留上限，無法跨越 3 個月這條線。
-  - q: 為什麼 Word 版本歷史守不到 3 個月後？
-    a: 軟體內建版本歷史活在「儲存層」，設計給最近一次寫入失敗用，保留期依平均使用者一個月內查找頻率設定。3 個月以上不在設計目標，清除是合理行為。需要工具層獨立的常駐版本歷史才能解決。
-  - q: 找回 3 個月前的交付版本需要什麼？
-    a: 需要兩層：常駐版本歷史（每次儲存都留下，不依賴 Word 或 OneDrive 保留期政策）；以及交付便條元資料（匯出時自動嵌入誰、何時、對應哪個版本）。Keeply 同時提供這兩層。
-  - q: Google Docs 的修訂版能保留多久？
-    a: Google 未公開明確保留期。官方文件指出較舊的修訂版可能會被合併以節省空間，實務上 3 個月以上的修訂版常被自動合併或清除，無法可靠用於長期交付版本追蹤。
+  - q: Cosa fa la cronologia versioni integrata di Word?
+    a: "Word ha tre meccanismi: AutoRecover (recupero dai crash, cancellato alla chiusura), salvataggio automatico (salva nel cloud mentre scrivi) e la cronologia versioni di OneDrive (conserva circa 500 snapshot di versione). Tutti e tre sono recupero a breve termine da incidenti di salvataggio — nessuno è pensato per tracciare il file consegnato 3 mesi fa."
+  - q: Quanto conservano AutoRecover, OneDrive e Time Machine?
+    a: "AutoRecover si cancella quando il file si chiude normalmente; la cronologia versioni di OneDrive ha un default di circa 500 versioni e cancella le più vecchie oltre quella soglia; Time Machine su Mac tiene snapshot orari per 24 ore e snapshot giornalieri per 30 giorni. Ogni meccanismo ha un tetto di conservazione — nessuno arriva oltre la linea dei 3 mesi."
+  - q: Perché la cronologia versioni di Word non arriva a 3 mesi fa?
+    a: "La cronologia versioni integrata vive nel \"livello di salvataggio\", pensata per l'ultima scrittura fallita, con una conservazione tarata su quanto spesso l'utente medio torna indietro entro un mese. Oltre i 3 mesi non è un obiettivo di progettazione, quindi l'eliminazione è un comportamento ragionevole. Risolverlo richiede una cronologia versioni sempre attiva a livello di strumento."
+  - q: Cosa serve per recuperare un file consegnato 3 mesi fa?
+    a: "Due livelli: una cronologia versioni sempre attiva (ogni versione che salvi viene conservata, indipendente dalle politiche di conservazione di Word o OneDrive); e i metadati della nota di consegna (chi, quando e quale versione, incorporati automaticamente all'esportazione). Keeply fornisce entrambi."
+  - q: Quanto conserva le revisioni Google Docs?
+    a: "Google non pubblica un periodo di conservazione preciso. La documentazione segnala che le revisioni più vecchie possono essere unite per risparmiare spazio; in pratica le revisioni più vecchie di 3 mesi vengono spesso unite o cancellate automaticamente, quindi non sono affidabili per tracciare consegne a lungo termine."
 ---
 
 # 【2026 Gestione file】Word salva le versioni, non i ricordi di 3 mesi fa
@@ -100,7 +100,7 @@ Ecco il problema vero. Marco si rende conto solo dopo: a marzo aveva inviato al 
 
 Ti servono due strati:
 
-- **Cronologia versioni always-on**: ogni salvataggio è preservato, mai prune. Indipendente dalla retention policy di Word o OneDrive.
+- **Cronologia versioni always-on**: ogni versione che salvi è preservata, mai prune. Indipendente dalla retention policy di Word o OneDrive.
 - **Metadata della delivery-note**: quando esporti un file, vengono incorporati i metadata "chi, quando, quale versione sottostante". Riporta il file nello strumento tre mesi dopo, vedi l'origine completa.
 
 [Keeply](https://keeply.work) fornisce entrambi gli strati.
@@ -139,7 +139,7 @@ Quel messaggio delle 23:23 tornerà. Non sai quando.
 
 Ma sai questo: il salvataggio post-evento ha limiti. La prevenzione a monte non dipende dal notare in tempo.
 
-Per ogni salvataggio da oggi in poi. Puoi lasciare che lo strumento conservi quella versione per te?
+Per ogni consegna da oggi in poi. Puoi lasciare che lo strumento conservi quella versione per te?
 
 ---
 

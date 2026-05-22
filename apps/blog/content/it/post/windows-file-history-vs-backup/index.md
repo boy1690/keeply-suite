@@ -31,7 +31,7 @@ faq_schema:
     a: No. Cronologia file salva una copia secondo pianificazione (predefinita ogni ora) solo quando il drive esterno è connesso. Se il tuo drive era offline ieri, non c'è uno snapshot di ieri — la versione più recente disponibile sarà di quando il drive era ultimamente connesso. Questo è uno dei motivi per cui il ripristino tramite Cronologia file può restituire una versione inaspettatamente vecchia.
     
   - q: Dove si inserisce Keeply?
-    a: Keeply è uno strato di cronologia versioni per salvataggio che vive accanto a qualunque cloud o backup tu stia già usando. Non sostituisce Backup di Windows o Cronologia file. Continui a usarli per recupero da disastro e sincronizzazione drive esterno; Keeply cattura ogni salvataggio deliberato così puoi richiamare la versione specifica che intendevi, non lo snapshot pianificato più vicino.
+    a: Keeply è uno strato di cronologia versioni per salvataggio che vive accanto a qualunque cloud o backup tu stia già usando. Non sostituisce Backup di Windows o Cronologia file. Continui a usarli per recupero da disastro e sincronizzazione drive esterno; Keeply conserva le versioni che salvi deliberatamente così puoi richiamare la versione specifica che intendevi, non lo snapshot pianificato più vicino.
 ---
 
 # 【2026 Gestione file】Pensi di avere il backup. In Windows «backup» significa tre cose diverse.
@@ -95,15 +95,15 @@ Guarda di nuovo la tabella. L'angolo in basso a destra — «la versione specifi
 
 Cronologia file ti dà uno snapshot pianificato, non il tuo salvataggio. Backup di Windows ti dà il disco, non un file. OneDrive ti dà la cronologia cloud, ma solo per file sincronizzati cloud e solo entro la finestra di retention.
 
-Uno strato di cronologia versioni per-save guidato dall'intenzione — ogni Cmd+S diventa un punto recuperabile, localmente, senza limite temporale — è l'asse mancante.
+Uno strato di cronologia versioni per-save guidato dall'intenzione — ogni versione che salvi diventa un punto recuperabile, localmente, senza limite temporale — è l'asse mancante.
 
-[Keeply](https://keeply.work) è un'implementazione. Osserva le cartelle che gli punti e cattura ogni salvataggio come la sua versione, senza pianificazione e senza limite di retention. Tira fuori la bozza di ieri alle 14:47, non lo snapshot pianificato più vicino.
+[Keeply](https://keeply.work) è un'implementazione. Osserva le cartelle che gli punti e conserva le versioni che salvi come versioni a sé (più un timer opzionale), senza pianificazione e senza limite di retention. Tira fuori la bozza di ieri alle 14:47, non lo snapshot pianificato più vicino.
 
 Dopo una riunione premi "Salva versione" e si apre la finestra — attacchi una nota tipo "aggiunte conclusioni dopo la riunione" e salvi:
 
 ![Finestra Salva versione di Keeply: elenco dei file modificati + campo nota + pulsanti Annulla / Salva versione](save-dialog.svg)
 
-Sei mesi dopo, la Timeline mostra ogni salvataggio come una riga a sé — i salvataggi automatici in background accanto a quelli manuali con la nota che hai scritto sul momento:
+Sei mesi dopo, la Timeline mostra ogni versione che salvi come una riga a sé — i salvataggi automatici in background accanto a quelli manuali con la nota che hai scritto sul momento:
 
 ![Timeline di Keeply per meeting-notes.docx: versioni auto-salvate accanto a salvataggi manuali (conclusioni post-riunione / bozza del mattino / dopo il primo feedback del cliente)](timeline.svg)
 

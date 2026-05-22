@@ -27,14 +27,14 @@ strategic_fit:
 cta_topic: backup
 image_alt_data: "Diagramma a tre colonne: Backup recupera un disco morto, Cloud recupera un laptop perso, Keeply recupera la versione che hai sovrascritto — la terza colonna è dove vive l'80% del dolore sui file ma né backup né cloud lo affrontano"
 faq_schema:
-  - q: Keeply 存什麼？跟備份和雲端有什麼不同？
-    a: Keeply 存的是「你自己改動的歷史」：每次 Cmd+S 都留版本，不用思考要不要存哪些。它解決「我改錯了想退回」的場景，這是備份和雲端都不處理的層次。
-  - q: 備份工具存什麼？什麼情境下需要？
-    a: 備份工具存「整顆磁碟某個時間點的完整快照」，解決硬碟壞掉、筆電遺失、機房失火等災難場景。Time Machine、3-2-1 都屬此類。它救硬體，不救你自己存錯。
-  - q: 雲端工具存什麼？解決什麼問題？
-    a: 雲端工具存「多裝置間的最新版同步」，解決手機、平板、筆電要看同一份檔案的場景。Dropbox、OneDrive、iCloud 都屬此類。它救裝置切換，不救改動歷史。
-  - q: 我到底需要幾個工具才夠？
-    a: 看你怕什麼：怕硬碟壞需要備份；怕跨裝置需要雲端；怕自己改錯需要 Keeply。三個是不同層次的工具，不互相取代。最常見的「我改錯了」情境，前兩個都救不了。
+  - q: Cosa salva Keeply, e in cosa è diverso da backup e cloud?
+    a: "Keeply salva la storia delle tue modifiche: salvi una versione quando conta — con una nota — oppure lasci che il salvataggio automatico opzionale catturi il tuo lavoro ogni 15-30 min, così non devi decidere quali tenere. Risolve il caso \"ho cambiato qualcosa di sbagliato e voglio tornare indietro\", un livello che né il backup né il cloud gestiscono."
+  - q: Cosa salvano gli strumenti di backup, e quando ti servono?
+    a: "Gli strumenti di backup salvano uno snapshot completo dell'intero disco a un certo momento, per i disastri come un disco morto, un laptop perso o un incendio nella sala server. Time Machine e la regola 3-2-1 appartengono a questa categoria. Salvano l'hardware, non il tuo salvataggio sbagliato."
+  - q: Cosa salvano gli strumenti cloud, e cosa risolvono?
+    a: "Gli strumenti cloud salvano l'ultima versione sincronizzata tra dispositivi, per quando telefono, tablet e laptop hanno bisogno dello stesso file. Dropbox, OneDrive e iCloud appartengono a questa categoria. Salvano il passaggio tra dispositivi, non la storia delle tue modifiche."
+  - q: Di quanti strumenti ho davvero bisogno?
+    a: "Dipende da cosa temi: se temi un disco morto, ti serve il backup; se temi i vuoti tra dispositivi, ti serve il cloud; se temi una tua modifica sbagliata, ti serve Keeply. Sono tre livelli diversi e non si sostituiscono a vicenda. Il caso più comune — \"ho cambiato qualcosa di sbagliato\" — è proprio quello che i primi due non possono salvare."
 ---
 
 # 【2026 Gestione file】Cosa salva davvero Keeply? In cosa è diverso da backup e cloud

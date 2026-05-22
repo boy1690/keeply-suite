@@ -27,7 +27,7 @@ faq_schema:
   - q: Recuva o Disk Drill recuperano i file cancellati da Dropbox su un SSD?
     a: "Gli SSD moderni usano TRIM, una funzione che cancella in modo proattivo i blocchi liberati poco dopo la cancellazione. Una volta che TRIM è passato, nemmeno gli strumenti di recupero forense riescono a recuperare il file. Gli HDD senza TRIM offrono una finestra di recupero più lunga, ma i settori possono comunque essere stati sovrascritti. Il software di recupero è la strada con la percentuale di successo più bassa fra le quattro disponibili."
   - q: In cosa Keeply è diverso dalla cronologia versioni di Dropbox?
-    a: "Keeply gira a monte della sincronizzazione di Dropbox e conserva ogni salvataggio locale in modo permanente, senza tetto di tempo o di numero. La cronologia versioni di Dropbox è limitata per piano (30 / 180 / 365 giorni). Keeply lavora a fianco di Dropbox, non al suo posto — Dropbox continua a occuparsi di sincronizzazione fra dispositivi e copia off-site."
+    a: "Keeply gira a monte della sincronizzazione di Dropbox e conserva le versioni che salvi in locale in modo permanente, senza tetto di tempo o di numero. La cronologia versioni di Dropbox è limitata per piano (30 / 180 / 365 giorni). Keeply lavora a fianco di Dropbox, non al suo posto — Dropbox continua a occuparsi di sincronizzazione fra dispositivi e copia off-site."
 ---
 
 # 【2026 Gestione File】Dropbox recupera i file cancellati — fino al 31° giorno
@@ -102,7 +102,7 @@ Sarah, Marco e Linh avevano lavori diversi, file diversi, timestamp diversi. La 
 
 Le reti di ultima istanza devono scadere. Lo spazio di archiviazione costa. Un cloud che conservasse ogni cancellazione per sempre o avrebbe un prezzo diverso, o metterebbe in silenzio un tetto agli account. La finestra di 30 giorni non è un bug; è il prodotto che funziona come è stato progettato. Il marketing enfatizza ciò che viene preso al volo. Non enfatizza ciò che invece sfugge.
 
-Quello che cattura ciò che le reti di ultima istanza non catturano è un livello di cronologia versioni che vive da un'altra parte — da qualche parte che non cerca di essere un motore di sincronizzazione, non cerca di costare poco, non cerca di fare dodici cose in una. Un livello che esiste per un solo mestiere: tenere ogni salvataggio, a tempo indefinito, sul tuo disco, dove lo spazio costa poco e il tempo non è un nemico.
+Quello che cattura ciò che le reti di ultima istanza non catturano è un livello di cronologia versioni che vive da un'altra parte — da qualche parte che non cerca di essere un motore di sincronizzazione, non cerca di costare poco, non cerca di fare dodici cose in una. Un livello che esiste per un solo mestiere: tenere le versioni che salvi, a tempo indefinito, sul tuo disco, dove lo spazio costa poco e il tempo non è un nemico.
 
 ## Un universo parallelo
 
@@ -118,7 +118,7 @@ La relatrice di Linh le scrive a proposito della versione precedente al restring
 
 ![Timeline Keeply: vista a livello di progetto con tag Q1 2026, Firma cliente e Recupero distribuiti su 6 mesi](timeline.svg)
 
-Il meccanismo è lo stesso in tutti e tre i casi. Keeply gira a monte di Dropbox — ogni salvataggio locale viene conservato in una cronologia permanente, con il messaggio che hai scritto al momento come etichetta ricercabile. Dropbox continua a occuparsi di sincronizzazione fra dispositivi, link di condivisione, copia off-site. Niente di tutto questo cambia. Quello che cambia è che l'orologio dei 30 giorni non decide più se la versione che ti serve è ancora in giro. È sul tuo disco. È sempre lì.
+Il meccanismo è lo stesso in tutti e tre i casi. Keeply gira a monte di Dropbox — ogni versione che salvi in locale viene conservata in una cronologia permanente, con il messaggio che hai scritto al momento come etichetta ricercabile. Dropbox continua a occuparsi di sincronizzazione fra dispositivi, link di condivisione, copia off-site. Niente di tutto questo cambia. Quello che cambia è che l'orologio dei 30 giorni non decide più se la versione che ti serve è ancora in giro. È sul tuo disco. È sempre lì.
 
 **Funziona a fianco del tuo cloud esistente.** Keeply sta a monte di Dropbox, OneDrive, Google Drive, iCloud o di qualunque cartella tu sincronizzi. Non devi migrare. Non devi scegliere una parte. Il livello locale tiene la cronologia; il cloud tiene la sincronizzazione. La stessa storia per chi è già passato dalla [scogliera della cronologia versioni cloud](../cloud-version-history-cliff/).
 
@@ -132,7 +132,7 @@ Elenco onesto di ciò che Keeply non risolve:
 - **Dashboard di amministrazione team e log di audit** — Dropbox Business.
 - **Ridondanza off-site** se il disco muore — tieni Dropbox in funzione anche per questo.
 
-Keeply non è un sostituto di Dropbox. È il livello sotto Dropbox: ogni salvataggio locale conservato, in modo permanente, così che l'orologio dei 30 giorni non sia quello che decide se la proposta che ti servirà fra 60 giorni sopravvive.
+Keeply non è un sostituto di Dropbox. È il livello sotto Dropbox: ogni versione che salvi in locale conservata, in modo permanente, così che l'orologio dei 30 giorni non sia quello che decide se la proposta che ti servirà fra 60 giorni sopravvive.
 
 Se in questo momento sei oltre il 30° giorno, le tue opzioni sono quelle che ha tentato Linh; nessuna ha grandi probabilità di funzionare. La versione che puoi ancora salvare è la prossima. Il giorno giusto per installare un livello locale di cronologia versioni è quello prima di averne bisogno. Anche tra due minuti va bene.
 

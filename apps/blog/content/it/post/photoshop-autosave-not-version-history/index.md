@@ -15,11 +15,11 @@ faq_schema:
   - q: Perché la cartella di salvataggio automatico di Photoshop è vuota quando cerco una vecchia versione?
     a: Perché il salvataggio automatico di Photoshop conserva file temporanei di recupero solo mentre un PSD è aperto e non salvato. Nel momento in cui premi Cmd+S sovrascrivendo una versione precedente e chiudi il file normalmente, il salvataggio automatico cancella il temporaneo. È pensato per i crash, non per la cronologia delle versioni.
   - q: Il salvataggio automatico di Photoshop è la stessa cosa della cronologia delle versioni?
-    a: 'No. Il salvataggio automatico (Auto Recover) risolve un solo problema — non perdere il lavoro non salvato se Photoshop va in crash o salta la corrente. Non risponde a "mi piacevano i colori di mezz''ora fa, riportami indietro". La cronologia versioni a livello di file è un livello separato che conserva ogni Cmd+S come punto recuperabile anche mesi dopo.'
+    a: 'No. Il salvataggio automatico (Auto Recover) risolve un solo problema — non perdere il lavoro non salvato se Photoshop va in crash o salta la corrente. Non risponde a "mi piacevano i colori di mezz''ora fa, riportami indietro". La cronologia versioni a livello di file è un livello separato: salvi una versione nel momento che conta (con una nota), oppure attivi il salvataggio automatico per catturare le modifiche a intervalli, e la ritrovi anche mesi dopo.'
   - q: Il pannello Cronologia di Photoshop può ripristinare la versione di ieri?
     a: No. Il pannello Cronologia registra solo i passaggi fatti in questo PSD in questa sessione. Nel momento in cui chiudi il file e lo riapri, tutta quella cronologia sparisce. Risolve "annulla gli ultimi 50 passaggi", non "riportami la versione di ieri".
   - q: Come può un designer aggiungere una vera cronologia delle versioni a livello di file?
-    a: Aggiunge un livello esterno che fa versioning automatico a ogni salvataggio. Uno strumento come Keeply cattura una copia del PSD ogni volta che premi Cmd+S, con una nota tipo "approvato dal cliente", così la versione di mezz'ora fa — o di 6 mesi fa — è a due click di distanza. Funziona indipendentemente da come o quante volte apri Photoshop.
+    a: Aggiunge un livello esterno per la cronologia versioni a livello di file. Uno strumento come Keeply ti fa salvare una versione del PSD nel momento che conta, con una nota tipo "approvato dal cliente" — e puoi attivare il salvataggio automatico così cattura anche le modifiche a intervalli (ogni 15-30 min). La versione di mezz'ora fa — o di 6 mesi fa — è a due click di distanza. Funziona indipendentemente da come o quante volte apri Photoshop.
   - q: Quando un designer non ha bisogno di questo livello aggiuntivo?
     a: Tre casi. (1) Lavori brevi senza giri di revisione, dove il cliente approva e il file viene archiviato. (2) Lo studio impone la cronologia versioni di Adobe Creative Cloud e non ha mai dato problemi. (3) La tua convenzione di naming è così rigorosa che ogni Cmd+S diventa -v07 -v08 e sei certo di non rilassarti mai. Fuori da questi casi, prima o poi arriva il pomeriggio in cui "il cliente vuole v2 ma io ho solo v5".
 ---
@@ -57,7 +57,7 @@ Onestamente, è la distinzione che nessuno sulla prima pagina di Google si prend
 | Meccanismo | Attivazione | Cosa salva | Integrato in Photoshop? |
 |---|---|---|---|
 | **Salvataggio automatico** | Photoshop rileva chiusura anomala | Stato di lavoro in memoria al momento del crash | ✅ |
-| **Cronologia versioni** | Ogni Cmd+S | Snapshot completo di ogni versione salvata, conservato in modo permanente | ❌ |
+| **Cronologia versioni** | Ogni versione che conservi (la salvi tu, o un timer) | Snapshot completo di ogni versione conservata, in modo permanente | ❌ |
 
 **Recupero da crash** è il compito del salvataggio automatico — il programma è morto, il tuo file non era stato salvato, riportami dove ero. Un lavoro, uno slot. Puoi impostare l'intervallo nelle `Preferenze > Gestione file` di Adobe (5, 10, 15 o 30 minuti), ma qualsiasi numero tu scelga, il salvataggio è sempre nello stesso singolo slot che viene sovrascritto; le nuove scritture sostituiscono le vecchie, niente cronologia, solo "l'ultimo punto di recupero disponibile."
 
@@ -87,7 +87,7 @@ Non c'è una quarta cosa. **La cronologia delle versioni a livello di file non �
 
 ## Quello che ti serve davvero è cronologia delle versioni a livello di file
 
-Il livello mancante vive fuori da Photoshop — un processo separato che osserva ogni Cmd+S, posizionato un livello sopra l'applicazione stessa.
+Il livello mancante vive fuori da Photoshop — un posto separato dove conservi le versioni, posizionato un livello sopra l'applicazione stessa.
 
 Definiamo precisamente cosa serve. Ogni volta che salvi il PSD, qualcosa preserva silenziosamente quello snapshot completo, byte per byte, e non lo sovrascrive mai. Salvi venti volte oggi, hai venti snapshot impilati. Sovrascrivi la v2 che il cliente voleva domani? Torni allo snapshot di 30 minuti fa — il tuo file attuale rimane, e una versione precedente torna accanto.
 
@@ -95,7 +95,7 @@ Perché Photoshop non costruisce questo livello? Adobe si posiziona come strumen
 
 C'è più di uno strumento che prova a riempire il vuoto. Apple Time Machine ci prova — ma Time Machine fa snapshot di sistema orari, non snapshot per salvataggio; se hai salvato la v2 più di un'ora fa potresti acchiapparla, oppure potresti acchiappare un momento in cui l'avevi già sovrascritta. Pura fortuna di tempistica. OneDrive e SharePoint offrono cronologia delle versioni con un [limite predefinito di 500 versioni principali](https://learn.microsoft.com/it-it/sharepoint/document-library-version-history-limits), e le versioni più vecchie vengono potate automaticamente una volta raggiunto il limite (gli account Microsoft personali sono più stretti — limitati a 25 versioni). Google Drive è ancora più stretto: [100 revisioni per file](https://developers.google.com/workspace/drive/api/guides/manage-revisions), con tutto ciò che è più vecchio di 30 giorni rimosso automaticamente a meno che non sia marcato manualmente come "Keep Forever" (anch'esso limitato a 200). [Abbiamo spiegato in dettaglio altrove](/post/client-asked-which-version/) perché questo livello non arriva al caso "il cliente chiede tre mesi dopo." Sono risposte parziali.
 
-Ciò che rimane, Keeply prova a riempirlo. La logica è semplice: ogni Cmd+S su un PSD dentro una cartella Keeply, Keeply preserva silenziosamente la versione esatta in quel momento, separatamente dal file vivo — il tuo lavoro attuale non viene toccato. Anche i PSD più pesanti (quelli da 500MB in un singolo file) vengono gestiti con grazia in background; Keeply usa una memorizzazione sottostante per file grandi che non gonfia il disco. Non c'è intervallo di salvataggio da configurare, nessun pulsante "snapshot ora" da premere — lavori in Photoshop come hai sempre fatto, e lui registra ogni salvataggio dietro di te.
+Ciò che rimane, Keeply prova a riempirlo. La logica è semplice: nel momento che conta salvi una versione dalla finestra di Keeply (con una nota); e se attivi il salvataggio automatico, Keeply controlla la cartella ogni 15-30 minuti e conserva ogni modifica che trova — ogni versione tenuta separatamente dal file vivo, così il tuo lavoro attuale non viene toccato. Anche i PSD più pesanti (quelli da 500MB in un singolo file) vengono gestiti con grazia in background; Keeply usa una memorizzazione sottostante per file grandi che non gonfia il disco.
 
 Quando ti accorgi di aver sovrascritto la v2 che il cliente voleva, apri Keeply, scorri fino alla riga "versione confermata dal cliente" e clicchi ripristina. La finestra che esce è questa:
 
@@ -103,7 +103,7 @@ Quando ti accorgi di aver sovrascritto la v2 che il cliente voleva, apri Keeply,
 
 Nota la riga sotto il pulsante rosso "Ripristina questa versione" — tutto quello che hai modificato dopo il 14/5 14:30 non viene cancellato, viene salvato come nuova versione. Vecchia e nuova rimangono entrambe nella timeline, non perdi nulla. Confronti visivamente le due, copi i colori della v3 sulla v2 ripristinata, e quell'ora di rifacimento di livelli si comprime in 30 secondi di click.
 
-Un'altra cosa: Keeply funziona insieme ad Adobe Creative Cloud, Time Machine, qualsiasi sincronizzazione cloud che già usi — non sostituisce nessuna di queste. Riempie l'unico vuoto che nessuna di loro affronta: cronologia delle versioni a livello di file persistente per file creativi binari, osservata a ogni salvataggio.
+Un'altra cosa: Keeply funziona insieme ad Adobe Creative Cloud, Time Machine, qualsiasi sincronizzazione cloud che già usi — non sostituisce nessuna di queste. Riempie l'unico vuoto che nessuna di loro affronta: cronologia delle versioni a livello di file persistente per file creativi binari — le versioni che salvi, più il salvataggio automatico opzionale.
 
 Questo vuoto è anche la parte che i designer sentono più forte ne [il più ampio problema della gestione delle versioni file](/post/file-version-management-complete-guide/) — i PSD sono grandi, le modifiche sono distruttive, e i clienti cambiano idea su quale v2 intendevano.
 

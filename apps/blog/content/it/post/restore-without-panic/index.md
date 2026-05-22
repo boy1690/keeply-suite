@@ -16,16 +16,16 @@ primary_keyword: "recuperare file cancellati"
 voice_version: v2-2026-05-11
 image_alt_data: "Quattro motivi per cui il Cestino è vuoto quando serve: svuotato di recente, unità condivisa, Shift+Canc, cestino cloud oltre 30 giorni — uno strumento di versioning a livello file installato in anticipo è l'unica soluzione che funziona in tutti e quattro i casi"
 faq_schema:
-  - q: 為什麼 SSD 上的刪除檔案救援軟體幾乎救不回來？
-    a: 現代電腦多使用 SSD，Windows 7 後預設開啟 TRIM 機制，刪除時 OS 立刻告訴 SSD 把該區塊標為空白可重用，救援軟體掃描到的只有一片零。業界直言：聲稱能從啟用 TRIM 的 SSD 救出已刪檔案的公司，不是無能就是在騙客戶。
-  - q: 有哪些情境下檔案根本不會進入資源回收筒？
-    a: 4 種情境直接略過垃圾桶：從 NAS 或 SharePoint 等共用磁碟刪除（直接抹除）、按 Shift+Del 快捷鍵（OS 設計即永久刪除）、雲端垃圾桶超過 30 天保留期自動清空、以及你前天剛手動清過垃圾桶。
-  - q: 為什麼事後的檔案救援比事前防禦更不可靠？
-    a: 事後救援依賴「發現的時機」，TRIM 觸發後磁區立即被標記可覆寫，每多拖一小時成功率急速下降。SSD 加 BitLocker 加密的環境下救援機率基本為零。事前防禦在每次儲存時就留版本，完全不依賴發現時機。
-  - q: Keeply 可以解決哪些檔案救援軟體解不了的場景？
-    a: Keeply 在工具層建立版本紀錄層，不靠雲端也不靠外接硬碟：共用磁碟 NAS 或 SharePoint 上作業一樣保留歷史；離線工作無需全程連線；沒有 30 天保留期上限，3 個月前的版本時間軸上仍找得到。
-  - q: Keeply 有哪些救援場景做不到？
-    a: 三種情境 Keeply 無法處理：SD 卡與手機照片需要專門 App；整顆磁碟實體損毀需要備份工具加 3-2-1 原則；以及 Keeply 安裝前已刪除的檔案，因為它是事前防禦工具，無法溯及既往。
+  - q: Perché su un SSD il software di recupero non riesce quasi mai a riportare indietro i file cancellati?
+    a: "La maggior parte dei computer moderni usa SSD e, da Windows 7, TRIM è attivo di default: quando cancelli, il sistema operativo dice subito all'SSD di marcare quel blocco come vuoto e riutilizzabile, così il software di recupero non scansiona altro che zeri. Come dice senza giri di parole il settore: qualunque azienda dichiari di recuperare file cancellati da un SSD con TRIM attivo o è incompetente o sta mentendo ai clienti."
+  - q: In quali situazioni un file non arriva mai nel Cestino?
+    a: "Quattro situazioni saltano del tutto il cestino: cancellare da un disco condiviso come un NAS o SharePoint (cancellato direttamente); premere Shift+Canc (permanente per design del sistema operativo); un cestino cloud svuotato automaticamente oltre i 30 giorni di retention; e un Cestino che hai svuotato a mano un paio di giorni fa."
+  - q: Perché il recupero a posteriori è meno affidabile della prevenzione?
+    a: "Il recupero a posteriori dipende dal momento in cui te ne accorgi. Una volta che TRIM scatta, i settori vengono subito marcati come riscrivibili, e ogni ora in più che aspetti fa calare bruscamente il tasso di successo — su un SSD con cifratura BitLocker è praticamente zero. La difesa preventiva conserva la versione nel momento in cui la salvi, senza dipendere da quando te ne accorgi."
+  - q: Quali scenari che il software di recupero non gestisce risolve Keeply?
+    a: "Keeply costruisce uno strato di registrazione versioni a livello strumento, senza affidarsi né al cloud né a un disco esterno: conserva la cronologia anche quando lavori su un disco condiviso NAS o SharePoint; non richiede una connessione costante per il lavoro offline; e non ha un tetto di retention a 30 giorni, quindi una versione di 3 mesi fa è ancora sulla timeline."
+  - q: Quali scenari di recupero Keeply non può gestire?
+    a: "Tre non li può gestire: schede SD e foto del telefono richiedono un'app dedicata; un intero disco che si guasta fisicamente richiede uno strumento di backup più la regola 3-2-1; e i file cancellati prima che Keeply fosse installato, perché è uno strumento preventivo e non può tornare nel passato."
 ---
 
 # 【2026 Gestione file】Recuperare file cancellati: 4 casi in cui il software di recupero fallisce
@@ -78,7 +78,7 @@ In sintesi: i software di recupero funzionano nella finestra stretta "vecchio HD
 
 Smetti di rincorrere la "forense del disco" a posteriori. La vera risposta è stendere un silenzioso "livello di registrazione delle versioni" sopra il file system.
 
-È qui che si colloca Keeply. Non si appoggia al cloud né a dischi esterni — ogni volta che premi salva, tiene in silenzio una versione in background.
+È qui che si colloca Keeply. Non si appoggia al cloud né a dischi esterni — conserva in silenzio le versioni che salvi (manualmente con una nota, o tramite il salvataggio automatico opzionale a intervalli) in background.
 
 - **Resiste ai dischi condivisi**: anche se lavori su NAS o SharePoint, la cronologia rimane.
 - **Offline-first**: non serve sincronizzazione sempre attiva.

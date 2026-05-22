@@ -15,16 +15,16 @@ role: cluster
 pillar_parent: file-version-management-complete-guide
 image_alt_data: "Catena di nomi proposal_v3.docx → v3_FINAL → v3_FINAL_v2 con didascalia 'quale ha firmato il cliente?' — AutoSave, Time Machine e Dropbox coprono solo 1-2 versioni indietro, lasciando la gara al naming come unica apparente soluzione"
 faq_schema:
-  - q: 為什麼大家會把檔案命名為 _v3_FINAL？
-    a: 因為現有工具的版本歷史不可靠（Dropbox 30 天、AutoSave 1-2 版），人腦只能用檔名當作備援機制。「_v3_FINAL」是無聲的不信任投票：你不相信工具會幫你記得歷史，所以自己手動標記。
-  - q: 「太多版本」其實是哪 4 種不同的痛點？
-    a: 4 種混在一起的問題：分不出哪個是「正本」、想找特定時間點的版本卻沒有索引、改錯了想退回卻找不到上一版、跨人協作不知道別人改了什麼。每種痛點需要不同設計來解，無法用一個「再多備份」解決。
-  - q: 為什麼用 _FINAL 命名不是錯，是工具沒接棒？
-    a: 你做的事邏輯上對：你需要標記版本意義。錯在工具層沒提供「自動標里程碑」「自動分版」的機制，把這個責任丟給檔名。工具沒接棒，你只好用唯一能用的工具——檔名來解問題。
-  - q: 哪 3 種工具設計能解決「太多版本」痛點？
-    a: 設計 A：自動存檔點（每次 Cmd+S 都留歷史，不依賴使用者紀律）；設計 B：里程碑凍結（使用者標「客戶簽」「上線」等關鍵時刻永久保留）；設計 C：單檔還原（從歷史拉一個檔案出來，不影響其他檔）。Keeply 三個都做。
-  - q: 什麼時候 Keeply 不是「太多版本」問題的正確解法？
-    a: 大量 raw 影音素材每天累積幾十 GB 不適合（Keeply 不是冷存方案）；即時多人協作會議紀錄用 Notion 或 Google Docs 更好；以及純法務簽核流程用 DocuSign 等專業工具。
+  - q: Perché si finisce per chiamare i file `_v3_FINALE`?
+    a: "Perché la cronologia versioni degli strumenti esistenti è inaffidabile (Dropbox 30 giorni, AutoSave 1-2 versioni), e il cervello ripiega sui nomi dei file come meccanismo di riserva. \"_v3_FINALE\" è un silenzioso voto di sfiducia: non ti fidi che lo strumento ricordi la storia per te, così la marchi a mano."
+  - q: Quali 4 dolori diversi si nascondono dentro "troppe versioni"?
+    a: Quattro cose ingarbugliate insieme — non distinguere quale sia l'originale; volere la versione di un momento preciso ma senza indice; aver sbagliato e voler tornare indietro ma non trovare l'ultima versione; collaborazione tra più persone senza sapere cosa hanno cambiato i colleghi. Ogni dolore richiede un design diverso — "più backup" non ne risolve nessuno.
+  - q: Perché chiamare i file _FINALE non è un tuo errore ma un fallimento dello strumento?
+    a: Quello che fai è logicamente giusto — devi marcare il significato delle versioni. L'errore è a livello strumento — nessun meccanismo di milestone automatica o di taglio versione automatico, così la responsabilità viene scaricata sul nome del file. Lo strumento non ha raccolto il testimone, quindi usi l'unico strumento che hai — il nome del file — per risolvere il problema.
+  - q: Quali 3 design di strumento risolvono "troppe versioni"?
+    a: Design A — checkpoint automatici (le versioni che salvi vengono conservate, senza disciplina di denominazione). Design B — congelamento milestone (l'utente marca i momenti "firma cliente" o "online" come permanenti). Design C — ripristino del singolo file (estrai un file dalla storia senza toccare gli altri). Keeply li fa tutti e tre.
+  - q: Quando Keeply non è la risposta giusta al problema "troppe versioni"?
+    a: L'accumulo quotidiano di decine di GB di materiale video grezzo non è adatto (Keeply non è cold storage); le note di riunione collaborative in tempo reale sono meglio in Notion o Google Docs; e i flussi puramente di firma legale vogliono DocuSign o strumenti specializzati simili.
 ---
 
 Giovedì sera, le 23:47. Sul desktop stai cercando la versione che il cliente ha firmato oggi pomeriggio. Undici file chiamati `Proposta_v*_FINALE.docx` sono lì, quale è la copia firmata, quale ha le tue annotazioni, quale è la revisione ricevuta su WhatsApp. Hai paura di cancellarne uno. Tenerli tutti significa non trovare quello che ti serve.
@@ -72,9 +72,9 @@ Stai facendo la cosa giusta. Nominare `_v3_FINALE` è un riflesso di sopravviven
 
 Tre pattern di design che lo strumento può usare. Ognuno risolve uno dei quattro tipi di dolore sopra.
 
-### Design A: Checkpoint automatici (ogni Cmd+S mantiene la cronologia)
+### Design A: Checkpoint automatici (le versioni che salvi vengono conservate)
 
-Premi Cmd+S, lo strumento conserva silenziosamente la versione precedente. Non devi nominare niente. **Esempi**: macOS Time Machine (lo strumento integrato di Apple che fa snapshot ogni ora), Word AutoSave (torna indietro solo di 1-2 versioni), Dropbox cronologia versioni 30 giorni. **Keeply** fa questo in background sulla tua cartella di lavoro: i file di testo memorizzano solo cosa è cambiato, mentre file di design e immagini conservano per intero ogni snapshot — così i file grandi non saturano il disco. **Risolve Tipo 1.**
+Salvi una versione e lo strumento conserva silenziosamente la versione precedente. Non devi nominare niente. **Esempi**: macOS Time Machine (lo strumento integrato di Apple che fa snapshot ogni ora), Word AutoSave (torna indietro solo di 1-2 versioni), Dropbox cronologia versioni 30 giorni. **Keeply** fa questo in background sulla tua cartella di lavoro — conserva le versioni che salvi (manualmente con una nota, o tramite il salvataggio automatico opzionale a intervalli): i file di testo memorizzano solo cosa è cambiato, mentre file di design e immagini conservano per intero ogni snapshot — così i file grandi non saturano il disco. **Risolve Tipo 1.**
 
 E come ritrovi uno di quei checkpoint silenziosi più tardi? Passa il mouse su una riga qualsiasi della timeline e Keeply mostra una scheda fluttuante con i file cambiati in quel salvataggio — non devi aprire niente per confrontarli:
 

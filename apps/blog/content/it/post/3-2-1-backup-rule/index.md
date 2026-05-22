@@ -15,16 +15,16 @@ locales_required: [en, zh-TW, zh-CN, ja, ko, it]
 cta_topic: backup
 image_alt_data: "Schema di tre copie di backup di proposal_v7_FINAL.psd etichettate tutte LATEST: la regola 3-2-1 di Peter Krogh del 2005 è intatta, ma il problema si è spostato dalla perdita di file alla versione sbagliata"
 faq_schema:
-  - q: 3-2-1 備份原則到底在說什麼？
-    a: 3-2-1 是 Peter Krogh 2005 年訂下的備份規則：3 份檔案、2 種儲存媒介、1 份存放異地。設計目的是讓任何單一硬體故障、媒介老化、機房災難都無法讓你的檔案完全消失。
-  - q: 3-2-1 備份原則防什麼、不防什麼？
-    a: 3-2-1 能防硬碟損毀、機房失火、勒索軟體。但它不防操作失誤：你自己覆蓋版本、同事改錯共用資料夾、雲端同步把錯的版本傳到三個位置，3-2-1 都救不了。
-  - q: 為什麼做了 3-2-1 備份還是會丟檔？
-    a: 3-2-1 的「3 份」是空間冗餘，不是時間冗餘。2026 年雲端即時同步，「3」變成同一個錯誤被即時複製到 3 個位置。你需要的不只是多份備份，而是能回溯時間點的版本歷史。
-  - q: 雲端備份算 3-2-1 的「異地」嗎？
-    a: 算。但 iCloud、OneDrive、Google Drive 是同步不是備份。你刪除或覆蓋會即時同步到雲端，無法防止操作失誤。異地要求只解決物理隔離問題，版本歷史是另一層需求。
-  - q: 個人工作者也需要 3-2-1 備份原則嗎？
-    a: 看檔案重要性。判斷標準只有一個：丟了會不會痛？跟個人或企業身份無關。會痛就需要。3-2-1 是必要但不足夠的基礎，還需要搭配版本歷史才能應對操作失誤場景。
+  - q: Cos'è la regola di backup 3-2-1?
+    a: "La regola 3-2-1 viene dal design di backup del fotografo Peter Krogh del 2005: 3 copie dei tuoi dati, 2 supporti di archiviazione diversi, 1 conservata fuori sede. L'obiettivo era far sì che nessun singolo guasto hardware, deterioramento del supporto o disastro della struttura potesse cancellare i tuoi file. È ridondanza spaziale — la stessa versione sbagliata, replicata diligentemente in 3 posti."
+  - q: Da cosa protegge la regola 3-2-1, e da cosa no?
+    a: "La 3-2-1 protegge da guasto del disco, incendio in ufficio, cifratura da ransomware — qualunque cosa faccia sparire il file. Non protegge dall'errore umano: tu che sovrascrivi la tua versione, un collega che modifica la cartella condivisa sbagliata, la sincronizzazione cloud che replica il file rovinato su tutte e tre le copie. Per quel livello ti serve la cronologia versioni (come Keeply)."
+  - q: Perché perdi comunque dei file anche con un backup 3-2-1?
+    a: "Il «3» della 3-2-1 è ridondanza spaziale, non temporale. Nel 2005 i dischi morivano spesso, quindi più copie combattevano il deterioramento fisico. Nel 2026 la sincronizzazione cloud è istantanea — il «3» diventa lo stesso errore replicato in 3 posti in tempo reale. Non ti servono solo più copie, ti serve una cronologia versioni che ti permetta di tornare a un punto nel tempo."
+  - q: Il backup cloud conta come copia «fuori sede» nella 3-2-1?
+    a: "Sì. Ma iCloud, OneDrive e Google Drive sono sincronizzazione, non backup. Se cancelli o sovrascrivi in locale, il cloud sincronizza la stessa modifica in pochi secondi — non proteggono dall'errore umano. Il requisito fuori sede risolve solo l'isolamento fisico; la cronologia versioni è un livello a parte."
+  - q: Anche chi lavora da solo ha bisogno del backup 3-2-1?
+    a: "Dipende da quanto contano i tuoi file. Il criterio è una sola domanda: perderli farebbe male? Non ha niente a che vedere con individuo o azienda. Se sì, ti serve la 3-2-1. Ma la 3-2-1 è necessaria, non sufficiente — gli scenari di errore umano richiedono in più la cronologia versioni."
 ---
 
 # 【2026 Gestione file】La regola 3-2-1 del backup: 20 anni dopo, basta ancora nel 2026?
@@ -102,7 +102,7 @@ Sì. [Keeply](https://keeply.work) integra la 3-2-1 nello strato di posizione:
 - **Posizione canonica del progetto**: il deposito canonico su NAS o cloud (conta come "2 supporti")
 - **Posizione di backup**: l'intero progetto sincronizzato in un'altra posizione fisica (la "1 fuori sede")
 
-Aggiungi cronologia versioni automatica a ogni salvataggio, più un meccanismo di "Release" — uno snapshot che puoi marcare come "questa versione è andata al cliente" e che i salvataggi successivi non possono sovrascrivere. Uno strumento, tre livelli di protezione.
+Aggiungi la cronologia versioni — le versioni che salvi, più il salvataggio automatico opzionale ogni 15-30 min — più un meccanismo di "Release": uno snapshot che puoi marcare come "questa versione è andata al cliente" e che i salvataggi successivi non possono sovrascrivere. Uno strumento, tre livelli di protezione.
 
 Tre mesi dopo, quando il cliente ti chiede "mandami la versione che ho approvato il 14 febbraio", basta selezionare quella versione dalla timeline e premere "Ripristina":
 

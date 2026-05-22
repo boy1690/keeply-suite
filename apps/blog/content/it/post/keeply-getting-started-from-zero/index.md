@@ -22,30 +22,30 @@ cta_topic: install
 image_alt_data: "Confronto affiancato: checklist di 30 funzioni richiede 14 giorni di onconsiglioing contro 2 azioni — trascina una cartella, continua a lavorare — con protezione attiva dal primo giorno senza curva di apprendimento"
 faq_schema:
   - q: Cosa devo imparare per iniziare a usare Keeply?
-    a: "Non devi imparare 30 funzioni. Bastano 2 azioni — trascina una cartella su cui stai lavorando dentro la finestra di Keeply, poi continua a salvare come fai di solito. Keeply registra ogni salvataggio in background, niente scorciatoie da memorizzare, niente comandi da digitare."
+    a: "Non devi imparare 30 funzioni. Bastano 2 azioni: (1) trascina una cartella su cui stai lavorando dentro la finestra di Keeply; (2) salva una versione nei momenti che contano — un click (o Cmd+S dentro Keeply) con una nota. La vuoi senza pensieri? Attiva il salvataggio automatico opzionale e Keeply registra le modifiche a intervalli (ogni 15-30 min). Niente comandi da digitare."
   - q: Keeply è molto diverso dagli strumenti che ho usato finora?
-    a: Nessun riapprendimento. Keeply non ti chiede di rinominare i file, riorganizzare le cartelle o creare un concetto di repository. Premi Cmd+S (o Ctrl+S) come fai sempre, e Keeply mantiene la timeline. Quando ti serve una versione vecchia, scorri la timeline e clicca "ripristina".
+    a: Nessun riapprendimento. Keeply non ti chiede di rinominare i file, riorganizzare le cartelle o creare un concetto di repository. Salvi una versione quando conta — un click, o Cmd+S dentro la finestra di Keeply — oppure attivi il salvataggio automatico opzionale per una cattura a intervalli senza pensieri; Keeply mantiene la timeline. Quando ti serve una versione vecchia, scorri la timeline e clicca "ripristina".
   - q: Quali sono le sole 2 azioni da ricordare?
-    a: "Azione 1 — trascina una cartella su cui stai lavorando e che non vuoi perdere; senza rinominare, senza catalogare. Azione 2 — continua a lavorare come al solito; Keeply registra automaticamente ogni salvataggio. Dal giorno 1 sei già protetto; al giorno 7 la timeline ti mostra tutto quello che ha catturato in silenzio."
+    a: "Azione 1 — trascina una cartella su cui stai lavorando e che non vuoi perdere; senza rinominare, senza catalogare. Azione 2 — salva una versione nei momenti importanti (un click, o Cmd+S in Keeply, con una nota); oppure attiva il salvataggio automatico opzionale così Keeply registra le modifiche a intervalli di 15-30 min. Dal giorno 1 sei già protetto; al giorno 7 la timeline ti mostra tutto quello che ha conservato."
   - q: Com'è davvero la prima settimana?
-    a: 'Giorno 1 — trascini una cartella e quasi non te ne accorgi. Giorno 2-3 — cominci a vedere la timeline riempirsi di salvataggi, con i dettagli delle modifiche a un click di distanza. Giorno 7 — di solito hai un momento "ho sbagliato modifica, fammi ripristinare", ed è lì che ti rendi conto che questa rete di sicurezza prima non c''era.'
+    a: 'Giorno 1 — trascini una cartella e quasi non te ne accorgi. Giorno 2-3 — cominci a vedere la timeline riempirsi delle versioni che hai salvato (più quelle automatiche, se le hai attivate), con i dettagli delle modifiche a un click di distanza. Giorno 7 — di solito hai un momento "ho sbagliato modifica, fammi ripristinare", ed è lì che ti rendi conto che questa rete di sicurezza prima non c''era.'
   - q: Quando Keeply non è lo strumento giusto?
     a: Quattro casi onesti. (1) Lavoro di puro codice — Git/GitHub funziona meglio. (2) La tua azienda impone SharePoint/OneDrive come unica fonte di verità. (3) I tuoi file vivono interamente in strumenti cloud-native (Google Docs, Notion) e non toccano mai il disco locale. (4) Hai già Time Machine più una convenzione di naming rigorosa e non ti è mai capitato un incidente. Fuori da questi casi, Keeply riempie la cronologia dei salvataggi intenzionali a livello di file che nessun altro strumento copre.
 howto_schema:
-  name: Keeply 從零開始 2 個動作上手
+  name: Inizia con Keeply in 2 azioni
   totalTime: PT7D
   steps:
-    - name: 動作 1：拖入資料夾
-      text: 把一個目前正在進行、不想搞丟的資料夾直接拖進 Keeply 視窗，不改命名、不分類、不思考結構，拖進去就完成。
+    - name: 'Azione 1: trascina dentro una cartella'
+      text: Trascina una cartella su cui stai lavorando ora e che non vuoi perdere direttamente dentro la finestra di Keeply — senza rinominare, senza catalogare, senza pensare alla struttura.
       url: '#what-are-the-two-actions'
-    - name: 動作 2：繼續工作
-      text: 照平常習慣改檔案、存檔，Keeply 自動在時間軸記錄每次存檔變動，不需要按任何按鈕或記憶快捷鍵。
+    - name: 'Azione 2: salva una versione nei momenti chiave'
+      text: Nei momenti che contano, clicca "Salva una versione" di Keeply (o Cmd+S dentro Keeply) e aggiungi una nota; oppure attiva il salvataggio automatico opzionale per registrare le modifiche a intervalli di 15/30/60 min.
       url: '#what-are-the-two-actions'
-    - name: Day 2-3 看時間軸
-      text: 第 2 到第 3 天打開 Keeply 時間軸，確認每次存檔筆記已累積出現，點進任一筆可看到新增或刪除了哪些內容。
+    - name: 'Giorno 2-3: controlla la timeline'
+      text: Apri la timeline di Keeply al giorno 2-3 e verifica che le versioni che hai salvato si siano accumulate; clicca su una qualsiasi per vedere cosa è stato aggiunto o rimosso.
       url: '#first-week-natural'
-    - name: Day 7 確認價值
-      text: 第 7 天回顧整週的時間軸，確認版本歷史是否讓你感到有保障；若某天發現改錯可直接點歷史版本還原。
+    - name: 'Giorno 7: conferma il valore'
+      text: Al giorno 7 ripassa la timeline della settimana e verifica che la cronologia versioni ti dia tranquillità; se trovi una modifica sbagliata, ripristina una versione precedente con un click.
       url: '#first-week-natural'
 ---
 
@@ -111,7 +111,7 @@ Lo strumento non è il problema. **Questa categoria di software semplicemente no
 
 ## Quindi quali sono le 2 azioni? {#what-are-the-two-actions}
 
-Sono solo due: **trascina una cartella dentro Keeply, poi continua a fare quello che avresti fatto oggi**. Nessuna opzione da configurare, nessuna scorciatoia da memorizzare, nessuna documentazione di 30 pagine. Keeply salva la cronologia versioni in background, in silenzio.
+Sono solo due: **trascina una cartella dentro Keeply, poi salva una versione quando conta**. Nessun comando da imparare, nessuna documentazione di 30 pagine. Salvare una versione è un click — il pulsante "Salva una versione" di Keeply (o Cmd+S dentro Keeply) — e se preferisci non pensarci, attiva il salvataggio automatico opzionale e Keeply registra le modifiche ogni 15-30 min.
 
 ### Azione 1: trascina una cartella dentro Keeply
 
@@ -119,13 +119,13 @@ La trascini dentro e basta, letteralmente. **Non rinominare, non categorizzare, 
 
 ![Visivo a 3 passaggi: trascina un'intera cartella dal desktop dentro la finestra di Keeply](image-3.svg)
 
-### Azione 2: continua a lavorare
+### Azione 2: salva una versione quando conta
 
-Quello che avresti fatto oggi, fallo.
+Quello che avresti fatto oggi, fallo. Quando finisci una sezione, quando un cliente approva una versione, prima di una modifica rischiosa — clicca "Salva una versione" di Keeply e aggiungi una nota di una riga (es. "approvata dal cliente"). Quel momento finisce nella Timeline a sinistra.
 
-Modifica un file, salva, torna alla versione precedente, cancella e rifai. **Keeply salva automaticamente nella Timeline a sinistra e crea una nota del file.** Non premi un pulsante. Non memorizzi una scorciatoia.
+Non vuoi ricordarti di cliccare? Attiva il salvataggio automatico opzionale e Keeply registra le tue modifiche ogni 15/30/60 min (a tua scelta) — i salvataggi manuali portano la tua nota, quelli automatici sono marcati con l'orario, entrambi sulla stessa timeline.
 
-![Visivo della Timeline di Keeply: ogni salvataggio è una nota del file, ci clicchi dentro per vedere le modifiche](image-4.svg)
+![Visivo della Timeline di Keeply: ogni versione che salvi è una nota del file, ci clicchi dentro per vedere le modifiche](image-4.svg)
 
 Non devi nemmeno rinominare i tuoi file. Quel `_v3_davvero_definitivo.docx` mantiene il suo nome. Keeply non tocca le tue abitudini.
 

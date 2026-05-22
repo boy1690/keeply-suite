@@ -31,7 +31,7 @@ faq_schema:
     a: Gli snapshot di Time Machine sono a livello disco — snapshot orari dell'intero disco, diluiti nel tempo. Può recuperare qualunque file in qualsiasi punto coperto da uno snapshot, ma navighi per data, non per evento di salvataggio. La cronologia versioni di Dropbox è a livello file — tiene una lista di versioni per file, ma capped a 30 giorni sui piani gratuiti, 180 o 365 sui paid. Time Machine conosce il disco; Dropbox conosce il file; nessuno conosce la tua intenzione di salvataggio.
     
   - q: Qual è il terzo asse che nessuno dei due copre?
-    a: Cronologia versioni intenzionale a livello di file senza cap di tempo e senza cap di conteggio — registra ogni salvataggio deliberato come un suo punto recuperabile, con la capacità di marcare una specifica versione come «questa è quella che ho mandato al cliente» affinché sopravviva per sempre. Strumenti come Keeply costruiscono questo terzo strato separatamente dal backup disco e dalla sincronizzazione cloud.
+    a: Cronologia versioni intenzionale a livello di file senza cap di tempo e senza cap di conteggio — registra ogni versione che salvi deliberatamente come un suo punto recuperabile, con la capacità di marcare una specifica versione come «questa è quella che ho mandato al cliente» affinché sopravviva per sempre. Strumenti come Keeply costruiscono questo terzo strato separatamente dal backup disco e dalla sincronizzazione cloud.
 ---
 
 # 【2026 Gestione file】Time Machine vs Dropbox: backup, sync, e il terzo asse che nessuno dei due è
@@ -91,13 +91,13 @@ Scegli quindi gli strumenti per gli assi visibili. Prendi Time Machine più Drop
 
 Uno strumento costruito attorno alla cronologia versioni intenzionale a livello di file fa queste cose:
 
-- **Salva una versione a ogni Cmd+S deliberato**, non su uno schedule di snapshot
+- **Salva le versioni che decidi tu** — un click su «Salva una versione» con una nota, più il salvataggio automatico opzionale a intervalli — non su uno schedule di snapshot di sistema
 - **Nessun limite di tempo** — la versione di due anni fa è accessibile come quella di ieri
 - **Nessun limite di conteggio** — 500 salvataggi dopo, le prime sono ancora recuperabili
 - **Un marker «Release» o «Milestone»** — segnala un salvataggio specifico come «questo è quello che ho mandato al cliente l'8 marzo» e sopravvive per sempre, anche se salvi il file altre 500 volte
 - **Funziona accanto a Time Machine e Dropbox** — non li sostituisce, sta sul terzo asse
 
-[Keeply](https://keeply.work) è una implementazione di questo terzo strato. Gira in locale, osserva le cartelle che aggiungi, cattura ogni salvataggio deliberato, senza limite. La funzione Release ti lascia congelare una versione specifica come milestone.
+[Keeply](https://keeply.work) è una implementazione di questo terzo strato. Gira in locale, osserva le cartelle che aggiungi, conserva le versioni che salvi deliberatamente, senza limite. La funzione Release ti lascia congelare una versione specifica come milestone.
 
 ```
 Keeply — martedì pomeriggio di due mesi fa

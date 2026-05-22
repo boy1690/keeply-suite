@@ -25,7 +25,7 @@ faq_schema:
     a: No. Salva secondo pianificazione (predefinita ogni ora, configurabile), e solo quando il drive configurato è connesso. Tra gli snapshot, i tuoi salvataggi non vengono catturati da File History. Se premi Cmd+S venti volte in un'ora, File History vede la versione al prossimo checkpoint orario — non i tuoi venti salvataggi.
     
   - q: In cosa si differenzia File History da una «cronologia versioni»?
-    a: File History sono snapshot guidati dalla pianificazione — il sistema decide quando. Una cronologia versioni per salvataggio è guidata dall'intenzione — il momento in cui premi Cmd+S diventa un punto recuperabile. La sincronizzazione cloud (OneDrive, Dropbox) e strumenti come Keeply sono guidati dall'intenzione; File History è guidato dalla pianificazione. Ripristinano cose diverse.
+    a: File History sono snapshot guidati dalla pianificazione — il sistema decide quando. Una cronologia versioni intenzionale è guidata dall'intenzione — la versione che salvi (un click, o il salvataggio automatico a intervalli) diventa un punto recuperabile. La sincronizzazione cloud (OneDrive, Dropbox) e strumenti come Keeply sono guidati dall'intenzione; File History è guidato dalla pianificazione. Ripristinano cose diverse.
     
   - q: Posso fare snapshot più frequenti con File History?
     a: Puoi impostarla a ogni 10 minuti nell'interfaccia legacy. Aiuta ma non cambia la forma fondamentale — se il drive è offline, non avviene snapshot. E dieci minuti non sono ancora il tuo salvataggio.
@@ -66,7 +66,7 @@ La distinzione che nessuno ha spiegato quando ho configurato File History:
 
 **Guidato dalla pianificazione** — il sistema decide quando catturare. File History è guidato dalla pianificazione. Time Machine su Mac è guidato dalla pianificazione. Sincronizzazione cloud che gira ogni N minuti è guidata dalla pianificazione. Il sistema dice «ogni ora» o «ogni 10 minuti» o «ad ogni cambiamento rilevato», ma l'unità è tempo o rilevamento di cambiamento — non la tua intenzione.
 
-**Guidato dall'intenzione** — la tua azione (premere Cmd+S) attiva la cattura. La versione salvata è esattamente il file al momento in cui ti sei impegnato. Git è guidato dall'intenzione (punti di salvataggio espliciti). La cronologia versioni della sincronizzazione cloud è in parte guidata dall'intenzione (ogni salvataggio crea una versione, limitato dalla retention). Strumenti come Keeply sono progettati guidati dall'intenzione.
+**Guidato dall'intenzione** — è la tua decisione a segnare la cattura, non l'orologio. Premi esplicitamente «Salva una versione» con una nota (oppure lo strumento cattura il tuo salvataggio poco dopo, tramite una breve finestra di polling), e quel momento diventa un punto recuperabile con il contesto che hai scritto. La cronologia versioni della sincronizzazione cloud è in parte guidata dall'intenzione (ogni salvataggio crea una versione, limitato dalla retention). Strumenti come Keeply sono guidati dall'intenzione per design — lo strumento ti dà un pulsante «Salva una versione» che premi nei momenti importanti, più un polling in background ogni 30 minuti che cattura il lavoro in corso; non scatta a ogni Cmd+S.
 
 La mismatch: quando penso «bozza di ieri», intendo «la versione che ho salvato deliberatamente ieri dopo aver aggiunto la conclusione». È una domanda guidata dall'intenzione. File History è guidato dalla pianificazione. La corrispondenza più vicina che può darmi è «lo stato del disco al prossimo punto di snapshot», che può o meno includere il mio salvataggio deliberato, a seconda del timing e della disponibilità del drive.
 
@@ -98,7 +98,7 @@ L'articolo non è una lamentela contro File History. È una chiarificazione di q
 
 Se il tuo scenario di perdita comune è «ho fatto un salvataggio alle 14:47 ieri e voglio esattamente quella versione», File History non te la darà in modo affidabile. Ti serve uno strato diverso.
 
-[Keeply](https://keeply.work) gira localmente e cattura ogni Cmd+S come la sua versione, indipendentemente da pianificazione o connessione del drive. Le catture vivono col progetto, non su un drive esterno separato che potrebbe essere offline. Quando chiedi «bozza di ieri», Keeply cammina all'indietro tra i salvataggi, non tra snapshot pianificati, e restituisce quello che hai effettivamente fatto.
+[Keeply](https://keeply.work) gira localmente e conserva le versioni che salvi come versioni a sé, indipendentemente da pianificazione o connessione del drive. Le catture vivono col progetto, non su un drive esterno separato che potrebbe essere offline. Quando chiedi «bozza di ieri», Keeply cammina all'indietro tra i salvataggi, non tra snapshot pianificati, e restituisce quello che hai effettivamente fatto.
 
 Quando premi «Salva versione» a mano, si apre una finestra dove attacchi una nota di una riga — «dopo riunione» o «approvata dal cliente» — che riconoscerai davvero a distanza di mesi:
 
@@ -123,7 +123,7 @@ Keeply timeline — meeting-notes.docx
 ● 14:22   meeting-notes.docx
 ```
 
-Ogni salvataggio è la sua riga. «Bozza di ieri» mappa a una riga specifica, non a una ricerca su calendario contro snapshot inaffidabili.
+Ogni versione che salvi è la sua riga. «Bozza di ieri» mappa a una riga specifica, non a una ricerca su calendario contro snapshot inaffidabili.
 
 Quando decidi di tornare indietro, non rimetti in dubbio il timestamp — clicchi la riga con la nota che hai scritto e ripristini direttamente. Keeply scatta uno snapshot automatico dello stato attuale prima dello scambio, quindi un click sbagliato si recupera comunque:
 

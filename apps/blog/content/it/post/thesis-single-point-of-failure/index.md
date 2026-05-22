@@ -27,24 +27,24 @@ faq_schema:
   - q: Perché la regola di backup 3-2-1 non salva una tesi?
     a: La regola 3-2-1 (3 copie, 2 supporti, 1 fuori sede) protegge dalla perdita catastrofica del disco. Ma il dolore di una tesi non è "file persi" — è **non riuscire a identificare la versione giusta**. Hai sette file thesis_v* tutti con backup, e ancora non sai quale sia "il paragrafo della scorsa settimana" che il relatore vuole. Il 3-2-1 protegge l'esistenza, non l'identificabilità.
   - q: Quali sono i 4 passi del controllo versione per una tesi magistrale?
-    a: Passo 1 — salva una copia datata a fine giornata (es. tesi-0423.docx). Passo 2 — conserva una copia separata etichettata "consegnata-al-relatore" per ogni invio. Passo 3 — adotta uno strumento come Keeply che versiona automaticamente ogni salvataggio con note ("3.2 riscritto") così mesi dopo la timeline mostra la diff. Passo 4 — almeno una copia non su questo portatile (cloud, disco esterno o chiavetta).
+    a: Passo 1 — salva una copia datata a fine giornata (es. tesi-0423.docx). Passo 2 — conserva una copia separata etichettata "consegnata-al-relatore" per ogni invio. Passo 3 — adotta uno strumento come Keeply che conserva le versioni che salvi (manualmente con una nota tipo "3.2 riscritto", o tramite il salvataggio automatico opzionale ogni 15-30 min) così mesi dopo la timeline mostra la diff. Passo 4 — almeno una copia non su questo portatile (cloud, disco esterno o chiavetta).
   - q: Quando non serve questo livello aggiuntivo?
     a: Tre casi. (1) La tesi dura meno di tre mesi e il relatore non torna mai sulle bozze precedenti. (2) Hai già una routine rigida di naming quotidiano più un piano cloud a pagamento con conservazione oltre 180 giorni, mantenuto per due anni senza scivoloni. (3) La tua università impone un LMS con tracking versioni completo. Fuori da questi casi, la maggior parte degli studenti incontra al secondo anno il momento "il relatore chiede v5, io ho solo v7".
 howto_schema:
-  name: 碩士論文版本管理 4 步實戰
+  name: Controllo versioni tesi magistrale in 4 passi
   totalTime: P2Y
   steps:
-    - name: 每日收工存日期檔
-      text: 每天收工前存一份帶日期的檔案（如「論文-0423.docx」），讓每天的版本有獨立記錄，為日後教授問起舊版時提供可查依據。
+    - name: Salva una copia datata a fine giornata
+      text: Prima di staccare ogni giorno, salva una copia datata (es. tesi-0423.docx) così ogni versione giornaliera ha un suo record — qualcosa da mostrare quando in seguito il relatore chiede di una bozza precedente.
       url: '#h2-4'
-    - name: 交教授前獨立留檔
-      text: 每次交給教授前將那一份單獨保留，檔名標記「交教授」（如「論文-0423-交教授.docx」），這是教授最常回頭問「上一版那段」時最需要的版本。
+    - name: Conserva una copia separata prima di ogni consegna
+      text: Ogni volta che consegni il file al relatore, tieni quella copia a parte, etichettata consegnata-al-relatore (es. tesi-0423-relatore.docx) — la versione che ti serve più spesso quando torna su quel paragrafo della volta prima.
       url: '#h2-4'
-    - name: 工具自動記錄每版差異
-      text: 導入 Keeply 讓每次存檔自動留版，開啟差異視圖直接看 v5 與 v6 改了哪些字，不用手動翻找，教授問起兩下就打得開。
+    - name: Lascia che uno strumento registri la diff di ogni versione
+      text: Adotta uno strumento come Keeply così le versioni che salvi vengono conservate automaticamente; apri la vista delle differenze per vedere esattamente quali parole sono cambiate tra v5 e v6 — niente ricerche manuali, pronta in due clic quando il relatore chiede.
       url: '#h2-4'
-    - name: 至少一份不在這台筆電
-      text: 雲端、外接硬碟或隨身碟擇一，確保至少一份論文不在這台電腦上，防止筆電遺失、SSD 損毀或意外潑水導致兩年心血全部消失。
+    - name: Tieni almeno una copia fuori da questo portatile
+      text: Scegli tra cloud, disco esterno o chiavetta USB così almeno una copia della tesi non è su questo computer — protezione contro un portatile perso, un SSD morto o un liquido versato che cancellano due anni di lavoro.
       url: '#h2-4'
 ---
 
@@ -112,7 +112,7 @@ Mettili in fila e si vede che ognuno copre un livello completamente diverso:
 | Cronologia versioni Word / Google Docs | Chi ha cambiato quale frase oggi | Differenze tra date e file diversi | A metà |
 | Rinomina manuale `v1 v2 v3` | Mantiene la forma delle versioni separate | Cosa significava ogni versione | Un terzo |
 | Backup 3-2-1 fuori sede | Dati non spariscono tutti in una volta | Quale versione vuoi recuperare | Non si applica |
-| Versioning automatico a livello strumento ([Keeply](https://keeply.work)) | Ogni salvataggio registrato automaticamente, confronto differenze tra date | Guasto fisico dell'intero disco (da abbinare al backup) | Sì |
+| Versioning a livello strumento ([Keeply](https://keeply.work)) | Le versioni che salvi conservate automaticamente, confronto differenze tra date | Guasto fisico dell'intero disco (da abbinare al backup) | Sì |
 
 Ogni strumento ha il suo contesto giusto. Il problema è che la tesi è una battaglia che **contemporaneamente** richiede il livello della "memoria della differenza" — e nessuno degli strumenti tradizionali è progettato specificamente per quel livello.
 
@@ -148,7 +148,7 @@ Le cose da fare non sono molte. Quattro:
 
 **2. Ogni volta che mandi il file al relatore, metti da parte quella copia.** Nome file `tesi-0423-per-relatore.docx`. È la copia che il relatore chiederà più spesso quando dice "la tua versione precedente di quella parte".
 
-**3. Lascia che lo strumento ricordi ogni versione.** Esattamente dove i passi 1 e 2 cadono, e dove lo strumento subentra. [Keeply](https://keeply.work) è costruito per questo. A ogni salvataggio, il sistema tiene silenziosamente una versione. I file restano nella tua cartella attuale — niente migrazione, niente cambio di strumento. La **vista delle differenze** ti permette di vedere parola per parola cosa è cambiato tra v5 e v6. Quando il relatore chiede, lo apri in due clic.
+**3. Lascia che lo strumento conservi le tue versioni.** Esattamente dove i passi 1 e 2 cadono, e dove lo strumento subentra. [Keeply](https://keeply.work) è costruito per questo. Le versioni che salvi vengono conservate silenziosamente in background — oppure attivi il salvataggio automatico opzionale e cattura le tue modifiche ogni 15-30 min. I file restano nella tua cartella attuale — niente migrazione, niente cambio di strumento. La **vista delle differenze** ti permette di vedere parola per parola cosa è cambiato tra v5 e v6. Quando il relatore chiede, lo apri in due clic.
 
 Apri il pannello cronologia versioni su `thesis_v3.docx` e vedi quattro mesi di modifiche, un giro di feedback del relatore dopo l'altro, impilati in ordine:
 

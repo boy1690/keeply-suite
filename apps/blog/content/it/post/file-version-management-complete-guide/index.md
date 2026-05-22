@@ -12,16 +12,16 @@ og_image: cover.png
 cta_topic: versioning
 image_alt_data: "Vista cartella con 7 file da proposal.docx a proposal_REALLY_final.docx — illustra i 4 motivi strutturali per cui ogni utente di cartelle condivise inventa un proprio schema di naming anziché affidarsi a strumenti progettati per questo"
 faq_schema:
-  - q: 為什麼共用資料夾裡找不到「上一版」按鈕？
-    a: 雲端硬碟設計目標是讓多台電腦看到同一份最新檔案，「保留所有舊版」與「最新版同步」會打架，所以工具選了同步。版本歷史被藏在三層選單之外，或根本不存在，因為這從來不是這類工具的核心設計目標。
-  - q: Dropbox 的 30 天版本歷史限制是技術做不到還是商業決定？
-    a: 純粹是商業決定。macOS Time Machine 2007 年就示範了完整的本機版本歷史，技術早已成熟。Dropbox 把版本歷史設計為升級付費的差異化功能，30 天是商業設計，不是技術上限。
-  - q: 版本歷史只告訴你「何時」修改，為什麼看不到「為何」修改？
-    a: 現有版本歷史介面只顯示日期加使用者，不顯示改動的意圖。設計師改了圖層透明度、律師改了一個字的含義、研究生把謹慎改成武斷，版本歷史只記錄「有修改」，不記錄那次改動代表什麼。
-  - q: 為什麼命名規則 PDF 通常 6 個月後就沒人遵守？
-    a: 命名規則把版本管理的責任推給人類紀律。每個成員每次存檔都必須記得、願意且有時間照規則命名。任何一條失敗就崩潰。趕件壓力下人腦只會本能輸入 FINAL，機制問題被包裝成紀律問題。
-  - q: 什麼時候 Keeply 不是版本管理的正確答案？
-    a: 四種場景 Keeply 不適合：即時協作會議筆記用 Notion 或 Google Docs；50GB 以上影片素材用 Frame.io；對外法務簽核用 DocuSign；以及大企業 IT 管控需求。Keeply 適合個人到小團隊的長期知識工作版本記憶。
+  - q: Perché nelle cartelle condivise non trovo un pulsante «versione precedente»?
+    a: "L'obiettivo di progettazione dei dischi cloud è far vedere a più computer lo stesso file più recente; «conservare tutte le vecchie versioni» e «sincronizzare l'ultima versione» entrano in conflitto, così lo strumento sceglie la sincronizzazione. La cronologia versioni è nascosta dietro tre livelli di menu, o semplicemente non esiste, perché non è mai stato l'obiettivo di progettazione centrale di questo tipo di strumenti."
+  - q: Il limite di 30 giorni della cronologia versioni di Dropbox è un limite tecnico o una decisione commerciale?
+    a: "È puramente una decisione commerciale. macOS Time Machine ha dimostrato già nel 2007 una cronologia versioni locale completa, la tecnologia è matura da tempo. Dropbox ha progettato la cronologia versioni come funzione differenziante a pagamento; i 30 giorni sono una scelta commerciale, non un tetto tecnico."
+  - q: La cronologia versioni ti dice solo «quando» hai modificato — perché non vedi «perché» hai modificato?
+    a: "Le interfacce di cronologia versioni esistenti mostrano solo data più utente, non l'intenzione della modifica. Un designer cambia l'opacità di un livello, un avvocato cambia il significato di una parola, un dottorando trasforma la cautela in assertività: la cronologia versioni registra solo «c'è stata una modifica», non cosa rappresentava quella modifica."
+  - q: Perché i PDF con le regole di denominazione di solito non li segue più nessuno dopo 6 mesi?
+    a: "Le regole di denominazione scaricano la responsabilità della gestione versioni sulla disciplina umana. Ogni membro, a ogni salvataggio, deve ricordare, essere disposto e avere il tempo di nominare secondo la regola. Basta che una sola condizione fallisca e crolla tutto. Sotto la pressione delle scadenze il cervello digita d'istinto FINALE, e un problema di meccanismo viene travestito da problema di disciplina."
+  - q: Quando Keeply non è la risposta giusta per la gestione delle versioni?
+    a: "Quattro scenari in cui Keeply non è adatto: note di riunione collaborative in tempo reale — meglio Notion o Google Docs; materiale video oltre i 50GB — meglio Frame.io; firma legale verso l'esterno — meglio DocuSign; e i requisiti di controllo IT delle grandi aziende. Keeply è adatto alla memoria delle versioni nel lavoro di conoscenza a lungo termine, dal singolo ai piccoli team."
 ---
 
 > Non è colpa tua se non sei abbastanza disciplinato. Il tuo strumento non è stato progettato per questo.
@@ -172,7 +172,7 @@ Ci sono quattro scenari in cui Keeply non è la risposta: appunti di riunione co
 Abbiamo costruito Keeply per colmare queste 4 lacune strutturali. Ma ci sono scenari **in cui Keeply non è la risposta**:
 
 - **Note di riunione in collaborazione in tempo reale** → usa Notion / Google Docs. Keeply è memoria versioni a lungo termine per individui e piccoli team, non uno strumento di collaborazione in tempo reale.
-- **Filmati video da 50GB+** → usa Frame.io / PostHaste. La logica di versioning di Keeply (registra le differenze ad ogni salvataggio) non scala economicamente per i file binari di grandi dimensioni.
+- **Filmati video da 50GB+** → usa Frame.io / PostHaste. La logica di versioning di Keeply (registra le differenze delle versioni che salvi) non scala economicamente per i file binari di grandi dimensioni.
 - **Firma legale cross-organizzativa** → usa DocuSign / Adobe Sign. Se un contratto va a 10 studi legali esterni, Keeply non rientra in quel framework di conformità.
 
 Per l'altro 80% degli scenari dei lavoratori della conoscenza — **designer, paralegali all'interno di studi legali, commercialisti, dottorandi, team di PM, freelance** — quelle 4 lacune strutturali ti colpiranno ogni giorno. Quelle 4 lacune sono ciò che Keeply è costruito per chiudere.

@@ -21,30 +21,30 @@ faq_schema:
   - q: macOS mostra "impossibile verificare lo sviluppatore" — cosa faccio?
     a: macOS mostra questo messaggio al primo avvio di qualsiasi app non pubblicata sull'App Store. È la protezione standard di Gatekeeper, non un problema di Keeply. Dopo aver trascinato Keeply nella cartella Applicazioni, **fai clic destro su Keeply e scegli "Apri"** (non doppio clic). Premi "Apri" anche nella finestra di conferma; da quel momento il doppio clic funziona normalmente.
   - q: Cosa devo fare subito dopo l'installazione?
-    a: Apri Keeply, clicca "Nuovo progetto" e trascina dentro una cartella su cui **stai lavorando ora e che non vuoi perdere**. La scansione iniziale richiede 1-2 minuti per costruire una base di riferimento, poi Keeply registra ogni salvataggio in background mentre lavori normalmente.
+    a: Apri Keeply, clicca "Nuovo progetto" e trascina dentro una cartella su cui **stai lavorando ora e che non vuoi perdere**. La scansione iniziale richiede 1-2 minuti per costruire una base di riferimento, poi salvi una versione quando conta (un click / Cmd+S in Keeply); oppure attivi il salvataggio automatico e Keeply cattura le modifiche ogni 15-30 min in background.
   - q: Quali sono gli errori più comuni durante l'installazione?
     a: Tre frequenti. (1) `winget` non trovato — versioni vecchie di Windows 10 non lo includono; aggiorna "App Installer" dal Microsoft Store. (2) Il .dmg appare "danneggiato" — è un falso positivo di macOS; riscarica e apri con clic destro. (3) La prima scansione è lenta — cartelle oltre i 10 GB richiedono circa 5 minuti la prima volta, ma il tracking dei salvataggi successivi è in tempo reale.
 howto_schema:
-  name: Keeply Windows / macOS 安裝教學
+  name: Guida all'installazione di Keeply su Windows / macOS
   totalTime: PT10M
   steps:
-    - name: 了解藍屏原因
-      text: SmartScreen 藍屏不代表軟體有問題，是判斷新軟體下載量是否累積足夠信譽。Keeply 已被 Microsoft winget 官方審查收錄，走 winget 路徑就不會出現藍屏。
+    - name: Capire perché compare la schermata blu
+      text: La schermata blu di SmartScreen non significa che il software abbia un problema; valuta se un nuovo software ha accumulato abbastanza reputazione di download. Keeply è già stato esaminato e incluso ufficialmente in Microsoft winget, quindi usando il percorso winget non comparirà alcuna schermata blu.
       url: '#why-smartscreen'
-    - name: 選擇安裝路徑
-      text: 三條路擇一：Windows 推薦用 winget 指令；不想開 PowerShell 可下載 .exe；macOS 下載 .dmg。
+    - name: Scegliere il percorso di installazione
+      text: Scegli una delle tre vie — su Windows è consigliato il comando winget; se non vuoi aprire PowerShell puoi scaricare il .exe; su macOS scarica il .dmg.
       url: '#three-paths'
-    - name: Windows winget 安裝
-      text: 開啟 PowerShell，貼入 `winget install Boy1690.Keeply` 並按 Enter，約 30 秒完成，全程不出現 SmartScreen 警告。
+    - name: Installazione Windows con winget
+      text: Apri PowerShell, incolla `winget install Boy1690.Keeply` e premi Invio; finisce in circa 30 secondi, senza alcun avviso SmartScreen lungo il percorso.
       url: '#path-winget'
-    - name: Windows .exe 安裝
-      text: 下載 .exe 後雙擊，SmartScreen 跳出時點左下角「其他資訊」小字，再點「仍要執行」，安裝精靈接手完成安裝。
+    - name: Installazione Windows con .exe
+      text: Dopo aver scaricato il .exe fai doppio clic; quando appare SmartScreen clicca la piccola scritta "Ulteriori informazioni" in basso a sinistra, poi "Esegui comunque", e la procedura guidata completa l'installazione.
       url: '#path-exe'
-    - name: macOS .dmg 安裝
-      text: 下載 .dmg 並將 Keeply 拖入應用程式資料夾，首次開啟必須右鍵選「打開」而非雙擊，確認對話框點「打開」。
+    - name: Installazione macOS con .dmg
+      text: Scarica il .dmg e trascina Keeply nella cartella Applicazioni; al primo avvio devi fare clic destro e scegliere "Apri" anziché doppio clic, e premere "Apri" nella finestra di conferma.
       url: '#path-macos'
-    - name: 新增第一個專案
-      text: 開啟 Keeply 點「新增專案」，選一個目前正在進行、不想搞丟的資料夾，初次掃描約 1-2 分鐘，之後自動在背景記錄版本歷史。
+    - name: Aggiungere il primo progetto
+      text: Apri Keeply, clicca "Nuovo progetto" e scegli una cartella su cui stai lavorando ora e che non vuoi perdere; la prima scansione richiede circa 1-2 minuti, poi salvi una versione quando conta oppure attivi il salvataggio automatico opzionale che cattura le modifiche in background a intervalli.
       url: '#first-project'
 ---
 

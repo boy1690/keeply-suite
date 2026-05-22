@@ -15,16 +15,16 @@ role: cluster
 pillar_parent: file-version-management-complete-guide
 image_alt_data: "Terminale con comandi git commit, git push, git checkout HEAD~3 sotto il titolo 'Questo è quello che hai ottenuto' — 4 requisiti dei non-sviluppatori che git non soddisfa: UI a livello file, nessuna CLI, supporto binario, ripristino intuitivo"
 faq_schema:
-  - q: 為什麼搜「版本管理軟體」結果都是 git？
-    a: 因為 git 統治了開發者市場 20 年，相關討論、教學、SaaS 工具全部圍繞 git 設計。非開發者用同樣關鍵字搜尋會撞到一片開發者話語，找不到適合自己的選項。這是搜尋結果的偏誤，不是市場上真的只有 git。
-  - q: 非開發者需要的版本管理工具有哪 4 個設計要件？
-    a: 4 個關鍵：檔案層介面（按檔案不按 repo）、免命令列（GUI 為主）、二進位支援（Word/Excel/PSD 不只純文字）、直覺還原（不用學 checkout 概念）。git 在這 4 點都不滿足非開發者需求。
-  - q: 把 git 機制藏在 UI 後面為什麼是關鍵？
-    a: 因為 git 核心引擎（不可變物件、SHA hash、tree structure）技術上是好的，但暴露給非開發者的概念（branch、merge conflict、HEAD~3）不需要被使用者看見。隱藏這些概念但保留底層功能，是非開發者工具的核心設計。
-  - q: 非開發者有哪 3 個版本管理工具可以選？
-    a: 三選一：macOS Time Machine（限 Mac、只能還原整顆磁碟到時間點）；Dropbox 版本歷史（限 30 天保留期、需雲端訂閱）；Keeply（跨平台、本機優先、無時間限制、UI 隱藏 git 概念）。
-  - q: Keeply 不適合哪些使用情境？
-    a: 真正的開發者需要 CLI 存取或想看 git 圖表的人——Keeply UI 故意藏太多，不適合；以及需要分散式團隊合作整合 GitHub Actions 等開發流程的場景。Keeply 為非開發者設計，不取代開發者工具。
+  - q: Perché cercando «software di controllo versione» escono solo risultati su git?
+    a: "Perché git domina il mercato degli sviluppatori da 20 anni: discussioni, tutorial e strumenti SaaS sono tutti progettati attorno a git. Un non-sviluppatore che cerca con le stesse parole chiave si scontra con un muro di linguaggio da sviluppatori e non trova un'opzione adatta a sé. È un bias dei risultati di ricerca, non il fatto che sul mercato esista davvero solo git."
+  - q: Quali sono i 4 requisiti di design dello strumento di controllo versione di cui ha bisogno un non-sviluppatore?
+    a: "Quattro punti chiave: interfaccia a livello di file (per file, non per repository); senza riga di comando (principalmente GUI); supporto ai binari (Word/Excel/PSD, non solo testo puro); ripristino intuitivo (senza dover imparare il concetto di checkout). Git non soddisfa nessuno di questi quattro bisogni del non-sviluppatore."
+  - q: Perché nascondere il meccanismo di git dietro l'interfaccia è la chiave?
+    a: "Perché il motore di base di git (oggetti immutabili, hash SHA, struttura ad albero) è tecnicamente valido, ma i concetti esposti al non-sviluppatore (branch, merge conflict, HEAD~3) non hanno bisogno di essere visti dall'utente. Nascondere questi concetti mantenendo la funzionalità sottostante è il design centrale di uno strumento per non-sviluppatori."
+  - q: Quali 3 strumenti di controllo versione può scegliere un non-sviluppatore?
+    a: "Uno tra tre: macOS Time Machine (solo Mac, ripristina solo l'intero disco a un punto nel tempo); cronologia versioni di Dropbox (limite di retention di 30 giorni, richiede un abbonamento cloud); Keeply (multipiattaforma, locale prima di tutto, nessun limite di tempo, interfaccia che nasconde i concetti di git)."
+  - q: In quali scenari Keeply non è adatto?
+    a: "Per i veri sviluppatori che hanno bisogno dell'accesso da CLI o vogliono vedere i grafici di git — l'interfaccia di Keeply nasconde di proposito troppo, non è adatta; e per gli scenari che richiedono collaborazione di team distribuiti integrata con flussi di sviluppo come GitHub Actions. Keeply è progettato per i non-sviluppatori, non sostituisce gli strumenti per sviluppatori."
 ---
 
 Hai cercato "software di controllo versione." Cosa è uscito: tutorial git, svn, Mercurial. Comandi CLI, schermate terminali, commit/push/merge. Cinque minuti di lettura, poi molli. Non sei uno sviluppatore, sei un designer, un amministrativo, un freelance. Volevi solo un software di controllo versione con un'interfaccia dove puoi vedere il file.
@@ -90,7 +90,7 @@ Versioni preservate automaticamente fino a 30 giorni, ripristino via click destr
 
 ### Opzione C: Keeply
 
-Costruito per non-sviluppatori dal primo giorno: ogni salvataggio mantenuto automaticamente come versione, cronologia versioni mostrata come "data + cosa è cambiato", zero terminologia ingegneristica nell'UI. **Pros**: UI a livello file, niente CLI, file grandi gestiti, niente limite di tempo, puoi congelare una versione come "Release" così i salvataggi successivi non possono sovrascriverla. **Cons**: desktop-first (più debole su mobile), sync istantaneo non è il suo forte, non per editing multi-persona in tempo reale. **Adatto a**: designer, dottorandi, freelance, piccoli team, esigenze di versioning a lungo termine, lavoro con molti file di design.
+Costruito per non-sviluppatori dal primo giorno: le versioni che salvi conservate automaticamente (manualmente con una nota, o tramite il salvataggio automatico opzionale a intervalli), cronologia versioni mostrata come "data + cosa è cambiato", zero terminologia ingegneristica nell'UI. **Pros**: UI a livello file, niente CLI, file grandi gestiti, niente limite di tempo, puoi congelare una versione come "Release" così i salvataggi successivi non possono sovrascriverla. **Cons**: desktop-first (più debole su mobile), sync istantaneo non è il suo forte, non per editing multi-persona in tempo reale. **Adatto a**: designer, dottorandi, freelance, piccoli team, esigenze di versioning a lungo termine, lavoro con molti file di design.
 
 Scegli per use case: (1) solo recupero ad-hoc → Time Machine, (2) collab team entro 30 giorni → Dropbox, (3) lungo termine + individuale + file design → Keeply.
 

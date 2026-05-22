@@ -16,16 +16,16 @@ role: cluster
 pillar_parent: file-version-management-complete-guide
 image_alt_data: "Timeline di monthly_close.xlsx salvato alle 17:15, 17:30 e 17:47 — il salvataggio delle 17:47 sovrascrive con dati corrotti; la versione delle 17:30 è irrecuperabile perché AutoSave richiede OneDrive/SharePoint e 4 condizioni simultanee"
 faq_schema:
-  - q: Excel 版本歷史按鈕為什麼會變灰無法使用？
-    a: 「版本歷史」按鈕需要同時滿足 4 個條件才能運作：檔案存 OneDrive 或 SharePoint、AutoSave 已開啟、商業版授權、在桌面版而非網頁版。任一條件不符按鈕就變灰，而多數工作模式 4 個條件一個都不符。
-  - q: Microsoft AutoSave 有哪些沒說清楚的限制？
-    a: 有 4 個繞不過的限制：桌面 AutoSave 只能回 1-2 版；OneDrive 版本歷史 30 天過期；本機檔案完全沒有版本記錄；以及不支援儲存格層級的比對。這些都是 Microsoft 刻意的工程選擇，不是技術做不到。
-  - q: 為什麼 Microsoft 把 Excel 版本歷史設計成這樣？
-    a: 因為完整版本歷史是 OneDrive 訂閱的差異化功能。若桌面 Excel 自帶完整本機紀錄，OneDrive 少一個綁定理由。版本歷史對使用者是安全網，對 Microsoft 是訂閱上鉤誘餌，兩個角色決定了功能的實際行為。
-  - q: 有哪些工具設計能真正解決 Excel 版本歷史不足的問題？
-    a: 三種設計：每次 Cmd+S 自動快照不依賴雲端（如 Keeply，無時間限制）；自動里程碑讓月底或季度凍結點永遠保留；版本內容搜尋讓你從歷史版本中找到特定數值最後出現的時間點。
-  - q: Keeply 可以完全取代 Excel 的版本歷史功能嗎？
-    a: 不能完全取代。Keeply 顯示「整檔 v3 到 v4 的差異」，不支援儲存格層級比對；也不修正 formula 邏輯錯誤；不適合多人即時協作場景。但對本機存檔、長期保留、快速還原這三個核心需求，Keeply 能補足 Excel 的限制。
+  - q: Perché il pulsante della cronologia versioni di Excel è disattivato?
+    a: "Il pulsante \"Cronologia versioni\" funziona solo quando 4 condizioni sono soddisfatte insieme: il file è su OneDrive o SharePoint, AutoSave è attivo, hai una licenza business e sei sull'app desktop (non quella web). Se ne manca anche una sola il pulsante si disattiva — e la maggior parte dei modi di lavorare le manca tutte e quattro."
+  - q: Quali limiti di Microsoft AutoSave non vengono spiegati?
+    a: "Quattro a cui non si scappa: AutoSave desktop torna indietro solo di 1-2 versioni; la cronologia versioni di OneDrive scade dopo 30 giorni; i file locali non hanno alcun record di versione; e non c'è confronto a livello di cella. Sono scelte di progettazione deliberate di Microsoft, non limiti tecnici."
+  - q: Perché Microsoft ha progettato così la cronologia versioni di Excel?
+    a: "Perché la cronologia versioni completa è un elemento differenziante dell'abbonamento OneDrive. Se Excel desktop offrisse un record locale completo, OneDrive perderebbe un motivo per legarti a sé. La cronologia versioni è una rete di sicurezza per l'utente e un'esca per l'abbonamento per Microsoft — questi due ruoli decidono come si comporta davvero la funzione."
+  - q: Quali design di strumenti risolvono davvero il vuoto della cronologia versioni di Excel?
+    a: "Tre design: snapshot locali che non dipendono dal cloud (come Keeply — conserva le versioni che salvi, manualmente con una nota o tramite il salvataggio automatico opzionale ogni 15-30 min, senza limite di tempo); milestone automatiche che mantengono per sempre i punti di blocco di fine mese o trimestre; e ricerca nei contenuti delle versioni, così trovi l'ultima volta che un valore specifico è comparso nella tua cronologia."
+  - q: Keeply può sostituire del tutto la cronologia versioni di Excel?
+    a: "Non del tutto. Keeply mostra \"diff dell'intero file da v3 a v4\", non il confronto a livello di cella; non corregge errori di logica nelle formule; e non è pensato per la collaborazione multi-persona in tempo reale. Ma per i salvataggi locali, la conservazione a lungo termine e il ripristino rapido — questi tre bisogni fondamentali — Keeply colma le lacune di Excel."
 ---
 
 Venerdì pomeriggio, le 17:47. Stai lavorando alla chiusura di fine mese in Excel. Hai appena cancellato una formula per provarne un'altra, ed era sbagliata. Cmd+Z arriva al limite undo, non torna indietro. Apri File > Informazioni > Cronologia versioni. In grigio. Poi ti ricordi: questo foglio è sul desktop, non su OneDrive. Trenta minuti di lavoro sulle formule, persi.
@@ -75,9 +75,9 @@ Sì, ecco la parte fastidiosa. Quello che stai sbattendo non è un bug, è un pa
 
 Tre pattern di design che lo strumento può usare. Ognuno risolve alcuni dei quattro limiti sopra.
 
-### Design A: Snapshot automatici a ogni Cmd+S (no dipendenza cloud)
+### Design A: Snapshot automatici delle versioni, senza dipendenza dal cloud
 
-Lo strumento conserva la versione precedente ogni volta che premi Cmd+S, indipendentemente da dove vive il file. **Esempi**: macOS Time Machine (livello sistema, disco intero), Keeply (livello file, limitato alla cartella di lavoro che indichi). **La differenza di Keeply**: ogni versione preservata per intero senza limiti di tempo, a differenza della finestra di 30 giorni di OneDrive. **Risolve i limiti #1 + #2 + #3.**
+Lo strumento conserva le versioni che salvi — manualmente con una nota, o tramite il salvataggio automatico opzionale a intervalli — indipendentemente da dove vive il file. **Esempi**: macOS Time Machine (livello sistema, disco intero), Keeply (livello file, limitato alla cartella di lavoro che indichi). **La differenza di Keeply**: ogni versione preservata per intero senza limiti di tempo, a differenza della finestra di 30 giorni di OneDrive. **Risolve i limiti #1 + #2 + #3.**
 
 ### Design B: Milestone automatici (congelamento fine mese / fine trimestre)
 

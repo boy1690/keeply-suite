@@ -25,26 +25,26 @@ faq_schema:
   - q: Perché la cartella di progetto finisce sempre piena di _FINAL_v7 e _really_final_v9?
     a: Perché la rinominazione manuale non ha regole vincolanti e ognuno definisce "final" a modo suo. I progettisti, per paura di perdere le vecchie versioni, accumulano suffissi. La soluzione vera è affidare il tracciamento delle versioni a uno strumento, non costringere tutti a ricordare una convenzione di naming.
   - q: In cosa consistono i 4 passi della gestione delle versioni delle tavole AutoCAD?
-    a: Passo 1 — quando una nuova revisione arriva in ufficio, avvisa il cantiere e pretendi una conferma "ricevuto". Passo 2 — conserva la vecchia versione prima di sovrascrivere. Passo 3 — adotta uno strumento come Keeply che registra ogni salvataggio con note. Passo 4 — mantieni almeno un backup fuori dal NAS in caso di guasto del server.
+    a: Passo 1 — quando una nuova revisione arriva in ufficio, avvisa il cantiere e pretendi una conferma "ricevuto". Passo 2 — conserva la vecchia versione prima di sovrascrivere. Passo 3 — adotta uno strumento come Keeply che registra con note le versioni che salvi (manualmente, o tramite il salvataggio automatico opzionale). Passo 4 — mantieni almeno un backup fuori dal NAS in caso di guasto del server.
   - q: Cosa faccio se il progettista torna a una versione della settimana scorsa?
     a: 'Capita spesso in edilizia — il committente dice "il dettaglio del bordo era più pulito in rev 2, tornaci". Se la vecchia versione non era stata salvata e il cantiere ha già tracciato, sono guai. Keeply conserva automaticamente ogni versione salvata con note, quindi puoi riportare il progetto a "prima del ritorno a rev 2" con due click.'
   - q: Tutti gli operai in cantiere devono installare Keeply?
     a: No. Keeply gira sulla macchina d'ufficio e tiene la cronologia delle versioni. Il cantiere può verificare dalle stampe o dal dispositivo del PM di cantiere. Keeply risolve il passaggio di consegne ufficio-cantiere, non serve che ogni capocantiere guardi una timeline sul telefono.
 howto_schema:
-  name: 圖檔版本管理 4 步：辦公室與現場對齊
+  name: Controllo versioni disegni in 4 passi — ufficio e cantiere allineati
   totalTime: PT2H
   steps:
-    - name: 新版進辦公室即通知現場
-      text: 新版一進辦公室當下通知現場人員，並要求對方明確回覆「收到」才算完成交接，不能只存好就算。
+    - name: Avvisa il cantiere appena una nuova revisione arriva in ufficio
+      text: Nell'istante in cui una nuova revisione arriva in ufficio, avvisa il cantiere e pretendi una chiara conferma "ricevuto" prima che il passaggio sia completo — salvare il file da solo non basta.
       url: '#h2-4'
-    - name: 新版覆蓋舊版前先留檔
-      text: 每次新版覆蓋舊版之前，將舊版獨立保存並於檔名中標記版次，以備設計回頭改回舊版時有據可查。
+    - name: Conserva la vecchia versione prima che venga sovrascritta
+      text: Prima che ogni nuova revisione sovrascriva la precedente, salva la vecchia versione separatamente e segna il numero di revisione nel nome del file, così resta una traccia se più tardi il progetto torna a un layout precedente.
       url: '#h2-4'
-    - name: 工具自動記錄版本供全員查看
-      text: 導入 Keeply 等版本管理工具，讓每次存檔自動記錄一版，所有人開啟同一保管庫即可看到同一條版本時間線。
+    - name: Lascia che uno strumento registri le versioni visibili a tutti
+      text: Adotta uno strumento di versioning come Keeply così le versioni che salvi vengono registrate automaticamente; tutti aprono lo stesso archivio e vedono un'unica linea temporale delle versioni condivisa.
       url: '#h2-4'
-    - name: 保留一份異地備份
-      text: 確保至少一份檔案不在辦公室或工地 NAS，存放於外接硬碟、雲端或備份槽，防止公司 NAS 損毀時無從復原。
+    - name: Tieni una copia di backup fuori sede
+      text: Assicurati che almeno una copia stia fuori dal NAS dell'ufficio o del cantiere — su un disco esterno, nel cloud o in un archivio di backup — così un guasto del NAS non ti lascia senza nulla da cui ripristinare.
       url: '#h2-4'
 ---
 
@@ -126,7 +126,7 @@ Non c'è molto da fare. Quattro passaggi. Prima di costruire Keeply ho visto lo 
 
 **2. Prima che una nuova revisione sovrascriva la precedente, conserva la precedente separatamente.** Chiamala `A-05_drain_0418_architect_rev3.dwg`, `A-05_drain_0422_architect_rev4.dwg`. Questo è **per quando l'architetto torna indietro**. Puoi ancora tirare fuori esattamente com'era la rev 3.
 
-**3. Lascia che lo strumento registri ogni revisione automaticamente, e rendila visibile a tutti.** Qui gli strumenti subentrano nelle parti che la disciplina non riesce a sostenere. [Keeply](https://keeply.work) è costruito esattamente per questo. Ogni salvataggio registra automaticamente una versione. I file restano dove sono. Nella tua cartella di progetto, proprio dove la tua squadra già guarda. **Finché tutti aprono lo stesso archivio condiviso (di solito il NAS aziendale), tutti vedono la stessa cronologia**. Nel momento in cui l'ufficio carica un nuovo file, il capocantiere apre Keeply in cantiere e la cronologia mostra "oggi alle 15:30, l'architetto ha rivisto di nuovo." Nota onesta: se devi confrontare due disegni `.dwg` riga per riga, devi comunque aprire AutoCAD e farlo da solo. Keeply non fa il confronto tra disegni CAD. Ma "è arrivata una nuova versione, chi l'ha mandata, quando, e l'hai aperta?". Questo smetti di perderlo. Il PM chiede "Hai visto la rev di giovedì scorso?" e la cronologia risponde.
+**3. Lascia che lo strumento registri ogni revisione automaticamente, e rendila visibile a tutti.** Qui gli strumenti subentrano nelle parti che la disciplina non riesce a sostenere. [Keeply](https://keeply.work) è costruito esattamente per questo. Le versioni che salvi vengono registrate automaticamente — oppure attivi il salvataggio automatico opzionale e cattura le modifiche a intervalli. I file restano dove sono. Nella tua cartella di progetto, proprio dove la tua squadra già guarda. **Finché tutti aprono lo stesso archivio condiviso (di solito il NAS aziendale), tutti vedono la stessa cronologia**. Nel momento in cui l'ufficio carica un nuovo file, il capocantiere apre Keeply in cantiere e la cronologia mostra "oggi alle 15:30, l'architetto ha rivisto di nuovo." Nota onesta: se devi confrontare due disegni `.dwg` riga per riga, devi comunque aprire AutoCAD e farlo da solo. Keeply non fa il confronto tra disegni CAD. Ma "è arrivata una nuova versione, chi l'ha mandata, quando, e l'hai aperta?". Questo smetti di perderlo. Il PM chiede "Hai visto la rev di giovedì scorso?" e la cronologia risponde.
 
 Ecco grosso modo come si presenta sullo schermo:
 
@@ -182,7 +182,7 @@ Vale la pena dare a ciascuno dei tuoi progetti la sua cronologia?
 
 ---
 
-Ricordi quel momento delle 9:40. Il PM che tira fuori la revisione di giovedì e quel tuffo al petto? Non devi più essere il responsabile delle versioni. **Keeply: la memoria custode dei tuoi file.** Ricorda ogni salvataggio, ogni versione emessa, ogni istantanea prima che la vecchia venga sovrascritta. Vive dentro la tua cartella di progetto esistente. Nessun nuovo strumento, nessuna nuova abitudine per la squadra. L'edilizia ci si adatta particolarmente bene, perché la linea tra ufficio e cantiere si rompe in ogni singolo progetto.
+Ricordi quel momento delle 9:40. Il PM che tira fuori la revisione di giovedì e quel tuffo al petto? Non devi più essere il responsabile delle versioni. **Keeply: la memoria custode dei tuoi file.** Ricorda ogni versione che salvi, ogni versione emessa, ogni istantanea che fai prima che la vecchia venga sovrascritta. Vive dentro la tua cartella di progetto esistente. Nessun nuovo strumento, nessuna nuova abitudine per la squadra. L'edilizia ci si adatta particolarmente bene, perché la linea tra ufficio e cantiere si rompe in ogni singolo progetto.
 
 [Conosci Keeply →](https://keeply.work)
 

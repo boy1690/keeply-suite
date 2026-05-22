@@ -20,14 +20,14 @@ status: approved_master
 cta_topic: versioning
 image_alt_data: "Grafico che segna 83 ore annue bruciate nel rinominare difensivo in cartelle condivise, con la catena Floorplan_v6 → Floorplan_v7_FINAL_DO_NOT_TOUCH e il dato: 4 designer, 1 cartella, 1,6 ore/settimana in difesa"
 faq_schema:
-  - q: 共用資料夾的命名規則為什麼一定會崩潰？
-    a: 命名規則把機制問題包裝成紀律問題。趕件壓力下人腦會本能輸入 FINAL；一個人偷懶存 NEW，整條下游的 reference 鏈連環失效。命名規則靠意志力維持，紀律永遠贏不過自動化機制，這是設計上已知會壞的結果。
-  - q: 共用資料夾的「命名防禦稅」每年要花多少時間？
-    a: 根據 Asana《Anatomy of Work》研究，知識工作者一年花 83 小時在確認最新版、追進度、找對的檔案。真正的成本不是數字，是每次寄出去又回頭確認「剛才是不是寄錯版」的揮之不去的微型恐慌。
-  - q: 共用資料夾自動版本控制如何讓 _v8 從此消失？
-    a: 工具層自動版本讓每次存檔自動留版，資料夾裡只存乾淨的主檔名，不需要加 _v7_FINAL 後綴。需要找舊版時開時間軸即可，3 秒還原，不需要手動備份或在群組發公告通知同事抓最新版。
-  - q: 同步工具如 Dropbox 能解決共用資料夾版本問題嗎？
-    a: 只能解一半。同步工具處理多人即時共用與本機檔案不遺失，但同事覆蓋了你的版本你不會收到通知，且版本歷史通常只保留 30 天。設計檔 .dwg/.psd/.indd 的跨改動版本追蹤仍需要工具層自動版本管理。
+  - q: Perché le regole di denominazione delle cartelle condivise crollano sempre?
+    a: "Le regole di denominazione travestono un problema di meccanismo da problema di disciplina. Sotto la pressione delle scadenze il cervello digita d'istinto FINALE; basta che una persona tagli l'angolo e salvi NEW, e l'intera catena di riferimenti a valle salta a cascata. Le regole di denominazione si reggono sulla forza di volontà, e la disciplina non batte mai un meccanismo automatico — è un fallimento noto fin dalla progettazione."
+  - q: Quante ore l'anno costa la \"tassa difensiva del naming\" delle cartelle condivise?
+    a: "Secondo lo studio Asana《Anatomy of Work》, i knowledge worker passano 83 ore all'anno a confermare l'ultima versione, inseguire l'avanzamento e cercare il file giusto. Il costo vero non è il numero — è il micro-panico persistente di aver mandato qualcosa e tornare a controllare se hai appena inviato la versione sbagliata."
+  - q: Come fa il controllo versioni automatico delle cartelle condivise a far sparire _v8?
+    a: "Il versioning a livello strumento conserva automaticamente le versioni che salvi, così la cartella tiene solo i nomi file principali puliti — niente suffisso _v7_FINALE. Quando ti serve una versione vecchia, apri la timeline e ripristini in 3 secondi; niente backup manuali, nessun annuncio in chat di gruppo per dire ai colleghi di prendere l'ultima."
+  - q: Strumenti di sincronizzazione come Dropbox risolvono i problemi di versione delle cartelle condivise?
+    a: "Solo a metà. Gli strumenti di sincronizzazione gestiscono la condivisione multi-persona in tempo reale e impediscono la perdita dei file locali, ma non ricevi alcuna notifica quando un collega sovrascrive la tua versione, e la cronologia versioni di solito si conserva solo per 30 giorni. Il tracciamento delle versioni tra modifiche per i file di design (.dwg/.psd/.indd) richiede ancora la gestione versioni automatica a livello strumento."
 ---
 
 # 【2026 Gestione file】Gestione versioni dei file in cartelle condivise: non lasciare che _v8 rubi 83 ore l'anno al tuo team
@@ -94,9 +94,9 @@ Metti uno accanto all'altro i metodi che il tuo team sta usando, e vedi che ognu
 | Regole di denominazione rigide (`Data_Progetto_v1_Nome.dwg`) | Mantiene una forma di versioni | Contro la natura umana, qualcuno scivola entro la 4ª settimana | Sì nel breve, no nel lungo |
 | Strumenti di sincronizzazione (Dropbox / OneDrive / Google Drive) | Condivisione in tempo reale, i file non spariscono in locale | Un collega sovrascrive la tua versione, nessuna notifica | A metà |
 | Cronologia Office cloud (Word / Google Docs) | Chi ha cambiato quale frase nei file di testo | File di design (.dwg / .psd / .indd) non supportati | OK per i testi, non per il design |
-| Versionamento automatico a livello strumento ([Keeply](https://keeply.work)) | Ogni salvataggio conservato, chi-quando-cosa è visibile | Guasto fisico dell'intero disco (da abbinare alla [regola di backup 3-2-1](/it/post/3-2-1-backup-rule/)) | Sì |
+| Versionamento automatico a livello strumento ([Keeply](https://keeply.work)) | Le versioni che salvi conservate, chi-quando-cosa è visibile | Guasto fisico dell'intero disco (da abbinare alla [regola di backup 3-2-1](/it/post/3-2-1-backup-rule/)) | Sì |
 
-Ogni strumento ha il suo contesto giusto. Il problema è che la collaborazione di team richiede **contemporaneamente** "ogni salvataggio conservato automaticamente" + "i riferimenti tra file non si rompono", e nessuno strumento tradizionale è progettato specificamente per quel livello.
+Ogni strumento ha il suo contesto giusto. Il problema è che la collaborazione di team richiede **contemporaneamente** "le versioni che salvi, conservate senza archiviazione manuale" + "i riferimenti tra file non si rompono", e nessuno strumento tradizionale è progettato specificamente per quel livello.
 
 - ✅ **Segnale di fiducia**: una settimana dopo aver installato Keeply, la cartella mostra solo `Planimetria.dwg`, `Brand_Brief.psd`, `Budget.xlsx`. Nessun suffisso `_v8_FINALE_davvero_ultimo`. La versione della settimana scorsa è a un clic sulla timeline.
 - ❌ **Punto di fallimento**: dopo una settimana ancora non te la senti di cancellare i file con suffisso `_v6 _v7 _final`. Significa che Keeply non ti ha costruito la fiducia che "lo recuperi". Lo strumento o il flusso non combaciano.

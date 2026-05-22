@@ -29,19 +29,19 @@ faq_schema:
   - q: Il comando undo dell'editor e la cronologia locale dell'IDE non bastano?
     a: Non proprio. L'undo dell'IDE è per file e copre solo la sessione corrente. Quando l'AI tocca 12 file contemporaneamente e hai già cambiato buffer, l'undo si spezza. Keeply fa snapshot dell'intero albero di progetto, quindi non importa quanti file abbia cambiato l'AI — un click ripristina la cartella.
   - q: Come fa Keeply a intercettare il momento dell'overshoot AI?
-    a: Keeply traccia silenziosamente ogni salvataggio nella cartella di progetto che hai aggiunto, quindi ogni pochi minuti c'è un punto ripristinabile. Quando l'agente AI va troppo oltre o un nuovo prompt trascina dentro una dipendenza che non volevi, non serve leggere la diff né ricordare quali file sono cambiati — ripristina all'ultimo punto "ancora in esecuzione" e prosegui le iterazioni.
+    a: Keeply conserva le versioni che salvi nella cartella di progetto che hai aggiunto; attiva il salvataggio automatico e hai un punto ripristinabile ogni 15-30 min. Quando l'agente AI va troppo oltre o un nuovo prompt trascina dentro una dipendenza che non volevi, non serve leggere la diff né ricordare quali file sono cambiati — ripristina all'ultimo punto "ancora in esecuzione" e prosegui le iterazioni.
 howto_schema:
-  name: Vibe Coding 失控時 3 步回退 AI 改動
+  name: 3 passi per tornare indietro quando il vibe coding va fuori controllo
   totalTime: PT30S
   steps:
-    - name: 打開 Keeply 時間軸
-      text: 不要試著看懂 AI 改了哪些檔案，也不用手動 ctrl+Z。直接打開 Keeply 介面，找到目前專案資料夾的時間軸視圖。
+    - name: Apri la timeline di Keeply
+      text: Non cercare di capire quali file ha cambiato l'AI, e non fare Ctrl+Z a mano. Apri direttamente l'interfaccia di Keeply e trova la vista timeline della cartella di progetto attuale.
       url: '#one-action'
-    - name: 找最後一筆「還在跑」的時間點
-      text: 在時間軸上往上滑，找到上一筆你記得程式還能跑的版本（通常是 10-30 分鐘前），通常有星號標示為穩定版本。
+    - name: Trova l'ultimo punto in cui «girava ancora»
+      text: Scorri verso l'alto sulla timeline e trova l'ultima versione in cui ricordi che il programma funzionava ancora (di solito 10-30 minuti prima), spesso contrassegnata con un asterisco come versione stabile.
       url: '#one-action'
-    - name: 右鍵選還原
-      text: 在那一筆版本上右鍵點選「還原到此版本」，Keeply 在 30 秒內把整個專案目錄恢復到該時間點狀態，AI 失控的所有改動同時被撤銷。
+    - name: Clic destro e ripristina
+      text: Su quella versione fai clic destro e scegli «Ripristina a questa versione»; in 30 secondi Keeply riporta l'intera cartella di progetto allo stato di quel momento, e tutte le modifiche fuori controllo dell'AI vengono annullate insieme.
       url: '#one-action'
 ---
 

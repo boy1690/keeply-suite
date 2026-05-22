@@ -27,7 +27,7 @@ faq_schema:
   - q: iCloud Drive conserva la cronologia versioni per file come PSD o Word?
     a: No. iCloud Drive sincronizza l'ultima versione dei file non Apple ma non conserva quelle precedenti. Apple non ha mai pubblicato una politica di retention della cronologia versioni per questi file perché non c'è una politica da pubblicare — solo Eliminati di recente (30 giorni) copre il recupero da eliminazione, non il rollback delle modifiche in loco.
   - q: Keeply sostituisce uno storage cloud come Dropbox?
-    a: No. Keeply è uno strato aggiuntivo sopra la sincronizzazione cloud — conserva ogni salvataggio in locale senza cap di tempo o conteggio. La cloud gestisce sincronizzazione e copia offsite; Keeply gestisce la cronologia versioni. Non migri, aggiungi uno strato.
+    a: No. Keeply è uno strato aggiuntivo sopra la sincronizzazione cloud — conserva in locale le versioni che salvi, senza cap di tempo o conteggio. La cloud gestisce sincronizzazione e copia offsite; Keeply gestisce la cronologia versioni. Non migri, aggiungi uno strato.
 ---
 
 # 【2026 Gestione file】Prima di confrontare iCloud vs Dropbox: tutte e 4 le cloud condividono lo stesso strapiombo di cronologia versioni
@@ -83,18 +83,18 @@ La versione che ti serve non è prezzata nel confronto. La versione che ti serve
 
 ## Lo strato di cronologia versioni che non è una feature cloud
 
-Ecco la riformulazione: non cambi cloud per risolvere questo. La tua cloud va bene per la sincronizzazione. Il pezzo mancante è uno **strato separato** sopra di essa — cronologia versioni a livello di file, senza limite temporale, automatica a ogni salvataggio.
+Ecco la riformulazione: non cambi cloud per risolvere questo. La tua cloud va bene per la sincronizzazione. Il pezzo mancante è uno **strato separato** sopra di essa — cronologia versioni a livello di file, senza limite temporale: le versioni che salvi (manualmente, o tramite il salvataggio automatico opzionale ogni 15-30 min).
 
 Concretamente:
 
 - **Cloud (una qualsiasi delle 4)** gestisce sincronizzazione + copia offsite
-- **Strato di cronologia versioni (Keeply o simile)** gestisce ogni salvataggio, nessun limite di tempo, nessun limite di conteggio, nessuna decisione «Keep forever» al momento del salvataggio
+- **Strato di cronologia versioni (Keeply o simile)** conserva le versioni che salvi (manuali + salvataggio automatico opzionale), nessun limite di tempo, nessun limite di conteggio, nessuna decisione «Keep forever» al momento del salvataggio
 
 Non stai sostituendo Dropbox o iCloud. Stai aggiungendo uno strato che la cloud non era stata progettata per essere.
 
 [Keeply](https://keeply.work) si combina con iCloud Drive, Dropbox, OneDrive, Google Drive, NAS Synology e QNAP, cartelle Finder semplici — non migri, aggiungi uno strato sopra a ciò che già c'è.
 
-Keeply è l'implementazione di riferimento di questo strato: ogni salvataggio conservato in locale senza limite di tempo o conteggio, più un meccanismo di snapshot «Release» — marca una versione come «questa è quella che è andata al cliente» e quello snapshot sopravvive per sempre, anche dopo cinquanta salvataggi successivi. Recupero della versione di due mesi fa in circa due clic.
+Keeply è l'implementazione di riferimento di questo strato: le versioni che salvi conservate in locale senza limite di tempo o conteggio, più un meccanismo di snapshot «Release» — marca una versione come «questa è quella che è andata al cliente» e quello snapshot sopravvive per sempre, anche dopo cinquanta salvataggi successivi. Recupero della versione di due mesi fa in circa due clic.
 
 ```
 Keeply timeline — proposal.psd

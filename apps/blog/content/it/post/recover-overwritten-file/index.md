@@ -18,16 +18,16 @@ ranking_locales: [ja, ko]
 cta_topic: recovery
 image_alt_data: "Timeline di monthly_report.xlsx salvato alle 19:00, 19:15 e 19:30 — la sovrascrittura delle 19:30 non è annullabile con Salvataggio automatico, OneDrive o software di recupero dati; l'unica risposta è la prevenzione a monte, prima del salvataggio"
 faq_schema:
-  - q: AutoRecover 到底是為什麼設計的？
-    a: AutoRecover 是為當機救援設計的，每 10 分鐘自動暫存一份，但在檔案正常關閉後就會清除。它的設計目標是「打到一半當機」場景，不適用於「正常關閉後才發現覆蓋錯」這種情境。
-  - q: AutoRecover、OneDrive 版本歷史和資料復原軟體各自能救什麼？
-    a: AutoRecover 救當機中斷；OneDrive 版本歷史救過去 500 版以內、需雲端儲存；Windows 陰影複製救有事先設定者；資料復原軟體只在覆蓋直後幾分鐘有效；Time Machine 只有在快照間隔內有效。沒有一種能結構性救到「正常關閉後才發現覆蓋錯」的典型場景。
-  - q: 為什麼「覆蓋儲存後」再求救就已經來不及了？
-    a: 這些救援機制活在「儲存層」，依賴發現的時機。AutoRecover 一關檔就清；資料復原軟體依賴磁區未被新寫入。每過一小時磁區被覆蓋的機率直線飆升。而「事前防禦」的常駐版本歷史不依賴發現時機。
-  - q: 要如何預防覆蓋儲存造成版本遺失？
-    a: 在工具層放一份常駐版本歷史：每次儲存都自動留一個版本，不依賴 Word 或 OneDrive 的保留期政策。Keeply 用 git 引擎在每次儲存時自動存檔點，讓「覆蓋儲存」不再是破壞性動作。
-  - q: Keeply 可以取代 AutoRecover 嗎？
-    a: 不能取代。AutoRecover 處理當機中斷救援，Keeply 處理正常儲存後的版本保留，兩者是互補關係。且 Keeply 不能溯及既往，必須在覆蓋發生前就已啟動。
+  - q: Per cosa è progettato davvero Salvataggio automatico?
+    a: "Salvataggio automatico è progettato per il recupero da crash — accantona una copia ogni 10 minuti, ma la cancella appena il file si chiude normalmente. Il suo obiettivo di progettazione è lo scenario \"crash mentre stai scrivendo\"; non copre il rendersi conto, dopo una chiusura normale, di aver sovrascritto la cosa sbagliata."
+  - q: Salvataggio automatico, cronologia versioni OneDrive e software di recupero dati — cosa salva ciascuno?
+    a: "Salvataggio automatico ti salva da un'interruzione per crash; la cronologia versioni di OneDrive arriva indietro fino a circa 500 versioni ma richiede lo storage cloud; le Copie shadow di Windows funzionano solo se configurate in anticipo; il software di recupero dati funziona solo per qualche minuto subito dopo la sovrascrittura; Time Machine solo entro l'intervallo dei suoi snapshot. Nessuno copre strutturalmente il caso classico di accorgersi, dopo una chiusura normale, di aver sovrascritto la cosa sbagliata."
+  - q: Perché chiedere aiuto \"dopo una sovrascrittura\" è già troppo tardi?
+    a: "Questi meccanismi di recupero vivono nello \"strato di archiviazione\" e dipendono dal momento in cui te ne accorgi. Salvataggio automatico si cancella appena chiudi il file; il software di recupero dati dipende dal fatto che i settori non siano ancora stati riscritti, e ogni ora che passa fa schizzare le probabilità che lo siano. Una cronologia versioni always-on — difesa preventiva — non dipende da quando te ne accorgi."
+  - q: Come prevenire la perdita di versioni causata da una sovrascrittura?
+    a: "Metti una cronologia versioni always-on a livello strumento: le versioni che salvi vengono conservate automaticamente, indipendenti dalla politica di retention di Word o OneDrive. Keeply usa un motore git per creare un checkpoint delle versioni che salvi, così una \"sovrascrittura\" smette di essere un'azione distruttiva."
+  - q: Keeply può sostituire Salvataggio automatico?
+    a: "No. Salvataggio automatico gestisce il recupero dall'interruzione per crash; Keeply gestisce la conservazione delle versioni dopo un salvataggio normale — sono complementari. E Keeply non può tornare nel passato: deve essere in esecuzione prima che la sovrascrittura avvenga."
 ---
 
 # 【2026 Gestione file】Il limite del recupero file sovrascritto: dove Salvataggio automatico non arriva
@@ -88,15 +88,15 @@ Questi meccanismi vivono allo strato di **archiviazione**. L'obiettivo progettua
 
 Sam è contabile. Venerdì sera alle 19:30, salva sopra il report di chiusura mensile in Excel per errore. Va a cercare il file Salvataggio automatico ma non lo trova. Prova il software di recupero dati; restituisce "il settore è già stato sovrascritto". Sessanta ore fino a lunedì mattina.
 
-Ecco il problema vero. Sam se ne rende conto solo dopo. Se avesse sovrascritto prima nel pomeriggio, l'intervallo di 30 minuti di Salvataggio automatico avrebbe potuto catturarlo. **Ma quando se n'è accorto, era già troppo tardi. Il salvataggio post-evento dipende dal notare in tempo. La prevenzione a monte non dipende dal notare per niente. Ogni salvataggio preserva già una versione.**
+Ecco il problema vero. Sam se ne rende conto solo dopo. Se avesse sovrascritto prima nel pomeriggio, l'intervallo di 30 minuti di Salvataggio automatico avrebbe potuto catturarlo. **Ma quando se n'è accorto, era già troppo tardi. Il salvataggio post-evento dipende dal notare in tempo. La prevenzione a monte non dipende dal notare per niente. Le versioni che salvi sono già conservate, più il salvataggio automatico opzionale a intervalli.**
 
 ## Oltre il salvataggio post-evento: l'opzione cronologia versioni always-on
 
 Superare il limite del salvataggio post-evento significa **prevenzione a monte**. Collocare una cronologia versioni always-on a livello strumentale.
 
-Ogni salvataggio = una versione preservata. Nessun pruning. Indipendente dalla retention policy di Word o OneDrive.
+Ogni versione che salvi = una versione preservata. Nessun pruning. Indipendente dalla retention policy di Word o OneDrive.
 
-[Keeply](https://keeply.work) lo fa in background sulla cartella di lavoro che gli indichi: ogni pressione di Salva aggiunge una versione con timestamp alla cronologia — due click per aprire quella che vuoi. Una "sovrascrittura" smette di essere un'**azione distruttiva**; la versione precedente è sempre preservata.
+[Keeply](https://keeply.work) lo fa in background sulla cartella di lavoro che gli indichi: salvi una versione nel momento che conta (un click con una nota), oppure attivi il salvataggio automatico opzionale che cattura le modifiche a intervalli — entrambe finiscono con un timestamp nella cronologia, due click per aprire quella che vuoi. Una "sovrascrittura" smette di essere un'**azione distruttiva**; la versione precedente è sempre preservata.
 
 Lisa usa Keeply da sei mesi. Lunedì mattina, nota che il report di chiusura mensile è stato sovrascritto con il foglio precedente. Apre Keeply. Il foglio delle 19:00 di venerdì, il foglio delle 19:15, il foglio sovrascritto delle 19:30 sono tutti conservati come versioni. Clicca "vai al foglio delle 19:00" e la finestra di ripristino appare così:
 
@@ -104,7 +104,7 @@ Lisa usa Keeply da sei mesi. Lunedì mattina, nota che il report di chiusura men
 
 Nota la riga blu di suggerimento — la sovrascrittura delle 19:30 non viene buttata, resta come versione indipendente nella cronologia. Tre secondi dopo Excel apre il foglio delle 19:00 di venerdì. Non serve più tirare tardi la domenica per rifare tutto prima del lunedì mattina.
 
-Detto questo, Keeply non sostituisce Salvataggio automatico. Il salvataggio da crash a metà documento è ancora la prima linea di Salvataggio automatico. Keeply non può nemmeno riscrivere la storia retroattivamente: deve essere in esecuzione al momento della sovrascrittura. Per le sovrascritture prima di installare Keeply, questo articolo non aiuta. Per ogni salvataggio da oggi in poi, sì.
+Detto questo, Keeply non sostituisce Salvataggio automatico. Il salvataggio da crash a metà documento è ancora la prima linea di Salvataggio automatico. Keeply non può nemmeno riscrivere la storia retroattivamente: deve essere in esecuzione al momento della sovrascrittura. Per le sovrascritture prima di installare Keeply, questo articolo non aiuta. Per le versioni che salvi da oggi in poi, sì.
 
 Ecco la parte che dovrebbe farti respirare.
 
@@ -136,7 +136,7 @@ Il momento "Oh no, ho appena sovrascritto" delle 19:30 tornerà di nuovo. Non sa
 
 Ma ecco cosa dovresti sapere: il salvataggio post-evento ha limiti. La prevenzione a monte non dipende dal notare in tempo.
 
-Per ogni salvataggio da oggi in poi. Puoi lasciare che lo strumento conservi quella versione per te?
+Per le versioni che salvi da oggi in poi. Puoi lasciare che lo strumento conservi quella versione per te?
 
 ---
 
