@@ -6,10 +6,13 @@ red-team verdict field is present in the file. So a touchpoint cannot be
 approved without its red-team having run + been recorded.
 
 Stage → required field:
-  intent.md    -> intent_red_team:     (Touch 1 INTENT, Lens INTENT)
-  keywords.md  -> red_team:            (Touch 1.5 KEYWORDS, Lens A + Lens B)
-  angle.md     -> angle_red_team:      (Touch 2 ANGLE, Lens ANGLE)
-  skeleton.md  -> skeleton_red_team:   (Touch 3 SKELETON, Lens SKELETON)
+  intent.md            -> intent_red_team:   (Touch 1 INTENT, Lens INTENT)
+  keywords.md          -> red_team:          (Touch 1.5 KEYWORDS, Lens A + Lens B)
+  angle.md             -> angle_red_team:    (Touch 2 ANGLE, Lens ANGLE)
+  skeleton.md          -> skeleton_red_team: (Touch 3 SKELETON, Lens SKELETON)
+  final.<locale>.md    -> locale_red_team:   (Touch 4 translation pod, native local-market
+                          (non-en only)       red-team — v1.8 2026-05-22; see red-team-brief.md
+                                              "Per-locale translation pod")
 
 INSTALL (user only — agent cannot self-modify .claude config):
   1. copy this file into .claude/hooks/  (or keep here and point the command at it)
@@ -60,7 +63,13 @@ def main():
     base = os.path.basename(path)
     field = STAGE_FIELD.get(base)
     if not field:
-        sys.exit(0)  # not a gated BWF artifact
+        # Per-locale translation gate (v1.8, 2026-05-22): a translated final.<locale>.md
+        # (non-en) cannot be approved without its native local-market red-team verdict.
+        m = re.match(r"^final\.([a-z]{2}(?:-[a-z]{2})?)\.md$", base, re.I)
+        if m and m.group(1).lower() != "en":
+            field = "locale_red_team"
+        else:
+            sys.exit(0)  # not a gated BWF artifact
 
     # Only gate the moment of approval.
     new_text = tool_input.get("content") or tool_input.get("new_string") or ""
@@ -77,11 +86,14 @@ def main():
             pass
 
     if not re.search(rf"^\s*{field}\s*:", haystack, re.M):
+        if field == "locale_red_team":
+            which = "native local-market translation red-team (per-locale translation pod)"
+        else:
+            which = f"{base.replace('.md', '').upper()} red-team"
         sys.stderr.write(
             f"[red-team-gate] BLOCKED: approving {base} without a red-team verdict.\n"
-            f"Run the {base.replace('.md', '').upper()} red-team "
-            f"(see ~/.claude/bwf/library/red-team-brief.md) and record `{field}:` "
-            f"in {base} before setting status: approved.\n"
+            f"Run the {which} (see ~/.claude/bwf/library/red-team-brief.md) and record "
+            f"`{field}:` in {base} before setting status: approved.\n"
         )
         sys.exit(2)  # block
 
