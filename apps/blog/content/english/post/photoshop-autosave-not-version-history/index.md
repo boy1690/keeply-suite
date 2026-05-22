@@ -15,11 +15,11 @@ faq_schema:
   - q: Why is the Photoshop autosave folder empty when I look for an old version?
     a: Because Photoshop autosave only keeps crash-recovery temp files while a PSD is open and unsaved. Once you hit Cmd+S to overwrite an older version and close the file normally, autosave wipes the temp. It's built for crashes, not for version history.
   - q: Isn't Photoshop autosave the same thing as version history?
-    a: 'No. Autosave (Auto Recover) solves one problem — don''t lose unsaved progress if Photoshop crashes or the power dies. It doesn''t answer "I liked the colors from half an hour ago, take me back". File-level version history is a separate layer that keeps every Cmd+S as a recoverable point you can find months later.'
+    a: 'No. Autosave (Auto Recover) solves one problem — don''t lose unsaved progress if Photoshop crashes or the power dies. It doesn''t answer "I liked the colors from half an hour ago, take me back". File-level version history is a separate layer: you save a version the moment it matters (with a note), or switch on auto-save to capture changes on a timer, and find any of them months later.'
   - q: Can the Photoshop History panel restore yesterday's version?
     a: No. The History panel only records the steps you took in this PSD during this session. The moment you close the file and reopen it, all that history is gone. It solves "undo my last 50 steps", not "bring back yesterday's version".
   - q: How can designers add file-level version history to Photoshop?
-    a: Add an external layer that auto-versions on every save. A tool like Keeply captures a copy of the PSD each time you Cmd+S, with a note like "client-approved", so the version from 30 minutes ago — or 6 months ago — is two clicks away. It works regardless of how or how many times you open Photoshop.
+    a: Add an external layer that auto-versions on every save. A tool like Keeply lets you save a version of the PSD the moment it matters, with a note like "client-approved" — and you can switch on auto-save so it also captures changes on a timer (every 15–30 min). The version from 30 minutes ago — or 6 months ago — is two clicks away. It works regardless of how or how many times you open Photoshop.
   - q: When don't designers need this extra layer?
     a: Three cases. (1) Quick gigs with no revision rounds where the client signs off and the file is archived. (2) Your studio mandates Adobe Creative Cloud version history and it's never failed you. (3) Your naming convention is so strict that every Cmd+S becomes -v07 -v08 and you genuinely never get lazy. Outside those, someday you'll hit "the client wants v2 back but I only have v5".
 ---
@@ -57,7 +57,7 @@ Honestly, this is the distinction nobody on Google's first page bothers to make:
 | Mechanism | Trigger | What it saves | Built into Photoshop? |
 |---|---|---|---|
 | **Autosave** | Photoshop detects abnormal exit | In-memory working state at crash time | ✅ |
-| **Version history** | Every Cmd+S | A complete snapshot of every saved version, kept permanently | ❌ |
+| **Version history** | Every version you keep (you save it, or a timer does) | A complete snapshot of each kept version, kept permanently | ❌ |
 
 **Crash recovery** is autosave's job — the program died, your file wasn't saved, get me back to where I was. One job, one slot. You can set the interval in Adobe `Preferences > File Handling` (5, 10, 15, or 30 minutes), but no matter which you pick, it's always the same single overwriting slot; new writes replace old, no history, just "the most recent recovery point."
 
@@ -87,7 +87,7 @@ There is no fourth thing. **File-level version history isn't built into Photosho
 
 ## What you actually need: file-level version history
 
-The missing layer lives outside Photoshop — a separate process watching every Cmd+S, sitting one layer up from the application itself.
+The missing layer lives outside Photoshop — a separate place where you keep versions, sitting one layer up from the application itself.
 
 Pin down what you need. Every time you save the PSD, something quietly preserves that complete byte-exact snapshot, and never overwrites it. Save twenty times today, you have twenty snapshots stacked up. Overwrite the v2 the client wanted tomorrow? Roll back to the snapshot from 30 minutes ago — your current file stays, and an earlier version comes back next to it.
 
@@ -95,7 +95,7 @@ Why doesn't Photoshop ship this layer? Adobe positions itself as a drawing tool.
 
 More than one tool is trying to fill the gap. Apple's Time Machine takes a swing at it — but Time Machine is hourly system snapshots, not per-save snapshots; if you saved the v2 over an hour ago you might catch it, or you might catch a moment when you'd already overwritten it. Pure luck of timing. OneDrive and SharePoint offer version history with a [500-major-version default cap](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits), and older versions get auto-pruned once you hit the limit (personal Microsoft accounts are stricter — capped at 25 versions). Google Drive is tighter still: [100 revisions per file](https://developers.google.com/workspace/drive/api/guides/manage-revisions), with anything older than 30 days auto-purged unless manually marked "Keep Forever" (also capped at 200). [We've broken down in detail elsewhere](/post/client-asked-which-version/) why this layer doesn't reach the "client asks three months later" use case. These are partial answers.
 
-What remains, Keeply tries to fill. The logic is simple: every Cmd+S on a PSD inside a Keeply folder, Keeply quietly preserves the exact version at that moment, separately from the live file — your current work isn't touched. Even the heaviest PSDs (the 500MB-single-file kind) get handled gracefully in the background; Keeply uses underlying large-file storage so your disk doesn't bloat. There's no save interval to configure, no "snapshot now" button to push — you work in Photoshop the way you always did, and it records every save behind you.
+What remains, Keeply tries to fill. The logic is simple: at the moment that matters you save a version from Keeply's window (with a note); and if you switch on auto-save, Keeply polls the folder every 15–30 minutes and preserves any change it finds — each version kept separately from the live file, so your current work isn't touched. Even the heaviest PSDs (the 500MB-single-file kind) get handled gracefully in the background; Keeply uses underlying large-file storage so your disk doesn't bloat.
 
 When you realize you've overwritten the v2 the client wanted, you open Keeply, scroll to the "client-confirmed version" row, and click restore. The dialog looks like this:
 
@@ -117,7 +117,7 @@ Now that the feature side's covered, the boundaries deserve to be named too. Kee
 
 **Crashes that Photoshop's autosave was built for** also aren't Keeply's beat. Photoshop crashes mid-edit and you hadn't pressed Cmd+S in 20 minutes? That unsaved working state still needs Photoshop's recovery dialog to catch.
 
-Keeply records what happens after Cmd+S; Photoshop's autosave records the moment before. Two different mechanisms running side by side.
+Keeply keeps the versions you decide to save (or auto-saves on a timer) — the side after you've saved; Photoshop's autosave catches the unsaved moment before a crash. Two different mechanisms running side by side.
 
 ## What to do before your next Cmd+S
 
