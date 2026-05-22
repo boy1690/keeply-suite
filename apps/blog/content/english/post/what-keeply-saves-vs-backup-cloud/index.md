@@ -27,14 +27,14 @@ strategic_fit:
 cta_topic: backup
 image_alt_data: "Three-column diagram: Backup recovers a dead disk, Cloud recovers a lost laptop, Keeply recovers the version you saved over yourself — the third column is where 80% of file pain lives but neither traditional tool addresses"
 faq_schema:
-  - q: Keeply 存什麼？跟備份和雲端有什麼不同？
-    a: Keeply 存的是「你自己改動的歷史」：每次 Cmd+S 都留版本，不用思考要不要存哪些。它解決「我改錯了想退回」的場景，這是備份和雲端都不處理的層次。
-  - q: 備份工具存什麼？什麼情境下需要？
-    a: 備份工具存「整顆磁碟某個時間點的完整快照」，解決硬碟壞掉、筆電遺失、機房失火等災難場景。Time Machine、3-2-1 都屬此類。它救硬體，不救你自己存錯。
-  - q: 雲端工具存什麼？解決什麼問題？
-    a: 雲端工具存「多裝置間的最新版同步」，解決手機、平板、筆電要看同一份檔案的場景。Dropbox、OneDrive、iCloud 都屬此類。它救裝置切換，不救改動歷史。
-  - q: 我到底需要幾個工具才夠？
-    a: 看你怕什麼：怕硬碟壞需要備份；怕跨裝置需要雲端；怕自己改錯需要 Keeply。三個是不同層次的工具，不互相取代。最常見的「我改錯了」情境，前兩個都救不了。
+  - q: What does Keeply save, and how is it different from backup and cloud?
+    a: "Keeply saves the history of your own edits: you save a version when it matters — with a note — or let optional auto-save catch your work every 15-30 min, so you don't have to decide which ones to keep. It solves the \"I changed something wrong and want to roll back\" case, a layer neither backup nor cloud handles."
+  - q: What do backup tools save, and when do you need them?
+    a: "Backup tools save a complete snapshot of the whole disk at a point in time, for disasters like a dead drive, a lost laptop, or a server-room fire. Time Machine and 3-2-1 belong here. They rescue hardware, not your own bad save."
+  - q: What do cloud tools save, and what do they solve?
+    a: "Cloud tools save the latest version synced across devices, for when your phone, tablet, and laptop all need the same file. Dropbox, OneDrive, and iCloud belong here. They rescue device-switching, not your edit history."
+  - q: How many tools do I actually need?
+    a: "It depends on what you fear: fear a dead drive, you need backup; fear cross-device gaps, you need cloud; fear your own wrong edit, you need Keeply. They're three different layers and don't replace each other. The most common case — \"I changed something wrong\" — is exactly the one the first two can't save."
 ---
 
 # 【2026 File Management】What Does Keeply Actually Save? How It's Different from Backup and Cloud Tools

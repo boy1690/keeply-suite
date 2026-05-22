@@ -18,16 +18,16 @@ ranking_locales: [en, ko]
 cta_topic: versioning
 image_alt_data: "Clock showing 11:23 beside three files — proposal_v3_FINAL.docx, proposal_v3_FINAL_v2.docx, proposal_v3_FINAL_final.docx — none traceable to the March delivery the client is asking about; Word AutoRecover and OneDrive do not reach 3 months back"
 faq_schema:
-  - q: Word 內建版本歷史能做什麼？
-    a: Word 有三種機制：AutoRecover（當機救援，關閉即清除）、自動儲存（邊打邊存至雲端）、OneDrive 版本歷史（保留約 500 個版本快照）。三種都是短期儲存事故救援，設計目標不包含 3 個月後的交付版本追蹤。
-  - q: AutoRecover、OneDrive 和 Time Machine 各能保留多久？
-    a: AutoRecover 在檔案正常關閉後即清除；OneDrive 版本歷史預設約 500 個版本，超過自動刪最舊；Mac Time Machine 每小時快照保留 24 小時、每天快照保留 30 天。每種機制都有保留上限，無法跨越 3 個月這條線。
-  - q: 為什麼 Word 版本歷史守不到 3 個月後？
-    a: 軟體內建版本歷史活在「儲存層」，設計給最近一次寫入失敗用，保留期依平均使用者一個月內查找頻率設定。3 個月以上不在設計目標，清除是合理行為。需要工具層獨立的常駐版本歷史才能解決。
-  - q: 找回 3 個月前的交付版本需要什麼？
-    a: 需要兩層：常駐版本歷史（每次儲存都留下，不依賴 Word 或 OneDrive 保留期政策）；以及交付便條元資料（匯出時自動嵌入誰、何時、對應哪個版本）。Keeply 同時提供這兩層。
-  - q: Google Docs 的修訂版能保留多久？
-    a: Google 未公開明確保留期。官方文件指出較舊的修訂版可能會被合併以節省空間，實務上 3 個月以上的修訂版常被自動合併或清除，無法可靠用於長期交付版本追蹤。
+  - q: What does Word's built-in version history do?
+    a: "Word has three mechanisms: AutoRecover (crash rescue, cleared on close), AutoSave (saves to the cloud as you type), and OneDrive version history (keeps roughly 500 version snapshots). All three are short-term, save-incident rescue — none is designed to track the deliverable you sent 3 months ago."
+  - q: How long do AutoRecover, OneDrive, and Time Machine each retain?
+    a: "AutoRecover clears once the file closes normally; OneDrive version history defaults to about 500 versions and auto-deletes the oldest beyond that; Mac Time Machine keeps hourly snapshots for 24 hours and daily snapshots for 30 days. Every mechanism has a retention ceiling — none reaches across the 3-month line."
+  - q: Why can't Word's version history reach back 3 months?
+    a: "Built-in version history lives in the \"save layer,\" designed for the most recent failed write, with retention tuned to how often the average user looks back within a month. Beyond 3 months isn't a design goal, so pruning is reasonable behavior. Solving it takes a tool-layer, always-on version history."
+  - q: What does it take to recover a deliverable from 3 months ago?
+    a: "Two layers: an always-on version history (every version you save is kept, independent of Word's or OneDrive's retention policy); and delivery-note metadata (who, when, and which version, embedded automatically on export). Keeply provides both."
+  - q: How long does Google Docs keep revisions?
+    a: "Google doesn't publish a firm retention period. Its documentation notes that older revisions may be merged to save space; in practice, revisions older than 3 months are often auto-merged or cleared, so they can't be relied on for long-term deliverable tracking."
 ---
 
 # 【2026 File Management】Word Saves Versions, Not the Memory of Which One You Sent 3 Months Ago

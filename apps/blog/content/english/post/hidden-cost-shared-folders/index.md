@@ -20,14 +20,14 @@ status: approved_master
 cta_topic: versioning
 image_alt_data: "Chart marking 83 hours per year burned on shared-folder defensive renaming, with Floorplan_v6 through Floorplan_v7_FINAL_DO_NOT_TOUCH filename stack and stat: 4 designers, 1 folder, 1.6 hours per week on defense"
 faq_schema:
-  - q: 共用資料夾的命名規則為什麼一定會崩潰？
-    a: 命名規則把機制問題包裝成紀律問題。趕件壓力下人腦會本能輸入 FINAL；一個人偷懶存 NEW，整條下游的 reference 鏈連環失效。命名規則靠意志力維持，紀律永遠贏不過自動化機制，這是設計上已知會壞的結果。
-  - q: 共用資料夾的「命名防禦稅」每年要花多少時間？
-    a: 根據 Asana《Anatomy of Work》研究，知識工作者一年花 83 小時在確認最新版、追進度、找對的檔案。真正的成本不是數字，是每次寄出去又回頭確認「剛才是不是寄錯版」的揮之不去的微型恐慌。
-  - q: 共用資料夾自動版本控制如何讓 _v8 從此消失？
-    a: 工具層自動版本讓每次存檔自動留版，資料夾裡只存乾淨的主檔名，不需要加 _v7_FINAL 後綴。需要找舊版時開時間軸即可，3 秒還原，不需要手動備份或在群組發公告通知同事抓最新版。
-  - q: 同步工具如 Dropbox 能解決共用資料夾版本問題嗎？
-    a: 只能解一半。同步工具處理多人即時共用與本機檔案不遺失，但同事覆蓋了你的版本你不會收到通知，且版本歷史通常只保留 30 天。設計檔 .dwg/.psd/.indd 的跨改動版本追蹤仍需要工具層自動版本管理。
+  - q: Why do shared-folder naming rules always collapse?
+    a: "Naming rules dress up a mechanism problem as a discipline problem. Under deadline pressure the brain instinctively types FINAL; one person cuts a corner and saves NEW, and the whole downstream reference chain breaks in a cascade. Naming rules run on willpower, and discipline never beats an automated mechanism — this is a known-by-design failure."
+  - q: How many hours a year does the shared-folder \"naming defense tax\" cost?
+    a: "Per Asana's \"Anatomy of Work\" study, knowledge workers spend 83 hours a year confirming the latest version, chasing status, and hunting for the right file. The real cost isn't the number — it's the nagging micro-panic of sending something out and circling back to check whether you just sent the wrong version."
+  - q: How does shared-folder automatic version control make _v8 disappear?
+    a: "Tool-level version history keeps the versions you save automatically, so the folder holds only clean master filenames — no _v7_FINAL suffix. When you need an old version, open the timeline and restore in 3 seconds; no manual backups, no group-chat announcement telling colleagues to grab the latest."
+  - q: Can sync tools like Dropbox solve shared-folder version problems?
+    a: "Only halfway. Sync tools handle real-time multi-person sharing and keep local files from being lost, but you get no notification when a colleague overwrites your version, and version history is usually kept only 30 days. Cross-edit version tracking for design files (.dwg/.psd/.indd) still needs tool-layer automatic version management."
 ---
 
 # 【2026 File Management】Shared folder file versioning: don't let _v8 steal your team's 83 hours a year

@@ -31,20 +31,20 @@ faq_schema:
   - q: When don't you need this extra layer?
     a: Three cases. (1) Thesis is shorter than three months and your advisor never circles back to older drafts. (2) You already have a strict daily-naming routine plus a paid cloud tier with 180+ day retention, sustained for two years without slipping. (3) Your university mandates an LMS with full version tracking. Outside those, most students hit the "advisor asks for v5, you only have v7" moment in year two.
 howto_schema:
-  name: 碩士論文版本管理 4 步實戰
+  name: Master's thesis version control in 4 steps
   totalTime: P2Y
   steps:
-    - name: 每日收工存日期檔
-      text: 每天收工前存一份帶日期的檔案（如「論文-0423.docx」），讓每天的版本有獨立記錄，為日後教授問起舊版時提供可查依據。
+    - name: Save a dated copy at the end of each day
+      text: Before you stop each day, save a dated copy (e.g. thesis-0423.docx) so each day's version has its own record — something to point to when your advisor later asks about an older draft.
       url: '#h2-4'
-    - name: 交教授前獨立留檔
-      text: 每次交給教授前將那一份單獨保留，檔名標記「交教授」（如「論文-0423-交教授.docx」），這是教授最常回頭問「上一版那段」時最需要的版本。
+    - name: Keep a separate copy before each hand-off
+      text: Each time you hand the file to your advisor, keep that copy separately, labeled submitted-to-advisor (e.g. thesis-0423-advisor.docx) — the version you most often need when they circle back to that paragraph from last time.
       url: '#h2-4'
-    - name: 工具自動記錄每版差異
-      text: 導入 Keeply 讓每次存檔自動留版，開啟差異視圖直接看 v5 與 v6 改了哪些字，不用手動翻找，教授問起兩下就打得開。
+    - name: Let a tool record each version's diff
+      text: Bring in a tool like Keeply so the versions you save are kept automatically; open the diff view to see exactly which words changed between v5 and v6 — no manual hunting, ready in two clicks when your advisor asks.
       url: '#h2-4'
-    - name: 至少一份不在這台筆電
-      text: 雲端、外接硬碟或隨身碟擇一，確保至少一份論文不在這台電腦上，防止筆電遺失、SSD 損毀或意外潑水導致兩年心血全部消失。
+    - name: Keep at least one copy off this laptop
+      text: Pick one of cloud, external drive, or USB stick so at least one copy of the thesis isn't on this computer — protection against a lost laptop, a dead SSD, or a spilled drink wiping out two years of work.
       url: '#h2-4'
 ---
 
@@ -148,7 +148,7 @@ There isn't much to do. Four things:
 
 **2. Each time you hand the file to your advisor, set that copy aside.** Filename like `thesis-0423-for-advisor.docx`. This is the one your advisor most often wants when they ask "what about your previous version."
 
-**3. Let a tool keep every version for you.** This is exactly where steps 1 and 2 fall short, and where the tool steps in. [Keeply](https://keeply.work) is built for this. Every save, the system quietly keeps a version. Files stay in your existing folder — no moves, no switching tools. The **diff view** lets you see word-by-word what changed between v5 and v6. When your advisor asks, you can pull it up in two clicks.
+**3. Let a tool keep your versions for you.** This is exactly where steps 1 and 2 fall short, and where the tool steps in. [Keeply](https://keeply.work) is built for this. The versions you save are kept quietly in the background — or switch on auto-save and it captures your changes every 15–30 min. Files stay in your existing folder — no moves, no switching tools. The **diff view** lets you see word-by-word what changed between v5 and v6. When your advisor asks, you can pull it up in two clicks.
 
 Open the version-history panel on `thesis_v3.docx` and you see four months of edits, one round of advisor feedback after another, stacked in order:
 

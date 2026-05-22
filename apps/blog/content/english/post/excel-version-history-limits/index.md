@@ -16,16 +16,16 @@ role: cluster
 pillar_parent: file-version-management-complete-guide
 image_alt_data: "Timeline of monthly_close.xlsx saved at 17:15, 17:30, and 17:47 — the 17:47 save overwrites with broken data; the 17:30 version is unrecoverable because AutoSave requires OneDrive/SharePoint and 4 simultaneous conditions to function"
 faq_schema:
-  - q: Excel 版本歷史按鈕為什麼會變灰無法使用？
-    a: 「版本歷史」按鈕需要同時滿足 4 個條件才能運作：檔案存 OneDrive 或 SharePoint、AutoSave 已開啟、商業版授權、在桌面版而非網頁版。任一條件不符按鈕就變灰，而多數工作模式 4 個條件一個都不符。
-  - q: Microsoft AutoSave 有哪些沒說清楚的限制？
-    a: 有 4 個繞不過的限制：桌面 AutoSave 只能回 1-2 版；OneDrive 版本歷史 30 天過期；本機檔案完全沒有版本記錄；以及不支援儲存格層級的比對。這些都是 Microsoft 刻意的工程選擇，不是技術做不到。
-  - q: 為什麼 Microsoft 把 Excel 版本歷史設計成這樣？
-    a: 因為完整版本歷史是 OneDrive 訂閱的差異化功能。若桌面 Excel 自帶完整本機紀錄，OneDrive 少一個綁定理由。版本歷史對使用者是安全網，對 Microsoft 是訂閱上鉤誘餌，兩個角色決定了功能的實際行為。
-  - q: 有哪些工具設計能真正解決 Excel 版本歷史不足的問題？
-    a: 三種設計：每次 Cmd+S 自動快照不依賴雲端（如 Keeply，無時間限制）；自動里程碑讓月底或季度凍結點永遠保留；版本內容搜尋讓你從歷史版本中找到特定數值最後出現的時間點。
-  - q: Keeply 可以完全取代 Excel 的版本歷史功能嗎？
-    a: 不能完全取代。Keeply 顯示「整檔 v3 到 v4 的差異」，不支援儲存格層級比對；也不修正 formula 邏輯錯誤；不適合多人即時協作場景。但對本機存檔、長期保留、快速還原這三個核心需求，Keeply 能補足 Excel 的限制。
+  - q: Why is Excel's version-history button grayed out?
+    a: "The \"Version History\" button only works when 4 conditions are met at once: the file is on OneDrive or SharePoint, AutoSave is on, you have a business license, and you're on the desktop app (not the web app). Miss any one and the button grays out — and most working setups miss all four."
+  - q: What limits does Microsoft AutoSave not spell out?
+    a: "Four you can't get around: desktop AutoSave only goes back 1-2 versions; OneDrive version history expires after 30 days; local files get no version record at all; and there's no cell-level diff. These are deliberate engineering choices by Microsoft, not technical limits."
+  - q: Why did Microsoft design Excel's version history this way?
+    a: "Because full version history is a OneDrive subscription differentiator. If desktop Excel shipped a complete local record, OneDrive would lose a reason to bind you to it. Version history is a safety net for users and subscription bait for Microsoft — those two roles decide how the feature actually behaves."
+  - q: Which tool designs actually solve Excel's version-history gap?
+    a: "Three designs: local snapshots that don't depend on the cloud (like Keeply — it keeps the versions you save, manually with a note or via optional auto-save every 15-30 min, with no time cap); automatic milestones that keep month-end or quarter-end freeze points forever; and in-version content search, so you can find the last time a specific value appeared in your history."
+  - q: Can Keeply fully replace Excel's version history?
+    a: "Not fully. Keeply shows \"whole-file v3-to-v4 diffs,\" not cell-level comparison; it doesn't fix formula logic errors; and it isn't built for real-time multi-person collaboration. But for local saves, long-term retention, and fast restore — those three core needs — Keeply fills Excel's gaps."
 ---
 
 Friday afternoon, 5:47 PM. You're working on the month-end close in Excel. You just deleted a formula to try a different approach, turns out it was wrong. Cmd+Z hits the undo limit. You can't get back. You open File > Info > Version History. Grayed out. Then you realize: this spreadsheet is on your desktop, not OneDrive. Thirty minutes of formula work, gone.

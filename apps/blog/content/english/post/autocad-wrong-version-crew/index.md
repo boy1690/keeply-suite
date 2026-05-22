@@ -31,20 +31,20 @@ faq_schema:
   - q: Does every site crew member need to install Keeply?
     a: No. Keeply runs on the office machine and holds the version timeline. The crew can verify from printed sheets or via a single site PM device. Keeply solves the office-field handoff gap, not "every foreman watches a timeline on their phone".
 howto_schema:
-  name: 圖檔版本管理 4 步：辦公室與現場對齊
+  name: Drawing version control in 4 steps — keep office and field in sync
   totalTime: PT2H
   steps:
-    - name: 新版進辦公室即通知現場
-      text: 新版一進辦公室當下通知現場人員，並要求對方明確回覆「收到」才算完成交接，不能只存好就算。
+    - name: Notify the field the moment a new revision lands in the office
+      text: The instant a new revision arrives in the office, notify the field crew and require a clear "got it" reply before the hand-off counts as done — saving the file isn't enough on its own.
       url: '#h2-4'
-    - name: 新版覆蓋舊版前先留檔
-      text: 每次新版覆蓋舊版之前，將舊版獨立保存並於檔名中標記版次，以備設計回頭改回舊版時有據可查。
+    - name: Preserve the old version before it's overwritten
+      text: Before each new revision overwrites the old one, save the old version separately and mark its revision number in the filename, so there's a record if the design later reverts to an earlier layout.
       url: '#h2-4'
-    - name: 工具自動記錄版本供全員查看
-      text: 導入 Keeply 等版本管理工具，讓每次存檔自動記錄一版，所有人開啟同一保管庫即可看到同一條版本時間線。
+    - name: Let a tool record versions for everyone to see
+      text: Bring in a version tool like Keeply so the versions you save are recorded automatically; everyone opens the same vault and sees one shared version timeline.
       url: '#h2-4'
-    - name: 保留一份異地備份
-      text: 確保至少一份檔案不在辦公室或工地 NAS，存放於外接硬碟、雲端或備份槽，防止公司 NAS 損毀時無從復原。
+    - name: Keep one off-site backup
+      text: Make sure at least one copy lives off the office or site NAS — on an external drive, the cloud, or a backup vault — so a NAS failure doesn't leave you with nothing to restore from.
       url: '#h2-4'
 ---
 

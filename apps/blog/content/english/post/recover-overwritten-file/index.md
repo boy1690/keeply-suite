@@ -18,16 +18,16 @@ ranking_locales: [ja, ko]
 cta_topic: recovery
 image_alt_data: "Timeline of monthly_report.xlsx saved at 19:00, 19:15, and 19:30 — the 19:30 overwrite cannot be undone by AutoRecover, OneDrive, or data-recovery software; the only answer is upstream prevention before the save happens"
 faq_schema:
-  - q: AutoRecover 到底是為什麼設計的？
-    a: AutoRecover 是為當機救援設計的，每 10 分鐘自動暫存一份，但在檔案正常關閉後就會清除。它的設計目標是「打到一半當機」場景，不適用於「正常關閉後才發現覆蓋錯」這種情境。
-  - q: AutoRecover、OneDrive 版本歷史和資料復原軟體各自能救什麼？
-    a: AutoRecover 救當機中斷；OneDrive 版本歷史救過去 500 版以內、需雲端儲存；Windows 陰影複製救有事先設定者；資料復原軟體只在覆蓋直後幾分鐘有效；Time Machine 只有在快照間隔內有效。沒有一種能結構性救到「正常關閉後才發現覆蓋錯」的典型場景。
-  - q: 為什麼「覆蓋儲存後」再求救就已經來不及了？
-    a: 這些救援機制活在「儲存層」，依賴發現的時機。AutoRecover 一關檔就清；資料復原軟體依賴磁區未被新寫入。每過一小時磁區被覆蓋的機率直線飆升。而「事前防禦」的常駐版本歷史不依賴發現時機。
-  - q: 要如何預防覆蓋儲存造成版本遺失？
-    a: 在工具層放一份常駐版本歷史：每次儲存都自動留一個版本，不依賴 Word 或 OneDrive 的保留期政策。Keeply 用 git 引擎在每次儲存時自動存檔點，讓「覆蓋儲存」不再是破壞性動作。
-  - q: Keeply 可以取代 AutoRecover 嗎？
-    a: 不能取代。AutoRecover 處理當機中斷救援，Keeply 處理正常儲存後的版本保留，兩者是互補關係。且 Keeply 不能溯及既往，必須在覆蓋發生前就已啟動。
+  - q: What is AutoRecover actually designed for?
+    a: "AutoRecover is built for crash rescue — it auto-stashes a copy every 10 minutes, but clears once the file closes normally. Its design target is the \"crashed mid-typing\" scenario; it doesn't cover realizing, after a normal close, that you overwrote the wrong thing."
+  - q: What can AutoRecover, OneDrive version history, and data-recovery software each save?
+    a: "AutoRecover saves you from a crash interruption; OneDrive version history reaches back within about 500 versions but needs cloud storage; Windows Shadow Copy works only if set up in advance; data-recovery software only works for a few minutes right after the overwrite; Time Machine only within its snapshot interval. None structurally covers the classic case of realizing after a normal close that you overwrote the wrong thing."
+  - q: Why is it already too late to ask for help \"after a save-over\"?
+    a: "These rescue mechanisms live in the \"save layer\" and depend on when you notice. AutoRecover clears the moment you close the file; data-recovery software depends on the sectors not being overwritten yet, and every passing hour spikes the odds they are. An always-on version history — preventive defense — doesn't depend on when you notice."
+  - q: How do you prevent version loss from a save-over?
+    a: "Put an always-on version history at the tool layer: the versions you save are kept automatically, independent of Word's or OneDrive's retention policy. Keeply uses a git engine to checkpoint the versions you save, so a \"save-over\" stops being a destructive action."
+  - q: Can Keeply replace AutoRecover?
+    a: "No. AutoRecover handles crash-interruption rescue; Keeply handles version retention after a normal save — they're complementary. And Keeply can't reach into the past: it has to be running before the overwrite happens."
 ---
 
 # 【2026 File Management】The limit of overwritten file recovery: when AutoRecover isn't enough
