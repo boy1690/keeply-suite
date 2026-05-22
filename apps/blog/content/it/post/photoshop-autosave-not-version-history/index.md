@@ -46,7 +46,7 @@ Cosa fa esattamente questo paracadute d'emergenza? Photoshop sorveglia le "chius
 
 Il suo compito finisce qui. Un Cmd+S normale che sovrascrive la tua versione precedente è una situazione completamente diversa — il programma funziona, l'utente ha volontariamente eseguito un comando di salvataggio, il meccanismo di salvataggio automatico non si attiva affatto. Niente crash, niente da recuperare, niente viene scritto nella cartella di recupero.
 
-Vuoi verificare frugando direttamente la cartella? [La documentazione Adobe elenca i percorsi esatti per ogni piattaforma](https://helpx.adobe.com/photoshop/using/salvataggio automatico-recovery-background-save.html): `~/Documents/Adobe/Salvataggio automatico/` su Mac, `%AppData%/Adobe/Adobe Photoshop {version}/Salvataggio automatico/` su Windows. Vecchi file `.psb` di sessioni precedenti possono ancora essere lì, ma il lavoro di oggi non è mai stato scritto, quindi non c'è nulla da riportare indietro.
+Vuoi verificare frugando direttamente la cartella? i percorsi reali sono `~/Library/Application Support/Adobe/Adobe Photoshop {version}/AutoRecover/` su Mac e `%AppData%/Adobe/Adobe Photoshop {version}/AutoRecover/` su Windows (la cartella si chiama `AutoRecover`, in inglese). Vecchi file `.psb` di sessioni precedenti possono ancora essere lì, ma il lavoro di oggi non è mai stato scritto, quindi non c'è nulla da riportare indietro.
 
 Allora perché esistono migliaia di articoli che ti insegnano "dov'è la cartella di salvataggio automatico"?
 

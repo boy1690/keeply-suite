@@ -91,7 +91,7 @@ Microsoft Office 內建有 3 種「**版本還原**」機制：
 
 - **自動回復**：當機時救回未儲存內容。預設每 10 分鐘自動暫存一份。**檔案正常關閉後就清除**。
 - **以前的版本**（Windows）：透過陰影複製功能還原到過去快照。需要事前設定。
-- **OneDrive 版本歷史**：每次儲存的版本快照。[Microsoft 官方文件](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits)指出預設保留 500 個主要版本（個人 Microsoft 帳號限 25 版）。
+- **OneDrive 版本歷史**：每次儲存的版本快照。[Microsoft 官方文件](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits)指出預設保留 500 個主要版本（個人 Microsoft 帳號限 [25 版](https://support.microsoft.com/en-us/office/restore-a-previous-version-of-a-file-stored-in-onedrive-159cad6d-d76e-4981-88ef-de6e96c93893)）。
 
 設計目的明確：這 3 個機制是給「**當機救援**」、「**最近的儲存事故**」使用的。「**正常關閉後才發現覆蓋錯**」這種場景不在設計目標內。
 

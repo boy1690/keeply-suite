@@ -46,7 +46,7 @@ Cmd+S を押した。カーソルが一度点滅した。
 
 仕事はそこで終わる。Cmd+S で自分の前のセーブを上書きする？それは Photoshop の中ではまったく別の出来事だ——プログラムは正常に動いていて、ユーザーが自発的に保存コマンドを実行している。自動保存のメカニズムは発火すらしない。クラッシュしていないので救うべきものがなく、リカバリフォルダにも何も書き込まれない。
 
-フォルダの中を自分で確かめたい？[Adobe の公式文書がプラットフォーム別の正確なパスを公開している](https://helpx.adobe.com/jp/photoshop/using/自動保存-recovery-バックグラウンド-save.html)：Mac の `~/Documents/Adobe/自動回復/`、Windows の `%AppData%/Adobe/Adobe Photoshop {version}/自動回復/`。過去のセッションの古い `.psb` ファイルがまだ残っているかもしれないが、今日の作業はそこに書き込まれた瞬間が一度もないので、復元しようがない。
+フォルダの中を自分で確かめたい？実際のパスは Mac が `~/Library/Application Support/Adobe/Adobe Photoshop {version}/AutoRecover/`、Windows が `%AppData%/Adobe/Adobe Photoshop {version}/AutoRecover/`（フォルダ名は英語の `AutoRecover`）。過去のセッションの古い `.psb` ファイルがまだ残っているかもしれないが、今日の作業はそこに書き込まれた瞬間が一度もないので、復元しようがない。
 
 なら、なぜ今でも「自動保存フォルダはどこ」を教える記事が何千本も存在するのか？
 

@@ -46,7 +46,7 @@ What does this parachute actually do? Photoshop watches for **abnormal exits** â
 
 That's where its job ends. A normal Cmd+S overwriting your own previous save is a different situation entirely â€” the program is running fine, the user voluntarily executed a save command, the autosave mechanism doesn't even fire. No crash, nothing to recover, nothing gets written to the recovery folder.
 
-Want to verify by digging through the folder yourself? [Adobe's docs list the exact platform paths](https://helpx.adobe.com/photoshop/using/auto-save-recovery-background-save.html): `~/Documents/Adobe/AutoRecover/` on Mac, `%AppData%/Adobe/Adobe Photoshop {version}/AutoRecover/` on Windows. Old `.psb` files from previous sessions may still be sitting there, but today's work was never written there, so there's nothing to bring back.
+Want to verify by digging through the folder yourself? the actual paths are `~/Library/Application Support/Adobe/Adobe Photoshop {version}/AutoRecover/` on Mac and `%AppData%/Adobe/Adobe Photoshop {version}/AutoRecover/` on Windows. Old `.psb` files from previous sessions may still be sitting there, but today's work was never written there, so there's nothing to bring back.
 
 So why are there thousands of articles teaching you "where the autosave folder is"?
 

@@ -96,7 +96,7 @@ howto_schema:
 
 ![Keeply 单档版本历史面板：thesis_v3.docx 4 个月内 47 个版本，从 2 月送导师第一轮到 5 月第三轮反馈后重写，每行都有笔记](file-history.svg)
 
-底下的绿字「47 个版本 · 全部保留」——这是 Keeply 跟 Word 版本历史最大的差别。Word 改完一句话按 Ctrl+S 就是新版、4 个月累积 47 个版本很正常；Word 撑 [25 版上限](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits)（个人账号）超过就吃掉最旧那批。47 行里哪一行你都点得到。
+底下的绿字「47 个版本 · 全部保留」——这是 Keeply 跟 Word 版本历史最大的差别。Word 改完一句话按 Ctrl+S 就是新版、4 个月累积 47 个版本很正常；文件放个人 OneDrive 的话、版本历史[只撑 25 版](https://support.microsoft.com/en-us/office/restore-a-previous-version-of-a-file-stored-in-onedrive-159cad6d-d76e-4981-88ef-de6e96c93893)、超过就吃掉最旧那批。47 行里哪一行你都点得到。
 
 下面拆云端同步 / Word 版本历史 / 3-2-1 各自为什么救不了这场战役。
 

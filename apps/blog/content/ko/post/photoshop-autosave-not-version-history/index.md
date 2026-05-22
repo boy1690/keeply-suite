@@ -46,7 +46,7 @@ Cmd+S를 눌렀다. 커서가 한 번 깜빡였다.
 
 그게 끝이다. Cmd+S로 자신의 직전 버전을 덮어쓴 것은 Photoshop 내부에서는 전혀 다른 사건이다 — 프로그램은 정상 작동 중이고, 사용자가 자발적으로 저장 명령을 실행한 상황이라, 자동 저장 메커니즘은 발동조차 하지 않는다. 크래시가 없으니 살릴 것이 없고, 그래서 복구 폴더에도 아무것도 쓰이지 않는다.
 
-직접 폴더를 뒤져 확인하고 싶다면? [Adobe 공식 문서가 플랫폼별 정확한 경로를 안내한다](https://helpx.adobe.com/photoshop/using/자동 저장-recovery-백그라운드-save.html): Mac의 `~/Documents/Adobe/자동 복구/`, Windows의 `%AppData%/Adobe/Adobe Photoshop {version}/자동 복구/`. 이전 세션의 오래된 `.psb` 파일이 아직 남아 있을 수도 있다. 하지만 오늘의 작업은 거기에 한 번도 쓰인 적이 없어서, 복원할 수가 없다.
+직접 폴더를 뒤져 확인하고 싶다면? 실제 경로는 Mac은 `~/Library/Application Support/Adobe/Adobe Photoshop {version}/AutoRecover/`, Windows는 `%AppData%/Adobe/Adobe Photoshop {version}/AutoRecover/` (폴더 이름은 영문 `AutoRecover`). 이전 세션의 오래된 `.psb` 파일이 아직 남아 있을 수도 있다. 하지만 오늘의 작업은 거기에 한 번도 쓰인 적이 없어서, 복원할 수가 없다.
 
 그렇다면 왜 아직도 "자동 저장 폴더는 어디"를 가르치는 글이 수천 편이나 존재하는가?
 

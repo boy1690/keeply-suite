@@ -85,7 +85,7 @@ faq_schema:
 
 它的职责到这里为止。你存档盖掉自己上一个版本？这在 Photoshop 内部完全是另一件事——程式运作正常、使用者主动执行保存指令、自动保存机制连被触发都没。没崩溃、没东西需要救、所以也没东西被写进恢复文件夹。
 
-想自己去文件夹翻一遍确认？[Adobe 官方文档有列出每个平台的精确路径](https://helpx.adobe.com/cn/photoshop/using/自动保存-recovery-后台-save.html)：Mac 的 `~/Documents/Adobe/自动恢复/`、Windows 的 `%AppData%/Adobe/Adobe Photoshop {version}/自动恢复/`。前几次 session 的旧 `.psb` 可能还躺着、但今天的工作从来没被写进去、也就还原不出来。
+想自己去文件夹翻一遍确认？实际路径在：Mac `~/Library/Application Support/Adobe/Adobe Photoshop {version}/AutoRecover/`、Windows `%AppData%/Adobe/Adobe Photoshop {version}/AutoRecover/`（文件夹名是英文 `AutoRecover`）。前几次 session 的旧 `.psb` 可能还躺着、但今天的工作从来没被写进去、也就还原不出来。
 
 那为什么还有上千篇文章教你「自动保存文件夹在哪」？
 

@@ -92,7 +92,7 @@ Microsoft Office 内建有 3 种「**版本还原**」机制：
 
 - **自动恢复**：崩溃时救回未保存内容。预设每 10 分钟自动暂存一份。**文件正常关闭后就清除**。
 - **卷影副本**（Windows）：透过卷影复制功能还原到过去快照。需要事前设定。
-- **OneDrive 版本历史**：每次保存的版本快照。[Microsoft 官方文档](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits)指出预设保留 500 个主要版本（个人 Microsoft 账号限 25 版）。
+- **OneDrive 版本历史**：每次保存的版本快照。[Microsoft 官方文档](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits)指出预设保留 500 个主要版本（个人 Microsoft 账号限 [25 版](https://support.microsoft.com/en-us/office/restore-a-previous-version-of-a-file-stored-in-onedrive-159cad6d-d76e-4981-88ef-de6e96c93893)）。
 
 设计目的明确：这 3 个机制是给「**崩溃救援**」、「**最近的存储事故**」使用的。「**正常关闭后才发现覆盖错**」这种场景不在设计目标内。
 

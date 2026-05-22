@@ -62,7 +62,7 @@ Word と Office 全体には 3 種類の「**版数復元**」機構がありま
 
 - **自動回復**：クラッシュ時に未保存の内容を救う。既定で 10 分ごとに自動退避。ファイルを正常に閉じると消える。
 - **AutoSave**（OneDrive / SharePoint オンライン Word）：入力中に逐次クラウドへ書き込む。
-- **OneDrive 版数履歴**：保存ごとのスナップショットを残し、任意の時点に戻せる。Microsoft の [SharePoint バージョン管理ドキュメント](https://learn.microsoft.com/ja-jp/sharepoint/document-library-version-history-limits) は既定で 500 主要版を保持（個人 Microsoft アカウントは 25 版）と記載。
+- **OneDrive 版数履歴**：保存ごとのスナップショットを残し、任意の時点に戻せる。Microsoft の [SharePoint バージョン管理ドキュメント](https://learn.microsoft.com/ja-jp/sharepoint/document-library-version-history-limits) は既定で 500 主要版を保持（個人 Microsoft アカウントは [25 版](https://support.microsoft.com/en-us/office/restore-a-previous-version-of-a-file-stored-in-onedrive-159cad6d-d76e-4981-88ef-de6e96c93893)）と記載。
 
 エクセル バージョン履歴も同じ設計の延長線上にあります — [Microsoft が言わない 4 つの制限](/ja/post/excel-version-history-limits/) に、表計算側の同じ罠が並びます。
 

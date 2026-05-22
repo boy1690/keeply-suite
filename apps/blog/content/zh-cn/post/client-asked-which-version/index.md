@@ -102,7 +102,7 @@ Word 跟 Office 生态系内建有 3 种「**版本还原**」机制：
 
 - **自动恢复**：崩溃时救回未保存的内容。预设每 10 分钟自动暂存一份。文件正常关闭后就清除。
 - **自动保存**（OneDrive / SharePoint 线上 Word）：边打边存到云端。
-- **OneDrive 版本历史**：保留每次保存的版本快照、可回头看任意时间点。OneDrive / SharePoint [官方文档](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits)指出预设保留 500 个主要版本（个人 Microsoft 账号限 25 版）。
+- **OneDrive 版本历史**：保留每次保存的版本快照、可回头看任意时间点。OneDrive / SharePoint [官方文档](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits)指出预设保留 500 个主要版本（个人 Microsoft 账号限 [25 版](https://support.microsoft.com/en-us/office/restore-a-previous-version-of-a-file-stored-in-onedrive-159cad6d-d76e-4981-88ef-de6e96c93893)）。
 
 这 3 种设计目的都很清楚：给「**打到一半崩溃**」、「**刚刚存错了**」这类**短期存储事故**用。它们不是「**3 个月后客户问哪版**」这种场景的设计目标。
 
