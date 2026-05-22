@@ -52,6 +52,16 @@ CAPTURE = re.compile(
     re.IGNORECASE,
 )
 
+# Competitor / other-tool context. "every save -> a version" is TRUE for these
+# (OneDrive/SharePoint/Dropbox/iCloud cloud version history, Time Machine), so a
+# line describing THEM (and not Keeply) is legit, not the misframing we hunt.
+COMPETITOR = re.compile(
+    r"OneDrive|SharePoint|Dropbox|Time\s*Machine|iCloud|Google\s*(?:Drive|Docs)"
+    r"|Creative\s*Cloud|Version\s*History\b",
+    re.IGNORECASE,
+)
+KEEPLY = re.compile(r"Keeply", re.IGNORECASE)
+
 CODE_FENCE = re.compile(r"^\s*```")
 
 
@@ -67,7 +77,13 @@ def audit(text: str):
             continue
         if not QUANT.search(raw):
             continue
-        (high if CAPTURE.search(raw) else review).append((i, raw.strip()))
+        if not CAPTURE.search(raw):
+            review.append((i, raw.strip()))
+            continue
+        # Legit: line describes a competitor's per-save versioning, not Keeply's.
+        if COMPETITOR.search(raw) and not KEEPLY.search(raw):
+            continue
+        high.append((i, raw.strip()))
     return high, review
 
 
