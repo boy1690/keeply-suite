@@ -181,6 +181,20 @@ disableKinds = ["taxonomy", "term"]
     contentDir = "content/it"
     [languages.it.params]
       description = "Keeply Blog — il tuo guardiano della gestione file. Appunti sul campo su cronologia versioni, recupero file e le tattiche per non perdere mai una versione."
+  # de re-added 2026-05-22 (R1 SELECTIVE reversal): NOT the blanket MT R1 removed.
+  # Country-specific concentrated publishing — native-written, keyword-targeted
+  # German articles for the DE market (excel-nicht-gespeicherte-datei-... pilot,
+  # 720 vol). Only hand-crafted /de/ pages live here; no blanket auto-translate.
+  # NOTE: the CF Bulk Redirect /de/* → /en/* (subpath_matching) must carve a
+  # path exception for each shipped /de/ slug, or the page 301s away. See
+  # _dev/seo/SEO operational decision.md + project memory (multi-country decision).
+  [languages.de]
+    languageName = "Deutsch"
+    title = "Keeply Blog"
+    weight = 7
+    contentDir = "content/de"
+    [languages.de.params]
+      description = "Keeply Blog — Ihr Wächter für die Dateiverwaltung. Praxisnahe Notizen zu Versionsverlauf, Dateiwiederherstellung und wie Sie nie wieder eine Version verlieren."
   # R1 (2026-05-18 GSC audit): 11 zero-click auto-translate locales removed
   # from build entirely. Evidence: 90-day GSC data showed only pt + es had any
   # clicks (1 each); de/fr/ru/nl/pl/tr/vi/th/id/ar/hi all 0 clicks. All 11

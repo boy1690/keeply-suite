@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 276" font-family="'Inter','Segoe UI',-apple-system,system-ui,sans-serif">
+<rect x="0" y="0" width="480" height="276" rx="8" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+<rect x="0" y="0" width="480" height="36" rx="8" fill="#F9FAFB"/>
+<rect x="0" y="28" width="480" height="9" fill="#F9FAFB"/>
+<line x1="0" y1="36" x2="480" y2="36" stroke="#E5E7EB" stroke-width="1"/>
+<text x="14" y="22" font-size="14">📄</text>
+<text x="34" y="23" font-size="13" font-weight="700" fill="#374151">Q2_Bericht.xlsx</text>
+<text x="210" y="23" font-size="11" fill="#9CA3AF">/Finanzen/2026/</text>
+<text x="462" y="24" font-size="14" fill="#9CA3AF" text-anchor="end">✕</text>
+<rect x="0" y="36" width="480" height="36" fill="#EEF2FF" opacity="0.5"/>
+<text x="14" y="58" font-size="11" fill="#6B7280">heute 11:15</text>
+<text x="110" y="58" font-size="12.5" fill="#374151">Auto-Version — Änderungen von heute Morgen</text>
+<text x="468" y="58" font-size="11" fill="#D1D5DB" text-anchor="end">Sie</text>
+<line x1="0" y1="72" x2="480" y2="72" stroke="#F3F4F6" stroke-width="1"/>
+<text x="14" y="94" font-size="11" fill="#9CA3AF">heute 10:45</text>
+<text x="110" y="94" font-size="12.5" fill="#374151">Auto-Version</text>
+<text x="468" y="94" font-size="11" fill="#D1D5DB" text-anchor="end">Sie</text>
+<line x1="0" y1="108" x2="480" y2="108" stroke="#F3F4F6" stroke-width="1"/>
+<text x="14" y="130" font-size="11" fill="#9CA3AF">heute 09:30</text>
+<text x="110" y="130" font-size="12.5" fill="#374151">Version speichern — letzte Woche geöffnet</text>
+<text x="468" y="130" font-size="11" fill="#D1D5DB" text-anchor="end">Sie</text>
+<line x1="0" y1="144" x2="480" y2="144" stroke="#F3F4F6" stroke-width="1"/>
+<text x="14" y="166" font-size="11" fill="#9CA3AF">19.05. 17:20</text>
+<text x="110" y="166" font-size="12.5" fill="#374151">Monatsabschluss festgehalten</text>
+<text x="468" y="166" font-size="11" fill="#D1D5DB" text-anchor="end">Sie</text>
+<line x1="0" y1="180" x2="480" y2="180" stroke="#F3F4F6" stroke-width="1"/>
+<text x="14" y="202" font-size="11" fill="#9CA3AF">18.05. 16:10</text>
+<text x="110" y="202" font-size="12.5" fill="#374151">Auto-Version</text>
+<text x="468" y="202" font-size="11" fill="#D1D5DB" text-anchor="end">Sie</text>
+<line x1="0" y1="216" x2="480" y2="216" stroke="#F3F4F6" stroke-width="1"/>
+<text x="14" y="238" font-size="11" fill="#9CA3AF">15.05. 09:14</text>
+<text x="110" y="238" font-size="12.5" fill="#374151">Erste Q2-Tabelle</text>
+<text x="468" y="238" font-size="11" fill="#D1D5DB" text-anchor="end">Sie</text>
+<line x1="0" y1="252" x2="480" y2="252" stroke="#F3F4F6" stroke-width="1"/>
+<text x="14" y="268" font-size="10" fill="#10B981">✓ 6 Versionen erhalten · dauerhafte lokale Ebene (kein UnsavedFiles-Timer)</text>
+</svg>
