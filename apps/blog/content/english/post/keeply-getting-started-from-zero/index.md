@@ -28,7 +28,7 @@ faq_schema:
   - q: So what are the only 2 actions to remember?
     a: Action 1 — drag in a folder you're actively working on and don't want to lose; no renaming, no categorising. Action 2 — save a version at meaningful moments (one click, or Cmd+S in Keeply, with a note); or turn on auto-save so Keeply captures changes on a 15–30 min timer. Day 1 you're already protected; day 7 the timeline shows you what it has kept.
   - q: What does the first week actually feel like?
-    a: 'Day 1 — you drag a folder in and barely notice anything. Day 2-3 — you start seeing the timeline fill up with the versions you've saved (plus auto-saved ones if you enabled it), with diff details one click away. Day 7 — usually you''ll have an "I made the wrong edit, let me restore" moment, and that''s when you realise this safety net was missing before.'
+    a: 'Day 1 — you drag a folder in and barely notice anything. Day 2-3 — you start seeing the timeline fill up with the versions you''ve saved (plus auto-saved ones if you enabled it), with diff details one click away. Day 7 — usually you''ll have an "I made the wrong edit, let me restore" moment, and that''s when you realise this safety net was missing before.'
   - q: When is Keeply not the right tool for you?
     a: Four cases worth naming. (1) Pure code work — Git/GitHub fits better. (2) Your company mandates SharePoint/OneDrive as the only source of truth. (3) Your files live entirely in cloud-native tools (Google Docs, Notion) and never touch the local disk. (4) You already run Time Machine plus a strict naming convention and have never been burned. Outside these, Keeply fills the file-level intentional save history that nothing else covers.
 howto_schema:
