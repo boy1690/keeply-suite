@@ -17,9 +17,9 @@ cta_topic: versioning
 image_alt_data: "Orologio alle 11:23 accanto a tre file — proposal_v3_FINAL.docx, v3_FINAL_v2.docx, v3_FINAL_final.docx — nessuno riconducibile alla consegna di marzo chiesta dal cliente; Salvataggio automatico di Word e OneDrive non raggiungono 3 mesi indietro"
 faq_schema:
   - q: Cosa fa la cronologia versioni integrata di Word?
-    a: "Word ha tre meccanismi: AutoRecover (recupero dai crash, cancellato alla chiusura), salvataggio automatico (salva nel cloud mentre scrivi) e la cronologia versioni di OneDrive (conserva circa 500 snapshot di versione). Tutti e tre sono recupero a breve termine da incidenti di salvataggio — nessuno è pensato per tracciare il file consegnato 3 mesi fa."
-  - q: Quanto conservano AutoRecover, OneDrive e Time Machine?
-    a: "AutoRecover si cancella quando il file si chiude normalmente; la cronologia versioni di OneDrive ha un default di circa 500 versioni e cancella le più vecchie oltre quella soglia; Time Machine su Mac tiene snapshot orari per 24 ore e snapshot giornalieri per 30 giorni. Ogni meccanismo ha un tetto di conservazione — nessuno arriva oltre la linea dei 3 mesi."
+    a: "Word ha tre meccanismi: Ripristino automatico (recupero dai crash, cancellato alla chiusura), salvataggio automatico (salva nel cloud mentre scrivi) e la cronologia versioni di OneDrive (conserva circa 500 snapshot di versione). Tutti e tre sono recupero a breve termine da incidenti di salvataggio — nessuno è pensato per tracciare il file consegnato 3 mesi fa."
+  - q: Quanto conservano Ripristino automatico, OneDrive e Time Machine?
+    a: "Ripristino automatico si cancella quando il file si chiude normalmente; la cronologia versioni di OneDrive ha un default di circa 500 versioni e cancella le più vecchie oltre quella soglia; Time Machine su Mac tiene snapshot orari per 24 ore e snapshot giornalieri per 30 giorni. Ogni meccanismo ha un tetto di conservazione — nessuno arriva oltre la linea dei 3 mesi."
   - q: Perché la cronologia versioni di Word non arriva a 3 mesi fa?
     a: "La cronologia versioni integrata vive nel \"livello di salvataggio\", pensata per l'ultima scrittura fallita, con una conservazione tarata su quanto spesso l'utente medio torna indietro entro un mese. Oltre i 3 mesi non è un obiettivo di progettazione, quindi l'eliminazione è un comportamento ragionevole. Risolverlo richiede una cronologia versioni sempre attiva a livello di strumento."
   - q: Cosa serve per recuperare un file consegnato 3 mesi fa?

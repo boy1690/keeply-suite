@@ -50,7 +50,7 @@ What Sarah doesn't realize: her recovery worked despite three things she did rig
 
 She used dropbox.com, not her desktop file manager. If `proposal_v3_FINAL.docx` had been in a folder excluded by [Selective Sync](https://help.dropbox.com/sync/selective-sync-overview) — Dropbox's option to keep certain folders off your machine to save disk space — the deletion would have happened cloud-side without ever passing through her local Trash. People miss this every day; they look locally first, see nothing, and assume the file was never there.
 
-She also restored a file, not a specific version. If Sarah had wanted the `proposal_v3` from three Tuesdays ago — not today's version — she'd have needed version history, which is a separate tree from deletion history. Restoring brings back the file as it was at the moment of deletion. The three earlier saves she made yesterday are baked in.
+She also restored a file, not a specific version. If Sarah had wanted the `proposal_v3` from three Tuesdays ago — not today's version — she'd have needed [version history](/en/post/file-version-management-complete-guide/), which is a separate tree from deletion history. Restoring brings back the file as it was at the moment of deletion. The three earlier saves she made yesterday are baked in.
 
 And she'd never seen a conflicted copy in this folder. If she had — `proposal (Marco's conflicted copy 2026-04-15).docx`, a marker Dropbox creates during [sync collisions](../dropbox-conflicted-copy/) — and her teammate had deleted it thinking it was redundant, she'd be searching for the wrong filename in Deleted files.
 

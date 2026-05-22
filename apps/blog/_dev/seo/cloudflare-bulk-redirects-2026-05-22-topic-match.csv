@@ -1,0 +1,7 @@
+URL,Target URL,Status,Preserve query string,Include subdomains,Subpath matching,Preserve path suffix
+https://blog.keeply.work/en/tags/excel/,https://blog.keeply.work/en/post/excel-version-history-limits/,301,false,false,false,false
+https://blog.keeply.work/it/tags/excel/,https://blog.keeply.work/it/post/excel-version-history-limits/,301,false,false,false,false
+https://blog.keeply.work/zh-cn/tags/cmd%2Bs/,https://blog.keeply.work/zh-cn/post/what-keeply-saves-vs-backup-cloud/,301,false,false,false,false
+https://blog.keeply.work/zh-cn/tags/nas/,https://blog.keeply.work/zh-cn/post/hidden-cost-shared-folders/,301,false,false,false,false
+https://blog.keeply.work/zh-cn/tags/%E6%96%87%E4%BB%B6%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/,https://blog.keeply.work/zh-cn/post/file-version-management-complete-guide/,301,false,false,false,false
+https://blog.keeply.work/zh-cn/tags/%E7%9F%A5%E8%AF%86%E5%B7%A5%E4%BD%9C%E8%80%85/,https://blog.keeply.work/zh-cn/post/file-version-management-complete-guide/,301,false,false,false,false
