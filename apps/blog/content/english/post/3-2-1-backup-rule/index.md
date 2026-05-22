@@ -29,7 +29,7 @@ faq_schema:
   - q: Do solo workers need 3-2-1 backups too?
     a: Depends on how much your files matter. The criterion is one question - would losing this hurt? It has nothing to do with individual vs enterprise. If yes, you need 3-2-1. But 3-2-1 is necessary not sufficient - operator-error scenarios need version history on top.
   - q: Is Keeply already 3-2-1?
-    a: Yes. Keeply builds 3-2-1 directly into its location layer (local work copy + canonical store + backup location), adds automatic version history on every save, and a Release freeze mechanism (mark a snapshot as "the version that went to the client" so it can't be overwritten by later saves). One tool covers spatial redundancy + temporal redundancy + release freeze.
+    a: Yes. Keeply builds 3-2-1 directly into its location layer (local work copy + canonical store + backup location), adds version history (the versions you save, plus optional auto-save every 15–30 min), and a Release freeze mechanism (mark a snapshot as "the version that went to the client" so it can't be overwritten by later saves). One tool covers spatial redundancy + temporal redundancy + release freeze.
 ---
 
 # 【2026 File Management】3-2-1 backup rule: spatial redundancy, not temporal
@@ -135,7 +135,7 @@ And there's the Release freeze layer — when he hit "Save version" on Feb 14 an
 Three things, one tool:
 
 - **Spatial redundancy**: local + canonical + backup (Keeply has 3-2-1 built into its location layer)
-- **Temporal redundancy**: every save preserved in version history, you can attach notes
+- **Temporal redundancy**: every version you save preserved in version history, you can attach notes
 - **Release freeze**: mark a significant version as "Client v2.3" and it's never overwritten
 
 The "offsite" principle is still on Sam to decide — if he keeps the local machine and the backup in the same office, a fire takes both. No tool fixes that. But he doesn't need two separate tools, one for spatial redundancy and one for temporal. One [Keeply](https://keeply.work), from his laptop to backup, from this second to last week's Release version, all visible and all retrievable.

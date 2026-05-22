@@ -31,7 +31,7 @@ faq_schema:
     a: No. File History saves a copy on a schedule (default every hour) only when the external drive is connected. If your drive was offline yesterday, there's no yesterday snapshot — the most recent version available will be from whenever the drive was last connected. This is one reason restoring through File History can return an unexpectedly old version.
     
   - q: Where does Keeply fit?
-    a: Keeply is a per-save version history layer that lives next to whatever cloud or backup you're already running. Not a replacement for Windows Backup or File History. You keep using those for disaster recovery and external-drive sync; Keeply captures every deliberate save so you can pull back the specific version you intended, not the closest scheduled snapshot.
+    a: Keeply is a per-save version history layer that lives next to whatever cloud or backup you're already running. Not a replacement for Windows Backup or File History. You keep using those for disaster recovery and external-drive sync; Keeply captures the versions you deliberately save so you can pull back the specific version you intended, not the closest scheduled snapshot.
 ---
 
 # 【2026 File Management】Windows file history vs backup: 3 different things
@@ -95,9 +95,9 @@ Look at the table again. The bottom-right corner — "the specific version I del
 
 File History gives you a scheduled snapshot, not your save. Windows Backup gives you the disk, not a file. OneDrive gives you cloud history, but only for cloud-synced files and only within the retention window.
 
-A per-save intent-driven version history layer — every Cmd+S becomes a recoverable point, locally, no time cap — is the missing axis.
+An intent-driven version history layer — every version you save becomes a recoverable point, locally, no time cap — is the missing axis.
 
-[Keeply](https://keeply.work) is one implementation. It watches the folders you point it at and captures every save as its own version, without scheduling and without a retention cap. Pull yesterday's draft at 2:47 PM, not the closest scheduled snapshot.
+[Keeply](https://keeply.work) is one implementation. It watches the folders you point it at and keeps the versions you save as their own versions (plus an optional timer), without an external-drive schedule and without a retention cap. Pull yesterday's draft at 2:47 PM, not the closest scheduled snapshot.
 
 After a meeting, you hit "Save version" and the dialog opens — you attach a note like "post-meeting conclusions added" and save:
 

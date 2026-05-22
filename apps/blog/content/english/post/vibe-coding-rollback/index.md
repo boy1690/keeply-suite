@@ -29,7 +29,7 @@ faq_schema:
   - q: Aren't the editor's built-in undo and IDE local history enough?
     a: Not quite. IDE undo is per-file and only spans the current session. When the AI touches 12 files at once and you've already switched buffers, undo breaks. Keeply snapshots the entire project tree, so it doesn't matter how many files the AI changed — one click restores the folder.
   - q: How does Keeply catch the AI-overshoot moment?
-    a: Keeply quietly tracks every save in the project folder you've added, so every few minutes there's a restorable point. When the AI agent runs too far or a new prompt drags in a dependency you didn't want, you don't need to read the diff or remember which files changed — restore to the last "still running" point and continue iterating.
+    a: Keeply keeps the versions you save in the project folder you've added; turn on auto-save and you get a restorable point every 15–30 min. When the AI agent runs too far or a new prompt drags in a dependency you didn't want, you don't need to read the diff or remember which files changed — restore to the last "still running" point and continue iterating.
 howto_schema:
   name: Vibe Coding 失控時 3 步回退 AI 改動
   totalTime: PT30S

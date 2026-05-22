@@ -21,7 +21,7 @@ faq_schema:
   - q: macOS says "cannot verify developer" — what do I do?
     a: macOS shows this on first launch for any app not published to the App Store. It's Gatekeeper's default protection, not a Keeply issue. After dragging Keeply into the Applications folder, **right-click Keeply and choose "Open"** (don't double-click). Click "Open" again in the confirmation dialog — every double-click after that works normally.
   - q: What should I do right after installing?
-    a: Open Keeply, click "New project" and drag in a folder you're **actively working on and don't want to lose**. The initial scan takes 1-2 minutes to build a baseline, then Keeply records every save in the background while you work as normal.
+    a: Open Keeply, click "New project" and drag in a folder you're **actively working on and don't want to lose**. The initial scan takes 1-2 minutes to build a baseline, then you save a version when it matters (one click / Cmd+S in Keeply); or switch on auto-save and Keeply captures changes every 15–30 min in the background.
   - q: What are the most common install errors?
     a: Three you'll hit most often. (1) `winget` not found — older Windows 10 builds don't ship it; update "App Installer" from the Microsoft Store. (2) .dmg says "damaged" — macOS misjudgment; redownload and right-click open. (3) First project scan is slow — folders over 10 GB take ~5 minutes the first time, but save tracking afterwards is real-time.
 howto_schema:

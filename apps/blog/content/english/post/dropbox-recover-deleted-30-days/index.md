@@ -102,7 +102,7 @@ Sarah, Marco, and Linh had different jobs, different files, different time stamp
 
 Last-chance nets have to expire. Storage costs money. A cloud that kept every deletion forever would either charge differently or silently cap accounts. The 30-day window isn't a bug; it's the product working as designed. The marketing emphasises what gets caught. It doesn't emphasise what doesn't.
 
-The thing that catches what last-chance nets don't is a version history layer that lives somewhere else — somewhere that isn't trying to be a sync engine, isn't trying to be cheap, isn't trying to do twelve things at once. A layer that exists for one job: keeping every save, indefinitely, on your own drive, where storage is cheap and time isn't an enemy.
+The thing that catches what last-chance nets don't is a version history layer that lives somewhere else — somewhere that isn't trying to be a sync engine, isn't trying to be cheap, isn't trying to do twelve things at once. A layer that exists for one job: keeping the versions you save, indefinitely, on your own drive, where storage is cheap and time isn't an enemy.
 
 ## A parallel universe
 

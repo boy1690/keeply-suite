@@ -104,7 +104,7 @@ Here's the worst part. Sam remembers afterward: in March, he sent the client a P
 
 You need two layers:
 
-- **Always-on version history**: every save is preserved, never pruned. Independent of Word's or OneDrive's retention policy.
+- **Always-on version history**: every version you save is preserved, never pruned. Independent of Word's or OneDrive's retention policy.
 - **Delivery-note metadata**: when you export a file, the metadata for "who, when, which underlying version" is embedded. Drop the file back into the tool three months later, see the full origin.
 
 [Keeply](https://keeply.work) provides both layers.

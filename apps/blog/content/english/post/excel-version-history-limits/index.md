@@ -75,7 +75,7 @@ Yeah, that's the frustrating part. What you're hitting isn't a bug, it's a paywa
 
 Three design patterns the tool can use. Each one solves some of the four limits above.
 
-### Design A: Automatic snapshots on every Cmd+S (no cloud dependency)
+### Design A: Automatic version snapshots, no cloud dependency
 
 The tool preserves the previous version every time you press Cmd+S, no matter where the file lives. **Examples**: macOS Time Machine (system-level, whole disk), Keeply (file-layer, scoped to the working folder you choose). **Keeply's difference**: each version is preserved in full with no time limit, unlike OneDrive's 30-day window. **Solves limits #1 + #2 + #3.**
 

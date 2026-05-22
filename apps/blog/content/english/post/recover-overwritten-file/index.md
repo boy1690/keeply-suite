@@ -104,7 +104,7 @@ Lisa has used Keeply for half a year. Monday morning, she notices the month-end 
 
 Note the blue hint line — the 19:30 overwrite isn't discarded, it's kept as its own version in the history. Three seconds later Excel opens Friday's 19:00 sheet. No need to pull an all-nighter rebuilding the report before Monday morning.
 
-That said, Keeply doesn't replace AutoRecover. Mid-document crash rescue is still AutoRecover's first line. Keeply also can't rewrite history retroactively: it has to be running at the time the overwrite happens. For overwrites before you installed Keeply, this article won't help. For every save from today onward, it can.
+That said, Keeply doesn't replace AutoRecover. Mid-document crash rescue is still AutoRecover's first line. Keeply also can't rewrite history retroactively: it has to be running at the time the overwrite happens. For overwrites before you installed Keeply, this article won't help. For the versions you save from today onward, it can.
 
 That's the part that should let you breathe.
 
@@ -136,7 +136,7 @@ The "Oh no, I just overwrote it" moment at 19:30 will come again. You don't know
 
 But here's what you should know: post-event rescue has limits. Upstream prevention doesn't depend on noticing in time.
 
-For every save from today onward. Can you let the tool keep that version for you?
+For the versions you save from today onward. Can you let the tool keep that version for you?
 
 ---
 

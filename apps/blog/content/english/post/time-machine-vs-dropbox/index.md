@@ -97,7 +97,7 @@ A tool built around file-level intentional version history does these things:
 - **A "Release" or "Milestone" marker** — flag a specific save as "this is what I sent the client on March 8" and it survives forever, even if you save the file 500 more times after
 - **Works alongside Time Machine and Dropbox** — doesn't replace them, sits on the third axis
 
-[Keeply](https://keeply.work) is one implementation of this third layer. It runs locally, watches the folders you add, captures every deliberate save, no cap. The Release feature lets you freeze a specific version as a milestone.
+[Keeply](https://keeply.work) is one implementation of this third layer. It runs locally, watches the folders you add, captures the versions you deliberately save, no cap. The Release feature lets you freeze a specific version as a milestone.
 
 ```
 Keeply — Tuesday afternoon two months ago

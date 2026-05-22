@@ -23,7 +23,7 @@ faq_schema:
   - q: Why is `_FINAL` naming not your mistake but the tool's failure?
     a: What you're doing is logically right - you need to mark version meaning. The error is at the tool layer - no automatic milestone or automatic version cut mechanism, so it dumps the responsibility onto the filename. The tool didn't pick up the baton, so you use the only tool you have - the filename - to solve the problem.
   - q: Which 3 tool designs solve "too many versions"?
-    a: Design A - automatic checkpoints (every Cmd+S preserves history, no user discipline required). Design B - milestone freeze (user marks client-signoff or ship moments as permanent). Design C - single-file restore (pull one file from history without affecting others). Keeply does all three.
+    a: Design A - automatic checkpoints (the versions you save are preserved, no naming discipline required). Design B - milestone freeze (user marks client-signoff or ship moments as permanent). Design C - single-file restore (pull one file from history without affecting others). Keeply does all three.
   - q: When is Keeply not the right answer to the "too many versions" problem?
     a: Daily piling of tens of GB of raw video footage doesn't fit (Keeply isn't cold storage). Real-time multi-person meeting notes are better in Notion or Google Docs. Pure legal-signing workflows want DocuSign or similar specialized tools.
 ---
@@ -99,7 +99,7 @@ You're doing the right thing. Naming `_v3_FINAL` is a reasonable survival reflex
 
 Three design patterns the tool can use. Each one solves one of the four pain types above.
 
-### Design A: Automatic checkpoints (every Cmd+S keeps history)
+### Design A: Automatic checkpoints (the versions you save are kept)
 
 You press Cmd+S, the tool quietly preserves the previous version. You don't have to name anything. **Examples**: macOS Time Machine (Apple's built-in tool that snapshots every hour), Word AutoSave ([only goes back 1-2 versions](/en/post/excel-version-history-limits/)), Dropbox 30-day version history. **Keeply** runs this in the background on your working folder: text files only store what changed, design and image files each keep a full snapshot — so large files don't blow out your disk. **Solves Type 1.**
 

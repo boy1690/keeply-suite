@@ -27,7 +27,7 @@ faq_schema:
   - q: What are the 4 steps of AutoCAD drawing version control?
     a: Step 1 — when a new revision lands in the office, notify the field and require a "got it" reply. Step 2 — preserve the old version before overwriting. Step 3 — adopt a tool like Keeply that auto-records each save with notes. Step 4 — keep at least one off-NAS backup to survive a server failure.
   - q: What if the architect flips back to an earlier layout?
-    a: Common in construction — the owner says "rev 2's edge detail was cleaner, go back". If the old version wasn't preserved and the crew already laid it out, you're in trouble. Keeply auto-keeps every saved version with notes, so you can roll the project back to "before owner rolled to rev 2" in two clicks.
+    a: Common in construction — the owner says "rev 2's edge detail was cleaner, go back". If the old version wasn't preserved and the crew already laid it out, you're in trouble. Keeply keeps every version you save, with notes, so you can roll the project back to "before owner rolled to rev 2" in two clicks.
   - q: Does every site crew member need to install Keeply?
     a: No. Keeply runs on the office machine and holds the version timeline. The crew can verify from printed sheets or via a single site PM device. Keeply solves the office-field handoff gap, not "every foreman watches a timeline on their phone".
 howto_schema:
@@ -186,7 +186,7 @@ The full pillar [file version management complete guide](/en/post/file-version-m
 
 ---
 
-Remember that 9:40 AM moment. The PM pulling up Thursday's revision, and your chest dropping? You don't have to be the version manager anymore. **Keeply: your file's guardian memory.** Remembers every save, every issued version, every snapshot before the old one gets overwritten. Lives inside your existing project folder. No new tools, no new habits for the crew. Construction fits especially well, because the line between office and field breaks on every single project.
+Remember that 9:40 AM moment. The PM pulling up Thursday's revision, and your chest dropping? You don't have to be the version manager anymore. **Keeply: your file's guardian memory.** Remembers every version you save, every issued version, every snapshot you take before the old one gets overwritten. Lives inside your existing project folder. No new tools, no new habits for the crew. Construction fits especially well, because the line between office and field breaks on every single project.
 
 [Meet Keeply →](https://keeply.work)
 

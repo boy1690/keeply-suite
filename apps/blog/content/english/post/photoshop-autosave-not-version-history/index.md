@@ -19,7 +19,7 @@ faq_schema:
   - q: Can the Photoshop History panel restore yesterday's version?
     a: No. The History panel only records the steps you took in this PSD during this session. The moment you close the file and reopen it, all that history is gone. It solves "undo my last 50 steps", not "bring back yesterday's version".
   - q: How can designers add file-level version history to Photoshop?
-    a: Add an external layer that auto-versions on every save. A tool like Keeply lets you save a version of the PSD the moment it matters, with a note like "client-approved" — and you can switch on auto-save so it also captures changes on a timer (every 15–30 min). The version from 30 minutes ago — or 6 months ago — is two clicks away. It works regardless of how or how many times you open Photoshop.
+    a: Add an external layer for file-level version history. A tool like Keeply lets you save a version of the PSD the moment it matters, with a note like "client-approved" — and you can switch on auto-save so it also captures changes on a timer (every 15–30 min). The version from 30 minutes ago — or 6 months ago — is two clicks away. It works regardless of how or how many times you open Photoshop.
   - q: When don't designers need this extra layer?
     a: Three cases. (1) Quick gigs with no revision rounds where the client signs off and the file is archived. (2) Your studio mandates Adobe Creative Cloud version history and it's never failed you. (3) Your naming convention is so strict that every Cmd+S becomes -v07 -v08 and you genuinely never get lazy. Outside those, someday you'll hit "the client wants v2 back but I only have v5".
 ---
@@ -103,7 +103,7 @@ When you realize you've overwritten the v2 the client wanted, you open Keeply, s
 
 Notice the line under the red "Restore this version" button — anything you edited after 5/14 14:30 won't be wiped, it's saved as a new version. Old and new both live in the timeline, nothing gets lost. You compare the two visually, copy the v3 colors onto the restored v2, and that hour of redoing layer work compresses into 30 seconds of clicks.
 
-One more thing: Keeply runs alongside Adobe Creative Cloud, Time Machine, whatever cloud sync you already use — it doesn't replace any of them. It fills the one gap none of them address: persistent file-level version history for binary creative files, watched on every save.
+One more thing: Keeply runs alongside Adobe Creative Cloud, Time Machine, whatever cloud sync you already use — it doesn't replace any of them. It fills the one gap none of them address: persistent file-level version history for binary creative files — the versions you save, plus optional auto-save.
 
 That gap is also the part designers feel hardest in [the broader file version management problem](/post/file-version-management-complete-guide/) — PSDs are big, edits are destructive, and clients change their mind about which v2 they meant.
 

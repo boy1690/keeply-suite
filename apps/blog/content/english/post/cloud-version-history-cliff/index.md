@@ -27,7 +27,7 @@ faq_schema:
   - q: Does iCloud Drive keep version history for files like PSD or Word?
     a: No. iCloud Drive syncs the latest version of non-Apple files but does not preserve older versions. Apple has never published a version-history retention policy for these files because there isn't one — only Recently Deleted (30 days) covers deletion recovery, not in-place edits.
   - q: Is Keeply a replacement for cloud storage like Dropbox?
-    a: No. Keeply is an additional layer above your cloud sync — it keeps every save locally with no time or count cap. Your cloud handles sync and offsite copy; Keeply handles version history. You don't migrate, you add a layer.
+    a: No. Keeply is an additional layer above your cloud sync — it keeps the versions you save locally — no time or count cap. Your cloud handles sync and offsite copy; Keeply handles version history. You don't migrate, you add a layer.
 ---
 
 # 【2026 File Management】Before comparing iCloud vs Dropbox: all 4 clouds share the same version history cliff
@@ -83,18 +83,18 @@ The version you need isn't priced into the comparison. The version you need show
 
 ## The version-history layer that isn't a cloud feature
 
-Here's the reframe: you don't switch clouds to fix this. Your cloud is fine for sync. The missing piece is a **separate layer** above it — file-level version history, time-uncapped, automatic on every save.
+Here's the reframe: you don't switch clouds to fix this. Your cloud is fine for sync. The missing piece is a **separate layer** above it — file-level version history, time-uncapped — the versions you save (manually, or via optional auto-save every 15–30 min).
 
 Concretely:
 
 - **Cloud (any of the 4)** handles sync + offsite copy
-- **Version-history layer (Keeply or similar)** handles every save, no time cap, no count cap, no "Keep forever" decision at save time
+- **Version-history layer (Keeply or similar)** keeps the versions you save (manual + optional auto-save), no time cap, no count cap, no "Keep forever" decision at save time
 
 You're not replacing Dropbox or iCloud. You're adding a layer that the cloud was never designed to be.
 
 Works with iCloud Drive, Dropbox, OneDrive, Google Drive, Synology and QNAP NAS, plain Finder folders — you don't migrate, you add a layer above what's already there.
 
-[Keeply](https://keeply.work) is the reference implementation of this layer: every save kept locally with no time or count cap, plus a "Release" snapshot mechanism — mark a version as "this is what went to the client" and that snapshot survives forever, even after fifty later saves. Two-month-old version recovery in about two clicks.
+[Keeply](https://keeply.work) is the reference implementation of this layer: the versions you save kept locally with no time or count cap, plus a "Release" snapshot mechanism — mark a version as "this is what went to the client" and that snapshot survives forever, even after fifty later saves. Two-month-old version recovery in about two clicks.
 
 ```
 Keeply timeline — proposal.psd

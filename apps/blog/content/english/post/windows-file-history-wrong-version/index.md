@@ -25,7 +25,7 @@ faq_schema:
     a: No. It saves on a schedule (default hourly, configurable), and only when the configured drive is connected. Between snapshots, your saves don't get captured by File History. If you press Cmd+S twenty times in an hour, File History sees the version at the next hourly checkpoint — not your twenty saves.
     
   - q: How is File History different from a "version history"?
-    a: File History is schedule-driven snapshots — the system decides when. A per-save version history is intent-driven — the moment you press Cmd+S becomes a recoverable point. Cloud sync (OneDrive, Dropbox) and tools like Keeply are intent-driven; File History is schedule-driven. They restore different things.
+    a: File History is schedule-driven snapshots — the system decides when. An intentional version history is intent-driven — the version you save (a click, or auto-save on a timer) becomes a recoverable point. Cloud sync (OneDrive, Dropbox) and tools like Keeply are intent-driven; File History is schedule-driven. They restore different things.
     
   - q: Can I make File History snapshot more often?
     a: You can set it to every 10 minutes in the legacy interface. That helps but doesn't change the fundamental shape — if the drive is offline, no snapshot happens. And ten minutes is still not your save.
@@ -98,7 +98,7 @@ The article isn't a complaint about File History. It's a clarification of what s
 
 If your common loss scenario is "I made a save at 2:47 PM yesterday and want exactly that version," File History won't reliably give it to you. You need a different layer.
 
-[Keeply](https://keeply.work) runs locally and captures every Cmd+S as its own version, regardless of schedule or drive connection. The captures live with the project, not on a separate external drive that might be offline. When you ask for "yesterday's draft," Keeply walks back through saves, not through scheduled snapshots, and returns the one you actually made.
+[Keeply](https://keeply.work) runs locally and captures the versions you save as their own versions, regardless of schedule or drive connection. The captures live with the project, not on a separate external drive that might be offline. When you ask for "yesterday's draft," Keeply walks back through saves, not through scheduled snapshots, and returns the one you actually made.
 
 When you hit "Save version" manually, a dialog opens so you can attach a one-line note — "after meeting" or "client-approved" — that you'll actually recognize months later:
 
