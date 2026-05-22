@@ -22,30 +22,30 @@ cta_topic: install
 image_alt_data: "Side-by-side comparison: 30-feature checklist taking 14 days to on-board versus 2 actions — drag one folder, keep working — achieving first-day protection with no learning curve required"
 faq_schema:
   - q: What do I have to learn to start using Keeply?
-    a: "You don't have to learn 30 features. Just two actions — drag one folder you're working on into the Keeply window, then keep saving the way you normally do. Keeply records every save in the background — no shortcuts to memorise, no commands to type."
+    a: "You don't have to learn 30 features. Two actions: (1) drag one folder you're working on into the Keeply window; (2) save a version at the moments that matter — one click (or Cmd+S inside Keeply) with a note. Want it hands-off? Switch on auto-save and Keeply captures changes on a timer (every 15–30 min). No commands to type."
   - q: Is Keeply a big shift from tools I've used before?
-    a: No retraining. Keeply doesn't ask you to rename files, reorganise folders, or create a repository concept. You hit Cmd+S (or Ctrl+S) the way you always do, and Keeply keeps the timeline. When you need an older version, you scroll the timeline and click restore.
+    a: No retraining. Keeply doesn't ask you to rename files, reorganise folders, or create a repository concept. You save a version when it matters — a click, or Cmd+S inside the Keeply window — or switch on auto-save for hands-off capture on a timer; Keeply keeps the timeline. When you need an older version, scroll the timeline and click restore.
   - q: So what are the only 2 actions to remember?
-    a: Action 1 — drag in a folder you're actively working on and don't want to lose; no renaming, no categorising. Action 2 — keep working as usual; Keeply auto-records every save. Day 1 you're already protected; day 7 the timeline shows you everything it's been quietly capturing.
+    a: Action 1 — drag in a folder you're actively working on and don't want to lose; no renaming, no categorising. Action 2 — save a version at meaningful moments (one click, or Cmd+S in Keeply, with a note); or turn on auto-save so Keeply captures changes on a 15–30 min timer. Day 1 you're already protected; day 7 the timeline shows you what it has kept.
   - q: What does the first week actually feel like?
-    a: 'Day 1 — you drag a folder in and barely notice anything. Day 2-3 — you start seeing the timeline fill up with every save, with diff details one click away. Day 7 — usually you''ll have an "I made the wrong edit, let me restore" moment, and that''s when you realise this safety net was missing before.'
+    a: 'Day 1 — you drag a folder in and barely notice anything. Day 2-3 — you start seeing the timeline fill up with the versions you've saved (plus auto-saved ones if you enabled it), with diff details one click away. Day 7 — usually you''ll have an "I made the wrong edit, let me restore" moment, and that''s when you realise this safety net was missing before.'
   - q: When is Keeply not the right tool for you?
     a: Four cases worth naming. (1) Pure code work — Git/GitHub fits better. (2) Your company mandates SharePoint/OneDrive as the only source of truth. (3) Your files live entirely in cloud-native tools (Google Docs, Notion) and never touch the local disk. (4) You already run Time Machine plus a strict naming convention and have never been burned. Outside these, Keeply fills the file-level intentional save history that nothing else covers.
 howto_schema:
-  name: Keeply 從零開始 2 個動作上手
+  name: Get started with Keeply in 2 actions
   totalTime: PT7D
   steps:
-    - name: 動作 1：拖入資料夾
-      text: 把一個目前正在進行、不想搞丟的資料夾直接拖進 Keeply 視窗，不改命名、不分類、不思考結構，拖進去就完成。
+    - name: 'Action 1: Drag in a folder'
+      text: Drag a folder you're currently working on and don't want to lose straight into the Keeply window — no renaming, no categorising, no thinking about structure.
       url: '#what-are-the-two-actions'
-    - name: 動作 2：繼續工作
-      text: 照平常習慣改檔案、存檔，Keeply 自動在時間軸記錄每次存檔變動，不需要按任何按鈕或記憶快捷鍵。
+    - name: 'Action 2: Save a version at key moments'
+      text: At the moments that matter, click Keeply's "save version" (or Cmd+S inside Keeply) and add a note; or switch on auto-save to capture changes on a 15/30/60-min timer.
       url: '#what-are-the-two-actions'
-    - name: Day 2-3 看時間軸
-      text: 第 2 到第 3 天打開 Keeply 時間軸，確認每次存檔筆記已累積出現，點進任一筆可看到新增或刪除了哪些內容。
+    - name: 'Day 2-3: Check the timeline'
+      text: Open the Keeply timeline on day 2-3 and confirm your saved versions have accumulated; click any one to see what was added or removed.
       url: '#first-week-natural'
-    - name: Day 7 確認價值
-      text: 第 7 天回顧整週的時間軸，確認版本歷史是否讓你感到有保障；若某天發現改錯可直接點歷史版本還原。
+    - name: 'Day 7: Confirm the value'
+      text: Review the week's timeline on day 7 and confirm the version history gives you peace of mind; if you find a wrong edit, restore an earlier version with a click.
       url: '#first-week-natural'
 ---
 
@@ -111,7 +111,7 @@ The tool isn't the problem. **This category of software just shouldn't be design
 
 ## So what are the 2 actions? {#what-are-the-two-actions}
 
-There are only two: **drag a folder into Keeply, then keep doing what you were going to do today**. No settings to configure, no shortcuts to memorize, no 30-page docs. Keeply quietly stores version history in the background.
+There are only two: **drag a folder into Keeply, then save a version when it matters**. No commands to learn, no 30-page docs. Saving a version is one click — Keeply's "save version" button (or Cmd+S inside Keeply) — and if you'd rather not think about it, switch on auto-save and Keeply captures changes every 15–30 min.
 
 ### Action 1: Drag a folder into Keeply
 
@@ -119,13 +119,13 @@ You literally just drag it in. **Don't rename, don't categorize, don't think abo
 
 ![3-step visual: drag a whole folder from desktop into the Keeply window](image-3.svg)
 
-### Action 2: Keep working
+### Action 2: Save a version when it matters
 
-Whatever you were going to do today, do it.
+Do whatever you were going to do today. When you finish a section, when a client signs off on a version, before a big risky change — click Keeply's "save version" and add a one-line note (e.g. "client-approved"). That moment lands in the Timeline on the left.
 
-Edit a file, save, revert to the previous version, delete and redo. **Keeply auto-saves into the Timeline on the left and creates one file note.** You don't press a button. You don't memorize a shortcut.
+Don't want to remember to click? Switch on auto-save and Keeply captures your changes every 15/30/60 min (your choice) — your manual saves carry your notes, the auto ones are timestamped, both on the same timeline.
 
-![Keeply Timeline visual: every save is one file note, click in to see the diff](image-4.svg)
+![Keeply Timeline visual: every version is one file note, click in to see the diff](image-4.svg)
 
 You don't have to rename your files either. That `_v3_actually_final.docx` keeps its name. Keeply doesn't touch your habits.
 
