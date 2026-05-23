@@ -78,8 +78,8 @@
   /de/ + /es/ homes also 301 via CF, and /pt-br/ home is a 1-article thin page —
   mirrors the sitemap.xml home-exclusion for these locales).
 */ -}}
-{{- $coreLocales := slice "en" "zh-tw" "zh-cn" "ja" "ko" "it" "de" "es" "pt-br" "pl" -}}
-{{- $marketPilotLocales := slice "de" "es" "pt-br" "pl" -}}
+{{- $coreLocales := slice "en" "zh-tw" "zh-cn" "ja" "ko" "it" "de" "es" "pt-br" "pl" "tr" -}}
+{{- $marketPilotLocales := slice "de" "es" "pt-br" "pl" "tr" -}}
 {{- $isAutoTranslate := not (in $coreLocales .Site.Language.Lang) -}}
 {{- $noindex := false -}}
 {{- if $isAutoTranslate -}}{{- $noindex = true -}}{{- end -}}

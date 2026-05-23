@@ -160,3 +160,7 @@ default:
     soft: "Jeśli masz dziś zrobić jedną rzecz, niech narzędzie zapamięta każdą wersję każdego pliku."
     medium: "Za darmo + 30 sekund instalacji. Nie ma powodu, żeby nie spróbować."
     hard: "Wciąż nadpisujesz stare wersje? 30 sekund dziś oszczędza ci kolejnego polowania na plik."
+  tr:
+    soft: "Bugün tek bir şey yapacaksanız, bir aracın her dosyanın her sürümünü hatırlamasına izin verin."
+    medium: "Ücretsiz + kurulumu 30 saniye. Denememek için hiçbir sebep yok."
+    hard: "Hâlâ eski sürümlerin üzerine mi yazıyorsunuz? Bugünkü 30 saniye, bir sonraki dosya avından kurtarır."
