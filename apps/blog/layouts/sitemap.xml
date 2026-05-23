@@ -17,15 +17,16 @@
     - Always emit: home + post bundles only.
   Per spec seo-indexability-l2 FR-001 / FR-002.
 */ -}}
-{{- $coreLocales := slice "en" "zh-tw" "zh-cn" "ja" "ko" "it" "de" -}}
+{{- $coreLocales := slice "en" "zh-tw" "zh-cn" "ja" "ko" "it" "de" "es" -}}
 {{- if in $coreLocales .Site.Language.Lang -}}
 {{- range .Data.Pages -}}
   {{- $include := false -}}
   {{- if eq .Kind "page" -}}{{- $include = true -}}{{- end -}}
-  {{- /* home: emit for core-6, but NOT de — the /de/ home 301s to /en/ (CF bulk
-         redirect, exact match); listing a redirecting URL in the sitemap creates a
-         "Page with redirect" GSC notice. de ships only the article page. */ -}}
-  {{- if eq .Kind "home" -}}{{- if ne .Site.Language.Lang "de" -}}{{- $include = true -}}{{- end -}}{{- end -}}
+  {{- /* home: emit for core-6, but NOT for market locales de/es — their /de/ + /es/
+         homes 301 to /en/ (CF bulk redirect, exact match); listing a redirecting URL
+         in the sitemap creates a "Page with redirect" GSC notice. These locales ship
+         only the article page(s). */ -}}
+  {{- if eq .Kind "home" -}}{{- if not (in (slice "de" "es") .Site.Language.Lang) -}}{{- $include = true -}}{{- end -}}{{- end -}}
   {{- if $include }}
   <url>
     <loc>{{ .Permalink }}</loc>{{ if not .Lastmod.IsZero }}

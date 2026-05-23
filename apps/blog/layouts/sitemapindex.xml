@@ -7,12 +7,12 @@
   still build per-locale sitemap.xml files but are NOT linked here, so Google
   doesn't crawl them as part of the canonical sitemap submission (per R1, spec
   seo-indexability-l2 FR-002).
-  EXCEPTION: de added 2026-05-22 — country-specific concentrated-publishing pilot
-  with a hand-written native article (excel-nicht-gespeicherte-datei-wiederherstellen);
-  it is a real indexable page, not MT, so it belongs in the canonical sitemap.
-  When es/pt/pl/tr ship their native pilots, add them here too.
+  EXCEPTION: de + es added 2026-05-22 — country-specific concentrated-publishing
+  pilots with hand-written native articles (de: excel-nicht-gespeicherte-datei-...;
+  es: recuperar-archivo-excel-no-guardado); real indexable pages, not MT, so they
+  belong in the canonical sitemap. When pt/pl/tr ship their native pilots, add them too.
 */ -}}
-{{- $coreLocales := slice "en" "zh-tw" "zh-cn" "ja" "ko" "it" "de" -}}
+{{- $coreLocales := slice "en" "zh-tw" "zh-cn" "ja" "ko" "it" "de" "es" -}}
 {{- range . -}}
   {{- if in $coreLocales .Language.Lang }}
   <sitemap>
