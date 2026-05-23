@@ -206,6 +206,17 @@ disableKinds = ["taxonomy", "term"]
     contentDir = "content/es"
     [languages.es.params]
       description = "Keeply Blog — tu guardián de la gestión de archivos. Notas de campo sobre historial de versiones, recuperación de archivos y cómo no perder nunca una versión."
+  # pt re-added 2026-05-22 (R1 SELECTIVE reversal, same as de/es): native-written,
+  # keyword-targeted BR-market pilot (recuperar-documento-word-nao-salvo, 720 vol).
+  # Only hand-crafted /pt/ pages; NOT blanket auto-translate. CF Bulk Redirect
+  # /pt/* → /en/* needs a per-path exception per shipped /pt/ slug (subpath off).
+  [languages.pt]
+    languageName = "Português"
+    title = "Keeply Blog"
+    weight = 9
+    contentDir = "content/pt"
+    [languages.pt.params]
+      description = "Keeply Blog — o seu guardião da gestão de arquivos. Notas de campo sobre histórico de versões, recuperação de arquivos e como nunca mais perder uma versão."
   # R1 (2026-05-18 GSC audit): 11 zero-click auto-translate locales removed
   # from build entirely. Evidence: 90-day GSC data showed only pt + es had any
   # clicks (1 each); de/fr/ru/nl/pl/tr/vi/th/id/ar/hi all 0 clicks. All 11
