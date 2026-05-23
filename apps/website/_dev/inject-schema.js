@@ -47,10 +47,16 @@ const ORG = {
   name: 'Keeply',
   url: BASE_URL,
   logo: `${BASE_URL}/logo.svg`,
+  // Bidirectional founder link (E-E-A-T, 2026-05-22): the #founder Person node is
+  // fully defined in the homepage + /about @graphs; inner pages reference it by @id
+  // (standard cross-page entity stitching). Fixes Organization.founder being absent
+  // while Person.worksFor already pointed back — Google prefers the explicit link.
+  founder: { '@id': `${BASE_URL}/#founder` },
   sameAs: [
     'https://keeply.work',
     'https://blog.keeply.work',
     'https://github.com/boy1690/keeply-releases',
+    'https://www.linkedin.com/company/keeply-work/',
     'https://www.linkedin.com/in/ting-wei-tsao-b57480152/'
   ]
 };
