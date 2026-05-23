@@ -67,8 +67,19 @@
   Google still walks them to discover real articles.
   Otherwise default (no robots meta = indexable, follow).
   Hreflang block below is unaffected so multilingual graph remains intact.
+
+  2026-05-23: de / es / pt-br added to $coreLocales. These are NOT the blanket
+  auto-translate locales R1 removed — they ship hand-written native articles
+  (country-specific concentrated-publishing pilots), so their ARTICLE pages must
+  be indexable. Bug fixed here: the slice still listed only the original 6, so
+  GSC live-test reported "noindex,nofollow detected" on the de/es/pt-br pilots
+  even though they were in the sitemap (Request Indexing was rejected). Their
+  HOME/listing pages stay noindex,FOLLOW (market pilots are article-only; the
+  /de/ + /es/ homes also 301 via CF, and /pt-br/ home is a 1-article thin page —
+  mirrors the sitemap.xml home-exclusion for these locales).
 */ -}}
-{{- $coreLocales := slice "en" "zh-tw" "zh-cn" "ja" "ko" "it" -}}
+{{- $coreLocales := slice "en" "zh-tw" "zh-cn" "ja" "ko" "it" "de" "es" "pt-br" -}}
+{{- $marketPilotLocales := slice "de" "es" "pt-br" -}}
 {{- $isAutoTranslate := not (in $coreLocales .Site.Language.Lang) -}}
 {{- $noindex := false -}}
 {{- if $isAutoTranslate -}}{{- $noindex = true -}}{{- end -}}
@@ -76,6 +87,7 @@
 {{- if eq .Kind "taxonomy" -}}{{- $noindex = true -}}{{- end -}}
 {{- if eq .Kind "term" -}}{{- $noindex = true -}}{{- end -}}
 {{- if findRE "/page/[0-9]+/" .RelPermalink -}}{{- $noindex = true -}}{{- end -}}
+{{- if and (in $marketPilotLocales .Site.Language.Lang) (eq .Kind "home") -}}{{- $noindex = true -}}{{- end -}}
 {{- $paramRobots := .Params.robots -}}
 {{- if $paramRobots }}
 <meta name="robots" content="{{ $paramRobots }}" />
