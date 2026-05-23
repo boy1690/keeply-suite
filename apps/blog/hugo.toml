@@ -206,16 +206,20 @@ disableKinds = ["taxonomy", "term"]
     contentDir = "content/es"
     [languages.es.params]
       description = "Keeply Blog — tu guardián de la gestión de archivos. Notas de campo sobre historial de versiones, recuperación de archivos y cómo no perder nunca una versión."
-  # pt re-added 2026-05-22 (R1 SELECTIVE reversal, same as de/es): native-written,
+  # pt-br re-added 2026-05-22 (R1 SELECTIVE reversal, same as de/es): native-written,
   # keyword-targeted BR-market pilot (recuperar-documento-word-nao-salvo, 720 vol).
-  # Only hand-crafted /pt/ pages; NOT blanket auto-translate. CF Bulk Redirect
-  # /pt/* → /en/* needs a per-path exception per shipped /pt/ slug (subpath off).
-  [languages.pt]
+  # LANG KEY IS "pt-br" not "pt": the theme ships pt-br.toml + pt-pt.toml i18n, and
+  # go-i18n's matcher fails to bind project i18n for the bare base "pt" when regional
+  # variants exist (it falls back to en → English chrome on an otherwise pt-BR page).
+  # "pt-br" matches the theme's pt-br.toml cleanly (full native chrome). URL = /pt-br/
+  # (region-explicit, fine for Brazil). Unlike /de/ /es/, /pt-br/ is NOT in the CF
+  # bulk redirect (only "pt" was) → it serves 200 directly, no CF exception needed.
+  [languages.pt-br]
     languageName = "Português"
     title = "Keeply Blog"
     weight = 9
-    contentDir = "content/pt"
-    [languages.pt.params]
+    contentDir = "content/pt-br"
+    [languages.pt-br.params]
       description = "Keeply Blog — o seu guardião da gestão de arquivos. Notas de campo sobre histórico de versões, recuperação de arquivos e como nunca mais perder uma versão."
   # R1 (2026-05-18 GSC audit): 11 zero-click auto-translate locales removed
   # from build entirely. Evidence: 90-day GSC data showed only pt + es had any

@@ -17,7 +17,7 @@
     - Always emit: home + post bundles only.
   Per spec seo-indexability-l2 FR-001 / FR-002.
 */ -}}
-{{- $coreLocales := slice "en" "zh-tw" "zh-cn" "ja" "ko" "it" "de" "es" "pt" -}}
+{{- $coreLocales := slice "en" "zh-tw" "zh-cn" "ja" "ko" "it" "de" "es" "pt-br" -}}
 {{- if in $coreLocales .Site.Language.Lang -}}
 {{- range .Data.Pages -}}
   {{- $include := false -}}
@@ -26,7 +26,7 @@
          homes 301 to /en/ (CF bulk redirect, exact match); listing a redirecting URL
          in the sitemap creates a "Page with redirect" GSC notice. These locales ship
          only the article page(s). */ -}}
-  {{- if eq .Kind "home" -}}{{- if not (in (slice "de" "es" "pt") .Site.Language.Lang) -}}{{- $include = true -}}{{- end -}}{{- end -}}
+  {{- if eq .Kind "home" -}}{{- if not (in (slice "de" "es" "pt-br") .Site.Language.Lang) -}}{{- $include = true -}}{{- end -}}{{- end -}}
   {{- if $include }}
   <url>
     <loc>{{ .Permalink }}</loc>{{ if not .Lastmod.IsZero }}

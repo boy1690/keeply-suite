@@ -142,3 +142,17 @@ default:
     soft: "Se oggi fai una sola cosa, lascia che sia uno strumento a ricordare ogni versione di ogni file."
     medium: "Gratis, 30 secondi per installarlo. Non c'è motivo di non provarlo."
     hard: "Sovrascrivi ancora le vecchie versioni? 30 secondi oggi ti risparmiano la prossima caccia al file."
+  # de / es / pt — country-specific native pilots (2026-05-22). Added so the pool
+  # doesn't fall back to the "en" pitches on the /de/ /es/ /pt/ pages.
+  de:
+    soft: "Wenn Sie heute eine Sache tun: Lassen Sie ein Tool jede Version jeder Datei merken."
+    medium: "Kostenlos + in 30 Sekunden eingerichtet. Kein Grund, es nicht zu versuchen."
+    hard: "Noch immer alte Versionen überschreiben? 30 Sekunden heute ersparen Ihnen die nächste Dateisuche."
+  es:
+    soft: "Si hoy haces una sola cosa, deja que una herramienta recuerde cada versión de cada archivo."
+    medium: "Gratis + 30 segundos de configuración. Ningún motivo para no probarlo."
+    hard: "¿Sigues sobrescribiendo versiones antiguas? 30 segundos hoy te ahorran la próxima búsqueda."
+  pt-br:
+    soft: "Se você fizer uma coisa hoje, deixe uma ferramenta lembrar cada versão de cada arquivo."
+    medium: "Grátis + 30 segundos para instalar. Nenhum motivo para não testar."
+    hard: "Ainda salvando por cima de versões antigas? 30 segundos hoje evitam a próxima caça ao arquivo."

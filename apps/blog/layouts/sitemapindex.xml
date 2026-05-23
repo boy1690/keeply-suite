@@ -13,7 +13,7 @@
   real indexable pages, not MT, so they belong in the canonical sitemap. When pl/tr
   ship their native pilots, add them too.
 */ -}}
-{{- $coreLocales := slice "en" "zh-tw" "zh-cn" "ja" "ko" "it" "de" "es" "pt" -}}
+{{- $coreLocales := slice "en" "zh-tw" "zh-cn" "ja" "ko" "it" "de" "es" "pt-br" -}}
 {{- range . -}}
   {{- if in $coreLocales .Language.Lang }}
   <sitemap>
