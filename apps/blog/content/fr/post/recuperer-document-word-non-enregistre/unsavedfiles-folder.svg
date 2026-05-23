@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 380" font-family="Segoe UI, system-ui, sans-serif">
+  <!-- host-app illustration: dossier cache UnsavedFiles dans l'Explorateur de fichiers — recuperer-document-word-non-enregistre (fr) -->
+  <rect x="0" y="0" width="640" height="380" rx="8" fill="#FFFFFF" stroke="#D2D0CE" stroke-width="1"/>
+
+  <!-- window title bar -->
+  <rect x="0" y="0" width="640" height="36" rx="8" fill="#F3F2F1"/>
+  <rect x="0" y="18" width="640" height="18" fill="#F3F2F1"/>
+  <text x="16" y="23" font-size="12" font-weight="600" fill="#323130">📁  UnsavedFiles</text>
+  <text x="612" y="23" font-size="13" fill="#605E5C" text-anchor="end">—  ☐  ✕</text>
+
+  <!-- address bar -->
+  <rect x="16" y="46" width="608" height="28" rx="3" fill="#FFFFFF" stroke="#D2D0CE" stroke-width="1"/>
+  <text x="28" y="64" font-size="9" fill="#323130">Ce PC ▸ Disque local (C:) ▸ Utilisateurs ▸ Utilisateur ▸ AppData ▸ Local ▸ Microsoft ▸ Office ▸ UnsavedFiles</text>
+
+  <!-- column headers -->
+  <line x1="16" y1="90" x2="624" y2="90" stroke="#EDEBE9" stroke-width="1"/>
+  <text x="28" y="106" font-size="11" font-weight="700" fill="#605E5C">Nom</text>
+  <text x="352" y="106" font-size="11" font-weight="700" fill="#605E5C">Date de modification</text>
+  <text x="540" y="106" font-size="11" font-weight="700" fill="#605E5C">Type</text>
+  <line x1="16" y1="114" x2="624" y2="114" stroke="#EDEBE9" stroke-width="1"/>
+
+  <!-- rows -->
+  <text x="28" y="138" font-size="12" fill="#323130">📄  Note_TVA (non enregistré).asd</text>
+  <text x="352" y="138" font-size="11" fill="#605E5C">Aujourd'hui 11:15</text>
+  <text x="540" y="138" font-size="11" fill="#605E5C">Fichier ASD</text>
+  <line x1="16" y1="150" x2="624" y2="150" stroke="#F3F2F1" stroke-width="1"/>
+
+  <text x="28" y="172" font-size="12" fill="#323130">📄  Document1 (non enregistré).asd</text>
+  <text x="352" y="172" font-size="11" fill="#605E5C">Aujourd'hui 09:02</text>
+  <text x="540" y="172" font-size="11" fill="#605E5C">Fichier ASD</text>
+  <line x1="16" y1="184" x2="624" y2="184" stroke="#F3F2F1" stroke-width="1"/>
+
+  <text x="28" y="206" font-size="12" fill="#323130">📄  Rapport (non enregistré).asd</text>
+  <text x="352" y="206" font-size="11" fill="#605E5C">19/05 16:48</text>
+  <text x="540" y="206" font-size="11" fill="#605E5C">Fichier ASD</text>
+  <line x1="16" y1="218" x2="624" y2="218" stroke="#F3F2F1" stroke-width="1"/>
+
+  <text x="28" y="240" font-size="12" fill="#A19F9D">📄  Brouillon (non enregistré).asd</text>
+  <text x="352" y="240" font-size="11" fill="#C8C6C4">15/05 — vidé</text>
+  <text x="540" y="240" font-size="11" fill="#C8C6C4">(disparu)</text>
+
+  <!-- status / caption -->
+  <rect x="0" y="332" width="640" height="48" fill="#FBF6EC"/>
+  <line x1="0" y1="332" x2="640" y2="332" stroke="#F0E3C8" stroke-width="1"/>
+  <text x="16" y="352" font-size="11.5" fill="#8A6D1A">⏳  C'est un cache temporaire, pas un dossier de sauvegarde.</text>
+  <text x="16" y="369" font-size="11.5" fill="#8A6D1A">Word le vide tout seul — les anciennes entrées (comme Brouillon, ci-dessus) disparaissent sans avertissement.</text>
+</svg>

@@ -164,3 +164,7 @@ default:
     soft: "Bugün tek bir şey yapacaksanız, bir aracın her dosyanın her sürümünü hatırlamasına izin verin."
     medium: "Ücretsiz + kurulumu 30 saniye. Denememek için hiçbir sebep yok."
     hard: "Hâlâ eski sürümlerin üzerine mi yazıyorsunuz? Bugünkü 30 saniye, bir sonraki dosya avından kurtarır."
+  fr:
+    soft: "Si vous ne faites qu'une chose aujourd'hui, laissez un outil mémoriser chaque version de chaque fichier."
+    medium: "Gratuit + 30 secondes à installer. Aucune raison de ne pas essayer."
+    hard: "Toujours en train d'écraser vos anciennes versions ? 30 secondes aujourd'hui vous évitent la prochaine chasse au fichier."
