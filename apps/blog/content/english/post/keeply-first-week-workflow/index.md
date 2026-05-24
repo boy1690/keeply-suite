@@ -17,20 +17,20 @@ voice_version: v2-2026-05-11
 status: approved_master
 image_alt_data: "Three-day observation checklist: Day 1 file added auto-tracked, Day 3 edits compressed to 2-4 meaningful versions not 17, Day 5 deleted file restored from Keeply after Recycle Bin emptied — 7-day passive trial, zero setup wizard required"
 howto_schema:
-  name: Keeply 第一週 7 天驗證觀察日記
+  name: Keeply 7-Day First-Week Verification Diary
   totalTime: PT7D
   steps:
-    - name: Day 1 新增檔案
-      text: 裝完 Keeply 後正常工作存第一個檔，中午前打開 Keeply 確認新增的檔案自動出現在介面並有時間戳記，無需手動加入。
+    - name: Day 1 — Add a file
+      text: After installing Keeply, work normally and save your first file. Before noon, open Keeply and confirm the new file appears automatically in the interface with a timestamp — no manual import needed.
       url: '#day-1'
-    - name: Day 3 修改檔案
-      text: 改昨天的檔案並多次存檔，傍晚打開版本面板，確認顯示 2-4 個帶時間戳的關鍵版本而非 17 個瑣碎紀錄，且每個版本可點擊還原。
+    - name: Day 3 — Edit a file
+      text: Edit yesterday's file and save it several times. In the evening, open the version panel and confirm it shows 2-4 timestamped meaningful versions rather than 17 trivial snapshots — and that each version is clickable to restore.
       url: '#day-3'
-    - name: Day 5 刪除測試
-      text: 故意刪一個不重要的測試檔，打開 Keeply「已刪除檔案」清單，確認該檔仍存在並可點「還原」撈回，驗證刪除與系統垃圾桶獨立。
+    - name: Day 5 — Delete test
+      text: Deliberately delete an unimportant test file. Open Keeply's "Deleted files" list and confirm the file is still there and can be restored with one click — verifying that Keeply's delete tracking is independent of the system Recycle Bin.
       url: '#day-5'
-    - name: Day 7 綜合評估
-      text: 回顧本週三件事：Keeply 是否看見新增的檔、留下合理數量版本、刪除後能找回。三個答案都是「對」則繼續使用；有一項不符則直接移除。
+    - name: Day 7 — Verdict
+      text: Review three things from the week — did Keeply see the new file, did it keep a reasonable number of versions, and can you recover a deleted file? If all three are yes, keep using it; if any one isn't, remove it.
       url: '#day-7'
 ---
 

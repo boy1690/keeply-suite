@@ -25,26 +25,26 @@ faq_schema:
   - q: 安装过程常见错误有哪些？
     a: 三个最常见：(1) winget 命令找不到——Windows 10 旧版本没内建，到 Microsoft Store 搜「App Installer」更新即可；(2) .dmg 双击提示「已损坏」——这是 macOS 的误判，重新下载并右键打开；(3) 第一个项目扫描很慢——文件夹若超过 10GB 第一次需 5 分钟，之后保存记录会是即时的。
 howto_schema:
-  name: Keeply Windows / macOS 安裝教學
+  name: Keeply Windows / macOS 安装教程
   totalTime: PT10M
   steps:
-    - name: 了解藍屏原因
-      text: SmartScreen 藍屏不代表軟體有問題，是判斷新軟體下載量是否累積足夠信譽。Keeply 已被 Microsoft winget 官方審查收錄，走 winget 路徑就不會出現藍屏。
+    - name: 了解蓝屏原因
+      text: SmartScreen 蓝屏不代表软件有问题，是判断新软件下载量是否累积足够信誉。Keeply 已被 Microsoft winget 官方审查收录，走 winget 路径就不会出现蓝屏。
       url: '#why-smartscreen'
-    - name: 選擇安裝路徑
-      text: 三條路擇一：Windows 推薦用 winget 指令；不想開 PowerShell 可下載 .exe；macOS 下載 .dmg。
+    - name: 选择安装路径
+      text: 三条路择一：Windows 推荐用 winget 命令；不想开 PowerShell 可下载 .exe；macOS 下载 .dmg。
       url: '#three-paths'
-    - name: Windows winget 安裝
-      text: 開啟 PowerShell，貼入 `winget install Boy1690.Keeply` 並按 Enter，約 30 秒完成，全程不出現 SmartScreen 警告。
+    - name: Windows winget 安装
+      text: 打开 PowerShell，粘贴 `winget install Boy1690.Keeply` 并按 Enter，约 30 秒完成，全程不出现 SmartScreen 警告。
       url: '#path-winget'
-    - name: Windows .exe 安裝
-      text: 下載 .exe 後雙擊，SmartScreen 跳出時點左下角「其他資訊」小字，再點「仍要執行」，安裝精靈接手完成安裝。
+    - name: Windows .exe 安装
+      text: 下载 .exe 后双击，SmartScreen 弹出时点左下角「其他信息」小字，再点「仍要运行」，安装向导接手完成安装。
       url: '#path-exe'
-    - name: macOS .dmg 安裝
-      text: 下載 .dmg 並將 Keeply 拖入應用程式資料夾，首次開啟必須右鍵選「打開」而非雙擊，確認對話框點「打開」。
+    - name: macOS .dmg 安装
+      text: 下载 .dmg 并将 Keeply 拖入应用程序文件夹，首次打开必须右键选「打开」而非双击，确认对话框点「打开」。
       url: '#path-macos'
-    - name: 新增第一個專案
-      text: 開啟 Keeply 點「新增專案」，選一個目前正在進行、不想搞丟的資料夾，初次掃描約 1-2 分鐘，之後自動在背景記錄版本歷史。
+    - name: 新增第一个项目
+      text: 打开 Keeply 点「新增项目」，选一个目前正在进行、不想搞丢的文件夹，初次扫描约 1-2 分钟，之后自动在后台记录版本历史。
       url: '#first-project'
 ---
 

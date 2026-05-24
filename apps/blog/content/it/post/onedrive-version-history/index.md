@@ -86,7 +86,7 @@ Quando OneDrive dice "cronologia versioni", in realtà sono tre cose diverse fus
 
 Tre cose diverse — confuse come una sola, cercherai nel livello sbagliato. "Non riesco a trovare il mio file di 6 mesi fa" potrebbe essere il limite di 500 della Cronologia versioni che entra in gioco, la finestra di 30 giorni del Cestino scaduta, o il Salvataggio automatico sovrascritto da tempo. Problemi diversi, soluzioni diverse.
 
-## Il limite di 500 versioni: il numero ufficiale di Microsoft {#500 limite}
+## Il limite di 500 versioni: il numero ufficiale di Microsoft {#500-limite}
 
 [Microsoft Learn](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits) lo afferma chiaramente: le librerie documenti SharePoint / OneDrive conservano fino a **500 versioni principali** per file (con il controllo versione principale/secondaria abilitato, fino a 511 versioni secondarie in più).
 

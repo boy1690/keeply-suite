@@ -16,7 +16,7 @@ Il ripristino automatico è un buffer anti-crash, non una cronologia delle versi
 
 > Venerdì, ore 15. Hai scritto novanta minuti di annotazioni a un contratto per una riunione delle 17. Word si è bloccato. Hai aspettato tre minuti e l'hai chiuso forzatamente.
 >
-> Riapri Word. Si apre il riquadro Ripristino documenti. Ci clicchi pieno di speranza ,  **ed è vuoto**.
+> Riapri Word. Si apre il riquadro Ripristino documenti. Ci clicchi pieno di speranza, **ed è vuoto**.
 >
 > Novanta minuti, spariti. Il cliente lo legge alle 17.
 

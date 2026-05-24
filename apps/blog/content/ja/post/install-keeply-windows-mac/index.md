@@ -25,26 +25,26 @@ faq_schema:
   - q: インストール時によくあるエラーは？
     a: よく出るのは 3 つ。(1) winget コマンドが見つからない — 古い Windows 10 では未搭載。Microsoft Store で「App Installer」を更新してください。(2) .dmg を開くと「壊れている」と表示 — macOS の誤検知です。再ダウンロードして右クリックで開いてください。(3) 最初のプロジェクトのスキャンが遅い — 10 GB 超のフォルダだと初回は約 5 分かかりますが、その後の保存記録はリアルタイムです。
 howto_schema:
-  name: Keeply Windows / macOS 安裝教學
+  name: Keeply Windows / macOS インストールガイド
   totalTime: PT10M
   steps:
-    - name: 了解藍屏原因
-      text: SmartScreen 藍屏不代表軟體有問題，是判斷新軟體下載量是否累積足夠信譽。Keeply 已被 Microsoft winget 官方審查收錄，走 winget 路徑就不會出現藍屏。
+    - name: 青い警告画面の理由を理解する
+      text: SmartScreen の警告はソフトウェアに問題があるのではなく、新しいアプリのダウンロード数が「信頼の実績」としてまだ蓄積されていないためです。Keeply は Microsoft winget の公式審査を通過済みで、winget 経由でインストールすれば警告は表示されません。
       url: '#why-smartscreen'
-    - name: 選擇安裝路徑
-      text: 三條路擇一：Windows 推薦用 winget 指令；不想開 PowerShell 可下載 .exe；macOS 下載 .dmg。
+    - name: インストール方法を選ぶ
+      text: 3 つの方法から選択してください。Windows は winget コマンド推奨。PowerShell を開きたくない場合は .exe をダウンロード。macOS は .dmg をダウンロードしてください。
       url: '#three-paths'
-    - name: Windows winget 安裝
-      text: 開啟 PowerShell，貼入 `winget install Boy1690.Keeply` 並按 Enter，約 30 秒完成，全程不出現 SmartScreen 警告。
+    - name: Windows winget インストール
+      text: PowerShell を開き、`winget install Boy1690.Keeply` を貼り付けて Enter を押します。約 30 秒で完了し、SmartScreen の警告は表示されません。
       url: '#path-winget'
-    - name: Windows .exe 安裝
-      text: 下載 .exe 後雙擊，SmartScreen 跳出時點左下角「其他資訊」小字，再點「仍要執行」，安裝精靈接手完成安裝。
+    - name: Windows .exe インストール
+      text: .exe をダウンロードしてダブルクリックします。SmartScreen が表示されたら左下の「詳細情報」という小さい文字をクリックし、「実行」を選ぶとインストールウィザードが始まります。
       url: '#path-exe'
-    - name: macOS .dmg 安裝
-      text: 下載 .dmg 並將 Keeply 拖入應用程式資料夾，首次開啟必須右鍵選「打開」而非雙擊，確認對話框點「打開」。
+    - name: macOS .dmg インストール
+      text: .dmg をダウンロードして Keeply を「アプリケーション」フォルダにドラッグします。初回起動はダブルクリックではなく右クリックで「開く」を選び、確認ダイアログで「開く」をクリックしてください。
       url: '#path-macos'
-    - name: 新增第一個專案
-      text: 開啟 Keeply 點「新增專案」，選一個目前正在進行、不想搞丟的資料夾，初次掃描約 1-2 分鐘，之後自動在背景記錄版本歷史。
+    - name: 最初のプロジェクトを追加する
+      text: Keeply を開いて「新規プロジェクト」をクリックし、今進行中で失いたくないフォルダを選択します。初回スキャンに約 1〜2 分かかり、以降は自動でバックグラウンドにバージョン履歴を記録します。
       url: '#first-project'
 ---
 

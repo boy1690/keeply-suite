@@ -25,26 +25,26 @@ faq_schema:
   - q: 설치 과정에서 자주 발생하는 오류는?
     a: 자주 보는 3가지. (1) winget 명령을 찾을 수 없음 — 구형 Windows 10에는 기본 탑재되어 있지 않으므로 Microsoft Store에서 「App Installer」를 업데이트하세요. (2) .dmg가 「손상되었습니다」로 표시 — macOS의 오판이므로 재다운로드 후 우클릭으로 여세요. (3) 첫 프로젝트 스캔이 느림 — 10 GB 이상 폴더는 처음에 약 5분 걸리지만 이후 저장 기록은 실시간입니다.
 howto_schema:
-  name: Keeply Windows / macOS 安裝教學
+  name: Keeply Windows / macOS 설치 가이드
   totalTime: PT10M
   steps:
-    - name: 了解藍屏原因
-      text: SmartScreen 藍屏不代表軟體有問題，是判斷新軟體下載量是否累積足夠信譽。Keeply 已被 Microsoft winget 官方審查收錄，走 winget 路徑就不會出現藍屏。
+    - name: 파란 화면이 뜨는 이유 이해하기
+      text: SmartScreen 파란 화면은 소프트웨어에 문제가 있다는 뜻이 아닙니다. 새 소프트웨어가 신뢰 기준에 충분한 다운로드 수를 쌓았는지 판단하는 것입니다. Keeply는 Microsoft winget 공식 심사에 이미 등록되어 있어, winget 경로를 사용하면 파란 화면이 나타나지 않습니다.
       url: '#why-smartscreen'
-    - name: 選擇安裝路徑
-      text: 三條路擇一：Windows 推薦用 winget 指令；不想開 PowerShell 可下載 .exe；macOS 下載 .dmg。
+    - name: 설치 경로 선택하기
+      text: 세 가지 경로 중 선택합니다. Windows는 winget 명령어를 추천하고, PowerShell을 열기 싫다면 .exe를 내려받을 수 있습니다. macOS는 .dmg를 내려받으세요.
       url: '#three-paths'
-    - name: Windows winget 安裝
-      text: 開啟 PowerShell，貼入 `winget install Boy1690.Keeply` 並按 Enter，約 30 秒完成，全程不出現 SmartScreen 警告。
+    - name: Windows winget 설치
+      text: PowerShell을 열고 `winget install Boy1690.Keeply`를 붙여 넣은 뒤 Enter를 누르면 약 30초에 완료됩니다. SmartScreen 경고는 표시되지 않습니다.
       url: '#path-winget'
-    - name: Windows .exe 安裝
-      text: 下載 .exe 後雙擊，SmartScreen 跳出時點左下角「其他資訊」小字，再點「仍要執行」，安裝精靈接手完成安裝。
+    - name: Windows .exe 설치
+      text: .exe를 내려받아 더블 클릭합니다. SmartScreen이 나타나면 왼쪽 아래의 「추가 정보」 작은 링크를 클릭한 뒤 「실행」을 선택하면 설치 마법사가 나머지를 완료합니다.
       url: '#path-exe'
-    - name: macOS .dmg 安裝
-      text: 下載 .dmg 並將 Keeply 拖入應用程式資料夾，首次開啟必須右鍵選「打開」而非雙擊，確認對話框點「打開」。
+    - name: macOS .dmg 설치
+      text: .dmg를 내려받아 Keeply를 응용 프로그램 폴더로 드래그합니다. 처음 실행할 때는 더블 클릭이 아닌 우클릭으로 「열기」를 선택해야 하며, 확인 대화 상자에서 「열기」를 누르세요.
       url: '#path-macos'
-    - name: 新增第一個專案
-      text: 開啟 Keeply 點「新增專案」，選一個目前正在進行、不想搞丟的資料夾，初次掃描約 1-2 分鐘，之後自動在背景記錄版本歷史。
+    - name: 첫 번째 프로젝트 추가하기
+      text: Keeply를 열고 「새 프로젝트」를 클릭한 뒤 지금 진행 중이고 잃기 싫은 폴더를 선택하세요. 초기 스캔에 약 1~2분이 걸리며, 이후에는 백그라운드에서 자동으로 버전 히스토리를 기록합니다.
       url: '#first-project'
 ---
 

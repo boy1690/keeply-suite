@@ -31,17 +31,17 @@ faq_schema:
   - q: How does Keeply catch the AI-overshoot moment?
     a: Keeply keeps the versions you save in the project folder you've added; turn on auto-save and you get a restorable point every 15–30 min. When the AI agent runs too far or a new prompt drags in a dependency you didn't want, you don't need to read the diff or remember which files changed — restore to the last "still running" point and continue iterating.
 howto_schema:
-  name: Vibe Coding 失控時 3 步回退 AI 改動
+  name: 3 Steps to Roll Back an AI Overshoot in Vibe Coding
   totalTime: PT30S
   steps:
-    - name: 打開 Keeply 時間軸
-      text: 不要試著看懂 AI 改了哪些檔案，也不用手動 ctrl+Z。直接打開 Keeply 介面，找到目前專案資料夾的時間軸視圖。
+    - name: Open the Keeply Timeline
+      text: Don't try to figure out which files the AI touched, and don't reach for Ctrl+Z. Open the Keeply interface and navigate to the Timeline view for your current project folder.
       url: '#one-action'
-    - name: 找最後一筆「還在跑」的時間點
-      text: 在時間軸上往上滑，找到上一筆你記得程式還能跑的版本（通常是 10-30 分鐘前），通常有星號標示為穩定版本。
+    - name: Find the last "still running" entry
+      text: Scroll back up the Timeline to find the last version you remember the code running correctly — usually 10-30 minutes ago, often marked with a star as a stable point.
       url: '#one-action'
-    - name: 右鍵選還原
-      text: 在那一筆版本上右鍵點選「還原到此版本」，Keeply 在 30 秒內把整個專案目錄恢復到該時間點狀態，AI 失控的所有改動同時被撤銷。
+    - name: Right-click and restore
+      text: Right-click that entry and choose "Restore to this point". Keeply returns the entire project directory to that state in 30 seconds, undoing every change the AI made since then.
       url: '#one-action'
 ---
 

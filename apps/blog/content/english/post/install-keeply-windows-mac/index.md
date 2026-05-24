@@ -25,26 +25,26 @@ faq_schema:
   - q: What are the most common install errors?
     a: Three you'll hit most often. (1) `winget` not found — older Windows 10 builds don't ship it; update "App Installer" from the Microsoft Store. (2) .dmg says "damaged" — macOS misjudgment; redownload and right-click open. (3) First project scan is slow — folders over 10 GB take ~5 minutes the first time, but save tracking afterwards is real-time.
 howto_schema:
-  name: Keeply Windows / macOS 安裝教學
+  name: Install Keeply on Windows and macOS
   totalTime: PT10M
   steps:
-    - name: 了解藍屏原因
-      text: SmartScreen 藍屏不代表軟體有問題，是判斷新軟體下載量是否累積足夠信譽。Keeply 已被 Microsoft winget 官方審查收錄，走 winget 路徑就不會出現藍屏。
+    - name: Understand the SmartScreen warning
+      text: SmartScreen doesn't mean Keeply has a problem — it flags apps that haven't yet accumulated enough downloads to be recognized as widely known. Keeply is officially listed in the Microsoft winget catalog; taking the winget path skips the warning entirely.
       url: '#why-smartscreen'
-    - name: 選擇安裝路徑
-      text: 三條路擇一：Windows 推薦用 winget 指令；不想開 PowerShell 可下載 .exe；macOS 下載 .dmg。
+    - name: Choose your install path
+      text: Pick one of three routes — Windows users should use the winget command; if you'd rather not open PowerShell, download the .exe; on macOS, download the .dmg.
       url: '#three-paths'
-    - name: Windows winget 安裝
-      text: 開啟 PowerShell，貼入 `winget install Boy1690.Keeply` 並按 Enter，約 30 秒完成，全程不出現 SmartScreen 警告。
+    - name: Windows winget install
+      text: Open PowerShell, paste `winget install Boy1690.Keeply` and press Enter. It finishes in about 30 seconds with no SmartScreen warning.
       url: '#path-winget'
-    - name: Windows .exe 安裝
-      text: 下載 .exe 後雙擊，SmartScreen 跳出時點左下角「其他資訊」小字，再點「仍要執行」，安裝精靈接手完成安裝。
+    - name: Windows .exe install
+      text: Download the .exe and double-click it. When SmartScreen appears, click "More info" in the lower-left corner, then click "Run anyway". The installer takes over from there.
       url: '#path-exe'
-    - name: macOS .dmg 安裝
-      text: 下載 .dmg 並將 Keeply 拖入應用程式資料夾，首次開啟必須右鍵選「打開」而非雙擊，確認對話框點「打開」。
+    - name: macOS .dmg install
+      text: Download the .dmg and drag Keeply into your Applications folder. On first launch, right-click Keeply and choose "Open" — don't double-click. Click "Open" again in the confirmation dialog; every launch after that works normally.
       url: '#path-macos'
-    - name: 新增第一個專案
-      text: 開啟 Keeply 點「新增專案」，選一個目前正在進行、不想搞丟的資料夾，初次掃描約 1-2 分鐘，之後自動在背景記錄版本歷史。
+    - name: Add your first project
+      text: Open Keeply, click "New project", and drag in a folder you're actively working on and don't want to lose. The initial scan takes 1-2 minutes to build a baseline, then Keeply quietly tracks version history in the background.
       url: '#first-project'
 ---
 

@@ -8,7 +8,7 @@ og_image: cover.png
 date: 2026-05-09T08:00:00+08:00
 draft: false
 locale: ko
-primary_keyword: '퇴사 직원 자료 위험 (baseline; ja-master 기본 키워드 退職 データ 持ち出し どこまで)'
+primary_keyword: '퇴사 직원 자료 위험'
 spec: specs/departing-employee-data-risk/
 status: approved
 voice_version: v2-2026-05-11

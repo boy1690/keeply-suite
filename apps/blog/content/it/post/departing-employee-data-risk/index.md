@@ -8,7 +8,7 @@ og_image: cover.png
 date: 2026-05-09T08:00:00+08:00
 draft: false
 locale: it
-primary_keyword: 'rischio dati dipendente in uscita (baseline; ja-master primary keyword 退職 データ 持ち出し どこまで)'
+primary_keyword: 'rischio dati dipendente in uscita'
 spec: specs/departing-employee-data-risk/
 status: approved
 voice_version: v2-2026-05-11

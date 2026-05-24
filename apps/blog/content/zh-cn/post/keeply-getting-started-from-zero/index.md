@@ -33,20 +33,20 @@ faq_schema:
   - q: 什么时候不适合用 Keeply？
     a: 4 种情境直接列出来：(1) 纯文本 code 用 Git/GitHub 更合适；(2) 公司强制 SharePoint/OneDrive 为唯一文件来源；(3) 文件都是云端原生（Google Docs/Notion），不存本机；(4) 你已经有 Time Machine 加完善的命名规则且不曾出过事。其他情境 Keeply 都能补上「文件级故意保存的版本历史」这条缺口。
 howto_schema:
-  name: Keeply 從零開始 2 個動作上手
+  name: Keeply 从零开始 2 个动作上手
   totalTime: PT7D
   steps:
-    - name: 動作 1：拖入資料夾
-      text: 把一個目前正在進行、不想搞丟的資料夾直接拖進 Keeply 視窗，不改命名、不分類、不思考結構，拖進去就完成。
+    - name: 动作 1：拖入文件夹
+      text: 把一个目前正在进行、不想搞丢的文件夹直接拖进 Keeply 窗口，不改命名、不分类、不思考结构，拖进去就完成。
       url: '#what-are-the-two-actions'
-    - name: 動作 2：繼續工作
-      text: 照平常習慣改檔案、存檔，Keeply 自動在時間軸記錄每次存檔變動，不需要按任何按鈕或記憶快捷鍵。
+    - name: 动作 2：重要时刻存一版
+      text: 在重要时刻按 Keeply 的「保存版本」（或 Cmd+S）存一版并写笔记；想全自动就打开后台自动保存（每 15／30／60 分）。
       url: '#what-are-the-two-actions'
-    - name: Day 2-3 看時間軸
-      text: 第 2 到第 3 天打開 Keeply 時間軸，確認每次存檔筆記已累積出現，點進任一筆可看到新增或刪除了哪些內容。
+    - name: Day 2-3 看时间轴
+      text: 第 2 到第 3 天打开 Keeply 时间轴，确认你存的版本已累积出现，点进任一笔可看到新增或删除了哪些内容。
       url: '#first-week-natural'
-    - name: Day 7 確認價值
-      text: 第 7 天回顧整週的時間軸，確認版本歷史是否讓你感到有保障；若某天發現改錯可直接點歷史版本還原。
+    - name: Day 7 确认价值
+      text: 第 7 天回顾整周的时间轴，确认版本历史是否让你感到有保障；若某天发现改错可直接点历史版本还原。
       url: '#first-week-natural'
 ---
 

@@ -44,7 +44,7 @@ faq_schema:
 
 1. [Keeply가 OneDrive 기록을 501번째 저장에서 사라지지 않게 하는 방법](#keeply-timeline)
 2. [OneDrive의 3가지 메커니즘: 500 / 30일 / 자동 복구 — 서로 다른 것들](#three-mechanisms)
-3. [500 버전 상한: Microsoft 자체 숫자와 도달하는 시점](#500 상한)
+3. [500 버전 상한: Microsoft 자체 숫자와 도달하는 시점](#500-상한)
 4. [휴지통 30 / 93일: 삭제 시간 창, 버전 기록이 아님](#recycle-bin)
 5. [자동 복구: Office 충돌 버퍼, 버전 기록과 완전히 분리됨](#autorecover)
 6. [Keeply가 갭을 메웁니다: 상한 후의 Release 잠금 + 파일별 노트](#keeply-fills)
@@ -86,7 +86,7 @@ OneDrive가 "버전 기록"이라고 말할 때, 실제로는 3가지 다른 것
 
 3가지 다른 것 — 하나로 혼동하면 잘못된 계층을 찾게 됩니다. "6개월 전 파일을 찾을 수 없어요"는 버전 기록 500 상한이거나, 휴지통 30일 창이 만료되었거나, 자동 복구가 오래 전에 덮어쓰였을 수 있습니다. 문제마다 다른 해결책이 필요합니다.
 
-## 500 버전 상한: Microsoft 자체 숫자 {#500 상한}
+## 500 버전 상한: Microsoft 자체 숫자 {#500-상한}
 
 [Microsoft Learn](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits)에 명확히 명시됨: SharePoint / OneDrive 문서 라이브러리는 파일당 최대 **500 주요 버전**을 유지합니다(주/부 버전 관리가 활성화된 경우 추가로 최대 511 부 버전).
 

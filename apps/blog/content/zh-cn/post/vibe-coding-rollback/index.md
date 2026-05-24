@@ -32,17 +32,17 @@ faq_schema:
   - q: Keeply 怎么接住 AI 翻车的场景？
     a: Keeply 在后台对你选定的项目文件夹持续记录保存变动，每几分钟有一个可还原的时间点。当 AI agent 冲太远或新 prompt 加了一个不该加的依赖，你不用看 diff、不用记得改了哪些文件，直接还原到上一笔「能跑」的版本即可继续迭代。
 howto_schema:
-  name: Vibe Coding 失控時 3 步回退 AI 改動
+  name: Vibe Coding 失控时 3 步回退 AI 改动
   totalTime: PT30S
   steps:
-    - name: 打開 Keeply 時間軸
-      text: 不要試著看懂 AI 改了哪些檔案，也不用手動 ctrl+Z。直接打開 Keeply 介面，找到目前專案資料夾的時間軸視圖。
+    - name: 打开 Keeply 时间轴
+      text: 不要试着看懂 AI 改了哪些文件，也不用手动 ctrl+Z。直接打开 Keeply 界面，找到当前项目文件夹的时间轴视图。
       url: '#one-action'
-    - name: 找最後一筆「還在跑」的時間點
-      text: 在時間軸上往上滑，找到上一筆你記得程式還能跑的版本（通常是 10-30 分鐘前），通常有星號標示為穩定版本。
+    - name: 找最后一笔「还在跑」的时间点
+      text: 在时间轴上往上滑，找到上一笔你记得程序还能跑的版本（通常是 10-30 分钟前），通常有星号标示为稳定版本。
       url: '#one-action'
-    - name: 右鍵選還原
-      text: 在那一筆版本上右鍵點選「還原到此版本」，Keeply 在 30 秒內把整個專案目錄恢復到該時間點狀態，AI 失控的所有改動同時被撤銷。
+    - name: 右键选还原
+      text: 在那一笔版本上右键点选「还原到此版本」，Keeply 在 30 秒内把整个项目目录恢复到该时间点状态，AI 失控的所有改动同时被撤销。
       url: '#one-action'
 ---
 

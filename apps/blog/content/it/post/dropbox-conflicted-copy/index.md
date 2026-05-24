@@ -16,16 +16,16 @@ role: cluster
 pillar_parent: file-version-management-complete-guide
 image_alt_data: "Diagramma diviso: Anna e Bill modificano proposal.docx in contemporanea; la collisione Dropbox genera proposal (conflicted copy).docx — l'ultimo che salva vince, la copia precedente scartata, 4 conflitti al mese per team per scelta di design"
 faq_schema:
-  - q: Dropbox 的「衝突的副本」是什麼時候會出現？
-    a: 有 4 種場景都會觸發：兩人同時編輯並儲存、離線編輯後上線同步、多裝置切換時的同步延遲、以及 Mac 與 Windows 系統時鐘差異。這 4 種情境只要踩中一種就會產生衝突副本。
-  - q: Dropbox 為什麼這樣設計衝突副本機制？
-    a: Dropbox 採用 last-writer-wins 策略：後上傳的版本勝出，前一版另存為衝突副本。這是商業取捨，優先保障同步不打斷工作流，而非做衝突偵測。衝突解析責任被刻意推給使用者，不是技術做不到。
-  - q: 手動合併兩份衝突副本能根治問題嗎？
-    a: 不能。手動合併只是症狀治療，不改變同步機制。下個禮拜同樣情境會再次觸發衝突副本，一個月後你已經重複合併了 4-5 次。解法是換同步機制，而不是讓自己合併得更快。
-  - q: 有什麼設計能根治 Dropbox 衝突副本問題？
-    a: 有三種設計模式：衝突偵測並提示合併（Git-style）、檔案鎖定機制（check-out 模式）、以及本機副本加手動推送（Keeply 模型）。三種各有取捨，其中本機副本加推送能解決全部 4 種衝突場景。
-  - q: Keeply 適合取代 Dropbox 解決衝突副本問題嗎？
-    a: 部分適合。Keeply 能解決衝突副本的核心機制問題，但不適合大檔即時同步、行動裝置存取、外部分享連結、或 1 小時內多人頻繁協作的場景。那些情境 Dropbox 或 Google Docs 更合適。
+  - q: Quando appare la «copia in conflitto» di Dropbox?
+    a: La scatenano 4 scenari — due persone che editano e salvano in contemporanea, editing offline e poi sync, ritardo di sync quando passi da un dispositivo all'altro, e differenze d'orologio tra Mac e Windows. Basta uno di questi quattro perché Dropbox generi una copia in conflitto.
+  - q: Perché Dropbox ha progettato così il meccanismo della copia in conflitto?
+    a: Dropbox adotta la logica last-writer-wins — l'upload successivo vince, la versione precedente viene salvata a parte come copia in conflitto. È un trade-off commerciale che privilegia un sync che non interrompe il lavoro rispetto al rilevamento dei conflitti. La responsabilità di risolvere il conflitto è spinta di proposito sull'utente; non è che la tecnologia non sappia farlo.
+  - q: Unire a mano le due copie in conflitto risolve il problema alla radice?
+    a: No. L'unione manuale cura solo il sintomo, non cambia il meccanismo di sync. La settimana dopo lo stesso scenario rigenera una copia in conflitto e in un mese ti ritrovi ad averle unite 4-5 volte. La soluzione è cambiare meccanismo di sync, non imparare a unire più in fretta.
+  - q: Quale design risolve davvero il problema delle copie in conflitto di Dropbox?
+    a: Tre design possibili — rilevamento del conflitto con richiesta di merge (stile Git), blocco del file (modalità check-out), e copia locale con push manuale (il modello Keeply). Ognuno ha i suoi compromessi; la copia locale con push risolve tutti e 4 gli scenari di conflitto.
+  - q: Keeply è adatto a sostituire Dropbox per risolvere le copie in conflitto?
+    a: In parte. Keeply risolve il problema di fondo del meccanismo delle copie in conflitto, ma non è adatto al sync in tempo reale di file di grandi dimensioni, all'accesso da mobile, ai link di condivisione esterni o alla collaborazione intensa tra più persone nell'arco di un'ora. In quei casi Dropbox o Google Docs sono più adatti.
 ---
 
 Giovedì sera, le 22:30. Tu e la tua collega Anna state entrambi modificando la stessa proposta in una cartella Dropbox condivisa. Lei ha aggiunto 3 paragrafi. Tu hai aggiunto la CTA finale nello stesso momento. Entrambi avete premuto Cmd+S. Apri la cartella la mattina dopo, c'è un file in più: `Proposta (Anna's conflicted copy 2026-05-02).docx`. Le sue modifiche non sono nelle tue. Le tue non sono nelle sue. Spendi un'ora a unirle a mano e altri 30 minuti a verificare che nulla sia andato perso.

@@ -13,16 +13,16 @@ og_image: cover.png
 cta_topic: versioning
 image_alt_data: "Folder view listing 7 files from proposal.docx to proposal_REALLY_final.docx — illustrating the 4 structural reasons every shared-folder user invents their own naming scheme instead of relying on tools designed for this layer"
 faq_schema:
-  - q: 為什麼共用資料夾裡找不到「上一版」按鈕？
-    a: 雲端硬碟設計目標是讓多台電腦看到同一份最新檔案，「保留所有舊版」與「最新版同步」會打架，所以工具選了同步。版本歷史被藏在三層選單之外，或根本不存在，因為這從來不是這類工具的核心設計目標。
-  - q: Dropbox 的 30 天版本歷史限制是技術做不到還是商業決定？
-    a: 純粹是商業決定。macOS Time Machine 2007 年就示範了完整的本機版本歷史，技術早已成熟。Dropbox 把版本歷史設計為升級付費的差異化功能，30 天是商業設計，不是技術上限。
-  - q: 版本歷史只告訴你「何時」修改，為什麼看不到「為何」修改？
-    a: 現有版本歷史介面只顯示日期加使用者，不顯示改動的意圖。設計師改了圖層透明度、律師改了一個字的含義、研究生把謹慎改成武斷，版本歷史只記錄「有修改」，不記錄那次改動代表什麼。
-  - q: 為什麼命名規則 PDF 通常 6 個月後就沒人遵守？
-    a: 命名規則把版本管理的責任推給人類紀律。每個成員每次存檔都必須記得、願意且有時間照規則命名。任何一條失敗就崩潰。趕件壓力下人腦只會本能輸入 FINAL，機制問題被包裝成紀律問題。
-  - q: 什麼時候 Keeply 不是版本管理的正確答案？
-    a: 四種場景 Keeply 不適合：即時協作會議筆記用 Notion 或 Google Docs；50GB 以上影片素材用 Frame.io；對外法務簽核用 DocuSign；以及大企業 IT 管控需求。Keeply 適合個人到小團隊的長期知識工作版本記憶。
+  - q: Why is there no "previous version" button in shared folders?
+    a: Cloud drives are designed to keep every device looking at the same latest file — preserving every old version fights that goal, so tools chose sync. Version history ends up buried three menus deep, or doesn't exist at all, because it was never part of the core design.
+  - q: Is Dropbox's 30-day version history limit a technical constraint or a business decision?
+    a: Pure business decision. Apple shipped Time Machine on every Mac back in 2007 — full local version history, two clicks to restore a file from three months ago, completely free. The technology has been mature for nearly two decades. Dropbox gates anything older than 30 days specifically so you'll upgrade.
+  - q: Version history shows when a file changed — why doesn't it show why?
+    a: Existing version history UIs display a date and a username, not the intent behind the change. A designer drops a layer's opacity, a lawyer flips one clause from "shall" to "may," a grad student rewrites a cautious conclusion as a confident one — the log records "modified" in all three cases. It can't tell you the meaning changed.
+  - q: Why do naming convention PDFs collapse after 6 months?
+    a: Naming rules push version management onto human discipline. Every team member has to remember, be willing, and have time to name files correctly every single save. Any one of those fails and the whole system breaks. Under deadline pressure, people instinctively type FINAL — a mechanism problem dressed up as a discipline problem.
+  - q: When is Keeply the wrong answer for file version management?
+    a: Four scenarios where Keeply doesn't fit — real-time collaborative meeting notes (use Notion or Google Docs), video footage over 50 GB (use Frame.io), external legal sign-off (use DocuSign), and large-enterprise IT governance requirements. Keeply is built for individuals and small teams doing long-term knowledge work.
 ---
 
 > It's not your discipline. Your tool wasn't designed for this.

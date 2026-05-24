@@ -15,16 +15,16 @@ role: cluster
 pillar_parent: file-version-management-complete-guide
 image_alt_data: "Terminal showing git commit, git push, git checkout HEAD~3 commands under heading 'This is what you got' — 4 requirements non-developers need that git misses: file-level UI, no CLI, binary support, intuitive restore"
 faq_schema:
-  - q: 為什麼搜「版本管理軟體」結果都是 git？
-    a: 因為 git 統治了開發者市場 20 年，相關討論、教學、SaaS 工具全部圍繞 git 設計。非開發者用同樣關鍵字搜尋會撞到一片開發者話語，找不到適合自己的選項。這是搜尋結果的偏誤，不是市場上真的只有 git。
-  - q: 非開發者需要的版本管理工具有哪 4 個設計要件？
-    a: 4 個關鍵：檔案層介面（按檔案不按 repo）、免命令列（GUI 為主）、二進位支援（Word/Excel/PSD 不只純文字）、直覺還原（不用學 checkout 概念）。git 在這 4 點都不滿足非開發者需求。
-  - q: 把 git 機制藏在 UI 後面為什麼是關鍵？
-    a: 因為 git 核心引擎（不可變物件、SHA hash、tree structure）技術上是好的，但暴露給非開發者的概念（branch、merge conflict、HEAD~3）不需要被使用者看見。隱藏這些概念但保留底層功能，是非開發者工具的核心設計。
-  - q: 非開發者有哪 3 個版本管理工具可以選？
-    a: 三選一：macOS Time Machine（限 Mac、只能還原整顆磁碟到時間點）；Dropbox 版本歷史（限 30 天保留期、需雲端訂閱）；Keeply（跨平台、本機優先、無時間限制、UI 隱藏 git 概念）。
-  - q: Keeply 不適合哪些使用情境？
-    a: 真正的開發者需要 CLI 存取或想看 git 圖表的人——Keeply UI 故意藏太多，不適合；以及需要分散式團隊合作整合 GitHub Actions 等開發流程的場景。Keeply 為非開發者設計，不取代開發者工具。
+  - q: Why do "document version control" searches return only git results?
+    a: Git has dominated the developer market for 20 years, so every tutorial, discussion, and SaaS tool is built around it. Non-developers searching the same term run straight into dev-world results and can't find anything useful. It's a search result bias — not a sign that git is the only option.
+  - q: What are the 4 design requirements non-developers actually need in a version control tool?
+    a: Four things matter — a file-level interface (browse by file, not by repo), no command line (GUI-first), binary file support (Word, Excel, PSD — not just plain text), and intuitive restore (no need to learn what "checkout" means). Git fails non-developers on all four.
+  - q: Why does hiding the git mechanism behind a UI matter so much?
+    a: Git's core engine — immutable objects, SHA hashes, tree structure — is technically solid. But the concepts it exposes to users (branches, merge conflicts, HEAD~3) don't need to be visible. Hiding those concepts while keeping the underlying engine intact is the core design challenge for any non-developer tool.
+  - q: What are the 3 non-developer version control tools worth considering?
+    a: Three options — macOS Time Machine (Mac-only, restores entire disk to a point in time); Dropbox version history (30-day cap, requires a cloud subscription); Keeply (cross-platform, local-first, no time limit, UI hides all git concepts).
+  - q: When is Keeply not the right fit?
+    a: Developers who need CLI access or want to browse a git graph will find Keeply's UI hides too much — it's not built for them. Distributed team workflows that integrate GitHub Actions or other dev pipelines are also out of scope. Keeply is designed for non-developers and doesn't replace developer tooling.
 ---
 
 You searched "document version control." What came back: git, svn, Mercurial tutorials. CLI commands, terminal screens, commit/push/merge. Five minutes of reading, then you give up. You're not a dev, you're a designer, an admin, a freelancer. All you wanted was a document version control tool with a UI where you can see the file.
