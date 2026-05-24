@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 380" font-family="Segoe UI, system-ui, sans-serif">
+  <!-- host-app illustration: das Papierkorb-Fenster von Windows mit einer markierten Excel-Datei und der Schaltfläche Wiederherstellen — geloeschte-excel-datei-wiederherstellen (de) -->
+  <rect x="0" y="0" width="640" height="380" rx="8" fill="#FFFFFF" stroke="#D2D0CE" stroke-width="1"/>
+
+  <!-- window title bar -->
+  <rect x="0" y="0" width="640" height="36" rx="8" fill="#F3F2F1"/>
+  <rect x="0" y="18" width="640" height="18" fill="#F3F2F1"/>
+  <text x="16" y="23" font-size="12" font-weight="600" fill="#323130">🗑️  Papierkorb</text>
+  <text x="612" y="23" font-size="13" fill="#605E5C" text-anchor="end">—  ☐  ✕</text>
+
+  <!-- command bar -->
+  <rect x="0" y="36" width="640" height="32" fill="#FAF9F8"/>
+  <line x1="0" y1="68" x2="640" y2="68" stroke="#EDEBE9" stroke-width="1"/>
+  <rect x="16" y="42" width="200" height="20" rx="3" fill="#0F6CBD"/>
+  <text x="116" y="56" font-size="11.5" font-weight="600" fill="#FFFFFF" text-anchor="middle">↩  Ausgewählte Elemente wiederherstellen</text>
+  <text x="240" y="56" font-size="11.5" fill="#605E5C">Alle Elemente wiederherstellen</text>
+  <text x="420" y="56" font-size="11.5" fill="#A19F9D">Papierkorb leeren</text>
+
+  <!-- column headers -->
+  <text x="28" y="92" font-size="11" font-weight="700" fill="#605E5C">Name</text>
+  <text x="320" y="92" font-size="11" font-weight="700" fill="#605E5C">Ursprünglicher Speicherort</text>
+  <text x="540" y="92" font-size="11" font-weight="700" fill="#605E5C">Löschdatum</text>
+  <line x1="16" y1="100" x2="624" y2="100" stroke="#EDEBE9" stroke-width="1"/>
+
+  <!-- selected row -->
+  <rect x="16" y="106" width="608" height="26" fill="#E5F1FB"/>
+  <rect x="16" y="106" width="608" height="26" fill="none" stroke="#0F6CBD" stroke-width="1"/>
+  <text x="28" y="124" font-size="12" fill="#323130">📊  Umsatzsteuer_Voranmeldung.xlsx</text>
+  <text x="320" y="124" font-size="11" fill="#605E5C">C:\Mandanten\2026</text>
+  <text x="540" y="124" font-size="11" fill="#605E5C">Heute 14:47</text>
+
+  <text x="28" y="156" font-size="12" fill="#323130">📊  Lohnabrechnung_Mai.xlsx</text>
+  <text x="320" y="156" font-size="11" fill="#605E5C">C:\Mandanten\2026</text>
+  <text x="540" y="156" font-size="11" fill="#605E5C">Heute 14:47</text>
+  <line x1="16" y1="168" x2="624" y2="168" stroke="#F3F2F1" stroke-width="1"/>
+
+  <text x="28" y="190" font-size="12" fill="#323130">📄  Entwurf_Schreiben.docx</text>
+  <text x="320" y="190" font-size="11" fill="#605E5C">C:\Desktop</text>
+  <text x="540" y="190" font-size="11" fill="#605E5C">Gestern 09:31</text>
+  <line x1="16" y1="202" x2="624" y2="202" stroke="#F3F2F1" stroke-width="1"/>
+
+  <text x="28" y="224" font-size="12" fill="#323130">📊  Kalkulation_alt.xlsx</text>
+  <text x="320" y="224" font-size="11" fill="#605E5C">C:\Mandanten\Archiv</text>
+  <text x="540" y="224" font-size="11" fill="#605E5C">12.05. 17:05</text>
+  <line x1="16" y1="236" x2="624" y2="236" stroke="#F3F2F1" stroke-width="1"/>
+
+  <!-- caption -->
+  <rect x="0" y="332" width="640" height="48" fill="#EAF6EE"/>
+  <line x1="0" y1="332" x2="640" y2="332" stroke="#C8E6D0" stroke-width="1"/>
+  <text x="16" y="352" font-size="11.5" fill="#1E7A43">✓  Rechtsklick ▸ Wiederherstellen — die Datei landet im Ursprungsordner zurück, nicht auf dem Desktop.</text>
+  <text x="16" y="369" font-size="11.5" fill="#1E7A43">Funktioniert, solange der Papierkorb nicht geleert wurde. Danach beginnt die Uhr zu laufen.</text>
+</svg>
