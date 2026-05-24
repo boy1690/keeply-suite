@@ -44,6 +44,24 @@ Quindi ho tagliato. E tagliato ancora.
 
 Ora ogni nuova funzionalità deve passare tre domande prima di entrare in Keeply: il cantiere la userà davvero? I miei capisquadra di 60 anni la apriranno? A qualcuno importerà se la taglio? Qualunque "no" = non la metto. Meno funzionalità non è un bug, è una scelta di design.
 
+## Perché il problema italiano è strutturalmente diverso
+
+Quando ho cominciato a parlare con utenti in Italia, ho capito che c'è qualcosa di specifico nel contesto italiano che aggrava il problema in modo sistematico — e che nessuno dei tool che ho visto affronta davvero.
+
+Il tessuto produttivo italiano è fatto di **piccole e medie imprese a conduzione familiare**: uno studio di commercialisti dove lavorano padre, figlia e due collaboratori; uno studio tecnico con geometri e architetti che si alternano sugli stessi file di progetto; un'impresa edile dove il capocantiere e il direttore dei lavori condividono gli stessi disegni via NAS. In queste realtà, il NAS condiviso è il centro gravitazionale di tutto il lavoro — non perché qualcuno lo abbia scelto consapevolmente come soluzione di versioning, ma perché era già lì, ed è comodo.
+
+Il problema è che **in queste organizzazioni nessuno ha il ruolo di IT manager**. Chi ha installato il NAS anni fa magari non lavora più lì. Le versioni precedenti di Synology o QNAP sono spesso disabilitate — "per non riempire il disco" — e nessuno lo sa. Quando arriva il momento di recuperare un file sovrascritto, la risposta è sempre la stessa: silenzio.
+
+Ho visto questo accadere in settori precisi:
+
+- **Commercialisti e avvocati**: i file dei clienti (dichiarazioni, contratti, perizie) cambiano mano tra collaboratori più volte al giorno. Una sovrascrittura su cartella condivisa non notificata può costare ore di ricostruzione o, peggio, un errore che finisce in un atto ufficiale.
+- **Geometri e studi di progettazione**: i disegni CAD sono enormi, vengono salvati spesso, e la storia del "calcestruzzo colato sul disegno sbagliato" non è metafora — l'ho vissuta di persona in cantiere.
+- **Imprese edili e artigianali**: il capocantiere apre il file che trova sul NAS — non sa, e non deve sapere, se è la versione aggiornata dal progettista ieri sera o quella della settimana scorsa.
+
+In Taiwan, da dove vengo, i problemi di versioning nelle PMI esistono, ma la struttura è più piatta e la digitalizzazione è partita prima. In Italia c'è una generazione intera di professionisti di 50-65 anni che usa il computer ogni giorno ma non ha mai avuto accesso a strumenti di versioning progettati per loro. Git è fuori questione. OneDrive e SharePoint richiedono che qualcuno li configuri e li mantenga. Dropbox funziona, ma la cronologia versioni finisce.
+
+Ho costruito Keeply pensando a loro — non come semplificazione di Git, ma come strumento che non richiede nessuna configurazione IT, nessun concetto da imparare, nessun NAS da riconfigurare. Trascini la cartella dentro. Continui a lavorare come hai sempre fatto. Le versioni vengono salvate in silenzio.
+
 ## Perché lo scrivo
 
 Questo riguarda l'**origine**.

@@ -38,41 +38,20 @@ faq_schema:
 
 "OneDrive ti ha salvato 200 volte. Poi al 501°, ha silenziosamente eliminato la tua versione più vecchia — senza dirtelo."
 
-Non è un bug. È il limite di 500 versioni principali che [Microsoft Learn](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits) ha dichiarato fin dall'inizio. Ma il 90% dei tutorial sulla cronologia versioni di OneDrive insegna **come usarla**, non **dove si rompe**. Questo articolo colma questo divario — tre meccanismi di OneDrive (cronologia versioni 500 limite / Cestino finestra 30 giorni / Salvataggio automatico) spesso scambiati per uno, poi come [Keeply](https://keeply.work) cattura gli scenari post-limite.
+Non è un bug. È il limite di 500 versioni principali che [Microsoft Learn](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits) ha dichiarato fin dall'inizio. Ma il 90% dei tutorial sulla cronologia versioni di OneDrive insegna **come usarla**, non **dove si rompe**. Questo articolo colma questo divario: prima spiega i tre meccanismi di OneDrive (cronologia versioni 500 limite / Cestino finestra 30 giorni / Salvataggio automatico) che vengono spesso scambiati per uno, poi mostra come [Keeply](https://keeply.work) cattura gli scenari post-limite.
 
 ## Contenuti
 
-1. [Come Keeply impedisce alla cronologia OneDrive di scomparire al 501° salvataggio](#keeply-timeline)
-2. [I tre meccanismi di OneDrive: 500 / 30 giorni / Salvataggio automatico — cose diverse](#three-mechanisms)
-3. [Il limite di 500 versioni: il numero ufficiale di Microsoft e quando lo raggiungi](#500-limite)
-4. [Cestino 30 / 93 giorni: una finestra temporale di eliminazione, non cronologia versioni](#recycle-bin)
-5. [Salvataggio automatico: buffer di crash di Office, completamente separato dalla cronologia versioni](#autorecover)
+1. [I tre meccanismi di OneDrive: 500 / 30 giorni / Salvataggio automatico — cose diverse](#three-mechanisms)
+2. [Il limite di 500 versioni: il numero ufficiale di Microsoft e quando lo raggiungi](#500-limite)
+3. [Cestino 30 / 93 giorni: una finestra temporale di eliminazione, non cronologia versioni](#recycle-bin)
+4. [Salvataggio automatico: buffer di crash di Office, completamente separato dalla cronologia versioni](#autorecover)
+5. [Come Keeply impedisce alla cronologia OneDrive di scomparire al 501° salvataggio](#keeply-timeline)
 6. [Keeply colma il divario: Blocco Release + nota per file dopo il limite](#keeply-fills)
 7. [3 scenari in cui non hai bisogno di Keeply con OneDrive](#when-not-needed)
 8. [FAQ](#faq)
 
 ---
-
-## Come Keeply impedisce alla cronologia OneDrive di scomparire al 501° salvataggio {#keeply-timeline}
-
-Ecco cosa succede. Tina è una consulente. Archivia `proposal.docx` su OneDrive — 200+ versioni accumulate in sei mesi. Il cliente firma oggi. Il prossimo marzo vorrà rivedere la versione della proposta originale — OneDrive l'avrà ancora?
-
-In [Keeply](https://keeply.work), la timeline di questo progetto appare così:
-
-![Timeline Keeply per proposal.docx: tag Release firmato dal cliente + versioni salvate automaticamente](timeline.svg)
-
-"Client signed v2.3 — approvato dal consiglio" ha la propria riga con un tag Release — è lei oggi pomeriggio, dopo che il cliente ha firmato, premendo "Salva versione" nella finestra principale di Keeply e scrivendo una nota:
-
-![Finestra di dialogo Keeply Salva versione: proposal.docx nota "Client signed v2.3"](save-dialog.svg)
-
-Scrivi "Client signed v2.3 — approvato dal consiglio", salva la versione. Il prossimo marzo quando consulterà la timeline, il tag è lì — non influenzato dal limite di 500 di OneDrive, mai eliminato automaticamente.
-
-Due azioni in totale:
-
-1. **Salva** — Ctrl+S in Word come al solito. OneDrive sincronizza al cloud (come prima). Keeply controlla in background entro 30 min, vede il cambiamento, salva automaticamente una versione nella propria timeline.
-2. **Segna milestone** — dopo che il cliente firma, premi "Salva versione" nella finestra principale di Keeply, scrivi una nota di una riga.
-
-Ora analizziamo i tre meccanismi di OneDrive — perché la cronologia versioni scompare al 501° salvataggio.
 
 ## I tre meccanismi di OneDrive: cose diverse, spesso confuse {#three-mechanisms}
 
@@ -124,6 +103,27 @@ Il Salvataggio automatico salva file temporanei `.asd` nei client desktop Word /
 Completamente separato dalla cronologia versioni cloud di OneDrive.
 
 Per un pattern correlato, vedi [Photoshop salvataggio automatico non è cronologia versioni](/it/post/photoshop-salvataggio automatico-not-version-history/) — la confusione parallela di Adobe nello spazio design.
+
+Chiariti i tre meccanismi e i loro limiti, vediamo come evitare concretamente di trovarsi senza la versione che serve.
+
+## Come Keeply impedisce alla cronologia OneDrive di scomparire al 501° salvataggio {#keeply-timeline}
+
+Ecco cosa succede. Tina è una consulente. Archivia `proposal.docx` su OneDrive — 200+ versioni accumulate in sei mesi. Il cliente firma oggi. Il prossimo marzo vorrà rivedere la versione della proposta originale — OneDrive l'avrà ancora?
+
+In [Keeply](https://keeply.work), la timeline di questo progetto appare così:
+
+![Timeline Keeply per proposal.docx: tag Release firmato dal cliente + versioni salvate automaticamente](timeline.svg)
+
+"Client signed v2.3 — approvato dal consiglio" ha la propria riga con un tag Release — è lei oggi pomeriggio, dopo che il cliente ha firmato, premendo "Salva versione" nella finestra principale di Keeply e scrivendo una nota:
+
+![Finestra di dialogo Keeply Salva versione: proposal.docx nota "Client signed v2.3"](save-dialog.svg)
+
+Scrivi "Client signed v2.3 — approvato dal consiglio", salva la versione. Il prossimo marzo quando consulterà la timeline, il tag è lì — non influenzato dal limite di 500 di OneDrive, mai eliminato automaticamente.
+
+Due azioni in totale:
+
+1. **Salva** — Ctrl+S in Word come al solito. OneDrive sincronizza al cloud (come prima). Keeply controlla in background entro 30 min, vede il cambiamento, salva automaticamente una versione nella propria timeline.
+2. **Segna milestone** — dopo che il cliente firma, premi "Salva versione" nella finestra principale di Keeply, scrivi una nota di una riga.
 
 ## Keeply colma il divario — dopo il limite di OneDrive {#keeply-fills}
 

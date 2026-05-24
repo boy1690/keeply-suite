@@ -48,9 +48,10 @@ La maggior parte delle persone che cercano "**recupero file sovrascritto**" vogl
 
 1. A cosa serve davvero Salvataggio automatico?
 2. Salvataggio automatico / Versioni precedenti / software di recupero: cosa può salvare ognuno?
-3. Perché "dopo il salvataggio sovrascritto" è già troppo tardi
-4. Oltre il salvataggio post-evento: l'opzione cronologia versioni always-on
-5. Domande frequenti
+3. Il caso NAS condiviso: lo scenario più comune nelle PMI italiane
+4. Perché "dopo il salvataggio sovrascritto" è già troppo tardi
+5. Oltre il salvataggio post-evento: l'opzione cronologia versioni always-on
+6. Domande frequenti
 
 ---
 
@@ -79,6 +80,18 @@ Per vedere il limite di ogni meccanismo, confrontali fianco a fianco:
 Esatto, è proprio il vincolo. Nessuno di questi meccanismi arriva strutturalmente al tipico scenario "sovrascritto dopo un salvataggio normale".
 
 Quello che gli utenti Keeply riportano più spesso è quasi sempre questo scenario.
+
+## Il caso NAS condiviso: lo scenario più comune nelle PMI italiane
+
+C'è un caso che la tabella sopra non mostra, eppure è quello che sento raccontare più spesso in Italia: la **cartella condivisa su NAS Synology o QNAP in ufficio**.
+
+Immagina uno studio di commercialisti o un ufficio tecnico con 5-10 persone. Tutti accedono alla stessa cartella `\\NAS-UFFICIO\Lavori_2026\`. Il tuo collega Marco, lavorando in remoto via VPN, salva per errore la sua versione di `bilancio_cliente_rossi.xlsx` sopra la tua — quella con le rettifiche che hai appena inserito. Marco non lo sa, tu non lo sai, non arriva nessuna notifica.
+
+Ecco il punto critico: **questa sovrascrittura non lascia traccia nel tuo Cestino di Windows**. Il Cestino raccoglie solo i file che tu elimini dal tuo PC locale. Una sovrascrittura su NAS condiviso non passa per il tuo Cestino — è come se il file non fosse mai esistito nella versione precedente. Se il NAS non ha le versioni precedenti abilitate (e molte installazioni SMB di Synology le hanno disabilitate per risparmiare spazio), non c'è punto di ritorno.
+
+Le Versioni precedenti di Windows (shadow copy) funzionano solo se il volume di rete è configurato correttamente con VSS — una configurazione che richiede intervento del reparto IT e che spesso manca negli studi professionali dove il NAS è stato installato "da un amico" o da un fornitore esterno anni fa. Scoprire che VSS non era attivo lo si fa, quasi sempre, solo nel momento del bisogno.
+
+Questo è il motivo per cui una cronologia versioni a livello di strumento — che gira sul tuo PC e salva le versioni nel momento in cui **tu** salvi, indipendentemente da chi fa cosa sul NAS condiviso — è l'unica risposta che non dipende dalla configurazione del server.
 
 ## Perché "dopo il salvataggio sovrascritto" è già troppo tardi
 

@@ -42,37 +42,16 @@ Non è un bug. È il meccanismo descritto chiaramente in [Microsoft Learn](https
 
 ## Contenuti
 
-1. [Come Keeply evita che la cronologia SharePoint venga mangiata dall'eliminazione automatica](#keeply-timeline)
-2. [I 3 meccanismi di cronologia versioni SharePoint](#three-mechanisms)
-3. [Limite di 500 versioni principali](#500-cap)
-4. [Eliminazione automatica a 4 livelli: 500 / 100 / 50 / cutoff costo reale](#eliminazione automatica)
-5. [Quota storage SharePoint: ridurre a 100 quanto risparmia davvero?](#storage-quota)
+1. [I 3 meccanismi di cronologia versioni SharePoint](#three-mechanisms)
+2. [Limite di 500 versioni principali](#500-cap)
+3. [Eliminazione automatica a 4 livelli: 500 / 100 / 50 / cutoff costo reale](#auto-delete)
+4. [Quota storage SharePoint: ridurre a 100 quanto risparmia davvero?](#storage-quota)
+5. [Come Keeply evita che la cronologia SharePoint venga mangiata dall'eliminazione automatica](#keeply-timeline)
 6. [Keeply colma il divario: Blocco Release + note per file](#keeply-fills)
 7. [3 scenari in cui non hai bisogno di Keeply con SharePoint](#when-not-needed)
 8. [FAQ](#faq)
 
 ---
-
-## Come Keeply evita che la cronologia SharePoint venga mangiata dall'eliminazione automatica {#keeply-timeline}
-
-James è l'IT admin part-time di una piccola azienda. Un team di 5 persone usa SharePoint Online per collaborare su `proposal.docx`. In 6 mesi hanno accumulato oltre 200 versioni, la quota storage SharePoint è all'80%, ha appena impostato eliminazione automatica a 100 nel centro amministrativo — il prossimo mese la quota tornerà nella fascia di sicurezza.
-
-Ma oggi il cliente chiede improvvisamente "la versione approvata dal consiglio del 14 febbraio". Apre la cronologia SP. Solo le ultime 100 versioni, quella del 14 febbraio è già auto-eliminata.
-
-Con [Keeply](https://keeply.work) non sarebbe successo. Lo stesso `proposal.docx` nella timeline Keeply:
-
-![Timeline Keeply proposal.docx: tag Release 14/2 + versioni auto-salvate](timeline.svg)
-
-"Client signed v2.3 — approvato dal consiglio" ha la propria riga con tag Release — è James il 14 febbraio, dopo l'approvazione del consiglio, premendo "Salva versione" in Keeply e scrivendo una nota:
-
-![Finestra Keeply Salva versione: proposal.docx nota "Client signed v2.3"](save-dialog.svg)
-
-Scrivi "Client signed v2.3 — approvato dal consiglio", salva la versione. 6 mesi dopo nella timeline Keeply il tag è lì — **non influenzato dall'eliminazione automatica SP, mai eliminato automaticamente**.
-
-Due azioni in totale:
-
-1. **Salva** — Ctrl+S in Word come al solito. SharePoint sincronizza al cloud (normale). Keeply controlla in background entro 30 min, vede la modifica, salva una versione nella **propria timeline**.
-2. **Segna milestone** — nei momenti importanti (approvazione consiglio / cliente / rilascio), premi "Salva versione" in Keeply e scrivi una nota.
 
 ## I 3 meccanismi di cronologia versioni SharePoint {#three-mechanisms}
 
@@ -115,6 +94,27 @@ Microsoft ha lanciato a fine 2024 le [impostazioni eliminazione automatica](http
 **Dopo eliminazione automatica 100**: 1.5 MB × 100 = 150 MB / file → 500 file × 150 MB = 75 GB → 7.5% tenant. 5× risparmio storage.
 
 **Ma**: hai perso l'80% dello storico. La versione approvata dal consiglio 3 mesi fa potrebbe essere tra le 400 eliminate.
+
+## Come Keeply evita che la cronologia SharePoint venga mangiata dall'eliminazione automatica {#keeply-timeline}
+
+James è l'IT admin part-time di una piccola azienda. Un team di 5 persone usa SharePoint Online per collaborare su `proposal.docx`. In 6 mesi hanno accumulato oltre 200 versioni, la quota storage SharePoint è all'80%, ha appena impostato eliminazione automatica a 100 nel centro amministrativo — il prossimo mese la quota tornerà nella fascia di sicurezza.
+
+Ma oggi il cliente chiede improvvisamente "la versione approvata dal consiglio del 14 febbraio". Apre la cronologia SP. Solo le ultime 100 versioni, quella del 14 febbraio è già auto-eliminata.
+
+Con [Keeply](https://keeply.work) non sarebbe successo. Lo stesso `proposal.docx` nella timeline Keeply:
+
+![Timeline Keeply proposal.docx: tag Release 14/2 + versioni auto-salvate](timeline.svg)
+
+"Client signed v2.3 — approvato dal consiglio" ha la propria riga con tag Release — è James il 14 febbraio, dopo l'approvazione del consiglio, premendo "Salva versione" in Keeply e scrivendo una nota:
+
+![Finestra Keeply Salva versione: proposal.docx nota "Client signed v2.3"](save-dialog.svg)
+
+Scrivi "Client signed v2.3 — approvato dal consiglio", salva la versione. 6 mesi dopo nella timeline Keeply il tag è lì — **non influenzato dall'eliminazione automatica SP, mai eliminato automaticamente**.
+
+Due azioni in totale:
+
+1. **Salva** — Ctrl+S in Word come al solito. SharePoint sincronizza al cloud (normale). Keeply controlla in background entro 30 min, vede la modifica, salva una versione nella **propria timeline**.
+2. **Segna milestone** — nei momenti importanti (approvazione consiglio / cliente / rilascio), premi "Salva versione" in Keeply e scrivi una nota.
 
 ## Keeply colma il divario {#keeply-fills}
 

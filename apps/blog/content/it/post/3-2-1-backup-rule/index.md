@@ -25,6 +25,8 @@ faq_schema:
     a: "Sì. Ma iCloud, OneDrive e Google Drive sono sincronizzazione, non backup. Se cancelli o sovrascrivi in locale, il cloud sincronizza la stessa modifica in pochi secondi — non proteggono dall'errore umano. Il requisito fuori sede risolve solo l'isolamento fisico; la cronologia versioni è un livello a parte."
   - q: Anche chi lavora da solo ha bisogno del backup 3-2-1?
     a: "Dipende da quanto contano i tuoi file. Il criterio è una sola domanda: perderli farebbe male? Non ha niente a che vedere con individuo o azienda. Se sì, ti serve la 3-2-1. Ma la 3-2-1 è necessaria, non sufficiente — gli scenari di errore umano richiedono in più la cronologia versioni."
+  - q: RAID sostituisce il backup?
+    a: "No. RAID è disponibilità, non backup. Se un ransomware cifra la cartella condivisa cifra anche il RAID in tempo reale. Se cancelli o sovrascrivi per errore, il RAID replica l'eliminazione su tutti i dischi istantaneamente. RAID protegge dal guasto del singolo disco — niente di più. La 3-2-1 rimane necessaria sopra il RAID, e la cronologia versioni rimane necessaria sopra la 3-2-1."
 ---
 
 # 【2026 Gestione file】La regola 3-2-1 del backup: 20 anni dopo, basta ancora nel 2026?
@@ -60,6 +62,12 @@ La regola 3-2-1 viene da [*The DAM Book*](https://www.oreilly.com/library/view/t
 - **1 copia fuori sede**: separata fisicamente dalle altre
 
 Nel 2005 i supporti dominanti erano nastri, CD/DVD, dischi rigidi meccanici. I tassi di guasto erano alti, i supporti invecchiavano in fretta. L'intento progettuale era chiaro: **fare in modo che nessun guasto hardware singolo, degrado del supporto o disastro nella struttura potesse cancellare i tuoi file**.
+
+### Un esempio concreto per la PMI italiana
+
+Come si traduce la 3-2-1 nella realtà quotidiana di uno studio professionale o di un'impresa artigianale italiana? Uno scenario tipico che vedo spesso: un geometra o uno studio di commercialisti lavora su `commessa_2026_v7.dwg` sul PC di lavoro (**copia 1 — disco locale**). Ogni sera, Windows sincronizza automaticamente la cartella su un NAS Synology in ufficio (**copia 2 — supporto NAS, diverso dal disco interno**). Una volta al giorno, il NAS fa una replica incrementale verso [Aruba Cloud](https://www.cloud.it/) o [Cubbit](https://www.cubbit.io/) — entrambi servizi cloud con data center in Italia che rispettano il GDPR e la normativa sulla residenza dei dati (**copia 3 — fuori sede, diverso dai primi due**). Il costo complessivo è nell'ordine di pochi euro al mese per lo storage cloud, con la NAS che può costare qualche centinaio di euro una tantum.
+
+Questo setup risolve i guasti hardware e i disastri fisici. Ma se lunedì mattina il titolare sovrascrive per errore la commessa con il file sbagliato, tutte e tre le copie sincronizzano la versione errata nel giro di minuti. Ecco dove entra in gioco la cronologia versioni — il livello che la 3-2-1 non copre.
 
 ## Da cosa protegge la 3-2-1, e da cosa no?
 
@@ -124,15 +132,19 @@ Ma non hai bisogno di due strumenti separati: uno per la ridondanza spaziale e u
 
 Sì. Ma iCloud, OneDrive e Google Drive sono sincronizzazione, non backup. Se cancelli o sovrascrivi localmente, il cloud sincronizza la stessa modifica in pochi secondi. **Non proteggono dall'errore utente.**
 
-**Q3: Il NAS conta come 2 tipi di supporto?**
+**Q3: RAID sostituisce il backup?**
+
+No — e questa è una delle confusioni più costose che vedo nelle PMI italiane. RAID (Redundant Array of Independent Disks) è **disponibilità**, non backup. Se due dischi dello stesso array si guastano in sequenza ravvicinata (cosa tutt'altro che rara sulle NAS entry-level dopo qualche anno), perdi tutto. Se un ransomware cifra la cartella condivisa, cifra anche il RAID in tempo reale. Se cancelli o sovrascrivi un file per errore, il RAID replica l'eliminazione istantaneamente su tutti i dischi dell'array. RAID ti protegge dal guasto del singolo disco durante l'orario di lavoro — niente di più. La 3-2-1 rimane necessaria sopra il RAID, e la cronologia versioni rimane necessaria sopra la 3-2-1.
+
+**Q4: Il NAS conta come 2 tipi di supporto?**
 
 NAS più un disco locale possono contare come 2 supporti. Ma RAID non è un backup. RAID protegge dal guasto del disco. Non protegge dal fatto che cancelli il file sbagliato.
 
-**Q4: Keeply è già 3-2-1?**
+**Q5: Keeply è già 3-2-1?**
 
 Sì. Keeply integra la 3-2-1 nel suo strato di posizione (copia di lavoro locale + canonica + posizione di backup) e aggiunge cronologia versioni e la funzione "Release" (marca una versione come pietra miliare, così i salvataggi successivi non possono sovrascriverla). Uno strumento, tre livelli.
 
-**Q5: Anche i lavoratori autonomi hanno bisogno della 3-2-1?**
+**Q6: Anche i lavoratori autonomi hanno bisogno della 3-2-1?**
 
 Dipende da quanto contano i tuoi file. Se perderli farebbe male, sì. Il criterio è "perderlo farebbe male". Non ha nulla a che fare con il fatto che tu sia individuo o azienda.
 
