@@ -132,11 +132,11 @@ No. Salvataggio automatico gestisce il salvataggio da crash; Keeply gestisce la 
 
 ---
 
-Il momento "Oh no, ho appena sovrascritto" delle 19:30 tornerà di nuovo. Non sai quando.
+Venerdì sera alle 19:30 Sam ha salvato sopra il file sbagliato e non poteva tornare indietro. Quella stessa cosa succederà a qualcun altro — forse a te, forse prima di quanto pensi.
 
-Ma ecco cosa dovresti sapere: il salvataggio post-evento ha limiti. La prevenzione a monte non dipende dal notare in tempo.
+Non serve aspettare il prossimo incidente per scoprire dove arrivano Salvataggio automatico e il software di recupero. Quel confine l'hai già visto in questo articolo.
 
-Per le versioni che salvi da oggi in poi. Puoi lasciare che lo strumento conservi quella versione per te?
+Trascina la tua cartella di lavoro in Keeply oggi. La prossima sovrascrittura sarà un click, non una domenica persa.
 
 ---
 

@@ -57,6 +57,8 @@ howto_schema:
 
 ---
 
+Il **vibe coding** è un modo di sviluppare software in cui lasci che un agente AI — come Cursor o GitHub Copilot, sempre più usati anche dalle startup italiane — generi grandi blocchi di codice per te: dai un obiettivo, l'AI scrive, esegui, correggi in loop. Veloce, ma con un rischio nascosto: se l'agente va troppo oltre, ritrovare il punto in cui tutto funzionava diventa un problema.
+
 L'ingegnere A apre Cursor e dice all'AI di sistemare un bug. L'AI finisce. Il codice non parte. Le dice di sistemarlo di nuovo. L'AI tocca un terzo file. Ancora rotto. Ne modifica un quinto. A questo punto l'ingegnere A non è più sicuro di quali file l'AI abbia cambiato.
 
 A questo punto probabilmente stai pensando: stop, tornare allo stato che almeno girava un attimo fa.

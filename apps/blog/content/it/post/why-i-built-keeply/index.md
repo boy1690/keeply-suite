@@ -24,9 +24,9 @@ faq_schema:
     a: "Adatto a — architetti, designer, avvocati, commercialisti, dottorandi, sviluppatori in pair programming con l'AI, chiunque debba tracciare chi ha cambiato cosa in cartelle condivise. Non adatto per — lavoro di puro codice (Git/GitHub è più indicato), aziende la cui policy IT impone SharePoint/OneDrive come unica fonte di verità, persone i cui file vivono interamente in strumenti cloud-native (Google Docs, Notion). Non vogliamo competere con Git né sostituire la sincronizzazione cloud — Keeply copre solo lo strato che gli altri dimenticano."
 ---
 
-Negli ultimi anni ho lavorato fianco a fianco con ingegneri dell'edilizia. Molti hanno 50, 60 anni. Il computer non è il loro strumento più comodo, ma planimetrie, ordini di variante e contratti passano tutti da lì ogni giorno. La cartella condivisa è il loro campo di collaborazione: un NAS, un gruppo di persone, N versioni di file, modifiche continue.
+Negli ultimi anni ho lavorato fianco a fianco con [ingegneri dell'edilizia](/it/post/autocad-wrong-version-crew/). Molti hanno 50, 60 anni. Il computer non è il loro strumento più comodo, ma planimetrie, ordini di variante e contratti passano tutti da lì ogni giorno. La cartella condivisa è il loro campo di collaborazione: un NAS, un gruppo di persone, N versioni di file, modifiche continue.
 
-Ho visto [il caos andare in scena](/it/post/autocad-wrong-version-crew/) troppe volte. I designer mandano una nuova versione all'ufficio. Chi raccoglie l'email la salva sul NAS ma non avvisa il cantiere. Il capocantiere quel giorno sta lavorando con il disegno della settimana scorsa. Il calcestruzzo è già colato, le dimensioni non corrispondono, devi rompere il getto, rifare il telaio, spostare il programma di due giorni. Nessuno ha sbagliato. Ma qualcuno paga.
+Ho visto il caos andare in scena troppe volte. I designer mandano una nuova versione all'ufficio. Chi raccoglie l'email la salva sul NAS ma non avvisa il cantiere. Il capocantiere quel giorno sta lavorando con il disegno della settimana scorsa. Il calcestruzzo è già colato, le dimensioni non corrispondono, devi rompere il getto, rifare il telaio, spostare il programma di due giorni. Nessuno ha sbagliato. Ma qualcuno paga.
 
 ## Il bivio che ho preso
 

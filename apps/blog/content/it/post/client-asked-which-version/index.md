@@ -92,9 +92,9 @@ Ecco la distinzione che nessuno nomina chiaramente: **strato di archiviazione** 
 
 La cronologia versioni integrata vive a livello di **archiviazione**. Lo scopo è "se l'ultima scrittura fallisce, fai rollback". Quindi la retention è breve. I punti di riferimento "500 versioni" o "30 giorni" si basano su "quanto spesso l'utente medio guarda indietro entro un mese". Tutto ciò che sta oltre tre mesi non è nello scopo; il pruning è intenzionale.
 
-Marco è un consulente. Sabato sera alle 23:23, il suo cliente chiede la versione di marzo di un report. Marco apre la cronologia OneDrive; la voce più vecchia è del 28 aprile. Salvataggio automatico era stato disabilitato da tempo. Ha 8 file `.docx` con prefisso `_v` localmente; nessuno dei timestamp corrisponde a quella settimana di consegna a marzo.
+Marco è un commercialista. Sabato sera alle 23:23, il cliente lo chiama: la Guardia di Finanza ha richiesto la perizia estimativa allegata alla dichiarazione di marzo — quella versione specifica, non la revisione di aprile. Marco apre la cronologia OneDrive; la voce più vecchia è del 28 aprile. Salvataggio automatico era stato disabilitato da tempo. Ha 8 file `.docx` con prefisso `_v` localmente; nessuno dei timestamp corrisponde alla settimana in cui aveva compilato e inviato quella perizia tramite il portale Fattura PA.
 
-Ecco il problema vero. Marco si rende conto solo dopo: a marzo aveva inviato al cliente un PDF esportato quel giorno, non il `.docx`. Il `.docx` originale è stato sovrascritto settimane fa. Il PDF è nella casella del cliente. **Semplicemente non può tornare a quella versione del `.docx` per continuare a modificarla.**
+Ecco il problema vero. Marco si rende conto solo dopo: a marzo aveva esportato un PDF firmato digitalmente per la trasmissione, non aveva conservato il `.docx` di origine. Il `.docx` originale è stato sovrascritto settimane fa con la revisione successiva. Il PDF è nella casella del cliente e nel cassetto fiscale. **Semplicemente non può tornare a quella versione del `.docx` per continuare a modificarla o per produrre una nuova perizia coerente con quella consegnata.**
 
 ## Recuperare la versione che hai consegnato 3 mesi fa
 
