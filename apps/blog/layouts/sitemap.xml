@@ -27,6 +27,13 @@
          in the sitemap creates a "Page with redirect" GSC notice. These locales ship
          only the article page(s). */ -}}
   {{- if eq .Kind "home" -}}{{- if not (in (slice "de" "es" "pt-br" "pl" "tr" "fr" "th" "vi") .Site.Language.Lang) -}}{{- $include = true -}}{{- end -}}{{- end -}}
+  {{- /* Never list noindex / sitemap-disabled pages (e.g. /search/). This custom
+         template overrides Hugo's native sitemap, so frontmatter
+         `sitemap: disable: true` was being silently ignored — honor it here.
+         Listing a noindex URL contradicts its robots meta (GSC reports it as
+         "Excluded by 'noindex' tag" = sitemap noise). 2026-05-24. */ -}}
+  {{- if .Sitemap.Disable -}}{{- $include = false -}}{{- end -}}
+  {{- with .Params.robots -}}{{- if in (lower .) "noindex" -}}{{- $include = false -}}{{- end -}}{{- end -}}
   {{- if $include }}
   <url>
     <loc>{{ .Permalink }}</loc>{{ if not .Lastmod.IsZero }}
