@@ -34,17 +34,27 @@
             </svg>
           </summary>
           <div class="absolute right-0 top-full mt-2 w-56 max-h-80 overflow-y-auto bg-white border border-gray-100 rounded-2xl shadow-xl py-2 z-50">
+            {{- /* Evidence-based switcher (2026-05-24): core-6 have full multi-page sites →
+                   always offer their home. Market-pilot locales (de/es/pt-br/pl/tr/fr/th/vi)
+                   are single-article — only surface them when THIS page has a real translation
+                   in that locale; otherwise their /{lang}/ home 301s to /en/ (CF bulk redirect)
+                   = a broken bounce link. So the ELSE (home-link) branch is gated to core-6. */ -}}
+            {{- $coreLocales := slice "en" "zh-tw" "zh-cn" "ja" "ko" "it" -}}
             {{- range hugo.Sites -}}
               {{- $otherLang := .Language -}}
+              {{- $isCore := in $coreLocales $otherLang.Lang -}}
               {{- $translation := "" -}}
               {{- range $.AllTranslations -}}
                 {{- if eq .Lang $otherLang.Lang -}}{{- $translation = . -}}{{- end -}}
               {{- end -}}
-              {{- if $translation -}}
+              {{- /* core: always offer (real translation, else full home). pilot: only when
+                     THIS page's translation is a real ARTICLE (Kind=page) — Hugo auto-creates a
+                     home/section for every configured lang, but pilot home/section 301 to /en/. */ -}}
+              {{- if and $translation (or $isCore (eq $translation.Kind "page")) -}}
                 <a href="{{ $translation.RelPermalink }}" class="block px-4 py-2 text-sm {{ if eq $otherLang.Lang $lang }}text-brand-700 font-semibold bg-brand-50{{ else }}text-gray-700 hover:bg-gray-50{{ end }}">
                   {{ $otherLang.LanguageName }}
                 </a>
-              {{- else -}}
+              {{- else if $isCore -}}
                 <a href="/{{ $otherLang.Lang }}/" class="block px-4 py-2 text-sm {{ if eq $otherLang.Lang $lang }}text-brand-700 font-semibold bg-brand-50{{ else }}text-gray-500 hover:bg-gray-50{{ end }}">
                   {{ $otherLang.LanguageName }}
                 </a>
