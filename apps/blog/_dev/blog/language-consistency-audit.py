@@ -561,8 +561,8 @@ def strip_anchor_refs(text: str) -> str:
 
 
 def strip_frontmatter(text: str) -> str:
-    """Return body only, excluding YAML frontmatter."""
-    m = re.match(r"^---\n.*?\n---\n(.*)", text, re.DOTALL)
+    """Return body only, excluding YAML frontmatter. Tolerates BOM + CRLF (Windows)."""
+    m = re.match(r"^﻿?---\r?\n.*?\r?\n---\r?\n(.*)", text, re.DOTALL)
     return m.group(1) if m else text
 
 
@@ -622,7 +622,7 @@ def extract_frontmatter_audit_text(text: str) -> str:
     frontmatter as a single string for blacklist scanning. These render to
     user-visible HTML (meta tags, FAQ structured data, page <title>), so they
     must follow the same locale-consistency rules as body text."""
-    m = re.match(r"^---\n(.*?)\n---", text, re.DOTALL)
+    m = re.match(r"^﻿?---\r?\n(.*?)\r?\n---", text, re.DOTALL)
     if not m:
         return ""
     fm = m.group(1)

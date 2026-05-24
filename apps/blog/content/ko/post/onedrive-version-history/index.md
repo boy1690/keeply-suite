@@ -15,7 +15,7 @@ pillar_parent: file-version-management-complete-guide
 template: T1
 image: cover.svg
 og_image: cover.png
-cta_topic: 상한-mechanism
+cta_topic: cap-mechanism
 image_alt_data: "OneDrive 버전 기록 500 상한 + 30일 휴지통 + 자동 복구 3가지 메커니즘 다이어그램, Microsoft Learn 공식 URL 인용"
 faq_schema:
   - q: OneDrive는 버전을 몇 개까지 저장하나요?

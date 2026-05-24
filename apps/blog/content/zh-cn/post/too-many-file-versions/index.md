@@ -1,4 +1,4 @@
----
+﻿---
 title: "【2026 文件管理】文件命名规则救不了你：3 种让你不必再命名 _v3_FINAL 的工具设计 + Keeply 怎么接手"
 description: "你那串 `_v3_FINAL_真的最终.docx` 不是强迫症、是工具没给你回头路的求生反应。换 Keeply 后 11 个 `_v3_FINAL` 变一条时间轴、客户签约版自己一行 tag、4/28 客户反馈后也在——这篇拆完「太多版本」其实是 4 种不同的痛。"
 voice_version: v3-2026-05-15
@@ -103,11 +103,11 @@ faq_schema:
 
 把工具能做的事拆成 3 种设计模式：
 
-### Design A：自动存档点（不依赖使用者纪律）
+### Design A：自动存档点（不依赖用户纪律）
 
 工具背景轮询文件变更、无论你存几次都留下历史、你不必命名。**例子**：macOS Time Machine（Apple 内建、每小时自动存一版）、Word AutoSave（只回最近 1-2 版）、Dropbox 30 天版本史。**Keeply** 在背景每 30 分钟轮询你的工作文件夹：文字档只记变动内容、影像跟设计档每版完整保留、这样大文件不会把硬盘撑爆。**解第 1 类痛点**。
 
-那些版本后来怎么找回？鼠标 hover 任一笔、Keeply 浮卡列当时改了哪些文件、不用打开就能比对：
+那些版本后来怎么找回？鼠标悬停 任一笔、Keeply 浮卡列当时改了哪些文件、不用打开就能比对：
 
 ![Keeply 版本详细浮卡：「客户签约版 — 5/4 业主确认」+ proposal.docx 修改 + pricing_revised.xlsx 新增 + pricing_v2_draft.xlsx 删除](version-detail-popover.svg)
 

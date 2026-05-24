@@ -1,4 +1,4 @@
----
+﻿---
 title: "【2026 文件管理】Excel 历史版本只回 1-2 版？4 个 Microsoft AutoSave 没讲的限制 + Keeply 怎么补"
 description: "Excel 版本历史按钮变灰、只回 1-2 版？不是你做错、是 Microsoft 把 AutoSave 当 OneDrive 订阅诱饵设计的后果。换 Keeply 后 Q1 结算定版冻结在时间轴、Q2 结算改完公式直接点还原——这篇拆完 Microsoft AutoSave 4 个绕不过的限制，讲 Keeply 怎么补本机 Excel 的版本管理。"
 voice_version: v3-2026-05-15
@@ -24,7 +24,7 @@ faq_schema:
     a: 有 4 个绕不过的限制：桌面 AutoSave 只能回 1-2 版；OneDrive 版本历史 30 天过期；本机文件完全没有版本记录；以及不支持单元格层级的比对。这些都是 Microsoft 刻意的工程选择、不是技术做不到。
 
   - q: 为什么 Microsoft 把 Excel 版本历史设计成这样？
-    a: 因为完整版本历史是 OneDrive 订阅的差异化功能。若桌面 Excel 自带完整本机记录、OneDrive 少一个绑定理由。版本历史对使用者是安全网、对 Microsoft 是订阅上钩诱饵、两个角色决定了功能的实际行为。
+    a: 因为完整版本历史是 OneDrive 订阅的差异化功能。若桌面 Excel 自带完整本机记录、OneDrive 少一个绑定理由。版本历史对用户是安全网、对 Microsoft 是订阅上钩诱饵、两个角色决定了功能的实际行为。
 
   - q: Keeply 怎么补 Excel 本机文件的版本管理？
     a: Keeply 在背景每 30 分钟轮询 Excel 文件变更（不依赖 OneDrive、文件存桌面也行）。同时你可以在重要时刻点 Keeply 主窗口「保存版本」、写笔记（「Q2 结算 — 改完应收账款公式」），半年后翻时间轴就找得到那一版。AutoSave 4 个限制里的 #1 + #2 + #3（只回 1-2 版 / 30 天过期 / 本机无版本）Keeply 都解。
@@ -105,7 +105,7 @@ faq_schema:
 
 问题在商业设计：版本历史是 OneDrive 订阅的差异化卖点。如果桌面 Excel 自己就有完整记录、本机文件也有、无时间限制、OneDrive 订阅会少一个绑定理由。
 
-对啊、这就是让人烦的地方。你撞到的不是 错误、是付费墙。只是 Microsoft 不会这样讲。版本历史对使用者是**文件安全网**；对 Microsoft 是**订阅上钩诱饵**。同一个功能两个角色、谁决定行为？决定的人不是你。
+对啊、这就是让人烦的地方。你撞到的不是 错误、是付费墙。只是 Microsoft 不会这样讲。版本历史对用户是**文件安全网**；对 Microsoft 是**订阅上钩诱饵**。同一个功能两个角色、谁决定行为？决定的人不是你。
 
 ---
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: "【2026 文件管理】Time Machine vs Dropbox：backup、sync，跟两者都不是的第三轴"
 description: "每篇 Time Machine vs Dropbox 比较文都把它写成 backup vs sync 二选一。两个说法都对，但都漏了第三轴——文件层级故意保存的版本历史——两个工具都不做。3 个月后想找你「当时故意保存的那版」，那道缺口才是真痛点。"
 voice_version: v2-2026-05-13
@@ -19,19 +19,19 @@ locales_required: [en, zh-TW, zh-CN, ja, ko, it]
 image_alt_data: "三轴图表对比 Time Machine（磁盘层 快照）、Dropbox（云端同步）、第三轴「文件层级故意保存的版本历史」——说明标准 Time Machine vs Dropbox 比较只涵盖 3 轴中的 2 轴"
 faq_schema:
   - q: Time Machine 会 backup 我的 Dropbox 文件夹吗？
-    a: 默认会。Time Machine 会 snapshot 整个家目录包含 Dropbox 文件夹。但它 backup 的是同步好的状态——不是 Dropbox 本身的版本历史。如果想排除 Dropbox 省 Time Machine 空间，可以加进 Time Machine 排除清单。
+    a: 默认会。Time Machine 会 快照 整个家目录包含 Dropbox 文件夹。但它 backup 的是同步好的状态——不是 Dropbox 本身的版本历史。如果想排除 Dropbox 省 Time Machine 空间，可以加进 Time Machine 排除清单。
     
   - q: 光跑 Time Machine 够吗？
-    a: 对「磁盘坏了 / 整台 Mac 重装」的灾难恢复来说够——Time Machine 能恢复整台机器。但对「我要找 2 个月前某个礼拜二下午我特地保存的那版」来说不够——Time Machine 是 hourly 磁盘 snapshot，不是文件层级的保存意图记录。
+    a: 对「磁盘坏了 / 整台 Mac 重装」的灾难恢复来说够——Time Machine 能恢复整台机器。但对「我要找 2 个月前某个礼拜二下午我特地保存的那版」来说不够——Time Machine 是 hourly 磁盘 快照，不是文件层级的保存意图记录。
     
   - q: Time Machine 跟 Dropbox 都要跑吗？
-    a: 两者解不同问题，多数人都会两个都跑——Time Machine 做整盘恢复、Dropbox 做跨设备同步加异地副本。但即使两个都跑，第三轴还是空的——每个文件故意保存的版本历史，无 retention cap。
+    a: 两者解不同问题，多数人都会两个都跑——Time Machine 做整盘恢复、Dropbox 做跨设备同步加异地副本。但即使两个都跑，第三轴还是空的——每个文件故意保存的版本历史，无 retention 上限。
     
-  - q: Time Machine snapshot 跟 Dropbox 版本历史区别在哪？
-    a: Time Machine snapshot 是磁盘层——hourly 整盘 snapshot，随时间 thin 掉旧的。能恢复 snapshot 涵盖到的任何文件，但你是按「日期」翻不是按「保存事件」。Dropbox 版本历史是文件层——保留每个文件的版本清单，但免费版 30 天 cap、付费 180 或 365 天。Time Machine 认得磁盘、Dropbox 认得文件、两个都不认得你的保存意图。
+  - q: Time Machine 快照 跟 Dropbox 版本历史区别在哪？
+    a: Time Machine 快照 是磁盘层——hourly 整盘 快照，随时间 thin 掉旧的。能恢复 快照 涵盖到的任何文件，但你是按「日期」翻不是按「保存事件」。Dropbox 版本历史是文件层——保留每个文件的版本清单，但免费版 30 天 上限、付费 180 或 365 天。Time Machine 认得磁盘、Dropbox 认得文件、两个都不认得你的保存意图。
     
   - q: 两个都不解的第三轴是什么？
-    a: 文件层级的故意保存版本历史——无时间 cap、无计数 cap——在后台每隔一段时间（15/30/60 分）把改动自动存成可回溯的版本，加上「标记某版为『这是送给客户的那版』」让它永远不被覆盖。像 Keeply 这类工具就是在磁盘备份跟云端同步之外，独立做这第三层。
+    a: 文件层级的故意保存版本历史——无时间 上限、无计数 上限——在后台每隔一段时间（15/30/60 分）把改动自动存成可回溯的版本，加上「标记某版为『这是送给客户的那版』」让它永远不被覆盖。像 Keeply 这类工具就是在磁盘备份跟云端同步之外，独立做这第三层。
 ---
 
 # 【2026 文件管理】Time Machine vs Dropbox：backup、sync，跟两者都不是的第三轴
@@ -81,7 +81,7 @@ Dropbox 有文件层版本，但免费 30 天 上限、付费 180 或 365 天。
 
 这是分类学问题。
 
-评测站比较的是被定位为「竞争对手」的产品。Time Machine 跟 Dropbox 其实不是竞争对手——Apple 随 OS 出货一个、Dropbox 卖订阅。「vs」的 framing 是使用者误以为两者重叠，因为两者都碰文件。
+评测站比较的是被定位为「竞争对手」的产品。Time Machine 跟 Dropbox 其实不是竞争对手——Apple 随 OS 出货一个、Dropbox 卖订阅。「vs」的 framing 是用户误以为两者重叠，因为两者都碰文件。
 
 第三轴——文件层级故意保存版本历史——主流工具没人占这个 slot。所以评测站找不到 vendor 放这格，轴就消失了。
 

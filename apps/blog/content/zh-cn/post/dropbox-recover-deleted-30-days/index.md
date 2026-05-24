@@ -1,4 +1,4 @@
----
+﻿---
 title: "【2026 文件管理】Dropbox 救得回昨天的误删，救不回两个月前那一版"
 description: "Dropbox 救得回昨天的误删。救不回客户两个月后突然要的那一版。30 天时钟过了还剩什么路？以及怎么让下次再也不用倒数。"
 date: 2026-05-17T08:14:00+08:00
@@ -62,7 +62,7 @@ Sarah 不会想到这些。她拿回文件。吃午饭。下午一切如常。
 
 Marco 开了张支持单。48 小时后回信来了：Plus 账户超过 30 天窗口的文件，Dropbox 没办法救援。客服建议他升级到 Professional，未来可以享 180 天窗口。Marco 还是升级了，抱着一丝希望。他打开看。文件依然不在。
 
-这是 Dropbox 保留政策里行销不会主动讲的一段。你方案对应的保留期限，套用的是**删除那一刻**你所在的方案。Plus 删除 = 30 天窗口，不管你一周后变成什么方案。从删除当下开始数的那座时钟，对之后任何升级都视而不见。这种使用者经验，在 [Dropbox Community 讨论串](https://community.dropbox.com/en/discussion/477149/can-i-recover-files-deleted-more-than-30-days-ago-if-i-upgrade-my-account) 里反覆出现。
+这是 Dropbox 保留政策里行销不会主动讲的一段。你方案对应的保留期限，套用的是**删除那一刻**你所在的方案。Plus 删除 = 30 天窗口，不管你一周后变成什么方案。从删除当下开始数的那座时钟，对之后任何升级都视而不见。这种用户体验，在 [Dropbox Community 讨论串](https://community.dropbox.com/en/discussion/477149/can-i-recover-files-deleted-more-than-30-days-ago-if-i-upgrade-my-account) 里反覆出现。
 
 Marco 实际还剩三条路。
 
