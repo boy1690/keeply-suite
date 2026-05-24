@@ -27,7 +27,8 @@ const LOCALES = [
   'zh-TW', 'zh-CN', 'en', 'ja', 'ko',
   'de', 'fr', 'es', 'pt', 'it',
   'nl', 'pl', 'cs', 'hu', 'tr',
-  'fi', 'sv', 'no', 'da'
+  'fi', 'sv', 'no', 'da',
+  'vi', 'th'
 ];
 
 function sha384Integrity(buf) {

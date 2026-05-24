@@ -39,7 +39,8 @@ const LOCALES = [
   'zh-TW', 'zh-CN', 'en', 'ja', 'ko',
   'de', 'fr', 'es', 'pt', 'it',
   'nl', 'pl', 'cs', 'hu', 'tr',
-  'fi', 'sv', 'no', 'da'
+  'fi', 'sv', 'no', 'da',
+  'vi', 'th'
 ];
 
 // Loader runtime-fetches the engine, so its hashed name must be in the

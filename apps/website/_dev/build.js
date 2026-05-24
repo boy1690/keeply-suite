@@ -22,7 +22,8 @@ const LOCALES = [
   'zh-TW', 'zh-CN', 'en', 'ja', 'ko',
   'de', 'fr', 'es', 'pt', 'it',
   'nl', 'pl', 'cs', 'hu', 'tr',
-  'fi', 'sv', 'no', 'da'
+  'fi', 'sv', 'no', 'da',
+  'vi', 'th'
 ];
 
 const PAGES = ['index.html', 'privacy.html', 'terms.html', 'contact.html', 'install.html', 'about.html'];
@@ -48,7 +49,8 @@ const HTML_LANG_MAP = {
   'en': 'en', 'ja': 'ja', 'ko': 'ko',
   'de': 'de', 'fr': 'fr', 'es': 'es', 'pt': 'pt', 'it': 'it',
   'nl': 'nl', 'pl': 'pl', 'cs': 'cs', 'hu': 'hu', 'tr': 'tr',
-  'fi': 'fi', 'sv': 'sv', 'no': 'no', 'da': 'da'
+  'fi': 'fi', 'sv': 'sv', 'no': 'no', 'da': 'da',
+  'vi': 'vi', 'th': 'th'
 };
 
 // Map locale codes → OG locale format
@@ -57,7 +59,8 @@ const OG_LOCALE_MAP = {
   'ja': 'ja_JP', 'ko': 'ko_KR', 'de': 'de_DE', 'fr': 'fr_FR',
   'es': 'es_ES', 'pt': 'pt_PT', 'it': 'it_IT', 'nl': 'nl_NL',
   'pl': 'pl_PL', 'cs': 'cs_CZ', 'hu': 'hu_HU', 'tr': 'tr_TR',
-  'fi': 'fi_FI', 'sv': 'sv_SE', 'no': 'nb_NO', 'da': 'da_DK'
+  'fi': 'fi_FI', 'sv': 'sv_SE', 'no': 'nb_NO', 'da': 'da_DK',
+  'vi': 'vi_VN', 'th': 'th_TH'
 };
 
 // Map page filename → meta key prefix

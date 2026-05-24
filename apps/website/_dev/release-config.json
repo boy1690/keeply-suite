@@ -9,7 +9,7 @@
     "MSI": "94b6aadcadc2e082418704efbdd39e7bb8fed7a0cf2f003027da81bdc74a10bc",
     "APPTAR": "4b79b4f015cc3bba059f714673b108e9445adc8a26d9fff243bbeff63e9ee0a0",
     "_releaseTag": "v1.0.12",
-    "_fetchedAt": "2026-05-24T03:08:23.935Z"
+    "_fetchedAt": "2026-05-24T04:44:06.453Z"
   },
   "_comment": "Edit version + versionTag when a new release ships, commit, push. CI runs `npm run build` automatically, which fetches fresh SHA-256 checksums from GitHub and rebuilds the site. You do NOT need to run anything locally. Expected asset naming: Keeply_{version}_x64-setup.exe, Keeply_{version}_aarch64.dmg, Keeply_{version}_x64_en-US.msi, Keeply_aarch64.app.tar.gz. The `checksums` object is populated by _dev/build-checksums.js; do not hand-edit unless you know what you are doing. Edit price/priceCurrency when pricing strategy changes — consumed by _dev/inject-schema.js for SoftwareApplication.offers."
 }

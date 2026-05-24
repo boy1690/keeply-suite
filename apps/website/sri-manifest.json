@@ -1,8 +1,8 @@
 {
   "style.css": "sha384-0kbqBVQT7yMaCa/yXTy7PyeytD4HGj7A0e/YKn8vg7aH3UXNrmLB6yYKww3X1O0O",
   "components.dbca3fea14.js": "sha384-XrwrKcjukUrI2TY6t2yoY7ynTyUQR3vJRWMrwKs2Hwm+IHByzuOZCsi9x1HseDJS",
-  "i18n-loader.16ad764f4b.js": "sha384-gC5MFhQehdZa/PalLWz2aO3o99O+GhUjxWbe4731euiIFdziA8rMu3uX6p2aAiaN",
-  "i18n.0b33693223.js": "sha384-WEiDm7DtuwxixJ9S4mL+BYF6v7wSz8YwB/Dvp9TzXGqK/CngpQ/zlAGUwLdmshHh",
+  "i18n-loader.e0abab46fe.js": "sha384-xuSjKq6BPU6RFWDTrcHoRD6A+DZwVA9FxzIUvCsbXC4/DAOh01WrmuS38fjPHieY",
+  "i18n.e33fbacc84.js": "sha384-/THLN4mk73Q8DNsKlPjbL2b4VhzTJkKmWVJMAC8sP/+vF5S828q7sX0AyNuk89xC",
   "consent-api.b29ceadb9e.js": "sha384-AgMsIGCbo9mV0oP2ebvR5aNCzNPtSkIGXG5v29yY6A+vEktkTMAOZtlK0WiKSEUR",
   "cookie-banner.8a90f5095a.js": "sha384-FkrIUHI4EiKuF7c0lI0I+k/SpAC6SN6GAiU3tqGZBNs1nvMH4R/g+hpuVB/UGk63",
   "ga4-loader.359df0e8a7.js": "sha384-gyx7he9QurH3GoSkfkbiWJCVC2RYlzVMBwyolFNVDEjLCjX1oUw1XG+WLOEBLSQJ",
@@ -28,5 +28,7 @@
   "i18n/fi.aede17b5e0.js": "sha384-4G/74byd+eZrNfWluX7rSFRDRUDR2PCx140L1vizZamFJeOd8vpwB/DgIHgAN6+X",
   "i18n/sv.5213f6568e.js": "sha384-4lzcSfdtS3SItBtFZiZzGfPEO19ut7vmSRhpgGYmAoPjSPy/V9QLEtEylZiLiqOq",
   "i18n/no.32936b615d.js": "sha384-43uTgNCHfx5KXIoWbmZI9lmVoGiQvaY7Wgux8w8qR5ISqr3OqFHOrln56Tm9G81a",
-  "i18n/da.b23fb0d03c.js": "sha384-7IDJj2SrbJXM1HSQB8BpueHmu5QCYYx3J18W7V5CIWp7wietLHWb9N/Lx0IRdtJQ"
+  "i18n/da.b23fb0d03c.js": "sha384-7IDJj2SrbJXM1HSQB8BpueHmu5QCYYx3J18W7V5CIWp7wietLHWb9N/Lx0IRdtJQ",
+  "i18n/vi.32d752d741.js": "sha384-TU2HWEtFA58+tWkblus3NWPOba+hGs1pjMmlee5NO+efUDSvcKY0x/5oJYM4gr4g",
+  "i18n/th.a28a55555f.js": "sha384-WPVHPP6cj+UPeFV5DSmntz9EwpnuKxiKZvjSOo55R2MuYanLVH8BQqJdxPhl7zRz"
 }

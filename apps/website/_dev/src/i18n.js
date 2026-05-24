@@ -1,5 +1,5 @@
 /**
- * Keeply i18n Engine (v5 — globe dropdown, 12 languages (evidence-trimmed 2026-05-24, spec 050; was 19), browser-local detection)
+ * Keeply i18n Engine (v5 — globe dropdown, 14 languages (core-12 + vi/th native, 2026-05-24; was 19, trimmed to 12, then +vi/th), browser-local detection)
  *
  * How it works:
  *   1. Language packs register themselves on window.__i18n
@@ -22,7 +22,9 @@
   // — measured ~0 native search volume for our niche (small markets + top-tier
   // English proficiency → they search in English). Their i18n/*.json + built
   // pages are RETAINED (still resolve by URL); only removed from the switcher +
-  // browser auto-detect (SUPPORTED). vi/th deferred (no website translation yet).
+  // browser auto-detect (SUPPORTED). vi/th ADDED 2026-05-24 (spec 051): full
+  // native vi.json + th.json translations shipped — justified by real blog search
+  // volume (vi unsaved-file 720 / th Excel-recovery 390) + native red-team pass.
   var LANGUAGES = [
     { code: 'zh-TW', label: '繁體中文' },
     { code: 'zh-CN', label: '简体中文' },
@@ -35,7 +37,9 @@
     { code: 'pt',    label: 'Português' },
     { code: 'it',    label: 'Italiano' },
     { code: 'pl',    label: 'Polski' },
-    { code: 'tr',    label: 'Türkçe' }
+    { code: 'tr',    label: 'Türkçe' },
+    { code: 'vi',    label: 'Tiếng Việt' },
+    { code: 'th',    label: 'ไทย' }
   ];
   var SUPPORTED = LANGUAGES.map(function (l) { return l.code; });
   var DEFAULT = 'en';
@@ -65,7 +69,8 @@
     'ja': 'ja', 'ko': 'ko', 'en': 'en',
     'de': 'de', 'fr': 'fr', 'es': 'es', 'pt': 'pt', 'it': 'it',
     'nl': 'nl', 'pl': 'pl', 'cs': 'cs', 'hu': 'hu', 'tr': 'tr',
-    'fi': 'fi', 'sv': 'sv', 'no': 'no', 'da': 'da'
+    'fi': 'fi', 'sv': 'sv', 'no': 'no', 'da': 'da',
+    'vi': 'vi', 'th': 'th'
   };
 
   function detectLangFromBrowser() {
