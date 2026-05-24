@@ -172,3 +172,7 @@ default:
     soft: "ถ้าวันนี้จะทำอะไรสักอย่าง ก็ให้เครื่องมือช่วยจำทุกเวอร์ชันของทุกไฟล์ไว้ให้คุณ"
     medium: "ฟรี + ตั้งค่าใน 30 วินาที ไม่มีเหตุผลที่จะไม่ลอง"
     hard: "ยังบันทึกทับเวอร์ชันเก่าอยู่หรือเปล่า? 30 วินาทีวันนี้ ช่วยให้ไม่ต้องตามหาไฟล์ในครั้งหน้า"
+  vi:
+    soft: "Nếu hôm nay bạn chỉ làm một việc, hãy để một công cụ ghi nhớ từng phiên bản của từng tệp cho bạn."
+    medium: "Miễn phí + cài đặt trong 30 giây. Không có lý do gì để không thử."
+    hard: "Vẫn đang lưu đè lên các bản cũ? 30 giây hôm nay giúp bạn khỏi phải đi tìm tệp lần sau."

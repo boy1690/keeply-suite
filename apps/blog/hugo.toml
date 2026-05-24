@@ -273,6 +273,18 @@ disableKinds = ["taxonomy", "term"]
     contentDir = "content/th"
     [languages.th.params]
       description = "Keeply Blog — ผู้พิทักษ์การจัดการไฟล์ของคุณ บันทึกภาคสนามเรื่องประวัติเวอร์ชัน การกู้ไฟล์ และวิธีไม่ให้สูญเวอร์ชันไหนไปอีก"
+  # vi re-added 2026-05-24 (R1 SELECTIVE reversal, same family): native-written,
+  # keyword-targeted VI-market pilot (lay-lai-file-word-chua-luu, 720 vol / SD 14 Word recovery — confirmed via match_keywords + serp_analysis).
+  # content/vi/ DID have the 8 R1-MT leftovers (deleted in Phase 3).
+  # LANG KEY IS "vi" (theme ships vi.toml). URL = /vi/. Vietnam = Paddle-supported.
+  # /vi/* IS in the CF bulk redirect (subpath → /en/) → CF exception: subpath OFF + 8 per-old-slug 301s.
+  [languages.vi]
+    languageName = "Tiếng Việt"
+    title = "Keeply Blog"
+    weight = 14
+    contentDir = "content/vi"
+    [languages.vi.params]
+      description = "Keeply Blog — người bảo vệ việc quản lý tệp của bạn. Ghi chép thực chiến về lịch sử phiên bản, khôi phục tệp và cách không bao giờ mất một phiên bản nào."
   # R1 (2026-05-18 GSC audit): 11 zero-click auto-translate locales removed
   # from build entirely. Evidence: 90-day GSC data showed only pt + es had any
   # clicks (1 each); de/fr/ru/nl/pl/tr/vi/th/id/ar/hi all 0 clicks. All 11
