@@ -13,6 +13,10 @@ og_image: cover.png
 cta_topic: versioning
 image_alt_data: "Folder view listing 7 files from proposal.docx to proposal_REALLY_final.docx — illustrating the 4 structural reasons every shared-folder user invents their own naming scheme instead of relying on tools designed for this layer"
 faq_schema:
+  - q: What is file version management?
+    a: File version management means keeping every saved version of a file along with what changed and why — so you can open any earlier version and see the decision behind it, not just get an old copy back. It's different from backup — a backup keeps a copy of the file; version management keeps the file and its full change history. For files on your own computer or company drive, dedicated tools like Keeply do this automatically in the background and let you save a version on the spot with a note, instead of leaving it to manual filename schemes like _v2_final.
+  - q: What's the difference between file version management and backup?
+    a: A backup keeps a copy so you don't lose the file to disaster — a drive failure, ransomware, or theft. Version management keeps the file along with an ordered history of every change and the reason behind it, so you can go back to a specific earlier version and know why it changed. Backup answers whether your file is safe; version management answers which version is right and what changed. Most people need both — a safe copy for the disaster case, and a full change history for the everyday "who overwrote this?" case. A few tools do both at once — Keeply keeps copies of your file in more than one place and keeps the full version history alongside them.
   - q: Why is there no "previous version" button in shared folders?
     a: Cloud drives are designed to keep every device looking at the same latest file — preserving every old version fights that goal, so tools chose sync. Version history ends up buried three menus deep, or doesn't exist at all, because it was never part of the core design.
   - q: Is Dropbox's 30-day version history limit a technical constraint or a business decision?
