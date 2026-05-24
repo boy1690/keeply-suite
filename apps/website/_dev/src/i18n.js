@@ -1,5 +1,5 @@
 /**
- * Keeply i18n Engine (v5 — globe dropdown, 19 languages, browser-local detection)
+ * Keeply i18n Engine (v5 — globe dropdown, 12 languages (evidence-trimmed 2026-05-24, spec 050; was 19), browser-local detection)
  *
  * How it works:
  *   1. Language packs register themselves on window.__i18n
@@ -18,6 +18,11 @@
  *   3. Add entry to LANGUAGES below
  */
 (function () {
+  // Evidence-based trim 2026-05-24 (spec 050): 19 → 12. Cut nl/cs/hu/fi/sv/no/da
+  // — measured ~0 native search volume for our niche (small markets + top-tier
+  // English proficiency → they search in English). Their i18n/*.json + built
+  // pages are RETAINED (still resolve by URL); only removed from the switcher +
+  // browser auto-detect (SUPPORTED). vi/th deferred (no website translation yet).
   var LANGUAGES = [
     { code: 'zh-TW', label: '繁體中文' },
     { code: 'zh-CN', label: '简体中文' },
@@ -29,15 +34,8 @@
     { code: 'es',    label: 'Español' },
     { code: 'pt',    label: 'Português' },
     { code: 'it',    label: 'Italiano' },
-    { code: 'nl',    label: 'Nederlands' },
     { code: 'pl',    label: 'Polski' },
-    { code: 'cs',    label: 'Čeština' },
-    { code: 'hu',    label: 'Magyar' },
-    { code: 'tr',    label: 'Türkçe' },
-    { code: 'fi',    label: 'Suomi' },
-    { code: 'sv',    label: 'Svenska' },
-    { code: 'no',    label: 'Norsk' },
-    { code: 'da',    label: 'Dansk' }
+    { code: 'tr',    label: 'Türkçe' }
   ];
   var SUPPORTED = LANGUAGES.map(function (l) { return l.code; });
   var DEFAULT = 'en';

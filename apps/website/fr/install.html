@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#4F46E5" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://static.cloudflareinsights.com https://*.clarity.ms; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com https://*.clarity.ms; font-src 'self'; connect-src 'self' https://docs.google.com https://*.google-analytics.com https://*.analytics.google.com https://cloudflareinsights.com https://*.clarity.ms; form-action 'self' https://docs.google.com; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <title>Install Keeply on Windows or macOS in 30 seconds — Keeply</title>
-  <meta name="description" content="Step-by-step install guide for Keeply on Windows (winget or .exe) and macOS (.dmg). Skip the SmartScreen warning with the winget one-liner. Free download." />
+  <title>Installer Keeply sur Windows ou macOS en 30 secondes — Keeply</title>
+  <meta name="description" content="Guide d'installation pas à pas de Keeply sur Windows (winget ou .exe) et macOS (.dmg). Évitez l'avertissement SmartScreen avec la commande winget en une ligne. Téléchargement gratuit." />
 
   <link rel="canonical" href="https://keeply.work/fr/install.html" />
 
@@ -39,12 +39,12 @@
 
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://keeply.work/fr/install.html" />
-  <meta property="og:title" content="Install Keeply on Windows or macOS in 30 seconds — Keeply" />
-  <meta property="og:description" content="Step-by-step install guide for Keeply on Windows (winget or .exe) and macOS (.dmg). Skip the SmartScreen warning with the winget one-liner. Free download." />
+  <meta property="og:title" content="Installer Keeply sur Windows ou macOS en 30 secondes — Keeply" />
+  <meta property="og:description" content="Guide d'installation pas à pas de Keeply sur Windows (winget ou .exe) et macOS (.dmg). Évitez l'avertissement SmartScreen avec la commande winget en une ligne. Téléchargement gratuit." />
   <meta property="og:image" content="https://keeply.work/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Install Keeply on Windows or macOS in 30 seconds — Keeply" />
+  <meta property="og:image:alt" content="Installer Keeply sur Windows ou macOS en 30 secondes — Keeply" />
   <meta property="og:site_name" content="Keeply" />
   <meta property="og:locale" content="fr_FR" />
   <meta property="og:locale:alternate" content="zh_TW" />
@@ -66,10 +66,10 @@
   <meta property="og:locale:alternate" content="nb_NO" />
   <meta property="og:locale:alternate" content="da_DK" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Install Keeply on Windows or macOS in 30 seconds — Keeply" />
-  <meta name="twitter:description" content="Step-by-step install guide for Keeply on Windows (winget or .exe) and macOS (.dmg). Skip the SmartScreen warning with the winget one-liner. Free download." />
+  <meta name="twitter:title" content="Installer Keeply sur Windows ou macOS en 30 secondes — Keeply" />
+  <meta name="twitter:description" content="Guide d'installation pas à pas de Keeply sur Windows (winget ou .exe) et macOS (.dmg). Évitez l'avertissement SmartScreen avec la commande winget en une ligne. Téléchargement gratuit." />
   <meta name="twitter:image" content="https://keeply.work/og-image.png" />
-  <meta name="twitter:image:alt" content="Install Keeply on Windows or macOS in 30 seconds — Keeply" />
+  <meta name="twitter:image:alt" content="Installer Keeply sur Windows ou macOS en 30 secondes — Keeply" />
 
   <link rel="preload" href="../style.css" as="style" integrity="sha384-0kbqBVQT7yMaCa/yXTy7PyeytD4HGj7A0e/YKn8vg7aH3UXNrmLB6yYKww3X1O0O" crossorigin="anonymous" />
   <link rel="stylesheet" href="../style.css" integrity="sha384-0kbqBVQT7yMaCa/yXTy7PyeytD4HGj7A0e/YKn8vg7aH3UXNrmLB6yYKww3X1O0O" crossorigin="anonymous" />
@@ -118,14 +118,14 @@
 
   <!-- Hidden i18n bag for inline JS (OS-detected CTA strings) -->
   <div id="install-i18n" hidden>
-    <span data-i18n="install.cta.detected_mac.label">I’m on macOS — show me the .dmg</span>
-    <span data-i18n="install.cta.detected_mac.note">Detected macOS. First launch needs right-click → Open.</span>
-    <span data-i18n="install.cta.detected_win.label">I’m on Windows — use winget</span>
-    <span data-i18n="install.cta.detected_win.note">Detected Windows. winget skips the SmartScreen warning entirely.</span>
-    <span data-i18n="install.cta.unknown_os.label">Pick your install path</span>
-    <span data-i18n="install.cta.unknown_os.note">Couldn’t detect your OS automatically. Keeply runs on Windows 10+ and Apple Silicon Macs.</span>
-    <span data-i18n="install.cta.secondary.win_to_mac">On Mac instead</span>
-    <span data-i18n="install.cta.secondary.mac_to_win">On Windows instead</span>
+    <span data-i18n="install.cta.detected_mac.label">Je suis sur macOS — montrez-moi le .dmg</span>
+    <span data-i18n="install.cta.detected_mac.note">macOS détecté. Le premier lancement nécessite un clic droit → Ouvrir.</span>
+    <span data-i18n="install.cta.detected_win.label">Je suis sur Windows — utiliser winget</span>
+    <span data-i18n="install.cta.detected_win.note">Windows détecté. winget évite entièrement l'avertissement SmartScreen.</span>
+    <span data-i18n="install.cta.unknown_os.label">Choisissez votre méthode d'installation</span>
+    <span data-i18n="install.cta.unknown_os.note">Impossible de détecter automatiquement votre système. Keeply fonctionne sur Windows 10+ et les Mac Apple Silicon.</span>
+    <span data-i18n="install.cta.secondary.win_to_mac">Plutôt sur Mac</span>
+    <span data-i18n="install.cta.secondary.mac_to_win">Plutôt sur Windows</span>
   </div>
 
   <!-- Nav (injected by components.js) -->
@@ -140,17 +140,17 @@
 
     <div class="max-w-3xl mx-auto px-6 text-center">
       <nav class="text-sm text-gray-400 mb-6">
-        <a href="index.html" class="hover:text-brand-600 transition-colors" data-i18n="install.breadcrumb.home">Home</a>
+        <a href="index.html" class="hover:text-brand-600 transition-colors" data-i18n="install.breadcrumb.home">Accueil</a>
         <span class="mx-2">/</span>
-        <span class="text-gray-600" data-i18n="install.breadcrumb.self">Install</span>
+        <span class="text-gray-600" data-i18n="install.breadcrumb.self">Installation</span>
       </nav>
 
       <h1 class="text-4xl md:text-5xl font-bold leading-tight tracking-tight text-gray-900">
-        <span data-i18n="install.hero.title.1">Install Keeply</span><br />
-        <span class="bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent" data-i18n="install.hero.title.2">in 30 seconds.</span>
+        <span data-i18n="install.hero.title.1">Installer Keeply</span><br />
+        <span class="bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent" data-i18n="install.hero.title.2">en 30 secondes.</span>
       </h1>
 
-      <p class="mt-6 text-lg text-gray-500 max-w-xl mx-auto leading-relaxed" data-i18n="install.hero.subtitle">Free for personal use. Works offline. Three paths below — pick whichever fits your setup. No account, no signup.</p>
+      <p class="mt-6 text-lg text-gray-500 max-w-xl mx-auto leading-relaxed" data-i18n="install.hero.subtitle">Gratuit pour un usage personnel. Fonctionne hors ligne. Trois méthodes ci-dessous — choisissez celle qui vous convient. Sans compte, sans inscription.</p>
 
       <!-- OS-detected primary CTA -->
       <div id="install-cta" class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"></div>
@@ -161,86 +161,86 @@
   <!-- PATHS -->
   <section id="paths" class="py-16 md:py-20 bg-gray-50/50">
     <div class="max-w-4xl mx-auto px-6">
-      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-3" data-i18n="install.paths.heading">Three install paths</h2>
-      <p class="text-gray-500 text-center max-w-2xl mx-auto mb-12" data-i18n="install.paths.sub">Pick whichever fits your machine. Skip the others.</p>
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-3" data-i18n="install.paths.heading">Trois méthodes d'installation</h2>
+      <p class="text-gray-500 text-center max-w-2xl mx-auto mb-12" data-i18n="install.paths.sub">Choisissez celle qui convient à votre machine. Ignorez les autres.</p>
 
       <div class="grid md:grid-cols-3 gap-6">
 
         <div id="winget" class="bg-white p-6 rounded-2xl border border-brand-100 shadow-sm">
           <div class="flex items-center gap-2 mb-3">
-            <span class="text-xs font-bold bg-brand-100 text-brand-700 px-2 py-0.5 rounded-full" data-i18n="install.winget.badge">RECOMMENDED</span>
-            <span class="text-xs text-gray-400" data-i18n="install.winget.platform">Windows · 30 sec</span>
+            <span class="text-xs font-bold bg-brand-100 text-brand-700 px-2 py-0.5 rounded-full" data-i18n="install.winget.badge">RECOMMANDÉ</span>
+            <span class="text-xs text-gray-400" data-i18n="install.winget.platform">Windows · 30 s</span>
           </div>
-          <h3 class="text-lg font-bold text-gray-900 mb-2" data-i18n="install.winget.title">winget one-liner</h3>
-          <p class="text-sm text-gray-600 mb-4 leading-relaxed" data-i18n="install.winget.desc">No SmartScreen warning. Microsoft's package manager handles signing review on your behalf.</p>
+          <h3 class="text-lg font-bold text-gray-900 mb-2" data-i18n="install.winget.title">Commande winget en une ligne</h3>
+          <p class="text-sm text-gray-600 mb-4 leading-relaxed" data-i18n="install.winget.desc">Aucun avertissement SmartScreen. Le gestionnaire de paquets de Microsoft gère la vérification de signature à votre place.</p>
           <div class="bg-gray-900 text-gray-100 text-xs font-mono px-3 py-2 rounded-lg overflow-x-auto">
             winget install Boy1690.Keeply
           </div>
-          <p class="text-xs text-gray-400 mt-3" data-i18n="install.winget.hint">Open PowerShell, paste, hit Enter.</p>
+          <p class="text-xs text-gray-400 mt-3" data-i18n="install.winget.hint">Ouvrez PowerShell, collez, appuyez sur Entrée.</p>
         </div>
 
         <div id="exe" class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
           <div class="flex items-center gap-2 mb-3">
             <span class="text-xs text-gray-400" data-i18n="install.exe.platform">Windows · 5 min</span>
           </div>
-          <h3 class="text-lg font-bold text-gray-900 mb-2" data-i18n="install.exe.title">Direct .exe download</h3>
-          <p class="text-sm text-gray-600 mb-4 leading-relaxed" data-i18n-html="install.exe.desc">For when you'd rather not open PowerShell. SmartScreen will appear — click <strong>More info → Run anyway</strong>. That's it.</p>
+          <h3 class="text-lg font-bold text-gray-900 mb-2" data-i18n="install.exe.title">Téléchargement direct du .exe</h3>
+          <p class="text-sm text-gray-600 mb-4 leading-relaxed" data-i18n-html="install.exe.desc">Pour quand vous préférez ne pas ouvrir PowerShell. SmartScreen apparaîtra — cliquez sur <strong>Informations complémentaires → Exécuter quand même</strong>. C'est tout.</p>
           <a id="download-btn-win"
              href="https://github.com/boy1690/keeply-releases/releases/latest"
              class="inline-flex items-center gap-2 bg-gray-900 hover:bg-gray-700 text-white text-sm font-medium px-4 py-2 rounded-full transition-all">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
-            <span data-i18n="install.exe.cta">Download .exe</span>
+            <span data-i18n="install.exe.cta">Télécharger le .exe</span>
           </a>
-          <p class="text-xs text-gray-400 mt-3" data-i18n="install.exe.requirement">Windows 10 or later</p>
+          <p class="text-xs text-gray-400 mt-3" data-i18n="install.exe.requirement">Windows 10 ou version ultérieure</p>
         </div>
 
         <div id="macos" class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
           <div class="flex items-center gap-2 mb-3">
             <span class="text-xs text-gray-400" data-i18n="install.macos.platform">macOS · 3 min</span>
           </div>
-          <h3 class="text-lg font-bold text-gray-900 mb-2" data-i18n="install.macos.title">.dmg drag &amp; drop</h3>
-          <p class="text-sm text-gray-600 mb-4 leading-relaxed" data-i18n-html="install.macos.desc">First launch needs <strong>right-click → Open</strong> (not double-click) to clear Gatekeeper. Only the first time.</p>
+          <h3 class="text-lg font-bold text-gray-900 mb-2" data-i18n="install.macos.title">.dmg par glisser-déposer</h3>
+          <p class="text-sm text-gray-600 mb-4 leading-relaxed" data-i18n-html="install.macos.desc">Le premier lancement nécessite un <strong>clic droit → Ouvrir</strong> (pas un double-clic) pour passer Gatekeeper. Seulement la première fois.</p>
           <a id="download-btn-mac"
              href="https://github.com/boy1690/keeply-releases/releases/latest"
              class="inline-flex items-center gap-2 bg-gray-900 hover:bg-gray-700 text-white text-sm font-medium px-4 py-2 rounded-full transition-all">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
-            <span data-i18n="install.macos.cta">Download .dmg</span>
+            <span data-i18n="install.macos.cta">Télécharger le .dmg</span>
           </a>
-          <p class="text-xs text-gray-400 mt-3" data-i18n="install.macos.requirement">Apple Silicon only</p>
+          <p class="text-xs text-gray-400 mt-3" data-i18n="install.macos.requirement">Apple Silicon uniquement</p>
         </div>
 
       </div>
 
-      <p class="text-center text-xs text-gray-400 mt-8" data-i18n-html="install.linux_note">Linux user? <span class="text-gray-500">Not on the roadmap yet — Keeply ships Windows and macOS today.</span></p>
+      <p class="text-center text-xs text-gray-400 mt-8" data-i18n-html="install.linux_note">Utilisateur Linux ? <span class="text-gray-500">Pas encore prévu — Keeply est disponible aujourd'hui sur Windows et macOS.</span></p>
     </div>
   </section>
 
   <!-- FIRST PROJECT -->
   <section id="first-project" class="py-16 md:py-20">
     <div class="max-w-3xl mx-auto px-6">
-      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-3" data-i18n="install.first_project.heading">After install: drop in your first project</h2>
-      <p class="text-gray-500 text-center max-w-xl mx-auto mb-12" data-i18n="install.first_project.sub">Installed isn't done. First project being protected the same day is done.</p>
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-3" data-i18n="install.first_project.heading">Après l'installation : ajoutez votre premier projet</h2>
+      <p class="text-gray-500 text-center max-w-xl mx-auto mb-12" data-i18n="install.first_project.sub">Installé ne veut pas dire terminé. Terminé, c'est un premier projet protégé le jour même.</p>
 
       <ol class="space-y-6">
         <li class="flex gap-4">
           <span class="flex-shrink-0 w-10 h-10 rounded-full bg-brand-600 text-white flex items-center justify-center font-bold">1</span>
           <div>
-            <h3 class="font-bold text-gray-900 mb-1" data-i18n="install.first_project.step1.title">Open Keeply, click &quot;New project&quot;</h3>
-            <p class="text-sm text-gray-600 leading-relaxed" data-i18n="install.first_project.step1.body">Pick a folder you're actively working in — a pitch, a contract, a design file. Don't pick an archive folder you haven't touched in six months.</p>
+            <h3 class="font-bold text-gray-900 mb-1" data-i18n="install.first_project.step1.title">Ouvrez Keeply, cliquez sur « Nouveau projet »</h3>
+            <p class="text-sm text-gray-600 leading-relaxed" data-i18n="install.first_project.step1.body">Choisissez un dossier sur lequel vous travaillez activement — une proposition, un contrat, un fichier de design. Pas un dossier d'archives que vous n'avez pas touché depuis six mois.</p>
           </div>
         </li>
         <li class="flex gap-4">
           <span class="flex-shrink-0 w-10 h-10 rounded-full bg-brand-600 text-white flex items-center justify-center font-bold">2</span>
           <div>
-            <h3 class="font-bold text-gray-900 mb-1" data-i18n="install.first_project.step2.title">Wait 1–2 minutes for the first scan</h3>
-            <p class="text-sm text-gray-600 leading-relaxed" data-i18n="install.first_project.step2.body">Keeply indexes the folder once. After that it watches in the background and records versions automatically as you save.</p>
+            <h3 class="font-bold text-gray-900 mb-1" data-i18n="install.first_project.step2.title">Attendez 1 à 2 minutes pour le premier scan</h3>
+            <p class="text-sm text-gray-600 leading-relaxed" data-i18n="install.first_project.step2.body">Keeply indexe le dossier une fois. Ensuite il le surveille en arrière-plan et enregistre les versions automatiquement à chaque enregistrement.</p>
           </div>
         </li>
         <li class="flex gap-4">
           <span class="flex-shrink-0 w-10 h-10 rounded-full bg-amber-500 text-white flex items-center justify-center font-bold">3</span>
           <div>
-            <h3 class="font-bold text-gray-900 mb-1" data-i18n="install.first_project.step3.title">Keep working as normal</h3>
-            <p class="text-sm text-gray-600 leading-relaxed" data-i18n="install.first_project.step3.body">No manual &quot;save snapshot&quot; button. Just hit save in your editor like you always do. Three days later when you need to roll back, history is there.</p>
+            <h3 class="font-bold text-gray-900 mb-1" data-i18n="install.first_project.step3.title">Continuez à travailler normalement</h3>
+            <p class="text-sm text-gray-600 leading-relaxed" data-i18n="install.first_project.step3.body">Aucun bouton manuel « enregistrer un instantané ». Enregistrez simplement dans votre éditeur comme d'habitude. Trois jours plus tard, quand vous devez revenir en arrière, l'historique est là.</p>
           </div>
         </li>
       </ol>
@@ -250,12 +250,12 @@
   <!-- DEEP DIVE -->
   <section class="py-12 bg-gradient-to-br from-brand-50 to-amber-50/40 border-y border-brand-100">
     <div class="max-w-2xl mx-auto px-6 text-center">
-      <p class="text-sm font-medium text-brand-700 mb-2" data-i18n="install.deep_dive.kicker">Want the long version?</p>
-      <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-4" data-i18n="install.deep_dive.title">Why SmartScreen shows up &amp; how to walk past it cleanly</h3>
-      <p class="text-gray-600 mb-6 leading-relaxed" data-i18n="install.deep_dive.body">Full walkthrough on the blog — covers the reason SmartScreen exists, why winget bypasses it, the Gatekeeper detour on macOS, and 5 common errors.</p>
+      <p class="text-sm font-medium text-brand-700 mb-2" data-i18n="install.deep_dive.kicker">Vous voulez la version longue ?</p>
+      <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-4" data-i18n="install.deep_dive.title">Pourquoi SmartScreen apparaît et comment le contourner proprement</h3>
+      <p class="text-gray-600 mb-6 leading-relaxed" data-i18n="install.deep_dive.body">Guide complet sur le blog — explique pourquoi SmartScreen existe, pourquoi winget le contourne, le détour par Gatekeeper sur macOS et 5 erreurs fréquentes.</p>
       <a href="https://blog.keeply.work/en/post/install-keeply-windows-mac/"
          class="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-medium px-6 py-3 rounded-full transition-all">
-        <span data-i18n="install.deep_dive.cta">Read the deep dive</span>
+        <span data-i18n="install.deep_dive.cta">Lire l'article détaillé</span>
         <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
       </a>
     </div>
@@ -324,7 +324,7 @@
   <script src="../consent-api.b29ceadb9e.js" defer integrity="sha384-AgMsIGCbo9mV0oP2ebvR5aNCzNPtSkIGXG5v29yY6A+vEktkTMAOZtlK0WiKSEUR" crossorigin="anonymous"></script>
   <script src="../components.dbca3fea14.js" defer integrity="sha384-XrwrKcjukUrI2TY6t2yoY7ynTyUQR3vJRWMrwKs2Hwm+IHByzuOZCsi9x1HseDJS" crossorigin="anonymous"></script>
   <script src="../cookie-banner.8a90f5095a.js" defer integrity="sha384-FkrIUHI4EiKuF7c0lI0I+k/SpAC6SN6GAiU3tqGZBNs1nvMH4R/g+hpuVB/UGk63" crossorigin="anonymous"></script>
-  <script src="../ga4-loader.f5ebaf533f.js" defer integrity="sha384-U+G0F+gL0htHsJ1w1r/1uHQ1cyT+IbcPNBAtAN3Gx37qoxqkn9eBS7VsV04cuebt" crossorigin="anonymous"></script>
-  <script src="../i18n-loader.20d770c549.js" defer integrity="sha384-fXKUNncG9Tg+frr23Y3G0cIbbcby5cVBkwT3gOcicBDXg/gct0PwGh4RA89p4HbH" crossorigin="anonymous"></script>
+  <script src="../ga4-loader.359df0e8a7.js" defer integrity="sha384-gyx7he9QurH3GoSkfkbiWJCVC2RYlzVMBwyolFNVDEjLCjX1oUw1XG+WLOEBLSQJ" crossorigin="anonymous"></script>
+  <script src="../i18n-loader.16ad764f4b.js" defer integrity="sha384-gC5MFhQehdZa/PalLWz2aO3o99O+GhUjxWbe4731euiIFdziA8rMu3uX6p2aAiaN" crossorigin="anonymous"></script>
 </body>
 </html>
