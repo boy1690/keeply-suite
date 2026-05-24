@@ -260,6 +260,19 @@ disableKinds = ["taxonomy", "term"]
     contentDir = "content/fr"
     [languages.fr.params]
       description = "Keeply Blog — le gardien de votre gestion de fichiers. Notes de terrain sur l'historique des versions, la récupération de fichiers et comment ne jamais perdre une version."
+  # th re-added 2026-05-24 (R1 SELECTIVE reversal, same as de/es/pt-br/pl/tr/fr): native-written,
+  # keyword-targeted TH-market pilot (ku-fai-excel-mai-dai-banthuek, 390 vol / SD 25 Excel recovery).
+  # content/th/ DID have the 8 R1-MT leftovers (deleted in Phase 3, same as de/es/pl/tr/fr).
+  # LANG KEY IS "th" (theme ships th.toml, binds cleanly). URL = /th/. Thailand = Paddle-supported.
+  # /th/* IS in the CF bulk redirect (subpath → /en/) → CF exception: subpath OFF on /th/ entry
+  # + per-old-slug 301s for the 8 R1-MT articles (covers any /th/post/* still indexed).
+  [languages.th]
+    languageName = "ไทย"
+    title = "Keeply Blog"
+    weight = 13
+    contentDir = "content/th"
+    [languages.th.params]
+      description = "Keeply Blog — ผู้พิทักษ์การจัดการไฟล์ของคุณ บันทึกภาคสนามเรื่องประวัติเวอร์ชัน การกู้ไฟล์ และวิธีไม่ให้สูญเวอร์ชันไหนไปอีก"
   # R1 (2026-05-18 GSC audit): 11 zero-click auto-translate locales removed
   # from build entirely. Evidence: 90-day GSC data showed only pt + es had any
   # clicks (1 each); de/fr/ru/nl/pl/tr/vi/th/id/ar/hi all 0 clicks. All 11

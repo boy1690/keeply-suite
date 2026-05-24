@@ -168,3 +168,7 @@ default:
     soft: "Si vous ne faites qu'une chose aujourd'hui, laissez un outil mémoriser chaque version de chaque fichier."
     medium: "Gratuit + 30 secondes à installer. Aucune raison de ne pas essayer."
     hard: "Toujours en train d'écraser vos anciennes versions ? 30 secondes aujourd'hui vous évitent la prochaine chasse au fichier."
+  th:
+    soft: "ถ้าวันนี้จะทำอะไรสักอย่าง ก็ให้เครื่องมือช่วยจำทุกเวอร์ชันของทุกไฟล์ไว้ให้คุณ"
+    medium: "ฟรี + ตั้งค่าใน 30 วินาที ไม่มีเหตุผลที่จะไม่ลอง"
+    hard: "ยังบันทึกทับเวอร์ชันเก่าอยู่หรือเปล่า? 30 วินาทีวันนี้ ช่วยให้ไม่ต้องตามหาไฟล์ในครั้งหน้า"

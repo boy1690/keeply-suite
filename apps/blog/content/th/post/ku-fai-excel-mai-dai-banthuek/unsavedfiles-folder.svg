@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 380" font-family="Segoe UI, Tahoma, 'Leelawadee UI', system-ui, sans-serif">
+  <!-- host-app illustration: UnsavedFiles แคชโฟลเดอร์ใน File Explorer — ku-fai-excel-mai-dai-banthuek (th) -->
+  <rect x="0" y="0" width="640" height="380" rx="8" fill="#FFFFFF" stroke="#D2D0CE" stroke-width="1"/>
+
+  <!-- window title bar -->
+  <rect x="0" y="0" width="640" height="36" rx="8" fill="#F3F2F1"/>
+  <rect x="0" y="18" width="640" height="18" fill="#F3F2F1"/>
+  <text x="16" y="23" font-size="12" font-weight="600" fill="#323130">📁  UnsavedFiles</text>
+  <text x="612" y="23" font-size="13" fill="#605E5C" text-anchor="end">—  ☐  ✕</text>
+
+  <!-- address bar -->
+  <rect x="16" y="46" width="608" height="28" rx="3" fill="#FFFFFF" stroke="#D2D0CE" stroke-width="1"/>
+  <text x="28" y="64" font-size="9.5" fill="#323130">คอมพิวเตอร์เครื่องนี้ ▸ ดิสก์ภายในเครื่อง (C:) ▸ ผู้ใช้ ▸ ผู้ใช้ ▸ AppData ▸ Local ▸ Microsoft ▸ Office ▸ UnsavedFiles</text>
+
+  <!-- column headers -->
+  <line x1="16" y1="90" x2="624" y2="90" stroke="#EDEBE9" stroke-width="1"/>
+  <text x="28" y="106" font-size="11" font-weight="700" fill="#605E5C">ชื่อ</text>
+  <text x="352" y="106" font-size="11" font-weight="700" fill="#605E5C">วันที่แก้ไข</text>
+  <text x="540" y="106" font-size="11" font-weight="700" fill="#605E5C">ชนิด</text>
+  <line x1="16" y1="114" x2="624" y2="114" stroke="#EDEBE9" stroke-width="1"/>
+
+  <!-- rows -->
+  <text x="28" y="138" font-size="12" fill="#323130">📊  งบภาษีลูกค้า (ไม่ได้บันทึก).xlsb</text>
+  <text x="352" y="138" font-size="11" fill="#605E5C">วันนี้ 11:15 น.</text>
+  <text x="540" y="138" font-size="11" fill="#605E5C">แฟ้ม XLSB</text>
+  <line x1="16" y1="150" x2="624" y2="150" stroke="#F3F2F1" stroke-width="1"/>
+
+  <text x="28" y="172" font-size="12" fill="#323130">📊  สมุดงาน1 (ไม่ได้บันทึก).xlsb</text>
+  <text x="352" y="172" font-size="11" fill="#605E5C">วันนี้ 09:02 น.</text>
+  <text x="540" y="172" font-size="11" fill="#605E5C">แฟ้ม XLSB</text>
+  <line x1="16" y1="184" x2="624" y2="184" stroke="#F3F2F1" stroke-width="1"/>
+
+  <text x="28" y="206" font-size="12" fill="#323130">📊  ใบเสนอราคา (ไม่ได้บันทึก).xlsb</text>
+  <text x="352" y="206" font-size="11" fill="#605E5C">19/05 16:48</text>
+  <text x="540" y="206" font-size="11" fill="#605E5C">แฟ้ม XLSB</text>
+  <line x1="16" y1="218" x2="624" y2="218" stroke="#F3F2F1" stroke-width="1"/>
+
+  <text x="28" y="240" font-size="12" fill="#A19F9D">📊  ฉบับร่าง (ไม่ได้บันทึก).xlsb</text>
+  <text x="352" y="240" font-size="11" fill="#C8C6C4">15/05 — ถูกล้างทิ้ง</text>
+  <text x="540" y="240" font-size="11" fill="#C8C6C4">(หายไป)</text>
+
+  <!-- status / caption -->
+  <rect x="0" y="332" width="640" height="48" fill="#FBF6EC"/>
+  <line x1="0" y1="332" x2="640" y2="332" stroke="#F0E3C8" stroke-width="1"/>
+  <text x="16" y="352" font-size="11.5" fill="#8A6D1A">⏳  นี่คือแคชชั่วคราว ไม่ใช่โฟลเดอร์สำรองข้อมูล</text>
+  <text x="16" y="369" font-size="11.5" fill="#8A6D1A">Excel ล้างมันทิ้งเอง — ไฟล์เก่า (เช่น ฉบับร่าง ข้างบน) หายไปโดยไม่บอกล่วงหน้า</text>
+</svg>

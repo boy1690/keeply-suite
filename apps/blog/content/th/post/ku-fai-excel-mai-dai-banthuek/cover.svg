@@ -1,0 +1,133 @@
+<!-- =============================================================
+     Cover: ku-fai-excel-mai-dai-banthuek (th)
+     Recipe: cost-hero / vanishing-timer — hook word + .xlsb card draining out of an hourglass (temp cache on a clock), contrasted with a kept version timeline
+     ============================================================= -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none"
+     font-family="'Inter','SF Pro Display',Tahoma,'Leelawadee UI',-apple-system,system-ui,sans-serif">
+  <defs>
+    <linearGradient id="grad-indigo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#312E81"/>
+    </linearGradient>
+    <linearGradient id="grad-amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFB300"/><stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="grad-paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F8F7FF"/><stop offset="1" stop-color="#E4E3FF"/>
+    </linearGradient>
+    <linearGradient id="grad-sand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFC94D"/><stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <symbol id="keeply-lockup" viewBox="0 0 200 50">
+      <circle cx="22" cy="25" r="16" fill="url(#grad-indigo)"/>
+      <path d="M16 18 L16 32 M16 25 L26 18 M16 25 L26 32" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <text x="48" y="33" font-size="22" font-weight="800" fill="#312E81">Keeply</text>
+    </symbol>
+    <filter id="hero-shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="14" stdDeviation="20" flood-color="#312E81" flood-opacity="0.15"/>
+    </filter>
+    <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#312E81" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#grad-paper)"/>
+
+  <!-- eyebrow -->
+  <g transform="translate(120, 100)">
+    <text x="0" y="0" font-size="15" font-weight="700" fill="#4338CA" letter-spacing="1">การจัดการไฟล์ · EDITORIAL</text>
+  </g>
+
+  <!-- big hook word -->
+  <g transform="translate(120, 360)" filter="url(#hero-shadow)">
+    <text x="0" y="0" font-size="120" font-weight="900" fill="url(#grad-indigo)" letter-spacing="0">หายอีกแล้ว?</text>
+  </g>
+
+  <!-- subtitle: 2 lines, amber emphasis -->
+  <g transform="translate(124, 470)">
+    <text x="0" y="0" font-size="32" font-weight="800" fill="#312E81" letter-spacing="0">ไฟล์ Excel ที่คุณเพิ่งกู้คืนมา ยังอยู่ในแคช</text>
+    <text x="0" y="48" font-size="32" font-weight="800" fill="#312E81" letter-spacing="0">ที่นับเวลาถอยหลัง — ไม่กี่วันก็ <tspan fill="#F59E0B">อาจหายอีก</tspan></text>
+  </g>
+
+  <!-- hero visual: hourglass draining a .xlsb card, vs a kept version timeline -->
+  <g transform="translate(980, 150)">
+
+    <!-- ===== LEFT: temporary cache hourglass ===== -->
+    <g transform="translate(0, 60)">
+      <text x="130" y="-18" font-size="16" font-weight="700" fill="#9CA3AF" text-anchor="middle" letter-spacing="0.5">แคช UnsavedFiles</text>
+
+      <rect x="40" y="0" width="180" height="14" rx="6" fill="#C7CBD3"/>
+      <rect x="40" y="372" width="180" height="14" rx="6" fill="#C7CBD3"/>
+      <path d="M58 14 L202 14 L150 193 L202 372 L58 372 L108 193 Z"
+            fill="#FFFFFF" stroke="#C7CBD3" stroke-width="3" filter="url(#card-shadow)"/>
+
+      <path d="M70 30 L190 30 L150 165 L120 165 Z" fill="url(#grad-sand)" opacity="0.30"/>
+      <path d="M104 120 L156 120 L150 165 L120 165 Z" fill="url(#grad-sand)"/>
+
+      <rect x="127" y="165" width="6" height="55" fill="url(#grad-sand)"/>
+      <circle cx="130" cy="232" r="3.5" fill="#F59E0B"/>
+      <circle cx="130" cy="250" r="3" fill="#F59E0B" opacity="0.7"/>
+
+      <g transform="translate(78, 244)" opacity="0.92">
+        <rect x="0" y="0" width="104" height="120" rx="9" fill="#FFFFFF" stroke="#E4E3FF" stroke-width="2"/>
+        <path d="M70 0 L104 34 L70 34 Z" fill="#EEF2FF"/>
+        <rect x="16" y="56" width="72" height="9" rx="3" fill="#217346"/>
+        <text x="52" y="92" font-size="17" font-weight="800" fill="#374151" text-anchor="middle">.xlsb</text>
+        <circle cx="92" cy="104" r="3" fill="#C7CBD3"/>
+        <circle cx="100" cy="92" r="2.4" fill="#C7CBD3" opacity="0.7"/>
+        <circle cx="98" cy="116" r="2" fill="#C7CBD3" opacity="0.5"/>
+      </g>
+
+      <g transform="translate(196, 38)">
+        <circle cx="0" cy="0" r="26" fill="url(#grad-amber)" filter="url(#card-shadow)"/>
+        <circle cx="0" cy="0" r="26" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+        <path d="M0 -14 L0 0 L11 7" stroke="#312E81" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+      </g>
+    </g>
+
+    <text x="300" y="290" font-size="30" font-weight="900" fill="#9C98FF" text-anchor="middle" letter-spacing="1">VS</text>
+
+    <!-- ===== RIGHT: kept version timeline ===== -->
+    <g transform="translate(360, 60)">
+      <text x="130" y="-18" font-size="16" font-weight="700" fill="#4338CA" text-anchor="middle" letter-spacing="0.5">ประวัติเวอร์ชัน</text>
+
+      <rect x="0" y="0" width="260" height="386" rx="14" fill="#FFFFFF" filter="url(#card-shadow)"/>
+      <line x1="40" y1="36" x2="40" y2="356" stroke="#E4E3FF" stroke-width="3"/>
+
+      <g transform="translate(40, 64)">
+        <circle cx="0" cy="0" r="11" fill="url(#grad-indigo)"/>
+        <rect x="30" y="-13" width="200" height="26" rx="6" fill="#EEF2FF"/>
+        <text x="46" y="5" font-size="15" font-weight="700" fill="#312E81">11:15　เวอร์ชันอัตโนมัติ</text>
+      </g>
+      <g transform="translate(40, 134)">
+        <circle cx="0" cy="0" r="11" fill="url(#grad-indigo)"/>
+        <rect x="30" y="-13" width="200" height="26" rx="6" fill="#EEF2FF"/>
+        <text x="46" y="5" font-size="15" font-weight="700" fill="#312E81">10:45　เวอร์ชันอัตโนมัติ</text>
+      </g>
+      <g transform="translate(40, 204)">
+        <circle cx="0" cy="0" r="11" fill="url(#grad-indigo)"/>
+        <rect x="30" y="-13" width="200" height="26" rx="6" fill="#EEF2FF"/>
+        <text x="46" y="5" font-size="15" font-weight="700" fill="#312E81">10:15　เวอร์ชันอัตโนมัติ</text>
+      </g>
+      <g transform="translate(40, 274)">
+        <circle cx="0" cy="0" r="11" fill="url(#grad-amber)"/>
+        <rect x="30" y="-13" width="200" height="26" rx="6" fill="#FEF3C7"/>
+        <text x="46" y="5" font-size="15" font-weight="700" fill="#92400E">09:45　บันทึกเวอร์ชัน</text>
+      </g>
+      <g transform="translate(40, 340)">
+        <circle cx="0" cy="0" r="14" fill="#FFFFFF" stroke="#22C55E" stroke-width="3"/>
+        <path d="M-6 0 L-2 5 L7 -6" stroke="#22C55E" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="30" y="5" font-size="15" font-weight="700" fill="#16A34A">เก็บไว้แล้ว</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Keeply lockup bottom-right -->
+  <g transform="translate(1320, 820)">
+    <use href="#keeply-lockup" width="200" height="50"/>
+  </g>
+
+  <!-- bottom note -->
+  <g transform="translate(120, 840)">
+    <text x="0" y="0" font-size="13" font-weight="600" fill="#4338CA" opacity="0.6" letter-spacing="1">ตลาดไทย · ในเครื่อง/เครือข่าย · แคชล้างตัวเอง; ประวัติเวอร์ชันไม่ล้าง</text>
+  </g>
+</svg>
