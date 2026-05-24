@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" font-family="'Inter','Segoe UI',-apple-system,system-ui,sans-serif">
+  <!-- mechanism diagram: 3 phases d'un fichier après vidage de la Corbeille — recuperer-fichiers-supprimes-corbeille (fr) -->
+  <defs>
+    <linearGradient id="g-ind" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#312E81"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="640" height="360" rx="8" fill="#F8F7FF" stroke="#E4E3FF" stroke-width="1"/>
+
+  <text x="32" y="40" font-size="17" font-weight="800" fill="#312E81">Après le vidage de la Corbeille : la course contre l'écrasement</text>
+
+  <!-- timeline arrow -->
+  <line x1="60" y1="86" x2="600" y2="86" stroke="#C7CBD3" stroke-width="2"/>
+  <polygon points="600,86 590,81 590,91" fill="#C7CBD3"/>
+  <text x="600" y="78" font-size="11" font-weight="600" fill="#9CA3AF" text-anchor="end">temps →</text>
+
+  <!-- Phase 1 : intact -->
+  <g transform="translate(40, 110)">
+    <rect x="0" y="0" width="172" height="180" rx="10" fill="#FFFFFF" stroke="#E4E3FF" stroke-width="2"/>
+    <circle cx="28" cy="32" r="14" fill="url(#g-ind)"/>
+    <text x="28" y="37" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">1</text>
+    <text x="52" y="30" font-size="13" font-weight="800" fill="#312E81">Données intactes</text>
+    <text x="52" y="46" font-size="11" fill="#6B7280">les premières minutes</text>
+    <!-- disk blocks: all full -->
+    <g transform="translate(20, 66)">
+      <rect x="0" y="0" width="26" height="26" rx="3" fill="#A5B4FC"/>
+      <rect x="34" y="0" width="26" height="26" rx="3" fill="#A5B4FC"/>
+      <rect x="68" y="0" width="26" height="26" rx="3" fill="#22C55E"/>
+      <rect x="102" y="0" width="26" height="26" rx="3" fill="#A5B4FC"/>
+      <rect x="0" y="34" width="26" height="26" rx="3" fill="#22C55E"/>
+      <rect x="34" y="34" width="26" height="26" rx="3" fill="#22C55E"/>
+      <rect x="68" y="34" width="26" height="26" rx="3" fill="#A5B4FC"/>
+      <rect x="102" y="34" width="26" height="26" rx="3" fill="#A5B4FC"/>
+    </g>
+    <text x="86" y="166" font-size="11" font-weight="700" fill="#16A34A" text-anchor="middle">récupérable ✓</text>
+  </g>
+
+  <!-- Phase 2 : marked free -->
+  <g transform="translate(234, 110)">
+    <rect x="0" y="0" width="172" height="180" rx="10" fill="#FFFFFF" stroke="#E4E3FF" stroke-width="2"/>
+    <circle cx="28" cy="32" r="14" fill="#F59E0B"/>
+    <text x="28" y="37" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">2</text>
+    <text x="52" y="30" font-size="13" font-weight="800" fill="#312E81">Espace « libre »</text>
+    <text x="52" y="46" font-size="11" fill="#6B7280">marqué réutilisable</text>
+    <g transform="translate(20, 66)">
+      <rect x="0" y="0" width="26" height="26" rx="3" fill="#FDE68A"/>
+      <rect x="34" y="0" width="26" height="26" rx="3" fill="#FDE68A"/>
+      <rect x="68" y="0" width="26" height="26" rx="3" fill="#FDE68A" stroke="#F59E0B" stroke-width="2"/>
+      <rect x="102" y="0" width="26" height="26" rx="3" fill="#FDE68A"/>
+      <rect x="0" y="34" width="26" height="26" rx="3" fill="#FDE68A" stroke="#F59E0B" stroke-width="2"/>
+      <rect x="34" y="34" width="26" height="26" rx="3" fill="#FDE68A" stroke="#F59E0B" stroke-width="2"/>
+      <rect x="68" y="34" width="26" height="26" rx="3" fill="#FDE68A"/>
+      <rect x="102" y="34" width="26" height="26" rx="3" fill="#FDE68A"/>
+    </g>
+    <text x="86" y="166" font-size="11" font-weight="700" fill="#B45309" text-anchor="middle">encore récupérable</text>
+  </g>
+
+  <!-- Phase 3 : overwritten -->
+  <g transform="translate(428, 110)">
+    <rect x="0" y="0" width="172" height="180" rx="10" fill="#FFFFFF" stroke="#E4E3FF" stroke-width="2"/>
+    <circle cx="28" cy="32" r="14" fill="#374151"/>
+    <text x="28" y="37" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">3</text>
+    <text x="52" y="30" font-size="13" font-weight="800" fill="#312E81">Données écrasées</text>
+    <text x="52" y="46" font-size="11" fill="#6B7280">perdues pour de bon</text>
+    <g transform="translate(20, 66)">
+      <rect x="0" y="0" width="26" height="26" rx="3" fill="#9CA3AF"/>
+      <rect x="34" y="0" width="26" height="26" rx="3" fill="#6B7280"/>
+      <rect x="68" y="0" width="26" height="26" rx="3" fill="#9CA3AF"/>
+      <rect x="102" y="0" width="26" height="26" rx="3" fill="#6B7280"/>
+      <rect x="0" y="34" width="26" height="26" rx="3" fill="#6B7280"/>
+      <rect x="34" y="34" width="26" height="26" rx="3" fill="#9CA3AF"/>
+      <rect x="68" y="34" width="26" height="26" rx="3" fill="#6B7280"/>
+      <rect x="102" y="34" width="26" height="26" rx="3" fill="#9CA3AF"/>
+    </g>
+    <text x="86" y="166" font-size="11" font-weight="700" fill="#4B5563" text-anchor="middle">irrécupérable ✕</text>
+  </g>
+
+  <!-- SSD / TRIM note -->
+  <rect x="40" y="308" width="560" height="36" rx="8" fill="#FEF3C7"/>
+  <text x="60" y="331" font-size="12" font-weight="600" fill="#92400E">⚡  Sur un SSD, le TRIM saute directement à la phase 3 en quelques minutes — la fenêtre se referme presque tout de suite.</text>
+</svg>

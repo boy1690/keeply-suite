@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Inter','Segoe UI',-apple-system,system-ui,sans-serif">
+<!-- Keeply FileHistoryPanel (dossier surveillé) : fichier supprimé toujours présent + bouton Restaurer — recuperer-fichiers-supprimes-corbeille (fr) -->
+<rect x="0" y="0" width="480" height="300" rx="8" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+
+<!-- Header (FileHistoryPanel header: icône + nom dossier + chemin + ✕) -->
+<rect x="0" y="0" width="480" height="36" rx="8" fill="#F9FAFB"/>
+<rect x="0" y="28" width="480" height="9" fill="#F9FAFB"/>
+<line x1="0" y1="36" x2="480" y2="36" stroke="#E5E7EB" stroke-width="1"/>
+<text x="14" y="23" font-size="14">📁</text>
+<text x="34" y="24" font-size="13" font-weight="700" fill="#374151">Dupont</text>
+<text x="100" y="24" font-size="11" fill="#9CA3AF">C:/Clients/2026/</text>
+<text x="462" y="24" font-size="14" fill="#9CA3AF" text-anchor="end">✕</text>
+
+<!-- folder hint banner (amber, 💡) -->
+<rect x="0" y="37" width="480" height="22" fill="#FFFBEB"/>
+<line x1="0" y1="59" x2="480" y2="59" stroke="#FDE68A" stroke-width="1"/>
+<text x="14" y="52" font-size="10.5" fill="#B45309">💡 Historique du dossier — cliquez un fichier pour voir ses versions.</text>
+
+<!-- restore toast (emerald) -->
+<rect x="14" y="66" width="452" height="22" rx="4" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/>
+<text x="24" y="81" font-size="10.5" fill="#047857">✓ Contrat_final.docx restauré dans le dossier d'origine.</text>
+
+<!-- ===== version rows (timestamp 80px · message · author "vous") ===== -->
+
+<!-- row 1: deleted file STILL PRESENT — highlighted + Restaurer button visible -->
+<rect x="0" y="94" width="480" height="34" fill="#EEF2FF"/>
+<rect x="0" y="94" width="3" height="34" fill="#6366F1"/>
+<text x="14" y="115" font-size="11" fill="#6B7280">auj. 14:30</text>
+<text x="92" y="115" font-size="12.5" fill="#374151">🗑 Contrat_final.docx — supprimé du dossier</text>
+<rect x="372" y="103" width="78" height="18" rx="4" fill="#ECFDF5" stroke="#6EE7B7" stroke-width="1"/>
+<text x="411" y="116" font-size="11" font-weight="600" fill="#047857" text-anchor="middle">↩ Restaurer</text>
+<line x1="0" y1="128" x2="480" y2="128" stroke="#F3F4F6" stroke-width="1"/>
+
+<!-- row 2 -->
+<text x="14" y="149" font-size="11" fill="#9CA3AF">auj. 14:00</text>
+<text x="92" y="149" font-size="12.5" fill="#374151">Auto-version — modifications du matin</text>
+<text x="466" y="149" font-size="11" fill="#D1D5DB" text-anchor="end">vous</text>
+<line x1="0" y1="162" x2="480" y2="162" stroke="#F3F4F6" stroke-width="1"/>
+
+<!-- row 3 -->
+<text x="14" y="183" font-size="11" fill="#9CA3AF">auj. 11:30</text>
+<text x="92" y="183" font-size="12" fill="#374151">Enregistrer une version — avant envoi client</text>
+<text x="466" y="183" font-size="11" fill="#D1D5DB" text-anchor="end">vous</text>
+<line x1="0" y1="196" x2="480" y2="196" stroke="#F3F4F6" stroke-width="1"/>
+
+<!-- row 4 -->
+<text x="14" y="217" font-size="11" fill="#9CA3AF">auj. 09:30</text>
+<text x="92" y="217" font-size="12.5" fill="#374151">Auto-version</text>
+<text x="466" y="217" font-size="11" fill="#D1D5DB" text-anchor="end">vous</text>
+<line x1="0" y1="230" x2="480" y2="230" stroke="#F3F4F6" stroke-width="1"/>
+
+<!-- row 5 -->
+<text x="14" y="251" font-size="11" fill="#9CA3AF">19/05 16:10</text>
+<text x="92" y="251" font-size="12.5" fill="#374151">Clôture du mois</text>
+<text x="466" y="251" font-size="11" fill="#D1D5DB" text-anchor="end">vous</text>
+<line x1="0" y1="264" x2="480" y2="264" stroke="#F3F4F6" stroke-width="1"/>
+
+<!-- footer note -->
+<text x="14" y="284" font-size="10" fill="#10B981">✓ Le fichier supprimé reste dans l'historique — pas de course contre le TRIM.</text>
+</svg>

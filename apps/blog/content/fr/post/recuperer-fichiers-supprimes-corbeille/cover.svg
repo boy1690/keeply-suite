@@ -1,0 +1,134 @@
+<!-- ============================================================= -->
+<!-- Cover: recuperer-fichiers-supprimes-corbeille (fr) -->
+<!-- Recipe: cost-hero / race-against-overwrite — hook word + an emptied Corbeille on a draining clock, contrasted with a kept version timeline where the deleted file is still restorable -->
+<!-- ============================================================= -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none"
+     font-family="'Inter','SF Pro Display',-apple-system,system-ui,sans-serif">
+  <defs>
+    <linearGradient id="grad-indigo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#312E81"/>
+    </linearGradient>
+    <linearGradient id="grad-amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFB300"/><stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="grad-paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F8F7FF"/><stop offset="1" stop-color="#E4E3FF"/>
+    </linearGradient>
+    <linearGradient id="grad-sand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFC94D"/><stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <symbol id="keeply-lockup" viewBox="0 0 200 50">
+      <circle cx="22" cy="25" r="16" fill="url(#grad-indigo)"/>
+      <path d="M16 18 L16 32 M16 25 L26 18 M16 25 L26 32" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <text x="48" y="33" font-size="22" font-weight="800" fill="#312E81">Keeply</text>
+    </symbol>
+    <filter id="hero-shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="14" stdDeviation="20" flood-color="#312E81" flood-opacity="0.15"/>
+    </filter>
+    <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#312E81" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#grad-paper)"/>
+
+  <!-- eyebrow -->
+  <g transform="translate(120, 100)">
+    <text x="0" y="0" font-size="15" font-weight="700" fill="#4338CA" letter-spacing="3">RÉCUPÉRATION DE FICHIERS · GUIDE</text>
+  </g>
+
+  <!-- big hook word -->
+  <g transform="translate(120, 360)" filter="url(#hero-shadow)">
+    <text x="0" y="0" font-size="120" font-weight="900" fill="url(#grad-indigo)" letter-spacing="-3">CORBEILLE VIDE ?</text>
+  </g>
+
+  <!-- subtitle: 2 lines, amber emphasis -->
+  <g transform="translate(124, 470)">
+    <text x="0" y="0" font-size="32" font-weight="800" fill="#312E81" letter-spacing="0.5">Une fois vidée, chaque minute et chaque écriture</text>
+    <text x="0" y="48" font-size="32" font-weight="800" fill="#312E81" letter-spacing="0.5">font baisser vos chances — <tspan fill="#F59E0B">sauf si une version était gardée</tspan></text>
+  </g>
+
+  <!-- hero visual: emptied Corbeille on a draining clock, vs a kept version timeline -->
+  <g transform="translate(980, 150)">
+
+    <!-- ===== LEFT: emptied Corbeille, race against overwrite ===== -->
+    <g transform="translate(0, 60)">
+      <text x="130" y="-18" font-size="16" font-weight="700" fill="#9CA3AF" text-anchor="middle" letter-spacing="1">Corbeille vidée</text>
+
+      <rect x="40" y="0" width="180" height="14" rx="6" fill="#C7CBD3"/>
+      <rect x="40" y="372" width="180" height="14" rx="6" fill="#C7CBD3"/>
+      <path d="M58 14 L202 14 L150 193 L202 372 L58 372 L108 193 Z"
+            fill="#FFFFFF" stroke="#C7CBD3" stroke-width="3" filter="url(#card-shadow)"/>
+
+      <path d="M70 30 L190 30 L150 165 L120 165 Z" fill="url(#grad-sand)" opacity="0.30"/>
+      <path d="M104 120 L156 120 L150 165 L120 165 Z" fill="url(#grad-sand)"/>
+
+      <rect x="127" y="165" width="6" height="55" fill="url(#grad-sand)"/>
+      <circle cx="130" cy="232" r="3.5" fill="#F59E0B"/>
+      <circle cx="130" cy="250" r="3" fill="#F59E0B" opacity="0.7"/>
+
+      <!-- trash bin / deleted doc draining away -->
+      <g transform="translate(92, 250)" opacity="0.92">
+        <rect x="0" y="0" width="76" height="104" rx="9" fill="#FFFFFF" stroke="#E4E3FF" stroke-width="2"/>
+        <path d="M52 0 L76 24 L52 24 Z" fill="#EEF2FF"/>
+        <rect x="14" y="42" width="40" height="7" rx="3" fill="#C7CBD3"/>
+        <rect x="14" y="56" width="32" height="7" rx="3" fill="#E4E3FF"/>
+        <text x="38" y="92" font-size="26" text-anchor="middle">🗑️</text>
+      </g>
+
+      <g transform="translate(196, 38)">
+        <circle cx="0" cy="0" r="26" fill="url(#grad-amber)" filter="url(#card-shadow)"/>
+        <circle cx="0" cy="0" r="26" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+        <path d="M0 -14 L0 0 L11 7" stroke="#312E81" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+      </g>
+    </g>
+
+    <text x="300" y="290" font-size="30" font-weight="900" fill="#9C98FF" text-anchor="middle" letter-spacing="1">VS</text>
+
+    <!-- ===== RIGHT: kept version timeline — deleted file still restorable ===== -->
+    <g transform="translate(360, 60)">
+      <text x="130" y="-18" font-size="16" font-weight="700" fill="#4338CA" text-anchor="middle" letter-spacing="1">Historique des versions</text>
+
+      <rect x="0" y="0" width="260" height="386" rx="14" fill="#FFFFFF" filter="url(#card-shadow)"/>
+      <line x1="40" y1="36" x2="40" y2="356" stroke="#E4E3FF" stroke-width="3"/>
+
+      <!-- deleted file row, still present + restore -->
+      <g transform="translate(40, 64)">
+        <circle cx="0" cy="0" r="11" fill="url(#grad-amber)"/>
+        <rect x="30" y="-15" width="200" height="30" rx="6" fill="#FEF3C7"/>
+        <text x="44" y="-1" font-size="13" font-weight="700" fill="#92400E">14:30  Supprimé</text>
+        <text x="44" y="13" font-size="11" font-weight="600" fill="#16A34A">↩ Restaurer</text>
+      </g>
+      <g transform="translate(40, 142)">
+        <circle cx="0" cy="0" r="11" fill="url(#grad-indigo)"/>
+        <rect x="30" y="-13" width="200" height="26" rx="6" fill="#EEF2FF"/>
+        <text x="46" y="5" font-size="15" font-weight="700" fill="#312E81">14:00  Auto-version</text>
+      </g>
+      <g transform="translate(40, 212)">
+        <circle cx="0" cy="0" r="11" fill="url(#grad-indigo)"/>
+        <rect x="30" y="-13" width="200" height="26" rx="6" fill="#EEF2FF"/>
+        <text x="46" y="5" font-size="15" font-weight="700" fill="#312E81">11:30  Enregistrer</text>
+      </g>
+      <g transform="translate(40, 282)">
+        <circle cx="0" cy="0" r="11" fill="url(#grad-indigo)"/>
+        <rect x="30" y="-13" width="200" height="26" rx="6" fill="#EEF2FF"/>
+        <text x="46" y="5" font-size="15" font-weight="700" fill="#312E81">09:30  Auto-version</text>
+      </g>
+      <g transform="translate(40, 348)">
+        <circle cx="0" cy="0" r="14" fill="#FFFFFF" stroke="#22C55E" stroke-width="3"/>
+        <path d="M-6 0 L-2 5 L7 -6" stroke="#22C55E" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="30" y="5" font-size="15" font-weight="700" fill="#16A34A">Conservé</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Keeply lockup bottom-right -->
+  <g transform="translate(1320, 820)">
+    <use href="#keeply-lockup" width="200" height="50"/>
+  </g>
+
+  <!-- bottom note -->
+  <g transform="translate(120, 840)">
+    <text x="0" y="0" font-size="13" font-weight="600" fill="#4338CA" opacity="0.6" letter-spacing="1.5">MARCHÉ FR · LOCAL/RÉSEAU · UN FICHIER SUPPRIMÉ RESTE DANS L'HISTORIQUE — SANS COURSE CONTRE LE TRIM</text>
+  </g>
+</svg>
