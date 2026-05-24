@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 380" font-family="Segoe UI, system-ui, sans-serif">
+  <!-- host-app illustration: a janela da Lixeira do Windows com um arquivo selecionado e o botão Restaurar — como-recuperar-arquivos-excluidos-da-lixeira (pt-BR) -->
+  <rect x="0" y="0" width="640" height="380" rx="8" fill="#FFFFFF" stroke="#D2D0CE" stroke-width="1"/>
+
+  <!-- window title bar -->
+  <rect x="0" y="0" width="640" height="36" rx="8" fill="#F3F2F1"/>
+  <rect x="0" y="18" width="640" height="18" fill="#F3F2F1"/>
+  <text x="16" y="23" font-size="12" font-weight="600" fill="#323130">🗑️  Lixeira</text>
+  <text x="612" y="23" font-size="13" fill="#605E5C" text-anchor="end">—  ☐  ✕</text>
+
+  <!-- command bar -->
+  <rect x="0" y="36" width="640" height="32" fill="#FAF9F8"/>
+  <line x1="0" y1="68" x2="640" y2="68" stroke="#EDEBE9" stroke-width="1"/>
+  <rect x="16" y="42" width="160" height="20" rx="3" fill="#0F6CBD"/>
+  <text x="96" y="56" font-size="11.5" font-weight="600" fill="#FFFFFF" text-anchor="middle">↩  Restaurar os itens selecionados</text>
+  <text x="200" y="56" font-size="11.5" fill="#605E5C">Restaurar todos os itens</text>
+  <text x="356" y="56" font-size="11.5" fill="#A19F9D">Esvaziar Lixeira</text>
+
+  <!-- column headers -->
+  <text x="28" y="92" font-size="11" font-weight="700" fill="#605E5C">Nome</text>
+  <text x="320" y="92" font-size="11" font-weight="700" fill="#605E5C">Local original</text>
+  <text x="540" y="92" font-size="11" font-weight="700" fill="#605E5C">Data de exclusão</text>
+  <line x1="16" y1="100" x2="624" y2="100" stroke="#EDEBE9" stroke-width="1"/>
+
+  <!-- selected row -->
+  <rect x="16" y="106" width="608" height="26" fill="#E5F1FB"/>
+  <rect x="16" y="106" width="608" height="26" fill="none" stroke="#0F6CBD" stroke-width="1"/>
+  <text x="28" y="124" font-size="12" fill="#323130">📄  Contrato_cliente_final.docx</text>
+  <text x="320" y="124" font-size="11" fill="#605E5C">C:\Clientes\2026</text>
+  <text x="540" y="124" font-size="11" fill="#605E5C">Hoje 14:47</text>
+
+  <text x="28" y="156" font-size="12" fill="#323130">🖼️  logo_revisado.png</text>
+  <text x="320" y="156" font-size="11" fill="#605E5C">C:\Marca</text>
+  <text x="540" y="156" font-size="11" fill="#605E5C">Hoje 14:47</text>
+  <line x1="16" y1="168" x2="624" y2="168" stroke="#F3F2F1" stroke-width="1"/>
+
+  <text x="28" y="190" font-size="12" fill="#323130">📊  planilha_horas.xlsx</text>
+  <text x="320" y="190" font-size="11" fill="#605E5C">C:\Clientes\2026</text>
+  <text x="540" y="190" font-size="11" fill="#605E5C">Ontem 09:31</text>
+  <line x1="16" y1="202" x2="624" y2="202" stroke="#F3F2F1" stroke-width="1"/>
+
+  <text x="28" y="224" font-size="12" fill="#323130">📄  rascunho_proposta.docx</text>
+  <text x="320" y="224" font-size="11" fill="#605E5C">C:\Área de Trabalho</text>
+  <text x="540" y="224" font-size="11" fill="#605E5C">12/05 17:05</text>
+  <line x1="16" y1="236" x2="624" y2="236" stroke="#F3F2F1" stroke-width="1"/>
+
+  <!-- caption -->
+  <rect x="0" y="332" width="640" height="48" fill="#EAF6EE"/>
+  <line x1="0" y1="332" x2="640" y2="332" stroke="#C8E6D0" stroke-width="1"/>
+  <text x="16" y="352" font-size="11.5" fill="#1E7A43">✓  Clique com o botão direito ▸ Restaurar — o arquivo volta para a pasta de origem, não para a Área de Trabalho.</text>
+  <text x="16" y="369" font-size="11.5" fill="#1E7A43">Funciona enquanto a Lixeira não foi esvaziada. Depois disso, comece a contar o tempo.</text>
+</svg>
