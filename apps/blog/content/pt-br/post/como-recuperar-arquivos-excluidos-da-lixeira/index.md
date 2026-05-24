@@ -1,13 +1,13 @@
 ---
-title: "Como recuperar arquivos excluídos da lixeira (na ordem do tempo que você tem)"
-description: "Arquivo ainda na Lixeira? Restaura em 5 segundos. Já esvaziou? Vira corrida contra o relógio: cada minuto e cada gravação no disco derrubam suas chances. Veja os caminhos na ordem certa de tentar."
-date: 2026-05-23T09:00:00-03:00
+title: "Como recuperar arquivos apagados da lixeira (na ordem do tempo que você tem)"
+description: "Recuperar arquivos apagados da lixeira: se ainda estão lá, é 1 clique; se você já esvaziou, vira corrida contra o relógio — cada gravação no disco derruba a chance. Veja os 4 caminhos na ordem certa de tentar."
+date: 2026-05-24T08:00:00-03:00
 slug: "como-recuperar-arquivos-excluidos-da-lixeira"
-tags: ["recuperar arquivos excluídos", "recuperar arquivos excluídos da lixeira", "lixeira", "histórico de versões", "software de recuperação de dados"]
+tags: ["recuperar arquivos apagados", "recuperar arquivos apagados da lixeira", "recuperar arquivos excluídos", "lixeira", "histórico de versões", "software de recuperação de dados"]
 categories: ["Recuperação de arquivos", "Windows"]
 image: cover.svg
 og_image: cover.png
-primary_keyword: "como recuperar arquivos excluídos da lixeira"
+primary_keyword: "como recuperar arquivos apagados da lixeira"
 author: "Ting-Wei Tsao"
 locales: [pt-br]
 draft: false
@@ -24,7 +24,7 @@ faq_schema:
     a: "Não, são camadas diferentes. Recuva e Disk Drill varrem a parte física do disco para tentar resgatar bytes já marcados como apagados — uma aposta contra o tempo. O Keeply guarda versões intactas de uma pasta num cofre desde antes do arquivo ser excluído, então a recuperação acontece antes de os dados virarem espaço sobrescritível. O Keeply é a ferramenta que faz você nunca precisar do Recuva."
 ---
 
-# Como recuperar arquivos excluídos da lixeira (na ordem do tempo que você tem)
+# Como recuperar arquivos apagados da lixeira (na ordem do tempo que você tem)
 
 > Arquivo ainda na Lixeira? São cinco segundos. Já esvaziou? O relógio começou a correr.
 
