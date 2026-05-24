@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 276" font-family="'Inter','Segoe UI',Tahoma,-apple-system,system-ui,sans-serif">
+<rect x="0" y="0" width="480" height="276" rx="8" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+<rect x="0" y="0" width="480" height="36" rx="8" fill="#F9FAFB"/>
+<rect x="0" y="28" width="480" height="9" fill="#F9FAFB"/>
+<line x1="0" y1="36" x2="480" y2="36" stroke="#E5E7EB" stroke-width="1"/>
+<text x="14" y="22" font-size="14">📄</text>
+<text x="34" y="23" font-size="13" font-weight="700" fill="#374151">Hợp đồng đã chỉnh sửa.docx</text>
+<text x="234" y="23" font-size="11" fill="#9CA3AF">/Dự án/2026/</text>
+<text x="462" y="24" font-size="14" fill="#9CA3AF" text-anchor="end">✕</text>
+
+<!-- row: latest auto version, before the file was deleted -->
+<rect x="0" y="36" width="480" height="38" fill="#EEF2FF" opacity="0.5"/>
+<text x="14" y="59" font-size="11" fill="#6B7280">hôm nay 15:30</text>
+<text x="120" y="59" font-size="12.5" fill="#374151">Phiên bản tự động — trước khi xóa</text>
+<rect x="372" y="46" width="92" height="20" rx="4" fill="#4F46E5"/>
+<text x="418" y="60" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">Khôi phục</text>
+<line x1="0" y1="74" x2="480" y2="74" stroke="#F3F4F6" stroke-width="1"/>
+
+<!-- row: the deletion event itself, still present in the timeline -->
+<text x="14" y="97" font-size="11" fill="#9CA3AF">hôm nay 15:47</text>
+<text x="120" y="97" font-size="12.5" fill="#B45309">File đã bị xóa khỏi thư mục</text>
+<text x="468" y="97" font-size="11" fill="#D1D5DB" text-anchor="end">bạn</text>
+<line x1="0" y1="112" x2="480" y2="112" stroke="#F3F4F6" stroke-width="1"/>
+
+<text x="14" y="134" font-size="11" fill="#9CA3AF">hôm nay 15:00</text>
+<text x="120" y="134" font-size="12.5" fill="#374151">Phiên bản tự động</text>
+<rect x="372" y="121" width="92" height="20" rx="4" fill="#FFFFFF" stroke="#C7D2FE" stroke-width="1"/>
+<text x="418" y="135" font-size="11" font-weight="700" fill="#4F46E5" text-anchor="middle">Khôi phục</text>
+<line x1="0" y1="150" x2="480" y2="150" stroke="#F3F4F6" stroke-width="1"/>
+
+<text x="14" y="172" font-size="11" fill="#9CA3AF">hôm nay 14:30</text>
+<text x="120" y="172" font-size="12" fill="#374151">Lưu một phiên bản — trước khi dọn thư mục</text>
+<rect x="372" y="159" width="92" height="20" rx="4" fill="#FFFFFF" stroke="#C7D2FE" stroke-width="1"/>
+<text x="418" y="173" font-size="11" font-weight="700" fill="#4F46E5" text-anchor="middle">Khôi phục</text>
+<line x1="0" y1="188" x2="480" y2="188" stroke="#F3F4F6" stroke-width="1"/>
+
+<text x="14" y="210" font-size="11" fill="#9CA3AF">hôm nay 14:00</text>
+<text x="120" y="210" font-size="12.5" fill="#374151">Phiên bản tự động</text>
+<rect x="372" y="197" width="92" height="20" rx="4" fill="#FFFFFF" stroke="#C7D2FE" stroke-width="1"/>
+<text x="418" y="211" font-size="11" font-weight="700" fill="#4F46E5" text-anchor="middle">Khôi phục</text>
+<line x1="0" y1="226" x2="480" y2="226" stroke="#F3F4F6" stroke-width="1"/>
+
+<text x="14" y="248" font-size="11" fill="#9CA3AF">22/05 09:14</text>
+<text x="120" y="248" font-size="12.5" fill="#374151">Phiên bản đầu tiên</text>
+<text x="468" y="248" font-size="11" fill="#D1D5DB" text-anchor="end">bạn</text>
+<line x1="0" y1="262" x2="480" y2="262" stroke="#F3F4F6" stroke-width="1"/>
+
+<text x="14" y="273" font-size="10" fill="#10B981">✓ File đã xóa vẫn còn nguyên trong lịch sử — khôi phục bằng một cú nhấp</text>
+</svg>
