@@ -63,6 +63,12 @@ jobs:
           CRUX_API_KEY: ${{ secrets.CRUX_API_KEY }}
         run: node _dev/seo/fetch-crux.js > "$SEO_DATA_DIR/crux.json" || echo '{"error":"fetch-crux failed"}' > "$SEO_DATA_DIR/crux.json"
 
+      - name: Fetch AI crawler analytics (Cloudflare — GEO visibility)
+        env:
+          CF_ANALYTICS_TOKEN: ${{ secrets.CF_ANALYTICS_TOKEN }}
+          CF_ZONE_ID: ${{ secrets.CF_ZONE_ID }}
+        run: node _dev/seo/fetch-ai-crawlers.js > "$SEO_DATA_DIR/ai-crawlers.json" || echo '{"error":"fetch-ai-crawlers failed"}' > "$SEO_DATA_DIR/ai-crawlers.json"
+
       - name: External health check
         run: node _dev/seo/health-check.js > "$SEO_DATA_DIR/health.json"
 

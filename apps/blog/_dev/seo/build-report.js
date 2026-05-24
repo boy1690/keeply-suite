@@ -28,6 +28,7 @@ const bwt = load('bwt.json');
 const yandex = load('yandex.json');
 const ga4 = load('ga4.json');
 const crux = load('crux.json');
+const aiCrawlers = load('ai-crawlers.json');
 const health = load('health.json');
 
 const today = new Date();
@@ -283,6 +284,37 @@ if (crux.__loadError || !crux.origins) {
       p();
     }
     if (!anyData) p();
+  }
+}
+p();
+
+// ─── AI crawler visibility (GEO) ─────────────────────────────────────
+p('## 🤖 AI crawler visibility (GEO)');
+p();
+p('_Leading GEO signal: **user-fetch** crawlers (ChatGPT-User / OAI-SearchBot / PerplexityBot / Claude-User) hit a page because a live user query cited it. **Training** crawlers (GPTBot / ClaudeBot / CCBot) ingest for model corpora. Trailing 7 days, Cloudflare-sampled. Google AI Overviews / Bing AI cannot be isolated by UA._');
+p();
+if (aiCrawlers.__loadError || aiCrawlers.error || !aiCrawlers.current) {
+  p(`⚠️ AI crawler data unavailable: ${aiCrawlers.__loadError || aiCrawlers.error || 'no data'}`);
+} else {
+  p('| Host | 🟢 user-fetch (leading) | 🌀 training (lagging) |');
+  p('|---|---|---|');
+  for (const [host, b] of Object.entries(aiCrawlers.current)) {
+    p(`| **${host}** | ${num(b.user_fetch)} | ${num(b.training)} |`);
+  }
+  p();
+  for (const [host, b] of Object.entries(aiCrawlers.current)) {
+    const uas = Object.entries(b.byUa || {}).sort((a, b) => b[1] - a[1]);
+    if (uas.length) p(`**${host}** — by crawler: ` + uas.map(([ua, c]) => `${ua} ${num(c)}`).join(' · '));
+  }
+  p();
+  for (const [host, paths] of Object.entries(aiCrawlers.topPaths || {})) {
+    if (!paths.length) continue;
+    p(`**${host} — top AI-cited content** (user-fetch)`);
+    p();
+    p('| Path | user-fetch hits |');
+    p('|---|---|');
+    for (const r of paths) p(`| ${r.path} | ${num(r.count)} |`);
+    p();
   }
 }
 p();
