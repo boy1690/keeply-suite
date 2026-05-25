@@ -27,6 +27,10 @@ const SKIP_DIRS = new Set(['_dev', '_archive', 'specs', 'idea', 'node_modules', 
 
 // href="<path>.html[?query][#frag]" — capture path / query / frag.
 const HREF_RE = /href="([^"]*?)\.html(\?[^"#]*)?(#[^"]*)?"/g;
+// og:url / twitter:url etc: content="https://keeply.work/<path>.html". build.js
+// cleans og:url on /{locale}/ pages, but root template copies (/install, /contact …)
+// can slip through → "OG URL not matching canonical". Strip .html universally.
+const OG_RE = /content="(https:\/\/keeply\.work\/[^"]*?)\.html(\?[^"#]*)?(#[^"]*)?"/g;
 
 function isInternal(p) {
   if (/^(mailto:|tel:|\/\/)/i.test(p)) return false;       // mail / tel / protocol-relative
@@ -43,11 +47,16 @@ function cleanPath(p) {
 
 function rewrite(html) {
   let n = 0;
-  const out = html.replace(HREF_RE, (m, p, query, frag) => {
+  let out = html.replace(HREF_RE, (m, p, query, frag) => {
     if (!isInternal(p)) return m;
     const cleaned = cleanPath(p) + (query || '') + (frag || '');
     n++;
     return `href="${cleaned}"`;
+  });
+  out = out.replace(OG_RE, (m, base, query, frag) => {
+    const b = base.endsWith('/index') ? base.slice(0, -'index'.length) : base; // /…/index.html → /…/
+    n++;
+    return `content="${b}${query || ''}${frag || ''}"`;
   });
   return { out, n };
 }

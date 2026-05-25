@@ -31,7 +31,7 @@ const PAGES = ['index.html', 'privacy.html', 'terms.html', 'contact.html', 'inst
 // Pages that exist per-locale but are NOT template-driven (maintained as static
 // copies in each {locale}/ directory). Listed in sitemap.xml for SEO.
 // Spec 025: was missing before, caused Google/Bing to not discover these pages.
-const EXTRA_SITEMAP_PAGES = ['buy.html', 'refund.html', 'activate.html'];
+const EXTRA_SITEMAP_PAGES = ['buy.html', 'refund.html'];
 
 // Spec 028: compare pages exist only for en + zh-TW (bilingual scope).
 // Sitemap entries are generated separately with hreflang cross-refs limited to these 2 locales.
