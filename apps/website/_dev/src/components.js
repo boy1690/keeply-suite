@@ -65,26 +65,26 @@
   }
 
   // === 連結路由表 ===
-  var logoLink = isHome ? '#' : localePrefix + 'index.html';
-  var downloadLink = isHome ? '#download' : localePrefix + 'index.html#download';
+  var logoLink = isHome ? '#' : (localePrefix || '/');
+  var downloadLink = isHome ? '#download' : (localePrefix || '/') + '#download';
   var pricingLink = isHome ? '#pricing' : (localePrefix || '/') + '#pricing';
 
   // install.html（spec 043 Stage 2 + bug-fix）：6 core locale 各有母語版；
   // 13 其他 locale fallback /en/install.html；root pages（無 locale prefix）
   // 因為 root 顯示繁中（spec 043 C），nav 從 root 點「安裝」應連到 /zh-TW/install.html
   var INSTALL_LOCALES = {
-    'en': '/en/install.html',
-    'zh-TW': '/zh-TW/install.html',
-    'zh-CN': '/zh-CN/install.html',
-    'ja': '/ja/install.html',
-    'ko': '/ko/install.html',
-    'it': '/it/install.html'
+    'en': '/en/install',
+    'zh-TW': '/zh-TW/install',
+    'zh-CN': '/zh-CN/install',
+    'ja': '/ja/install',
+    'ko': '/ko/install',
+    'it': '/it/install'
   };
   var installLink;
   if (localeCode === null) {
-    installLink = '/zh-TW/install.html'; // root = zh-TW 顯示
+    installLink = '/zh-TW/install'; // root = zh-TW 顯示
   } else {
-    installLink = INSTALL_LOCALES[localeCode] || '/en/install.html';
+    installLink = INSTALL_LOCALES[localeCode] || '/en/install';
   }
 
   // compare hub：en（root level）+ zh-TW 各有獨立版本；17 其他 locale
@@ -214,18 +214,18 @@
     + '<span class="text-white font-bold">Keeply</span>'
     + '</div>'
     + '<div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">'
-    + '<a href="' + localePrefix + 'privacy.html" class="hover:text-white transition-colors" data-i18n="footer.privacy">隱私權政策</a>'
-    + '<a href="' + localePrefix + 'terms.html" class="hover:text-white transition-colors" data-i18n="footer.terms">服務條款</a>'
-    + '<a href="' + localePrefix + 'refund.html" class="hover:text-white transition-colors" data-i18n="footer.refund">退款政策</a>'
+    + '<a href="' + localePrefix + 'privacy" class="hover:text-white transition-colors" data-i18n="footer.privacy">隱私權政策</a>'
+    + '<a href="' + localePrefix + 'terms" class="hover:text-white transition-colors" data-i18n="footer.terms">服務條款</a>'
+    + '<a href="' + localePrefix + 'refund" class="hover:text-white transition-colors" data-i18n="footer.refund">退款政策</a>'
     + '<a href="' + compareLink + '" class="hover:text-white transition-colors" data-i18n="footer.compare">對比</a>'
     + '<a href="' + installLink + '" class="hover:text-white transition-colors" data-i18n="footer.install">安裝指南</a>'
     + '<a href="' + blogLink + '" target="_blank" rel="noopener" class="hover:text-white transition-colors" data-i18n="footer.blog">部落格</a>'
-    + '<a href="' + localePrefix + 'buy.html" class="text-amber-400 hover:text-amber-300 font-semibold transition-colors" data-i18n="footer.buy">購買永久授權</a>'
-    + '<a href="' + localePrefix + 'activate.html" class="hover:text-white transition-colors" data-i18n="footer.activate">啟用授權</a>'
+    + '<a href="' + localePrefix + 'buy" class="text-amber-400 hover:text-amber-300 font-semibold transition-colors" data-i18n="footer.buy">購買永久授權</a>'
+    + '<a href="' + localePrefix + 'activate" class="hover:text-white transition-colors" data-i18n="footer.activate">啟用授權</a>'
     + '<a href="https://github.com/boy1690/keeply-releases/releases/latest" class="hover:text-white transition-colors" data-i18n="footer.download">下載</a>'
     + '<a href="#cookie-settings" data-cookie-settings class="hover:text-white transition-colors" data-i18n="footer.cookie-settings">Cookie 設定</a>'
-    + '<a href="' + localePrefix + 'contact.html" class="hover:text-white transition-colors" data-i18n="footer.contact">聯繫我們</a>'
-    + '<a href="' + localePrefix + 'about.html" class="hover:text-white transition-colors" data-i18n="footer.about">關於</a>'
+    + '<a href="' + localePrefix + 'contact" class="hover:text-white transition-colors" data-i18n="footer.contact">聯繫我們</a>'
+    + '<a href="' + localePrefix + 'about" class="hover:text-white transition-colors" data-i18n="footer.about">關於</a>'
     + '</div>'
     + '<div class="flex flex-col items-center md:items-end text-sm gap-1">'
     + '<p data-i18n="footer.copyright">&copy; 2026 Keeply. All rights reserved.</p>'
