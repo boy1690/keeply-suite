@@ -63,4 +63,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy apps/blog/public --project-name=keeply-blog --branch=main --commit-dirty=true
+          # --commit-message forced to ASCII: wrangler 4.86.x rejects the auto-detected
+          # git HEAD message when it contains CJK ("Invalid commit message ... valid UTF-8
+          # string", code 8000111), which broke deploys on Chinese-message commits.
+          command: pages deploy apps/blog/public --project-name=keeply-blog --branch=main --commit-dirty=true --commit-message='GitHub Actions deploy'
