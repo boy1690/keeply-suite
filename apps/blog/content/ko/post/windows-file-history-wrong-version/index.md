@@ -50,7 +50,7 @@ faq_schema:
 
 ## 왜 파일 히스토리가 2019 를 줬나
 
-파일 히스토리는 일정에 따라 스냅샷을 찍는다. 기본:매시간. 스냅샷은 외장 드라이브(또는 네트워크 위치)에 닿을 수 있을 때만 일어난다.
+파일 히스토리는 일정에 따라 스냅샷을 찍는다. [기본:매시간](https://support.microsoft.com/ko-kr/windows/backup-and-restore-with-file-history-7bf065bf-f1ea-0a78-c1cf-7dcf51cc8bfc). 스냅샷은 외장 드라이브(또는 네트워크 위치)에 닿을 수 있을 때만 일어난다.
 
 드라이브가 빠진 동안(노트북 출장、드라이브가 다른 기기에 빌려줌、드라이브를 잊음)——새 스냅샷이 안 쓰여진다. 파일 히스토리는 내부적으로 계속 돌지만 쓸 곳이 없다. 버전 카탈로그가 성장을 멈춘다.
 
@@ -141,7 +141,7 @@ per-save 계층 추가가 과잉 인 몇 가지 상황:
 
 **드라이브가 안정적으로 연결됨**. 상시 온 독、NAS 공유、책상에서 떠나지 않는 전용 백업 드라이브——이 셋업에서 파일 히스토리는 갭이 거의 없고、일정 스냅샷이 저장에 가깝게 맞춰진다.
 
-**클라우드 동기화가 중요 파일을 커버**. 중요한 것 모두가 OneDrive / Dropbox / Google Drive 에 있고 보관 기간 내라면、이미 클라우드 버전 기록에 일종의 의도 기반 계층이 있다(다만 상한——[버전 기록의 절벽](/ko/post/cloud-version-history-cliff/) 참조).
+**클라우드 동기화가 중요 파일을 커버**. 중요한 것 모두가 OneDrive / Dropbox / Google Drive 에 있고 보관 기간 내라면、이미 클라우드 버전 기록에 일종의 의도 기반 계층이 있다(다만 [버전 수 상한](https://learn.microsoft.com/ko-kr/sharepoint/document-library-version-history-limits)——[버전 기록의 절벽](/ko/post/cloud-version-history-cliff/) 참조).
 
 어느 것도 적용 안 된다면——노트북 사용자、드라이브 가끔 오프라인、30 일 넘은 일도 쓸 데가 있음——그때 의도 기반 계층 추가가 값어치를 한다.
 

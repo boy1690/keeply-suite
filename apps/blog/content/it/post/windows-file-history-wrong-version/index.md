@@ -50,7 +50,7 @@ Non era rotto. Gli stavo facendo una domanda per cui non è stato costruito a ri
 
 ## Perché File History mi ha restituito il 2019
 
-File History prende snapshot secondo pianificazione. Predefinito: ogni ora. Gli snapshot accadono solo quando il drive esterno (o posizione di rete) è raggiungibile.
+File History prende snapshot secondo pianificazione. [Predefinito: ogni ora](https://support.microsoft.com/it-it/windows/backup-and-restore-with-file-history-7bf065bf-f1ea-0a78-c1cf-7dcf51cc8bfc). Gli snapshot accadono solo quando il drive esterno (o posizione di rete) è raggiungibile.
 
 Quando il drive è scollegato — portatile in viaggio, drive prestato a un'altra macchina, drive semplicemente dimenticato — non viene scritto nessun nuovo snapshot. File History continua a funzionare internamente, ma non ha dove scrivere. Il catalogo delle versioni smette di crescere.
 
@@ -141,7 +141,7 @@ Alcune situazioni in cui aggiungere uno strato per-save è eccessivo:
 
 **Il tuo drive è connesso in modo affidabile.** Dock sempre attivo, condivisione NAS, drive di backup dedicato che non lascia mai la scrivania — File History raramente ha lacune in questa configurazione, e i suoi snapshot pianificati si allineeranno abbastanza vicino ai tuoi salvataggi.
 
-**La sincronizzazione cloud copre i tuoi file importanti.** Se tutto ciò che è importante vive in OneDrive / Dropbox / Google Drive e sei entro le loro finestre di retention, hai già una sorta di strato guidato dall'intenzione nella cronologia versioni cloud (anche se con limite — vedi [lo strapiombo della cronologia versioni](/it/post/cloud-version-history-cliff/)).
+**La sincronizzazione cloud copre i tuoi file importanti.** Se tutto ciò che è importante vive in OneDrive / Dropbox / Google Drive e sei entro le loro finestre di retention, hai già una sorta di strato guidato dall'intenzione nella cronologia versioni cloud (anche se con [limite di versioni](https://learn.microsoft.com/it-it/sharepoint/document-library-version-history-limits) — vedi [lo strapiombo della cronologia versioni](/it/post/cloud-version-history-cliff/)).
 
 Se nessuna di queste si applica — utente portatile, drive a volte offline, lavoro importante oltre i 30 giorni — è allora che aggiungere uno strato guidato dall'intenzione ripaga.
 

@@ -50,7 +50,7 @@ It wasn't broken. I was asking it a question it wasn't built to answer.
 
 ## Why File History gave me 2019
 
-File History takes snapshots on a schedule. Default: every hour. The snapshots only happen when the external drive (or network location) is reachable.
+File History takes snapshots on a schedule. [Default: every hour](https://support.microsoft.com/en-us/windows/backup-and-restore-with-file-history-7bf065bf-f1ea-0a78-c1cf-7dcf51cc8bfc). The snapshots only happen when the external drive (or network location) is reachable.
 
 When the drive is unplugged — laptop traveling, drive borrowed by another machine, drive simply forgotten — no new snapshot gets written. File History keeps running internally, but with nothing to write to. The catalog of versions stops growing.
 
@@ -141,7 +141,7 @@ A few situations where adding a per-save layer is overkill:
 
 **Your drive is reliably connected.** Always-on dock, NAS share, dedicated backup drive that never leaves the desk — File History rarely has gaps in this setup, and its scheduled snapshots will line up close enough to your saves.
 
-**Cloud sync covers your important files.** If everything important lives in OneDrive / Dropbox / Google Drive and you're within their retention windows, you already have a sort of intent-driven layer in the cloud version history (though capped — see [the version history cliff](/en/post/cloud-version-history-cliff/)).
+**Cloud sync covers your important files.** If everything important lives in OneDrive / Dropbox / Google Drive and you're within their retention windows, you already have a sort of intent-driven layer in the cloud version history (though [capped](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits) — see [the version history cliff](/en/post/cloud-version-history-cliff/)).
 
 If none of those apply — laptop user, drive sometimes offline, work matters past 30 days — that's when adding an intent-driven layer pays off.
 
