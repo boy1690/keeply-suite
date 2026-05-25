@@ -19,7 +19,7 @@ faq_schema:
   - q: Perché il pulsante della cronologia versioni di Excel è disattivato?
     a: "Il pulsante \"Cronologia versioni\" funziona solo quando 4 condizioni sono soddisfatte insieme: il file è su OneDrive o SharePoint, AutoSave è attivo, hai una licenza business e sei sull'app desktop (non quella web). Se ne manca anche una sola il pulsante si disattiva — e la maggior parte dei modi di lavorare le manca tutte e quattro."
   - q: Quali limiti di Microsoft AutoSave non vengono spiegati?
-    a: "Quattro a cui non si scappa: AutoSave desktop torna indietro solo di 1-2 versioni; la cronologia versioni di OneDrive scade dopo 30 giorni; i file locali non hanno alcun record di versione; e non c'è confronto a livello di cella. Sono scelte di progettazione deliberate di Microsoft, non limiti tecnici."
+    a: "Quattro a cui non si scappa: AutoSave desktop torna indietro solo di 1-2 versioni; la cronologia versioni di OneDrive ha un limite di 500 versioni e le più vecchie vengono diradate nel tempo (non è illimitata); i file locali non hanno alcun record di versione; e non c'è confronto a livello di cella. Sono scelte di progettazione deliberate di Microsoft, non limiti tecnici."
   - q: Perché Microsoft ha progettato così la cronologia versioni di Excel?
     a: "Perché la cronologia versioni completa è un elemento differenziante dell'abbonamento OneDrive. Se Excel desktop offrisse un record locale completo, OneDrive perderebbe un motivo per legarti a sé. La cronologia versioni è una rete di sicurezza per l'utente e un'esca per l'abbonamento per Microsoft — questi due ruoli decidono come si comporta davvero la funzione."
   - q: Quali design di strumenti risolvono davvero il vuoto della cronologia versioni di Excel?
@@ -44,7 +44,7 @@ Non è un caso isolato. Capita a chiunque lavori in Excel. È il risultato di Mi
 
 Il pulsante "File > Informazioni > Cronologia versioni" **funziona solo quando tutte e quattro le condizioni sono soddisfatte**: (1) il file è su OneDrive o SharePoint (2) AutoSave è attivo (3) hai una licenza commerciale (4) sei su desktop, non sul web. Se ne manca una, il pulsante è in grigio.
 
-Non è ovvio finché non ci sbatti: il tuo flusso di lavoro normale probabilmente **non rispetta nessuna delle quattro**: salvato sul desktop, AutoSave disattivato di default, licenza personale, passaggio tra desktop e web. Quindi il grigio è lo stato di default, non qualcosa che hai sbagliato tu.
+Non è ovvio finché non ci sbatti: il tuo flusso di lavoro normale probabilmente **non rispetta nessuna delle quattro**: salvato sul desktop (i file locali non hanno AutoSave; [AutoSave esiste solo sui file OneDrive/SharePoint, dove è attivo di default](https://support.microsoft.com/it-it/office/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5)), licenza personale, passaggio tra desktop e web. Quindi il grigio è lo stato di default, non qualcosa che hai sbagliato tu.
 
 ## Quattro limiti che Microsoft AutoSave non ti dice {#four-limits}
 
@@ -53,7 +53,7 @@ Apri "la cronologia versioni di Excel non basta" e trovi quattro limiti invarian
 | # | Limite | Conseguenza |
 |---|---|---|
 | 1 | **AutoSave desktop torna indietro solo di 1-2 versioni** | Errore di 30 minuti fa = irrecuperabile |
-| 2 | **OneDrive/SharePoint scade a 30 giorni** | Revisione trimestrale, cliente vuole la versione di 60 giorni fa = persa |
+| 2 | **OneDrive/SharePoint ha un limite di versioni + dirada le vecchie** | Massimo [500 versioni](https://learn.microsoft.com/it-it/sharepoint/document-library-version-history-limits) di default; le più vecchie vengono diradate ed eliminate al raggiungimento del limite — non conservate per sempre |
 | 3 | **I file locali hanno cronologia zero** | Salvato sul desktop per privacy = nessuna cronologia |
 | 4 | **Niente diff a livello cella** | Non puoi dire "tieni la nuova colonna ma recupera la vecchia formula" |
 
@@ -77,7 +77,7 @@ Tre pattern di design che lo strumento può usare. Ognuno risolve alcuni dei qua
 
 ### Design A: Snapshot automatici delle versioni, senza dipendenza dal cloud
 
-Lo strumento conserva le versioni che salvi — manualmente con una nota, o tramite il salvataggio automatico opzionale a intervalli — indipendentemente da dove vive il file. **Esempi**: macOS Time Machine (livello sistema, disco intero), Keeply (livello file, limitato alla cartella di lavoro che indichi). **La differenza di Keeply**: ogni versione preservata per intero senza limiti di tempo, a differenza della finestra di 30 giorni di OneDrive. **Risolve i limiti #1 + #2 + #3.**
+Lo strumento conserva le versioni che salvi — manualmente con una nota, o tramite il salvataggio automatico opzionale a intervalli — indipendentemente da dove vive il file. **Esempi**: macOS Time Machine (livello sistema, disco intero), Keeply (livello file, limitato alla cartella di lavoro che indichi). **La differenza di Keeply**: ogni versione preservata per intero senza limite di numero, a differenza del [limite di 500 versioni di OneDrive](https://learn.microsoft.com/it-it/sharepoint/document-library-version-history-limits) che dirada le vecchie. **Risolve i limiti #1 + #2 + #3.**
 
 ### Design B: Milestone automatici (congelamento fine mese / fine trimestre)
 

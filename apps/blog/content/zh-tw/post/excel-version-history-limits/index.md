@@ -19,13 +19,13 @@ faq_schema:
     a: 「版本歷史」按鈕需要同時滿足 4 個條件才能運作：檔案存 OneDrive 或 SharePoint、AutoSave 已開啟、商業版授權、在桌面版而非網頁版。任一條件不符按鈕就變灰，而多數工作模式 4 個條件一個都不符。
 
   - q: Microsoft AutoSave 有哪些沒說清楚的限制？
-    a: 有 4 個繞不過的限制：桌面 AutoSave 只能回 1-2 版；OneDrive 版本歷史 30 天過期；本機檔案完全沒有版本記錄；以及不支援儲存格層級的比對。這些都是 Microsoft 刻意的工程選擇、不是技術做不到。
+    a: 有 4 個繞不過的限制：桌面 AutoSave 只能回 1-2 版；OneDrive 版本歷史有 500 版上限、舊版隨時間稀釋（非無限保留）；本機檔案完全沒有版本記錄；以及不支援儲存格層級的比對。這些都是 Microsoft 刻意的工程選擇、不是技術做不到。
 
   - q: 為什麼 Microsoft 把 Excel 版本歷史設計成這樣？
     a: 因為完整版本歷史是 OneDrive 訂閱的差異化功能。若桌面 Excel 自帶完整本機紀錄、OneDrive 少一個綁定理由。版本歷史對使用者是安全網、對 Microsoft 是訂閱上鉤誘餌、兩個角色決定了功能的實際行為。
 
   - q: Keeply 怎麼補 Excel 本機檔案的版本管理？
-    a: Keeply 在背景每 30 分鐘輪詢 Excel 檔案變更（不依賴 OneDrive、檔案存桌面也行）。同時你可以在重要時刻點 Keeply 主視窗「儲存版本」、寫筆記（「Q2 結算 — 改完應收帳款公式」），半年後翻時間軸就找得到那一版。AutoSave 4 個限制裡的 #1 + #2 + #3（只回 1-2 版 / 30 天過期 / 本機無版本）Keeply 都解。
+    a: Keeply 在背景每 30 分鐘輪詢 Excel 檔案變更（不依賴 OneDrive、檔案存桌面也行）。同時你可以在重要時刻點 Keeply 主視窗「儲存版本」、寫筆記（「Q2 結算 — 改完應收帳款公式」），半年後翻時間軸就找得到那一版。AutoSave 4 個限制裡的 #1 + #2 + #3（只回 1-2 版 / 版本有上限會稀釋 / 本機無版本）Keeply 都解。
 
   - q: Keeply 可以完全取代 Excel 的版本歷史功能嗎？
     a: 不能完全取代。Keeply 顯示「整檔 v3 到 v4 的差異」、不支援儲存格層級比對；也不修正 formula 邏輯錯誤；不適合多人即時協作場景。但對本機存檔、長期保留、有筆記的版本還原這三個核心需求、Keeply 能補足 Excel 的限制。
@@ -43,7 +43,7 @@ faq_schema:
 
 1. [換 Keeply 後我的 monthly_close.xlsx 時間軸長這樣](#keeply-timeline)
 2. [Excel 版本歷史按鈕為什麼是灰的？4 個條件你 1 個都沒中](#why-grayed-out)
-3. [Microsoft AutoSave 沒講的 4 個限制：桌面只回 1-2 版 / 30 天過期 / 本機無紀錄 / 沒儲存格比對](#four-limits)
+3. [Microsoft AutoSave 沒講的 4 個限制：桌面只回 1-2 版 / 雲端版本有上限會稀釋 / 本機無紀錄 / 沒儲存格比對](#four-limits)
 4. [Microsoft 為什麼這樣設計？OneDrive 訂閱差異化的商業取捨](#why-microsoft)
 5. [3 種工具設計怎麼補 Excel 版本歷史：每次存自動快照 / 自動里程碑 / 版本搜尋](#three-designs)
 6. [不必裝 Keeply 的 4 種 Excel 場景](#when-not-needed)
@@ -74,18 +74,18 @@ faq_schema:
 
 「檔案 > 資訊 > 版本歷史」這個按鈕**只在 4 個條件同時成立時才能用**：(1) 檔案存在 OneDrive 或 SharePoint、(2) AutoSave 已開啟、(3) 你是商業版授權、(4) 用桌面版而不是網頁版。任一條件不符、按鈕就變灰按不下去。
 
-沒人告訴你的是：多數人的工作模式 4 個條件**一個都沒中**——檔案存桌面、AutoSave 預設關閉、個人版、桌面跟網頁版交替用。所以按鈕是灰的才是預設情況、不是你哪裡做錯。
+沒人告訴你的是：多數人的工作模式 4 個條件**一個都沒中**——檔案存桌面（本機檔根本沒有 AutoSave；[AutoSave 只在 OneDrive／SharePoint 檔案上、且雲端檔案預設開啟](https://support.microsoft.com/zh-tw/office/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5)）、個人版、桌面跟網頁版交替用。所以按鈕是灰的才是預設情況、不是你哪裡做錯。
 
 ---
 
-## Microsoft AutoSave 沒講的 4 個限制：桌面只回 1-2 版 / 30 天過期 / 本機無紀錄 / 沒儲存格比對 {#four-limits}
+## Microsoft AutoSave 沒講的 4 個限制：桌面只回 1-2 版 / 雲端版本有上限會稀釋 / 本機無紀錄 / 沒儲存格比對 {#four-limits}
 
 把「Excel 版本歷史不夠用」拆開看、4 個結構性限制不論你怎麼設定都繞不過：
 
 | # | 限制 | 後果 |
 |---|---|---|
 | 1 | **桌面 AutoSave 只回 1-2 版** | 你改錯 30 分鐘前 = 救不回 |
-| 2 | **OneDrive/SharePoint 30 天過期** | 季度檢討時客戶要看 60 天前版本 = 沒了 |
+| 2 | **OneDrive/SharePoint 版本有上限、舊版稀釋** | 預設最多 [500 版](https://learn.microsoft.com/zh-tw/sharepoint/document-library-version-history-limits)，舊版隨時間被稀釋、達上限後最舊的被刪——不是無限保留 |
 | 3 | **本機檔案完全沒版本歷史** | 為了隱私存桌面 = 無歷史 |
 | 4 | **沒有儲存格層級的比對** | 不能說「保留新加的欄、但救回舊公式」 |
 
@@ -113,7 +113,7 @@ faq_schema:
 
 ### 設計 A：背景輪詢自動快照（不依賴雲端、不依賴 AutoSave）
 
-工具在背景每 N 分鐘輪詢檔案變更（不是 hook 你按 Ctrl+S 那一刻、是事後檢查檔案系統）、無論檔案存桌面還是雲端。**例子**：macOS Time Machine（系統層整顆磁碟）、[Keeply](https://keeply.work)（檔案層、鎖定你指定的工作資料夾）。**Keeply 的差別**：每版完整保留、無時間限制、不像 OneDrive 30 天就清掉。**解限制 #1 + #2 + #3**。
+工具在背景每 N 分鐘輪詢檔案變更（不是 hook 你按 Ctrl+S 那一刻、是事後檢查檔案系統）、無論檔案存桌面還是雲端。**例子**：macOS Time Machine（系統層整顆磁碟）、[Keeply](https://keeply.work)（檔案層、鎖定你指定的工作資料夾）。**Keeply 的差別**：每版完整保留、無數量上限、不像 OneDrive 有 [500 版上限](https://learn.microsoft.com/zh-tw/sharepoint/document-library-version-history-limits)、舊版會被稀釋。**解限制 #1 + #2 + #3**。
 
 ### 設計 B：手動里程碑（每月底/每季度凍結）
 

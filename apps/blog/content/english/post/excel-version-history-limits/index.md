@@ -19,7 +19,7 @@ faq_schema:
   - q: Why is Excel's version-history button grayed out?
     a: "The \"Version History\" button only works when 4 conditions are met at once: the file is on OneDrive or SharePoint, AutoSave is on, you have a business license, and you're on the desktop app (not the web app). Miss any one and the button grays out — and most working setups miss all four."
   - q: What limits does Microsoft AutoSave not spell out?
-    a: "Four you can't get around: desktop AutoSave only goes back 1-2 versions; OneDrive version history expires after 30 days; local files get no version record at all; and there's no cell-level diff. These are deliberate engineering choices by Microsoft, not technical limits."
+    a: "Four you can't get around: desktop AutoSave only goes back 1-2 versions; OneDrive version history is capped at 500 versions and thins older ones over time; local files get no version record at all; and there's no cell-level diff. These are deliberate engineering choices by Microsoft, not technical limits."
   - q: Why did Microsoft design Excel's version history this way?
     a: "Because full version history is a OneDrive subscription differentiator. If desktop Excel shipped a complete local record, OneDrive would lose a reason to bind you to it. Version history is a safety net for users and subscription bait for Microsoft — those two roles decide how the feature actually behaves."
   - q: Which tool designs actually solve Excel's version-history gap?
@@ -44,7 +44,7 @@ This isn't a one-off. It happens to everyone working in Excel. It's the result o
 
 The "File > Info > Version History" button **only works when all four conditions are met**: (1) the file is on OneDrive or SharePoint (2) AutoSave is on (3) you have a commercial license (4) you're on desktop, not web. Miss any one and the button is grayed out.
 
-It's not obvious until you've hit it: your normal workflow probably misses **all four conditions**, saved on the desktop, AutoSave off by default, personal license, switching between desktop and web. So grayed out is the default state, not something you did wrong.
+It's not obvious until you've hit it: your normal workflow probably misses **all four conditions**, saved on the desktop (local files have no AutoSave; [AutoSave only applies to OneDrive/SharePoint files, where it's on by default](https://support.microsoft.com/en-us/office/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5)), personal license, switching between desktop and web. So grayed out is the default state, not something you did wrong.
 
 ## Four limits Microsoft AutoSave doesn't mention {#four-limits}
 
@@ -53,7 +53,7 @@ Pull "Excel version history isn't enough" apart and you find four invariant limi
 | # | Limit | Consequence |
 |---|---|---|
 | 1 | **Desktop AutoSave only goes back 1-2 versions** | Made a mistake 30 minutes ago = unrecoverable |
-| 2 | **OneDrive/SharePoint expires at 30 days** | Quarterly review, client wants the 60-day-old version = gone |
+| 2 | **OneDrive/SharePoint version history is capped + thinned** | Default max [500 versions](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits); older ones get thinned and eventually dropped — not kept forever |
 | 3 | **Local files have zero version history** | Saved on desktop for privacy = no history |
 | 4 | **No cell-level diff** | Can't say "keep the new column but recover the old formula" |
 
@@ -77,7 +77,7 @@ Three design patterns the tool can use. Each one solves some of the four limits 
 
 ### Design A: Automatic version snapshots, no cloud dependency
 
-The tool preserves the previous version every time you press Cmd+S, no matter where the file lives. **Examples**: macOS Time Machine (system-level, whole disk), Keeply (file-layer, scoped to the working folder you choose). **Keeply's difference**: each version is preserved in full with no time limit, unlike OneDrive's 30-day window. **Solves limits #1 + #2 + #3.**
+The tool preserves the previous version every time you press Cmd+S, no matter where the file lives. **Examples**: macOS Time Machine (system-level, whole disk), Keeply (file-layer, scoped to the working folder you choose). **Keeply's difference**: each version is preserved in full with no count cap, unlike [OneDrive's 500-version limit](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits) that thins old versions. **Solves limits #1 + #2 + #3.**
 
 ### Design B: Automatic milestones (freezing at month-end / quarter-end)
 
