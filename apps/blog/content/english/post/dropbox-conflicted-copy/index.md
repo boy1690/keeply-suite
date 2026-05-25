@@ -55,7 +55,7 @@ It's not obvious until you've hit one: just one of these triggers a conflicted c
 
 ## Why Dropbox designed it this way {#why-dropbox-design}
 
-Dropbox uses **last-writer-wins + save the older version separately**: two people edit, the later upload wins, the earlier version is preserved as `(conflicted copy)`.
+Dropbox uses **last-writer-wins + save the older version separately** ([Dropbox's own explanation](https://help.dropbox.com/organize/conflicted-copy)): two people edit, the later upload wins, the earlier version is preserved as `(conflicted copy)`.
 
 It's not that conflict detection is technically hard. It's a commercial trade-off:
 
@@ -69,7 +69,7 @@ I ran into this with Dropbox hundreds of times myself before building Keeply, an
 
 ## Manually merging two files is symptom treatment {#why-manual-merge-fails}
 
-The fix Dropbox Help Center teaches: "Open both files, compare differences, merge into the main file by hand, delete the conflicted copy." Sounds reasonable.
+The fix [Dropbox Help Center](https://help.dropbox.com/organize/conflicted-copy) teaches: "Open both files, compare differences, merge into the main file by hand, delete the conflicted copy." Sounds reasonable.
 
 But this fix **doesn't change the mechanism**. Next week you'll sync collision again, generate a new conflicted copy, manually merge again. A month from now you've done this 4-5 times.
 

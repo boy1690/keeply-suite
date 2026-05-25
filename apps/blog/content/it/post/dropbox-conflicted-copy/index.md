@@ -55,7 +55,7 @@ Non è ovvio finché non ci sbatti: basta uno di questi a scatenare una copia in
 
 ## Perché Dropbox l'ha progettato così {#why-dropbox-design}
 
-Dropbox usa il meccanismo "l'ultimo writer vince + salva separatamente la versione precedente": due persone editano, l'upload successivo vince, la versione precedente è preservata come `(copia in conflitto)`.
+Dropbox usa il meccanismo "l'ultimo writer vince + salva separatamente la versione precedente" ([spiegazione ufficiale di Dropbox](https://help.dropbox.com/organize/conflicted-copy)): due persone editano, l'upload successivo vince, la versione precedente è preservata come `(copia in conflitto)`.
 
 Non è che la rilevazione conflitti sia tecnicamente difficile. È un trade-off commerciale:
 
@@ -69,7 +69,7 @@ Prima di creare Keeply, ci sono incappato io stesso con Dropbox centinaia di vol
 
 ## Unire manualmente due file è cura del sintomo {#why-manual-merge-fails}
 
-Il fix che Dropbox Help Center insegna: "Apri entrambi i file, confronta differenze, unisci nel principale a mano, cancella la copia in conflitto." Suona ragionevole.
+Il fix che [Dropbox Help Center](https://help.dropbox.com/organize/conflicted-copy) insegna: "Apri entrambi i file, confronta differenze, unisci nel principale a mano, cancella la copia in conflitto." Suona ragionevole.
 
 Ma questo fix **non cambia il mechanism**. La prossima settimana avrai sync collision di nuovo, genererà nuova copia in conflitto, unirai a mano di nuovo. Un mese dopo l'hai fatto 4-5 volte.
 

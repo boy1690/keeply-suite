@@ -89,7 +89,7 @@ faq_schema:
 
 ## Dropbox 為什麼這樣設計衝突副本？last-writer-wins 的商業取捨 {#why-dropbox-design}
 
-Dropbox 用「後存者覆蓋、前一版另存」這個機制：兩人同時改、後上傳的版本勝出、前一版不丟掉、存成 `(conflicted copy)`。
+Dropbox 用「後存者覆蓋、前一版另存」這個機制（[Dropbox 官方說明](https://help.dropbox.com/organize/conflicted-copy)）：兩人同時改、後上傳的版本勝出、前一版不丟掉、存成 `(conflicted copy)`。
 
 不是技術做不到衝突偵測、是商業取捨：
 
@@ -103,7 +103,7 @@ Dropbox 用「後存者覆蓋、前一版另存」這個機制：兩人同時改
 
 ## 手動合併兩份檔案為什麼只是症狀治療？ {#why-manual-merge-fails}
 
-Dropbox Help Center 教你的修法：「打開兩份檔案、比對差異、手動合併到主檔、刪掉衝突副本。」一聽很合理。
+[Dropbox Help Center](https://help.dropbox.com/organize/conflicted-copy) 教你的修法：「打開兩份檔案、比對差異、手動合併到主檔、刪掉衝突副本。」一聽很合理。
 
 但這個修法**不改變機制**。你下個禮拜還會再撞到同步衝突、還會再產生新衝突副本、還會再手動合併。一個月之後你已經做這件事 4-5 次。
 
