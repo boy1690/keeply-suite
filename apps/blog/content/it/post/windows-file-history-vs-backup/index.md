@@ -77,9 +77,9 @@ Scenari concreti, mappati sulle tre funzionalità Windows:
 | SSD si guasta fisicamente | ❌ | ✅ | ✅ per file sincronizzati |
 | Windows non si avvia | ❌ | ✅ | ❌ (nessuno stato di sistema) |
 | Ransomware cripta tutto | ⚠️ se il drive era offline | ✅ se l'immagine è offline | ⚠️ dipende dal timing della sync |
-| Hai sovrascritto un documento Word, vuoi la versione di ieri | ⚠️ snapshot orario più vicino se il drive è connesso | ❌ troppo grossolano | ✅ se il file è in OneDrive, entro retention |
+| Hai sovrascritto un documento Word, vuoi la versione di ieri | ⚠️ [snapshot orario più vicino](https://support.microsoft.com/it-it/windows/backup-and-restore-with-file-history-7bf065bf-f1ea-0a78-c1cf-7dcf51cc8bfc) se il drive è connesso | ❌ troppo grossolano | ✅ se il file è in OneDrive, [entro retention](https://learn.microsoft.com/it-it/sharepoint/document-library-version-history-limits) |
 | Vuoi la versione di 3 mesi fa | ⚠️ solo se Cronologia file era attiva e il drive online quel giorno | ❌ l'immagine è di tutto il sistema | ❌ di solito oltre retention |
-| Cancellato per errore file 2 settimane fa | ✅ se ricordi che era in una cartella monitorata | ✅ se è stata fatta un'immagine | ✅ Cestino se entro 30 giorni |
+| Cancellato per errore file 2 settimane fa | ✅ se ricordi che era in una cartella monitorata | ✅ se è stata fatta un'immagine | ✅ [Cestino se entro 30 giorni](https://learn.microsoft.com/it-it/sharepoint/retention-and-deletion) |
 
 Le cose che non vedi se conosci solo una:
 

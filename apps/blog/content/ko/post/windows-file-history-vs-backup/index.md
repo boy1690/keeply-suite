@@ -77,9 +77,9 @@ Microsoft 가 Windows 에 탑재한 「백업」으로 불리는 기능은 3 개
 | SSD 물리적 고장 | ❌ | ✅ | ✅ 동기화된 파일 |
 | Windows 부팅 안 됨 | ❌ | ✅ | ❌ 시스템 상태 없음 |
 | 랜섬웨어가 전체 디스크 암호화 | ⚠️ 드라이브 오프라인이면 구함 | ✅ 이미지 오프라인이면 구함 | ⚠️ 동기화 타이밍에 따라 |
-| Word 덮어쓰고 어제 버전 원함 | ⚠️ 가장 가까운 일정 스냅(드라이브 연결 시) | ❌ 너무 거침 | ✅ 클라우드 파일 + 보관 기간 내 |
+| Word 덮어쓰고 어제 버전 원함 | ⚠️ [가장 가까운 일정 스냅](https://support.microsoft.com/ko-kr/windows/backup-and-restore-with-file-history-7bf065bf-f1ea-0a78-c1cf-7dcf51cc8bfc)(드라이브 연결 시) | ❌ 너무 거침 | ✅ 클라우드 파일 + [보관 기간 내](https://learn.microsoft.com/ko-kr/sharepoint/document-library-version-history-limits) |
 | 3 개월 전 버전 원함 | ⚠️ 그날 파일 히스토리 가동 + 드라이브 연결 시만 | ❌ 이미지는 파일 버전 아님 | ❌ 보통 보관 기간 초과 |
-| 2 주 전 실수로 삭제 | ✅ watched 폴더에 있었다면 | ✅ 이미지에 있다면 | ✅ 30 일 휴지통 |
+| 2 주 전 실수로 삭제 | ✅ watched 폴더에 있었다면 | ✅ 이미지에 있다면 | ✅ [30 일 휴지통](https://learn.microsoft.com/ko-kr/sharepoint/retention-and-deletion) |
 
 하나만 알면 안 보이는 것:
 

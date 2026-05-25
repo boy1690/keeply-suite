@@ -77,9 +77,9 @@ Concrete scenarios, mapped to the three Windows features:
 | SSD physically fails | ❌ | ✅ | ✅ for synced files |
 | Windows won't boot | ❌ | ✅ | ❌ (no system state) |
 | Ransomware encrypts everything | ⚠️ if drive was offline | ✅ if image is offline | ⚠️ depends on sync timing |
-| Overwrote a Word doc, want yesterday's version | ⚠️ closest hourly snapshot if drive connected | ❌ too coarse | ✅ if file is in OneDrive, within retention |
+| Overwrote a Word doc, want yesterday's version | ⚠️ [closest hourly snapshot](https://support.microsoft.com/en-us/windows/backup-and-restore-with-file-history-7bf065bf-f1ea-0a78-c1cf-7dcf51cc8bfc) if drive connected | ❌ too coarse | ✅ if file is in OneDrive, [within retention](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits) |
 | Want the version from 3 months ago | ⚠️ only if File History was running and drive online that day | ❌ image is whole-system | ❌ usually past retention |
-| Accidentally deleted file 2 weeks ago | ✅ if you remember it was in a watched folder | ✅ if image taken | ✅ Recycle Bin if within 30 days |
+| Accidentally deleted file 2 weeks ago | ✅ if you remember it was in a watched folder | ✅ if image taken | ✅ [Recycle Bin if within 30 days](https://learn.microsoft.com/en-us/sharepoint/retention-and-deletion) |
 
 The takeaways you can't see if you only know one:
 
