@@ -108,11 +108,11 @@ Three non-developer options, each with trade-offs:
 
 ### Option A: macOS Time Machine (built into Mac)
 
-Apple's built-in tool since 2007: plug in an external drive, it automatically snapshots your whole disk every hour, opening a 3-month-old file takes two clicks. **Pros**: free, file-level UI, no CLI, works with anything. **Cons**: Mac only, restore timeline animation is slightly clunky, no "freeze as milestone" feature. **Fit for**: Mac individuals, occasional recovery.
+Apple's built-in tool since 2007: plug in an external drive, it [automatically snapshots your whole disk every hour](https://support.apple.com/en-us/104984), opening a 3-month-old file takes two clicks. **Pros**: free, file-level UI, no CLI, works with anything. **Cons**: Mac only, restore timeline animation is slightly clunky, no "freeze as milestone" feature. **Fit for**: Mac individuals, occasional recovery.
 
 ### Option B: Dropbox version history (30-day limited)
 
-Versions auto-preserved up to 30 days, restore via right-click "Previous versions" on the file. **Pros**: cross-platform, easy sharing. **Cons**: gone after 30 days, no cell-level diff, conflicted copy problem ([see other article](/en/post/dropbox-conflicted-copy/)). **Fit for**: collaborative editing within 30 days.
+[Versions auto-preserved up to 30 days](https://help.dropbox.com/delete-restore/version-history-overview), restore via right-click "Previous versions" on the file. **Pros**: cross-platform, easy sharing. **Cons**: gone after 30 days, no cell-level diff, conflicted copy problem ([see other article](/en/post/dropbox-conflicted-copy/)). **Fit for**: collaborative editing within 30 days.
 
 ### Option C: Keeply
 

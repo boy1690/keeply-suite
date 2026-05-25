@@ -82,11 +82,11 @@ Tre opzioni per non-sviluppatori, ognuna con trade-off:
 
 ### Opzione A: macOS Time Machine (integrato in Mac)
 
-Strumento integrato di Apple dal 2007: collega un disco esterno e il sistema fa snapshot automatico dell'intero disco ogni ora, aprire un file di 3 mesi fa sono due click. **Pros**: gratis, UI a livello file, no comandi, funziona con tutto. **Cons**: solo Mac, ripristino con animazione timeline leggermente goffo, niente "congela come milestone". **Adatto a**: utenti Mac individuali, recupero occasionale.
+Strumento integrato di Apple dal 2007: collega un disco esterno e il sistema [fa snapshot automatico dell'intero disco ogni ora](https://support.apple.com/it-it/104984), aprire un file di 3 mesi fa sono due click. **Pros**: gratis, UI a livello file, no comandi, funziona con tutto. **Cons**: solo Mac, ripristino con animazione timeline leggermente goffo, niente "congela come milestone". **Adatto a**: utenti Mac individuali, recupero occasionale.
 
 ### Opzione B: Dropbox version history (limite 30 giorni)
 
-Versioni preservate automaticamente fino a 30 giorni, ripristino via click destro "Versioni precedenti" sul file. **Pros**: cross-platform, condivisione facile. **Cons**: spariscono dopo 30 giorni, no diff a livello cella, problema copia in conflitto ([vedi altro articolo](/it/post/dropbox-conflicted-copy/)). **Adatto a**: editing collaborativo entro 30 giorni.
+[Versioni preservate automaticamente fino a 30 giorni](https://help.dropbox.com/delete-restore/version-history-overview), ripristino via click destro "Versioni precedenti" sul file. **Pros**: cross-platform, condivisione facile. **Cons**: spariscono dopo 30 giorni, no diff a livello cella, problema copia in conflitto ([vedi altro articolo](/it/post/dropbox-conflicted-copy/)). **Adatto a**: editing collaborativo entro 30 giorni.
 
 ### Opzione C: Keeply
 
