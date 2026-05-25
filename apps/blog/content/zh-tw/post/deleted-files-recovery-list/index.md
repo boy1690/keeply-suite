@@ -38,27 +38,29 @@ faq_schema:
 
 打開垃圾桶。空的。上週五清過了。
 
-Google「Mac 救回刪除的檔案」。第一個結果：Disk Drill，$89 美金一次性，需要對你的 SSD 做鑑識掃描。你已經在 Google「SSD 上跑鑑識救援會不會傷硬碟」。
+Google「Mac 救回刪除的檔案」。第一個結果：[Disk Drill](https://www.cleverfiles.com/data-recovery-software.html)，一年 $89 美金（終身版 $149），需要對你的 SSD 做鑑識掃描。你已經在 Google「SSD 上跑鑑識救援會不會傷硬碟」。
 
 你不需要鑑識工具。你需要一份清單。
 
 ## 已經做這件事的工具，跟沒做的工具
 
-iOS 照片有「最近刪除」相簿。iCloud Drive 有。備忘錄有。Outlook 有「復原已刪除項目」。Gmail 有 30 天垃圾桶。連 Slack 都保留刪除訊息 90 天讓管理員可以還原。
+iOS 照片有「最近刪除」相簿。iCloud Drive 有。備忘錄有。Outlook 有「復原已刪除項目」。Gmail 有 30 天垃圾桶。
+
+反倒是協作工具未必有。Slack 免費版你[刪掉的訊息根本找不回](https://slack.com/help/articles/203457187-Customize-data-retention-in-Slack)——那個「90 天」只是可見歷史的上限，不是還原鍵。連它都沒做「找回你刪掉的東西」這件看似基本的事。
 
 然後是表格下半部——你真正在工作的地方。
 
 | 工具 | 「最近刪除」清單？ |
 |---|---|
 | iOS 照片 | ✅ 30 天相簿 |
-| iCloud Drive | ✅ 「最近刪除」資料夾 |
+| iCloud Drive | ✅ [「最近刪除」30 天](https://support.apple.com/guide/icloud/recover-deleted-files-mmae56ea1ca5/icloud) |
 | 備忘錄（iOS / macOS） | ✅ 30 天資料夾 |
 | Outlook | ✅ 復原已刪除項目 |
 | Gmail | ✅ 30 天垃圾桶 |
-| Slack | ✅ 90 天管理員還原 |
+| Slack | ✅ [免費版可見 90 天（保留政策可調）](https://slack.com/help/articles/203457187-Customize-data-retention-in-Slack) |
 | **macOS Finder** | ⚠️ 垃圾桶 30 天，但沒有資料夾層級的清單 |
 | **Windows 檔案總管** | ⚠️ 只有資源回收筒，清空後就沒了 |
-| **Dropbox 本機資料夾** | ❌ 刪除的檔案直接從本機畫面消失 |
+| **Dropbox 本機資料夾** | ❌ 刪除直接從本機消失（[線上 Basic 30 天 / Pro 180 天](https://help.dropbox.com/delete-restore/recover-deleted-files-folders)才找得回） |
 | **Google Drive 本機同步** | ❌ 跟 Dropbox 一樣 |
 | **一般版本控制工具** | ❌ 要去「瀏覽歷史」找 |
 
@@ -102,7 +104,7 @@ iOS 照片有「最近刪除」相簿。iCloud Drive 有。備忘錄有。Outloo
 
 **你 6 個月前清過垃圾桶且當時沒在跑版本控制**：這篇文章描述的模式不適用——你真的進入鑑識救援領域了。Disk Drill 或 Recuva 可能有用，但 [檔案救援軟體不一定救得到](/zh-tw/post/restore-without-panic/) 解釋為什麼這類工具經常也失敗（SSD TRIM 是簡短版）。
 
-**刪除發生在你不控制的遠端共享資料夾**：如果 IT 管理員或團隊負責人清空 SharePoint 資源回收筒超過 93 天視窗，那份清單在你這邊根本沒存在過。要解的是管理員政策對話，不是裝什麼軟體。
+**刪除發生在你不控制的遠端共享資料夾**：如果 IT 管理員或團隊負責人清空 SharePoint 資源回收筒超過 [93 天視窗](https://learn.microsoft.com/en-us/sharepoint/retention-and-deletion)，那份清單在你這邊根本沒存在過。要解的是管理員政策對話，不是裝什麼軟體。
 
 **你要救的是檔案內部的編輯不是整個檔案**：Excel 單一儲存格回溯、Word 撤銷某段話——這是另一個問題，[Excel 那篇](/zh-tw/post/excel-version-history-limits/) 跟 [Word 那篇](/zh-tw/post/client-asked-which-version/) 各自處理。
 

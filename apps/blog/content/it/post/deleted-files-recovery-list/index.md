@@ -38,27 +38,29 @@ Mercoledì 11:14. Premi Elimina su quello che pensavi fosse il duplicato sbaglia
 
 Apri il Cestino. Vuoto. L'hai svuotato venerdì scorso.
 
-Cerchi su Google «recuperare file eliminato Mac». Primo risultato: Disk Drill, $89 una tantum, richiede una scansione forense del tuo SSD. Stai già googlando «il recupero forense è sicuro sugli SSD».
+Cerchi su Google «recuperare file eliminato Mac». Primo risultato: [Disk Drill](https://www.cleverfiles.com/help/disk-drill-pro-subscription.html), $89 all'anno (licenza a vita $149), richiede una scansione forense del tuo SSD. Stai già googlando «il recupero forense è sicuro sugli SSD».
 
 Non ti serve uno strumento forense. Ti serve una lista.
 
 ## Strumenti che lo fanno già, strumenti che no
 
-iOS Foto ha un album «Eliminati di recente». iCloud Drive ce l'ha. Note ce l'ha. Outlook ha «Ripristina elementi eliminati». Gmail ha un Cestino da 30 giorni. Persino Slack mantiene i messaggi eliminati per 90 giorni perché gli admin possano ripristinarli.
+iOS Foto ha un album «Eliminati di recente». iCloud Drive ce l'ha. Note ce l'ha. Outlook ha «Ripristina elementi eliminati». Gmail ha un Cestino da 30 giorni.
+
+Gli strumenti di collaborazione, invece, non sempre. Sul piano gratuito di Slack, [un messaggio che elimini è perso per sempre](https://slack.com/help/articles/203457187-Customize-data-retention-in-Slack) — quei «90 giorni» sono solo il limite della cronologia visibile, non un pulsante annulla. Persino Slack non fa la cosa apparentemente basilare di recuperare ciò che hai eliminato.
 
 E poi c'è la metà inferiore della tabella — dove effettivamente lavori.
 
 | Strumento | Lista «Eliminati di recente»? |
 |---|---|
 | iOS Foto | ✅ Album 30 giorni |
-| iCloud Drive | ✅ Cartella Eliminati di recente |
+| iCloud Drive | ✅ [Eliminati di recente, 30 giorni](https://support.apple.com/guide/icloud/recover-deleted-files-mmae56ea1ca5/icloud) |
 | Note (iOS / macOS) | ✅ Cartella 30 giorni |
 | Outlook | ✅ Ripristina elementi eliminati |
 | Gmail | ✅ Cestino 30 giorni |
-| Slack | ✅ Ripristino admin 90 giorni |
+| Slack | ⚠️ [nessun «annulla eliminazione»: i 90 giorni sono il limite di visibilità, non ripristino](https://slack.com/help/articles/203457187-Customize-data-retention-in-Slack) |
 | **macOS Finder** | ⚠️ Cestino 30 giorni, ma nessuna lista per cartella |
 | **Esplora file Windows** | ⚠️ Solo Cestino, persa quando svuotato |
-| **Cartella locale Dropbox** | ❌ I file eliminati spariscono dalla vista locale |
+| **Cartella locale Dropbox** | ❌ Spariscono in locale ([online Basic 30 giorni / Pro 180 giorni](https://help.dropbox.com/delete-restore/recover-deleted-files-folders) per recuperare) |
 | **Sync locale Google Drive** | ❌ Come Dropbox |
 | **Strumenti generici di controllo versione** | ❌ Richiedono «Sfoglia cronologia» |
 
@@ -117,7 +119,7 @@ Questo pattern non risolve ogni scenario di eliminazione. Tre confini da chiarir
 
 **Hai svuotato il Cestino sei mesi fa e all'epoca non avevi controllo versione attivo**: il pattern di questo articolo non si applica — sei in territorio forense vero. Disk Drill o Recuva potrebbero aiutare, ma [perché spesso anche quelli falliscono](/it/post/restore-without-panic/) c'è un pezzo separato (TRIM degli SSD è la versione breve).
 
-**L'eliminazione è avvenuta su una condivisione remota che non controlli**: se admin IT o un capo team ha svuotato il Cestino di SharePoint oltre la finestra di 93 giorni, la lista non è mai esistita dal tuo lato. La soluzione è una conversazione sulla policy admin, non un'installazione software.
+**L'eliminazione è avvenuta su una condivisione remota che non controlli**: se admin IT o un capo team ha svuotato il Cestino di SharePoint oltre la [finestra di 93 giorni](https://learn.microsoft.com/en-us/sharepoint/retention-and-deletion), la lista non è mai esistita dal tuo lato. La soluzione è una conversazione sulla policy admin, non un'installazione software.
 
 **Vuoi recuperare modifiche dentro un file, non il file stesso**: rollback di una singola cella in Excel, annullamento di un paragrafo specifico in Word — è un problema diverso, [coperto qui per Excel](/it/post/excel-version-history-limits/) e [qui per Word](/it/post/client-asked-which-version/).
 

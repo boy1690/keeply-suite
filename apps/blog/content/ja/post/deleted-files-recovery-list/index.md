@@ -38,27 +38,29 @@ faq_schema:
 
 ゴミ箱を開く。空。先週金曜日に空にしたばかり。
 
-Google で「Mac 削除したファイル 復元」と検索。最初の結果: Disk Drill、$89 米ドル一回払い、SSD のフォレンジックスキャンが必要。すでに「SSD でフォレンジック復元は安全か」を Google している。
+Google で「Mac 削除したファイル 復元」と検索。最初の結果: [Disk Drill](https://www.cleverfiles.com/help/disk-drill-pro-subscription.html)、年額 $89 米ドル(買い切りは $149)、SSD のフォレンジックスキャンが必要。すでに「SSD でフォレンジック復元は安全か」を Google している。
 
 フォレンジックツールはいらない。リストがいる。
 
 ## すでにこれをやっているツール、やっていないツール
 
-iOS 写真には「最近削除した項目」アルバムがある。iCloud Drive にもある。メモにもある。Outlook には「削除済みアイテムの回復」がある。Gmail には 30 日のごみ箱。Slack でさえ管理者が復元できるよう削除メッセージを 90 日保持する。
+iOS 写真には「最近削除した項目」アルバムがある。iCloud Drive にもある。メモにもある。Outlook には「削除済みアイテムの回復」がある。Gmail には 30 日のごみ箱。
+
+ところがコラボツールには必ずしもない。Slack 無料プランでは[削除したメッセージは戻ってこない](https://slack.com/help/articles/203457187-Customize-data-retention-in-Slack)——あの「90 日」は表示できる履歴の上限であって、取り消しボタンではない。「削除したものを取り戻す」という一見基本的なことを、Slack ですらやっていない。
 
 そして表の下半分——あなたが実際に作業している場所。
 
 | ツール | 「最近削除した項目」リスト? |
 |---|---|
 | iOS 写真 | ✅ 30 日アルバム |
-| iCloud Drive | ✅ 「最近削除した項目」フォルダ |
+| iCloud Drive | ✅ [「最近削除した項目」30 日](https://support.apple.com/guide/icloud/recover-deleted-files-mmae56ea1ca5/icloud) |
 | メモ(iOS / macOS) | ✅ 30 日フォルダ |
 | Outlook | ✅ 削除済みアイテムの回復 |
 | Gmail | ✅ 30 日ごみ箱 |
-| Slack | ✅ 90 日管理者復元 |
+| Slack | ⚠️ [「削除の取り消し」機能はない：90 日は表示上限であって復元ではない](https://slack.com/help/articles/203457187-Customize-data-retention-in-Slack) |
 | **macOS Finder** | ⚠️ ゴミ箱 30 日、ただしフォルダ単位のリストなし |
 | **Windows エクスプローラー** | ⚠️ ごみ箱のみ、空にしたら消失 |
-| **Dropbox ローカルフォルダ** | ❌ 削除ファイルがローカルビューから消える |
+| **Dropbox ローカルフォルダ** | ❌ ローカルから消える（[オンライン版 Basic 30 日 / Pro 180 日](https://help.dropbox.com/delete-restore/recover-deleted-files-folders)なら復元可） |
 | **Google Drive ローカル同期** | ❌ Dropbox と同じ |
 | **一般的なバージョン管理ツール** | ❌ 「履歴を見る」が必要 |
 
@@ -117,7 +119,7 @@ Keeply に追加した任意のフォルダの中で動作します——Dropbox
 
 **6 か月前にゴミ箱を空にし、当時バージョン管理を走らせていなかった**: この記事のパターンは適用外——本物のフォレンジック領域に入っています。Disk Drill や Recuva が役立つかもしれませんが、[なぜこれらすらしばしば失敗するか](/ja/post/restore-without-panic/) に別記事があります(SSD TRIM が短い答え)。
 
-**削除があなたの管理外のリモート共有で発生**: IT 管理者やチームリーダーが SharePoint ごみ箱を 93 日ウィンドウを超えて空にした場合、リストはあなた側に最初から存在しません。解決は管理者ポリシーの会話で、ソフトウェアのインストールではありません。
+**削除があなたの管理外のリモート共有で発生**: IT 管理者やチームリーダーが SharePoint ごみ箱を [93 日ウィンドウ](https://learn.microsoft.com/en-us/sharepoint/retention-and-deletion)を超えて空にした場合、リストはあなた側に最初から存在しません。解決は管理者ポリシーの会話で、ソフトウェアのインストールではありません。
 
 **ファイル全体ではなくファイル内部の編集を復元したい**: Excel の単一セルロールバック、Word の特定段落の取り消し——これは別問題で、[Excel](/ja/post/excel-version-history-limits/) と [Word](/ja/post/client-asked-which-version/) でそれぞれ扱っています。
 

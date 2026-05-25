@@ -38,27 +38,29 @@ faq_schema:
 
 휴지통을 연다. 비어 있다. 지난 금요일에 비웠기 때문.
 
-Google 에 「Mac 삭제한 파일 복구」 라고 검색. 첫 번째 결과: Disk Drill, $89 미화 일회성、SSD 포렌식 스캔 필요. 이미 「SSD 에서 포렌식 복구는 안전한가」 를 Google 하고 있다.
+Google 에 「Mac 삭제한 파일 복구」 라고 검색. 첫 번째 결과: [Disk Drill](https://www.cleverfiles.com/help/disk-drill-pro-subscription.html), 연 $89 미화(평생 라이선스는 $149)、SSD 포렌식 스캔 필요. 이미 「SSD 에서 포렌식 복구는 안전한가」 를 Google 하고 있다.
 
 포렌식 도구가 필요한 게 아니다. 목록이 필요하다.
 
 ## 이미 이걸 하는 도구、안 하는 도구
 
-iOS 사진에는 「최근 삭제됨」 앨범이 있다. iCloud Drive 에도. 메모에도. Outlook 에는 「삭제된 항목 복구」 가 있다. Gmail 에는 30 일 휴지통. Slack 조차 관리자가 복원할 수 있도록 삭제된 메시지를 90 일 보관한다.
+iOS 사진에는 「최근 삭제됨」 앨범이 있다. iCloud Drive 에도. 메모에도. Outlook 에는 「삭제된 항목 복구」 가 있다. Gmail 에는 30 일 휴지통.
+
+반면 협업 도구에는 꼭 있는 게 아니다. Slack 무료 플랜에서는 [삭제한 메시지를 되돌릴 수 없다](https://slack.com/help/articles/203457187-Customize-data-retention-in-Slack) — 그 「90 일」은 볼 수 있는 기록의 상한일 뿐、복원 버튼이 아니다. 「삭제한 것을 되찾는」 일견 기본적인 일을 Slack 조차 하지 않는다.
 
 그리고 표의 아래쪽 절반 — 당신이 실제로 작업하는 곳.
 
 | 도구 | 「최근 삭제됨」 목록? |
 |---|---|
 | iOS 사진 | ✅ 30 일 앨범 |
-| iCloud Drive | ✅ 「최근 삭제됨」 폴더 |
+| iCloud Drive | ✅ [「최근 삭제됨」 30 일](https://support.apple.com/guide/icloud/recover-deleted-files-mmae56ea1ca5/icloud) |
 | 메모(iOS / macOS) | ✅ 30 일 폴더 |
 | Outlook | ✅ 삭제된 항목 복구 |
 | Gmail | ✅ 30 일 휴지통 |
-| Slack | ✅ 90 일 관리자 복원 |
+| Slack | ⚠️ [「삭제 취소」 기능 없음: 90 일은 표시 상한이지 복원이 아님](https://slack.com/help/articles/203457187-Customize-data-retention-in-Slack) |
 | **macOS Finder** | ⚠️ 휴지통 30 일、그러나 폴더별 목록 없음 |
 | **Windows 파일 탐색기** | ⚠️ 휴지통만、비우면 사라짐 |
-| **Dropbox 로컬 폴더** | ❌ 삭제 파일이 로컬 화면에서 사라짐 |
+| **Dropbox 로컬 폴더** | ❌ 로컬에서 사라짐（[온라인 Basic 30 일 / Pro 180 일](https://help.dropbox.com/delete-restore/recover-deleted-files-folders)이면 복구 가능） |
 | **Google Drive 로컬 동기화** | ❌ Dropbox 와 동일 |
 | **일반 버전 관리 도구** | ❌ 「기록 보기」를 거쳐야 함 |
 
@@ -117,7 +119,7 @@ Keeply 에 추가한 어떤 폴더 안에서도 동작합니다 — 당신의 Dr
 
 **6 개월 전에 휴지통을 비웠고 당시 버전 관리를 돌리지 않았다**: 이 글의 패턴은 적용되지 않습니다 — 진짜 포렌식 영역에 들어왔습니다. Disk Drill 이나 Recuva 가 도움이 될 수 있지만、[왜 이런 도구조차 자주 실패하는지](/ko/post/restore-without-panic/) 에 별도 글이 있습니다(SSD TRIM 이 짧은 답변).
 
-**삭제가 당신이 통제하지 않는 원격 공유에서 발생**: IT 관리자나 팀장이 SharePoint 휴지통을 93 일 윈도우 너머로 비웠다면、그 목록은 처음부터 당신 쪽에 존재하지 않았습니다. 해결은 관리자 정책 대화이지 소프트웨어 설치가 아닙니다.
+**삭제가 당신이 통제하지 않는 원격 공유에서 발생**: IT 관리자나 팀장이 SharePoint 휴지통을 [93 일 윈도우](https://learn.microsoft.com/en-us/sharepoint/retention-and-deletion) 너머로 비웠다면、그 목록은 처음부터 당신 쪽에 존재하지 않았습니다. 해결은 관리자 정책 대화이지 소프트웨어 설치가 아닙니다.
 
 **파일 전체가 아니라 파일 내부 편집을 복구하려는 경우**: Excel 단일 셀 롤백、Word 의 특정 문단 취소 — 다른 문제이고、[Excel 글](/ko/post/excel-version-history-limits/) 과 [Word 글](/ko/post/client-asked-which-version/) 에서 각각 다룹니다.
 

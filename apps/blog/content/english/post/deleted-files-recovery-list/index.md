@@ -38,27 +38,29 @@ Wednesday 11:14 AM. You hit Delete on what you thought was the wrong duplicate. 
 
 You open the Trash. Empty. You cleared it last Friday.
 
-You Google "recover deleted file Mac." First result: Disk Drill, $89 one-time, requires a forensic scan of your SSD. You're already googling "is forensic recovery safe for SSDs."
+You Google "recover deleted file Mac." First result: [Disk Drill](https://www.cleverfiles.com/help/disk-drill-pro-subscription.html), $89 a year (or $149 lifetime), requires a forensic scan of your SSD. You're already googling "is forensic recovery safe for SSDs."
 
 You don't need a forensics tool. You need a list.
 
 ## Tools that already do this, tools that don't
 
-iOS Photos has a "Recently Deleted" album. iCloud Drive has one. Notes has one. Outlook has "Recover Deleted Items." Gmail has Trash with 30-day retention. Even Slack keeps deleted messages for 90 days for admins to restore.
+iOS Photos has a "Recently Deleted" album. iCloud Drive has one. Notes has one. Outlook has "Recover Deleted Items." Gmail has Trash with 30-day retention.
+
+Collaboration tools, though, often don't. On Slack's free plan, [a message you delete is gone for good](https://slack.com/help/articles/203457187-Customize-data-retention-in-Slack) — that "90 days" is just the visible-history cap, not an undo button. Even Slack doesn't do the seemingly basic thing of getting back what you deleted.
 
 Then there's the half of the table where you actually work.
 
 | Tool | "Recently Deleted" list? |
 |---|---|
 | iOS Photos | ✅ 30-day album |
-| iCloud Drive | ✅ Recently Deleted folder |
+| iCloud Drive | ✅ [Recently Deleted, 30 days](https://support.apple.com/guide/icloud/recover-deleted-files-mmae56ea1ca5/icloud) |
 | Notes (iOS / macOS) | ✅ 30-day folder |
 | Outlook | ✅ Recover Deleted Items |
 | Gmail | ✅ 30-day Trash |
-| Slack | ✅ 90-day admin restore |
+| Slack | ⚠️ [no "undelete" — 90 days is the visibility cap, not restore](https://slack.com/help/articles/203457187-Customize-data-retention-in-Slack) |
 | **macOS Finder** | ⚠️ Trash 30 days, but no per-folder list |
 | **Windows Explorer** | ⚠️ Recycle Bin only, lost when emptied |
-| **Dropbox local folder** | ❌ Deleted files vanish from local view |
+| **Dropbox local folder** | ❌ Vanish locally ([online: Basic 30 days / Pro 180 days](https://help.dropbox.com/delete-restore/recover-deleted-files-folders) to recover) |
 | **Google Drive local sync** | ❌ Same as Dropbox |
 | **Generic version-control tools** | ❌ "Browse history" required |
 
@@ -117,7 +119,7 @@ This pattern doesn't solve every deletion scenario. Three boundaries to call out
 
 **You emptied the Trash six months ago and never had version control running.** This article's pattern doesn't apply — you're in real forensics territory now. Disk Drill or Recuva may help, but [there's a separate piece on why even those often fail](/en/post/restore-without-panic/) (SSD TRIM is the short version).
 
-**The deletion happened on a remote share you don't control.** If IT admins or a team lead emptied a SharePoint Recycle Bin past the 93-day window, the list never existed on your side. The fix is an admin-policy conversation, not a software install.
+**The deletion happened on a remote share you don't control.** If IT admins or a team lead emptied a SharePoint Recycle Bin past the [93-day window](https://learn.microsoft.com/en-us/sharepoint/retention-and-deletion), the list never existed on your side. The fix is an admin-policy conversation, not a software install.
 
 **You're recovering edits inside a file, not the file itself.** Single-cell rollback in Excel, undoing a specific paragraph in a Word doc — that's a different problem, [covered here for Excel](/en/post/excel-version-history-limits/) and [here for Word](/en/post/client-asked-which-version/).
 

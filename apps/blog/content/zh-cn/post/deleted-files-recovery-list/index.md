@@ -38,27 +38,29 @@ faq_schema:
 
 打开废纸篓。空的。上周五清过了。
 
-Google「Mac 救回删除的文件」。第一个结果：Disk Drill，$89 美金一次性，需要对你的 SSD 做取证扫描。你已经在 Google「SSD 上跑取证恢复会不会伤硬盘」。
+Google「Mac 救回删除的文件」。第一个结果：[Disk Drill](https://www.cleverfiles.com/help/disk-drill-pro-subscription.html)，一年 $89 美金（终身版 $149），需要对你的 SSD 做取证扫描。你已经在 Google「SSD 上跑取证恢复会不会伤硬盘」。
 
 你不需要取证工具。你需要一份清单。
 
 ## 已经做这件事的工具，跟没做的工具
 
-iOS 照片有「最近删除」相册。iCloud Drive 有。备忘录有。Outlook 有「恢复已删除项目」。Gmail 有 30 天废纸篓。连 Slack 都保留删除讯息 90 天让管理员可以还原。
+iOS 照片有「最近删除」相册。iCloud Drive 有。备忘录有。Outlook 有「恢复已删除项目」。Gmail 有 30 天废纸篓。
+
+反倒是协作工具未必有。Slack 免费版你[删掉的讯息根本找不回](https://slack.com/help/articles/203457187-Customize-data-retention-in-Slack)——那个「90 天」只是可见历史的上限，不是还原键。连它都没做「找回你删掉的东西」这件看似基本的事。
 
 然后是表格下半部——你真正在工作的地方。
 
 | 工具 | 「最近删除」清单？ |
 |---|---|
 | iOS 照片 | ✅ 30 天相册 |
-| iCloud Drive | ✅ 「最近删除」文件夹 |
+| iCloud Drive | ✅ [「最近删除」30 天](https://support.apple.com/guide/icloud/recover-deleted-files-mmae56ea1ca5/icloud) |
 | 备忘录（iOS / macOS） | ✅ 30 天文件夹 |
 | Outlook | ✅ 恢复已删除项目 |
 | Gmail | ✅ 30 天废纸篓 |
-| Slack | ✅ 90 天管理员还原 |
+| Slack | ⚠️ [其实没有「还原已删讯息」功能：90 天是可见上限、不是还原](https://slack.com/help/articles/203457187-Customize-data-retention-in-Slack) |
 | **macOS Finder** | ⚠️ 废纸篓 30 天，但没有文件夹层级的清单 |
 | **Windows 文件资源管理器** | ⚠️ 只有回收站，清空后就没了 |
-| **Dropbox 本机文件夹** | ❌ 删除的文件直接从本机画面消失 |
+| **Dropbox 本机文件夹** | ❌ 删除直接从本机消失（[线上 Basic 30 天 / Pro 180 天](https://help.dropbox.com/delete-restore/recover-deleted-files-folders)才找得回） |
 | **Google Drive 本机同步** | ❌ 跟 Dropbox 一样 |
 | **一般版本控制工具** | ❌ 要去「浏览历史」找 |
 
@@ -102,7 +104,7 @@ iOS 照片有「最近删除」相册。iCloud Drive 有。备忘录有。Outloo
 
 **你 6 个月前清过废纸篓且当时没在跑版本控制**：这篇文章描述的模式不适用——你真的进入取证恢复领域了。Disk Drill 或 Recuva 可能有用，但 [文件恢复软件不一定救得到](/zh-cn/post/restore-without-panic/) 解释为什么这类工具经常也失败（SSD TRIM 是简短版）。
 
-**删除发生在你不控制的远端共享文件夹**：如果 IT 管理员或团队负责人清空 SharePoint 回收站超过 93 天窗口，那份清单在你这边根本没存在过。要解的是管理员政策对话，不是装什么软件。
+**删除发生在你不控制的远端共享文件夹**：如果 IT 管理员或团队负责人清空 SharePoint 回收站超过 [93 天窗口](https://learn.microsoft.com/en-us/sharepoint/retention-and-deletion)，那份清单在你这边根本没存在过。要解的是管理员政策对话，不是装什么软件。
 
 **你要救的是文件内部的编辑不是整个文件**：Excel 单一储存格回溯、Word 撤销某段话——这是另一个问题，[Excel 那篇](/zh-cn/post/excel-version-history-limits/) 跟 [Word 那篇](/zh-cn/post/client-asked-which-version/) 各自处理。
 
