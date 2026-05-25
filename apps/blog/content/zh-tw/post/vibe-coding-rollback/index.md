@@ -83,7 +83,7 @@ A 工程師打開 Cursor，叫 AI 改一個 錯誤。AI 改完跑不過。他叫
 
 這時候 AI 還在自信地修。**它不會主動說「我可能寫崩了」**。
 
-它的記憶只有當前 context window。**它不知道 5 個 prompt 之前你的程式碼是好的**。但你電腦上的檔案知道——只要有東西幫你記住。
+它的記憶只有當前 [context window](https://www.ibm.com/think/topics/context-window)。**它不知道 5 個 prompt 之前你的程式碼是好的**。但你電腦上的檔案知道——只要有東西幫你記住。
 
 ---
 

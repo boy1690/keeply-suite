@@ -81,7 +81,7 @@ You say "fix that error." The AI touches 5 files, edits the config, adds a helpe
 
 The AI is still confidently fixing things. **It will not volunteer "I might have wrecked this."**
 
-Its memory is only the current context window. **It does not know that 5 prompts ago your code was fine.** But the files on your computer know. As long as someone remembers.
+Its memory is only the current [context window](https://www.ibm.com/think/topics/context-window). **It does not know that 5 prompts ago your code was fine.** But the files on your computer know. As long as someone remembers.
 
 ---
 
