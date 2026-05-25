@@ -52,7 +52,7 @@ faq_schema:
 
 ## 3-2-1 バックアップとは？
 
-3-2-1 ルールは、Peter Krogh が 2005 年に[《The DAM Book》](https://www.oreilly.com/library/view/the-dam-book/9780596008550/)（O'Reilly Media）で定めたバックアップ規則です。
+3-2-1 ルールは、Peter Krogh が 2005 年に[《The DAM Book》](https://www.oreilly.com/library/view/the-dam-book/9780596008550/)（O'Reilly Media）で定めたバックアップ規則です（[CISA も現在まで 3-2-1 を標準的なバックアップ指針として推奨しています](https://www.cisa.gov/audiences/small-and-medium-businesses/secure-your-business/back-up-business-data)）。
 
 - **3 コピー**：原本に加えてバックアップ 2 つ
 - **2 種類のメディア**：例：ローカルドライブ + クラウド、NAS + 外付け SSD

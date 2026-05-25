@@ -41,7 +41,7 @@ La regola 3-2-1 non si è mai mossa, ma la tua vera minaccia sì.
 
 ## Punti chiave
 
-La **regola 3-2-1 del backup** è necessaria: tre copie, due tipi di supporto, una fuori sede. Protegge dai guasti hardware, incendi, ransomware, gli scenari di disastro. Ma fin dalla progettazione non gestisce l'**errore utente**: tu che sovrascrivi il tuo file, un collega che modifica la versione sbagliata, la sincronizzazione cloud che replica la versione errata in tutte e tre le copie. Questo articolo analizza cosa la 3-2-1 copre, cosa non copre, e cosa serve per quel livello mancante.
+La **regola 3-2-1 del backup** è necessaria: [tre copie, due tipi di supporto, una fuori sede](https://www.cisa.gov/audiences/small-and-medium-businesses/secure-your-business/back-up-business-data) (CISA la raccomanda ancora oggi come standard di backup). Protegge dai guasti hardware, incendi, ransomware, gli scenari di disastro. Ma fin dalla progettazione non gestisce l'**errore utente**: tu che sovrascrivi il tuo file, un collega che modifica la versione sbagliata, la sincronizzazione cloud che replica la versione errata in tutte e tre le copie. Questo articolo analizza cosa la 3-2-1 copre, cosa non copre, e cosa serve per quel livello mancante.
 
 ## Indice
 
