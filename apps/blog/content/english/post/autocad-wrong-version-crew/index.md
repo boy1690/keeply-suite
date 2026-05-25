@@ -156,7 +156,7 @@ Vault: Z:\Projects\MapleSt_Drainage\
 
 I have to be honest: if you need to compare two `.dwg` drawings line-by-line, you still open AutoCAD and do that yourself. Keeply doesn't do CAD drawing diffs.
 
-**4. At least one copy that's not on this machine and not on the site NAS.** External drive, cloud, backup slot. Whatever. The point is **at least one off-site copy**. Office NAS drives fail, get wiped, get repurposed for the next project. The off-site backup is the cheapest insurance you'll ever buy yourself.
+**4. At least one copy that's not on this machine and not on the site NAS.** External drive, cloud, backup slot. Whatever. The point is **at least one off-site copy** ([CISA's 3-2-1 backup rule](https://www.cisa.gov/audiences/small-and-medium-businesses/secure-your-business/back-up-business-data): 3 copies, 2 media types, 1 off-site). Office NAS drives fail, get wiped, get repurposed for the next project. The off-site backup is the cheapest insurance you'll ever buy yourself.
 
 Steps 1 and 2 can run on discipline alone, but honestly. Three months in you'll miss half of them. Step 3 is how the tool catches the other half.
 

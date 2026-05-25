@@ -156,7 +156,7 @@ Archivio: Z:\Projects\MapleSt_Drainage\
 
 Devo essere onesto: se devi confrontare due disegni `.dwg` riga per riga, devi comunque aprire AutoCAD e farlo a mano. Keeply non fa il confronto tra disegni CAD.
 
-**4. Almeno una copia che non sia su questa macchina e non sul NAS di cantiere.** Hard disk esterno, cloud, slot di backup. Qualunque cosa. Il punto è **almeno una copia fuori sede**. I dischi NAS dell'ufficio si rompono, vengono cancellati, vengono riutilizzati per il prossimo progetto. Il backup fuori sede è l'assicurazione più economica che ti comprerai mai.
+**4. Almeno una copia che non sia su questa macchina e non sul NAS di cantiere.** Hard disk esterno, cloud, slot di backup. Qualunque cosa. Il punto è **almeno una copia fuori sede** ([la regola 3-2-1 di CISA](https://www.cisa.gov/audiences/small-and-medium-businesses/secure-your-business/back-up-business-data): 3 copie, 2 supporti, 1 fuori sede). I dischi NAS dell'ufficio si rompono, vengono cancellati, vengono riutilizzati per il prossimo progetto. Il backup fuori sede è l'assicurazione più economica che ti comprerai mai.
 
 I passaggi 1 e 2 possono funzionare con la sola disciplina, ma onestamente. Tre mesi dopo ne mancherai metà. Il passaggio 3 è come lo strumento prende l'altra metà.
 
