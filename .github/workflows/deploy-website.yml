@@ -68,4 +68,6 @@ jobs:
           # --commit-message forced to ASCII: wrangler 4.86.x rejects the auto-detected
           # git HEAD message when it contains CJK ("Invalid commit message ... valid UTF-8
           # string", code 8000111), which broke deploys on Chinese-message commits.
-          command: pages deploy _stage_website --project-name=keeply-website --branch=main --commit-dirty=true --commit-message='GitHub Actions deploy'
+          # NOTE: wrangler-action splits `command` on whitespace (no shell quoting),
+          # so --commit-message must be a single token (no spaces).
+          command: pages deploy _stage_website --project-name=keeply-website --branch=main --commit-dirty=true --commit-message=ci-deploy
