@@ -96,7 +96,7 @@ Tools like Dropbox, iCloud, OneDrive, and Google Drive save **the latest version
 
 You edit a file on Computer A, Computer B automatically pulls the latest copy. **Their job is to sync "the latest copy" to all your devices**.
 
-They do have version history. But they typically **only keep 30 days**, Dropbox's standard plan, Google Drive, and OneDrive all follow this rule. Past that, it's gone.
+They do have version history, but all capped — [Dropbox's standard plan and Google Drive typically 30 days](https://help.dropbox.com/delete-restore/version-history-overview), while [OneDrive/SharePoint caps by version count (500 by default)](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits) and thins older ones. Past that, it's gone.
 
 ![Cloud "latest version sync" vs Keeply "unlimited history retention" comparison](image-3.svg)
 
