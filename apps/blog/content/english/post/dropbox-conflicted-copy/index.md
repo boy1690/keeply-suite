@@ -2,7 +2,7 @@
 title: "【2026 File Management】Dropbox conflicted copy: why it returns, and 3 sync designs that fix it"
 description: "`(conflicted copy)` isn't a bug — it's the result of Dropbox saving the later writer's version on top of the earlier one with no conflict-detection layer. This article unpacks 4 scenarios that trigger it, plus 3 sync designs that actually fix the mechanism."
 voice_version: v2-2026-05-11
-date: 2026-05-05T05:55:00+08:00
+date: 2026-05-25T11:15:00+08:00
 draft: false
 slug: dropbox-conflicted-copy
 retrofit_status: v1-legacy
@@ -22,6 +22,8 @@ faq_schema:
     a: Dropbox uses last-writer-wins — the later upload wins and the earlier version is saved aside as a conflicted copy. It's a commercial trade-off that prioritizes uninterrupted sync over conflict detection. Conflict resolution was deliberately pushed to the user; it's not a technical limitation.
   - q: Does manually merging two conflicted files fix the problem?
     a: No. Manual merging is symptom treatment, not a fix. The same scenario will trigger another conflicted copy next week, and a month from now you've merged 4-5 times. The fix is changing the sync mechanism, not getting faster at merging.
+  - q: How do you resolve a Dropbox conflicted copy?
+    a: Dropbox's own guidance is to open both files, compare the differences, merge them into the main file by hand, and delete the conflicted copy. That clears the one file in front of you, but it doesn't stop the next one — the lasting fix is a sync design that detects conflicts or keeps a per-user version instead of silently forking the file.
   - q: What sync designs actually eliminate conflicted copies?
     a: Three design patterns exist — detect and prompt (Git-style conflict UI), file locking (check-out mode), and local copy plus manual push (Keeply's model). Each trades off differently; local copy plus push is the only one that resolves all four collision scenarios.
   - q: Is Keeply a good replacement for Dropbox to solve conflicted copies?

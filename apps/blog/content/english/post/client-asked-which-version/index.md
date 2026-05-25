@@ -2,7 +2,7 @@
 title: "【2026 File Management】Word Saves Versions, Not the Memory of Which One You Sent 3 Months Ago"
 description: "Word AutoRecover, OneDrive version history, and Time Machine are all save-layer rescue tools — retention runs from cleared-on-close to a few hundred versions. Recovering the deliverable you sent 3 months ago needs a tool-layer always-on version history plus delivery-time metadata."
 voice_version: v2-2026-05-11
-date: 2026-05-02T15:00:00+08:00
+date: 2026-05-25T10:45:00+08:00
 draft: false
 slug: "client-asked-which-version"
 retrofit_status: v1-legacy
@@ -22,6 +22,8 @@ faq_schema:
     a: "Word has three mechanisms: AutoRecover (crash rescue, cleared on close), AutoSave (saves to the cloud as you type), and OneDrive version history (keeps roughly 500 version snapshots). All three are short-term, save-incident rescue — none is designed to track the deliverable you sent 3 months ago."
   - q: How long do AutoRecover, OneDrive, and Time Machine each retain?
     a: "AutoRecover clears once the file closes normally; OneDrive version history defaults to about 500 versions and auto-deletes the oldest beyond that; Mac Time Machine keeps hourly snapshots for 24 hours and daily snapshots for 30 days. Every mechanism has a retention ceiling — none reaches across the 3-month line."
+  - q: How long is Word version history?
+    a: "Word itself keeps no long-term history of its own — AutoRecover clears when you close the file, and the version history you see actually comes from OneDrive, which keeps roughly 500 versions and prunes the oldest beyond that. There's no fixed number of days; once OneDrive prunes them or the file is local-only, older versions are gone — which is why a version you delivered 3 months ago usually isn't there."
   - q: Why can't Word's version history reach back 3 months?
     a: "Built-in version history lives in the \"save layer,\" designed for the most recent failed write, with retention tuned to how often the average user looks back within a month. Beyond 3 months isn't a design goal, so pruning is reasonable behavior. Solving it takes a tool-layer, always-on version history."
   - q: What does it take to recover a deliverable from 3 months ago?

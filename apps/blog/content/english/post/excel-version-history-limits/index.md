@@ -2,7 +2,7 @@
 title: "【2026 File Management】Excel version history: 4 Microsoft limits nobody tells you"
 description: "Excel's version-history button is grayed out and only goes back 1-2 versions — not a bug, but the result of Microsoft designing AutoSave as OneDrive subscription bait. This article unpacks 4 limits you can't get around, plus 3 tool designs that close the gap."
 voice_version: v2-2026-05-11
-date: 2026-05-04T20:00:00+08:00
+date: 2026-05-25T11:00:00+08:00
 draft: false
 slug: excel-version-history-limits
 retrofit_status: v1-legacy
@@ -20,6 +20,8 @@ faq_schema:
     a: "The \"Version History\" button only works when 4 conditions are met at once: the file is on OneDrive or SharePoint, AutoSave is on, you have a business license, and you're on the desktop app (not the web app). Miss any one and the button grays out — and most working setups miss all four."
   - q: What limits does Microsoft AutoSave not spell out?
     a: "Four you can't get around: desktop AutoSave only goes back 1-2 versions; OneDrive version history is capped at 500 versions and thins older ones over time; local files get no version record at all; and there's no cell-level diff. These are deliberate engineering choices by Microsoft, not technical limits."
+  - q: How far back does Excel version history go?
+    a: "As far back as the version cap allows, not a fixed number of days. Excel version history runs through OneDrive/SharePoint, which keeps up to 500 versions by default and thins older ones over time (all versions for the first 30 days, then hourly, then daily, up to the 500 cap). Files saved only on your local disk have no version history at all — there, AutoSave goes back just 1-2 versions."
   - q: Why did Microsoft design Excel's version history this way?
     a: "Because full version history is a OneDrive subscription differentiator. If desktop Excel shipped a complete local record, OneDrive would lose a reason to bind you to it. Version history is a safety net for users and subscription bait for Microsoft — those two roles decide how the feature actually behaves."
   - q: Which tool designs actually solve Excel's version-history gap?

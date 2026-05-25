@@ -2,7 +2,7 @@
 title: "【2026 File Management】Windows file history vs backup: 3 different things"
 description: "Windows ships three separate features people call \"backup\" — File History, Windows Backup, and version history in cloud sync. They solve three different problems. Confusing them is why you have one of them covered and feel safe when you're missing the other two."
 voice_version: v2-2026-05-13
-date: 2026-05-13T08:00:00+08:00
+date: 2026-05-25T10:30:00+08:00
 draft: false
 slug: "windows-file-history-vs-backup"
 retrofit_status: v1-legacy
@@ -21,6 +21,9 @@ faq_schema:
   - q: What's the difference between Windows File History and Windows Backup?
     a: File History continuously copies your selected user folders (Documents, Pictures, Desktop) to an external drive on a schedule (default hourly). Windows Backup is a point-in-time snapshot meant for disaster recovery — restore the whole system to a previous state. Different jobs, different shapes. File History won't restore a crashed Windows; Windows Backup won't give you yesterday's draft of a document.
     
+  - q: By default, how often are File History backups performed?
+    a: By default, every hour. File History saves copies of changed files in your selected folders once an hour while the backup drive is connected, and the interval is configurable — anywhere from every 10 minutes to once a day. The catch is that it only runs when the external drive or network location is reachable, so an unplugged drive means no new backups until you reconnect it.
+
   - q: Is OneDrive a backup?
     a: Not in the disaster-recovery sense. OneDrive is sync plus offsite copy. If you overwrite a file, sync replicates the overwrite. OneDrive has a 30-day Recycle Bin for deletions and version history for individual files (capped at the plan tier). That covers some of what File History covers, but it isn't a system-state backup.
     
