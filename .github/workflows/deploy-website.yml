@@ -41,29 +41,6 @@ jobs:
         # recomputes SRI hashes. Mirrors original keeply-website deploy.yml.
         run: npm run build
 
-      # TEMPORARY diagnostic (Ahrefs RC-2): live zh-TW/compare/* ship UNHASHED JS
-      # refs (404) though local builds + committed files are hashed. Pinpoint
-      # whether CI fingerprint skips ../../ depth, or a later step breaks it.
-      # REMOVE once root cause is found.
-      - name: DEBUG RC-2 compare fingerprint (temporary)
-        working-directory: apps/website
-        run: |
-          set +e
-          echo "### node: $(node --version)"
-          echo "### POST-BUILD zh-TW/compare/dropbox.html (../../  depth):"
-          grep -oE '<script[^>]*src="[^"]*"' zh-TW/compare/dropbox.html
-          echo "### POST-BUILD en compare/dropbox.html (../ depth):"
-          grep -oE '<script[^>]*src="[^"]*"' compare/dropbox.html
-          echo "### manifest consent-api entry:"
-          grep -i 'consent-api' fingerprint-manifest.json
-          echo "### re-run build:fingerprint (2nd idempotent pass):"
-          node _dev/build-fingerprint.js | tail -2
-          echo "### AFTER 2nd fingerprint pass, zh-TW/compare/dropbox.html:"
-          grep -oE 'src="[^"]*consent-api[^"]*"' zh-TW/compare/dropbox.html
-          echo "### total .html files under zh-TW/compare:"
-          ls -1 zh-TW/compare/*.html | wc -l
-          true
-
       - name: Stage deployable assets (exclude node_modules / dev tooling)
         run: |
           mkdir -p _stage_website

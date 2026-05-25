@@ -54,7 +54,8 @@ const STANDALONE_SCRIPTS = [
   'clarity-loader.js',
   'team-notify.js',
   'paddle-checkout.js',
-  'activate-license.js'
+  'activate-license.js',
+  'file-recovery-diagnostic.js'  // spec 052
 ];
 
 const LOADER_FILE = 'i18n-loader.js';
@@ -243,7 +244,7 @@ function applyRewrites(html) {
     const base = origPath.replace(/\.js$/, '');
     const variant = escapeRegex(base) + '(?:\\.[0-9a-f]{10})?\\.js';
     const re = new RegExp(
-      '(<script\\s+src=")((?:\\.\\.\\/|\\/)?)' + variant + '("[^>]*></script>)',
+      '(<script\\s+src=")((?:\\.\\.\\/)*|\\/)' + variant + '("[^>]*></script>)',
       'g'
     );
     html = html.replace(re, (_m, p1, p2, p3) => `${p1}${p2}${hashed}${p3}`);
