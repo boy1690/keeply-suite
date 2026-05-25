@@ -68,11 +68,11 @@ This catches people out constantly: someone deletes a file off the company file 
 
 Files deleted from a OneDrive- or SharePoint-synced folder don't go into the local Recycle Bin. Instead, the deletion syncs up and the file lands in OneDrive's cloud-side bin. That's why opening the local bin shows nothing.
 
-OneDrive Personal keeps deleted items for 30 days; SharePoint / OneDrive for Business holds them for 93 days. Past those windows, the cloud bin purges them too.
+OneDrive Personal keeps deleted items for 30 days; SharePoint / OneDrive for Business holds them for 93 days ([Microsoft documentation](https://learn.microsoft.com/en-us/sharepoint/retention-and-deletion)). Past those windows, the cloud bin purges them too.
 
 ### 5. The Recycle Bin's retention period expired
 
-On recent Windows 10 / 11 systems, "Storage Sense" is on by default and is set to automatically purge items from the Recycle Bin after 30 days. You can turn this off in Settings → System → Storage → Storage Sense, but most machines run with the defaults — meaning that file you deleted a month ago has quietly been wiped.
+On Windows 10 / 11, "Storage Sense" automatically purges items from the Recycle Bin 30 days after they land there — once it's turned on. Per [Microsoft's documentation](https://support.microsoft.com/en-us/windows/manage-drive-space-with-storage-sense-654f6ada-7bfc-45e5-966b-e24aded96ad5), it's actually off by default, but plenty of machines have it switched on (OEM presets, or a past disk cleanup) — so that file you deleted a month ago may have been quietly wiped. Check or disable it under Settings → System → Storage → Storage Sense.
 
 ## Four things you must NOT do before trying to recover
 
@@ -128,7 +128,7 @@ Time Machine requires both prior setup and an attached storage device, so if you
 
 ### 3. OneDrive bin and version history
 
-If the file was in a OneDrive or SharePoint sync folder, check OneDrive's web bin. OneDrive Personal retains deleted files for 30 days; SharePoint for 93 days.
+If the file was in a OneDrive or SharePoint sync folder, check OneDrive's web bin. OneDrive Personal retains deleted files for 30 days; SharePoint for 93 days ([Microsoft documentation](https://learn.microsoft.com/en-us/sharepoint/retention-and-deletion)).
 
 OneDrive Web → Recycle bin in the left menu → select the file → Restore. The file returns to its original folder.
 
