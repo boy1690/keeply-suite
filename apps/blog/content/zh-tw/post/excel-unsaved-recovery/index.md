@@ -87,7 +87,7 @@ draft: false
 你不是每次都需要多一層。下面這幾種情況，跳過它就好：
 
 - 那是一份算完即丟、要你重做你也甘願的小計算。
-- **你的檔案放在 OneDrive 或 SharePoint，而且開了自動儲存。** 那其實罩得很廣。雲端版本歷史在你編輯時就接住了大部分的覆蓋。只是要知道它做不到什麼：它綁的是同步的那一份、保留的歷史有上限、而且自動儲存是邊做邊蓋而不是先問你。如果你看過這些限制、覺得它們咬不到你，那你就不需要多一層。
+- **你的檔案放在 OneDrive 或 SharePoint，而且開了自動儲存。** 那其實罩得很廣。雲端版本歷史在你編輯時就接住了大部分的覆蓋。只是要知道它做不到什麼：它綁的是同步的那一份、[保留的歷史有上限](https://learn.microsoft.com/zh-tw/sharepoint/document-library-version-history-limits)、而且[自動儲存是邊做邊蓋](https://support.microsoft.com/zh-tw/office/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5)而不是先問你。如果你看過這些限制、覺得它們咬不到你，那你就不需要多一層。
 - 弄丟一個早上的進度只是個你吞得下的麻煩，而不是會錯過的截止日。
 
 如果你是這種情況，學會「復原未儲存的活頁簿」這條路、早點存讓檔案先存在，然後繼續過你的一天就好。多那一層，只有在那份試算表裡的工作是你沒辦法輕鬆重建的那種，才值得它的位置。
@@ -112,7 +112,7 @@ draft: false
 
 **把自動儲存打開能解決這件事嗎？**
 
-自動儲存（OneDrive／SharePoint）對放在雲端的檔案有幫助，但它是邊做邊蓋，而且它的版本歷史有自己的限制。它罩不到你放在本機的檔案，也跟一條可以瀏覽、會保留的檔案版本時間軸不是同一回事。
+[自動儲存](https://support.microsoft.com/zh-tw/office/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5)（OneDrive／SharePoint）對放在雲端的檔案有幫助，但它是邊做邊蓋，而且它的[版本歷史有自己的限制](https://learn.microsoft.com/zh-tw/sharepoint/document-library-version-history-limits)。它罩不到你放在本機的檔案，也跟一條可以瀏覽、會保留的檔案版本時間軸不是同一回事。
 
 ## 延伸閱讀 {#related}
 - [檔案版本管理完整指南](/zh-tw/post/file-version-management-complete-guide/)（支柱文）

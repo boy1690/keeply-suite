@@ -87,7 +87,7 @@ A version timeline solves "I had it and lost my changes." It doesn't conjure a f
 You don't always need another layer. Skip it when:
 
 - It's a throwaway calc you'd happily redo.
-- **Your files live in OneDrive or SharePoint with AutoSave on.** That covers a lot. Cloud version history catches most overwrites as you edit. Just know what it doesn't do: it's tied to the synced copy, the stored history is capped, and AutoSave overwrites as you go rather than asking first. If you've read those limits and they don't bite you, you don't need another layer.
+- **Your files live in OneDrive or SharePoint with AutoSave on.** That covers a lot. Cloud version history catches most overwrites as you edit. Just know what it doesn't do: it's tied to the synced copy, the [stored history is capped](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits), and [AutoSave overwrites as you go](https://support.microsoft.com/en-us/office/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) rather than asking first. If you've read those limits and they don't bite you, you don't need another layer.
 - Losing a morning's work is an annoyance you can absorb, not a deadline you'd miss.
 
 If that's you, learn the Recover Unsaved Workbooks path, save early so a file exists, and get on with your day. The extra layer earns its place only when the work in that spreadsheet is the kind you can't cheerfully rebuild.
@@ -112,7 +112,7 @@ Because Recover Unsaved Workbooks reads a temporary cache, not a permanent copy.
 
 **Does turning on AutoSave fix this?**
 
-AutoSave (OneDrive/SharePoint) helps for cloud-stored files, but it overwrites as you go and its version history has its own limits. It doesn't cover files you keep locally, and it isn't the same as a browsable, retained version timeline of the file.
+[AutoSave](https://support.microsoft.com/en-us/office/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) (OneDrive/SharePoint) helps for cloud-stored files, but it overwrites as you go and its [version history has its own limits](https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits). It doesn't cover files you keep locally, and it isn't the same as a browsable, retained version timeline of the file.
 
 ## Related reading {#related}
 - [The complete guide to file version management](/en/post/file-version-management-complete-guide/) (pillar)

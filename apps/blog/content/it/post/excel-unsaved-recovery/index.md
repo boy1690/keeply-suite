@@ -87,7 +87,7 @@ Una cronologia di versioni risolve "ce l'avevo e ho perso le modifiche". Non fa 
 Non serve sempre un altro strato. Salta tutto questo quando:
 
 - È un calcolo usa-e-getta che rifaresti volentieri.
-- **I tuoi file vivono in OneDrive o SharePoint con il Salvataggio automatico attivo.** Copre parecchio: la cronologia versioni nel cloud intercetta la maggior parte delle sovrascritture mentre lavori. Sappi solo cosa non fa: è legata alla copia sincronizzata, la cronologia conservata ha un limite, e il Salvataggio automatico sovrascrive man mano invece di chiederti prima. Se hai letto questi limiti e non ti toccano, un altro strato non ti serve.
+- **I tuoi file vivono in OneDrive o SharePoint con il Salvataggio automatico attivo.** Copre parecchio: la cronologia versioni nel cloud intercetta la maggior parte delle sovrascritture mentre lavori. Sappi solo cosa non fa: è legata alla copia sincronizzata, la [cronologia conservata ha un limite](https://learn.microsoft.com/it-it/sharepoint/document-library-version-history-limits), e il [Salvataggio automatico sovrascrive man mano](https://support.microsoft.com/it-it/office/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) invece di chiederti prima. Se hai letto questi limiti e non ti toccano, un altro strato non ti serve.
 - Perdere il lavoro di una mattina è una seccatura che puoi assorbire, non una scadenza che salteresti.
 
 Se è il tuo caso, impara la strada di Recupera cartelle di lavoro non salvate, salva presto così che un file esista, e vai avanti con la giornata. Lo strato in più si guadagna il suo posto solo quando il lavoro in quel foglio è di quelli che non puoi ricostruire a cuor leggero.
@@ -112,7 +112,7 @@ Perché Recupera cartelle di lavoro non salvate legge una cache temporanea, non 
 
 **Attivare il Salvataggio automatico risolve il problema?**
 
-Il Salvataggio automatico (OneDrive/SharePoint) aiuta per i file nel cloud, ma sovrascrive man mano e la sua cronologia versioni ha limiti propri. Non copre i file che tieni in locale, e non è la stessa cosa di una cronologia di versioni del file consultabile e conservata nel tempo.
+Il [Salvataggio automatico](https://support.microsoft.com/it-it/office/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) (OneDrive/SharePoint) aiuta per i file nel cloud, ma sovrascrive man mano e la sua [cronologia versioni ha limiti propri](https://learn.microsoft.com/it-it/sharepoint/document-library-version-history-limits). Non copre i file che tieni in locale, e non è la stessa cosa di una cronologia di versioni del file consultabile e conservata nel tempo.
 
 ## Letture correlate {#related}
 - [La guida completa alla gestione delle versioni dei file](/it/post/file-version-management-complete-guide/) (pilastro)

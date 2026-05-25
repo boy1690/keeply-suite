@@ -87,7 +87,7 @@ draft: false
 언제나 한 층을 더 둘 필요는 없습니다. 다음이라면 건너뛰세요.
 
 - 다시 만들어도 그만인 한 번 쓰고 버릴 계산.
-- **파일이 OneDrive 나 SharePoint 에 있고 AutoSave 가 켜져 있을 때.** 이건 꽤 많은 걸 막아 줍니다. 클라우드 버전 기록이 작업 중 일어나는 대부분의 덮어쓰기를 잡아 줍니다. 다만 못 하는 것도 알아 두세요. 동기화된 사본에 묶여 있고, 보관되는 기록에는 상한이 있으며, AutoSave 는 묻지 않고 작업하는 대로 덮어씁니다. 이 한계를 읽고도 당신에겐 걸리는 게 없다면, 다른 층은 필요 없습니다.
+- **파일이 OneDrive 나 SharePoint 에 있고 AutoSave 가 켜져 있을 때.** 이건 꽤 많은 걸 막아 줍니다. 클라우드 버전 기록이 작업 중 일어나는 대부분의 덮어쓰기를 잡아 줍니다. 다만 못 하는 것도 알아 두세요. 동기화된 사본에 묶여 있고, [보관되는 기록에는 상한이 있으며](https://learn.microsoft.com/ko-kr/sharepoint/document-library-version-history-limits), [AutoSave 는 묻지 않고 작업하는 대로 덮어씁니다](https://support.microsoft.com/ko-kr/office/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5). 이 한계를 읽고도 당신에겐 걸리는 게 없다면, 다른 층은 필요 없습니다.
 - 오전 작업 한 번 잃는 게 마감을 놓칠 일이 아니라 그냥 짜증나는 일 정도일 때.
 
 여기 해당한다면, 저장되지 않은 통합 문서 복구 경로만 익혀 두고, 일찍 저장해 파일이 존재하게 만든 다음, 하던 일을 하세요. 추가 층은 그 스프레드시트 속 작업이 흔쾌히 다시 만들 수 없는 종류일 때에만 제값을 합니다.
@@ -112,7 +112,7 @@ Microsoft 는 고정된 보관 기간을 공식적으로 밝히지 않습니다.
 
 **AutoSave 를 켜면 이 문제가 해결되나요?**
 
-AutoSave(OneDrive/SharePoint)는 클라우드에 둔 파일엔 도움이 되지만, 작업하는 대로 덮어쓰고 버전 기록에도 나름의 한계가 있습니다. 로컬에 두는 파일은 포함하지 못하고, 둘러볼 수 있게 보관되는 파일의 버전 타임라인과는 다릅니다.
+[AutoSave](https://support.microsoft.com/ko-kr/office/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5)(OneDrive/SharePoint)는 클라우드에 둔 파일엔 도움이 되지만, 작업하는 대로 덮어쓰고 [버전 기록에도 나름의 한계가 있습니다](https://learn.microsoft.com/ko-kr/sharepoint/document-library-version-history-limits). 로컬에 두는 파일은 포함하지 못하고, 둘러볼 수 있게 보관되는 파일의 버전 타임라인과는 다릅니다.
 
 ## 더 읽기 {#related}
 - [파일 버전 관리 완전 가이드](/ko/post/file-version-management-complete-guide/) (pillar)

@@ -87,7 +87,7 @@ draft: false
 你不是每次都需要再加一层。这些时候跳过它就行：
 
 - 一个用完就扔、重做也无所谓的临时计算表。
-- **你的文件放在 OneDrive 或 SharePoint 里、并且开了自动保存。** 这能覆盖很多情况。云端版本历史在你编辑时就能接住大部分覆盖。但要知道它接不住什么：它只绑同步的那份，存的历史有上限，而且自动保存是一边干活一边盖，不会先问你。如果你读过这些限制、它们咬不到你，那你不用再加一层。
+- **你的文件放在 OneDrive 或 SharePoint 里、并且开了自动保存。** 这能覆盖很多情况。云端版本历史在你编辑时就能接住大部分覆盖。但要知道它接不住什么：它只绑同步的那份，[存的历史有上限](https://learn.microsoft.com/zh-cn/sharepoint/document-library-version-history-limits)，而且[自动保存是一边干活一边盖](https://support.microsoft.com/zh-cn/office/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5)，不会先问你。如果你读过这些限制、它们咬不到你，那你不用再加一层。
 - 丢一上午的活只是个能扛过去的麻烦，而不是会误掉的截止日期。
 
 要是说的就是你，那就学会「恢复未保存的工作簿」这条路，早点保存让文件先存在，然后接着过你的一天。只有当那张表格里的活是你没法乐呵呵重做的那种，多加这一层才值。
@@ -112,7 +112,7 @@ draft: false
 
 **打开自动保存能解决这个问题吗？**
 
-自动保存（OneDrive/SharePoint）对存在云端的文件有帮助，但它是一边干活一边盖，而且它的版本历史也有自己的限制。它覆盖不到你存在本地的文件，也不等于一条能翻、会留着的文件版本时间轴。
+[自动保存](https://support.microsoft.com/zh-cn/office/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5)（OneDrive/SharePoint）对存在云端的文件有帮助，但它是一边干活一边盖，而且它的[版本历史也有自己的限制](https://learn.microsoft.com/zh-cn/sharepoint/document-library-version-history-limits)。它覆盖不到你存在本地的文件，也不等于一条能翻、会留着的文件版本时间轴。
 
 ## 相关阅读 {#related}
 - [文件版本管理完整指南](/zh-cn/post/file-version-management-complete-guide/)（支柱文）
