@@ -101,7 +101,7 @@ Three design patterns the tool can use. Each one solves one of the four pain typ
 
 ### Design A: Automatic checkpoints (the versions you save are kept)
 
-You press Cmd+S, the tool quietly preserves the previous version. You don't have to name anything. **Examples**: macOS Time Machine (Apple's built-in tool that snapshots every hour), Word AutoSave ([only goes back 1-2 versions](/en/post/excel-version-history-limits/)), Dropbox 30-day version history. **Keeply** runs this in the background on your working folder: text files only store what changed, design and image files each keep a full snapshot — so large files don't blow out your disk. **Solves Type 1.**
+You press Cmd+S, the tool quietly preserves the previous version. You don't have to name anything. **Examples**: macOS Time Machine ([Apple's built-in tool that snapshots every hour](https://support.apple.com/en-us/104984)), Word AutoSave ([only goes back 1-2 versions](/en/post/excel-version-history-limits/)), [Dropbox 30-day version history](https://help.dropbox.com/delete-restore/version-history-overview). **Keeply** runs this in the background on your working folder: text files only store what changed, design and image files each keep a full snapshot — so large files don't blow out your disk. **Solves Type 1.**
 
 How do you find one of those quiet checkpoints later? Hover over any row in the timeline and Keeply pops up a card showing exactly which files changed in that save — no need to open anything to compare:
 

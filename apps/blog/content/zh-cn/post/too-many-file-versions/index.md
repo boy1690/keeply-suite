@@ -105,7 +105,7 @@ faq_schema:
 
 ### Design A：自动存档点（不依赖用户纪律）
 
-工具背景轮询文件变更、无论你存几次都留下历史、你不必命名。**例子**：macOS Time Machine（Apple 内建、每小时自动存一版）、Word AutoSave（只回最近 1-2 版）、Dropbox 30 天版本史。**Keeply** 在背景每 30 分钟轮询你的工作文件夹：文字档只记变动内容、影像跟设计档每版完整保留、这样大文件不会把硬盘撑爆。**解第 1 类痛点**。
+工具背景轮询文件变更、无论你存几次都留下历史、你不必命名。**例子**：macOS Time Machine（Apple 内建、[每小时自动存一版](https://support.apple.com/zh-cn/104984)）、Word AutoSave（只回最近 1-2 版）、[Dropbox 30 天版本史](https://help.dropbox.com/delete-restore/version-history-overview)。**Keeply** 在背景每 30 分钟轮询你的工作文件夹：文字档只记变动内容、影像跟设计档每版完整保留、这样大文件不会把硬盘撑爆。**解第 1 类痛点**。
 
 那些版本后来怎么找回？鼠标悬停 任一笔、Keeply 浮卡列当时改了哪些文件、不用打开就能比对：
 
