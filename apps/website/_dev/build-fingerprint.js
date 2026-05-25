@@ -54,8 +54,7 @@ const STANDALONE_SCRIPTS = [
   'clarity-loader.js',
   'team-notify.js',
   'paddle-checkout.js',
-  'activate-license.js',
-  'file-recovery-diagnostic.js'  // spec 052
+  'activate-license.js'
 ];
 
 const LOADER_FILE = 'i18n-loader.js';
