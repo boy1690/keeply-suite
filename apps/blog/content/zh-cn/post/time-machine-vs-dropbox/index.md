@@ -67,13 +67,13 @@ faq_schema:
 
 | 轴 | Time Machine | Dropbox |
 |---|---|---|
-| 本机磁盘备份 | ✅ 整盘 hourly 快照 | ❌ |
+| 本机磁盘备份 | ✅ 整盘 [hourly 快照](https://support.apple.com/zh-cn/104984) | ❌ |
 | 跨设备云端同步 | ❌ | ✅ |
-| **文件层级故意保存版本历史** | ⚠️ 只到磁盘层，不到文件层 | ⚠️ 30 天 上限（付费 180） |
+| **文件层级故意保存版本历史** | ⚠️ 只到磁盘层，不到文件层 | ⚠️ [30 天 上限（付费 180）](https://help.dropbox.com/delete-restore/version-history-overview) |
 
 Time Machine 有 快照，但是磁盘层。它不知道你下午 2:47 对某个文件做了重要修改。它只知道下次整点 快照 时的磁盘状态，那可能是 2:00（你保存之前）或 3:00（你保存之后，但夹杂其他改动）。
 
-Dropbox 有文件层版本，但免费 30 天 上限、付费 180 或 365 天。过了 上限，那份文件级历史就没了。
+Dropbox 有文件层版本，但[免费 30 天 上限、付费 180 或 365 天](https://help.dropbox.com/delete-restore/version-history-overview)。过了 上限，那份文件级历史就没了。
 
 所以当你要「2 个月前礼拜二下午故意保存的那版」时，Time Machine 有 bytes（在某个 快照 里）但没有索引。Dropbox 本来有索引，第 31 天扔了。
 

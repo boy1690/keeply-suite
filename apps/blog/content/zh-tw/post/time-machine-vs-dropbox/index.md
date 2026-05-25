@@ -67,13 +67,13 @@ faq_schema:
 
 | 軸 | Time Machine | Dropbox |
 |---|---|---|
-| 本機磁碟備份 | ✅ 整碟 hourly 快照 | ❌ |
+| 本機磁碟備份 | ✅ 整碟 [hourly 快照](https://support.apple.com/zh-tw/104984) | ❌ |
 | 跨裝置雲端同步 | ❌ | ✅ |
-| **檔案層級故意存檔版本歷史** | ⚠️ 只到磁碟層，不到檔案層 | ⚠️ 30 天 上限（付費 180） |
+| **檔案層級故意存檔版本歷史** | ⚠️ 只到磁碟層，不到檔案層 | ⚠️ [30 天 上限（付費 180）](https://help.dropbox.com/delete-restore/version-history-overview) |
 
 Time Machine 有 快照，但是磁碟層。它不知道你下午 2:47 對某個檔案做了重要修改。它只知道下次整點 快照 時的磁碟狀態，那可能是 2:00（你存之前）或 3:00（你存之後，但夾雜其他改動）。
 
-Dropbox 有檔案層版本，但免費 30 天 上限、付費 180 或 365 天。過了 上限，那份檔案級歷史就沒了。
+Dropbox 有檔案層版本，但[免費 30 天 上限、付費 180 或 365 天](https://help.dropbox.com/delete-restore/version-history-overview)。過了 上限，那份檔案級歷史就沒了。
 
 所以當你要「2 個月前禮拜二下午故意存的那版」時，Time Machine 有 bytes（在某個 快照 裡）但沒有索引。Dropbox 本來有索引，第 31 天扔了。
 

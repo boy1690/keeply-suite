@@ -67,13 +67,13 @@ Here's the same table with the third axis added:
 
 | Axis | Time Machine | Dropbox |
 |---|---|---|
-| Local disk backup | ✅ Whole-disk hourly snapshot | ❌ |
+| Local disk backup | ✅ Whole-disk [hourly snapshot](https://support.apple.com/en-us/104984) | ❌ |
 | Cloud sync across devices | ❌ | ✅ |
-| **File-level intentional version history** | ⚠️ Disk-level only, not file-level | ⚠️ 30-day cap (180 paid) |
+| **File-level intentional version history** | ⚠️ Disk-level only, not file-level | ⚠️ [30-day cap (180 paid)](https://help.dropbox.com/delete-restore/version-history-overview) |
 
 Time Machine has snapshots, but they're disk-level. It doesn't know you pressed Cmd+S on a specific file at 2:47 PM with intent. It knows the disk state at the next hourly snapshot, which might be 2:00 PM (before your save) or 3:00 PM (after — but containing whatever else changed between).
 
-Dropbox has file-level versions, but capped at 30 days for free, 180 or 365 for paid plans. Past the cap, that file-level history is gone.
+Dropbox has file-level versions, but [capped at 30 days for free, 180 or 365 for paid plans](https://help.dropbox.com/delete-restore/version-history-overview). Past the cap, that file-level history is gone.
 
 So when you need "the deliberate save from Tuesday afternoon two months ago," Time Machine has the bytes (somewhere in the snapshot) but not the index. Dropbox had the index, but threw it away at day 31.
 

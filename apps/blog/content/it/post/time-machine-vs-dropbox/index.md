@@ -67,13 +67,13 @@ Ecco la stessa tabella con il terzo asse aggiunto:
 
 | Asse | Time Machine | Dropbox |
 |---|---|---|
-| Backup disco locale | ✅ Snapshot orario di tutto il disco | ❌ |
+| Backup disco locale | ✅ [Snapshot orario di tutto il disco](https://support.apple.com/it-it/104984) | ❌ |
 | Sincronizzazione cloud tra dispositivi | ❌ | ✅ |
-| **Cronologia versioni intenzionale a livello di file** | ⚠️ Solo livello disco, non livello file | ⚠️ Cap 30 giorni (180 a pagamento) |
+| **Cronologia versioni intenzionale a livello di file** | ⚠️ Solo livello disco, non livello file | ⚠️ [Cap 30 giorni (180 a pagamento)](https://help.dropbox.com/delete-restore/version-history-overview) |
 
 Time Machine ha snapshot, ma sono a livello disco. Non sa che hai premuto Cmd+S su un file specifico alle 14:47 con intenzione. Conosce lo stato del disco al prossimo snapshot orario, che potrebbe essere le 14:00 (prima del tuo salvataggio) o le 15:00 (dopo — ma contenente qualunque altra cosa sia cambiata nel frattempo).
 
-Dropbox ha versioni a livello file, ma capped a 30 giorni per il gratuito, 180 o 365 per i piani a pagamento. Passato il limite, quella cronologia a livello file è sparita.
+Dropbox ha versioni a livello file, ma [capped a 30 giorni per il gratuito, 180 o 365 per i piani a pagamento](https://help.dropbox.com/delete-restore/version-history-overview). Passato il limite, quella cronologia a livello file è sparita.
 
 Quindi quando ti serve «il salvataggio deliberato di martedì pomeriggio di due mesi fa», Time Machine ha i byte (da qualche parte nello snapshot) ma non l'indice. Dropbox aveva l'indice, ma l'ha buttato al giorno 31.
 
