@@ -171,7 +171,7 @@ function replaceMetaDescription(html, translations, locale, pagePrefix) {
 }
 
 function replaceCanonical(html, locale, page) {
-  const pagePath = page === 'index.html' ? '' : page;
+  const pagePath = page === 'index.html' ? '' : page.replace(/\.html$/, '');
   const url = `${BASE_URL}/${locale}/${pagePath}`;
   return html.replace(
     /(<link\s+rel="canonical"\s+href=")[^"]*(")/,
@@ -180,7 +180,7 @@ function replaceCanonical(html, locale, page) {
 }
 
 function replaceHreflangTags(html, locale, page) {
-  const pagePath = page === 'index.html' ? '' : page;
+  const pagePath = page === 'index.html' ? '' : page.replace(/\.html$/, '');
 
   // Remove all existing hreflang link tags
   html = html.replace(/\s*<link\s+rel="alternate"\s+hreflang="[^"]*"\s+href="[^"]*"\s*\/?\s*>\s*/g, '\n');
@@ -203,7 +203,7 @@ function replaceHreflangTags(html, locale, page) {
 }
 
 function replaceOgTags(html, translations, locale, page, pagePrefix) {
-  const pagePath = page === 'index.html' ? '' : page;
+  const pagePath = page === 'index.html' ? '' : page.replace(/\.html$/, '');
   const url = `${BASE_URL}/${locale}/${pagePath}`;
   const ogLocale = OG_LOCALE_MAP[locale] || locale;
 
@@ -382,7 +382,7 @@ function generateCompareSitemapEntries(today) {
 
   // Entries: hub (path '') + one per slug.
   const entries = [{ path: '', priority: '0.9' }]
-    .concat(slugs.map(slug => ({ path: `${slug}.html`, priority: '0.85' })));
+    .concat(slugs.map(slug => ({ path: slug, priority: '0.85' })));
 
   // URL builder mirrors canonical URLs produced by build-comparisons.js.
   const urlFor = (locale, entryPath) => locale === 'en'
@@ -421,7 +421,7 @@ function generateSitemap() {
 
   for (const page of sitemapPages) {
     for (const locale of LOCALES) {
-      const pagePath = page === 'index.html' ? '' : page;
+      const pagePath = page === 'index.html' ? '' : page.replace(/\.html$/, '');
       const url = `${BASE_URL}/${locale}/${pagePath}`;
       const priority = page === 'index.html' ? '1.0' : (page === 'buy.html' ? '0.8' : '0.5');
       const changefreq = page === 'index.html' ? 'weekly' : 'monthly';
@@ -434,7 +434,7 @@ function generateSitemap() {
 
       // Hreflang cross-references for all locales
       for (const altLocale of LOCALES) {
-        const altPath = page === 'index.html' ? '' : page;
+        const altPath = page === 'index.html' ? '' : page.replace(/\.html$/, '');
         const altUrl = `${BASE_URL}/${altLocale}/${altPath}`;
         xml += `    <xhtml:link rel="alternate" hreflang="${altLocale}" href="${altUrl}" />\n`;
       }
@@ -466,11 +466,11 @@ function generateSitemap() {
 // 其他 13 locale 透過 components.js INSTALL_LOCALES fallback 到 /en/install.html。
 function generateInstallSitemapEntries(today) {
   const installLocales = ['en', 'zh-TW', 'zh-CN', 'ja', 'ko', 'it'];
-  const rootUrl = `${BASE_URL}/install.html`;
+  const rootUrl = `${BASE_URL}/install`;
 
   // Cross-ref block shared by root + each locale entry.
   const altLinks = installLocales.map(loc =>
-    `    <xhtml:link rel="alternate" hreflang="${loc}" href="${BASE_URL}/${loc}/install.html" />`
+    `    <xhtml:link rel="alternate" hreflang="${loc}" href="${BASE_URL}/${loc}/install" />`
   ).join('\n') +
     `\n    <xhtml:link rel="alternate" hreflang="x-default" href="${rootUrl}" />\n`;
 
@@ -487,7 +487,7 @@ function generateInstallSitemapEntries(today) {
   // Per-locale install pages.
   for (const loc of installLocales) {
     xml += '  <url>\n';
-    xml += `    <loc>${BASE_URL}/${loc}/install.html</loc>\n`;
+    xml += `    <loc>${BASE_URL}/${loc}/install</loc>\n`;
     xml += `    <lastmod>${today}</lastmod>\n`;
     xml += '    <changefreq>monthly</changefreq>\n';
     xml += '    <priority>0.7</priority>\n';

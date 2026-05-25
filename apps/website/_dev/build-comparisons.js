@@ -132,8 +132,8 @@ function renderSubPage(data, locale, templateText) {
   });
 
   const canonicalUrl = locale.code === 'en'
-    ? `${BASE_URL}/compare/${slug}.html`
-    : `${BASE_URL}/zh-TW/compare/${slug}.html`;
+    ? `${BASE_URL}/compare/${slug}`
+    : `${BASE_URL}/zh-TW/compare/${slug}`;
 
   const pricingLabels = locale.code === 'en'
     ? {
@@ -171,8 +171,8 @@ function renderSubPage(data, locale, templateText) {
     META_TITLE: L.meta.title,
     META_DESCRIPTION: L.meta.description,
     CANONICAL_URL: canonicalUrl,
-    HREF_EN: `${BASE_URL}/compare/${slug}.html`,
-    HREF_ZH_TW: `${BASE_URL}/zh-TW/compare/${slug}.html`,
+    HREF_EN: `${BASE_URL}/compare/${slug}`,
+    HREF_ZH_TW: `${BASE_URL}/zh-TW/compare/${slug}`,
     OG_LOCALE: locale.ogLocale,
     ASSET_PREFIX: assetPrefix,
     PUBLISHED: data.published,
