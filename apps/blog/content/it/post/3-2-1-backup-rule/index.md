@@ -75,7 +75,9 @@ Questo setup risolve i guasti hardware e i disastri fisici. Ma se lunedì mattin
 
 ## Da cosa protegge la 3-2-1, e da cosa no?
 
-La 3-2-1 protegge da tutto ciò che fa *sparire* un file — guasto del disco, incendio in ufficio, cifratura ransomware. Non protegge dal file che c'è ancora ma è sbagliato — tu che sovrascrivi la tua versione, un collega che modifica la cartella condivisa sbagliata, tu che hai bisogno della proposta di tre mesi fa. Gli scenari messi in fila:
+La 3-2-1 protegge da tutto ciò che fa *sparire* un file — guasto del disco, incendio in ufficio, cifratura ransomware (secondo l'[indagine Sophos 2024](https://www.sophos.com/en-us/blog/the-state-of-ransomware-2024) su 5.000 responsabili IT in 14 paesi, nell'ultimo anno il 59% delle organizzazioni ha subito un attacco ransomware). Non protegge dal file che c'è ancora ma è sbagliato — tu che sovrascrivi la tua versione, un collega che modifica la cartella condivisa sbagliata, tu che hai bisogno della proposta di tre mesi fa. Gli scenari messi in fila:
+
+E quella seconda categoria non è un caso limite. Nell'[indagine 2024 sulla perdita di dati di Handy Recovery](https://www.handyrecovery.com/data-loss-statistics/), circa tre proprietari di computer su quattro hanno dichiarato di aver cancellato dati importanti per sbaglio, e la cancellazione accidentale è risultata la singola causa più comune di perdita di dati — davanti al guasto hardware. La 3-2-1 tace su ognuno di quei momenti.
 
 Per vedere dove la 3-2-1 regge, guarda come si presenta davvero "perdere un file":
 
@@ -96,7 +98,7 @@ Ecco un punto cieco vecchio di 20 anni che nessuno nomina chiaramente: **il "3" 
 
 Nel 2005 le durate dei dischi erano brevi e i supporti fragili. Più copie combattevano il decadimento fisico. "3" era una risposta sensata.
 
-Nel 2026 i dischi sono affidabili e la sincronizzazione cloud è istantanea. Cosa diventa il "3"? Diventa lo stesso errore replicato in tre posti, in tempo reale.
+Nel 2026 i dischi sono affidabili e la sincronizzazione cloud è istantanea. Quanto affidabili? Il [rapporto Drive Stats 2024 di Backblaze](https://www.backblaze.com/blog/backblaze-drive-stats-for-2024/), basato su oltre 300.000 dischi, registra un tasso di guasto annualizzato dell'1,57%, in calo dall'1,70% dell'anno precedente. Cosa diventa il "3"? Diventa lo stesso errore replicato in tre posti, in tempo reale.
 
 Questo è lo scenario più comune.
 

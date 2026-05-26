@@ -75,7 +75,9 @@ Hardware is much more reliable in 2026. But 3-2-1 still saves the same thing —
 
 ## What does 3-2-1 protect against — and what doesn't it? {#what-does-3-2-1-protect-against-and-what-doesnt-it}
 
-3-2-1 protects against everything that makes a file *disappear* — hard drive failure, office fire, ransomware encryption. It doesn't protect against the file still being there but wrong — you overwriting your own version, a teammate editing the wrong shared folder, you needing the proposal from three months ago.
+3-2-1 protects against everything that makes a file *disappear* — hard drive failure, office fire, ransomware encryption (which [hit 59% of organizations in the past year, per Sophos's 2024 survey of 5,000 IT leaders across 14 countries](https://www.sophos.com/en-us/blog/the-state-of-ransomware-2024)). It doesn't protect against the file still being there but wrong — you overwriting your own version, a teammate editing the wrong shared folder, you needing the proposal from three months ago.
+
+And that second category isn't an edge case. In [Handy Recovery's 2024 data-loss survey](https://www.handyrecovery.com/data-loss-statistics/), roughly three in four computer owners said they'd deleted important data by accident, and accidental deletion ranked as the single most common cause of data loss — ahead of hardware failure. 3-2-1 is silent on every one of those moments.
 
 To see where 3-2-1 holds, look at what "losing a file" actually looks like:
 
@@ -102,7 +104,7 @@ Here's a 20-year-old blind spot no one names plainly: **the "3" in "3 copies" is
 
 In 2005, drive lifetimes were short and media was fragile. Multiple copies fought physical decay. "3" was a sensible answer.
 
-In 2026, drives are reliable and cloud sync is instant. What does the "3" become? **It becomes the same mistake replicated to 3 places, in real time.**
+In 2026, drives are reliable — [Backblaze's 2024 drive report put the annualized failure rate across its 300,000+ drives at 1.57%, down from 1.70% a year earlier](https://www.backblaze.com/blog/backblaze-drive-stats-for-2024/) — and cloud sync is instant. What does the "3" become? **It becomes the same mistake replicated to 3 places, in real time.**
 
 Sam's last week was exactly this: he opened `proposal.psd` on the NAS, made edits, saved. Dropbox auto-synced. Backblaze synced. His Time Machine ran on the external drive before he went home. All three locations turned into the wrong version within 5 minutes.
 
