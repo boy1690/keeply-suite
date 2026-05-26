@@ -45,7 +45,7 @@ faq_schema:
 
 你接着 Google「文件恢复」，第一页的广告叫你下载 Recoverit 或 Disk Drill。先慢一秒。我做 Keeply 之前也买过一轮 Recoverit 想救自己误删的家人照片，直接告诉你结论：绝大多数情境里，那 400 块的软件救不了你的文件。
 
-多数时候，OS 根本没留下任何恢复痕迹。
+多数时候，OS 根本没留下任何恢复痕迹。而且这并不是什么罕见的小意外——在 [Handy Recovery 2024 年的调查中，误删是数据丢失最常见的单一原因，甚至高于硬件故障](https://www.handyrecovery.com/data-loss-statistics/)。
 
 ---
 
@@ -53,7 +53,7 @@ faq_schema:
 
 那些恢复软件做的是「扇区扫描（Sector Scanning）」，试图找出磁盘上没被覆盖的字节来重组文件。这在十年前的传统 HDD 时代听起来很合理，但在现代电脑上，这条路几乎已被封死。
 
-现代电脑多数使用 SSD（固态硬盘），而 Windows 7 之后默认开启了 TRIM 机制。当你删除文件时，OS 会立刻发送 TRIM 指令，告诉 SSD 把那个区块标记为空白可重用。
+现代电脑多数使用 SSD（固态硬盘）——[到 2024 年，笔记本电脑的 SSD 搭载率已逼近 100%，意味着几乎每一台新笔电出厂都配备 SSD（TrendForce）](https://www.trendforce.com/presscenter/news/20251107-12774.html)——而 Windows 7 之后默认开启了 TRIM 机制。当你删除文件时，OS 会立刻发送 TRIM 指令，告诉 SSD 把那个区块标记为空白可重用。
 
 这代表恢复软件扫描过去，看到的只会是一片零。数据恢复公司 Hetman 曾直言：「如果恢复公司声称能从启用 TRIM 的 SSD 救出已删文件，他多半不是无能，就是在骗客户。」（[Hetman 官方说明](https://hetmanrecovery.com/recovery_news/data-recovery-is-impossible-ssd-cloud-and-online-services.htm)）我自己后来也跟几位数据恢复工程师聊过，得到的答案都一样。
 

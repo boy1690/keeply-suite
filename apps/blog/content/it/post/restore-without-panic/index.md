@@ -47,7 +47,7 @@ Hai premuto Delete. Apri il Cestino. È vuoto.
 
 Cerchi "recuperare file cancellati" su Google. La prima pagina ti dice di scaricare Recoverit o Disk Drill. Aspetta un attimo. Prima di costruire Keeply ho comprato anch'io una licenza di Recoverit, cercando di salvare foto di famiglia che avevo cancellato per sbaglio. Salto subito alla conclusione: nella maggior parte dei casi, quei 60 dollari di licenza non te li riportano indietro.
 
-La maggior parte delle volte, il sistema operativo non ha lasciato alcuna traccia da cui recuperare.
+La maggior parte delle volte, il sistema operativo non ha lasciato alcuna traccia da cui recuperare. E non è un incidente raro — secondo il [sondaggio 2024 di Handy Recovery, la cancellazione accidentale è stata la causa più comune di perdita di dati, davanti persino al guasto hardware](https://www.handyrecovery.com/data-loss-statistics/).
 
 ---
 
@@ -55,7 +55,7 @@ La maggior parte delle volte, il sistema operativo non ha lasciato alcuna tracci
 
 Quello che fa il software di recupero è una "scansione dei settori (Sector Scanning)" — spazza il disco alla ricerca di byte non sovrascritti per provare a riassemblare i file. Dieci anni fa nell'era HDD aveva senso. Sui computer moderni, quella strada è praticamente chiusa.
 
-La maggior parte dei computer moderni usa SSD (Solid-State Drive), e da Windows 7 in poi TRIM è abilitato per impostazione predefinita. Quando cancelli un file, il sistema operativo invia immediatamente il comando TRIM all'SSD per marcare quel blocco come riutilizzabile.
+La maggior parte dei computer moderni usa SSD (Solid-State Drive) — [entro il 2024 il tasso di adozione degli SSD nei notebook ha raggiunto circa il 100%, il che significa che praticamente ogni nuovo portatile ne monta uno (TrendForce)](https://www.trendforce.com/presscenter/news/20251107-12774.html) — e da Windows 7 in poi TRIM è abilitato per impostazione predefinita. Quando cancelli un file, il sistema operativo invia immediatamente il comando TRIM all'SSD per marcare quel blocco come riutilizzabile.
 
 Quindi quando il software di recupero fa la scansione, vede solo zeri. La società di recupero dati Hetman lo ha detto senza giri di parole: "Se una società di recupero afferma di poter tirare fuori file cancellati da un SSD con TRIM attivo, o è incompetente o sta mentendo al cliente." ([articolo ufficiale di Hetman](https://hetmanrecovery.com/recovery_news/data-recovery-is-impossible-ssd-cloud-and-online-services.htm)) Io stesso ne ho poi parlato con vari ingegneri del recupero dati, e la risposta è sempre stata la stessa.
 

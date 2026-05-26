@@ -44,7 +44,7 @@ faq_schema:
 
 你接著 Google「檔案救援」，第一頁的廣告叫你下載 Recoverit 或 Disk Drill。先慢一秒。我做 Keeply 之前也買過一輪 Recoverit 想救自己誤刪的家人照片，直接告訴你結論：絕大多數情境裡，那 1980 元的軟體救不了你的檔案。
 
-多數時候，OS 根本沒留下任何救援痕跡。
+多數時候，OS 根本沒留下任何救援痕跡。而這還不是什麼罕見的意外——[在 Handy Recovery 2024 年的調查中，誤刪是資料遺失最常見的單一原因，甚至超越硬體故障](https://www.handyrecovery.com/data-loss-statistics/)。
 
 ---
 
@@ -52,7 +52,7 @@ faq_schema:
 
 那些救援軟體做的是「磁區掃描（Sector Scanning）」，試圖找出磁碟上沒被覆蓋的位元組來重組檔案。這在十年前的傳統 HDD 時代聽起來很合理，但在現代電腦上，這條路幾乎已被封死。
 
-現代電腦多數使用 SSD（固態硬碟），而 Windows 7 之後預設開啟了 TRIM 機制。當你刪除檔案時，OS 會立刻發送 TRIM 指令，告訴 SSD 把那個區塊標記為空白可重用。
+現代電腦多數使用 SSD（固態硬碟）——[到 2024 年，筆電的 SSD 搭載率已達到約 100%，意味著幾乎每一台新筆電出廠就內建一顆（TrendForce）](https://www.trendforce.com/presscenter/news/20251107-12774.html)——而 Windows 7 之後預設開啟了 TRIM 機制。當你刪除檔案時，OS 會立刻發送 TRIM 指令，告訴 SSD 把那個區塊標記為空白可重用。
 
 這代表救援軟體掃描過去，看到的只會是一片零。資料救援公司 Hetman 曾直言：「如果救援公司聲稱能從啟用 TRIM 的 SSD 救出已刪檔案，他多半不是無能，就是在騙客戶。」（[Hetman 官方說明](https://hetmanrecovery.com/recovery_news/data-recovery-is-impossible-ssd-cloud-and-online-services.htm)）我自己後來也跟幾位資料救援工程師聊過，得到的答案都一樣。
 
