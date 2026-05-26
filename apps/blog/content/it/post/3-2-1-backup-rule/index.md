@@ -22,11 +22,15 @@ faq_schema:
   - q: Perché perdi comunque dei file anche con un backup 3-2-1?
     a: "Il «3» della 3-2-1 è ridondanza spaziale, non temporale. Nel 2005 i dischi morivano spesso, quindi più copie combattevano il deterioramento fisico. Nel 2026 la sincronizzazione cloud è istantanea — il «3» diventa lo stesso errore replicato in 3 posti in tempo reale. Non ti servono solo più copie, ti serve una cronologia versioni che ti permetta di tornare a un punto nel tempo."
   - q: Il backup cloud conta come copia «fuori sede» nella 3-2-1?
-    a: "Sì. Ma iCloud, OneDrive e Google Drive sono sincronizzazione, non backup. Se cancelli o sovrascrivi in locale, il cloud sincronizza la stessa modifica in pochi secondi — non proteggono dall'errore umano. Il requisito fuori sede risolve solo l'isolamento fisico; la cronologia versioni è un livello a parte."
-  - q: Anche chi lavora da solo ha bisogno del backup 3-2-1?
-    a: "Dipende da quanto contano i tuoi file. Il criterio è una sola domanda: perderli farebbe male? Non ha niente a che vedere con individuo o azienda. Se sì, ti serve la 3-2-1. Ma la 3-2-1 è necessaria, non sufficiente — gli scenari di errore umano richiedono in più la cronologia versioni."
-  - q: RAID sostituisce il backup?
-    a: "No. RAID è disponibilità, non backup. Se un ransomware cifra la cartella condivisa cifra anche il RAID in tempo reale. Se cancelli o sovrascrivi per errore, il RAID replica l'eliminazione su tutti i dischi istantaneamente. RAID protegge dal guasto del singolo disco — niente di più. La 3-2-1 rimane necessaria sopra il RAID, e la cronologia versioni rimane necessaria sopra la 3-2-1."
+    a: "Sì. Ma iCloud, OneDrive e Google Drive sono sincronizzazione, non backup. Se cancelli o sovrascrivi localmente, il cloud sincronizza la stessa modifica in pochi secondi — non proteggono dall'errore utente. Il requisito fuori sede risolve solo l'isolamento fisico; la cronologia versioni è un livello a parte."
+  - q: Il NAS conta come 2 tipi di supporto?
+    a: "NAS più un disco locale possono contare come 2 supporti. Ma RAID non è un backup. RAID protegge dal guasto del disco. Non protegge dal fatto che cancelli il file sbagliato."
+  - q: Qual è la differenza tra la regola 3-2-1 e la 4-2-1-1-0?
+    a: "4-2-1-1-0 estende la 3-2-1: aggiunge un backup immutabile e zero errori di verifica. È sempre ridondanza spaziale alla base. Non risolve il problema della cronologia versioni."
+  - q: Anche i lavoratori autonomi hanno bisogno della 3-2-1?
+    a: "Dipende da quanto contano i tuoi file. Se perderli farebbe male, sì. Il criterio è «perderlo farebbe male». Non ha nulla a che fare con il fatto che tu sia individuo o azienda. Ma la 3-2-1 è necessaria, non sufficiente — gli scenari di errore utente richiedono in più la cronologia versioni."
+  - q: Keeply è già 3-2-1?
+    a: "Sì. Keeply integra la 3-2-1 nel suo strato di posizione (copia di lavoro locale + canonica + posizione di backup) e aggiunge cronologia versioni e la funzione «Release» (marca una versione come pietra miliare, così i salvataggi successivi non possono sovrascriverla). Uno strumento, tre livelli."
 ---
 
 # 【2026 Gestione file】La regola 3-2-1 del backup: 20 anni dopo, basta ancora nel 2026?
@@ -124,29 +128,37 @@ Ma non hai bisogno di due strumenti separati: uno per la ridondanza spaziale e u
 
 ## Domande frequenti
 
-**Q1: Qual è la differenza tra la regola 3-2-1 e la 4-2-1-1-0?**
+**Q1: Cos'è la regola di backup 3-2-1?**
 
-4-2-1-1-0 estende la 3-2-1: aggiunge un backup immutabile e zero errori di verifica. È sempre ridondanza spaziale alla base. **Non risolve il problema della cronologia versioni.**
+La regola 3-2-1 viene dal design di backup del fotografo Peter Krogh del 2005: 3 copie dei tuoi dati, 2 supporti di archiviazione diversi, 1 conservata fuori sede. L'obiettivo era far sì che nessun singolo guasto hardware, deterioramento del supporto o disastro della struttura potesse cancellare i tuoi file. È ridondanza spaziale — la stessa versione sbagliata, replicata diligentemente in 3 posti.
 
-**Q2: Il backup cloud conta come copia "fuori sede" della 3-2-1?**
+**Q2: Da cosa protegge la regola 3-2-1, e da cosa no?**
 
-Sì. Ma iCloud, OneDrive e Google Drive sono sincronizzazione, non backup. Se cancelli o sovrascrivi localmente, il cloud sincronizza la stessa modifica in pochi secondi. **Non proteggono dall'errore utente.**
+La 3-2-1 protegge da guasto del disco, incendio in ufficio, cifratura da ransomware — qualunque cosa faccia sparire il file. Non protegge dall'errore umano: tu che sovrascrivi la tua versione, un collega che modifica la cartella condivisa sbagliata, la sincronizzazione cloud che replica il file rovinato su tutte e tre le copie. Per quel livello ti serve la cronologia versioni (come [Keeply](https://keeply.work)).
 
-**Q3: RAID sostituisce il backup?**
+**Q3: Perché perdi comunque dei file anche con un backup 3-2-1?**
 
-No — e questa è una delle confusioni più costose che vedo nelle PMI italiane. RAID (Redundant Array of Independent Disks) è **disponibilità**, non backup. Se due dischi dello stesso array si guastano in sequenza ravvicinata (cosa tutt'altro che rara sulle NAS entry-level dopo qualche anno), perdi tutto. Se un ransomware cifra la cartella condivisa, cifra anche il RAID in tempo reale. Se cancelli o sovrascrivi un file per errore, il RAID replica l'eliminazione istantaneamente su tutti i dischi dell'array. RAID ti protegge dal guasto del singolo disco durante l'orario di lavoro — niente di più. La 3-2-1 rimane necessaria sopra il RAID, e la cronologia versioni rimane necessaria sopra la 3-2-1.
+Il «3» della 3-2-1 è ridondanza spaziale, non temporale. Nel 2005 i dischi morivano spesso, quindi più copie combattevano il deterioramento fisico. Nel 2026 la sincronizzazione cloud è istantanea — il «3» diventa lo stesso errore replicato in 3 posti in tempo reale. Non ti servono solo più copie, ti serve una cronologia versioni che ti permetta di tornare a un punto nel tempo.
 
-**Q4: Il NAS conta come 2 tipi di supporto?**
+**Q4: Il backup cloud conta come copia «fuori sede» nella 3-2-1?**
+
+Sì. Ma iCloud, OneDrive e Google Drive sono sincronizzazione, non backup. Se cancelli o sovrascrivi localmente, il cloud sincronizza la stessa modifica in pochi secondi — non proteggono dall'errore utente. Il requisito fuori sede risolve solo l'isolamento fisico; la cronologia versioni è un livello a parte.
+
+**Q5: Il NAS conta come 2 tipi di supporto?**
 
 NAS più un disco locale possono contare come 2 supporti. Ma RAID non è un backup. RAID protegge dal guasto del disco. Non protegge dal fatto che cancelli il file sbagliato.
 
-**Q5: Keeply è già 3-2-1?**
+**Q6: Qual è la differenza tra la regola 3-2-1 e la 4-2-1-1-0?**
 
-Sì. Keeply integra la 3-2-1 nel suo strato di posizione (copia di lavoro locale + canonica + posizione di backup) e aggiunge cronologia versioni e la funzione "Release" (marca una versione come pietra miliare, così i salvataggi successivi non possono sovrascriverla). Uno strumento, tre livelli.
+4-2-1-1-0 estende la 3-2-1: aggiunge un backup immutabile e zero errori di verifica. È sempre ridondanza spaziale alla base. Non risolve il problema della cronologia versioni.
 
-**Q6: Anche i lavoratori autonomi hanno bisogno della 3-2-1?**
+**Q7: Anche i lavoratori autonomi hanno bisogno della 3-2-1?**
 
-Dipende da quanto contano i tuoi file. Se perderli farebbe male, sì. Il criterio è "perderlo farebbe male". Non ha nulla a che fare con il fatto che tu sia individuo o azienda.
+Dipende da quanto contano i tuoi file. Se perderli farebbe male, sì. Il criterio è «perderlo farebbe male». Non ha nulla a che fare con il fatto che tu sia individuo o azienda. Ma la 3-2-1 è necessaria, non sufficiente — gli scenari di errore utente richiedono in più la cronologia versioni.
+
+**Q8: Keeply è già 3-2-1?**
+
+Sì. Keeply integra la 3-2-1 nel suo strato di posizione (copia di lavoro locale + canonica + posizione di backup) e aggiunge cronologia versioni e la funzione «Release» (marca una versione come pietra miliare, così i salvataggi successivi non possono sovrascriverla). Uno strumento, tre livelli.
 
 ---
 

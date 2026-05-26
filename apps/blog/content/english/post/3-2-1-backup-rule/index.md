@@ -24,10 +24,14 @@ faq_schema:
     a: 3-2-1 protects against drive failure, office fire, ransomware encryption - anything that makes the file disappear. It doesn't protect against operator error - you overwriting your own version, a teammate editing the wrong shared folder, cloud sync replicating the broken file to all three copies. For that layer you need version history (like Keeply).
   - q: Why do you still lose files even with a 3-2-1 backup?
     a: The "3" in 3-2-1 is spatial redundancy, not temporal. In 2005 drives died often, so multiple copies fought physical decay. In 2026 cloud sync is instant - the "3" becomes the same mistake replicated to 3 places in real time. You don't just need more copies, you need a version history that lets you roll back to a point in time.
-  - q: Does cloud backup count as the "offsite" copy in 3-2-1?
-    a: Yes. But iCloud, OneDrive, and Google Drive are sync, not backup. If you delete or overwrite locally, the cloud syncs the same change in seconds - they don't protect against operator error. The offsite requirement only solves physical isolation, version history is a separate layer.
+  - q: Does cloud backup count as the "offsite" copy?
+    a: Yes. But iCloud, OneDrive, and Google Drive are sync, not backup - if you delete or overwrite locally, the cloud syncs the same change in seconds, so they don't protect against operator error. The offsite requirement only solves physical isolation; version history is a separate layer.
+  - q: Does NAS count as 2 media types?
+    a: NAS plus a local drive counts as 2 media. But RAID isn't a backup - RAID protects against drive failure, not against you deleting the wrong file.
+  - q: How is 3-2-1 different from the 4-2-1-1-0 rule?
+    a: 4-2-1-1-0 extends 3-2-1 - one immutable backup added, zero verification errors required. It's still spatial redundancy at heart, so it doesn't solve the version-history problem.
   - q: Do solo workers need 3-2-1 backups too?
-    a: Depends on how much your files matter. The criterion is one question - would losing this hurt? It has nothing to do with individual vs enterprise. If yes, you need 3-2-1. But 3-2-1 is necessary not sufficient - operator-error scenarios need version history on top.
+    a: Depends on how much your files matter. The criterion is one question - would losing this hurt? It has nothing to do with individual vs enterprise. If yes, you need 3-2-1 - but 3-2-1 is necessary, not sufficient; operator-error scenarios need version history on top.
   - q: Is Keeply already 3-2-1?
     a: Yes. Keeply builds 3-2-1 directly into its location layer (local work copy + canonical store + backup location), adds version history (the versions you save, plus optional auto-save every 15–30 min), and a Release freeze mechanism (mark a snapshot as "the version that went to the client" so it can't be overwritten by later saves). One tool covers spatial redundancy + temporal redundancy + release freeze.
 ---
@@ -152,25 +156,37 @@ A few cases genuinely don't need this:
 
 ## FAQ {#faq}
 
-**Q1: How is 3-2-1 different from the 4-2-1-1-0 rule?**
+**Q1: What is the 3-2-1 backup rule?**
 
-4-2-1-1-0 extends 3-2-1: one immutable backup added, zero verification errors required. Still spatial redundancy at heart. **Doesn't solve the version-history problem.**
+The 3-2-1 rule comes from photographer Peter Krogh's 2005 backup design — 3 copies of your data, 2 different storage media, 1 stored offsite. Its goal was to make sure no single hardware failure, media decay, or facility disaster could erase your files. It's spatial redundancy — the same wrong version, replicated dutifully to 3 places.
 
-**Q2: Does cloud backup count as the "offsite" copy?**
+**Q2: What does 3-2-1 protect against, and what doesn't it?**
 
-Yes. But iCloud, OneDrive, and Google Drive are sync, not backup — if you delete or overwrite locally, the cloud syncs the same change in seconds, **so they don't protect against operator-error**. See [Keeply vs backup and cloud tools](/en/post/what-keeply-saves-vs-backup-cloud/) for the full comparison.
+3-2-1 protects against drive failure, office fire, ransomware encryption — anything that makes the file disappear. It doesn't protect against operator error — you overwriting your own version, a teammate editing the wrong shared folder, cloud sync replicating the broken file to all three copies. For that layer you need version history (like Keeply).
 
-**Q3: Does NAS count as 2 media types?**
+**Q3: Why do you still lose files even with a 3-2-1 backup?**
 
-NAS plus a local drive counts as 2 media. But **RAID isn't a backup** — RAID protects against drive failure, not against you deleting the wrong file.
+The "3" in 3-2-1 is spatial redundancy, not temporal. In 2005 drives died often, so multiple copies fought physical decay. In 2026 cloud sync is instant — the "3" becomes the same mistake replicated to 3 places in real time. You don't just need more copies, you need a version history that lets you roll back to a point in time.
 
-**Q4: Is Keeply already 3-2-1?**
+**Q4: Does cloud backup count as the "offsite" copy?**
 
-Yes. Keeply builds 3-2-1 into its location layer (local work copy + canonical + backup location) and adds version history plus the Release freeze feature (mark a snapshot as a milestone that later saves can't overwrite). One tool, three layers.
+Yes. But iCloud, OneDrive, and Google Drive are sync, not backup — if you delete or overwrite locally, the cloud syncs the same change in seconds, so they don't protect against operator error. The offsite requirement only solves physical isolation; version history is a separate layer. See [Keeply vs backup and cloud tools](/en/post/what-keeply-saves-vs-backup-cloud/) for the full comparison.
 
-**Q5: Do solo workers need 3-2-1 too?**
+**Q5: Does NAS count as 2 media types?**
 
-Depends on file importance. The criterion is "would losing this hurt." It has nothing to do with whether you're an individual or an enterprise.
+NAS plus a local drive counts as 2 media. But RAID isn't a backup — RAID protects against drive failure, not against you deleting the wrong file.
+
+**Q6: How is 3-2-1 different from the 4-2-1-1-0 rule?**
+
+4-2-1-1-0 extends 3-2-1 — one immutable backup added, zero verification errors required. It's still spatial redundancy at heart, so it doesn't solve the version-history problem.
+
+**Q7: Do solo workers need 3-2-1 backups too?**
+
+Depends on how much your files matter. The criterion is one question — would losing this hurt? It has nothing to do with individual vs enterprise. If yes, you need 3-2-1 — but 3-2-1 is necessary, not sufficient; operator-error scenarios need version history on top.
+
+**Q8: Is Keeply already 3-2-1?**
+
+Yes. Keeply builds 3-2-1 directly into its location layer (local work copy + canonical store + backup location), adds version history (the versions you save, plus optional auto-save every 15–30 min), and a Release freeze mechanism (mark a snapshot as "the version that went to the client" so it can't be overwritten by later saves). One tool covers spatial redundancy + temporal redundancy + release freeze.
 
 ## See also
 
