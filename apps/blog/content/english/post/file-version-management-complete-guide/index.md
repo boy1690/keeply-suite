@@ -41,6 +41,8 @@ Different jobs. Different filenames. **Same symptom**.
 
 Not because they all have OCD. Because if you don't do this, **your files turn into a mess**. And on a NAS, deleted means gone for good. So you end up with an `old/` folder, parking every past edit.
 
+And it's not three unlucky people. In [M-Files' 2019 survey of information workers, 96% said they hit some difficulty finding the most recent version of a file](https://idm.net.au/article/0012311-8-10-workers-forced-recreate-existing-documents). Almost everyone is quietly fighting the same thing.
+
 ![Three filenames side by side. Person A's .psd / Person B's .docx / you-the-reader's thesis.docx. Caption: Different jo](image-1.svg)
 
 ---
@@ -172,6 +174,8 @@ Not because your coworkers are lazy.
 > Asana forum, June 2023, a thread on "epic file-naming fails." Becky_Caday: "Multiple versions of the same file because someone didn't know they could open and edit the original. They just changed one word to all caps. `List 2.0` became `LIST 2.0`." Arndt_Dienstbier: "They were using whitespace for versioning" (multiple `Document.docx` files distinguished only by trailing spaces). [Full thread](https://forum.asana.com/t/share-your-epic-file-naming-fails-and-lets-laugh-together/462366)
 
 Every team member, every save, has to remember + agree + have time to follow the rule. Any one of those fails, **congratulations. You've got another mess**.
+
+And when the mess wins, you don't find the old version — you rebuild it from scratch. The same [M-Files survey found 83% of workers worldwide are forced to recreate documents that already exist somewhere](https://idm.net.au/article/0012311-8-10-workers-forced-recreate-existing-documents). The version was there the whole time. Nobody could find it.
 
 Remembering a naming convention is something **a tool should just do**.
 Not something to push onto every individual's discipline.

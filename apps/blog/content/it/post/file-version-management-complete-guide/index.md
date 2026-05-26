@@ -42,6 +42,8 @@ Lavori diversi. Nomi di file diversi. **Stessa sintomatologia**.
 
 Non perché abbiano tutti il disturbo ossessivo-compulsivo. Perché se non lo fai così, **i tuoi file diventano un casino**. E su un NAS, quello che cancelli non torna più. Così finisci per avere una cartella `old/` dove parcheggi tutte le versioni precedenti.
 
+E non sono tre persone sfortunate. [Nell'indagine M-Files del 2019 sui lavoratori della conoscenza, il 96% ha dichiarato di incontrare qualche difficoltà nel trovare la versione più recente di un file](https://idm.net.au/article/0012311-8-10-workers-forced-recreate-existing-documents). Quasi tutti combattono in silenzio contro la stessa cosa.
+
 ![Three filenames side by side. Persona A's .psd / Persona B's .docx / you-the-reader's thesis.docx. Caption: Lavori div](image-1.svg)
 
 ---
@@ -164,6 +166,8 @@ Non perché i tuoi colleghi siano pigri. **È che stiamo cercando di controllare
 > Forum di Asana, giugno 2023, un thread su "epic file-naming fails." Becky_Caday: "Versioni multiple dello stesso file perché qualcuno non sapeva di poter aprire e modificare l'originale. Ha solo cambiato una parola in maiuscolo. `Lista 2.0` è diventato `LISTA 2.0`." Arndt_Dienstbier: "Usavano gli spazi bianchi per il versioning" (più file `Documento.docx` distinti solo dagli spazi finali). [Thread completo](https://forum.asana.com/t/share-your-epic-file-naming-fails-and-lets-laugh-together/462366)
 
 Ogni membro del team, ad ogni salvataggio, deve ricordare + essere d'accordo + avere il tempo di seguire la regola. Anche solo uno di questi fallisce, **congratulazioni. Hai un altro casino**.
+
+E quando vince il casino, non ritrovi la vecchia versione — la ricostruisci da zero. La stessa [indagine M-Files ha rilevato che l'83% dei lavoratori nel mondo è costretto a ricreare documenti che esistono già da qualche parte](https://idm.net.au/article/0012311-8-10-workers-forced-recreate-existing-documents). La versione era lì da sempre. Nessuno riusciva a trovarla.
 
 Ricordare una convenzione di denominazione è qualcosa che **uno strumento dovrebbe fare da solo**. Non qualcosa da scaricare sulla disciplina di ogni singola persona.
 
