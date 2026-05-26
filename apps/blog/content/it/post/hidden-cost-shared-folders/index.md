@@ -53,7 +53,7 @@ Non stai salvando un file, stai comprando un'assicurazione. E il costo di quell'
 
 ## La fattura invisibile, pagata in ansia {#anxious-bill}
 
-Secondo lo studio Asana《[Anatomy of Work](https://asana.com/resources/why-work-about-work-is-bad)》, i knowledge worker passano 83 ore all'anno in "lavoro sul lavoro" (work about work): confermare, riconfermare, inseguire l'avanzamento, cercare l'ultima versione. Ma 83 ore è solo un numero freddo, non descrive la sensazione.
+Secondo lo studio Asana《[Anatomy of Work](https://asana.com/resources/why-work-about-work-is-bad)》, i knowledge worker passano 83 ore all'anno in "lavoro sul lavoro" (work about work): confermare, riconfermare, inseguire l'avanzamento, cercare l'ultima versione. Il conto complessivo è ancora più salato — [uno studio McKinsey sulla Social Economy ha rilevato che i dipendenti bruciano circa 1,8 ore al giorno, quasi un quinto della settimana lavorativa, solo per cercare e raccogliere informazioni](https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-social-economy). Ma queste sono solo cifre fredde, non descrivono la sensazione.
 
 Il vero costo è quel **micro-panico persistente**.
 

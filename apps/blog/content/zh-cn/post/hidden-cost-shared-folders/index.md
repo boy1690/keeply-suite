@@ -60,9 +60,9 @@ faq_schema:
 
 ## 共享文件夹命名税一年 83 小时：Asana《Anatomy of Work》算给你看 {#anxious-bill}
 
-根据 Asana《[Anatomy of Work](https://asana.com/resources/why-work-about-work-is-bad)》研究，知识工作者一年花 83 小时在做这些「关于工作的工作」(work about work)：确认、再确认、追进度、找最新版。
+根据 Asana《[Anatomy of Work](https://asana.com/resources/why-work-about-work-is-bad)》研究，知识工作者一年花 83 小时在做这些「关于工作的工作」(work about work)：确认、再确认、追进度、找最新版。把账单摊得更开，数字还会更高——[麦肯锡《The Social Economy》研究发现，员工每天约花 1.8 小时](https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-social-economy)、几乎是一周工时的五分之一，光是用来搜寻和收集信息。
 
-83 小时只是冰冷的数字。真正的成本是那种**挥之不去的微型恐慌**。
+这些只是冰冷的数字。真正的成本是那种**挥之不去的微型恐慌**。
 
 你把图纸发给营造厂后突然背脊发凉、赶紧重新打开文件夹确认：「等等、我刚刚寄的是 `v7_FINAL` 还是 `v7_真的最终`？」主管问「这是不是最新版」、你不敢立刻点头、必须先说「我确认一下」、然后在一堆后缀词中玩猜谜游戏。
 

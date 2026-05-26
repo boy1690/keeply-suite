@@ -53,7 +53,7 @@ You aren't saving a file, you're buying insurance. And the cost of that insuranc
 
 ## The invisible bill, paid in anxiety {#anxious-bill}
 
-According to Asana's [Anatomy of Work](https://asana.com/resources/why-work-about-work-is-bad) study, knowledge workers spend 83 hours a year on "work about work": confirming, re-confirming, chasing progress, looking for the latest version. But 83 hours is just a cold number; it can't describe the feeling.
+According to Asana's [Anatomy of Work](https://asana.com/resources/why-work-about-work-is-bad) study, knowledge workers spend 83 hours a year on "work about work": confirming, re-confirming, chasing progress, looking for the latest version. The broader tab runs higher still — [McKinsey's Social Economy study found employees burn about 1.8 hours a day, nearly a fifth of the workweek, just searching for and gathering information](https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-social-economy). But these are cold numbers; they can't describe the feeling.
 
 The real cost is that **persistent micro-panic**.
 

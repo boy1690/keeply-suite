@@ -59,9 +59,9 @@ faq_schema:
 
 ## 共用資料夾命名稅一年 83 小時：Asana《Anatomy of Work》算給你看 {#anxious-bill}
 
-根據 Asana《[Anatomy of Work](https://asana.com/resources/why-work-about-work-is-bad)》研究，知識工作者一年花 83 小時在做這些「關於工作的工作」(work about work)：確認、再確認、追進度、找最新版。
+根據 Asana《[Anatomy of Work](https://asana.com/resources/why-work-about-work-is-bad)》研究，知識工作者一年花 83 小時在做這些「關於工作的工作」(work about work)：確認、再確認、追進度、找最新版。更廣的這筆帳還更高——[麥肯錫《The Social Economy》研究發現，員工每天約花 1.8 小時、將近一週工時的五分之一，光是在搜尋與蒐集資訊](https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-social-economy)。
 
-83 小時只是冰冷的數字。真正的成本是那種**揮之不去的微型恐慌**。
+這些只是冰冷的數字。真正的成本是那種**揮之不去的微型恐慌**。
 
 你把圖紙發給營造廠後突然背脊發涼、趕緊重新打開資料夾確認：「等等、我剛剛寄的是 `v7_FINAL` 還是 `v7_真的最終`？」主管問「這是不是最新版」、你不敢立刻點頭、必須先說「我確認一下」、然後在一堆後綴詞中玩猜謎遊戲。
 

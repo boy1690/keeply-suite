@@ -53,7 +53,7 @@ faq_schema:
 
 ## 보이지 않는 청구서는 불안으로 지불한다 {#anxious-bill}
 
-Asana《[Anatomy of Work](https://asana.com/resources/why-work-about-work-is-bad)》연구에 따르면, 지식 근로자는 1 년에 83 시간을 「일에 관한 일」(work about work) 에 쓴다: 확인, 재확인, 진척 쫓기, 최신 버전 찾기. 하지만 83 시간은 차가운 숫자일 뿐, 그 감각을 묘사하지 못한다.
+Asana《[Anatomy of Work](https://asana.com/resources/why-work-about-work-is-bad)》연구에 따르면, 지식 근로자는 1 년에 83 시간을 「일에 관한 일」(work about work) 에 쓴다: 확인, 재확인, 진척 쫓기, 최신 버전 찾기. 더 넓게 계산하면 청구서는 더 커진다 — [McKinsey 의 Social Economy 연구는 직원들이 하루 약 1.8 시간, 한 주 근무 시간의 거의 5 분의 1 을 정보를 검색하고 모으는 데만 쓴다는 사실을 밝혀냈다](https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-social-economy). 하지만 이 숫자들은 차가운 숫자일 뿐, 그 감각을 묘사하지 못한다.
 
 진짜 비용은 그 **사라지지 않는 마이크로 패닉**이다.
 

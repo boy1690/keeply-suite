@@ -53,7 +53,7 @@ faq_schema:
 
 ## 見えない請求書は不安で払う {#anxious-bill}
 
-Asana《[Anatomy of Work](https://asana.com/resources/why-work-about-work-is-bad)》の研究によれば、ナレッジワーカーは年間 83 時間を「仕事についての仕事」(work about work) に費やしている：確認、再確認、進捗追い、最新版探し。だが 83 時間は冷たい数字に過ぎず、あの感覚を表せない。
+Asana《[Anatomy of Work](https://asana.com/resources/why-work-about-work-is-bad)》の研究によれば、ナレッジワーカーは年間 83 時間を「仕事についての仕事」(work about work) に費やしている：確認、再確認、進捗追い、最新版探し。広く見れば、その代償はさらに大きい——[マッキンゼーの Social Economy 調査によると、従業員は情報の検索と収集だけに 1 日あたり約 1.8 時間、つまり週の労働時間の 5 分の 1 近くを費やしている](https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-social-economy)。だがこれらは冷たい数字に過ぎず、あの感覚を表せない。
 
 本当のコストは、あの**消えないマイクロ不安**だ。
 
