@@ -62,6 +62,8 @@ Quella sezione è già stata gettata. Specifica del telaio cambiata. Significa s
 
 Non hai mandato il file sbagliato alla squadra. Semplicemente non sapevi che il file fosse cambiato.
 
+E una costruzione dalla versione sbagliata raramente è un caso isolato. Stando agli studi, [le rilavorazioni pesano circa il 5–10% del costo totale di un progetto — i dati 2023 di PlanRadar lo collocano al 7,9%](https://www.planradar.com/us/cost-of-rework-construction/), e "costruito dalla revisione che nessuno aveva segnalato" è una delle sue cause più evitabili.
+
 ## Indice
 
 - ["È quella la revisione di giovedì scorso?"](#h2-1)

@@ -62,6 +62,8 @@ That section is already poured. Frame spec changed. That means chipping the cure
 
 You didn't send the wrong file to the crew. You just didn't know the file had changed.
 
+And a wrong-version build is rarely a one-off. Across studies, [rework runs about 5–10% of a project's total cost — PlanRadar's 2023 data put it at 7.9%](https://www.planradar.com/us/cost-of-rework-construction/), and "built from the revision nobody flagged" is one of its most avoidable causes.
+
 ## Contents
 
 - ["Is that last Thursday's revision?"](#h2-1)

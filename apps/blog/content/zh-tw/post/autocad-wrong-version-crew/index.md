@@ -63,6 +63,8 @@ howto_schema:
 
 你沒傳錯檔給工班。你只是不知道、檔已經換了。
 
+而且照錯版本施工很少只發生一次。綜合多項研究，[返工占總工程成本 5–10%，PlanRadar 2023 年的數據是 7.9%](https://www.planradar.com/us/cost-of-rework-construction/)，而「照著沒人提醒過的那一版做出來的」正是其中最可以避免的原因之一。
+
 這篇拆完辦公室 → 現場那條斷線為什麼會斷、傳統做法（嚴格命名 / LINE 通知 / NAS 共享）為什麼補不起來、然後讓你看 [Keeply](https://keeply.work) 怎麼把營造團隊版本史一個工具一起做。
 
 ## 目錄
