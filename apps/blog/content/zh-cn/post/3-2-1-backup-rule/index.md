@@ -71,7 +71,7 @@ faq_schema:
 
 ## Peter Krogh 的 3-2-1 备份原则：3 份文件、2 种媒介、1 份异地 {#3-2-1-规则到底在说什么}
 
-3-2-1 是 Peter Krogh 在 2005 年[《The DAM Book》](https://www.oreilly.com/library/view/the-dam-book/9780596008550/)（O'Reilly Media）订下的备份规则：
+3-2-1 备份原则就是 3 份文件、2 种存储媒介、1 份异地。这条规则由摄影师 Peter Krogh 在 2005 年[《The DAM Book》](https://www.oreilly.com/library/view/the-dam-book/9780596008550/)（O'Reilly Media）订下，[CISA 至今仍以此为标准备份建议](https://www.cisa.gov/audiences/small-and-medium-businesses/secure-your-business/back-up-business-data)：
 
 - **3 份**文件：原档加 2 份备份
 - **2 种**存储媒介：例如本机硬盘加云端，或 NAS 加外接 SSD

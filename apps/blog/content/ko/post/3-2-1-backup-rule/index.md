@@ -58,7 +58,7 @@ faq_schema:
 
 ## 3-2-1 규칙은 정확히 무엇인가?
 
-3-2-1 규칙은 Peter Krogh 가 2005 년 [《The DAM Book》](https://www.oreilly.com/library/view/the-dam-book/9780596008550/)（O'Reilly Media）에서 정한 백업 규칙입니다([CISA 도 지금까지 3-2-1 을 표준 백업 권고로 제시합니다](https://www.cisa.gov/audiences/small-and-medium-businesses/secure-your-business/back-up-business-data)).
+**3-2-1 백업 규칙** 은 사본 3 개, 미디어 2 종, 오프사이트 1 개를 두는 백업 원칙입니다. 이 규칙은 Peter Krogh 가 2005 년 [《The DAM Book》](https://www.oreilly.com/library/view/the-dam-book/9780596008550/)（O'Reilly Media）에서 정했습니다([CISA 도 지금까지 3-2-1 을 표준 백업 권고로 제시합니다](https://www.cisa.gov/audiences/small-and-medium-businesses/secure-your-business/back-up-business-data)).
 
 - **사본 3 개**: 원본과 백업 2 개
 - **2 종의 저장 매체**: 예를 들어 로컬 드라이브 + 클라우드, 또는 NAS + 외장 SSD

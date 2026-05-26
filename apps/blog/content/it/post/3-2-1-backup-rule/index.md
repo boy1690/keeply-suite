@@ -59,7 +59,7 @@ La **regola 3-2-1 del backup** è necessaria: [tre copie, due tipi di supporto, 
 
 ## Cos'è esattamente la regola 3-2-1?
 
-La regola 3-2-1 viene da [*The DAM Book*](https://www.oreilly.com/library/view/the-dam-book/9780596008550/) di Peter Krogh (O'Reilly, 2005):
+La **regola 3-2-1 del backup** significa: 3 copie dei tuoi dati, 2 tipi di supporto diversi, 1 copia conservata fuori sede. Viene da [*The DAM Book*](https://www.oreilly.com/library/view/the-dam-book/9780596008550/) del fotografo Peter Krogh (O'Reilly, 2005) e [CISA la raccomanda ancora oggi come standard di backup](https://www.cisa.gov/audiences/small-and-medium-businesses/secure-your-business/back-up-business-data):
 
 - **3 copie** dei tuoi dati: l'originale più 2 backup
 - **2 tipi di supporto**: ad es. disco locale + cloud, oppure NAS + SSD esterno

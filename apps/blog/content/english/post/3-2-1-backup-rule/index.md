@@ -63,7 +63,7 @@ The **3-2-1 backup rule** is necessary: three copies, two media types, one offsi
 
 ## Peter Krogh's 3-2-1 backup rule: 3 copies, 2 media, 1 offsite {#what-is-the-3-2-1-backup-rule}
 
-The 3-2-1 rule comes from Peter Krogh's [*The DAM Book* (O'Reilly, 2005)](https://www.oreilly.com/library/view/the-dam-book/9780596008550/), and [CISA still recommends it as the standard for backing up data](https://www.cisa.gov/audiences/small-and-medium-businesses/secure-your-business/back-up-business-data):
+The 3-2-1 backup rule means keeping **3 copies** of your data, on **2 different storage media**, with **1 copy stored offsite**. It comes from photographer Peter Krogh's [*The DAM Book* (O'Reilly, 2005)](https://www.oreilly.com/library/view/the-dam-book/9780596008550/), and [CISA still recommends it as the standard for backing up data](https://www.cisa.gov/audiences/small-and-medium-businesses/secure-your-business/back-up-business-data):
 
 - **3 copies** of your data: the original plus 2 backups
 - **2 storage media**: e.g. local drive plus cloud, or NAS plus external SSD
