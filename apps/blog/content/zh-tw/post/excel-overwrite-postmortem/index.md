@@ -76,7 +76,7 @@ OneDrive 同步多快，看你的網路跟檔案大小（[Microsoft Learn: Sync 
 
 為什麼？Windows 跟 macOS 在 SSD 上會跑 TRIM 指令。被刪除或被覆蓋的磁區，當下就被實體歸零（[NIST SP 800-88r1: Guidelines for Media Sanitization](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-88r1.pdf)）。「覆蓋後馬上掃磁區」這招在 HDD 時代有用。SSD 上，已經被覆蓋的位元真的不見了。
 
-還原軟體廣告寫的高成功率，前提是「剛刪除 + HDD + 檔案系統還沒覆蓋」三件事同時成立。公司配的工作 PC 主流是 SSD，覆蓋發生那一秒，SSD 就把舊位元抹掉。EaseUS、Recoverit、iMyFone、AOMEI 一樣的物理極限，跟你選哪個軟體無關。
+還原軟體廣告寫的高成功率，前提是「剛刪除 + HDD + 檔案系統還沒覆蓋」三件事同時成立。公司配的工作 PC 主流是 SSD（[2024 年筆電 SSD 搭載率已達約 100%（TrendForce）](https://www.trendforce.com/presscenter/news/20251107-12774.html)，HDD 的前提早就站不住腳），覆蓋發生那一秒，SSD 就把舊位元抹掉。EaseUS、Recoverit、iMyFone、AOMEI 一樣的物理極限，跟你選哪個軟體無關。
 
 陳小姐花了一筆訂閱費，買到的是一個確認。那份檔案真的回不來。
 

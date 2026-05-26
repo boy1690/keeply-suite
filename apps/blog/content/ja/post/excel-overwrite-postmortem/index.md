@@ -60,7 +60,7 @@ Excel 内部の「バージョン履歴」ボタンは SharePoint Online の API
 
 なぜか。Windows と macOS の SSD は TRIM コマンドを実行して、削除された / 上書きされたセクターを即座に物理的にゼロクリアする。「上書き直後の disk sector scanning」が機能するのは HDD 時代の話で、2025 年の SSD では物理的に書き直されていない記号が存在しない（[NIST SP 800-88r1: Guidelines for Media Sanitization](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-88r1.pdf) — SSD TRIM behavior section）。
 
-復元ソフトベンダーが宣伝する高い成功率の前提条件は、削除直後 + HDD + ファイルシステム未上書き。業務 PC が今 SSD であることを考えると、上書きが起きた瞬間に物理的に救援不可能だ。これは EaseUS / Recoverit / iMyFone / AOMEI 全部に共通する物理限界で、software 選択の問題ではない。
+復元ソフトベンダーが宣伝する高い成功率の前提条件は、削除直後 + HDD + ファイルシステム未上書き。業務 PC は今ほぼ SSD だ——[2024 年にはノート PC の SSD 搭載率がおよそ 100% に達しており（TrendForce）](https://www.trendforce.com/presscenter/news/20251107-12774.html)、HDD 前提はもはやほとんど成り立たない。上書きが起きた瞬間に物理的に救援不可能だ。これは EaseUS / Recoverit / iMyFone / AOMEI 全部に共通する物理限界で、software 選択の問題ではない。
 
 田中さんがサブスクリプション料金を払って得たのは、確証だった。もう戻ってこないという確証。
 

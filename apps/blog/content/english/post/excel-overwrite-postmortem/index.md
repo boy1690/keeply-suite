@@ -76,7 +76,7 @@ Thirty days later, Chen bought an annual recovery software subscription. It scan
 
 Why? Windows and macOS run TRIM on SSDs. Sectors that are deleted or overwritten get physically zeroed out immediately ([NIST SP 800-88r1: Guidelines for Media Sanitization](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-88r1.pdf)). "Scan the disk right after overwrite" worked in the HDD era. On an SSD, the old bits are physically gone.
 
-The high success rates that recovery vendors advertise assume "just deleted + HDD + filesystem not yet overwritten." All three together. Modern work PCs are mostly SSD. The moment overwrite happens, the SSD has already wiped the old bits. EaseUS, Recoverit, iMyFone, AOMEI all hit the same physical limit. Software choice doesn't change it.
+The high success rates that recovery vendors advertise assume "just deleted + HDD + filesystem not yet overwritten." All three together. Modern work PCs are mostly SSD — [by 2024 the notebook SSD attach rate reached roughly 100% (TrendForce)](https://www.trendforce.com/presscenter/news/20251107-12774.html), so the HDD assumption rarely holds anymore. The moment overwrite happens, the SSD has already wiped the old bits. EaseUS, Recoverit, iMyFone, AOMEI all hit the same physical limit. Software choice doesn't change it.
 
 What Chen got for her subscription fee was a confirmation. The file isn't coming back.
 
