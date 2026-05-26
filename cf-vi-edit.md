@@ -1,0 +1,1195 @@
+- generic [active] [ref=e8]:
+  - generic [ref=e13]:
+    - complementary [ref=e14]:
+      - generic [ref=e15]:
+        - generic [ref=e16]:
+          - link [ref=e17] [cursor=pointer]:
+            - /url: /
+            - img [ref=e19]
+          - generic "Boy1690@gmail.com's Account" [ref=e24]
+          - button "Close sidebar" [ref=e26] [cursor=pointer]:
+            - img [ref=e28]
+        - navigation [ref=e31]:
+          - generic [ref=e35]:
+            - button "快速搜尋..." [ref=e37] [cursor=pointer]:
+              - generic [ref=e39]:
+                - img [ref=e40]
+                - generic [ref=e42]: 快速搜尋...
+                - generic [ref=e43]: Ctrl K
+            - list [ref=e47]:
+              - listitem [ref=e48]:
+                - link "帳戶首頁" [ref=e49] [cursor=pointer]:
+                  - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/home
+                  - generic [ref=e50]:
+                    - img [ref=e51]
+                    - generic [ref=e54]: 帳戶首頁
+              - listitem [ref=e55]:
+                - button "最近造訪" [ref=e56] [cursor=pointer]:
+                  - generic [ref=e57]:
+                    - img [ref=e58]
+                    - generic [ref=e61]: 最近造訪
+                    - img [ref=e62]
+                - list [ref=e64]:
+                  - listitem [ref=e66]:
+                    - link "設定 管理帳戶" [ref=e67] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/configurations
+                      - generic [ref=e68]:
+                        - generic [ref=e69]: 設定
+                        - generic [ref=e71]: 管理帳戶
+                    - button "釘選" [ref=e73] [cursor=pointer]:
+                      - generic [ref=e74]:
+                        - img [ref=e75]
+                        - img [ref=e80]
+                  - listitem [ref=e82]:
+                    - link "規則 keeply.work" [ref=e83] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/keeply.work/rules
+                      - generic [ref=e84]:
+                        - generic [ref=e85]: 規則
+                        - generic [ref=e87]: keeply.work
+                    - button "釘選" [ref=e89] [cursor=pointer]:
+                      - generic [ref=e90]:
+                        - img [ref=e91]
+                        - img [ref=e96]
+                  - listitem [ref=e98]:
+                    - link "概觀 keeply.work / 規則" [ref=e99] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/keeply.work/rules/overview
+                      - generic [ref=e100]:
+                        - generic [ref=e101]: 概觀
+                        - generic [ref=e102]:
+                          - generic [ref=e103]: keeply.work
+                          - generic [ref=e104]: /
+                          - generic [ref=e105]: 規則
+                    - button "釘選" [ref=e107] [cursor=pointer]:
+                      - generic [ref=e108]:
+                        - img [ref=e109]
+                        - img [ref=e114]
+                  - listitem [ref=e116]:
+                    - link "大量重新導向轉接 傳遞和效能" [ref=e117] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/bulk-redirects
+                      - generic [ref=e118]:
+                        - generic [ref=e119]: 大量重新導向轉接
+                        - generic [ref=e121]: 傳遞和效能
+                    - button "釘選" [ref=e123] [cursor=pointer]:
+                      - generic [ref=e124]:
+                        - img [ref=e125]
+                        - img [ref=e130]
+                  - listitem [ref=e132]:
+                    - link "keeply.work 網域" [ref=e133] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/keeply.work
+                      - generic [ref=e134]:
+                        - generic [ref=e135]: keeply.work
+                        - generic [ref=e137]: 網域
+                    - button "釘選" [ref=e139] [cursor=pointer]:
+                      - generic [ref=e140]:
+                        - img [ref=e141]
+                        - img [ref=e146]
+              - listitem [ref=e148]:
+                - button "網域" [ref=e149] [cursor=pointer]:
+                  - generic [ref=e150]:
+                    - img [ref=e151]
+                    - generic [ref=e153]: 網域
+                    - img [ref=e154]
+                - list [ref=e156]:
+                  - listitem [ref=e158]:
+                    - link "概覽" [ref=e159] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/domains/overview
+                      - generic [ref=e160]: 概覽
+                  - listitem [ref=e161]:
+                    - link "註冊" [ref=e162] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/domains/registrations
+                      - generic [ref=e163]: 註冊
+                  - listitem [ref=e164]:
+                    - link "轉移" [ref=e165] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/domains/transfers
+                      - generic [ref=e166]: 轉移
+              - listitem [ref=e167]:
+                - generic [ref=e169]: Observe
+              - listitem [ref=e170]:
+                - button "Investigate" [ref=e171] [cursor=pointer]:
+                  - generic [ref=e172]:
+                    - img [ref=e173]
+                    - generic [ref=e176]: Investigate
+                    - img [ref=e177]
+                - list [ref=e179]:
+                  - listitem [ref=e181]:
+                    - button "Log Explorer" [ref=e182] [cursor=pointer]:
+                      - generic [ref=e184]: Log Explorer
+                      - img [ref=e185]
+                    - list [ref=e187]:
+                      - listitem [ref=e189]:
+                        - link "記錄搜尋" [ref=e190] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/log-explorer/log-search
+                          - generic [ref=e191]: 記錄搜尋
+                  - listitem [ref=e192]:
+                    - link "追蹤 測試版" [ref=e193] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/trace
+                      - generic [ref=e194]: 追蹤
+                      - generic [ref=e196]: 測試版
+                  - listitem [ref=e197]:
+                    - link "Logpush" [ref=e198] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/logs
+                      - generic [ref=e199]: Logpush
+              - listitem [ref=e200]:
+                - button "分析" [ref=e201] [cursor=pointer]:
+                  - generic [ref=e202]:
+                    - img [ref=e203]
+                    - generic [ref=e206]: 分析
+                    - img [ref=e207]
+                - list [ref=e209]:
+                  - listitem [ref=e211]:
+                    - link "儀表板 新" [ref=e212] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/dashboards
+                      - generic [ref=e213]: 儀表板
+                      - generic [ref=e215]: 新
+                  - listitem [ref=e216]:
+                    - link "帳戶分析" [ref=e217] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/analytics
+                      - generic [ref=e218]: 帳戶分析
+                  - listitem [ref=e219]:
+                    - link "Web Analytics" [ref=e220] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/web-analytics
+                      - generic [ref=e221]: Web Analytics
+              - listitem [ref=e222]:
+                - generic [ref=e224]: 組建
+              - listitem [ref=e225]:
+                - button "運算" [ref=e226] [cursor=pointer]:
+                  - generic [ref=e227]:
+                    - img [ref=e228]
+                    - generic [ref=e232]: 運算
+                    - img [ref=e233]
+                - list [ref=e235]:
+                  - listitem [ref=e237]:
+                    - link "Workers 和 Pages" [ref=e238] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/workers-and-pages
+                      - generic [ref=e239]: Workers 和 Pages
+                  - listitem [ref=e240]:
+                    - link "Observability" [ref=e241] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/observability
+                      - generic [ref=e242]: Observability
+                  - listitem [ref=e243]:
+                    - link "Workers for Platforms" [ref=e244] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/workers-for-platforms
+                      - generic [ref=e245]: Workers for Platforms
+                  - listitem [ref=e246]:
+                    - link "Containers" [ref=e247] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/workers/containers
+                      - generic [ref=e248]: Containers
+                  - listitem [ref=e249]:
+                    - link "Durable Objects" [ref=e250] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/workers/durable-objects
+                      - generic [ref=e251]: Durable Objects
+                  - listitem [ref=e252]:
+                    - link "Queues" [ref=e253] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/workers/queues
+                      - generic [ref=e254]: Queues
+                  - listitem [ref=e255]:
+                    - link "Workflows" [ref=e256] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/workers/workflows
+                      - generic [ref=e257]: Workflows
+                  - listitem [ref=e258]:
+                    - link "瀏覽器執行" [ref=e259] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/workers/browser-run
+                      - generic [ref=e260]: 瀏覽器執行
+                  - listitem [ref=e261]:
+                    - link "VPC 測試版" [ref=e262] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/workers/vpc
+                      - generic [ref=e263]: VPC
+                      - generic [ref=e265]: 測試版
+                  - listitem [ref=e266]:
+                    - button "電子郵件服務" [ref=e267] [cursor=pointer]:
+                      - generic [ref=e269]: 電子郵件服務
+                      - img [ref=e270]
+                    - list [ref=e272]:
+                      - listitem [ref=e274]:
+                        - link "電子郵件傳送 測試版" [ref=e275] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/email-service/sending
+                          - generic [ref=e276]: 電子郵件傳送
+                          - generic [ref=e278]: 測試版
+                      - listitem [ref=e279]:
+                        - link "電子郵件路由" [ref=e280] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/email-service/routing
+                          - generic [ref=e281]: 電子郵件路由
+                  - listitem [ref=e282]:
+                    - link "Workers 方案" [ref=e283] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/workers/plans
+                      - generic [ref=e284]: Workers 方案
+              - listitem [ref=e285]:
+                - button "AI" [ref=e286] [cursor=pointer]:
+                  - generic [ref=e287]:
+                    - img [ref=e288]
+                    - generic [ref=e290]: AI
+                    - img [ref=e291]
+                - list [ref=e293]:
+                  - listitem [ref=e295]:
+                    - link "模型" [ref=e296] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/ai/models
+                      - generic [ref=e297]: 模型
+                  - listitem [ref=e298]:
+                    - link "Workers AI" [ref=e299] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/ai/workers-ai
+                      - generic [ref=e300]: Workers AI
+                  - listitem [ref=e301]:
+                    - link "AI 閘道" [ref=e302] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/ai/ai-gateway
+                      - generic [ref=e303]: AI 閘道
+                  - listitem [ref=e304]:
+                    - link "Vectorize" [ref=e305] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/ai/vectorize
+                      - generic [ref=e306]: Vectorize
+                  - listitem [ref=e307]:
+                    - link "AI 搜尋 測試版" [ref=e308] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/ai/ai-search
+                      - generic [ref=e309]: AI 搜尋
+                      - generic [ref=e311]: 測試版
+              - listitem [ref=e312]:
+                - button "儲存空間和資料庫" [ref=e313] [cursor=pointer]:
+                  - generic [ref=e314]:
+                    - img [ref=e315]
+                    - generic [ref=e318]: 儲存空間和資料庫
+                    - img [ref=e319]
+                - list [ref=e321]:
+                  - listitem [ref=e323]:
+                    - button "R2 物件儲存" [ref=e324] [cursor=pointer]:
+                      - generic [ref=e326]: R2 物件儲存
+                      - img [ref=e327]
+                    - list [ref=e329]:
+                      - listitem [ref=e331]:
+                        - link "概觀" [ref=e332] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/r2/overview
+                          - generic [ref=e333]: 概觀
+                      - listitem [ref=e334]:
+                        - link "資料移轉" [ref=e335] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/r2/slurper
+                          - generic [ref=e336]: 資料移轉
+                  - listitem [ref=e337]:
+                    - link "Hyperdrive" [ref=e338] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/workers/hyperdrive
+                      - generic [ref=e339]: Hyperdrive
+                  - listitem [ref=e340]:
+                    - link "Workers KV" [ref=e341] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/workers/kv/namespaces
+                      - generic [ref=e342]: Workers KV
+                  - listitem [ref=e343]:
+                    - link "D1 SQL 資料庫" [ref=e344] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/workers/d1
+                      - generic [ref=e345]: D1 SQL 資料庫
+                  - listitem [ref=e346]:
+                    - link "Analytics Engine" [ref=e347] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/workers/analytics-engine
+                      - generic [ref=e348]: Analytics Engine
+                  - listitem [ref=e349]:
+                    - button "Pipelines 測試版" [ref=e350] [cursor=pointer]:
+                      - generic [ref=e351]:
+                        - generic [ref=e352]: Pipelines
+                        - generic [ref=e354]: 測試版
+                      - img [ref=e355]
+                    - list [ref=e357]:
+                      - listitem [ref=e359]:
+                        - link "Pipelines" [ref=e360] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/pipelines/overview
+                          - generic [ref=e361]: Pipelines
+                  - listitem [ref=e362]:
+                    - link "Secrets Store 新" [ref=e363] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/secrets-store
+                      - generic [ref=e364]: Secrets Store
+                      - generic [ref=e366]: 新
+              - listitem [ref=e367]:
+                - button "媒體" [ref=e368] [cursor=pointer]:
+                  - generic [ref=e369]:
+                    - img [ref=e370]
+                    - generic [ref=e373]: 媒體
+                    - img [ref=e374]
+                - list [ref=e376]:
+                  - listitem [ref=e378]:
+                    - button "Stream" [ref=e379] [cursor=pointer]:
+                      - generic [ref=e381]: Stream
+                      - img [ref=e382]
+                    - list [ref=e384]:
+                      - listitem [ref=e386]:
+                        - link "方案" [ref=e387] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/stream/plans
+                          - generic [ref=e388]: 方案
+                  - listitem [ref=e389]:
+                    - button "Images" [ref=e390] [cursor=pointer]:
+                      - generic [ref=e392]: Images
+                      - img [ref=e393]
+                    - list [ref=e395]:
+                      - listitem [ref=e397]:
+                        - link "轉換" [ref=e398] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/images/transformations
+                          - generic [ref=e399]: 轉換
+                      - listitem [ref=e400]:
+                        - link "託管影像" [ref=e401] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/images/hosted
+                          - generic [ref=e402]: 託管影像
+                      - listitem [ref=e403]:
+                        - link "方案" [ref=e404] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/images/plans
+                          - generic [ref=e405]: 方案
+                  - listitem [ref=e406]:
+                    - button "Realtime" [ref=e407] [cursor=pointer]:
+                      - generic [ref=e409]: Realtime
+                      - img [ref=e410]
+                    - list [ref=e412]:
+                      - listitem [ref=e414]:
+                        - link "RealtimeKit 測試版" [ref=e415] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/realtime/kit
+                          - generic [ref=e416]: RealtimeKit
+                          - generic [ref=e418]: 測試版
+                      - listitem [ref=e419]:
+                        - link "TURN 伺服器" [ref=e420] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/realtime/turn
+                          - generic [ref=e421]: TURN 伺服器
+                      - listitem [ref=e422]:
+                        - link "無伺服器 SFU" [ref=e423] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/realtime/sfu
+                          - generic [ref=e424]: 無伺服器 SFU
+                      - listitem [ref=e425]:
+                        - link "MoQ 中繼 Alpha" [ref=e426] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/realtime/moq
+                          - generic [ref=e427]: MoQ 中繼
+                          - generic [ref=e429]: Alpha
+                      - listitem [ref=e430]:
+                        - link "MoQ 基準" [ref=e431] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/realtime/moq-bench
+                          - generic [ref=e432]: MoQ 基準
+              - listitem [ref=e433]:
+                - generic [ref=e435]: 保護與連線
+              - listitem [ref=e436]:
+                - button "應用程式安全性" [ref=e437] [cursor=pointer]:
+                  - generic [ref=e438]:
+                    - img [ref=e439]
+                    - generic [ref=e442]: 應用程式安全性
+                    - img [ref=e443]
+                - list [ref=e445]:
+                  - listitem [ref=e447]:
+                    - link "安全性見解" [ref=e448] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/security-center
+                      - generic [ref=e449]: 安全性見解
+                  - listitem [ref=e450]:
+                    - link "WAF" [ref=e451] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/application-security/waf
+                      - generic [ref=e452]: WAF
+                  - listitem [ref=e453]:
+                    - link "調查" [ref=e454] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/application-security/investigate
+                      - generic [ref=e455]: 調查
+                  - listitem [ref=e456]:
+                    - link "基礎結構" [ref=e457] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/security-center/inventory
+                      - generic [ref=e458]: 基礎結構
+                  - listitem [ref=e459]:
+                    - link "Turnstile" [ref=e460] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/turnstile
+                      - generic [ref=e461]: Turnstile
+              - listitem [ref=e462]:
+                - link "Zero Trust" [ref=e463] [cursor=pointer]:
+                  - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/zero-trust/landing-page
+                  - generic [ref=e464]:
+                    - img [ref=e465]
+                    - generic [ref=e468]: Zero Trust
+              - listitem [ref=e469]:
+                - button "網路功能" [ref=e470] [cursor=pointer]:
+                  - generic [ref=e471]:
+                    - img [ref=e472]
+                    - generic [ref=e474]: 網路功能
+                    - img [ref=e475]
+                - list [ref=e477]:
+                  - listitem [ref=e479]:
+                    - link "概觀 新" [ref=e480] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/magic-networks/overview
+                      - generic [ref=e481]: 概觀
+                      - generic [ref=e483]: 新
+                  - listitem [ref=e484]:
+                    - button "深入解析" [ref=e485] [cursor=pointer]:
+                      - generic [ref=e487]: 深入解析
+                      - img [ref=e488]
+                    - list [ref=e490]:
+                      - listitem [ref=e492]:
+                        - link "網路流量" [ref=e493] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/networking-insights/analytics/network-analytics/flow-analytics
+                          - generic [ref=e494]: 網路流量
+                  - listitem [ref=e495]:
+                    - link "Tunnels 新" [ref=e496] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/tunnels
+                      - generic [ref=e497]: Tunnels
+                      - generic [ref=e499]: 新
+                  - listitem [ref=e500]:
+                    - link "網格 測試版" [ref=e501] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/mesh
+                      - generic [ref=e502]: 網格
+                      - generic [ref=e504]: 測試版
+                  - listitem [ref=e505]:
+                    - button "IP 位址" [ref=e506] [cursor=pointer]:
+                      - generic [ref=e508]: IP 位址
+                      - img [ref=e509]
+                    - list [ref=e511]:
+                      - listitem [ref=e513]:
+                        - link "位址空間" [ref=e514] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/ip-addresses/address-space
+                          - generic [ref=e515]: 位址空間
+                      - listitem [ref=e516]:
+                        - link "位址對應" [ref=e517] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/ip-addresses/proxy-ips
+                          - generic [ref=e518]: 位址對應
+              - listitem [ref=e519]:
+                - button "傳遞和效能" [expanded] [ref=e520] [cursor=pointer]:
+                  - generic [ref=e521]:
+                    - img [ref=e522]
+                    - generic [ref=e524]: 傳遞和效能
+                    - img [ref=e525]
+                - list [ref=e529]:
+                  - listitem [ref=e531]:
+                    - link "大量重新導向轉接" [ref=e532] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/bulk-redirects
+                      - generic [ref=e533]: 大量重新導向轉接
+                  - listitem [ref=e534]:
+                    - link "Load Balancing" [ref=e535] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/load-balancing
+                      - generic [ref=e536]: Load Balancing
+                  - listitem [ref=e537]:
+                    - button "網頁標籤管理" [ref=e538] [cursor=pointer]:
+                      - generic [ref=e540]: 網頁標籤管理
+                      - img [ref=e541]
+                    - list [ref=e543]:
+                      - listitem [ref=e545]:
+                        - link "標籤設定" [ref=e546] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/tag-management/zaraz
+                          - generic [ref=e547]: 標籤設定
+                      - listitem [ref=e548]:
+                        - link "同意" [ref=e549] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/tag-management/consent
+                          - generic [ref=e550]: 同意
+                      - listitem [ref=e551]:
+                        - link "歷程記錄" [ref=e552] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/tag-management/history
+                          - generic [ref=e553]: 歷程記錄
+                      - listitem [ref=e554]:
+                        - link "監視" [ref=e555] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/tag-management/monitoring
+                          - generic [ref=e556]: 監視
+                      - listitem [ref=e557]:
+                        - link "設定" [ref=e558] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/tag-management/settings
+                          - generic [ref=e559]: 設定
+                      - listitem [ref=e560]:
+                        - link "Zaraz 方案" [ref=e561] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/tag-management/plans
+                          - generic [ref=e562]: Zaraz 方案
+                      - listitem [ref=e563]:
+                        - link "Google 標籤閘道" [ref=e564] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/tag-management/google-tag-gateway
+                          - generic [ref=e565]: Google 標籤閘道
+              - listitem [ref=e566]
+              - listitem [ref=e568]:
+                - button "管理帳戶" [ref=e569] [cursor=pointer]:
+                  - generic [ref=e570]:
+                    - img [ref=e571]
+                    - generic [ref=e574]: 管理帳戶
+                    - img [ref=e575]
+                - list [ref=e577]:
+                  - listitem [ref=e579]:
+                    - link "成員" [ref=e580] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/members
+                      - generic [ref=e581]: 成員
+                  - listitem [ref=e582]:
+                    - link "計費" [ref=e583] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/billing
+                      - generic [ref=e584]: 計費
+                  - listitem [ref=e585]:
+                    - link "帳戶 API 權杖" [ref=e586] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/api-tokens
+                      - generic [ref=e587]: 帳戶 API 權杖
+                  - listitem [ref=e588]:
+                    - link "稽核記錄" [ref=e589] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/audit-log
+                      - generic [ref=e590]: 稽核記錄
+                  - listitem [ref=e591]:
+                    - link "通知" [ref=e592] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/notifications
+                      - generic [ref=e593]: 通知
+                  - listitem [ref=e594]:
+                    - link "共用設定 Alpha" [ref=e595] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/shared-configurations
+                      - generic [ref=e596]: 共用設定
+                      - generic [ref=e598]: Alpha
+                  - listitem [ref=e599]:
+                    - link "封鎖的內容" [ref=e600] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/blocked-content
+                      - generic [ref=e601]: 封鎖的內容
+                  - listitem [ref=e602]:
+                    - link "濫用報告 測試版" [ref=e603] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/abuse-reports
+                      - generic [ref=e604]: 濫用報告
+                      - generic [ref=e606]: 測試版
+                  - listitem [ref=e607]:
+                    - link "碳影響報告" [ref=e608] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/carbon
+                      - generic [ref=e609]: 碳影響報告
+                  - listitem [ref=e610]:
+                    - link "設定" [ref=e611] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/configurations
+                      - generic [ref=e612]: 設定
+                  - listitem [ref=e613]:
+                    - link "資源標籤 測試版" [ref=e614] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/tags
+                      - generic [ref=e615]: 資源標籤
+                      - generic [ref=e617]: 測試版
+    - generic [ref=e620]:
+      - banner [ref=e621]:
+        - button "Toggle sidebar navigation" [ref=e622] [cursor=pointer]:
+          - generic [ref=e623]:
+            - img [ref=e624]
+            - generic [ref=e626]: Open sidebar
+        - generic [ref=e627]:
+          - button "Ask AI" [ref=e628] [cursor=pointer]:
+            - img [ref=e629]
+            - generic [ref=e632]: Ask AI
+          - link "支援" [ref=e633] [cursor=pointer]:
+            - /url: /?to=/:account/support
+            - img [ref=e634]
+            - generic [ref=e636]: 支援
+          - button "User menu" [ref=e637] [cursor=pointer]:
+            - img [ref=e638]
+      - main [ref=e640]:
+        - main [ref=e643]:
+          - generic [ref=e645]:
+            - paragraph [ref=e648]:
+              - generic [ref=e650]: 傳遞和效能
+            - list [ref=e651]:
+              - listitem [ref=e652]:
+                - link "大量重新導向轉接清單" [ref=e653] [cursor=pointer]:
+                  - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/bulk-redirects
+              - img [ref=e655]
+              - listitem [ref=e657]:
+                - link "名稱清單" [ref=e658] [cursor=pointer]:
+                  - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/bulk-redirects/redirect-list/858b239b8b3f423794456776339e79c3
+              - img [ref=e660]
+              - listitem [ref=e662]:
+                - link "新增 URL" [ref=e663] [cursor=pointer]:
+                  - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/bulk-redirects/redirect-list/858b239b8b3f423794456776339e79c3/add-redirects
+              - img [ref=e665]
+              - listitem [ref=e667]:
+                - strong [ref=e668]: 編輯 URL
+            - heading "編輯 URL 重新導向轉接" [level=1] [ref=e669]
+            - generic [ref=e670]:
+              - generic [ref=e671]:
+                - generic [ref=e672]: 搜尋
+                - generic [ref=e674]:
+                  - img [ref=e676]
+                  - textbox "搜尋" [ref=e678]
+                - button "搜尋" [ref=e680] [cursor=pointer]:
+                  - generic [ref=e681]: 搜尋
+              - generic [ref=e682]:
+                - generic [ref=e683]: 來源 URL
+                - generic [ref=e684]: 目標 URL
+                - generic [ref=e685]: 狀態
+              - generic [ref=e689]:
+                - generic [ref=e690]:
+                  - button "https://blog.keeply.work/ar/" [ref=e694] [cursor=pointer]:
+                    - paragraph [ref=e696]: https://blog.keeply.work/ar/
+                  - textbox [ref=e699]: https://blog.keeply.work/en/
+                  - generic [ref=e707]:
+                    - generic [ref=e708]: 301 - Permanent Redirect
+                    - combobox [ref=e709]
+                  - button "編輯參數 caret-right" [ref=e714] [cursor=pointer]:
+                    - text: 編輯參數
+                    - img "caret-right" [ref=e716]
+                  - button "移除" [ref=e719]:
+                    - img [ref=e720]
+                - generic [ref=e723]:
+                  - img [ref=e725]
+                  - generic [ref=e728]:
+                    - strong [ref=e729]: Redirect POST requests?
+                    - text: To prevent the request method being changed to GET, use a 307/308 redirect instead.
+                    - link "Learn moredocumentation" [ref=e730] [cursor=pointer]:
+                      - /url: https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/
+                      - text: Learn more
+                      - img "documentation" [ref=e732]
+              - generic [ref=e735]:
+                - generic [ref=e736]:
+                  - button "https://blog.keeply.work/de/" [ref=e740] [cursor=pointer]:
+                    - paragraph [ref=e742]: https://blog.keeply.work/de/
+                  - textbox [ref=e745]: https://blog.keeply.work/en/
+                  - generic [ref=e753]:
+                    - generic [ref=e754]: 301 - Permanent Redirect
+                    - combobox [ref=e755]
+                  - button "編輯參數 caret-right" [ref=e760] [cursor=pointer]:
+                    - text: 編輯參數
+                    - img "caret-right" [ref=e762]
+                  - button "移除" [ref=e765]:
+                    - img [ref=e766]
+                - generic [ref=e769]:
+                  - img [ref=e771]
+                  - generic [ref=e774]:
+                    - strong [ref=e775]: Redirect POST requests?
+                    - text: To prevent the request method being changed to GET, use a 307/308 redirect instead.
+                    - link "Learn moredocumentation" [ref=e776] [cursor=pointer]:
+                      - /url: https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/
+                      - text: Learn more
+                      - img "documentation" [ref=e778]
+              - generic [ref=e781]:
+                - generic [ref=e782]:
+                  - button "https://blog.keeply.work/de/post/..." [ref=e786] [cursor=pointer]:
+                    - paragraph [ref=e788]: https://blog.keeply.work/de/post/...
+                  - textbox [ref=e791]: https://blog.keeply.work/en/post/autocad-wrong-version-crew/
+                  - generic [ref=e799]:
+                    - generic [ref=e800]: 301 - Permanent Redirect
+                    - combobox [ref=e801]
+                  - button "編輯參數 caret-right" [ref=e806] [cursor=pointer]:
+                    - text: 編輯參數
+                    - img "caret-right" [ref=e808]
+                  - button "移除" [ref=e811]:
+                    - img [ref=e812]
+                - generic [ref=e815]:
+                  - img [ref=e817]
+                  - generic [ref=e820]:
+                    - strong [ref=e821]: Redirect POST requests?
+                    - text: To prevent the request method being changed to GET, use a 307/308 redirect instead.
+                    - link "Learn moredocumentation" [ref=e822] [cursor=pointer]:
+                      - /url: https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/
+                      - text: Learn more
+                      - img "documentation" [ref=e824]
+              - generic [ref=e827]:
+                - generic [ref=e828]:
+                  - button "https://blog.keeply.work/de/post/..." [ref=e832] [cursor=pointer]:
+                    - paragraph [ref=e834]: https://blog.keeply.work/de/post/...
+                  - textbox [ref=e837]: https://blog.keeply.work/en/post/file-version-management-complete-guide/
+                  - generic [ref=e845]:
+                    - generic [ref=e846]: 301 - Permanent Redirect
+                    - combobox [ref=e847]
+                  - button "編輯參數 caret-right" [ref=e852] [cursor=pointer]:
+                    - text: 編輯參數
+                    - img "caret-right" [ref=e854]
+                  - button "移除" [ref=e857]:
+                    - img [ref=e858]
+                - generic [ref=e861]:
+                  - img [ref=e863]
+                  - generic [ref=e866]:
+                    - strong [ref=e867]: Redirect POST requests?
+                    - text: To prevent the request method being changed to GET, use a 307/308 redirect instead.
+                    - link "Learn moredocumentation" [ref=e868] [cursor=pointer]:
+                      - /url: https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/
+                      - text: Learn more
+                      - img "documentation" [ref=e870]
+              - generic [ref=e873]:
+                - generic [ref=e874]:
+                  - button "https://blog.keeply.work/de/post/..." [ref=e878] [cursor=pointer]:
+                    - paragraph [ref=e880]: https://blog.keeply.work/de/post/...
+                  - textbox [ref=e883]: https://blog.keeply.work/en/post/hidden-cost-shared-folders/
+                  - generic [ref=e891]:
+                    - generic [ref=e892]: 301 - Permanent Redirect
+                    - combobox [ref=e893]
+                  - button "編輯參數 caret-right" [ref=e898] [cursor=pointer]:
+                    - text: 編輯參數
+                    - img "caret-right" [ref=e900]
+                  - button "移除" [ref=e903]:
+                    - img [ref=e904]
+                - generic [ref=e907]:
+                  - img [ref=e909]
+                  - generic [ref=e912]:
+                    - strong [ref=e913]: Redirect POST requests?
+                    - text: To prevent the request method being changed to GET, use a 307/308 redirect instead.
+                    - link "Learn moredocumentation" [ref=e914] [cursor=pointer]:
+                      - /url: https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/
+                      - text: Learn more
+                      - img "documentation" [ref=e916]
+              - generic [ref=e919]:
+                - generic [ref=e920]:
+                  - button "https://blog.keeply.work/de/post/..." [ref=e924] [cursor=pointer]:
+                    - paragraph [ref=e926]: https://blog.keeply.work/de/post/...
+                  - textbox [ref=e929]: https://blog.keeply.work/en/post/install-keeply-windows-mac/
+                  - generic [ref=e937]:
+                    - generic [ref=e938]: 301 - Permanent Redirect
+                    - combobox [ref=e939]
+                  - button "編輯參數 caret-right" [ref=e944] [cursor=pointer]:
+                    - text: 編輯參數
+                    - img "caret-right" [ref=e946]
+                  - button "移除" [ref=e949]:
+                    - img [ref=e950]
+                - generic [ref=e953]:
+                  - img [ref=e955]
+                  - generic [ref=e958]:
+                    - strong [ref=e959]: Redirect POST requests?
+                    - text: To prevent the request method being changed to GET, use a 307/308 redirect instead.
+                    - link "Learn moredocumentation" [ref=e960] [cursor=pointer]:
+                      - /url: https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/
+                      - text: Learn more
+                      - img "documentation" [ref=e962]
+              - generic [ref=e965]:
+                - generic [ref=e966]:
+                  - button "https://blog.keeply.work/de/post/..." [ref=e970] [cursor=pointer]:
+                    - paragraph [ref=e972]: https://blog.keeply.work/de/post/...
+                  - textbox [ref=e975]: https://blog.keeply.work/en/post/keeply-getting-started-from-zero/
+                  - generic [ref=e983]:
+                    - generic [ref=e984]: 301 - Permanent Redirect
+                    - combobox [ref=e985]
+                  - button "編輯參數 caret-right" [ref=e990] [cursor=pointer]:
+                    - text: 編輯參數
+                    - img "caret-right" [ref=e992]
+                  - button "移除" [ref=e995]:
+                    - img [ref=e996]
+                - generic [ref=e999]:
+                  - img [ref=e1001]
+                  - generic [ref=e1004]:
+                    - strong [ref=e1005]: Redirect POST requests?
+                    - text: To prevent the request method being changed to GET, use a 307/308 redirect instead.
+                    - link "Learn moredocumentation" [ref=e1006] [cursor=pointer]:
+                      - /url: https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/
+                      - text: Learn more
+                      - img "documentation" [ref=e1008]
+              - generic [ref=e1011]:
+                - generic [ref=e1012]:
+                  - button "https://blog.keeply.work/de/pos..." [ref=e1016] [cursor=pointer]:
+                    - paragraph [ref=e1018]: https://blog.keeply.work/de/pos...
+                  - textbox [ref=e1021]: https://blog.keeply.work/en/post/thesis-single-point-of-failure/
+                  - generic [ref=e1029]:
+                    - generic [ref=e1030]: 301 - Permanent Redirect
+                    - combobox [ref=e1031]
+                  - button "編輯參數 caret-right" [ref=e1036] [cursor=pointer]:
+                    - text: 編輯參數
+                    - img "caret-right" [ref=e1038]
+                  - button "移除" [ref=e1041]:
+                    - img [ref=e1042]
+                - generic [ref=e1045]:
+                  - img [ref=e1047]
+                  - generic [ref=e1050]:
+                    - strong [ref=e1051]: Redirect POST requests?
+                    - text: To prevent the request method being changed to GET, use a 307/308 redirect instead.
+                    - link "Learn moredocumentation" [ref=e1052] [cursor=pointer]:
+                      - /url: https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/
+                      - text: Learn more
+                      - img "documentation" [ref=e1054]
+              - generic [ref=e1057]:
+                - generic [ref=e1058]:
+                  - button "https:/.../vibe-coding-rollback/" [ref=e1062] [cursor=pointer]:
+                    - paragraph [ref=e1064]: https:/.../vibe-coding-rollback/
+                  - textbox [ref=e1067]: https://blog.keeply.work/en/post/vibe-coding-rollback/
+                  - generic [ref=e1075]:
+                    - generic [ref=e1076]: 301 - Permanent Redirect
+                    - combobox [ref=e1077]
+                  - button "編輯參數 caret-right" [ref=e1082] [cursor=pointer]:
+                    - text: 編輯參數
+                    - img "caret-right" [ref=e1084]
+                  - button "移除" [ref=e1087]:
+                    - img [ref=e1088]
+                - generic [ref=e1091]:
+                  - img [ref=e1093]
+                  - generic [ref=e1096]:
+                    - strong [ref=e1097]: Redirect POST requests?
+                    - text: To prevent the request method being changed to GET, use a 307/308 redirect instead.
+                    - link "Learn moredocumentation" [ref=e1098] [cursor=pointer]:
+                      - /url: https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/
+                      - text: Learn more
+                      - img "documentation" [ref=e1100]
+              - generic [ref=e1103]:
+                - generic [ref=e1104]:
+                  - button "https://blog.keeply.work/de/pos..." [ref=e1108] [cursor=pointer]:
+                    - paragraph [ref=e1110]: https://blog.keeply.work/de/pos...
+                  - textbox [ref=e1113]: https://blog.keeply.work/en/post/what-keeply-saves-vs-backup-cloud/
+                  - generic [ref=e1121]:
+                    - generic [ref=e1122]: 301 - Permanent Redirect
+                    - combobox [ref=e1123]
+                  - button "編輯參數 caret-right" [ref=e1128] [cursor=pointer]:
+                    - text: 編輯參數
+                    - img "caret-right" [ref=e1130]
+                  - button "移除" [ref=e1133]:
+                    - img [ref=e1134]
+                - generic [ref=e1137]:
+                  - img [ref=e1139]
+                  - generic [ref=e1142]:
+                    - strong [ref=e1143]: Redirect POST requests?
+                    - text: To prevent the request method being changed to GET, use a 307/308 redirect instead.
+                    - link "Learn moredocumentation" [ref=e1144] [cursor=pointer]:
+                      - /url: https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/
+                      - text: Learn more
+                      - img "documentation" [ref=e1146]
+              - generic [ref=e1149]:
+                - generic [ref=e1150]:
+                  - button "https:/.../backup-strategy/" [ref=e1154] [cursor=pointer]:
+                    - paragraph [ref=e1156]: https:/.../backup-strategy/
+                  - textbox [ref=e1159]: https://blog.keeply.work/en/post/3-2-1-backup-rule/
+                  - generic [ref=e1167]:
+                    - generic [ref=e1168]: 301 - Permanent Redirect
+                    - combobox [ref=e1169]
+                  - button "編輯參數 caret-right" [ref=e1174] [cursor=pointer]:
+                    - text: 編輯參數
+                    - img "caret-right" [ref=e1176]
+                  - button "移除" [ref=e1179]:
+                    - img [ref=e1180]
+                - generic [ref=e1183]:
+                  - img [ref=e1185]
+                  - generic [ref=e1188]:
+                    - strong [ref=e1189]: Redirect POST requests?
+                    - text: To prevent the request method being changed to GET, use a 307/308 redirect instead.
+                    - link "Learn moredocumentation" [ref=e1190] [cursor=pointer]:
+                      - /url: https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/
+                      - text: Learn more
+                      - img "documentation" [ref=e1192]
+              - generic [ref=e1195]:
+                - generic [ref=e1196]:
+                  - button "https:/.../tax-document-retention/" [ref=e1200] [cursor=pointer]:
+                    - paragraph [ref=e1202]: https:/.../tax-document-retention/
+                  - textbox [ref=e1205]: https://blog.keeply.work/en/post/file-version-management-complete-guide/
+                  - generic [ref=e1213]:
+                    - generic [ref=e1214]: 301 - Permanent Redirect
+                    - combobox [ref=e1215]
+                  - button "編輯參數 caret-right" [ref=e1220] [cursor=pointer]:
+                    - text: 編輯參數
+                    - img "caret-right" [ref=e1222]
+                  - button "移除" [ref=e1225]:
+                    - img [ref=e1226]
+                - generic [ref=e1229]:
+                  - img [ref=e1231]
+                  - generic [ref=e1234]:
+                    - strong [ref=e1235]: Redirect POST requests?
+                    - text: To prevent the request method being changed to GET, use a 307/308 redirect instead.
+                    - link "Learn moredocumentation" [ref=e1236] [cursor=pointer]:
+                      - /url: https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/
+                      - text: Learn more
+                      - img "documentation" [ref=e1238]
+              - generic [ref=e1241]:
+                - generic [ref=e1242]:
+                  - button "https:/.../tags/data-backup/" [ref=e1246] [cursor=pointer]:
+                    - paragraph [ref=e1248]: https:/.../tags/data-backup/
+                  - textbox [ref=e1251]: https://blog.keeply.work/en/post/3-2-1-backup-rule/
+                  - generic [ref=e1259]:
+                    - generic [ref=e1260]: 301 - Permanent Redirect
+                    - combobox [ref=e1261]
+                  - button "編輯參數 caret-right" [ref=e1266] [cursor=pointer]:
+                    - text: 編輯參數
+                    - img "caret-right" [ref=e1268]
+                  - button "移除" [ref=e1271]:
+                    - img [ref=e1272]
+                - generic [ref=e1275]:
+                  - img [ref=e1277]
+                  - generic [ref=e1280]:
+                    - strong [ref=e1281]: Redirect POST requests?
+                    - text: To prevent the request method being changed to GET, use a 307/308 redirect instead.
+                    - link "Learn moredocumentation" [ref=e1282] [cursor=pointer]:
+                      - /url: https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/
+                      - text: Learn more
+                      - img "documentation" [ref=e1284]
+              - generic [ref=e1287]:
+                - generic [ref=e1288]:
+                  - button "https:/.../tags/excel/" [ref=e1292] [cursor=pointer]:
+                    - paragraph [ref=e1294]: https:/.../tags/excel/
+                  - textbox [ref=e1297]: https://blog.keeply.work/en/post/excel-version-history-limits/
+                  - generic [ref=e1305]:
+                    - generic [ref=e1306]: 301 - Permanent Redirect
+                    - combobox [ref=e1307]
+                  - button "編輯參數 caret-right" [ref=e1312] [cursor=pointer]:
+                    - text: 編輯參數
+                    - img "caret-right" [ref=e1314]
+                  - button "移除" [ref=e1317]:
+                    - img [ref=e1318]
+                - generic [ref=e1321]:
+                  - img [ref=e1323]
+                  - generic [ref=e1326]:
+                    - strong [ref=e1327]: Redirect POST requests?
+                    - text: To prevent the request method being changed to GET, use a 307/308 redirect instead.
+                    - link "Learn moredocumentation" [ref=e1328] [cursor=pointer]:
+                      - /url: https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/
+                      - text: Learn more
+                      - img "documentation" [ref=e1330]
+              - generic [ref=e1333]:
+                - generic [ref=e1334]:
+                  - button "https:/.../tags/keeply/" [ref=e1338] [cursor=pointer]:
+                    - paragraph [ref=e1340]: https:/.../tags/keeply/
+                  - textbox [ref=e1343]: https://blog.keeply.work/en/post/file-version-management-complete-guide/
+                  - generic [ref=e1351]:
+                    - generic [ref=e1352]: 301 - Permanent Redirect
+                    - combobox [ref=e1353]
+                  - button "編輯參數 caret-right" [ref=e1358] [cursor=pointer]:
+                    - text: 編輯參數
+                    - img "caret-right" [ref=e1360]
+                  - button "移除" [ref=e1363]:
+                    - img [ref=e1364]
+                - generic [ref=e1367]:
+                  - img [ref=e1369]
+                  - generic [ref=e1372]:
+                    - strong [ref=e1373]: Redirect POST requests?
+                    - text: To prevent the request method being changed to GET, use a 307/308 redirect instead.
+                    - link "Learn moredocumentation" [ref=e1374] [cursor=pointer]:
+                      - /url: https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/
+                      - text: Learn more
+                      - img "documentation" [ref=e1376]
+              - generic [ref=e1379]:
+                - generic [ref=e1380]:
+                  - button "https:/.../index.xml" [ref=e1384] [cursor=pointer]:
+                    - paragraph [ref=e1386]: https:/.../index.xml
+                  - textbox [ref=e1389]: https://blog.keeply.work/en/post/thesis-single-point-of-failure/
+                  - generic [ref=e1397]:
+                    - generic [ref=e1398]: 301 - Permanent Redirect
+                    - combobox [ref=e1399]
+                  - button "編輯參數 caret-right" [ref=e1404] [cursor=pointer]:
+                    - text: 編輯參數
+                    - img "caret-right" [ref=e1406]
+                  - button "移除" [ref=e1409]:
+                    - img [ref=e1410]
+                - generic [ref=e1413]:
+                  - img [ref=e1415]
+                  - generic [ref=e1418]:
+                    - strong [ref=e1419]: Redirect POST requests?
+                    - text: To prevent the request method being changed to GET, use a 307/308 redirect instead.
+                    - link "Learn moredocumentation" [ref=e1420] [cursor=pointer]:
+                      - /url: https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/
+                      - text: Learn more
+                      - img "documentation" [ref=e1422]
+              - generic [ref=e1425]:
+                - generic [ref=e1426]:
+                  - button "https://blog.keeply.work/es/" [ref=e1430] [cursor=pointer]:
+                    - paragraph [ref=e1432]: https://blog.keeply.work/es/
+                  - textbox [ref=e1435]: https://blog.keeply.work/en/
+                  - generic [ref=e1443]:
+                    - generic [ref=e1444]: 301 - Permanent Redirect
+                    - combobox [ref=e1445]
+                  - button "編輯參數 caret-right" [ref=e1450] [cursor=pointer]:
+                    - text: 編輯參數
+                    - img "caret-right" [ref=e1452]
+                  - button "移除" [ref=e1455]:
+                    - img [ref=e1456]
+                - generic [ref=e1459]:
+                  - img [ref=e1461]
+                  - generic [ref=e1464]:
+                    - strong [ref=e1465]: Redirect POST requests?
+                    - text: To prevent the request method being changed to GET, use a 307/308 redirect instead.
+                    - link "Learn moredocumentation" [ref=e1466] [cursor=pointer]:
+                      - /url: https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/
+                      - text: Learn more
+                      - img "documentation" [ref=e1468]
+              - generic [ref=e1471]:
+                - generic [ref=e1472]:
+                  - button "https://blog.keeply.work/es/post/..." [ref=e1476] [cursor=pointer]:
+                    - paragraph [ref=e1478]: https://blog.keeply.work/es/post/...
+                  - textbox [ref=e1481]: https://blog.keeply.work/en/post/autocad-wrong-version-crew/
+                  - generic [ref=e1489]:
+                    - generic [ref=e1490]: 301 - Permanent Redirect
+                    - combobox [ref=e1491]
+                  - button "編輯參數 caret-right" [ref=e1496] [cursor=pointer]:
+                    - text: 編輯參數
+                    - img "caret-right" [ref=e1498]
+                  - button "移除" [ref=e1501]:
+                    - img [ref=e1502]
+                - generic [ref=e1505]:
+                  - img [ref=e1507]
+                  - generic [ref=e1510]:
+                    - strong [ref=e1511]: Redirect POST requests?
+                    - text: To prevent the request method being changed to GET, use a 307/308 redirect instead.
+                    - link "Learn moredocumentation" [ref=e1512] [cursor=pointer]:
+                      - /url: https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/
+                      - text: Learn more
+                      - img "documentation" [ref=e1514]
+              - generic [ref=e1517]:
+                - generic [ref=e1518]:
+                  - button "https://blog.keeply.work/es/post/..." [ref=e1522] [cursor=pointer]:
+                    - paragraph [ref=e1524]: https://blog.keeply.work/es/post/...
+                  - textbox [ref=e1527]: https://blog.keeply.work/en/post/file-version-management-complete-guide/
+                  - generic [ref=e1535]:
+                    - generic [ref=e1536]: 301 - Permanent Redirect
+                    - combobox [ref=e1537]
+                  - button "編輯參數 caret-right" [ref=e1542] [cursor=pointer]:
+                    - text: 編輯參數
+                    - img "caret-right" [ref=e1544]
+                  - button "移除" [ref=e1547]:
+                    - img [ref=e1548]
+                - generic [ref=e1551]:
+                  - img [ref=e1553]
+                  - generic [ref=e1556]:
+                    - strong [ref=e1557]: Redirect POST requests?
+                    - text: To prevent the request method being changed to GET, use a 307/308 redirect instead.
+                    - link "Learn moredocumentation" [ref=e1558] [cursor=pointer]:
+                      - /url: https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/
+                      - text: Learn more
+                      - img "documentation" [ref=e1560]
+              - generic [ref=e1563]:
+                - generic [ref=e1564]:
+                  - button "https://blog.keeply.work/es/post/..." [ref=e1568] [cursor=pointer]:
+                    - paragraph [ref=e1570]: https://blog.keeply.work/es/post/...
+                  - textbox [ref=e1573]: https://blog.keeply.work/en/post/hidden-cost-shared-folders/
+                  - generic [ref=e1581]:
+                    - generic [ref=e1582]: 301 - Permanent Redirect
+                    - combobox [ref=e1583]
+                  - button "編輯參數 caret-right" [ref=e1588] [cursor=pointer]:
+                    - text: 編輯參數
+                    - img "caret-right" [ref=e1590]
+                  - button "移除" [ref=e1593]:
+                    - img [ref=e1594]
+                - generic [ref=e1597]:
+                  - img [ref=e1599]
+                  - generic [ref=e1602]:
+                    - strong [ref=e1603]: Redirect POST requests?
+                    - text: To prevent the request method being changed to GET, use a 307/308 redirect instead.
+                    - link "Learn moredocumentation" [ref=e1604] [cursor=pointer]:
+                      - /url: https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/
+                      - text: Learn more
+                      - img "documentation" [ref=e1606]
+              - generic [ref=e1609]:
+                - generic [ref=e1610]:
+                  - button "https://blog.keeply.work/es/post/..." [ref=e1614] [cursor=pointer]:
+                    - paragraph [ref=e1616]: https://blog.keeply.work/es/post/...
+                  - textbox [ref=e1619]: https://blog.keeply.work/en/post/install-keeply-windows-mac/
+                  - generic [ref=e1627]:
+                    - generic [ref=e1628]: 301 - Permanent Redirect
+                    - combobox [ref=e1629]
+                  - button "編輯參數 caret-right" [ref=e1634] [cursor=pointer]:
+                    - text: 編輯參數
+                    - img "caret-right" [ref=e1636]
+                  - button "移除" [ref=e1639]:
+                    - img [ref=e1640]
+                - generic [ref=e1643]:
+                  - img [ref=e1645]
+                  - generic [ref=e1648]:
+                    - strong [ref=e1649]: Redirect POST requests?
+                    - text: To prevent the request method being changed to GET, use a 307/308 redirect instead.
+                    - link "Learn moredocumentation" [ref=e1650] [cursor=pointer]:
+                      - /url: https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/
+                      - text: Learn more
+                      - img "documentation" [ref=e1652]
+              - generic [ref=e1655]:
+                - generic [ref=e1656]:
+                  - button "https://blog.keeply.work/es/post/..." [ref=e1660] [cursor=pointer]:
+                    - paragraph [ref=e1662]: https://blog.keeply.work/es/post/...
+                  - textbox [ref=e1665]: https://blog.keeply.work/en/post/keeply-getting-started-from-zero/
+                  - generic [ref=e1673]:
+                    - generic [ref=e1674]: 301 - Permanent Redirect
+                    - combobox [ref=e1675]
+                  - button "編輯參數 caret-right" [ref=e1680] [cursor=pointer]:
+                    - text: 編輯參數
+                    - img "caret-right" [ref=e1682]
+                  - button "移除" [ref=e1685]:
+                    - img [ref=e1686]
+                - generic [ref=e1689]:
+                  - img [ref=e1691]
+                  - generic [ref=e1694]:
+                    - strong [ref=e1695]: Redirect POST requests?
+                    - text: To prevent the request method being changed to GET, use a 307/308 redirect instead.
+                    - link "Learn moredocumentation" [ref=e1696] [cursor=pointer]:
+                      - /url: https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/
+                      - text: Learn more
+                      - img "documentation" [ref=e1698]
+              - generic [ref=e1701]:
+                - generic [ref=e1702]:
+                  - button "https://blog.keeply.work/es/pos..." [ref=e1706] [cursor=pointer]:
+                    - paragraph [ref=e1708]: https://blog.keeply.work/es/pos...
+                  - textbox [ref=e1711]: https://blog.keeply.work/en/post/thesis-single-point-of-failure/
+                  - generic [ref=e1719]:
+                    - generic [ref=e1720]: 301 - Permanent Redirect
+                    - combobox [ref=e1721]
+                  - button "編輯參數 caret-right" [ref=e1726] [cursor=pointer]:
+                    - text: 編輯參數
+                    - img "caret-right" [ref=e1728]
+                  - button "移除" [ref=e1731]:
+                    - img [ref=e1732]
+                - generic [ref=e1735]:
+                  - img [ref=e1737]
+                  - generic [ref=e1740]:
+                    - strong [ref=e1741]: Redirect POST requests?
+                    - text: To prevent the request method being changed to GET, use a 307/308 redirect instead.
+                    - link "Learn moredocumentation" [ref=e1742] [cursor=pointer]:
+                      - /url: https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/
+                      - text: Learn more
+                      - img "documentation" [ref=e1744]
+              - generic [ref=e1747]:
+                - generic [ref=e1748]:
+                  - button "https:/.../vibe-coding-rollback/" [ref=e1752] [cursor=pointer]:
+                    - paragraph [ref=e1754]: https:/.../vibe-coding-rollback/
+                  - textbox [ref=e1757]: https://blog.keeply.work/en/post/vibe-coding-rollback/
+                  - generic [ref=e1765]:
+                    - generic [ref=e1766]: 301 - Permanent Redirect
+                    - combobox [ref=e1767]
+                  - button "編輯參數 caret-right" [ref=e1772] [cursor=pointer]:
+                    - text: 編輯參數
+                    - img "caret-right" [ref=e1774]
+                  - button "移除" [ref=e1777]:
+                    - img [ref=e1778]
+                - generic [ref=e1781]:
+                  - img [ref=e1783]
+                  - generic [ref=e1786]:
+                    - strong [ref=e1787]: Redirect POST requests?
+                    - text: To prevent the request method being changed to GET, use a 307/308 redirect instead.
+                    - link "Learn moredocumentation" [ref=e1788] [cursor=pointer]:
+                      - /url: https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/
+                      - text: Learn more
+                      - img "documentation" [ref=e1790]
+              - generic [ref=e1793]:
+                - generic [ref=e1794]:
+                  - button "https://blog.keeply.work/es/pos..." [ref=e1798] [cursor=pointer]:
+                    - paragraph [ref=e1800]: https://blog.keeply.work/es/pos...
+                  - textbox [ref=e1803]: https://blog.keeply.work/en/post/what-keeply-saves-vs-backup-cloud/
+                  - generic [ref=e1811]:
+                    - generic [ref=e1812]: 301 - Permanent Redirect
+                    - combobox [ref=e1813]
+                  - button "編輯參數 caret-right" [ref=e1818] [cursor=pointer]:
+                    - text: 編輯參數
+                    - img "caret-right" [ref=e1820]
+                  - button "移除" [ref=e1823]:
+                    - img [ref=e1824]
+                - generic [ref=e1827]:
+                  - img [ref=e1829]
+                  - generic [ref=e1832]:
+                    - strong [ref=e1833]: Redirect POST requests?
+                    - text: To prevent the request method being changed to GET, use a 307/308 redirect instead.
+                    - link "Learn moredocumentation" [ref=e1834] [cursor=pointer]:
+                      - /url: https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/
+                      - text: Learn more
+                      - img "documentation" [ref=e1836]
+              - generic [ref=e1839]:
+                - navigation "分頁" [ref=e1840]:
+                  - generic [ref=e1841]:
+                    - button "上一步" [disabled] [ref=e1842]:
+                      - img
+                    - button "下一步" [ref=e1843]:
+                      - img
+                    - status [ref=e1844]:
+                      - paragraph [ref=e1846]:
+                        - strong [ref=e1847]: 1 到 25
+                        - text: ，共
+                        - strong [ref=e1848]: "127"
+                        - text: 個 個項目
+                - generic [ref=e1849]:
+                  - generic [ref=e1850]: 每頁的列數
+                  - button "每頁的列數" [ref=e1852] [cursor=pointer]: "25"
+              - generic [ref=e1853]:
+                - button "取消" [ref=e1854] [cursor=pointer]:
+                  - generic [ref=e1855]: 取消
+                - button "儲存" [ref=e1856] [cursor=pointer]:
+                  - generic [ref=e1857]: 儲存
+                - button "儲存並結束" [ref=e1858] [cursor=pointer]:
+                  - generic [ref=e1859]: 儲存並結束
+      - contentinfo [ref=e1860]:
+        - list [ref=e1862]:
+          - listitem [ref=e1863]:
+            - link "支援" [ref=e1864] [cursor=pointer]:
+              - /url: https://support.cloudflare.com
+          - listitem [ref=e1865]:
+            - link "系統狀態" [ref=e1866] [cursor=pointer]:
+              - /url: https://www.cloudflarestatus.com
+          - listitem [ref=e1867]:
+            - link "徵才" [ref=e1868] [cursor=pointer]:
+              - /url: https://www.cloudflare.com/careers/
+          - listitem [ref=e1869]:
+            - link "使用條款" [ref=e1870] [cursor=pointer]:
+              - /url: https://www.cloudflare.com/website-terms/
+          - listitem [ref=e1871]:
+            - link "報告網路安全問題" [ref=e1872] [cursor=pointer]:
+              - /url: https://www.cloudflare.com/disclosure/
+          - listitem [ref=e1873]:
+            - link "隱私權政策" [ref=e1874] [cursor=pointer]:
+              - /url: https://www.cloudflare.com/privacypolicy/
+          - listitem [ref=e1875]:
+            - button "具勾號和 x 的藍色和白色圓鈕，代表隱私權選項 Cookie 喜好設定" [ref=e1876] [cursor=pointer]:
+              - img "具勾號和 x 的藍色和白色圓鈕，代表隱私權選項" [ref=e1877]
+              - text: Cookie 喜好設定
+          - listitem [ref=e1878]:
+            - generic [ref=e1879]: © 2026 Cloudflare, Inc.
+  - generic:
+    - region "Notifications"
+  - generic [ref=e1899]:
+    - generic [ref=e1900]:
+      - heading "啟用 Agent Lee 存取權" [level=3] [ref=e1901]
+      - paragraph [ref=e1902]: Agent Lee 需要一個唯讀 API 令牌才能存取您的帳戶。
+      - button "閱讀更多" [ref=e1905] [cursor=pointer]:
+        - text: 閱讀更多
+        - img [ref=e1906]
+    - button "建立令牌" [ref=e1908] [cursor=pointer]

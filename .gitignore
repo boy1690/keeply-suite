@@ -24,5 +24,7 @@ _stage_website/
 # Claude Code harness — keep only settings.json tracked, ignore rest (skills/agents/commands/hooks/logs/memory/metrics/progress)
 .claude/*
 !.claude/settings.json
+# Agent Skills universal install dir (npx skills add → kepano/obsidian-skills etc.); per-machine, do not commit
+.agents/
 apps/blog/.claude/*
 !apps/blog/.claude/settings.json

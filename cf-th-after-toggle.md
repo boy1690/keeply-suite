@@ -1,0 +1,672 @@
+- generic [ref=e8]:
+  - generic [ref=e13]:
+    - complementary [ref=e14]:
+      - generic [ref=e15]:
+        - generic [ref=e16]:
+          - link [ref=e17] [cursor=pointer]:
+            - /url: /
+            - img [ref=e19]
+          - generic [ref=e22]:
+            - generic "Boy1690@gmail.com's Account"
+        - navigation [ref=e24]:
+          - generic [ref=e28]:
+            - button "快速搜尋..." [ref=e30] [cursor=pointer]:
+              - generic [ref=e32]:
+                - img [ref=e33]
+                - generic [ref=e35]: 快速搜尋...
+                - generic [ref=e36]: Ctrl K
+            - list [ref=e40]:
+              - listitem [ref=e41]:
+                - link "帳戶首頁" [ref=e42] [cursor=pointer]:
+                  - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/home
+                  - generic [ref=e43]:
+                    - img [ref=e44]
+                    - generic: 帳戶首頁
+              - listitem [ref=e47]:
+                - button "最近造訪" [ref=e48] [cursor=pointer]:
+                  - generic [ref=e49]:
+                    - img [ref=e50]
+                    - generic: 最近造訪
+                    - img [ref=e53]
+                - list [ref=e55]:
+                  - listitem [ref=e57]:
+                    - link "設定 管理帳戶" [ref=e58] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/configurations
+                      - generic:
+                        - generic: 設定
+                        - generic [ref=e59]: 管理帳戶
+                    - button "釘選" [ref=e61] [cursor=pointer]:
+                      - generic [ref=e62]:
+                        - img [ref=e63]
+                        - img [ref=e68]
+                  - listitem [ref=e70]:
+                    - link "規則 keeply.work" [ref=e71] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/keeply.work/rules
+                      - generic:
+                        - generic: 規則
+                        - generic [ref=e72]: keeply.work
+                    - button "釘選" [ref=e74] [cursor=pointer]:
+                      - generic [ref=e75]:
+                        - img [ref=e76]
+                        - img [ref=e81]
+                  - listitem [ref=e83]:
+                    - link "概觀 keeply.work / 規則" [ref=e84] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/keeply.work/rules/overview
+                      - generic:
+                        - generic: 概觀
+                        - generic:
+                          - generic [ref=e85]: keeply.work
+                          - generic [ref=e86]: /
+                          - generic: 規則
+                    - button "釘選" [ref=e88] [cursor=pointer]:
+                      - generic [ref=e89]:
+                        - img [ref=e90]
+                        - img [ref=e95]
+                  - listitem [ref=e97]:
+                    - link "大量重新導向轉接 傳遞和效能" [ref=e98] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/bulk-redirects
+                      - generic:
+                        - generic: 大量重新導向轉接
+                        - generic [ref=e99]: 傳遞和效能
+                    - button "釘選" [ref=e101] [cursor=pointer]:
+                      - generic [ref=e102]:
+                        - img [ref=e103]
+                        - img [ref=e108]
+                  - listitem [ref=e110]:
+                    - link "keeply.work 網域" [ref=e111] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/keeply.work
+                      - generic:
+                        - generic: keeply.work
+                        - generic [ref=e112]: 網域
+                    - button "釘選" [ref=e114] [cursor=pointer]:
+                      - generic [ref=e115]:
+                        - img [ref=e116]
+                        - img [ref=e121]
+              - listitem [ref=e123]:
+                - button "網域" [ref=e124] [cursor=pointer]:
+                  - generic [ref=e125]:
+                    - img [ref=e126]
+                    - generic: 網域
+                    - img [ref=e128]
+                - list [ref=e130]:
+                  - listitem [ref=e132]:
+                    - link "概覽" [ref=e133] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/domains/overview
+                      - generic: 概覽
+                  - listitem [ref=e134]:
+                    - link "註冊" [ref=e135] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/domains/registrations
+                      - generic: 註冊
+                  - listitem [ref=e136]:
+                    - link "轉移" [ref=e137] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/domains/transfers
+                      - generic: 轉移
+              - listitem [ref=e138]:
+                - generic [ref=e139]: Observe
+              - listitem [ref=e140]:
+                - button "Investigate" [ref=e141] [cursor=pointer]:
+                  - generic [ref=e142]:
+                    - img [ref=e143]
+                    - generic: Investigate
+                    - img [ref=e146]
+                - list [ref=e148]:
+                  - listitem [ref=e150]:
+                    - button "Log Explorer" [ref=e151] [cursor=pointer]:
+                      - generic:
+                        - generic: Log Explorer
+                      - img [ref=e152]
+                    - list [ref=e154]:
+                      - listitem:
+                        - link "記錄搜尋" [ref=e156] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/log-explorer/log-search
+                          - generic: 記錄搜尋
+                  - listitem [ref=e157]:
+                    - link "追蹤 測試版" [ref=e158] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/trace
+                      - generic: 追蹤
+                      - generic [ref=e160]: 測試版
+                  - listitem [ref=e161]:
+                    - link "Logpush" [ref=e162] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/logs
+                      - generic: Logpush
+              - listitem [ref=e163]:
+                - button "分析" [ref=e164] [cursor=pointer]:
+                  - generic [ref=e165]:
+                    - img [ref=e166]
+                    - generic: 分析
+                    - img [ref=e169]
+                - list [ref=e171]:
+                  - listitem [ref=e173]:
+                    - link "儀表板 新" [ref=e174] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/dashboards
+                      - generic: 儀表板
+                      - generic [ref=e176]: 新
+                  - listitem [ref=e177]:
+                    - link "帳戶分析" [ref=e178] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/analytics
+                      - generic: 帳戶分析
+                  - listitem [ref=e179]:
+                    - link "Web Analytics" [ref=e180] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/web-analytics
+                      - generic: Web Analytics
+              - listitem [ref=e181]:
+                - generic [ref=e182]: 組建
+              - listitem [ref=e183]:
+                - button "運算" [ref=e184] [cursor=pointer]:
+                  - generic [ref=e185]:
+                    - img [ref=e186]
+                    - generic: 運算
+                    - img [ref=e190]
+                - list [ref=e192]:
+                  - listitem [ref=e194]:
+                    - link "Workers 和 Pages" [ref=e195] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/workers-and-pages
+                      - generic: Workers 和 Pages
+                  - listitem [ref=e196]:
+                    - link "Observability" [ref=e197] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/observability
+                      - generic: Observability
+                  - listitem [ref=e198]:
+                    - link "Workers for Platforms" [ref=e199] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/workers-for-platforms
+                      - generic: Workers for Platforms
+                  - listitem [ref=e200]:
+                    - link "Containers" [ref=e201] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/workers/containers
+                      - generic: Containers
+                  - listitem [ref=e202]:
+                    - link "Durable Objects" [ref=e203] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/workers/durable-objects
+                      - generic: Durable Objects
+                  - listitem [ref=e204]:
+                    - link "Queues" [ref=e205] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/workers/queues
+                      - generic: Queues
+                  - listitem [ref=e206]:
+                    - link "Workflows" [ref=e207] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/workers/workflows
+                      - generic: Workflows
+                  - listitem [ref=e208]:
+                    - link "瀏覽器執行" [ref=e209] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/workers/browser-run
+                      - generic: 瀏覽器執行
+                  - listitem [ref=e210]:
+                    - link "VPC 測試版" [ref=e211] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/workers/vpc
+                      - generic: VPC
+                      - generic [ref=e213]: 測試版
+                  - listitem [ref=e214]:
+                    - button "電子郵件服務" [ref=e215] [cursor=pointer]:
+                      - generic:
+                        - generic: 電子郵件服務
+                      - img [ref=e216]
+                    - list [ref=e218]:
+                      - listitem:
+                        - link "電子郵件傳送 測試版" [ref=e220] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/email-service/sending
+                          - generic: 電子郵件傳送
+                          - generic [ref=e222]: 測試版
+                      - listitem:
+                        - link "電子郵件路由" [ref=e223] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/email-service/routing
+                          - generic: 電子郵件路由
+                  - listitem [ref=e224]:
+                    - link "Workers 方案" [ref=e225] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/workers/plans
+                      - generic: Workers 方案
+              - listitem [ref=e226]:
+                - button "AI" [ref=e227] [cursor=pointer]:
+                  - generic [ref=e228]:
+                    - img [ref=e229]
+                    - generic: AI
+                    - img [ref=e231]
+                - list [ref=e233]:
+                  - listitem [ref=e235]:
+                    - link "模型" [ref=e236] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/ai/models
+                      - generic: 模型
+                  - listitem [ref=e237]:
+                    - link "Workers AI" [ref=e238] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/ai/workers-ai
+                      - generic: Workers AI
+                  - listitem [ref=e239]:
+                    - link "AI 閘道" [ref=e240] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/ai/ai-gateway
+                      - generic: AI 閘道
+                  - listitem [ref=e241]:
+                    - link "Vectorize" [ref=e242] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/ai/vectorize
+                      - generic: Vectorize
+                  - listitem [ref=e243]:
+                    - link "AI 搜尋 測試版" [ref=e244] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/ai/ai-search
+                      - generic: AI 搜尋
+                      - generic [ref=e246]: 測試版
+              - listitem [ref=e247]:
+                - button "儲存空間和資料庫" [ref=e248] [cursor=pointer]:
+                  - generic [ref=e249]:
+                    - img [ref=e250]
+                    - generic: 儲存空間和資料庫
+                    - img [ref=e253]
+                - list [ref=e255]:
+                  - listitem [ref=e257]:
+                    - button "R2 物件儲存" [ref=e258] [cursor=pointer]:
+                      - generic:
+                        - generic: R2 物件儲存
+                      - img [ref=e259]
+                    - list [ref=e261]:
+                      - listitem:
+                        - link "概觀" [ref=e263] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/r2/overview
+                          - generic: 概觀
+                      - listitem:
+                        - link "資料移轉" [ref=e264] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/r2/slurper
+                          - generic: 資料移轉
+                  - listitem [ref=e265]:
+                    - link "Hyperdrive" [ref=e266] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/workers/hyperdrive
+                      - generic: Hyperdrive
+                  - listitem [ref=e267]:
+                    - link "Workers KV" [ref=e268] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/workers/kv/namespaces
+                      - generic: Workers KV
+                  - listitem [ref=e269]:
+                    - link "D1 SQL 資料庫" [ref=e270] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/workers/d1
+                      - generic: D1 SQL 資料庫
+                  - listitem [ref=e271]:
+                    - link "Analytics Engine" [ref=e272] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/workers/analytics-engine
+                      - generic: Analytics Engine
+                  - listitem [ref=e273]:
+                    - button "Pipelines 測試版" [ref=e274] [cursor=pointer]:
+                      - generic:
+                        - generic: Pipelines
+                        - generic [ref=e276]: 測試版
+                      - img [ref=e277]
+                    - list [ref=e279]:
+                      - listitem:
+                        - link "Pipelines" [ref=e281] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/pipelines/overview
+                          - generic: Pipelines
+                  - listitem [ref=e282]:
+                    - link "Secrets Store 新" [ref=e283] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/secrets-store
+                      - generic: Secrets Store
+                      - generic [ref=e285]: 新
+              - listitem [ref=e286]:
+                - button "媒體" [ref=e287] [cursor=pointer]:
+                  - generic [ref=e288]:
+                    - img [ref=e289]
+                    - generic: 媒體
+                    - img [ref=e292]
+                - list [ref=e294]:
+                  - listitem [ref=e296]:
+                    - button "Stream" [ref=e297] [cursor=pointer]:
+                      - generic:
+                        - generic: Stream
+                      - img [ref=e298]
+                    - list [ref=e300]:
+                      - listitem:
+                        - link "方案" [ref=e302] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/stream/plans
+                          - generic: 方案
+                  - listitem [ref=e303]:
+                    - button "Images" [ref=e304] [cursor=pointer]:
+                      - generic:
+                        - generic: Images
+                      - img [ref=e305]
+                    - list [ref=e307]:
+                      - listitem:
+                        - link "轉換" [ref=e309] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/images/transformations
+                          - generic: 轉換
+                      - listitem:
+                        - link "託管影像" [ref=e310] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/images/hosted
+                          - generic: 託管影像
+                      - listitem:
+                        - link "方案" [ref=e311] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/images/plans
+                          - generic: 方案
+                  - listitem [ref=e312]:
+                    - button "Realtime" [ref=e313] [cursor=pointer]:
+                      - generic:
+                        - generic: Realtime
+                      - img [ref=e314]
+                    - list [ref=e316]:
+                      - listitem:
+                        - link "RealtimeKit 測試版" [ref=e318] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/realtime/kit
+                          - generic: RealtimeKit
+                          - generic [ref=e320]: 測試版
+                      - listitem:
+                        - link "TURN 伺服器" [ref=e321] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/realtime/turn
+                          - generic: TURN 伺服器
+                      - listitem:
+                        - link "無伺服器 SFU" [ref=e322] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/realtime/sfu
+                          - generic: 無伺服器 SFU
+                      - listitem:
+                        - link "MoQ 中繼 Alpha" [ref=e323] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/realtime/moq
+                          - generic: MoQ 中繼
+                          - generic [ref=e325]: Alpha
+                      - listitem:
+                        - link "MoQ 基準" [ref=e326] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/realtime/moq-bench
+                          - generic: MoQ 基準
+              - listitem [ref=e327]:
+                - generic [ref=e328]: 保護與連線
+              - listitem [ref=e329]:
+                - button "應用程式安全性" [ref=e330] [cursor=pointer]:
+                  - generic [ref=e331]:
+                    - img [ref=e332]
+                    - generic: 應用程式安全性
+                    - img [ref=e335]
+                - list [ref=e337]:
+                  - listitem [ref=e339]:
+                    - link "安全性見解" [ref=e340] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/security-center
+                      - generic: 安全性見解
+                  - listitem [ref=e341]:
+                    - link "WAF" [ref=e342] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/application-security/waf
+                      - generic: WAF
+                  - listitem [ref=e343]:
+                    - link "調查" [ref=e344] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/application-security/investigate
+                      - generic: 調查
+                  - listitem [ref=e345]:
+                    - link "基礎結構" [ref=e346] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/security-center/inventory
+                      - generic: 基礎結構
+                  - listitem [ref=e347]:
+                    - link "Turnstile" [ref=e348] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/turnstile
+                      - generic: Turnstile
+              - listitem [ref=e349]:
+                - link "Zero Trust" [ref=e350] [cursor=pointer]:
+                  - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/zero-trust/landing-page
+                  - generic [ref=e351]:
+                    - img [ref=e352]
+                    - generic: Zero Trust
+              - listitem [ref=e355]:
+                - button "網路功能" [ref=e356] [cursor=pointer]:
+                  - generic [ref=e357]:
+                    - img [ref=e358]
+                    - generic: 網路功能
+                    - img [ref=e360]
+                - list [ref=e362]:
+                  - listitem [ref=e364]:
+                    - link "概觀 新" [ref=e365] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/magic-networks/overview
+                      - generic: 概觀
+                      - generic [ref=e367]: 新
+                  - listitem [ref=e368]:
+                    - button "深入解析" [ref=e369] [cursor=pointer]:
+                      - generic:
+                        - generic: 深入解析
+                      - img [ref=e370]
+                    - list [ref=e372]:
+                      - listitem:
+                        - link "網路流量" [ref=e374] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/networking-insights/analytics/network-analytics/flow-analytics
+                          - generic: 網路流量
+                  - listitem [ref=e375]:
+                    - link "Tunnels 新" [ref=e376] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/tunnels
+                      - generic: Tunnels
+                      - generic [ref=e378]: 新
+                  - listitem [ref=e379]:
+                    - link "網格 測試版" [ref=e380] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/mesh
+                      - generic: 網格
+                      - generic [ref=e382]: 測試版
+                  - listitem [ref=e383]:
+                    - button "IP 位址" [ref=e384] [cursor=pointer]:
+                      - generic:
+                        - generic: IP 位址
+                      - img [ref=e385]
+                    - list [ref=e387]:
+                      - listitem:
+                        - link "位址空間" [ref=e389] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/ip-addresses/address-space
+                          - generic: 位址空間
+                      - listitem:
+                        - link "位址對應" [ref=e390] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/ip-addresses/proxy-ips
+                          - generic: 位址對應
+              - listitem [ref=e391]:
+                - button "傳遞和效能" [expanded] [ref=e392] [cursor=pointer]:
+                  - generic [ref=e393]:
+                    - img [ref=e394]
+                    - generic: 傳遞和效能
+                    - img [ref=e396]
+                - list [ref=e398]:
+                  - listitem [ref=e400]:
+                    - link "大量重新導向轉接" [ref=e401] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/bulk-redirects
+                      - generic: 大量重新導向轉接
+                  - listitem [ref=e402]:
+                    - link "Load Balancing" [ref=e403] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/load-balancing
+                      - generic: Load Balancing
+                  - listitem [ref=e404]:
+                    - button "網頁標籤管理" [ref=e405] [cursor=pointer]:
+                      - generic:
+                        - generic: 網頁標籤管理
+                      - img [ref=e406]
+                    - list [ref=e408]:
+                      - listitem:
+                        - link "標籤設定" [ref=e410] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/tag-management/zaraz
+                          - generic: 標籤設定
+                      - listitem:
+                        - link "同意" [ref=e411] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/tag-management/consent
+                          - generic: 同意
+                      - listitem:
+                        - link "歷程記錄" [ref=e412] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/tag-management/history
+                          - generic: 歷程記錄
+                      - listitem:
+                        - link "監視" [ref=e413] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/tag-management/monitoring
+                          - generic: 監視
+                      - listitem:
+                        - link "設定" [ref=e414] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/tag-management/settings
+                          - generic: 設定
+                      - listitem:
+                        - link "Zaraz 方案" [ref=e415] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/tag-management/plans
+                          - generic: Zaraz 方案
+                      - listitem:
+                        - link "Google 標籤閘道" [ref=e416] [cursor=pointer]:
+                          - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/tag-management/google-tag-gateway
+                          - generic: Google 標籤閘道
+              - listitem [ref=e417]
+              - listitem [ref=e419]:
+                - button "管理帳戶" [ref=e420] [cursor=pointer]:
+                  - generic [ref=e421]:
+                    - img [ref=e422]
+                    - generic: 管理帳戶
+                    - img [ref=e425]
+                - list [ref=e427]:
+                  - listitem [ref=e429]:
+                    - link "成員" [ref=e430] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/members
+                      - generic: 成員
+                  - listitem [ref=e431]:
+                    - link "計費" [ref=e432] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/billing
+                      - generic: 計費
+                  - listitem [ref=e433]:
+                    - link "帳戶 API 權杖" [ref=e434] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/api-tokens
+                      - generic: 帳戶 API 權杖
+                  - listitem [ref=e435]:
+                    - link "稽核記錄" [ref=e436] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/audit-log
+                      - generic: 稽核記錄
+                  - listitem [ref=e437]:
+                    - link "通知" [ref=e438] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/notifications
+                      - generic: 通知
+                  - listitem [ref=e439]:
+                    - link "共用設定 Alpha" [ref=e440] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/shared-configurations
+                      - generic: 共用設定
+                      - generic [ref=e442]: Alpha
+                  - listitem [ref=e443]:
+                    - link "封鎖的內容" [ref=e444] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/blocked-content
+                      - generic: 封鎖的內容
+                  - listitem [ref=e445]:
+                    - link "濫用報告 測試版" [ref=e446] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/abuse-reports
+                      - generic: 濫用報告
+                      - generic [ref=e448]: 測試版
+                  - listitem [ref=e449]:
+                    - link "碳影響報告" [ref=e450] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/carbon
+                      - generic: 碳影響報告
+                  - listitem [ref=e451]:
+                    - link "設定" [ref=e452] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/configurations
+                      - generic: 設定
+                  - listitem [ref=e453]:
+                    - link "資源標籤 測試版" [ref=e454] [cursor=pointer]:
+                      - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/tags
+                      - generic: 資源標籤
+                      - generic [ref=e456]: 測試版
+      - button "展開側邊欄" [ref=e459]:
+        - generic [ref=e460]:
+          - img
+    - generic [ref=e461]:
+      - banner [ref=e462]:
+        - generic [ref=e463]:
+          - button "Ask AI" [ref=e464] [cursor=pointer]:
+            - img [ref=e465]
+            - generic [ref=e468]: Ask AI
+          - link "支援" [ref=e469] [cursor=pointer]:
+            - /url: /?to=/:account/support
+            - img [ref=e470]
+            - generic [ref=e472]: 支援
+          - button "User menu" [ref=e473] [cursor=pointer]:
+            - img [ref=e474]
+      - main [ref=e476]:
+        - main [ref=e479]:
+          - generic [ref=e481]:
+            - paragraph [ref=e484]:
+              - generic [ref=e486]: 傳遞和效能
+            - list [ref=e487]:
+              - listitem [ref=e488]:
+                - link "大量重新導向轉接清單" [ref=e489] [cursor=pointer]:
+                  - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/bulk-redirects
+              - img [ref=e491]
+              - listitem [ref=e493]:
+                - link "名稱清單" [ref=e494] [cursor=pointer]:
+                  - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/bulk-redirects/redirect-list/858b239b8b3f423794456776339e79c3
+              - img [ref=e496]
+              - listitem [ref=e498]:
+                - link "新增 URL" [ref=e499] [cursor=pointer]:
+                  - /url: /b1a8a42f2d5a3865fca1009cd3f028ce/bulk-redirects/redirect-list/858b239b8b3f423794456776339e79c3/add-redirects
+              - img [ref=e501]
+              - listitem [ref=e503]:
+                - strong [ref=e504]: 編輯 URL
+            - heading "編輯 URL 重新導向轉接" [level=1] [ref=e505]
+            - generic [ref=e1745]:
+              - generic [ref=e1746]:
+                - generic [ref=e1747]: 搜尋
+                - generic [ref=e1749]:
+                  - img [ref=e1751]
+                  - textbox "搜尋" [ref=e1753]
+                - button "搜尋" [ref=e1755] [cursor=pointer]:
+                  - generic [ref=e1756]: 搜尋
+              - generic [ref=e1757]:
+                - generic [ref=e1758]: 來源 URL
+                - generic [ref=e1759]: 目標 URL
+                - generic [ref=e1760]: 狀態
+              - generic [ref=e1764]:
+                - generic [ref=e1765]:
+                  - button "https://blog.keeply.work/th/" [ref=e1769] [cursor=pointer]:
+                    - paragraph [ref=e1771]: https://blog.keeply.work/th/
+                  - textbox [ref=e1774]: https://blog.keeply.work/en/
+                  - generic [ref=e1782]:
+                    - generic [ref=e1783]: 301 - Permanent Redirect
+                    - combobox [ref=e1784]
+                  - generic [ref=e1788]:
+                    - button "編輯參數 caret-right" [ref=e1789] [cursor=pointer]:
+                      - text: 編輯參數
+                      - img "caret-right" [ref=e1791]
+                    - generic [ref=e1817]:
+                      - generic [ref=e1820]:
+                        - checkbox "保留查詢字串" [ref=e1821] [cursor=pointer]
+                        - generic [ref=e1822]: 保留查詢字串
+                      - generic [ref=e1825]:
+                        - checkbox "包含子網域" [ref=e1826] [cursor=pointer]
+                        - generic [ref=e1827]: 包含子網域
+                      - generic [ref=e1830]:
+                        - checkbox "子路徑符合" [active] [ref=e1831] [cursor=pointer]
+                        - generic [ref=e1832]: 子路徑符合
+                      - generic [ref=e1835]:
+                        - checkbox "保留路徑尾碼" [disabled] [ref=e1836]
+                        - generic [ref=e1837]: 保留路徑尾碼
+                  - button "移除" [ref=e1794]:
+                    - img [ref=e1795]
+                - generic [ref=e1798]:
+                  - img [ref=e1800]
+                  - generic [ref=e1803]:
+                    - strong [ref=e1804]: Redirect POST requests?
+                    - text: To prevent the request method being changed to GET, use a 307/308 redirect instead.
+                    - link "Learn moredocumentation" [ref=e1805] [cursor=pointer]:
+                      - /url: https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/
+                      - text: Learn more
+                      - img "documentation" [ref=e1807]
+              - generic [ref=e1810]:
+                - button "取消" [ref=e1811] [cursor=pointer]:
+                  - generic [ref=e1812]: 取消
+                - button "儲存" [ref=e1813] [cursor=pointer]:
+                  - generic [ref=e1814]: 儲存
+                - button "儲存並結束" [ref=e1815] [cursor=pointer]:
+                  - generic [ref=e1816]: 儲存並結束
+      - contentinfo [ref=e1696]:
+        - list [ref=e1698]:
+          - listitem [ref=e1699]:
+            - link "支援" [ref=e1700] [cursor=pointer]:
+              - /url: https://support.cloudflare.com
+          - listitem [ref=e1701]:
+            - link "系統狀態" [ref=e1702] [cursor=pointer]:
+              - /url: https://www.cloudflarestatus.com
+          - listitem [ref=e1703]:
+            - link "徵才" [ref=e1704] [cursor=pointer]:
+              - /url: https://www.cloudflare.com/careers/
+          - listitem [ref=e1705]:
+            - link "使用條款" [ref=e1706] [cursor=pointer]:
+              - /url: https://www.cloudflare.com/website-terms/
+          - listitem [ref=e1707]:
+            - link "報告網路安全問題" [ref=e1708] [cursor=pointer]:
+              - /url: https://www.cloudflare.com/disclosure/
+          - listitem [ref=e1709]:
+            - link "隱私權政策" [ref=e1710] [cursor=pointer]:
+              - /url: https://www.cloudflare.com/privacypolicy/
+          - listitem [ref=e1711]:
+            - button "具勾號和 x 的藍色和白色圓鈕，代表隱私權選項 Cookie 喜好設定" [ref=e1712] [cursor=pointer]:
+              - img "具勾號和 x 的藍色和白色圓鈕，代表隱私權選項" [ref=e1713]
+              - text: Cookie 喜好設定
+          - listitem [ref=e1714]:
+            - generic [ref=e1715]: © 2026 Cloudflare, Inc.
+  - generic [ref=e1735]:
+    - generic [ref=e1736]:
+      - heading "啟用 Agent Lee 存取權" [level=3] [ref=e1737]
+      - paragraph [ref=e1738]: Agent Lee 需要一個唯讀 API 令牌才能存取您的帳戶。
+      - button "閱讀更多" [ref=e1741] [cursor=pointer]:
+        - text: 閱讀更多
+        - img [ref=e1742]
+    - button "建立令牌" [ref=e1744] [cursor=pointer]
+  - generic:
+    - region "Notifications"

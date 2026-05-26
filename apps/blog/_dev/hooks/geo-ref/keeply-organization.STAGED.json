@@ -1,0 +1,61 @@
+{
+  "_README": "SUPERSEDED 2026-05-22 by the Playwright recon (see ../geo-recon-report.md). The LIVE keeply.work apex ALREADY emits a richer @graph (Organization + WebSite + SoftwareApplication + Person + HowTo + FAQPage, real price $599) via apps/website/_dev/inject-schema.js. Do NOT deploy this file. Remaining real gaps after recon: (1) Organization.founder — FIXED in inject-schema.js; (2) foundingDate — needs a real value; (3) Wikidata sameAs — deferred (brand name is crowded: keeply.com/getkeeply.io/keeply.se all hold it; notability-risky). Kept only as a shape reference.",
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://keeply.work/#organization",
+      "name": "Keeply",
+      "url": "https://keeply.work",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://keeply.work/logo.svg"
+      },
+      "description": "Keeply is a file-version guardian for project teams: automatic version history, delivery tracking, and version protection for the files on your computer, NAS, or shared drive.",
+      "foundingDate": "TODO_VERIFY_YYYY-MM-DD",
+      "founder": { "@id": "https://keeply.work/#founder" },
+      "knowsAbout": [
+        "file version control",
+        "version history",
+        "file backup",
+        "delivery tracking",
+        "document version management"
+      ],
+      "sameAs": [
+        "TODO_WIKIDATA_URL  (create the Wikidata entry first — this is the G3 deliverable)"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://keeply.work/#founder",
+      "name": "Ting-Wei Tsao",
+      "url": "https://keeply.work/about",
+      "jobTitle": "Founder",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "National Taiwan University of Science and Technology"
+      },
+      "knowsAbout": ["file version control", "civil engineering", "construction document workflows"],
+      "sameAs": [
+        "https://www.linkedin.com/in/ting-wei-tsao-b57480152"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://keeply.work/#software",
+      "name": "Keeply",
+      "url": "https://keeply.work",
+      "description": "Desktop app that keeps an always-on version history of your files and tags each delivery, so you can return to any past version — without learning developer tools.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Windows, macOS",
+      "publisher": { "@id": "https://keeply.work/#organization" },
+      "offers": {
+        "@type": "Offer",
+        "price": "TODO_VERIFY_PRICE",
+        "priceCurrency": "TODO_VERIFY_CURRENCY",
+        "url": "https://keeply.work"
+      },
+      "_offers_note": "Keeply is solo-operated; fill real pricing tiers or drop the offers node entirely rather than guessing. Omit aggregateRating until you have real, verifiable reviews (fabricated ratings violate P0.4)."
+    }
+  ]
+}

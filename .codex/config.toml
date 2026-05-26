@@ -1,0 +1,8 @@
+[mcp_servers.ubersuggest]
+url = "https://ubersuggest-mcp.neilpatelapi.com/mcp"
+
+[shell_environment_policy]
+inherit = "core"
+
+[shell_environment_policy.set]
+IBV_SPECS_DIR = "Z:/keeply-blog"

@@ -2,5 +2,78 @@
   "env": {
     "IBV_SPECS_DIR": "Z:/keeply-blog"
   },
-  "hooks": {}
+  "permissions": {
+    "allow": [
+      "Edit(.claude/hooks/**)",
+      "Bash(git -C /d/tools/doing/keeply-blog push:*)",
+      "Write(.claude/hooks/**)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .claude/hooks/download-url-guard.js"
+          },
+          {
+            "type": "command",
+            "command": "node .claude/hooks/app-boundary-guard.js"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .claude/hooks/i18n-parity-gate.js",
+            "if": "Bash(git *)"
+          },
+          {
+            "type": "command",
+            "command": "node .claude/hooks/blog-content-gate.js",
+            "if": "Bash(git *)"
+          },
+          {
+            "type": "agent",
+            "prompt": "A git commit is about to run in the keeply-suite monorepo. Your job: auto-review staged keeply-blog content for BWF voice / E-E-A-T issues that deterministic lint cannot catch.\n\nSTEP 1 — cheap gate. Run: git diff --cached --name-only . If NO staged path starts with \"apps/blog/content/\", respond exactly \"PASS: no blog content staged.\" and stop. Do not read anything else. Do not block.\n\nSTEP 2 — only if blog content is staged. Identify the staged slug(s) from paths shaped apps/blog/content/{locale}/post/{slug}/... . For each unique slug, read the master draft: prefer apps/blog/content/zh-tw/post/{slug}/index.md, otherwise apps/blog/content/english/post/{slug}/index.md . Then read the rubric file .claude/agents/bwf-voice-reviewer.md and apply it to each draft.\n\nSTEP 3 — report in Traditional Chinese, concise: list findings as P0 / P1 / observation, each with location (H2 or first sentence) + original text + why + fix. Lead with the concrete example, not the abstract rule.\n\nVERDICT RULE (be conservative): Block the commit ONLY on an unambiguous P0 positioning red line — Keeply framed as a Git-for-non-developers tool (P0.2), Git terminology leaking into prose or UI strings (P0.1), or the false claim that Cmd+S triggers Keeply (mechanism error). For every judgment call, every P1, every observation, and any time you are unsure: ALLOW the commit and just surface the findings. Never block on a maybe. Finish with exactly one final line: \"VERDICT: ALLOW\" or \"VERDICT: BLOCK - <one-line reason>\".",
+            "if": "Bash(git commit*)",
+            "timeout": 180,
+            "model": "claude-sonnet-4-6",
+            "statusMessage": "BWF voice review (blog)…"
+          }
+        ]
+      },
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"$CLAUDE_PROJECT_DIR/apps/blog/_dev/red-team-gate.py\""
+          },
+          {
+            "type": "command",
+            "command": "python \"$CLAUDE_PROJECT_DIR/apps/blog/_dev/hooks/bwf-skeleton-completeness-gate.py\""
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"$CLAUDE_PROJECT_DIR/apps/blog/_dev/hooks/memory-size-guard.py\""
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {
+    "marketing-skills@marketingskills": true
+  }
 }

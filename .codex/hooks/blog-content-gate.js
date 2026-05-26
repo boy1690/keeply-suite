@@ -1,0 +1,176 @@
+#!/usr/bin/env node
+/**
+ * blog-content-gate.js — PreToolUse(Bash) hook.
+ *
+ * When a `git commit` is about to run AND staged files include apps/blog/content/**,
+ * run the blog audit battery:
+ *
+ *   BLOCKING (exit 1 = block the commit):
+ *     - _dev/design/audit_covers.py            (cover.svg copy-paste / missing-asset leaks)
+ *     - _dev/blog/language-consistency-audit.py (English tech-term leaks in non-EN locales)
+ *
+ *   ADVISORY (never blocks — surfaced only when a STAGED slug has a HARD finding,
+ *   so the accepted baseline issues in other articles don't spam every commit):
+ *     - _dev/blog/title-audit.js               (P1.11 title formula)
+ *     - _dev/blog/internal-link-audit.js       (P1.15 pillar ↔ cluster links)
+ *
+ * The judgment-call voice/E-E-A-T review (P0.2 / P1.17/18/23 / translation-腔 …) is
+ * handled by a separate `type: agent` hook running bwf-voice-reviewer.
+ *
+ * Fail-open: missing python/script or non-0/1 exit → warn, don't block. Only a clean
+ * exit-1 on a BLOCKING audit blocks.
+ *
+ * Contract (hook mode): exit 0 = allow · exit 2 + stderr = block.
+ * CLI: `node .claude/hooks/blog-content-gate.js --check` runs the full battery
+ *      (advisory unscoped) and exits 1 only on a BLOCKING violation.
+ *
+ * @version 1.1.0  @since 2026-05-20
+ */
+const fs = require('fs');
+const path = require('path');
+const { execFileSync, spawnSync } = require('child_process');
+
+const BLOG_REL = path.join('apps', 'blog');
+const BLOCKING = [
+  { name: 'cover-leak', script: path.join('_dev', 'design', 'audit_covers.py') },
+  { name: 'language-consistency', script: path.join('_dev', 'blog', 'language-consistency-audit.py') },
+  { name: 'keeply-mechanism', script: path.join('_dev', 'blog', 'keeply-mechanism-audit.py') },
+];
+const ADVISORY = [
+  { name: 'title-audit', script: path.join('_dev', 'blog', 'title-audit.js') },
+  { name: 'internal-link', script: path.join('_dev', 'blog', 'internal-link-audit.js') },
+];
+
+function isGitCommit(cmd) {
+  return /\bgit\s+(?:-\S+\s+)*commit(?![\w-])/.test(cmd);
+}
+
+function pickPython() {
+  for (const c of ['python', 'python3', 'py']) {
+    try {
+      const r = spawnSync(c, ['--version'], { encoding: 'utf8' });
+      if (!r.error && r.status === 0) return c;
+    } catch { /* try next */ }
+  }
+  return null;
+}
+
+function stagedBlogSlugs(staged) {
+  const set = new Set();
+  for (const f of staged.split(/\r?\n/)) {
+    const m = f.trim().match(/^apps\/blog\/content\/[^/]+\/post\/([^/]+)\//);
+    if (m) set.add(m[1]);
+  }
+  return [...set];
+}
+
+/** Which of `slugs` appear inside a HARD context in an audit's output. */
+function slugsWithHard(out, slugs) {
+  if (!slugs.length) return [];
+  const lines = out.split(/\r?\n/);
+  const hit = new Set();
+  let sectionHard = false;
+  for (const line of lines) {
+    if (/^#{1,6}\s/.test(line)) sectionHard = /HARD/.test(line); // markdown section header
+    const lineHard = sectionHard || /HARD/.test(line);           // or a table row carrying HARD
+    if (!lineHard) continue;
+    for (const s of slugs) if (line.includes(s)) hit.add(s);
+  }
+  return [...hit];
+}
+
+/** BLOCKING python audits → {skipped, failures}. */
+function runBlocking(blogDir) {
+  const py = pickPython();
+  if (!py) return { skipped: 'python not found', failures: [] };
+  const failures = [];
+  for (const a of BLOCKING) {
+    const abs = path.join(blogDir, a.script);
+    if (!fs.existsSync(abs)) continue;
+    const r = spawnSync(py, [a.script], { cwd: blogDir, encoding: 'utf8', maxBuffer: 8 * 1024 * 1024 });
+    if (r.error) continue; // fail-open
+    if (r.status === 1) failures.push({ name: a.name, out: `${r.stdout || ''}${r.stderr || ''}` });
+  }
+  return { skipped: null, failures };
+}
+
+/** ADVISORY node audits → notes[]. slugs=null means report any HARD (CLI full mode). */
+function runAdvisory(blogDir, slugs) {
+  const notes = [];
+  for (const a of ADVISORY) {
+    const abs = path.join(blogDir, a.script);
+    if (!fs.existsSync(abs)) continue;
+    const r = spawnSync('node', [a.script], { cwd: blogDir, encoding: 'utf8', maxBuffer: 8 * 1024 * 1024 });
+    if (r.error) continue; // fail-open
+    const out = `${r.stdout || ''}${r.stderr || ''}`;
+    if (slugs === null) {
+      const n = (out.match(/HARD/g) || []).length;
+      if (n) notes.push(`${a.name}: ${n} HARD line(s) across corpus (advisory)`);
+    } else {
+      const hits = slugsWithHard(out, slugs);
+      if (hits.length) notes.push(`${a.name}: HARD on staged slug(s) — ${hits.join(', ')} (advisory)`);
+    }
+  }
+  return notes;
+}
+
+function report(failures) {
+  let msg = `\n❌ blog-content-gate: ${failures.length} BLOCKING audit(s) failed on staged blog content.\n`;
+  for (const f of failures) {
+    const tail = f.out.trim().split(/\r?\n/).slice(-25).join('\n');
+    msg += `\n── ${f.name} ──\n${tail}\n`;
+  }
+  msg += '\n  Fix the violations above (--fix where supported), then re-stage & commit.\n';
+  return msg;
+}
+
+// ---- CLI check mode ------------------------------------------------------
+function cliCheck() {
+  const blogDir = path.join(process.cwd(), BLOG_REL);
+  if (!fs.existsSync(blogDir)) { process.stdout.write('blog-content-gate --check: apps/blog not found (skipped).\n'); return 0; }
+  const { skipped, failures } = runBlocking(blogDir);
+  const advisory = runAdvisory(blogDir, null);
+  if (advisory.length) process.stdout.write('advisory:\n  ' + advisory.join('\n  ') + '\n');
+  if (skipped) { process.stdout.write(`blog-content-gate --check: ${skipped} (blocking audits skipped).\n`); return 0; }
+  if (failures.length) { process.stderr.write(report(failures)); return 1; }
+  process.stdout.write('blog-content-gate --check: blocking audits clean.\n');
+  return 0;
+}
+
+// ---- Hook mode -----------------------------------------------------------
+async function hook() {
+  const chunks = [];
+  for await (const chunk of process.stdin) chunks.push(chunk);
+  let input;
+  try { input = JSON.parse(Buffer.concat(chunks).toString()); } catch { process.exit(0); }
+
+  if ((input.tool_name || '') !== 'Bash') process.exit(0);
+  const cmd = (input.tool_input && input.tool_input.command) || '';
+  if (!isGitCommit(cmd)) process.exit(0);
+
+  const root = process.cwd();
+  const blogDir = path.join(root, BLOG_REL);
+  if (!fs.existsSync(blogDir)) process.exit(0);
+
+  let staged;
+  try { staged = execFileSync('git', ['diff', '--cached', '--name-only'], { cwd: root, encoding: 'utf8' }); }
+  catch { process.exit(0); } // not a repo / git missing → fail-open
+  const slugs = stagedBlogSlugs(staged);
+  if (!slugs.length) process.exit(0); // no blog content staged
+
+  let blocking, advisory;
+  try { blocking = runBlocking(blogDir); advisory = runAdvisory(blogDir, slugs); } catch { process.exit(0); }
+
+  const advNote = advisory.length ? '\nℹ️  blog-content-gate advisory (not blocking):\n  ' + advisory.join('\n  ') + '\n' : '';
+
+  if (blocking.skipped) { process.stderr.write(`⚠️ blog-content-gate: ${blocking.skipped} — blocking audits skipped (fail-open).${advNote}\n`); process.exit(0); }
+  if (blocking.failures.length) { process.stderr.write(report(blocking.failures) + advNote); process.exit(2); }
+  if (advNote) process.stderr.write(advNote); // surfaced, non-blocking
+  process.exit(0);
+}
+
+if (process.argv.includes('--check')) {
+  process.exit(cliCheck());
+} else {
+  hook().catch(() => process.exit(0));
+}

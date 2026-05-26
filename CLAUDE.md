@@ -12,6 +12,9 @@
 |-----|-------|--------|---------------------------|
 | `apps/blog/` | Hugo 0.160.1 extended | `blog.keeply.work` | [apps/blog/CLAUDE.md](apps/blog/CLAUDE.md) |
 | `apps/website/` | Vanilla HTML + Node build (Tailwind + custom build.js + fingerprint + SRI) | `keeply.work` (apex) | [apps/website/CLAUDE.md](apps/website/CLAUDE.md) |
+| `apps/social/threads/` | Threads distribution — **experimental, kill-gated** (overrides SOC's Threads exclusion; see its CLAUDE.md) | Threads (social) | [apps/social/threads/CLAUDE.md](apps/social/threads/CLAUDE.md) |
+
+> `apps/social/` is a **distribution layer** (not a build/deploy app): it rewrites `/blg` content into platform-native form and backlinks to the `keeply.work` canonical home. The Threads project is a time-boxed experiment — see its CLAUDE.md validation gate.
 
 ---
 

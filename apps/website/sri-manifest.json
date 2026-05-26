@@ -1,5 +1,5 @@
 {
-  "style.css": "sha384-0kbqBVQT7yMaCa/yXTy7PyeytD4HGj7A0e/YKn8vg7aH3UXNrmLB6yYKww3X1O0O",
+  "style.css": "sha384-2MFgQ5LhmRk0WJhm1E3MBqO4Xd0t1T+3huW94EkEIV6HQCnMqnsg66gY2CdYoxgY",
   "components.dbca3fea14.js": "sha384-XrwrKcjukUrI2TY6t2yoY7ynTyUQR3vJRWMrwKs2Hwm+IHByzuOZCsi9x1HseDJS",
   "i18n-loader.e0abab46fe.js": "sha384-xuSjKq6BPU6RFWDTrcHoRD6A+DZwVA9FxzIUvCsbXC4/DAOh01WrmuS38fjPHieY",
   "i18n.e33fbacc84.js": "sha384-/THLN4mk73Q8DNsKlPjbL2b4VhzTJkKmWVJMAC8sP/+vF5S828q7sX0AyNuk89xC",
@@ -10,6 +10,7 @@
   "team-notify.73d70ab047.js": "sha384-kQUIeDWtAKHyIrSPoncROrE3SSvzakx5e3Ll8GT1Zjgqqr7nAyhVHZ7qyXYC+wVU",
   "activate-license.ae583064ea.js": "sha384-W8ZDBiOjDHDcXhi+V/B19Sc82MN/14+aIEfQaAxrD6S8+ZsGsCdq8CxFiuja6CTb",
   "paddle-checkout.e45ba3b977.js": "sha384-nNpjxDJ80ngRYOkyVdYcEcac+Q9Lss/2dblaqirutM1FMMev5gJpxgepaxHPX4Lp",
+  "file-recovery-diagnostic.52b25f583e.js": "sha384-kX+1OoKEU9UF5TlKD0radtzjeDTA1FARYg2CqFElPhKfYgg1JmCc9sMWYtM/bcfn",
   "i18n/zh-TW.439fac8e6b.js": "sha384-IRnrGuCkvgzmHsAhvTP7oPR5GR1FtaNsByGiT3nAmW2tiU8BYJENiq5/yE1ZiCeL",
   "i18n/zh-CN.bd901bf241.js": "sha384-Vf+YncOa1H+Mg5wlLFy/dB53GvHcdsg3vC3Hpb/kPvwYkq0+5MwiPZtwu744OtLt",
   "i18n/en.26e68c384b.js": "sha384-kyvDC+TeFnfZ+vBCD5C1MAtvxlSnSRUNE/YzVCV6CyF5xZcBvMrlehx1KgUAjf0O",

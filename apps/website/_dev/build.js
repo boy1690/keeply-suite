@@ -458,6 +458,9 @@ function generateSitemap() {
   // Spec 042: install pages (Stage 1 = root + en only, expand later).
   xml += generateInstallSitemapEntries(today);
 
+  // Spec 052: free diagnostic tool — /tools/can-i-recover-my-file (en + zh-TW).
+  xml += generateToolsSitemapEntries(today);
+
   xml += '</urlset>\n';
   return xml;
 }
@@ -495,6 +498,31 @@ function generateInstallSitemapEntries(today) {
     xml += '  </url>\n';
   }
 
+  return xml;
+}
+
+// Spec 052: free diagnostic tool pages. English at /tools/, zh-TW at /zh-TW/tools/
+// (mirrors the build-comparisons.js bilingual scope; P0.4 exception, en+zh-TW only).
+function generateToolsSitemapEntries(today) {
+  const TOOL_LOCALES = ['en', 'zh-TW'];
+  const toolPath = 'can-i-recover-my-file.html';
+  const urlFor = (locale) => locale === 'en'
+    ? `${BASE_URL}/tools/${toolPath}`
+    : `${BASE_URL}/${locale}/tools/${toolPath}`;
+
+  let xml = '';
+  for (const locale of TOOL_LOCALES) {
+    xml += '  <url>\n';
+    xml += `    <loc>${urlFor(locale)}</loc>\n`;
+    xml += `    <lastmod>${today}</lastmod>\n`;
+    xml += '    <changefreq>monthly</changefreq>\n';
+    xml += '    <priority>0.7</priority>\n';
+    for (const altLocale of TOOL_LOCALES) {
+      xml += `    <xhtml:link rel="alternate" hreflang="${altLocale}" href="${urlFor(altLocale)}" />\n`;
+    }
+    xml += `    <xhtml:link rel="alternate" hreflang="x-default" href="${urlFor('en')}" />\n`;
+    xml += '  </url>\n';
+  }
   return xml;
 }
 

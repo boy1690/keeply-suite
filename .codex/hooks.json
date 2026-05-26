@@ -1,0 +1,53 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node 'D:\\tools\\doing\\keeply-suite\\.codex\\hooks\\download-url-guard.js'"
+          },
+          {
+            "type": "command",
+            "command": "node 'D:\\tools\\doing\\keeply-suite\\.codex\\hooks\\app-boundary-guard.js'"
+          }
+        ]
+      },
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"$CLAUDE_PROJECT_DIR/apps/blog/_dev/red-team-gate.py\""
+          },
+          {
+            "type": "command",
+            "command": "python \"$CLAUDE_PROJECT_DIR/apps/blog/_dev/hooks/bwf-skeleton-completeness-gate.py\""
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"$CLAUDE_PROJECT_DIR/apps/blog/_dev/hooks/memory-size-guard.py\""
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python 'D:\\tools\\doing\\keeply-suite\\.codex\\hooks\\bwf-keyword-bank-inject.py'"
+          }
+        ]
+      }
+    ]
+  }
+}

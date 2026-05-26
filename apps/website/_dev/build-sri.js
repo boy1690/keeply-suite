@@ -64,7 +64,8 @@ const SCRIPT_ORIGINALS = [
   'clarity-loader.js',  // 2026-05-03 Microsoft Clarity Consent Mode v2 integration
   'team-notify.js',     // spec 031
   'activate-license.js',// spec 031
-  'paddle-checkout.js'  // spec 031
+  'paddle-checkout.js', // spec 031
+  'file-recovery-diagnostic.js' // spec 052
 ];
 for (const loc of LOCALES) SCRIPT_ORIGINALS.push(`i18n/${loc}.js`);
 
@@ -131,7 +132,7 @@ function patchHtml(content) {
         ` integrity="${integrityValue}" crossorigin="anonymous"$1`);
     });
   }
-  const pathOpt = '(?:\\.\\.\\/|\\/)?';
+  const pathOpt = '(?:(?:\\.\\.\\/)*|\\/)';
 
   // style.css — single resource, fixed name (not fingerprinted in this PR).
   const styleHash = manifest[styleResolved];
