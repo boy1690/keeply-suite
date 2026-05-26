@@ -268,6 +268,15 @@
       return '/' + lang + '/';
     }
 
+    // tools 系列（spec 052）：en 在 root（/tools/...），zh-TW 在 /zh-TW/tools/...
+    // 只有這兩個 locale 有，其他 locale 回該 locale 首頁避免 404。
+    // 沒這段的話，預設分支會把 en 算成 /en/tools/...（不存在 → 404）。
+    if (relPath === 'tools/' || relPath.indexOf('tools/') === 0) {
+      if (lang === 'en') return '/' + relPath;
+      if (lang === 'zh-TW') return '/zh-TW/' + relPath;
+      return '/' + lang + '/';
+    }
+
     // locale 首頁
     if (relPath === '' || relPath === 'index.html') {
       return '/' + lang + '/';
