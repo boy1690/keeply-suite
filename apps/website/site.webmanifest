@@ -1,7 +1,7 @@
 {
   "name": "Keeply",
   "short_name": "Keeply",
-  "description": "Your files have stories. Keeply remembers them all.",
+  "description": "Your file time machine. Restore any old version in one click.",
   "start_url": "/",
   "display": "browser",
   "background_color": "#ffffff",
