@@ -1,0 +1,11 @@
+# Taxonomy roots were removed with Hugo disableKinds=["taxonomy","term"].
+# Keep old user-facing hubs from hard 404s while leaving individual term
+# URLs to the existing topic-matched Cloudflare Bulk Redirect lists.
+/:lang/categories /:lang/ 301
+/:lang/categories/ /:lang/ 301
+/categories /en/ 301
+/categories/ /en/ 301
+/:lang/tags /:lang/ 301
+/:lang/tags/ /:lang/ 301
+/tags /en/ 301
+/tags/ /en/ 301
