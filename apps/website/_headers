@@ -1,0 +1,17 @@
+# Cloudflare Pages _headers — served from the deploy root (staged from apps/website/).
+#
+# Purpose: keep the /legal/* accountability + governance documents out of search
+# results. The raw `.md` docs cannot carry a `<meta name="robots">` tag (they are
+# not HTML), so the X-Robots-Tag HTTP header is the only lever for them. The portal
+# index.html also carries a noindex <meta>; this header makes the policy uniform.
+#
+# This does NOT block the telemetry release-gate, which fetches these URLs
+# server-side (X-Robots-Tag only instructs crawlers, not fetchers).
+#
+# Security headers (CSP / HSTS / X-Frame-Options / etc.) are applied by the bound
+# Cloudflare Worker (cloudflare/worker.js), NOT this file. The comprehensive
+# security `_headers` template still lives at cloudflare/_headers (excluded from
+# deploy by design); this root file intentionally carries only the /legal/* rule.
+
+/legal/*
+  X-Robots-Tag: noindex
