@@ -104,49 +104,10 @@
   <meta name="twitter:image:alt" content="Privacybeleid — Keeply" />
 
   <!-- Tailwind CSS (compiled) -->
-  <link rel="preload" href="../style.css" as="style" integrity="sha384-2MFgQ5LhmRk0WJhm1E3MBqO4Xd0t1T+3huW94EkEIV6HQCnMqnsg66gY2CdYoxgY" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../style.css" integrity="sha384-2MFgQ5LhmRk0WJhm1E3MBqO4Xd0t1T+3huW94EkEIV6HQCnMqnsg66gY2CdYoxgY" crossorigin="anonymous" />
+  <link rel="preload" href="../style.css" as="style" />
+  <link rel="stylesheet" href="../style.css" />
 
-  <!-- M PLUS Rounded 1c (self-hosted via input.css @font-face) -->  <!-- Schema.org JSON-LD (injected by _dev/inject-schema.js) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://keeply.work/#organization",
-        "name": "Keeply",
-        "url": "https://keeply.work",
-        "logo": "https://keeply.work/logo.svg",
-        "founder": {
-          "@id": "https://keeply.work/#founder"
-        },
-        "sameAs": [
-          "https://keeply.work",
-          "https://blog.keeply.work",
-          "https://github.com/boy1690/keeply-releases",
-          "https://www.linkedin.com/company/keeply-work/",
-          "https://www.linkedin.com/in/ting-wei-tsao-b57480152/"
-        ]
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://keeply.work/nl/privacy#webpage",
-        "url": "https://keeply.work/nl/privacy",
-        "name": "Privacybeleid — Keeply",
-        "description": "Keeply is een local-first desktopapplicatie. Je bestanden verlaten nooit je computer. Lees hoe wij met je gegevens omgaan.",
-        "inLanguage": "nl",
-        "isPartOf": {
-          "@id": "https://keeply.work/#website"
-        },
-        "publisher": {
-          "@id": "https://keeply.work/#organization"
-        }
-      }
-    ]
-  }
-  </script>
-
+  <!-- M PLUS Rounded 1c (self-hosted via input.css @font-face) -->
 </head>
 
 <body class="bg-white text-gray-900 font-sans antialiased">
@@ -161,7 +122,7 @@
       <!-- Header -->
       <div class="mb-12">
         <nav class="text-sm text-gray-400 mb-4">
-          <a href="./" class="hover:text-brand-600 transition-colors" data-i18n="breadcrumb.home">Home</a>
+          <a href="index.html" class="hover:text-brand-600 transition-colors" data-i18n="breadcrumb.home">Home</a>
           <span class="mx-2">/</span>
           <span class="text-gray-600" data-i18n="privacy.breadcrumb">Privacybeleid</span>
         </nav>
@@ -183,6 +144,7 @@
           <li><a href="#license-data" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.license">Gegevens verwerkt tijdens licentieverificatie</a></li>
           <li><a href="#payment-data" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.payment">Gegevens verwerkt tijdens betaling</a></li>
           <li><a href="#website-data" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.website">Gegevens verzameld op onze website</a></li>
+          <li><a href="#section-2-5" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.telemetry">Gebruiksstatistieken</a></li>
           <li><a href="#third-party" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.thirdparty">Diensten van derden</a></li>
           <li><a href="#transfer" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.transfer">Internationale gegevensoverdracht</a></li>
           <li><a href="#retention" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.retention">Gegevensbewaring</a></li>
@@ -202,8 +164,9 @@
           <ul class="text-gray-600 space-y-1 ml-5 list-disc mt-2">
             <li data-i18n-html="privacy.files.li1"><strong>Licentieverificatie</strong>: Communiceert met Keygen.sh (zie hieronder)</li>
             <li data-i18n-html="privacy.files.li2"><strong>Updatecontrole</strong>: Controleert of er een nieuwe versie beschikbaar is</li>
+            <li data-i18n-html="privacy.files.li3"><strong>Gebruiksstatistieken</strong>: een minimale telling van de installatiebron, plus optionele gebruiksstatistieken als je daarmee instemt (zie <a href="#section-2-5" class="text-brand-600 hover:underline">§2.5</a>)</li>
           </ul>
-          <p class="text-gray-600 leading-relaxed mt-3" data-i18n="privacy.files.p3">De desktopapplicatie verzamelt of verzendt geen telemetrie, gebruiksanalyses, bestandsmetadata of bestandsinhoud.</p>
+          <p class="text-gray-600 leading-relaxed mt-3" data-i18n-html="privacy.files.p3">De desktopapplicatie verzendt nooit de inhoud van je bestanden of bestandsmetadata. Voor de gebruiksstatistieken die wel verzonden worden, zie <a href="#section-2-5" class="text-brand-600 hover:underline">§2.5</a> hierboven.</p>
         </section>
 
         <section id="not-collect">
@@ -251,6 +214,15 @@
           <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="privacy.website.title">Gegevens verzameld op onze website</h2>
           <p class="text-gray-600 leading-relaxed" data-i18n="privacy.website.p1">De marketingwebsite van Keeply (keeply.work) detecteert uw voorkeurstaal volledig in uw browser — wij sturen voor dit doel uw IP-adres niet naar derden. Uw taalkeuze wordt pas in de lokale opslag van uw browser bewaard nadat u expliciet een taal kiest in het taalmenu of een taalspecifieke link opent (bijv. keeply.work/nl/).</p>
           <p class="text-gray-600 leading-relaxed mt-3" data-i18n="privacy.website.p2">Als je contact met ons opneemt per e-mail, bewaren we de correspondentie om op je vraag te reageren. Je wordt niet aan een marketinglijst toegevoegd tenzij je hier expliciet voor kiest.</p>
+        </section>
+
+        <section id="section-2-5">
+          <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="privacy.telemetry.title">Gebruiksstatistieken</h2>
+          <p class="text-gray-600 leading-relaxed" data-i18n="privacy.telemetry.intro">Keeply verzamelt een kleine hoeveelheid gebruiksgegevens – in twee afzonderlijke niveaus – om te begrijpen waar installaties vandaan komen en hoe de app wordt gebruikt, zodat we hem kunnen verbeteren.</p>
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="privacy.telemetry.tier1.title">Niveau 1: Anonieme telling van installatiebron (geen persoonsgegevens verzameld)</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.telemetry.tier1.body">Eén enkele waarde: je installatiebron (winget, directe download, Homebrew of onbekend). Geen identificator, geen besturingssysteem- of apparaatinformatie, geen tijdstempel. Onze zelf gehoste Cloudflare Worker verhoogt enkel een geaggregeerde teller; we slaan nooit individuele records of je IP-adres op. Deze telling is ontworpen om niet identificeerbaar te zijn en wordt daarom behandeld als niet-persoonsgegevens. <strong>Deze wordt verzonden ongeacht je keuze hieronder</strong> – je kunt het uitschakelen onder Instellingen → Gebruiksrapportage.</p>
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="privacy.telemetry.tier2.title">Niveau 2: Gebruiksstatistieken (alleen met je toestemming)</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.telemetry.tier2.body">Wordt alleen verzonden als je opt-in geeft. Bevat: besturingssysteem en hoofdversie, processorarchitectuur, interfacetaal en app-versie; laagfrequente activiteitssignalen (hoogstens eenmaal per dag, geaggregeerd per week/maand); en een dagelijks roterende willekeurige identificator (geen naam, e-mail, bestandsnamen of bestandsinhoud). Rechtsgrondslag: je toestemming (AVG Art. 6(1)(a)). Deze gegevens worden verwerkt en opgeslagen door Cloudflare en 12 maanden bewaard. Je kunt je toestemming op elk moment intrekken onder Instellingen → Gebruiksrapportage – intrekken is net zo eenvoudig als het geven van toestemming.</p>
         </section>
 
         <section id="third-party">
@@ -302,6 +274,7 @@
                 <tr><td class="px-4 py-2.5" data-i18n="privacy.retention.r1.data">Licentieverificatielogs (Keygen)</td><td class="px-4 py-2.5" data-i18n="privacy.retention.r1.period">Tot 30 dagen (logs); tot 90 dagen (analyses)</td></tr>
                 <tr><td class="px-4 py-2.5" data-i18n="privacy.retention.r2.data">Betalingsgegevens (Paddle)</td><td class="px-4 py-2.5" data-i18n="privacy.retention.r2.period">Zoals vereist door fiscale en financiële regelgeving</td></tr>
                 <tr><td class="px-4 py-2.5" data-i18n="privacy.retention.r3.data">Klantenservice-e-mails</td><td class="px-4 py-2.5" data-i18n="privacy.retention.r3.period">Duur van de zakelijke relatie, of op verzoek tot verwijdering</td></tr>
+                <tr><td class="px-4 py-2.5" data-i18n="privacy.retention.r4.data">Gebruiksstatistieken (opt-in)</td><td class="px-4 py-2.5" data-i18n="privacy.retention.r4.period">12 maanden (AVG Art. 6(1)(a) toestemming)</td></tr>
               </tbody>
             </table>
           </div>
@@ -321,7 +294,7 @@
               <p class="text-sm text-gray-700" data-i18n-html="privacy.rights.taiwan"><strong>Inwoners van Taiwan (PDPA):</strong> Je hebt het recht op inzage, correctie en het verzoek tot verwijdering van je persoonlijke gegevens.</p>
             </div>
           </div>
-          <p class="text-gray-600 leading-relaxed mt-4" data-i18n-html="privacy.rights.contact">Contact: <a href="mailto:hello@keeply.work" class="text-brand-600 font-medium hover:underline">hello@<span class="e-decoy">null.</span>keeply.work</a> — we reageren binnen 30 dagen.</p>
+          <p class="text-gray-600 leading-relaxed mt-4" data-i18n-html="privacy.rights.contact">Contact: <a href="mailto:wei@keeply.work" class="text-brand-600 font-medium hover:underline">wei@<span class="e-decoy">null.</span>keeply.work</a> — we reageren binnen 30 dagen.</p>
         </section>
 
         <section id="eu-rep">
@@ -336,12 +309,12 @@
 
         <section id="changes">
           <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="privacy.changes.title">Wijzigingen in dit beleid</h2>
-          <p class="text-gray-600 leading-relaxed" data-i18n="privacy.changes.p1">We kunnen dit privacybeleid van tijd tot tijd bijwerken. Materiële wijzigingen worden op deze website gepubliceerd.</p>
+          <p class="text-gray-600 leading-relaxed" data-i18n="privacy.changes.p1">We kunnen dit privacybeleid van tijd tot tijd bijwerken. Materiële wijzigingen worden ten minste 30 dagen voor inwerkingtreding in de app aangekondigd en op deze website gepubliceerd.</p>
         </section>
 
         <section>
           <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="privacy.contactus.title">Contact</h2>
-          <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.contactus.email">E-mail: <a href="mailto:hello@keeply.work" class="text-brand-600 font-medium hover:underline">hello@<span class="e-decoy">null.</span>keeply.work</a></p>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.contactus.email">E-mail: <a href="mailto:wei@keeply.work" class="text-brand-600 font-medium hover:underline">wei@<span class="e-decoy">null.</span>keeply.work</a></p>
           <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.contactus.website">Website: <a href="https://keeply.work" class="text-brand-600 hover:underline">keeply.work</a></p>
         </section>
 
@@ -359,11 +332,11 @@
   <div id="footer-root"></div>
 
   <!-- Shared components + i18n + consent (spec 023) -->
-  <script src="../consent-api.b29ceadb9e.js" defer integrity="sha384-AgMsIGCbo9mV0oP2ebvR5aNCzNPtSkIGXG5v29yY6A+vEktkTMAOZtlK0WiKSEUR" crossorigin="anonymous"></script>
-  <script src="../components.c05ee0a2f9.js" defer integrity="sha384-vXwUAahowQXWmPuWdSGpRhbPEYL9ALaSYTZc/ecE89PTkK4ZVdyifqSVEsISVMQi" crossorigin="anonymous"></script>
-  <script src="../cookie-banner.8a90f5095a.js" defer integrity="sha384-FkrIUHI4EiKuF7c0lI0I+k/SpAC6SN6GAiU3tqGZBNs1nvMH4R/g+hpuVB/UGk63" crossorigin="anonymous"></script>
-  <script src="../ga4-loader.359df0e8a7.js" defer integrity="sha384-gyx7he9QurH3GoSkfkbiWJCVC2RYlzVMBwyolFNVDEjLCjX1oUw1XG+WLOEBLSQJ" crossorigin="anonymous"></script>
-  <script src="../clarity-loader.60a9a5160f.js" defer integrity="sha384-rdROtDi/pws+RrJtXaeyRY20mP1RJMaVL3DuCPi4UU7tkWHea6vyx01XW/4tbkL/" crossorigin="anonymous"></script>
-  <script src="../i18n-loader.e0abab46fe.js" defer integrity="sha384-xuSjKq6BPU6RFWDTrcHoRD6A+DZwVA9FxzIUvCsbXC4/DAOh01WrmuS38fjPHieY" crossorigin="anonymous"></script>
+  <script src="../consent-api.js" defer></script>
+  <script src="../components.js" defer></script>
+  <script src="../cookie-banner.js" defer></script>
+  <script src="../ga4-loader.js" defer></script>
+  <script src="../clarity-loader.js" defer></script>
+  <script src="../i18n-loader.js" defer></script>
 </body>
 </html>

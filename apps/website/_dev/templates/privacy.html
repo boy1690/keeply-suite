@@ -124,6 +124,7 @@
           <li><a href="#license-data" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.license">授權驗證時處理的資料</a></li>
           <li><a href="#payment-data" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.payment">付款時處理的資料</a></li>
           <li><a href="#website-data" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.website">我們網站上收集的資料</a></li>
+          <li><a href="#section-2-5" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.telemetry">使用統計</a></li>
           <li><a href="#third-party" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.thirdparty">第三方服務</a></li>
           <li><a href="#transfer" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.transfer">國際資料傳輸</a></li>
           <li><a href="#retention" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.retention">資料保留</a></li>
@@ -143,8 +144,9 @@
           <ul class="text-gray-600 space-y-1 ml-5 list-disc mt-2">
             <li data-i18n-html="privacy.files.li1"><strong>授權驗證</strong>：與 Keygen.sh 通訊（詳見下方）</li>
             <li data-i18n-html="privacy.files.li2"><strong>更新檢查</strong>：確認是否有新版本可用</li>
+            <li data-i18n-html="privacy.files.li3"><strong>使用統計</strong>：一筆最小化的安裝來源計數，以及（經你同意的）選用使用統計（見 <a href="#section-2-5" class="text-brand-600 hover:underline">§2.5</a>）</li>
           </ul>
-          <p class="text-gray-600 leading-relaxed mt-3" data-i18n="privacy.files.p3">桌面應用程式不收集或傳輸任何遙測數據、使用分析、檔案元資料或檔案內容。</p>
+          <p class="text-gray-600 leading-relaxed mt-3" data-i18n-html="privacy.files.p3">桌面應用程式絕不傳輸你的檔案內容或檔案 metadata。關於它確實會送出的使用統計，見上方 <a href="#section-2-5" class="text-brand-600 hover:underline">§2.5</a>。</p>
         </section>
 
         <section id="not-collect">
@@ -192,6 +194,15 @@
           <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="privacy.website.title">我們網站上收集的資料</h2>
           <p class="text-gray-600 leading-relaxed" data-i18n="privacy.website.p1">Keeply 行銷網站（keeply.work）目前不使用任何分析或追蹤工具。</p>
           <p class="text-gray-600 leading-relaxed mt-3" data-i18n="privacy.website.p2">如果你透過電子郵件聯繫我們，我們會保留通訊內容以回覆你的詢問。除非你明確選擇加入，否則不會將你加入行銷名單。</p>
+        </section>
+
+        <section id="section-2-5">
+          <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="privacy.telemetry.title">使用統計</h2>
+          <p class="text-gray-600 leading-relaxed" data-i18n="privacy.telemetry.intro">Keeply 分兩個獨立層級蒐集少量使用統計，以了解安裝來源與使用方式，藉此改善產品。</p>
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="privacy.telemetry.tier1.title">第一層：匿名安裝來源計數（不蒐集個人資料）</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.telemetry.tier1.body">單一一個值：你的安裝來源（winget、直接下載、Homebrew 或未知）。無識別碼、無作業系統或裝置資訊、無時間戳。我們自架的 Cloudflare Worker 僅累加聚合計數，絕不儲存個別記錄或你的 IP 位址。此計數經設計為不可識別，因此視為非個人資料。<strong>無論你下方如何選擇，這筆計數都會送出</strong>——你可在「設定 → 使用狀況回報」關閉它。</p>
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="privacy.telemetry.tier2.title">第二層：使用統計（僅在你同意後）</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.telemetry.tier2.body">僅在你選擇加入後送出。包含：作業系統與主要版本、處理器架構、介面語言、app 版本；低頻活躍訊號（最多每日一次，以週／月彙總）；以及一個每日輪替的隨機識別碼（無姓名、email、檔名或檔案內容）。法律基礎：你的同意（GDPR 第 6(1)(a) 條）。此資料由 Cloudflare 處理與儲存，保留 12 個月。你可隨時在「設定 → 使用狀況回報」撤回，撤回和給予同意一樣容易。</p>
         </section>
 
         <section id="third-party">
@@ -243,6 +254,7 @@
                 <tr><td class="px-4 py-2.5" data-i18n="privacy.retention.r1.data">授權驗證日誌（Keygen）</td><td class="px-4 py-2.5" data-i18n="privacy.retention.r1.period">最長 30 天（日誌）；最長 90 天（分析）</td></tr>
                 <tr><td class="px-4 py-2.5" data-i18n="privacy.retention.r2.data">付款資料（Paddle）</td><td class="px-4 py-2.5" data-i18n="privacy.retention.r2.period">依稅務及財務法規要求</td></tr>
                 <tr><td class="px-4 py-2.5" data-i18n="privacy.retention.r3.data">客服電子郵件</td><td class="px-4 py-2.5" data-i18n="privacy.retention.r3.period">業務關係存續期間，或你要求刪除時</td></tr>
+                <tr><td class="px-4 py-2.5" data-i18n="privacy.retention.r4.data">使用統計（opt-in）</td><td class="px-4 py-2.5" data-i18n="privacy.retention.r4.period">12 個月（GDPR 第 6(1)(a) 條同意）</td></tr>
               </tbody>
             </table>
           </div>
@@ -262,7 +274,7 @@
               <p class="text-sm text-gray-700" data-i18n-html="privacy.rights.taiwan"><strong>台灣居民（個資法）：</strong>你有權存取、更正及要求刪除你的個人資料。</p>
             </div>
           </div>
-          <p class="text-gray-600 leading-relaxed mt-4" data-i18n-html="privacy.rights.contact">聯繫：<a href="mailto:hello@keeply.work" class="text-brand-600 font-medium hover:underline">hello@<span class="e-decoy">null.</span>keeply.work</a>，我們將在 30 天內回覆。</p>
+          <p class="text-gray-600 leading-relaxed mt-4" data-i18n-html="privacy.rights.contact">聯繫：<a href="mailto:wei@keeply.work" class="text-brand-600 font-medium hover:underline">wei@<span class="e-decoy">null.</span>keeply.work</a>，我們將在 30 天內回覆。</p>
         </section>
 
         <section id="eu-rep">
@@ -277,12 +289,12 @@
 
         <section id="changes">
           <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="privacy.changes.title">本政策的變更</h2>
-          <p class="text-gray-600 leading-relaxed" data-i18n="privacy.changes.p1">我們可能不時更新本隱私權政策。重大變更將在網站上發布通知。</p>
+          <p class="text-gray-600 leading-relaxed" data-i18n="privacy.changes.p1">我們可能不時更新本隱私權政策。重大變更會在生效前於 app 內通知並提前公告（至少 30 天）、同時發布於官網。</p>
         </section>
 
         <section>
           <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="privacy.contactus.title">聯繫我們</h2>
-          <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.contactus.email">電子郵件：<a href="mailto:hello@keeply.work" class="text-brand-600 font-medium hover:underline">hello@<span class="e-decoy">null.</span>keeply.work</a></p>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.contactus.email">電子郵件：<a href="mailto:wei@keeply.work" class="text-brand-600 font-medium hover:underline">wei@<span class="e-decoy">null.</span>keeply.work</a></p>
           <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.contactus.website">網站：<a href="https://keeply.work" class="text-brand-600 hover:underline">keeply.work</a></p>
         </section>
 

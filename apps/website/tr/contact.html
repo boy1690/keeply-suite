@@ -104,49 +104,10 @@
   <meta name="twitter:image:alt" content="İletişim — Keeply" />
 
   <!-- Tailwind CSS (compiled) -->
-  <link rel="preload" href="../style.css" as="style" integrity="sha384-2MFgQ5LhmRk0WJhm1E3MBqO4Xd0t1T+3huW94EkEIV6HQCnMqnsg66gY2CdYoxgY" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../style.css" integrity="sha384-2MFgQ5LhmRk0WJhm1E3MBqO4Xd0t1T+3huW94EkEIV6HQCnMqnsg66gY2CdYoxgY" crossorigin="anonymous" />
+  <link rel="preload" href="../style.css" as="style" />
+  <link rel="stylesheet" href="../style.css" />
 
-  <!-- M PLUS Rounded 1c (self-hosted via input.css @font-face) -->  <!-- Schema.org JSON-LD (injected by _dev/inject-schema.js) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://keeply.work/#organization",
-        "name": "Keeply",
-        "url": "https://keeply.work",
-        "logo": "https://keeply.work/logo.svg",
-        "founder": {
-          "@id": "https://keeply.work/#founder"
-        },
-        "sameAs": [
-          "https://keeply.work",
-          "https://blog.keeply.work",
-          "https://github.com/boy1690/keeply-releases",
-          "https://www.linkedin.com/company/keeply-work/",
-          "https://www.linkedin.com/in/ting-wei-tsao-b57480152/"
-        ]
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://keeply.work/tr/contact#webpage",
-        "url": "https://keeply.work/tr/contact",
-        "name": "İletişim — Keeply",
-        "description": "Bir sorunuz mu var, hata mı bildirmek istiyorsunuz, yoksa sadece merhaba mı demek istiyorsunuz? Keeply ekibiyle iletişime geçin.",
-        "inLanguage": "tr",
-        "isPartOf": {
-          "@id": "https://keeply.work/#website"
-        },
-        "publisher": {
-          "@id": "https://keeply.work/#organization"
-        }
-      }
-    ]
-  }
-  </script>
-
+  <!-- M PLUS Rounded 1c (self-hosted via input.css @font-face) -->
 </head>
 
 <body class="bg-white text-gray-900 font-sans antialiased">
@@ -160,7 +121,7 @@
 
       <div class="mb-12">
         <nav class="text-sm text-gray-400 mb-4">
-          <a href="./" class="hover:text-brand-600 transition-colors" data-i18n="breadcrumb.home">Ana Sayfa</a>
+          <a href="index.html" class="hover:text-brand-600 transition-colors" data-i18n="breadcrumb.home">Ana Sayfa</a>
           <span class="mx-2">/</span>
           <span class="text-gray-600" data-i18n="contact.breadcrumb">İletişim</span>
         </nav>
@@ -196,8 +157,8 @@
             <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
           </div>
           <h2 class="text-lg font-bold text-gray-900 mb-2" data-i18n="contact.security.title">Güvenlik ve gizlilik</h2>
-          <p class="text-sm text-gray-600 leading-relaxed" data-i18n-html="contact.security.desc">Bir güvenlik açığı mı buldunuz veya gizlilik endişeniz mi var? Konu satırında «Security» veya «Privacy» yazarak <strong>hello@<span class="e-decoy">null.</span>keeply.work</strong> adresine e-posta gönderin.</p>
-          <p class="text-sm text-gray-500 mt-3" data-i18n-html="contact.security.privacy">Verilerinizi nasıl yönettiğimizi öğrenmek için <a href="privacy" class="text-brand-600 hover:underline">Gizlilik Politikamıza</a> bakınız.</p>
+          <p class="text-sm text-gray-600 leading-relaxed" data-i18n-html="contact.security.desc">Bir güvenlik açığı mı buldunuz veya gizlilik endişeniz mi var? Konu satırında "Security" veya "Privacy" yazarak <strong>wei@<span class="e-decoy">null.</span>keeply.work</strong> adresine e-posta gönderin.</p>
+          <p class="text-sm text-gray-500 mt-3" data-i18n-html="contact.security.privacy">Verilerinizi nasıl yönettiğimizi öğrenmek için <a href="privacy.html" class="text-brand-600 hover:underline">Gizlilik Politikamıza</a> bakınız.</p>
         </div>
 
       </div>
@@ -213,11 +174,11 @@
   <div id="footer-root"></div>
 
   <!-- Shared components + i18n + consent (spec 023) -->
-  <script src="../consent-api.b29ceadb9e.js" defer integrity="sha384-AgMsIGCbo9mV0oP2ebvR5aNCzNPtSkIGXG5v29yY6A+vEktkTMAOZtlK0WiKSEUR" crossorigin="anonymous"></script>
-  <script src="../components.c05ee0a2f9.js" defer integrity="sha384-vXwUAahowQXWmPuWdSGpRhbPEYL9ALaSYTZc/ecE89PTkK4ZVdyifqSVEsISVMQi" crossorigin="anonymous"></script>
-  <script src="../cookie-banner.8a90f5095a.js" defer integrity="sha384-FkrIUHI4EiKuF7c0lI0I+k/SpAC6SN6GAiU3tqGZBNs1nvMH4R/g+hpuVB/UGk63" crossorigin="anonymous"></script>
-  <script src="../ga4-loader.359df0e8a7.js" defer integrity="sha384-gyx7he9QurH3GoSkfkbiWJCVC2RYlzVMBwyolFNVDEjLCjX1oUw1XG+WLOEBLSQJ" crossorigin="anonymous"></script>
-  <script src="../clarity-loader.60a9a5160f.js" defer integrity="sha384-rdROtDi/pws+RrJtXaeyRY20mP1RJMaVL3DuCPi4UU7tkWHea6vyx01XW/4tbkL/" crossorigin="anonymous"></script>
-  <script src="../i18n-loader.e0abab46fe.js" defer integrity="sha384-xuSjKq6BPU6RFWDTrcHoRD6A+DZwVA9FxzIUvCsbXC4/DAOh01WrmuS38fjPHieY" crossorigin="anonymous"></script>
+  <script src="../consent-api.js" defer></script>
+  <script src="../components.js" defer></script>
+  <script src="../cookie-banner.js" defer></script>
+  <script src="../ga4-loader.js" defer></script>
+  <script src="../clarity-loader.js" defer></script>
+  <script src="../i18n-loader.js" defer></script>
 </body>
 </html>

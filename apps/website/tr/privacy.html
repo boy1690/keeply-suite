@@ -104,49 +104,10 @@
   <meta name="twitter:image:alt" content="Gizlilik Politikası — Keeply" />
 
   <!-- Tailwind CSS (compiled) -->
-  <link rel="preload" href="../style.css" as="style" integrity="sha384-2MFgQ5LhmRk0WJhm1E3MBqO4Xd0t1T+3huW94EkEIV6HQCnMqnsg66gY2CdYoxgY" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../style.css" integrity="sha384-2MFgQ5LhmRk0WJhm1E3MBqO4Xd0t1T+3huW94EkEIV6HQCnMqnsg66gY2CdYoxgY" crossorigin="anonymous" />
+  <link rel="preload" href="../style.css" as="style" />
+  <link rel="stylesheet" href="../style.css" />
 
-  <!-- M PLUS Rounded 1c (self-hosted via input.css @font-face) -->  <!-- Schema.org JSON-LD (injected by _dev/inject-schema.js) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://keeply.work/#organization",
-        "name": "Keeply",
-        "url": "https://keeply.work",
-        "logo": "https://keeply.work/logo.svg",
-        "founder": {
-          "@id": "https://keeply.work/#founder"
-        },
-        "sameAs": [
-          "https://keeply.work",
-          "https://blog.keeply.work",
-          "https://github.com/boy1690/keeply-releases",
-          "https://www.linkedin.com/company/keeply-work/",
-          "https://www.linkedin.com/in/ting-wei-tsao-b57480152/"
-        ]
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://keeply.work/tr/privacy#webpage",
-        "url": "https://keeply.work/tr/privacy",
-        "name": "Gizlilik Politikası — Keeply",
-        "description": "Keeply yerel öncelikli bir masaüstü uygulamasıdır. Dosyalarınız asla bilgisayarınızdan ayrılmaz. Verilerinizi nasıl yönettiğimizi öğrenin.",
-        "inLanguage": "tr",
-        "isPartOf": {
-          "@id": "https://keeply.work/#website"
-        },
-        "publisher": {
-          "@id": "https://keeply.work/#organization"
-        }
-      }
-    ]
-  }
-  </script>
-
+  <!-- M PLUS Rounded 1c (self-hosted via input.css @font-face) -->
 </head>
 
 <body class="bg-white text-gray-900 font-sans antialiased">
@@ -161,7 +122,7 @@
       <!-- Header -->
       <div class="mb-12">
         <nav class="text-sm text-gray-400 mb-4">
-          <a href="./" class="hover:text-brand-600 transition-colors" data-i18n="breadcrumb.home">Ana Sayfa</a>
+          <a href="index.html" class="hover:text-brand-600 transition-colors" data-i18n="breadcrumb.home">Ana Sayfa</a>
           <span class="mx-2">/</span>
           <span class="text-gray-600" data-i18n="privacy.breadcrumb">Gizlilik Politikası</span>
         </nav>
@@ -183,6 +144,7 @@
           <li><a href="#license-data" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.license">Lisans doğrulama sırasında işlenen veriler</a></li>
           <li><a href="#payment-data" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.payment">Ödeme sırasında işlenen veriler</a></li>
           <li><a href="#website-data" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.website">Web sitemizde toplanan veriler</a></li>
+          <li><a href="#section-2-5" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.telemetry">Kullanım istatistikleri</a></li>
           <li><a href="#third-party" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.thirdparty">Üçüncü taraf hizmetleri</a></li>
           <li><a href="#transfer" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.transfer">Uluslararası veri aktarımları</a></li>
           <li><a href="#retention" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.retention">Veri saklama</a></li>
@@ -202,8 +164,9 @@
           <ul class="text-gray-600 space-y-1 ml-5 list-disc mt-2">
             <li data-i18n-html="privacy.files.li1"><strong>Lisans doğrulama</strong>: Keygen.sh ile iletişim (aşağıya bakınız)</li>
             <li data-i18n-html="privacy.files.li2"><strong>Güncelleme kontrolü</strong>: Yeni bir sürümün mevcut olup olmadığını kontrol eder</li>
+            <li data-i18n-html="privacy.files.li3"><strong>Kullanım istatistikleri</strong>: minimal bir kurulum kaynağı sayacı ve onay verirseniz isteğe bağlı kullanım istatistikleri (bkz. <a href="#section-2-5" class="text-brand-600 hover:underline">§2.5</a>)</li>
           </ul>
-          <p class="text-gray-600 leading-relaxed mt-3" data-i18n="privacy.files.p3">Masaüstü uygulaması telemetri, kullanım analizi, dosya meta verileri veya dosya içeriği toplayıp iletmez.</p>
+          <p class="text-gray-600 leading-relaxed mt-3" data-i18n-html="privacy.files.p3">Masaüstü uygulaması dosya içeriklerinizi veya dosya meta verilerinizi asla iletmez. Gönderdiği kullanım istatistikleri için yukarıdaki <a href="#section-2-5" class="text-brand-600 hover:underline">§2.5</a> bölümüne bakınız.</p>
         </section>
 
         <section id="not-collect">
@@ -251,6 +214,15 @@
           <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="privacy.website.title">Web sitemizde toplanan veriler</h2>
           <p class="text-gray-600 leading-relaxed" data-i18n="privacy.website.p1">Keeply pazarlama web sitesi (keeply.work), tercih ettiğiniz dili tamamen tarayıcınız içinde algılar — bu amaçla IP adresinizi üçüncü taraflara göndermiyoruz. Dil seçiminiz, yalnızca dil menüsünden açıkça bir dil seçtiğinizde veya dile özgü bir bağlantı (örneğin keeply.work/tr/) açtığınızda tarayıcınızın yerel depolama alanına kaydedilir.</p>
           <p class="text-gray-600 leading-relaxed mt-3" data-i18n="privacy.website.p2">Bize e-posta ile ulaşırsanız, sorgunuza yanıt vermek için yazışmayı saklarız. Açıkça onay vermediğiniz sürece herhangi bir pazarlama listesine eklenmezsiniz.</p>
+        </section>
+
+        <section id="section-2-5">
+          <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="privacy.telemetry.title">Kullanım istatistikleri</h2>
+          <p class="text-gray-600 leading-relaxed" data-i18n="privacy.telemetry.intro">Keeply, kurulumların nereden geldiğini ve uygulamanın nasıl kullanıldığını anlamak ve geliştirmek amacıyla iki ayrı katmanda az miktarda kullanım verisi toplar.</p>
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="privacy.telemetry.tier1.title">Katman 1: Anonim kurulum kaynağı sayacı (kişisel veri toplanmaz)</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.telemetry.tier1.body">Tek bir değer: kurulum kaynağınız (winget, doğrudan indirme, Homebrew veya bilinmeyen). Hiçbir tanımlayıcı, işletim sistemi veya cihaz bilgisi, zaman damgası yoktur. Kendi barındırdığımız Cloudflare Worker yalnızca toplam sayacı artırır; bireysel kayıtlar veya IP adresiniz asla saklanmaz. Bu sayaç tanımlanamaz olacak şekilde tasarlanmıştır ve bu nedenle kişisel olmayan veri olarak ele alınır. <strong>Aşağıdaki seçim ne olursa olsun gönderilir</strong> — Ayarlar → Kullanım Raporlama bölümünden kapatabilirsiniz.</p>
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="privacy.telemetry.tier2.title">Katman 2: Kullanım istatistikleri (yalnızca onayınızla)</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.telemetry.tier2.body">Yalnızca onay verirseniz (opt-in) gönderilir. Şunları içerir: işletim sistemi ve ana sürüm, işlemci mimarisi, arayüz dili ve uygulama sürümü; düşük frekanslı etkinlik sinyalleri (en fazla günde bir kez, hafta/ay bazında toplulaştırılarak); ve günlük olarak rotasyona giren rastgele tanımlayıcı (ad, e-posta, dosya adı veya dosya içeriği içermez). Hukuki dayanak: onayınız (GDPR Art. 6(1)(a)). Bu veriler Cloudflare tarafından işlenir, saklanır ve 12 ay süreyle tutulur. Onayınızı istediğiniz zaman Ayarlar → Kullanım Raporlama bölümünden geri çekebilirsiniz — geri çekmek, onay vermek kadar kolaydır.</p>
         </section>
 
         <section id="third-party">
@@ -302,6 +274,7 @@
                 <tr><td class="px-4 py-2.5" data-i18n="privacy.retention.r1.data">Lisans doğrulama günlükleri (Keygen)</td><td class="px-4 py-2.5" data-i18n="privacy.retention.r1.period">30 güne kadar (günlükler); 90 güne kadar (analiz)</td></tr>
                 <tr><td class="px-4 py-2.5" data-i18n="privacy.retention.r2.data">Ödeme verileri (Paddle)</td><td class="px-4 py-2.5" data-i18n="privacy.retention.r2.period">Vergi ve finansal düzenlemelerin gerektirdiği süre boyunca</td></tr>
                 <tr><td class="px-4 py-2.5" data-i18n="privacy.retention.r3.data">Müşteri destek e-postaları</td><td class="px-4 py-2.5" data-i18n="privacy.retention.r3.period">İş ilişkisi süresince veya silme talebi üzerine</td></tr>
+                <tr><td class="px-4 py-2.5" data-i18n="privacy.retention.r4.data">Kullanım istatistikleri (opt-in)</td><td class="px-4 py-2.5" data-i18n="privacy.retention.r4.period">12 ay (GDPR Art. 6(1)(a) onay)</td></tr>
               </tbody>
             </table>
           </div>
@@ -321,7 +294,7 @@
               <p class="text-sm text-gray-700" data-i18n-html="privacy.rights.taiwan"><strong>Tayvan sakinleri (KVKK):</strong> Kişisel verilerinize erişme, düzeltme ve silinmesini talep etme hakkınız vardır.</p>
             </div>
           </div>
-          <p class="text-gray-600 leading-relaxed mt-4" data-i18n-html="privacy.rights.contact">İletişim: <a href="mailto:hello@keeply.work" class="text-brand-600 font-medium hover:underline">hello@<span class="e-decoy">null.</span>keeply.work</a> — 30 gün içinde yanıt vereceğiz.</p>
+          <p class="text-gray-600 leading-relaxed mt-4" data-i18n-html="privacy.rights.contact">İletişim: <a href="mailto:wei@keeply.work" class="text-brand-600 font-medium hover:underline">wei@<span class="e-decoy">null.</span>keeply.work</a> — 30 gün içinde yanıt vereceğiz.</p>
         </section>
 
         <section id="eu-rep">
@@ -336,12 +309,12 @@
 
         <section id="changes">
           <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="privacy.changes.title">Bu politikadaki değişiklikler</h2>
-          <p class="text-gray-600 leading-relaxed" data-i18n="privacy.changes.p1">Bu gizlilik politikasını zaman zaman güncelleyebiliriz. Önemli değişiklikler bu web sitesinde yayınlanacaktır.</p>
+          <p class="text-gray-600 leading-relaxed" data-i18n="privacy.changes.p1">Bu gizlilik politikasını zaman zaman güncelleyebiliriz. Önemli değişiklikler, yürürlüğe girmeden en az 30 gün önce uygulama içinde ve bu web sitesinde duyurulacaktır.</p>
         </section>
 
         <section>
           <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="privacy.contactus.title">İletişim</h2>
-          <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.contactus.email">E-posta: <a href="mailto:hello@keeply.work" class="text-brand-600 font-medium hover:underline">hello@<span class="e-decoy">null.</span>keeply.work</a></p>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.contactus.email">E-posta: <a href="mailto:wei@keeply.work" class="text-brand-600 font-medium hover:underline">wei@<span class="e-decoy">null.</span>keeply.work</a></p>
           <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.contactus.website">Web sitesi: <a href="https://keeply.work" class="text-brand-600 hover:underline">keeply.work</a></p>
         </section>
 
@@ -359,11 +332,11 @@
   <div id="footer-root"></div>
 
   <!-- Shared components + i18n + consent (spec 023) -->
-  <script src="../consent-api.b29ceadb9e.js" defer integrity="sha384-AgMsIGCbo9mV0oP2ebvR5aNCzNPtSkIGXG5v29yY6A+vEktkTMAOZtlK0WiKSEUR" crossorigin="anonymous"></script>
-  <script src="../components.c05ee0a2f9.js" defer integrity="sha384-vXwUAahowQXWmPuWdSGpRhbPEYL9ALaSYTZc/ecE89PTkK4ZVdyifqSVEsISVMQi" crossorigin="anonymous"></script>
-  <script src="../cookie-banner.8a90f5095a.js" defer integrity="sha384-FkrIUHI4EiKuF7c0lI0I+k/SpAC6SN6GAiU3tqGZBNs1nvMH4R/g+hpuVB/UGk63" crossorigin="anonymous"></script>
-  <script src="../ga4-loader.359df0e8a7.js" defer integrity="sha384-gyx7he9QurH3GoSkfkbiWJCVC2RYlzVMBwyolFNVDEjLCjX1oUw1XG+WLOEBLSQJ" crossorigin="anonymous"></script>
-  <script src="../clarity-loader.60a9a5160f.js" defer integrity="sha384-rdROtDi/pws+RrJtXaeyRY20mP1RJMaVL3DuCPi4UU7tkWHea6vyx01XW/4tbkL/" crossorigin="anonymous"></script>
-  <script src="../i18n-loader.e0abab46fe.js" defer integrity="sha384-xuSjKq6BPU6RFWDTrcHoRD6A+DZwVA9FxzIUvCsbXC4/DAOh01WrmuS38fjPHieY" crossorigin="anonymous"></script>
+  <script src="../consent-api.js" defer></script>
+  <script src="../components.js" defer></script>
+  <script src="../cookie-banner.js" defer></script>
+  <script src="../ga4-loader.js" defer></script>
+  <script src="../clarity-loader.js" defer></script>
+  <script src="../i18n-loader.js" defer></script>
 </body>
 </html>

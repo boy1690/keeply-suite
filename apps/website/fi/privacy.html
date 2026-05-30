@@ -104,49 +104,10 @@
   <meta name="twitter:image:alt" content="Tietosuojakäytäntö — Keeply" />
 
   <!-- Tailwind CSS (compiled) -->
-  <link rel="preload" href="../style.css" as="style" integrity="sha384-2MFgQ5LhmRk0WJhm1E3MBqO4Xd0t1T+3huW94EkEIV6HQCnMqnsg66gY2CdYoxgY" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../style.css" integrity="sha384-2MFgQ5LhmRk0WJhm1E3MBqO4Xd0t1T+3huW94EkEIV6HQCnMqnsg66gY2CdYoxgY" crossorigin="anonymous" />
+  <link rel="preload" href="../style.css" as="style" />
+  <link rel="stylesheet" href="../style.css" />
 
-  <!-- M PLUS Rounded 1c (self-hosted via input.css @font-face) -->  <!-- Schema.org JSON-LD (injected by _dev/inject-schema.js) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://keeply.work/#organization",
-        "name": "Keeply",
-        "url": "https://keeply.work",
-        "logo": "https://keeply.work/logo.svg",
-        "founder": {
-          "@id": "https://keeply.work/#founder"
-        },
-        "sameAs": [
-          "https://keeply.work",
-          "https://blog.keeply.work",
-          "https://github.com/boy1690/keeply-releases",
-          "https://www.linkedin.com/company/keeply-work/",
-          "https://www.linkedin.com/in/ting-wei-tsao-b57480152/"
-        ]
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://keeply.work/fi/privacy#webpage",
-        "url": "https://keeply.work/fi/privacy",
-        "name": "Tietosuojakäytäntö — Keeply",
-        "description": "Keeply on paikallinen ensisijaisesti toimiva työpöytäsovellus. Tiedostosi eivät koskaan poistu tietokoneeltasi. Lue miten käsittelemme tietojasi.",
-        "inLanguage": "fi",
-        "isPartOf": {
-          "@id": "https://keeply.work/#website"
-        },
-        "publisher": {
-          "@id": "https://keeply.work/#organization"
-        }
-      }
-    ]
-  }
-  </script>
-
+  <!-- M PLUS Rounded 1c (self-hosted via input.css @font-face) -->
 </head>
 
 <body class="bg-white text-gray-900 font-sans antialiased">
@@ -161,7 +122,7 @@
       <!-- Header -->
       <div class="mb-12">
         <nav class="text-sm text-gray-400 mb-4">
-          <a href="./" class="hover:text-brand-600 transition-colors" data-i18n="breadcrumb.home">Etusivu</a>
+          <a href="index.html" class="hover:text-brand-600 transition-colors" data-i18n="breadcrumb.home">Etusivu</a>
           <span class="mx-2">/</span>
           <span class="text-gray-600" data-i18n="privacy.breadcrumb">Tietosuojakäytäntö</span>
         </nav>
@@ -183,6 +144,7 @@
           <li><a href="#license-data" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.license">Lisenssin tarkistuksen aikana käsiteltävät tiedot</a></li>
           <li><a href="#payment-data" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.payment">Maksun aikana käsiteltävät tiedot</a></li>
           <li><a href="#website-data" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.website">Verkkosivustollamme kerätyt tiedot</a></li>
+          <li><a href="#section-2-5" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.telemetry">Käyttötilastot</a></li>
           <li><a href="#third-party" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.thirdparty">Kolmannen osapuolen palvelut</a></li>
           <li><a href="#transfer" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.transfer">Kansainväliset tiedonsiirrot</a></li>
           <li><a href="#retention" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.retention">Tietojen säilyttäminen</a></li>
@@ -202,8 +164,9 @@
           <ul class="text-gray-600 space-y-1 ml-5 list-disc mt-2">
             <li data-i18n-html="privacy.files.li1"><strong>Lisenssin tarkistus</strong>: Yhteys Keygen.sh-palveluun (katso alla)</li>
             <li data-i18n-html="privacy.files.li2"><strong>Päivitysten tarkistus</strong>: Tarkistaa onko uusi versio saatavilla</li>
+            <li data-i18n-html="privacy.files.li3"><strong>Käyttötilastot</strong>: minimaalinen asennuslähteen laskuri sekä — suostumuksellasi — valinnaiset käyttötilastot (katso <a href="#section-2-5" class="text-brand-600 hover:underline">§2.5</a>)</li>
           </ul>
-          <p class="text-gray-600 leading-relaxed mt-3" data-i18n="privacy.files.p3">Työpöytäsovellus ei kerää eikä siirrä telemetriaa, käyttöanalytiikkaa, tiedostojen metatietoja eikä tiedostosisältöjä.</p>
+          <p class="text-gray-600 leading-relaxed mt-3" data-i18n-html="privacy.files.p3">Työpöytäsovellus ei koskaan siirrä tiedostosi sisältöä tai tiedostojen metatietoja. Käyttötilastoista, jotka sovellus tosiasiallisesti lähettää, katso edellä <a href="#section-2-5" class="text-brand-600 hover:underline">§2.5</a>.</p>
         </section>
 
         <section id="not-collect">
@@ -251,6 +214,15 @@
           <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="privacy.website.title">Verkkosivustollamme kerätyt tiedot</h2>
           <p class="text-gray-600 leading-relaxed" data-i18n="privacy.website.p1">Keeplyn markkinointisivusto (keeply.work) tunnistaa haluamasi kielen kokonaan selaimessasi — emme lähetä IP-osoitettasi kolmannelle osapuolelle tätä tarkoitusta varten. Kielivalintasi tallennetaan selaimen paikalliseen tallennustilaan vain sen jälkeen, kun olet nimenomaisesti valinnut kielen kielivalikosta tai avannut kielikohtaisen linkin (esim. keeply.work/fi/).</p>
           <p class="text-gray-600 leading-relaxed mt-3" data-i18n="privacy.website.p2">Jos otat meihin yhteyttä sähköpostitse, säilytämme kirjeenvaihdon vastataksemme kyselyysi. Sinua ei lisätä markkinointilistalle, ellet erikseen anna suostumustasi.</p>
+        </section>
+
+        <section id="section-2-5">
+          <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="privacy.telemetry.title">Käyttötilastot</h2>
+          <p class="text-gray-600 leading-relaxed" data-i18n="privacy.telemetry.intro">Keeply kerää pienen määrän käyttötietoja — kahdessa erillisessä tasossa — ymmärtääkseen mistä asennukset tulevat ja miten sovellusta käytetään, jotta voimme parantaa sitä.</p>
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="privacy.telemetry.tier1.title">Taso 1: Anonyymi asennuslähteen laskuri (ei henkilötietojen keruuta)</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.telemetry.tier1.body">Yksi ainoa arvo: asennuslähteesi (winget, suora lataus, Homebrew tai tuntematon). Ei tunnistetta, ei käyttöjärjestelmä- tai laitetietoja, ei aikaleimaa. Itse ylläpitämämme Cloudflare Worker ainoastaan kasvattaa yhteenlaskettua laskuria; emme koskaan tallenna yksittäisiä tietueita emmekä IP-osoitettasi. Tämä laskuri on suunniteltu olemaan tunnistamaton ja sitä käsitellään siksi ei-henkilötietona. <strong>Se lähetetään riippumatta alla olevasta valinnasta</strong> — voit kytkeä sen pois kohdasta Asetukset → Käyttöraportointi.</p>
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="privacy.telemetry.tier2.title">Taso 2: Käyttötilastot (vain suostumuksellasi)</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.telemetry.tier2.body">Lähetetään vain, jos annat suostumuksesi (opt-in). Sisältää: käyttöjärjestelmän ja päämääräversion, suoritinarkkitehtuurin, käyttöliittymän kielen ja sovelluksen version; matalataajuiset aktiivisuussignaalit (enintään kerran päivässä, koostettuna viikoittain/kuukausittain); sekä päivittäin vaihtuvan satunnaisen tunnisteen (ei nimeä, sähköpostia, tiedostonimiä tai tiedostosisältöjä). Oikeusperusta: suostumuksesi (GDPR Art. 6(1)(a)). Cloudflare käsittelee ja säilyttää nämä tiedot 12 kuukauden ajan. Voit perua suostumuksesi milloin tahansa kohdassa Asetukset → Käyttöraportointi — peruuttaminen on yhtä helppoa kuin suostumuksen antaminen.</p>
         </section>
 
         <section id="third-party">
@@ -302,6 +274,7 @@
                 <tr><td class="px-4 py-2.5" data-i18n="privacy.retention.r1.data">Lisenssin tarkistuslokit (Keygen)</td><td class="px-4 py-2.5" data-i18n="privacy.retention.r1.period">Enintään 30 päivää (lokit); enintään 90 päivää (analytiikka)</td></tr>
                 <tr><td class="px-4 py-2.5" data-i18n="privacy.retention.r2.data">Maksutiedot (Paddle)</td><td class="px-4 py-2.5" data-i18n="privacy.retention.r2.period">Vero- ja rahoitussäännösten edellyttämän ajan</td></tr>
                 <tr><td class="px-4 py-2.5" data-i18n="privacy.retention.r3.data">Asiakastuen sähköpostit</td><td class="px-4 py-2.5" data-i18n="privacy.retention.r3.period">Liikesuhteen keston ajan tai poistopyynnöstä</td></tr>
+                <tr><td class="px-4 py-2.5" data-i18n="privacy.retention.r4.data">Käyttötilastot (opt-in)</td><td class="px-4 py-2.5" data-i18n="privacy.retention.r4.period">12 kuukautta (GDPR Art. 6(1)(a) suostumus)</td></tr>
               </tbody>
             </table>
           </div>
@@ -321,7 +294,7 @@
               <p class="text-sm text-gray-700" data-i18n-html="privacy.rights.taiwan"><strong>Taiwanin asukkaat (PDPA):</strong> Sinulla on oikeus käyttää, korjata ja pyytää henkilötietojesi poistamista.</p>
             </div>
           </div>
-          <p class="text-gray-600 leading-relaxed mt-4" data-i18n-html="privacy.rights.contact">Yhteystiedot: <a href="mailto:hello@keeply.work" class="text-brand-600 font-medium hover:underline">hello@<span class="e-decoy">null.</span>keeply.work</a> — vastaamme 30 päivän kuluessa.</p>
+          <p class="text-gray-600 leading-relaxed mt-4" data-i18n-html="privacy.rights.contact">Yhteystiedot: <a href="mailto:wei@keeply.work" class="text-brand-600 font-medium hover:underline">wei@<span class="e-decoy">null.</span>keeply.work</a> — vastaamme 30 päivän kuluessa.</p>
         </section>
 
         <section id="eu-rep">
@@ -336,12 +309,12 @@
 
         <section id="changes">
           <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="privacy.changes.title">Muutokset tähän käytäntöön</h2>
-          <p class="text-gray-600 leading-relaxed" data-i18n="privacy.changes.p1">Saatamme päivittää tätä tietosuojakäytäntöä ajoittain. Merkittävät muutokset julkaistaan tällä verkkosivustolla.</p>
+          <p class="text-gray-600 leading-relaxed" data-i18n="privacy.changes.p1">Saatamme päivittää tätä tietosuojakäytäntöä ajoittain. Merkittävistä muutoksista ilmoitetaan sovelluksessa ja tällä verkkosivustolla vähintään 30 päivää ennen niiden voimaantuloa.</p>
         </section>
 
         <section>
           <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="privacy.contactus.title">Ota yhteyttä</h2>
-          <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.contactus.email">Sähköposti: <a href="mailto:hello@keeply.work" class="text-brand-600 font-medium hover:underline">hello@<span class="e-decoy">null.</span>keeply.work</a></p>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.contactus.email">Sähköposti: <a href="mailto:wei@keeply.work" class="text-brand-600 font-medium hover:underline">wei@<span class="e-decoy">null.</span>keeply.work</a></p>
           <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.contactus.website">Verkkosivusto: <a href="https://keeply.work" class="text-brand-600 hover:underline">keeply.work</a></p>
         </section>
 
@@ -359,11 +332,11 @@
   <div id="footer-root"></div>
 
   <!-- Shared components + i18n + consent (spec 023) -->
-  <script src="../consent-api.b29ceadb9e.js" defer integrity="sha384-AgMsIGCbo9mV0oP2ebvR5aNCzNPtSkIGXG5v29yY6A+vEktkTMAOZtlK0WiKSEUR" crossorigin="anonymous"></script>
-  <script src="../components.c05ee0a2f9.js" defer integrity="sha384-vXwUAahowQXWmPuWdSGpRhbPEYL9ALaSYTZc/ecE89PTkK4ZVdyifqSVEsISVMQi" crossorigin="anonymous"></script>
-  <script src="../cookie-banner.8a90f5095a.js" defer integrity="sha384-FkrIUHI4EiKuF7c0lI0I+k/SpAC6SN6GAiU3tqGZBNs1nvMH4R/g+hpuVB/UGk63" crossorigin="anonymous"></script>
-  <script src="../ga4-loader.359df0e8a7.js" defer integrity="sha384-gyx7he9QurH3GoSkfkbiWJCVC2RYlzVMBwyolFNVDEjLCjX1oUw1XG+WLOEBLSQJ" crossorigin="anonymous"></script>
-  <script src="../clarity-loader.60a9a5160f.js" defer integrity="sha384-rdROtDi/pws+RrJtXaeyRY20mP1RJMaVL3DuCPi4UU7tkWHea6vyx01XW/4tbkL/" crossorigin="anonymous"></script>
-  <script src="../i18n-loader.e0abab46fe.js" defer integrity="sha384-xuSjKq6BPU6RFWDTrcHoRD6A+DZwVA9FxzIUvCsbXC4/DAOh01WrmuS38fjPHieY" crossorigin="anonymous"></script>
+  <script src="../consent-api.js" defer></script>
+  <script src="../components.js" defer></script>
+  <script src="../cookie-banner.js" defer></script>
+  <script src="../ga4-loader.js" defer></script>
+  <script src="../clarity-loader.js" defer></script>
+  <script src="../i18n-loader.js" defer></script>
 </body>
 </html>

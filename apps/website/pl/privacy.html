@@ -104,49 +104,10 @@
   <meta name="twitter:image:alt" content="Polityka prywatności — Keeply" />
 
   <!-- Tailwind CSS (compiled) -->
-  <link rel="preload" href="../style.css" as="style" integrity="sha384-2MFgQ5LhmRk0WJhm1E3MBqO4Xd0t1T+3huW94EkEIV6HQCnMqnsg66gY2CdYoxgY" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../style.css" integrity="sha384-2MFgQ5LhmRk0WJhm1E3MBqO4Xd0t1T+3huW94EkEIV6HQCnMqnsg66gY2CdYoxgY" crossorigin="anonymous" />
+  <link rel="preload" href="../style.css" as="style" />
+  <link rel="stylesheet" href="../style.css" />
 
-  <!-- M PLUS Rounded 1c (self-hosted via input.css @font-face) -->  <!-- Schema.org JSON-LD (injected by _dev/inject-schema.js) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://keeply.work/#organization",
-        "name": "Keeply",
-        "url": "https://keeply.work",
-        "logo": "https://keeply.work/logo.svg",
-        "founder": {
-          "@id": "https://keeply.work/#founder"
-        },
-        "sameAs": [
-          "https://keeply.work",
-          "https://blog.keeply.work",
-          "https://github.com/boy1690/keeply-releases",
-          "https://www.linkedin.com/company/keeply-work/",
-          "https://www.linkedin.com/in/ting-wei-tsao-b57480152/"
-        ]
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://keeply.work/pl/privacy#webpage",
-        "url": "https://keeply.work/pl/privacy",
-        "name": "Polityka prywatności — Keeply",
-        "description": "Keeply to aplikacja desktopowa działająca lokalnie. Twoje pliki nigdy nie opuszczają Twojego komputera. Dowiedz się, jak obchodzimy się z Twoimi danymi.",
-        "inLanguage": "pl",
-        "isPartOf": {
-          "@id": "https://keeply.work/#website"
-        },
-        "publisher": {
-          "@id": "https://keeply.work/#organization"
-        }
-      }
-    ]
-  }
-  </script>
-
+  <!-- M PLUS Rounded 1c (self-hosted via input.css @font-face) -->
 </head>
 
 <body class="bg-white text-gray-900 font-sans antialiased">
@@ -161,7 +122,7 @@
       <!-- Header -->
       <div class="mb-12">
         <nav class="text-sm text-gray-400 mb-4">
-          <a href="./" class="hover:text-brand-600 transition-colors" data-i18n="breadcrumb.home">Strona główna</a>
+          <a href="index.html" class="hover:text-brand-600 transition-colors" data-i18n="breadcrumb.home">Strona główna</a>
           <span class="mx-2">/</span>
           <span class="text-gray-600" data-i18n="privacy.breadcrumb">Polityka prywatności</span>
         </nav>
@@ -183,6 +144,7 @@
           <li><a href="#license-data" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.license">Dane przetwarzane podczas weryfikacji licencji</a></li>
           <li><a href="#payment-data" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.payment">Dane przetwarzane podczas płatności</a></li>
           <li><a href="#website-data" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.website">Dane zbierane na naszej stronie</a></li>
+          <li><a href="#section-2-5" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.telemetry">Statystyki użytkowania</a></li>
           <li><a href="#third-party" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.thirdparty">Usługi podmiotów trzecich</a></li>
           <li><a href="#transfer" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.transfer">Międzynarodowy transfer danych</a></li>
           <li><a href="#retention" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.retention">Przechowywanie danych</a></li>
@@ -202,8 +164,9 @@
           <ul class="text-gray-600 space-y-1 ml-5 list-disc mt-2">
             <li data-i18n-html="privacy.files.li1"><strong>Weryfikacja licencji</strong>: Komunikuje się z Keygen.sh (patrz niżej)</li>
             <li data-i18n-html="privacy.files.li2"><strong>Sprawdzanie aktualizacji</strong>: Sprawdza, czy dostępna jest nowa wersja</li>
+            <li data-i18n-html="privacy.files.li3"><strong>Statystyki użytkowania</strong>: minimalny licznik źródła instalacji oraz opcjonalne statystyki użytkowania, jeśli wyrazisz zgodę (patrz <a href="#section-2-5" class="text-brand-600 hover:underline">§2.5</a>)</li>
           </ul>
-          <p class="text-gray-600 leading-relaxed mt-3" data-i18n="privacy.files.p3">Aplikacja desktopowa nie zbiera ani nie przesyła telemetrii, analiz użytkowania, metadanych plików ani zawartości plików.</p>
+          <p class="text-gray-600 leading-relaxed mt-3" data-i18n-html="privacy.files.p3">Aplikacja desktopowa nigdy nie przesyła zawartości Twoich plików ani metadanych plików. Informacje o statystykach użytkowania, które rzeczywiście wysyła, znajdują się powyżej w <a href="#section-2-5" class="text-brand-600 hover:underline">§2.5</a>.</p>
         </section>
 
         <section id="not-collect">
@@ -251,6 +214,15 @@
           <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="privacy.website.title">Dane zbierane na naszej stronie</h2>
           <p class="text-gray-600 leading-relaxed" data-i18n="privacy.website.p1">Strona marketingowa Keeply (keeply.work) wykrywa preferowany język w całości w Twojej przeglądarce — w tym celu nie wysyłamy Twojego adresu IP do żadnych stron trzecich. Wybór języka jest zapisywany w lokalnej pamięci przeglądarki dopiero po wyraźnym wybraniu go z menu języków lub otwarciu linku specyficznego dla języka (np. keeply.work/pl/).</p>
           <p class="text-gray-600 leading-relaxed mt-3" data-i18n="privacy.website.p2">Jeśli skontaktujesz się z nami e-mailem, zachowujemy korespondencję, aby odpowiedzieć na Twoje zapytanie. Nie zostaniesz dodany do żadnej listy marketingowej, chyba że wyraźnie wyrazisz na to zgodę.</p>
+        </section>
+
+        <section id="section-2-5">
+          <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="privacy.telemetry.title">Statystyki użytkowania</h2>
+          <p class="text-gray-600 leading-relaxed" data-i18n="privacy.telemetry.intro">Keeply zbiera niewielką ilość danych użytkowania – w dwóch oddzielnych poziomach – aby zrozumieć, skąd pochodzą instalacje i jak aplikacja jest używana, byśmy mogli ją ulepszać.</p>
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="privacy.telemetry.tier1.title">Poziom 1: Anonimowy licznik źródła instalacji (nie zbieramy danych osobowych)</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.telemetry.tier1.body">Pojedyncza wartość: Twoje źródło instalacji (winget, bezpośrednie pobranie, Homebrew lub nieznane). Bez identyfikatora, bez informacji o systemie operacyjnym lub urządzeniu, bez znacznika czasu. Nasz samodzielnie hostowany Cloudflare Worker jedynie zwiększa zagregowany licznik; nigdy nie przechowujemy pojedynczych rekordów ani Twojego adresu IP. Ten licznik jest zaprojektowany tak, aby nie umożliwiać identyfikacji, i dlatego jest traktowany jako dane nieosobowe. <strong>Jest wysyłany niezależnie od Twojego wyboru poniżej</strong> – możesz go wyłączyć w „Ustawienia → Raportowanie użytkowania".</p>
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="privacy.telemetry.tier2.title">Poziom 2: Statystyki użytkowania (tylko za Twoją zgodą)</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.telemetry.tier2.body">Wysyłane wyłącznie po wyrażeniu zgody (opt-in). Zawierają: system operacyjny i wersję główną, architekturę procesora, język interfejsu oraz wersję aplikacji; niskoczęstotliwościowe sygnały aktywności (najwyżej raz dziennie, agregowane tygodniowo/miesięcznie); oraz codziennie rotowany losowy identyfikator (bez imienia, e-maila, nazw plików czy zawartości plików). Podstawa prawna: Twoja zgoda (RODO Art. 6(1)(a)). Dane te są przetwarzane i przechowywane przez Cloudflare i zachowywane przez 12 miesięcy. Możesz wycofać zgodę w dowolnym momencie w „Ustawienia → Raportowanie użytkowania" – wycofanie jest tak proste jak wyrażenie zgody.</p>
         </section>
 
         <section id="third-party">
@@ -302,6 +274,7 @@
                 <tr><td class="px-4 py-2.5" data-i18n="privacy.retention.r1.data">Logi weryfikacji licencji (Keygen)</td><td class="px-4 py-2.5" data-i18n="privacy.retention.r1.period">Do 30 dni (logi); do 90 dni (analizy)</td></tr>
                 <tr><td class="px-4 py-2.5" data-i18n="privacy.retention.r2.data">Dane płatnicze (Paddle)</td><td class="px-4 py-2.5" data-i18n="privacy.retention.r2.period">Zgodnie z wymogami przepisów podatkowych i finansowych</td></tr>
                 <tr><td class="px-4 py-2.5" data-i18n="privacy.retention.r3.data">E-maile wsparcia klienta</td><td class="px-4 py-2.5" data-i18n="privacy.retention.r3.period">Przez czas trwania relacji biznesowej lub na żądanie usunięcia</td></tr>
+                <tr><td class="px-4 py-2.5" data-i18n="privacy.retention.r4.data">Statystyki użytkowania (opt-in)</td><td class="px-4 py-2.5" data-i18n="privacy.retention.r4.period">12 miesięcy (zgoda RODO Art. 6(1)(a))</td></tr>
               </tbody>
             </table>
           </div>
@@ -321,7 +294,7 @@
               <p class="text-sm text-gray-700" data-i18n-html="privacy.rights.taiwan"><strong>Mieszkańcy Tajwanu (PDPA):</strong> Masz prawo do dostępu, poprawiania i żądania usunięcia swoich danych osobowych.</p>
             </div>
           </div>
-          <p class="text-gray-600 leading-relaxed mt-4" data-i18n-html="privacy.rights.contact">Kontakt: <a href="mailto:hello@keeply.work" class="text-brand-600 font-medium hover:underline">hello@<span class="e-decoy">null.</span>keeply.work</a> — odpowiemy w ciągu 30 dni.</p>
+          <p class="text-gray-600 leading-relaxed mt-4" data-i18n-html="privacy.rights.contact">Kontakt: <a href="mailto:wei@keeply.work" class="text-brand-600 font-medium hover:underline">wei@<span class="e-decoy">null.</span>keeply.work</a> — odpowiemy w ciągu 30 dni.</p>
         </section>
 
         <section id="eu-rep">
@@ -336,12 +309,12 @@
 
         <section id="changes">
           <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="privacy.changes.title">Zmiany w tej polityce</h2>
-          <p class="text-gray-600 leading-relaxed" data-i18n="privacy.changes.p1">Możemy od czasu do czasu aktualizować tę politykę prywatności. Istotne zmiany będą publikowane na tej stronie.</p>
+          <p class="text-gray-600 leading-relaxed" data-i18n="privacy.changes.p1">Możemy od czasu do czasu aktualizować tę politykę prywatności. Istotne zmiany będą ogłaszane w aplikacji oraz publikowane na tej stronie co najmniej 30 dni przed ich wejściem w życie.</p>
         </section>
 
         <section>
           <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="privacy.contactus.title">Kontakt</h2>
-          <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.contactus.email">E-mail: <a href="mailto:hello@keeply.work" class="text-brand-600 font-medium hover:underline">hello@<span class="e-decoy">null.</span>keeply.work</a></p>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.contactus.email">E-mail: <a href="mailto:wei@keeply.work" class="text-brand-600 font-medium hover:underline">wei@<span class="e-decoy">null.</span>keeply.work</a></p>
           <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.contactus.website">Strona: <a href="https://keeply.work" class="text-brand-600 hover:underline">keeply.work</a></p>
         </section>
 
@@ -359,11 +332,11 @@
   <div id="footer-root"></div>
 
   <!-- Shared components + i18n + consent (spec 023) -->
-  <script src="../consent-api.b29ceadb9e.js" defer integrity="sha384-AgMsIGCbo9mV0oP2ebvR5aNCzNPtSkIGXG5v29yY6A+vEktkTMAOZtlK0WiKSEUR" crossorigin="anonymous"></script>
-  <script src="../components.c05ee0a2f9.js" defer integrity="sha384-vXwUAahowQXWmPuWdSGpRhbPEYL9ALaSYTZc/ecE89PTkK4ZVdyifqSVEsISVMQi" crossorigin="anonymous"></script>
-  <script src="../cookie-banner.8a90f5095a.js" defer integrity="sha384-FkrIUHI4EiKuF7c0lI0I+k/SpAC6SN6GAiU3tqGZBNs1nvMH4R/g+hpuVB/UGk63" crossorigin="anonymous"></script>
-  <script src="../ga4-loader.359df0e8a7.js" defer integrity="sha384-gyx7he9QurH3GoSkfkbiWJCVC2RYlzVMBwyolFNVDEjLCjX1oUw1XG+WLOEBLSQJ" crossorigin="anonymous"></script>
-  <script src="../clarity-loader.60a9a5160f.js" defer integrity="sha384-rdROtDi/pws+RrJtXaeyRY20mP1RJMaVL3DuCPi4UU7tkWHea6vyx01XW/4tbkL/" crossorigin="anonymous"></script>
-  <script src="../i18n-loader.e0abab46fe.js" defer integrity="sha384-xuSjKq6BPU6RFWDTrcHoRD6A+DZwVA9FxzIUvCsbXC4/DAOh01WrmuS38fjPHieY" crossorigin="anonymous"></script>
+  <script src="../consent-api.js" defer></script>
+  <script src="../components.js" defer></script>
+  <script src="../cookie-banner.js" defer></script>
+  <script src="../ga4-loader.js" defer></script>
+  <script src="../clarity-loader.js" defer></script>
+  <script src="../i18n-loader.js" defer></script>
 </body>
 </html>

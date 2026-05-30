@@ -104,49 +104,10 @@
   <meta name="twitter:image:alt" content="Adatvédelmi irányelvek — Keeply" />
 
   <!-- Tailwind CSS (compiled) -->
-  <link rel="preload" href="../style.css" as="style" integrity="sha384-2MFgQ5LhmRk0WJhm1E3MBqO4Xd0t1T+3huW94EkEIV6HQCnMqnsg66gY2CdYoxgY" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../style.css" integrity="sha384-2MFgQ5LhmRk0WJhm1E3MBqO4Xd0t1T+3huW94EkEIV6HQCnMqnsg66gY2CdYoxgY" crossorigin="anonymous" />
+  <link rel="preload" href="../style.css" as="style" />
+  <link rel="stylesheet" href="../style.css" />
 
-  <!-- M PLUS Rounded 1c (self-hosted via input.css @font-face) -->  <!-- Schema.org JSON-LD (injected by _dev/inject-schema.js) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://keeply.work/#organization",
-        "name": "Keeply",
-        "url": "https://keeply.work",
-        "logo": "https://keeply.work/logo.svg",
-        "founder": {
-          "@id": "https://keeply.work/#founder"
-        },
-        "sameAs": [
-          "https://keeply.work",
-          "https://blog.keeply.work",
-          "https://github.com/boy1690/keeply-releases",
-          "https://www.linkedin.com/company/keeply-work/",
-          "https://www.linkedin.com/in/ting-wei-tsao-b57480152/"
-        ]
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://keeply.work/hu/privacy#webpage",
-        "url": "https://keeply.work/hu/privacy",
-        "name": "Adatvédelmi irányelvek — Keeply",
-        "description": "A Keeply egy helyben futó asztali alkalmazás. A fájljaid soha nem hagyják el a számítógépedet. Tudd meg, hogyan kezeljük az adataidat.",
-        "inLanguage": "hu",
-        "isPartOf": {
-          "@id": "https://keeply.work/#website"
-        },
-        "publisher": {
-          "@id": "https://keeply.work/#organization"
-        }
-      }
-    ]
-  }
-  </script>
-
+  <!-- M PLUS Rounded 1c (self-hosted via input.css @font-face) -->
 </head>
 
 <body class="bg-white text-gray-900 font-sans antialiased">
@@ -161,7 +122,7 @@
       <!-- Header -->
       <div class="mb-12">
         <nav class="text-sm text-gray-400 mb-4">
-          <a href="./" class="hover:text-brand-600 transition-colors" data-i18n="breadcrumb.home">Főoldal</a>
+          <a href="index.html" class="hover:text-brand-600 transition-colors" data-i18n="breadcrumb.home">Főoldal</a>
           <span class="mx-2">/</span>
           <span class="text-gray-600" data-i18n="privacy.breadcrumb">Adatvédelmi irányelvek</span>
         </nav>
@@ -183,6 +144,7 @@
           <li><a href="#license-data" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.license">Licencellenőrzés során feldolgozott adatok</a></li>
           <li><a href="#payment-data" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.payment">Fizetés során feldolgozott adatok</a></li>
           <li><a href="#website-data" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.website">A weboldalunkon gyűjtött adatok</a></li>
+          <li><a href="#section-2-5" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.telemetry">Használati statisztikák</a></li>
           <li><a href="#third-party" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.thirdparty">Harmadik fél szolgáltatásai</a></li>
           <li><a href="#transfer" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.transfer">Nemzetközi adattovábbítás</a></li>
           <li><a href="#retention" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.retention">Adatmegőrzés</a></li>
@@ -202,8 +164,9 @@
           <ul class="text-gray-600 space-y-1 ml-5 list-disc mt-2">
             <li data-i18n-html="privacy.files.li1"><strong>Licencellenőrzés</strong>: Kommunikál a Keygen.sh-val (lásd alább)</li>
             <li data-i18n-html="privacy.files.li2"><strong>Frissítésellenőrzés</strong>: Ellenőrzi, hogy elérhető-e új verzió</li>
+            <li data-i18n-html="privacy.files.li3"><strong>Használati statisztikák</strong>: egy minimális telepítésforrás-számláló, valamint opcionális használati statisztikák, ha hozzájárul (lásd <a href="#section-2-5" class="text-brand-600 hover:underline">§2.5</a>)</li>
           </ul>
-          <p class="text-gray-600 leading-relaxed mt-3" data-i18n="privacy.files.p3">Az asztali alkalmazás nem gyűjt és nem továbbít telemetriát, használati elemzést, fájl-metaadatokat vagy fájltartalmat.</p>
+          <p class="text-gray-600 leading-relaxed mt-3" data-i18n-html="privacy.files.p3">Az asztali alkalmazás soha nem továbbítja a fájlok tartalmát vagy a fájl metaadatait. A ténylegesen elküldött használati statisztikákról lásd a fenti <a href="#section-2-5" class="text-brand-600 hover:underline">§2.5</a> szakaszt.</p>
         </section>
 
         <section id="not-collect">
@@ -251,6 +214,15 @@
           <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="privacy.website.title">A weboldalunkon gyűjtött adatok</h2>
           <p class="text-gray-600 leading-relaxed" data-i18n="privacy.website.p1">A Keeply marketing weboldala (keeply.work) az Ön által preferált nyelvet teljes mértékben a böngészőjén belül észleli — erre a célra nem küldjük el az Ön IP-címét harmadik félnek. Nyelvválasztása csak akkor kerül mentésre a böngésző helyi tárolójába, ha kifejezetten kiválasztja azt a nyelvi menüből, vagy megnyit egy nyelvspecifikus hivatkozást (pl. keeply.work/hu/).</p>
           <p class="text-gray-600 leading-relaxed mt-3" data-i18n="privacy.website.p2">Ha e-mailben keresel meg minket, megőrizzük a levelezést a megkeresésed megválaszolásához. Nem kerülsz fel marketing listára, hacsak nem kifejezetten feliratkozol.</p>
+        </section>
+
+        <section id="section-2-5">
+          <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="privacy.telemetry.title">Használati statisztikák</h2>
+          <p class="text-gray-600 leading-relaxed" data-i18n="privacy.telemetry.intro">A Keeply két különálló szinten gyűjt kis mennyiségű használati adatot, hogy megérthessük, honnan érkeznek a telepítések és hogyan használják az alkalmazást, ezáltal javíthassuk azt.</p>
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="privacy.telemetry.tier1.title">1. szint: Anonim telepítésforrás-számláló (nem gyűjtünk személyes adatot)</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.telemetry.tier1.body">Egyetlen érték: a telepítés forrása (winget, közvetlen letöltés, Homebrew vagy ismeretlen). Nincs azonosító, nincs operációs rendszer- vagy eszközinformáció, nincs időbélyeg. Saját üzemeltetésű Cloudflare Workerünk csak az összesített számlálót növeli; soha nem tárolunk egyedi rekordokat vagy az IP-címét. Ezt a számlálót azonosíthatatlanra terveztük, ezért nem személyes adatként kezeljük. <strong>Az alábbi választástól függetlenül elküldésre kerül</strong> — kikapcsolhatja a Beállítások → Használati jelentés menüpontban.</p>
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="privacy.telemetry.tier2.title">2. szint: Használati statisztikák (csak az Ön hozzájárulásával)</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.telemetry.tier2.body">Csak akkor kerül elküldésre, ha kifejezetten hozzájárul (opt-in). Tartalmazza: operációs rendszer és fő verzió, processzorarchitektúra, felület nyelve és alkalmazásverzió; alacsony frekvenciájú aktivitási jelek (legfeljebb naponta egyszer, heti/havi bontásban aggregálva); valamint egy naponta forgó véletlenszerű azonosító (név, e-mail, fájlnevek vagy fájltartalom nélkül). Jogalap: az Ön hozzájárulása (GDPR Art. 6(1)(a)). Ezeket az adatokat a Cloudflare dolgozza fel és tárolja, 12 hónapig megőrizve. A hozzájárulását bármikor visszavonhatja a Beállítások → Használati jelentés menüpontban — a visszavonás ugyanolyan egyszerű, mint a hozzájárulás megadása.</p>
         </section>
 
         <section id="third-party">
@@ -302,6 +274,7 @@
                 <tr><td class="px-4 py-2.5" data-i18n="privacy.retention.r1.data">Licencellenőrzési naplók (Keygen)</td><td class="px-4 py-2.5" data-i18n="privacy.retention.r1.period">Legfeljebb 30 nap (naplók); legfeljebb 90 nap (elemzések)</td></tr>
                 <tr><td class="px-4 py-2.5" data-i18n="privacy.retention.r2.data">Fizetési adatok (Paddle)</td><td class="px-4 py-2.5" data-i18n="privacy.retention.r2.period">Az adó- és pénzügyi szabályozás által megkövetelt ideig</td></tr>
                 <tr><td class="px-4 py-2.5" data-i18n="privacy.retention.r3.data">Ügyfélszolgálati e-mailek</td><td class="px-4 py-2.5" data-i18n="privacy.retention.r3.period">Az üzleti kapcsolat időtartama alatt, vagy törlési kérelem esetén</td></tr>
+                <tr><td class="px-4 py-2.5" data-i18n="privacy.retention.r4.data">Használati statisztikák (opt-in)</td><td class="px-4 py-2.5" data-i18n="privacy.retention.r4.period">12 hónap (GDPR Art. 6(1)(a) hozzájárulás)</td></tr>
               </tbody>
             </table>
           </div>
@@ -321,7 +294,7 @@
               <p class="text-sm text-gray-700" data-i18n-html="privacy.rights.taiwan"><strong>Tajvani lakosok (PDPA):</strong> Jogod van a személyes adataidhoz való hozzáféréshez, azok javításához és törlésének kéréséhez.</p>
             </div>
           </div>
-          <p class="text-gray-600 leading-relaxed mt-4" data-i18n-html="privacy.rights.contact">Kapcsolat: <a href="mailto:hello@keeply.work" class="text-brand-600 font-medium hover:underline">hello@<span class="e-decoy">null.</span>keeply.work</a> — 30 napon belül válaszolunk.</p>
+          <p class="text-gray-600 leading-relaxed mt-4" data-i18n-html="privacy.rights.contact">Kapcsolat: <a href="mailto:wei@keeply.work" class="text-brand-600 font-medium hover:underline">wei@<span class="e-decoy">null.</span>keeply.work</a> — 30 napon belül válaszolunk.</p>
         </section>
 
         <section id="eu-rep">
@@ -336,12 +309,12 @@
 
         <section id="changes">
           <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="privacy.changes.title">Az irányelvek módosításai</h2>
-          <p class="text-gray-600 leading-relaxed" data-i18n="privacy.changes.p1">Időről időre frissíthetjük ezeket az adatvédelmi irányelveket. A lényeges változásokat ezen a weboldalon tesszük közzé.</p>
+          <p class="text-gray-600 leading-relaxed" data-i18n="privacy.changes.p1">Időről időre frissíthetjük ezeket az adatvédelmi irányelveket. A lényeges változásokat a hatálybalépés előtt legalább 30 nappal az alkalmazáson belül és ezen a weboldalon közöljük.</p>
         </section>
 
         <section>
           <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="privacy.contactus.title">Kapcsolat</h2>
-          <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.contactus.email">E-mail: <a href="mailto:hello@keeply.work" class="text-brand-600 font-medium hover:underline">hello@<span class="e-decoy">null.</span>keeply.work</a></p>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.contactus.email">E-mail: <a href="mailto:wei@keeply.work" class="text-brand-600 font-medium hover:underline">wei@<span class="e-decoy">null.</span>keeply.work</a></p>
           <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.contactus.website">Weboldal: <a href="https://keeply.work" class="text-brand-600 hover:underline">keeply.work</a></p>
         </section>
 
@@ -359,11 +332,11 @@
   <div id="footer-root"></div>
 
   <!-- Shared components + i18n + consent (spec 023) -->
-  <script src="../consent-api.b29ceadb9e.js" defer integrity="sha384-AgMsIGCbo9mV0oP2ebvR5aNCzNPtSkIGXG5v29yY6A+vEktkTMAOZtlK0WiKSEUR" crossorigin="anonymous"></script>
-  <script src="../components.c05ee0a2f9.js" defer integrity="sha384-vXwUAahowQXWmPuWdSGpRhbPEYL9ALaSYTZc/ecE89PTkK4ZVdyifqSVEsISVMQi" crossorigin="anonymous"></script>
-  <script src="../cookie-banner.8a90f5095a.js" defer integrity="sha384-FkrIUHI4EiKuF7c0lI0I+k/SpAC6SN6GAiU3tqGZBNs1nvMH4R/g+hpuVB/UGk63" crossorigin="anonymous"></script>
-  <script src="../ga4-loader.359df0e8a7.js" defer integrity="sha384-gyx7he9QurH3GoSkfkbiWJCVC2RYlzVMBwyolFNVDEjLCjX1oUw1XG+WLOEBLSQJ" crossorigin="anonymous"></script>
-  <script src="../clarity-loader.60a9a5160f.js" defer integrity="sha384-rdROtDi/pws+RrJtXaeyRY20mP1RJMaVL3DuCPi4UU7tkWHea6vyx01XW/4tbkL/" crossorigin="anonymous"></script>
-  <script src="../i18n-loader.e0abab46fe.js" defer integrity="sha384-xuSjKq6BPU6RFWDTrcHoRD6A+DZwVA9FxzIUvCsbXC4/DAOh01WrmuS38fjPHieY" crossorigin="anonymous"></script>
+  <script src="../consent-api.js" defer></script>
+  <script src="../components.js" defer></script>
+  <script src="../cookie-banner.js" defer></script>
+  <script src="../ga4-loader.js" defer></script>
+  <script src="../clarity-loader.js" defer></script>
+  <script src="../i18n-loader.js" defer></script>
 </body>
 </html>

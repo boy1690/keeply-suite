@@ -104,49 +104,10 @@
   <meta name="twitter:image:alt" content="隱私權政策 — Keeply" />
 
   <!-- Tailwind CSS (compiled) -->
-  <link rel="preload" href="../style.css" as="style" integrity="sha384-2MFgQ5LhmRk0WJhm1E3MBqO4Xd0t1T+3huW94EkEIV6HQCnMqnsg66gY2CdYoxgY" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../style.css" integrity="sha384-2MFgQ5LhmRk0WJhm1E3MBqO4Xd0t1T+3huW94EkEIV6HQCnMqnsg66gY2CdYoxgY" crossorigin="anonymous" />
+  <link rel="preload" href="../style.css" as="style" />
+  <link rel="stylesheet" href="../style.css" />
 
-  <!-- M PLUS Rounded 1c (self-hosted via input.css @font-face) -->  <!-- Schema.org JSON-LD (injected by _dev/inject-schema.js) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://keeply.work/#organization",
-        "name": "Keeply",
-        "url": "https://keeply.work",
-        "logo": "https://keeply.work/logo.svg",
-        "founder": {
-          "@id": "https://keeply.work/#founder"
-        },
-        "sameAs": [
-          "https://keeply.work",
-          "https://blog.keeply.work",
-          "https://github.com/boy1690/keeply-releases",
-          "https://www.linkedin.com/company/keeply-work/",
-          "https://www.linkedin.com/in/ting-wei-tsao-b57480152/"
-        ]
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://keeply.work/zh-TW/privacy#webpage",
-        "url": "https://keeply.work/zh-TW/privacy",
-        "name": "隱私權政策 — Keeply",
-        "description": "Keeply 是一款本地優先的桌面應用程式。你的檔案絕不離開你的電腦。了解我們如何處理你的資料。",
-        "inLanguage": "zh-Hant",
-        "isPartOf": {
-          "@id": "https://keeply.work/#website"
-        },
-        "publisher": {
-          "@id": "https://keeply.work/#organization"
-        }
-      }
-    ]
-  }
-  </script>
-
+  <!-- M PLUS Rounded 1c (self-hosted via input.css @font-face) -->
 </head>
 
 <body class="bg-white text-gray-900 font-sans antialiased">
@@ -161,7 +122,7 @@
       <!-- Header -->
       <div class="mb-12">
         <nav class="text-sm text-gray-400 mb-4">
-          <a href="./" class="hover:text-brand-600 transition-colors" data-i18n="breadcrumb.home">首頁</a>
+          <a href="index.html" class="hover:text-brand-600 transition-colors" data-i18n="breadcrumb.home">首頁</a>
           <span class="mx-2">/</span>
           <span class="text-gray-600" data-i18n="privacy.breadcrumb">隱私權政策</span>
         </nav>
@@ -183,6 +144,7 @@
           <li><a href="#license-data" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.license">授權驗證時處理的資料</a></li>
           <li><a href="#payment-data" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.payment">付款時處理的資料</a></li>
           <li><a href="#website-data" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.website">我們網站上收集的資料</a></li>
+          <li><a href="#section-2-5" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.telemetry">使用統計</a></li>
           <li><a href="#third-party" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.thirdparty">第三方服務</a></li>
           <li><a href="#transfer" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.transfer">國際資料傳輸</a></li>
           <li><a href="#retention" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="privacy.toc.retention">資料保留</a></li>
@@ -202,8 +164,9 @@
           <ul class="text-gray-600 space-y-1 ml-5 list-disc mt-2">
             <li data-i18n-html="privacy.files.li1"><strong>授權驗證</strong>：與 Keygen.sh 通訊（詳見下方）</li>
             <li data-i18n-html="privacy.files.li2"><strong>更新檢查</strong>：確認是否有新版本可用</li>
+            <li data-i18n-html="privacy.files.li3"><strong>使用統計</strong>：一筆最小化的安裝來源計數，以及（經你同意的）選用使用統計（見 <a href="#section-2-5" class="text-brand-600 hover:underline">§2.5</a>）</li>
           </ul>
-          <p class="text-gray-600 leading-relaxed mt-3" data-i18n="privacy.files.p3">桌面應用程式不收集或傳輸任何遙測數據、使用分析、檔案元資料或檔案內容。</p>
+          <p class="text-gray-600 leading-relaxed mt-3" data-i18n-html="privacy.files.p3">桌面應用程式絕不傳輸你的檔案內容或檔案 metadata。關於它確實會送出的使用統計，見上方 <a href="#section-2-5" class="text-brand-600 hover:underline">§2.5</a>。</p>
         </section>
 
         <section id="not-collect">
@@ -251,6 +214,15 @@
           <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="privacy.website.title">我們網站上收集的資料</h2>
           <p class="text-gray-600 leading-relaxed" data-i18n="privacy.website.p1">Keeply 行銷網站（keeply.work）的語言偵測完全在您的瀏覽器本地執行——我們不會為此目的將您的 IP 位址傳送給任何第三方。只有在您從語言選單手動選擇語言、或開啟含語系路徑的連結（例如 keeply.work/zh-TW/）時，您的語言偏好才會儲存至瀏覽器的 local storage。</p>
           <p class="text-gray-600 leading-relaxed mt-3" data-i18n="privacy.website.p2">如果你透過電子郵件聯繫我們，我們會保留通訊內容以回覆你的詢問。除非你明確選擇加入，否則不會將你加入行銷名單。</p>
+        </section>
+
+        <section id="section-2-5">
+          <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="privacy.telemetry.title">使用統計</h2>
+          <p class="text-gray-600 leading-relaxed" data-i18n="privacy.telemetry.intro">Keeply 分兩個獨立層級蒐集少量使用統計，以了解安裝來源與使用方式，藉此改善產品。</p>
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="privacy.telemetry.tier1.title">第一層：匿名安裝來源計數（不蒐集個人資料）</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.telemetry.tier1.body">單一一個值：你的安裝來源（winget、直接下載、Homebrew 或未知）。無識別碼、無作業系統或裝置資訊、無時間戳。我們自架的 Cloudflare Worker 僅累加聚合計數，絕不儲存個別記錄或你的 IP 位址。此計數經設計為不可識別，因此視為非個人資料。<strong>無論你下方如何選擇，這筆計數都會送出</strong>——你可在「設定 → 使用狀況回報」關閉它。</p>
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="privacy.telemetry.tier2.title">第二層：使用統計（僅在你同意後）</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.telemetry.tier2.body">僅在你選擇加入後送出。包含：作業系統與主要版本、處理器架構、介面語言、app 版本；低頻活躍訊號（最多每日一次，以週／月彙總）；以及一個每日輪替的隨機識別碼（無姓名、email、檔名或檔案內容）。法律基礎：你的同意（GDPR 第 6(1)(a) 條）。此資料由 Cloudflare 處理與儲存，保留 12 個月。你可隨時在「設定 → 使用狀況回報」撤回，撤回和給予同意一樣容易。</p>
         </section>
 
         <section id="third-party">
@@ -302,6 +274,7 @@
                 <tr><td class="px-4 py-2.5" data-i18n="privacy.retention.r1.data">授權驗證日誌（Keygen）</td><td class="px-4 py-2.5" data-i18n="privacy.retention.r1.period">最長 30 天（日誌）；最長 90 天（分析）</td></tr>
                 <tr><td class="px-4 py-2.5" data-i18n="privacy.retention.r2.data">付款資料（Paddle）</td><td class="px-4 py-2.5" data-i18n="privacy.retention.r2.period">依稅務及財務法規要求</td></tr>
                 <tr><td class="px-4 py-2.5" data-i18n="privacy.retention.r3.data">客服電子郵件</td><td class="px-4 py-2.5" data-i18n="privacy.retention.r3.period">業務關係存續期間，或你要求刪除時</td></tr>
+                <tr><td class="px-4 py-2.5" data-i18n="privacy.retention.r4.data">使用統計（opt-in）</td><td class="px-4 py-2.5" data-i18n="privacy.retention.r4.period">12 個月（GDPR 第 6(1)(a) 條同意）</td></tr>
               </tbody>
             </table>
           </div>
@@ -321,7 +294,7 @@
               <p class="text-sm text-gray-700" data-i18n-html="privacy.rights.taiwan"><strong>台灣居民（個資法）：</strong>你有權存取、更正及要求刪除你的個人資料。</p>
             </div>
           </div>
-          <p class="text-gray-600 leading-relaxed mt-4" data-i18n-html="privacy.rights.contact">聯繫：<a href="mailto:hello@keeply.work" class="text-brand-600 font-medium hover:underline">hello@<span class="e-decoy">null.</span>keeply.work</a>，我們將在 30 天內回覆。</p>
+          <p class="text-gray-600 leading-relaxed mt-4" data-i18n-html="privacy.rights.contact">聯繫：<a href="mailto:wei@keeply.work" class="text-brand-600 font-medium hover:underline">wei@<span class="e-decoy">null.</span>keeply.work</a>，我們將在 30 天內回覆。</p>
         </section>
 
         <section id="eu-rep">
@@ -336,12 +309,12 @@
 
         <section id="changes">
           <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="privacy.changes.title">本政策的變更</h2>
-          <p class="text-gray-600 leading-relaxed" data-i18n="privacy.changes.p1">我們可能不時更新本隱私權政策。重大變更將在網站上發布通知。</p>
+          <p class="text-gray-600 leading-relaxed" data-i18n="privacy.changes.p1">我們可能不時更新本隱私權政策。重大變更會在生效前於 app 內通知並提前公告（至少 30 天）、同時發布於官網。</p>
         </section>
 
         <section>
           <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="privacy.contactus.title">聯繫我們</h2>
-          <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.contactus.email">電子郵件：<a href="mailto:hello@keeply.work" class="text-brand-600 font-medium hover:underline">hello@<span class="e-decoy">null.</span>keeply.work</a></p>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.contactus.email">電子郵件：<a href="mailto:wei@keeply.work" class="text-brand-600 font-medium hover:underline">wei@<span class="e-decoy">null.</span>keeply.work</a></p>
           <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.contactus.website">網站：<a href="https://keeply.work" class="text-brand-600 hover:underline">keeply.work</a></p>
         </section>
 
@@ -359,11 +332,11 @@
   <div id="footer-root"></div>
 
   <!-- Shared components + i18n + consent (spec 023) -->
-  <script src="../consent-api.b29ceadb9e.js" defer integrity="sha384-AgMsIGCbo9mV0oP2ebvR5aNCzNPtSkIGXG5v29yY6A+vEktkTMAOZtlK0WiKSEUR" crossorigin="anonymous"></script>
-  <script src="../components.c05ee0a2f9.js" defer integrity="sha384-vXwUAahowQXWmPuWdSGpRhbPEYL9ALaSYTZc/ecE89PTkK4ZVdyifqSVEsISVMQi" crossorigin="anonymous"></script>
-  <script src="../cookie-banner.8a90f5095a.js" defer integrity="sha384-FkrIUHI4EiKuF7c0lI0I+k/SpAC6SN6GAiU3tqGZBNs1nvMH4R/g+hpuVB/UGk63" crossorigin="anonymous"></script>
-  <script src="../ga4-loader.359df0e8a7.js" defer integrity="sha384-gyx7he9QurH3GoSkfkbiWJCVC2RYlzVMBwyolFNVDEjLCjX1oUw1XG+WLOEBLSQJ" crossorigin="anonymous"></script>
-  <script src="../clarity-loader.60a9a5160f.js" defer integrity="sha384-rdROtDi/pws+RrJtXaeyRY20mP1RJMaVL3DuCPi4UU7tkWHea6vyx01XW/4tbkL/" crossorigin="anonymous"></script>
-  <script src="../i18n-loader.e0abab46fe.js" defer integrity="sha384-xuSjKq6BPU6RFWDTrcHoRD6A+DZwVA9FxzIUvCsbXC4/DAOh01WrmuS38fjPHieY" crossorigin="anonymous"></script>
+  <script src="../consent-api.js" defer></script>
+  <script src="../components.js" defer></script>
+  <script src="../cookie-banner.js" defer></script>
+  <script src="../ga4-loader.js" defer></script>
+  <script src="../clarity-loader.js" defer></script>
+  <script src="../i18n-loader.js" defer></script>
 </body>
 </html>
