@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Keeply 法律與治理文件 · Legal &amp; Governance — keeply.work</title>
+  <meta name="description" content="Keeply 對外公開的隱私治理、Art-30 處理紀錄、第三方處理者證明與隱私政策審查文件。">
+  <link rel="canonical" href="https://keeply.work/legal/">
+  <meta name="robots" content="noindex, follow">
+  <style>
+    :root { --ink:#1a1a2e; --muted:#5b5b73; --line:#e6e6ef; --accent:#6d4aff; --bg:#fbfbfe; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",sans-serif;
+      line-height:1.65; }
+    .wrap { max-width:780px; margin:0 auto; padding:48px 24px 80px; }
+    header a { color:var(--accent); text-decoration:none; font-size:.9rem; }
+    h1 { font-size:1.7rem; margin:.4em 0 .2em; }
+    .lead { color:var(--muted); margin:0 0 2rem; }
+    h2 { font-size:1.05rem; margin:2.4rem 0 .6rem; padding-bottom:.3rem; border-bottom:1px solid var(--line); }
+    ul { list-style:none; padding:0; margin:0; }
+    li { padding:.85rem 0; border-bottom:1px solid var(--line); }
+    li a { color:var(--accent); text-decoration:none; font-weight:600; }
+    li a:hover { text-decoration:underline; }
+    .desc { display:block; color:var(--muted); font-size:.88rem; margin-top:.2rem; }
+    .note { background:#fff; border:1px solid var(--line); border-radius:10px; padding:14px 18px; font-size:.85rem; color:var(--muted); margin-top:2.4rem; }
+    footer { margin-top:3rem; font-size:.8rem; color:var(--muted); }
+    footer a { color:var(--accent); text-decoration:none; }
+  </style>
+  <!-- Ahrefs Web Analytics (cookieless, no consent gate) -->
+  <script src="https://analytics.ahrefs.com/analytics.js" data-key="CkWgapWieQbtB5UHVJhlVw" async></script>
+</head>
+<body>
+  <div class="wrap">
+    <header><a href="/">← keeply.work</a></header>
+    <h1>法律與治理文件</h1>
+    <p class="lead">Keeply（資料控制者：TSAO Ting-Wei）對外公開的隱私治理、處理紀錄與合規審查文件。隱私政策正文見
+      <a href="/privacy" style="color:var(--accent)">keeply.work/privacy</a>。</p>
+
+    <h2>隱私治理決策紀錄 · Governance</h2>
+    <ul>
+      <li>
+        <a href="/legal/governance/2026-05-26-telemetry-two-tier-consent.md">桌面使用統計：雙層同意設計決策</a>
+        <span class="desc">Telemetry two-tier consent — 匿名安裝來源計數 + opt-in 使用統計的合法性基礎與設計。對應隱私政策 §2.5。</span>
+      </li>
+      <li>
+        <a href="/legal/governance/2026-04-23-remove-ipapi-geolocation">移除 ipapi.co IP 地理定位決策</a>
+        <span class="desc">網站語言偵測改為瀏覽器本地、不再使用第三方 IP 地理服務。對應隱私政策 §2.4。</span>
+      </li>
+    </ul>
+
+    <h2>處理紀錄與第三方處理者 · Records &amp; Processors</h2>
+    <ul>
+      <li>
+        <a href="/legal/art-30-processing-records">GDPR Art-30 處理活動紀錄</a>
+        <span class="desc">全處理活動紀錄（Keygen / Paddle / Cloudflare / GitHub / Zoho 等處理者）。</span>
+      </li>
+      <li>
+        <a href="/legal/cloudflare-public-evidence-2026-05-30.md">Cloudflare 處理者合規證明（INV-8 evidence pack）</a>
+        <span class="desc">以 Cloudflare 官方公開資訊作為 telemetry D1 儲存之處理者 DPA 合理證明。</span>
+      </li>
+    </ul>
+
+    <h2>合規審查 · Review</h2>
+    <ul>
+      <li>
+        <a href="/legal/legal-review-equivalent-2026-05-30">隱私政策 v0.3 研究員等價審查</a>
+        <span class="desc">依公開 GDPR/EDPB 指引、CJEU 判決與各國 DPA 表態之結構性合規審查（非律師意見書）。</span>
+      </li>
+    </ul>
+
+    <div class="note">
+      本頁文件以原始 Markdown 形式提供，內容之權威來源為 Keeply 內部法律文件庫。
+      機械可讀的政策狀態登錄見 <a href="/legal/registry.json">registry.json</a>。
+    </div>
+
+    <footer>© Keeply · TSAO Ting-Wei · <a href="/privacy">隱私政策</a> · <a href="/terms">服務條款</a></footer>
+  </div>
+</body>
+</html>

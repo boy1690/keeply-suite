@@ -1,0 +1,58 @@
+{
+  "_meta": {
+    "purpose": "Keeply public legal registry — projection of boy1690/law products/keeply for the telemetry release-gate (Spec G) + public transparency.",
+    "generated_by": "_dev/sync-legal.js",
+    "source_of_truth": "private repo boy1690/law (products/keeply)",
+    "note": "Only the keeply segment is published; other clients and internal-accountability docs (LIA/DPIA/DPA-template) are not disclosed.",
+    "schema_for_gate": "privacy.current_version.status === \"published\""
+  },
+  "privacy": {
+    "current_version": {
+      "version": "v0.3.1",
+      "status": "published",
+      "current_file": "privacy-2026-05-26.md",
+      "last_updated": "2026-05-26",
+      "languages": [
+        "zh-TW",
+        "en"
+      ]
+    },
+    "public_urls": {
+      "zh-TW": "https://keeply.work/privacy",
+      "en": "https://keeply.work/en/privacy"
+    }
+  },
+  "controller": {
+    "name": "TSAO Ting-Wei, trading as Keeply (individual sole trader)",
+    "tax_residence": "Taiwan",
+    "primary_contact": "wei@keeply.work",
+    "affiliated_entity_disclosure": "City-State Information Technology Co., Ltd. (城國資訊有限公司, Taiwan business registration no. 42846493) appears as affiliated branding in Windows code-signing certification and product website footer; not the GDPR data controller. See Privacy Policy §1.2."
+  },
+  "documents_published": [
+    {
+      "file": "cloudflare-public-evidence-2026-05-30.md",
+      "url": "https://keeply.work/legal/cloudflare-public-evidence-2026-05-30",
+      "raw_url": "https://keeply.work/legal/cloudflare-public-evidence-2026-05-30.md"
+    },
+    {
+      "file": "governance/2026-05-26-telemetry-two-tier-consent.md",
+      "url": "https://keeply.work/legal/governance/2026-05-26-telemetry-two-tier-consent",
+      "raw_url": "https://keeply.work/legal/governance/2026-05-26-telemetry-two-tier-consent.md"
+    },
+    {
+      "file": "governance/2026-04-23-remove-ipapi-geolocation.md",
+      "url": "https://keeply.work/legal/governance/2026-04-23-remove-ipapi-geolocation",
+      "raw_url": "https://keeply.work/legal/governance/2026-04-23-remove-ipapi-geolocation.md"
+    },
+    {
+      "file": "art-30-processing-records.md",
+      "url": "https://keeply.work/legal/art-30-processing-records",
+      "raw_url": "https://keeply.work/legal/art-30-processing-records.md"
+    },
+    {
+      "file": "legal-review-equivalent-2026-05-30.md",
+      "url": "https://keeply.work/legal/legal-review-equivalent-2026-05-30",
+      "raw_url": "https://keeply.work/legal/legal-review-equivalent-2026-05-30.md"
+    }
+  ]
+}
