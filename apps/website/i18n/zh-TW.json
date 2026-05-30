@@ -202,7 +202,7 @@
   "privacy.retention.r2.period": "依稅務及財務法規要求",
   "privacy.retention.r3.data": "客服電子郵件",
   "privacy.retention.r3.period": "業務關係存續期間，或你要求刪除時",
-  "privacy.retention.r4.data": "使用統計（opt-in）",
+  "privacy.retention.r4.data": "使用統計（選擇加入）",
   "privacy.retention.r4.period": "12 個月（GDPR 第 6(1)(a) 條同意）",
   "privacy.rights.title": "你的權利",
   "privacy.rights.p1": "根據你的所在地，你可能擁有存取、更正、刪除、限制、可攜性、反對及撤回同意的權利。",

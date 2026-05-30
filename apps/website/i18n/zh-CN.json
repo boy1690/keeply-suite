@@ -172,7 +172,7 @@
   "privacy.retention.r2.period": "按税务和金融法规要求",
   "privacy.retention.r3.data": "客户支持邮件",
   "privacy.retention.r3.period": "业务关系存续期间，或收到删除请求时",
-  "privacy.retention.r4.data": "使用统计（opt-in）",
+  "privacy.retention.r4.data": "使用统计（选择加入）",
   "privacy.retention.r4.period": "12 个月（GDPR 第 6(1)(a) 条同意）",
   "privacy.rights.title": "你的权利",
   "privacy.rights.p1": "根据你的所在地，你可能享有访问、更正、删除、限制、可携性、反对和撤回同意的权利。",
