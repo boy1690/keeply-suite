@@ -6,10 +6,10 @@
   <meta name="theme-color" content="#4F46E5" />
   <!-- Content Security Policy (spec 019). frame-ancestors / HSTS / Permissions-Policy
        are header-only and deferred to future Cloudflare migration (audit #8). -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://static.cloudflareinsights.com https://*.clarity.ms https://cdn.paddle.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com https://*.clarity.ms; font-src 'self'; connect-src 'self' https://docs.google.com https://*.google-analytics.com https://*.analytics.google.com https://cloudflareinsights.com https://*.clarity.ms; form-action 'self' https://docs.google.com; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://analytics.ahrefs.com https://www.googletagmanager.com https://static.cloudflareinsights.com https://*.clarity.ms https://cdn.paddle.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com https://*.clarity.ms; font-src 'self'; connect-src 'self' https://analytics.ahrefs.com https://docs.google.com https://*.google-analytics.com https://*.analytics.google.com https://cloudflareinsights.com https://*.clarity.ms; form-action 'self' https://docs.google.com; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <title>Keeply — Tiedostoillasi on tarinoita. Keeply muistaa ne kaikki.</title>
-  <meta name="description" content="Helpoin tapa hallita tiedostoversioita ilman teknistä osaamista. Lataa ilmaiseksi, valmis 30 sekunnissa." />
+  <title>Keeply — Aikakone tiedostoillesi</title>
+  <meta name="description" content="Tiedosto ylikirjoitettu, muokattu väärin tai vanha versio hukassa? Keeply säilyttää tiedostoversiot automaattisesti samassa kansiossa, jotta yksittäiset käyttäjät ja tiimit voivat tarkistaa historian ja palauttaa tarvitsemansa version. Ilmainen lataus, ei tiliä." />
 
   <!-- Canonical -->
   <link rel="canonical" href="https://keeply.work/fi/" />
@@ -66,14 +66,14 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://keeply.work/fi/" />
-  <meta property="og:title" content="Keeply — Tiedostoillasi on tarinoita. Keeply muistaa ne kaikki." />
-  <meta property="og:description" content="Helpoin tapa hallita tiedostoversioita ilman teknistä osaamista. Lataa ilmaiseksi, valmis 30 sekunnissa." />
+  <meta property="og:title" content="Keeply — Aikakone tiedostoillesi" />
+  <meta property="og:description" content="Tiedosto ylikirjoitettu, muokattu väärin tai vanha versio hukassa? Keeply säilyttää tiedostoversiot automaattisesti samassa kansiossa, jotta yksittäiset käyttäjät ja tiimit voivat tarkistaa historian ja palauttaa tarvitsemansa version. Ilmainen lataus, ei tiliä." />
   <meta property="og:image" content="https://keeply.work/og-image.png" />
   <meta property="og:image:secure_url" content="https://keeply.work/og-image.png" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Keeply — Tiedostoillasi on tarinoita. Keeply muistaa ne kaikki." />
+  <meta property="og:image:alt" content="Keeply — Aikakone tiedostoillesi" />
   <meta property="og:site_name" content="Keeply" />
   <meta property="og:locale" content="fi_FI" />
   <meta property="og:locale:alternate" content="zh_TW" />
@@ -98,14 +98,19 @@
   <meta property="og:locale:alternate" content="th_TH" />
 <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Keeply — Tiedostoillasi on tarinoita. Keeply muistaa ne kaikki." />
-  <meta name="twitter:description" content="Helpoin tapa hallita tiedostoversioita ilman teknistä osaamista. Lataa ilmaiseksi, valmis 30 sekunnissa." />
+  <meta name="twitter:title" content="Keeply — Aikakone tiedostoillesi" />
+  <meta name="twitter:description" content="Tiedosto ylikirjoitettu, muokattu väärin tai vanha versio hukassa? Keeply säilyttää tiedostoversiot automaattisesti samassa kansiossa, jotta yksittäiset käyttäjät ja tiimit voivat tarkistaa historian ja palauttaa tarvitsemansa version. Ilmainen lataus, ei tiliä." />
   <meta name="twitter:image" content="https://keeply.work/og-image.png" />
-  <meta name="twitter:image:alt" content="Keeply — Tiedostoillasi on tarinoita. Keeply muistaa ne kaikki." />
+  <meta name="twitter:image:alt" content="Keeply — Aikakone tiedostoillesi" />
 
   <!-- Tailwind CSS (compiled) -->
   <link rel="preload" href="../style.css" as="style" integrity="sha384-2MFgQ5LhmRk0WJhm1E3MBqO4Xd0t1T+3huW94EkEIV6HQCnMqnsg66gY2CdYoxgY" crossorigin="anonymous" />
   <link rel="stylesheet" href="../style.css" integrity="sha384-2MFgQ5LhmRk0WJhm1E3MBqO4Xd0t1T+3huW94EkEIV6HQCnMqnsg66gY2CdYoxgY" crossorigin="anonymous" />
+
+  <!-- M PLUS Rounded 1c font preload (eliminates CLS from late font discovery) -->
+  <link rel="preload" href="../fonts/MPLUSRounded1c-Regular-v2.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+  <link rel="preload" href="../fonts/MPLUSRounded1c-Medium-v2.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+  <link rel="preload" href="../fonts/MPLUSRounded1c-Bold-v2.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
 
   <!-- M PLUS Rounded 1c (self-hosted via input.css @font-face) -->
 
@@ -148,7 +153,7 @@
         "operatingSystem": "Windows, macOS",
         "applicationCategory": "UtilitiesApplication",
         "softwareVersion": "1.0.12",
-        "description": "Helpoin tapa hallita tiedostoversioita ilman teknistä osaamista. Lataa ilmaiseksi, valmis 30 sekunnissa.",
+        "description": "Tiedosto ylikirjoitettu, muokattu väärin tai vanha versio hukassa? Keeply säilyttää tiedostoversiot automaattisesti samassa kansiossa, jotta yksittäiset käyttäjät ja tiimit voivat tarkistaa historian ja palauttaa tarvitsemansa version. Ilmainen lataus, ei tiliä.",
         "url": "https://keeply.work/fi/",
         "downloadUrl": "https://github.com/boy1690/keeply-releases/releases/latest",
         "screenshot": "https://keeply.work/og-image.png",
@@ -278,6 +283,8 @@
   </script>
 
 
+  <!-- Ahrefs Web Analytics (cookieless, no consent gate) -->
+  <script src="https://analytics.ahrefs.com/analytics.js" data-key="CkWgapWieQbtB5UHVJhlVw" async></script>
 </head>
 
 <body class="bg-white text-gray-900 font-sans antialiased">
@@ -859,7 +866,7 @@
   <script src="../cookie-banner.8a90f5095a.js" defer integrity="sha384-FkrIUHI4EiKuF7c0lI0I+k/SpAC6SN6GAiU3tqGZBNs1nvMH4R/g+hpuVB/UGk63" crossorigin="anonymous"></script>
   <script src="../ga4-loader.359df0e8a7.js" defer integrity="sha384-gyx7he9QurH3GoSkfkbiWJCVC2RYlzVMBwyolFNVDEjLCjX1oUw1XG+WLOEBLSQJ" crossorigin="anonymous"></script>
   <script src="../clarity-loader.60a9a5160f.js" defer integrity="sha384-rdROtDi/pws+RrJtXaeyRY20mP1RJMaVL3DuCPi4UU7tkWHea6vyx01XW/4tbkL/" crossorigin="anonymous"></script>
-  <script src="../i18n-loader.e0abab46fe.js" defer integrity="sha384-xuSjKq6BPU6RFWDTrcHoRD6A+DZwVA9FxzIUvCsbXC4/DAOh01WrmuS38fjPHieY" crossorigin="anonymous"></script>
+  <script src="../i18n-loader.cb3ce0cade.js" defer integrity="sha384-JdnjBkbL6PbtepXSRZHrL5FUnDwP3vs+fQgoU38nHXldWwcsnbA+2yGyDnsXo9fk" crossorigin="anonymous"></script>
   <script src="../team-notify.73d70ab047.js" defer integrity="sha384-kQUIeDWtAKHyIrSPoncROrE3SSvzakx5e3Ll8GT1Zjgqqr7nAyhVHZ7qyXYC+wVU" crossorigin="anonymous"></script>
 
 
