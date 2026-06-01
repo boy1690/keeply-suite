@@ -1,11 +1,14 @@
-# Cloudflare Pages SPA fallback for /demo/ (open-slide deck deep links).
+# Cloudflare Pages SPA fallback for the demo platform.
 #
-# Real files at /demo/index.html and /demo/assets/* are served directly by
-# Pages because they exist on disk. Only deep-link paths under /demo/s/*
-# (and other open-slide router paths) need to fall back to /demo/index.html
-# so the client-side router can render the requested slide.
+# Real files served directly by Pages (no fallback needed):
+#   /demo/index.html
+#   /demo/s/<id>/index.html  (pre-rendered for every deck in apps/slides/slides/)
 #
-# Status 200 = rewrite (URL stays as user sees it), not a 301/302 redirect.
+# After the inline router-base-reconcile <script> in demo/index.html runs,
+# history.replaceState strips the /demo prefix → URL bar shows /s/<id>.
+# If a visitor refreshes or shares that URL, /s/<id> has no underlying file,
+# so fall back to /demo/index.html (URL stays /s/<id>) so the open-slide
+# router can re-render.
 
-/demo/s/*       /demo/index.html        200
+/s/*            /demo/index.html        200
 /demo/themes/*  /demo/index.html        200
