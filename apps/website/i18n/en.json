@@ -692,5 +692,6 @@
   "about.cta.footnote": "30-day money-back guarantee · run by one person",
   "index.download.cta.mac.intel": "Download for Mac (Intel)",
   "index.download.note.mac.intel": "Intel Mac",
-  "install.macos.cta.intel": "Need the Intel build?"
+  "install.macos.cta.intel": "Need the Intel build?",
+  "index.hero.cta.demo": "See a 30-second demo"
 }

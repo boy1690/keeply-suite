@@ -692,5 +692,6 @@
   "install.deep_dive.cta": "Olvasd el a részletes cikket",
   "index.download.cta.mac.intel": "Letöltés Mac (Intel) verzióhoz",
   "index.download.note.mac.intel": "Intel Mac",
-  "install.macos.cta.intel": "Intel verzió"
+  "install.macos.cta.intel": "Intel verzió",
+  "index.hero.cta.demo": "30 másodperces demó megnézése"
 }

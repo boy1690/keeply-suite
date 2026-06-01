@@ -692,5 +692,6 @@
   "install.deep_dive.cta": "Lees het uitgebreide artikel",
   "index.download.cta.mac.intel": "Downloaden voor Mac (Intel)",
   "index.download.note.mac.intel": "Intel Mac",
-  "install.macos.cta.intel": "Intel-versie nodig?"
+  "install.macos.cta.intel": "Intel-versie nodig?",
+  "index.hero.cta.demo": "Bekijk de 30-seconden demo"
 }

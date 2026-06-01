@@ -1,0 +1,11 @@
+# Cloudflare Pages SPA fallback for /demo/ (open-slide deck deep links).
+#
+# Real files at /demo/index.html and /demo/assets/* are served directly by
+# Pages because they exist on disk. Only deep-link paths under /demo/s/*
+# (and other open-slide router paths) need to fall back to /demo/index.html
+# so the client-side router can render the requested slide.
+#
+# Status 200 = rewrite (URL stays as user sees it), not a 301/302 redirect.
+
+/demo/s/*       /demo/index.html        200
+/demo/themes/*  /demo/index.html        200

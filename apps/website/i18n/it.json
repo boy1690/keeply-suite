@@ -692,5 +692,6 @@
   "about.cta.footnote": "Garanzia di rimborso di 30 giorni · gestito da una sola persona",
   "index.download.cta.mac.intel": "Scarica per Mac (Intel)",
   "index.download.note.mac.intel": "Intel Mac",
-  "install.macos.cta.intel": "Versione Intel"
+  "install.macos.cta.intel": "Versione Intel",
+  "index.hero.cta.demo": "Guarda la demo di 30 s"
 }

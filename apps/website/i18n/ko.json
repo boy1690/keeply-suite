@@ -692,5 +692,6 @@
   "about.cta.footnote": "30일 환불 보장 · 1인 운영",
   "index.download.cta.mac.intel": "Mac (Intel) 무료 다운로드",
   "index.download.note.mac.intel": "Intel Mac",
-  "install.macos.cta.intel": "Intel 버전으로 전환"
+  "install.macos.cta.intel": "Intel 버전으로 전환",
+  "index.hero.cta.demo": "30초 데모 보기"
 }

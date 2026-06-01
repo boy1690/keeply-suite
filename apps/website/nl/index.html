@@ -104,8 +104,8 @@
   <meta name="twitter:image:alt" content="Keeply — De tijdmachine voor je bestanden" />
 
   <!-- Tailwind CSS (compiled) -->
-  <link rel="preload" href="../style.css" as="style" integrity="sha384-S4JTdDgn53fBmq+fg04X+lSHE7K+7Zuat0s7i2uj7+lTTQ5kky76smN90qmWiXPM" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../style.css" integrity="sha384-S4JTdDgn53fBmq+fg04X+lSHE7K+7Zuat0s7i2uj7+lTTQ5kky76smN90qmWiXPM" crossorigin="anonymous" />
+  <link rel="preload" href="../style.css" as="style" integrity="sha384-hTZGjyhFQ8KKNzS+Tci3QAMHuQk8Y3U01uzmfo5u4zvJ8aGcC/hplt4Nf/TjpRiF" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../style.css" integrity="sha384-hTZGjyhFQ8KKNzS+Tci3QAMHuQk8Y3U01uzmfo5u4zvJ8aGcC/hplt4Nf/TjpRiF" crossorigin="anonymous" />
 
   <!-- M PLUS Rounded 1c font preload (eliminates CLS from late font discovery) -->
   <link rel="preload" href="../fonts/MPLUSRounded1c-Regular-v2.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
@@ -319,13 +319,17 @@
       <p class="mt-6 text-lg md:text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed" data-i18n="index.hero.subtitle">Elke bewerking, elke beslissing, elke notitie die je achterlaat wordt het geheugen van je project. Over zes maanden redden deze herinneringen je.</p>
 
       <!-- CTA Buttons -->
-      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-5">
         <a href="#download" class="group bg-brand-600 hover:bg-brand-700 text-white font-medium px-8 py-4 rounded-full text-lg transition-all hover:shadow-xl hover:shadow-brand-600/25 flex items-center gap-2">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
           <span data-i18n="index.hero.cta">Gratis Downloaden</span>
         </a>
-        <span class="text-sm text-gray-400" data-i18n="index.hero.cta.note">Begin in 30 seconden, geen account nodig</span>
+        <a href="/demo/s/keeply-promo" class="text-base font-medium text-brand-600 hover:text-brand-700 underline-offset-4 hover:underline transition-colors flex items-center gap-1.5">
+          <span data-i18n="index.hero.cta.demo">Bekijk de 30-seconden demo</span>
+          <span aria-hidden="true">→</span>
+        </a>
       </div>
+      <p class="text-sm text-gray-400 mt-4" data-i18n="index.hero.cta.note">Begin in 30 seconden, geen account nodig</p>
 
       <!-- Hero Visual: App screenshot placeholder -->
       <div class="mt-16 relative">
@@ -893,7 +897,7 @@
   <script src="../cookie-banner.8a90f5095a.js" defer integrity="sha384-FkrIUHI4EiKuF7c0lI0I+k/SpAC6SN6GAiU3tqGZBNs1nvMH4R/g+hpuVB/UGk63" crossorigin="anonymous"></script>
   <script src="../ga4-loader.359df0e8a7.js" defer integrity="sha384-gyx7he9QurH3GoSkfkbiWJCVC2RYlzVMBwyolFNVDEjLCjX1oUw1XG+WLOEBLSQJ" crossorigin="anonymous"></script>
   <script src="../clarity-loader.60a9a5160f.js" defer integrity="sha384-rdROtDi/pws+RrJtXaeyRY20mP1RJMaVL3DuCPi4UU7tkWHea6vyx01XW/4tbkL/" crossorigin="anonymous"></script>
-  <script src="../i18n-loader.51aca3fb9e.js" defer integrity="sha384-8w3PKrPzoQh3MGjiMXNZDFlPqj+Wc4nUM7nZWdJze1cHopa0YSN65p7ejy/yYR1b" crossorigin="anonymous"></script>
+  <script src="../i18n-loader.dcb81e108b.js" defer integrity="sha384-g1hAXN5a4iesZCtHD9uARkhE0NPqThbWyghAfZFyjhJ9OBnJBCeNfECm3dtLvYg4" crossorigin="anonymous"></script>
   <script src="../team-notify.73d70ab047.js" defer integrity="sha384-kQUIeDWtAKHyIrSPoncROrE3SSvzakx5e3Ll8GT1Zjgqqr7nAyhVHZ7qyXYC+wVU" crossorigin="anonymous"></script>
 
 

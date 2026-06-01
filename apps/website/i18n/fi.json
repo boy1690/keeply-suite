@@ -692,5 +692,6 @@
   "install.deep_dive.cta": "Lue perusteellinen artikkeli",
   "index.download.cta.mac.intel": "Lataa Mac (Intel)",
   "index.download.note.mac.intel": "Intel Mac",
-  "install.macos.cta.intel": "Intel-versio"
+  "install.macos.cta.intel": "Intel-versio",
+  "index.hero.cta.demo": "Katso 30 sekunnin demo"
 }

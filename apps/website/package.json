@@ -11,7 +11,8 @@
     "build:sri": "node _dev/build-sri.js",
     "build:font-preload": "node _dev/inject-font-preload.js",
     "build:analytics": "node _dev/inject-analytics.js",
-    "build": "npm run build:checksums && npm run build:css && npm run build:pages && npm run build:comparisons && npm run build:clean-static && npm run build:clean-links && npm run build:schema && npm run build:fingerprint && npm run build:sri && npm run build:font-preload && npm run build:analytics",
+    "build:demo": "node _dev/build-demo.mjs",
+    "build": "npm run build:checksums && npm run build:css && npm run build:pages && npm run build:comparisons && npm run build:clean-static && npm run build:clean-links && npm run build:schema && npm run build:fingerprint && npm run build:sri && npm run build:font-preload && npm run build:analytics && npm run build:demo",
     "audit:orphans": "node _dev/audit-orphan-pages.js",
     "ping:indexnow": "node _dev/ping-indexnow.js",
     "seo:purge": "node _dev/seo/cf-purge.js"
