@@ -1,13 +1,11 @@
 // Build apps/slides deck → apps/website/demo/ with vite base=/demo/.
 // Post-build:
-//   1. Inject inline <script> that fixes the open-slide-router-vs-base mismatch:
-//      - /demo/  or /demo/index → redirect to default deck /demo/s/keeply-promo
-//      - /demo/s/<id>          → history.replaceState strips /demo prefix so
-//        open-slide's internal router (which doesn't read vite base) sees /s/<id>
-//        and matches the deck route.
-//   2. Pre-render deck folders /demo/s/<id>/index.html (clones of the built
-//      index.html) so plain static hosts (Python http.server, etc.) can serve
-//      deep-link paths without needing SPA fallback rules.
+//   1. Write /demo/router-reconcile.js (external — satisfies CSP `script-src 'self'`)
+//      that handles /demo/ → default-deck redirect and /demo/s/<id> → strip prefix
+//      so open-slide's internal router (which doesn't read vite base) sees /s/<id>.
+//   2. Inject <script src="/demo/router-reconcile.js"></script> at top of <head>.
+//   3. Pre-render deck folders /demo/s/<id>/index.html as clones of the patched
+//      index.html so plain static hosts can serve deep links directly.
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -41,18 +39,24 @@ console.log('[build-demo] base   =', cfg.base);
 
 await build(cfg);
 
-// ─── 1. Inject router-base reconciliation snippet ───────────────────────────
+// ─── 1. Write external reconcile script ────────────────────────────────────
+const RECONCILE_JS = '(function(){var p=location.pathname;var t=p.endsWith("/")&&p!=="/"?p.slice(0,-1):p;if(t==="/demo"||t==="/demo/index"){location.replace("/demo/s/keeply-promo"+location.search+location.hash);return;}if(t.indexOf("/demo/")===0){var s=t.substring(5);if(p.endsWith("/"))s+="/";history.replaceState(null,"",s+location.search+location.hash);}})();\n';
+fs.writeFileSync(path.join(OUT_DIR, 'router-reconcile.js'), RECONCILE_JS, 'utf8');
+console.log('[build-demo] wrote router-reconcile.js');
+
+// ─── 2. Inject external <script> tag (CSP-safe) ────────────────────────────
 const idxPath = path.join(OUT_DIR, 'index.html');
 let html = fs.readFileSync(idxPath, 'utf8');
-const SNIPPET = '<script>(function(){var p=location.pathname;var t=p.endsWith("/")&&p!=="/"?p.slice(0,-1):p;if(t==="/demo"||t==="/demo/index"){location.replace("/demo/s/keeply-promo"+location.search+location.hash);return;}if(t.indexOf("/demo/")===0){var s=t.substring(5);if(p.endsWith("/"))s+="/";history.replaceState(null,"",s+location.search+location.hash);}})();</script>';
-if (!html.includes('open-slide-base-reconcile')) {
-  const tagged = SNIPPET.replace('<script>', '<script id="open-slide-base-reconcile">');
-  html = html.replace('<head>', '<head>\n    ' + tagged);
+const TAG = '<script src="/demo/router-reconcile.js"></script>';
+if (!html.includes('/demo/router-reconcile.js')) {
+  // strip any stale inline reconcile snippet from prior build
+  html = html.replace(/<script id="open-slide-base-reconcile">[\s\S]*?<\/script>\s*/g, '');
+  html = html.replace('<head>', '<head>\n    ' + TAG);
   fs.writeFileSync(idxPath, html, 'utf8');
-  console.log('[build-demo] injected /demo router-base reconcile script');
+  console.log('[build-demo] wired external reconcile script into index.html');
 }
 
-// ─── 2. Pre-render deck folders so deep links serve as real files ──────────
+// ─── 3. Pre-render deck folders ────────────────────────────────────────────
 const slidesContentDir = path.join(SLIDES_DIR, 'slides');
 const deckIds = fs.readdirSync(slidesContentDir, { withFileTypes: true })
   .filter(d => d.isDirectory() && !d.name.startsWith('.') && !d.name.startsWith('_'))

@@ -1,0 +1,1 @@
+(function(){var p=location.pathname;var t=p.endsWith("/")&&p!=="/"?p.slice(0,-1):p;if(t==="/demo"||t==="/demo/index"){location.replace("/demo/s/keeply-promo"+location.search+location.hash);return;}if(t.indexOf("/demo/")===0){var s=t.substring(5);if(p.endsWith("/"))s+="/";history.replaceState(null,"",s+location.search+location.hash);}})();
