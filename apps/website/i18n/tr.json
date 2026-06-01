@@ -657,7 +657,7 @@
   "install.cta.detected_win.label": "Windows kullanıyorum — winget kullan",
   "install.cta.detected_win.note": "Windows algılandı. winget, SmartScreen uyarısını tamamen atlar.",
   "install.cta.unknown_os.label": "Kurulum yolunuzu seçin",
-  "install.cta.unknown_os.note": "İşletim sisteminiz otomatik olarak algılanamadı. Keeply, Windows 10+ ve Apple Silicon Mac'lerde çalışır.",
+  "install.cta.unknown_os.note": "İşletim sistemin algılanamadı. Keeply, Windows 10+ ve macOS'u (Apple Silicon · Intel) destekler.",
   "install.cta.secondary.win_to_mac": "Bunun yerine Mac'te",
   "install.cta.secondary.mac_to_win": "Bunun yerine Windows'ta",
   "install.paths.heading": "Üç kurulum yolu",
@@ -676,7 +676,7 @@
   "install.macos.title": ".dmg sürükle ve bırak",
   "install.macos.desc": "İlk açılış, Gatekeeper'ı geçmek için <strong>sağ tıklama → Aç</strong> gerektirir (çift tıklama değil). Yalnızca ilk seferinde.",
   "install.macos.cta": ".dmg indir",
-  "install.macos.requirement": "Yalnızca Apple Silicon",
+  "install.macos.requirement": "Apple Silicon · Intel",
   "install.linux_note": "Linux kullanıcısı mısınız? <span class=\"text-gray-500\">Henüz yol haritasında değil — Keeply bugün Windows ve macOS için sunuluyor.</span>",
   "install.first_project.heading": "Kurulumdan sonra: ilk projenizi ekleyin",
   "install.first_project.sub": "Kurulu olması bitmiş olması demek değildir. Bitmiş, ilk projenin aynı gün korunmasıdır.",
@@ -691,5 +691,6 @@
   "install.deep_dive.body": "Blogda tam anlatım — SmartScreen'in neden var olduğunu, winget'in onu neden atladığını, macOS'taki Gatekeeper sapmasını ve 5 yaygın hatayı ele alır.",
   "install.deep_dive.cta": "Ayrıntılı yazıyı okuyun",
   "index.download.cta.mac.intel": "Mac (Intel) için indir",
-  "index.download.note.mac.intel": "Intel Mac"
+  "index.download.note.mac.intel": "Intel Mac",
+  "install.macos.cta.intel": "Intel sürümü"
 }

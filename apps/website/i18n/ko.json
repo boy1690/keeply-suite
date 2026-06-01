@@ -601,7 +601,7 @@
   "install.cta.detected_win.label": "Windows 사용자입니다 — winget 사용",
   "install.cta.detected_win.note": "Windows가 감지되었습니다. winget을 사용하면 SmartScreen 경고를 완전히 건너뜁니다.",
   "install.cta.unknown_os.label": "설치 경로 선택",
-  "install.cta.unknown_os.note": "OS를 자동으로 감지하지 못했습니다. Keeply는 Windows 10 이상과 Apple Silicon Mac에서 작동합니다.",
+  "install.cta.unknown_os.note": "OS를 자동으로 감지하지 못했습니다. Keeply는 Windows 10+ 및 macOS (Apple Silicon · Intel)를 지원합니다.",
   "install.cta.secondary.win_to_mac": "대신 Mac에서 설치",
   "install.cta.secondary.mac_to_win": "대신 Windows에서 설치",
   "install.paths.heading": "세 가지 설치 경로",
@@ -620,7 +620,7 @@
   "install.macos.title": ".dmg 드래그 앤 드롭",
   "install.macos.desc": "첫 실행은 더블 클릭이 아니라 <strong>우클릭 → 열기</strong>로 Gatekeeper를 통과시켜야 합니다. 처음 한 번만 그렇게 하면 됩니다.",
   "install.macos.cta": ".dmg 다운로드",
-  "install.macos.requirement": "Apple Silicon 전용",
+  "install.macos.requirement": "Apple Silicon · Intel",
   "install.linux_note": "Linux 사용자이신가요? <span class=\"text-gray-500\">아직 로드맵에 없습니다 — 현재 Keeply는 Windows와 macOS로만 제공됩니다.</span>",
   "install.first_project.heading": "설치 후: 첫 프로젝트를 등록하세요",
   "install.first_project.sub": "설치만으로는 끝이 아닙니다. 같은 날 첫 프로젝트가 보호되어야 비로소 완료입니다.",
@@ -691,5 +691,6 @@
   "about.cta.button": "Keeply 다운로드 (macOS / Windows)",
   "about.cta.footnote": "30일 환불 보장 · 1인 운영",
   "index.download.cta.mac.intel": "Mac (Intel) 무료 다운로드",
-  "index.download.note.mac.intel": "Intel Mac"
+  "index.download.note.mac.intel": "Intel Mac",
+  "install.macos.cta.intel": "Intel 버전으로 전환"
 }

@@ -613,7 +613,7 @@
   "install.cta.detected_win.label": "我是 Windows 用戶 — 用 winget",
   "install.cta.detected_win.note": "偵測到 Windows。winget 不會出現 SmartScreen 警告。",
   "install.cta.unknown_os.label": "挑你的安裝路徑",
-  "install.cta.unknown_os.note": "沒辦法自動判斷你的作業系統。Keeply 支援 Windows 10+ 與 Apple Silicon Mac。",
+  "install.cta.unknown_os.note": "沒辦法自動判斷你的作業系統。Keeply 支援 Windows 10+ 與 macOS（Apple Silicon · Intel）。",
   "install.cta.secondary.win_to_mac": "改看 Mac 版",
   "install.cta.secondary.mac_to_win": "改看 Windows 版",
   "install.paths.heading": "三條安裝路徑",
@@ -632,7 +632,7 @@
   "install.macos.title": ".dmg 拖放安裝",
   "install.macos.desc": "首次開啟必須<strong>右鍵 → 打開</strong>（不是雙擊）才能繞過 Gatekeeper。只有第一次需要。",
   "install.macos.cta": "下載 .dmg",
-  "install.macos.requirement": "僅支援 Apple Silicon",
+  "install.macos.requirement": "Apple Silicon · Intel",
   "install.linux_note": "Linux 用戶？<span class=\"text-gray-500\">還沒在 roadmap 上——Keeply 目前只出 Windows 與 macOS 版。</span>",
   "install.first_project.heading": "安裝完之後：丟進第一個專案",
   "install.first_project.sub": "「裝完」不算結束，「同一天第一個專案被保護」才算結束。",
@@ -691,5 +691,6 @@
   "about.cta.button": "下載 Keeply（macOS / Windows）",
   "about.cta.footnote": "30 天退款保證 · 一人營運",
   "index.download.cta.mac.intel": "免費下載 Mac (Intel)",
-  "index.download.note.mac.intel": "Intel Mac"
+  "index.download.note.mac.intel": "Intel Mac",
+  "install.macos.cta.intel": "改下載 Intel Mac 版"
 }

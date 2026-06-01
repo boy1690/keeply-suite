@@ -601,7 +601,7 @@
   "install.cta.detected_win.label": "我是 Windows 用户 — 用 winget",
   "install.cta.detected_win.note": "检测到 Windows。winget 不会出现 SmartScreen 警告。",
   "install.cta.unknown_os.label": "选择你的安装路径",
-  "install.cta.unknown_os.note": "无法自动识别你的操作系统。Keeply 支持 Windows 10+ 与 Apple Silicon Mac。",
+  "install.cta.unknown_os.note": "没办法自动判断你的操作系统。Keeply 支持 Windows 10+ 与 macOS（Apple Silicon · Intel）。",
   "install.cta.secondary.win_to_mac": "改看 Mac 版",
   "install.cta.secondary.mac_to_win": "改看 Windows 版",
   "install.paths.heading": "三条安装路径",
@@ -620,7 +620,7 @@
   "install.macos.title": ".dmg 拖放安装",
   "install.macos.desc": "首次打开必须<strong>右键 → 打开</strong>（不是双击）才能绕过 Gatekeeper。仅第一次需要。",
   "install.macos.cta": "下载 .dmg",
-  "install.macos.requirement": "仅支持 Apple Silicon",
+  "install.macos.requirement": "Apple Silicon · Intel",
   "install.linux_note": "Linux 用户？<span class=\"text-gray-500\">暂未列入路线图——Keeply 目前只发布 Windows 与 macOS 版。</span>",
   "install.first_project.heading": "安装之后：放入你的第一个项目",
   "install.first_project.sub": "「装完」不算结束，「同一天第一个项目被保护」才算结束。",
@@ -691,5 +691,6 @@
   "about.cta.button": "下载 Keeply（macOS / Windows）",
   "about.cta.footnote": "30 天退款保证 · 一人运营",
   "index.download.cta.mac.intel": "免费下载 Mac (Intel)",
-  "index.download.note.mac.intel": "Intel Mac"
+  "index.download.note.mac.intel": "Intel Mac",
+  "install.macos.cta.intel": "改下载 Intel Mac 版"
 }

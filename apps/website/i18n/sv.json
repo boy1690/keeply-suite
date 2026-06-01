@@ -657,7 +657,7 @@
   "install.cta.detected_win.label": "Jag har Windows — använd winget",
   "install.cta.detected_win.note": "Windows upptäckt. winget hoppar helt över SmartScreen-varningen.",
   "install.cta.unknown_os.label": "Välj din installationsmetod",
-  "install.cta.unknown_os.note": "Det gick inte att identifiera ditt operativsystem automatiskt. Keeply körs på Windows 10+ och Apple Silicon-Mac-datorer.",
+  "install.cta.unknown_os.note": "Kunde inte upptäcka ditt operativsystem. Keeply stöder Windows 10+ och macOS (Apple Silicon · Intel).",
   "install.cta.secondary.win_to_mac": "På Mac i stället",
   "install.cta.secondary.mac_to_win": "På Windows i stället",
   "install.paths.heading": "Tre installationsmetoder",
@@ -676,7 +676,7 @@
   "install.macos.title": ".dmg dra och släpp",
   "install.macos.desc": "Första starten kräver <strong>högerklick → Öppna</strong> (inte dubbelklick) för att passera Gatekeeper. Bara första gången.",
   "install.macos.cta": "Ladda ner .dmg",
-  "install.macos.requirement": "Endast Apple Silicon",
+  "install.macos.requirement": "Apple Silicon · Intel",
   "install.linux_note": "Linux-användare? <span class=\"text-gray-500\">Inte på färdplanen än — Keeply finns i dag för Windows och macOS.</span>",
   "install.first_project.heading": "Efter installationen: lägg in ditt första projekt",
   "install.first_project.sub": "Installerat är inte detsamma som klart. Klart är när det första projektet är skyddat samma dag.",
@@ -691,5 +691,6 @@
   "install.deep_dive.body": "Fullständig genomgång på bloggen — täcker varför SmartScreen finns, varför winget kringgår den, Gatekeeper-omvägen på macOS och 5 vanliga fel.",
   "install.deep_dive.cta": "Läs den utförliga artikeln",
   "index.download.cta.mac.intel": "Ladda ner för Mac (Intel)",
-  "index.download.note.mac.intel": "Intel Mac"
+  "index.download.note.mac.intel": "Intel Mac",
+  "install.macos.cta.intel": "Intel-version"
 }

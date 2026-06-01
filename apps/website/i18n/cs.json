@@ -657,7 +657,7 @@
   "install.cta.detected_win.label": "Mám Windows — použít winget",
   "install.cta.detected_win.note": "Zjištěn Windows. winget zcela přeskočí varování SmartScreen.",
   "install.cta.unknown_os.label": "Vyberte způsob instalace",
-  "install.cta.unknown_os.note": "Váš systém se nepodařilo automaticky rozpoznat. Keeply běží na Windows 10+ a Macích s Apple Silicon.",
+  "install.cta.unknown_os.note": "Nepodařilo se rozpoznat operační systém. Keeply podporuje Windows 10+ a macOS (Apple Silicon · Intel).",
   "install.cta.secondary.win_to_mac": "Raději na Macu",
   "install.cta.secondary.mac_to_win": "Raději na Windows",
   "install.paths.heading": "Tři způsoby instalace",
@@ -676,7 +676,7 @@
   "install.macos.title": ".dmg přetažením",
   "install.macos.desc": "První spuštění vyžaduje <strong>pravý klik → Otevřít</strong> (ne dvojklik), aby se obešel Gatekeeper. Jen poprvé.",
   "install.macos.cta": "Stáhnout .dmg",
-  "install.macos.requirement": "Pouze Apple Silicon",
+  "install.macos.requirement": "Apple Silicon · Intel",
   "install.linux_note": "Uživatel Linuxu? <span class=\"text-gray-500\">Zatím není v plánu — Keeply je dnes k dispozici pro Windows a macOS.</span>",
   "install.first_project.heading": "Po instalaci: přidejte svůj první projekt",
   "install.first_project.sub": "Nainstalováno neznamená hotovo. Hotovo znamená první projekt chráněný ještě týž den.",
@@ -691,5 +691,6 @@
   "install.deep_dive.body": "Kompletní návod na blogu — vysvětluje, proč SmartScreen existuje, proč ho winget obchází, oklika přes Gatekeeper na macOS a 5 častých chyb.",
   "install.deep_dive.cta": "Přečíst podrobný článek",
   "index.download.cta.mac.intel": "Stáhnout pro Mac (Intel)",
-  "index.download.note.mac.intel": "Intel Mac"
+  "index.download.note.mac.intel": "Intel Mac",
+  "install.macos.cta.intel": "Verze pro Intel"
 }

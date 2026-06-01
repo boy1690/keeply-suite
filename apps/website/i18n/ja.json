@@ -601,7 +601,7 @@
   "install.cta.detected_win.label": "Windows をお使いですね — winget で",
   "install.cta.detected_win.note": "Windows を検出しました。winget なら SmartScreen 警告を完全にスキップできます。",
   "install.cta.unknown_os.label": "インストール方法を選択",
-  "install.cta.unknown_os.note": "OS を自動検出できませんでした。Keeply は Windows 10 以降と Apple Silicon の Mac で動作します。",
+  "install.cta.unknown_os.note": "OS を自動検出できませんでした。Keeply は Windows 10+ と macOS (Apple Silicon · Intel) に対応しています。",
   "install.cta.secondary.win_to_mac": "Mac を使う場合はこちら",
   "install.cta.secondary.mac_to_win": "Windows を使う場合はこちら",
   "install.paths.heading": "3つのインストール方法",
@@ -620,7 +620,7 @@
   "install.macos.title": ".dmg をドラッグ＆ドロップ",
   "install.macos.desc": "初回起動は <strong>右クリック → 開く</strong>（ダブルクリックではなく）で Gatekeeper を通過させてください。初回のみです。",
   "install.macos.cta": ".dmg をダウンロード",
-  "install.macos.requirement": "Apple Silicon のみ",
+  "install.macos.requirement": "Apple Silicon · Intel",
   "install.linux_note": "Linux ユーザーの方？ <span class=\"text-gray-500\">まだロードマップにありません — Keeply は現在 Windows と macOS のみ提供しています。</span>",
   "install.first_project.heading": "インストール後：最初のプロジェクトを追加",
   "install.first_project.sub": "インストールしただけでは完了ではありません。当日中に最初のプロジェクトを保護してこそ完了です。",
@@ -691,5 +691,6 @@
   "about.cta.button": "Keeply をダウンロード（macOS / Windows）",
   "about.cta.footnote": "30 日間返金保証 · 一人で運営",
   "index.download.cta.mac.intel": "Mac (Intel) を無料ダウンロード",
-  "index.download.note.mac.intel": "Intel Mac"
+  "index.download.note.mac.intel": "Intel Mac",
+  "install.macos.cta.intel": "Intel 版に切り替え"
 }

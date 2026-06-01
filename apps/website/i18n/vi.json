@@ -613,7 +613,7 @@
   "install.cta.detected_win.label": "Tôi đang dùng Windows — dùng winget",
   "install.cta.detected_win.note": "Đã phát hiện Windows. winget bỏ qua hoàn toàn cảnh báo SmartScreen.",
   "install.cta.unknown_os.label": "Chọn cách cài của bạn",
-  "install.cta.unknown_os.note": "Không thể tự động phát hiện hệ điều hành của bạn. Keeply chạy trên Windows 10+ và máy Mac dùng Apple Silicon.",
+  "install.cta.unknown_os.note": "Không thể nhận diện hệ điều hành. Keeply hỗ trợ Windows 10+ và macOS (Apple Silicon · Intel).",
   "install.cta.secondary.win_to_mac": "Tôi dùng Mac",
   "install.cta.secondary.mac_to_win": "Tôi dùng Windows",
   "install.paths.heading": "Ba cách cài đặt",
@@ -632,7 +632,7 @@
   "install.macos.title": "Kéo & thả .dmg",
   "install.macos.desc": "Lần đầu khởi chạy cần <strong>nhấp chuột phải → Mở</strong> (không phải nhấp đúp) để vượt qua Gatekeeper. Chỉ lần đầu thôi.",
   "install.macos.cta": "Tải .dmg",
-  "install.macos.requirement": "Chỉ dành cho Apple Silicon",
+  "install.macos.requirement": "Apple Silicon · Intel",
   "install.linux_note": "Người dùng Linux? <span class=\"text-gray-500\">Chưa có trong lộ trình — hiện Keeply phát hành cho Windows và macOS.</span>",
   "install.first_project.heading": "Sau khi cài: thả vào dự án đầu tiên của bạn",
   "install.first_project.sub": "Cài xong chưa phải là xong. Dự án đầu tiên được bảo vệ ngay trong ngày mới là xong.",
@@ -691,5 +691,6 @@
   "about.cta.button": "Tải Keeply (macOS / Windows)",
   "about.cta.footnote": "Bảo đảm hoàn tiền trong 30 ngày · do một người vận hành",
   "index.download.cta.mac.intel": "Tải về cho Mac (Intel)",
-  "index.download.note.mac.intel": "Intel Mac"
+  "index.download.note.mac.intel": "Intel Mac",
+  "install.macos.cta.intel": "Phiên bản Intel"
 }

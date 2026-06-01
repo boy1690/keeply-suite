@@ -657,7 +657,7 @@
   "install.cta.detected_win.label": "Käytän Windowsia — käytä wingetiä",
   "install.cta.detected_win.note": "Windows havaittu. winget ohittaa SmartScreen-varoituksen kokonaan.",
   "install.cta.unknown_os.label": "Valitse asennustapasi",
-  "install.cta.unknown_os.note": "Käyttöjärjestelmääsi ei voitu tunnistaa automaattisesti. Keeply toimii Windows 10+ -järjestelmissä ja Apple Silicon -Maceissa.",
+  "install.cta.unknown_os.note": "Käyttöjärjestelmää ei voitu tunnistaa. Keeply tukee Windows 10+:aa ja macOS:ää (Apple Silicon · Intel).",
   "install.cta.secondary.win_to_mac": "Sittenkin Macilla",
   "install.cta.secondary.mac_to_win": "Sittenkin Windowsilla",
   "install.paths.heading": "Kolme asennustapaa",
@@ -676,7 +676,7 @@
   "install.macos.title": ".dmg vedä ja pudota",
   "install.macos.desc": "Ensimmäinen käynnistys vaatii <strong>hiiren kakkospainikkeen → Avaa</strong> (ei kaksoisnapsautusta) Gatekeeperin ohittamiseksi. Vain ensimmäisellä kerralla.",
   "install.macos.cta": "Lataa .dmg",
-  "install.macos.requirement": "Vain Apple Silicon",
+  "install.macos.requirement": "Apple Silicon · Intel",
   "install.linux_note": "Linux-käyttäjä? <span class=\"text-gray-500\">Ei vielä suunnitelmissa — Keeply on tänään saatavilla Windowsille ja macOSille.</span>",
   "install.first_project.heading": "Asennuksen jälkeen: lisää ensimmäinen projektisi",
   "install.first_project.sub": "Asennettu ei ole sama kuin valmis. Valmis on, kun ensimmäinen projekti on suojattu samana päivänä.",
@@ -691,5 +691,6 @@
   "install.deep_dive.body": "Täydellinen läpikäynti blogissa — käsittelee miksi SmartScreen on olemassa, miksi winget ohittaa sen, Gatekeeper-kierroksen macOSissa ja 5 yleistä virhettä.",
   "install.deep_dive.cta": "Lue perusteellinen artikkeli",
   "index.download.cta.mac.intel": "Lataa Mac (Intel)",
-  "index.download.note.mac.intel": "Intel Mac"
+  "index.download.note.mac.intel": "Intel Mac",
+  "install.macos.cta.intel": "Intel-versio"
 }

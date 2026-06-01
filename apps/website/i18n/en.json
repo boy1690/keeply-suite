@@ -613,7 +613,7 @@
   "install.cta.detected_win.label": "I’m on Windows — use winget",
   "install.cta.detected_win.note": "Detected Windows. winget skips the SmartScreen warning entirely.",
   "install.cta.unknown_os.label": "Pick your install path",
-  "install.cta.unknown_os.note": "Couldn’t detect your OS automatically. Keeply runs on Windows 10+ and Apple Silicon Macs.",
+  "install.cta.unknown_os.note": "Couldn't auto-detect your OS. Keeply supports Windows 10+ and macOS (Apple Silicon · Intel).",
   "install.cta.secondary.win_to_mac": "On Mac instead",
   "install.cta.secondary.mac_to_win": "On Windows instead",
   "install.paths.heading": "Three install paths",
@@ -632,7 +632,7 @@
   "install.macos.title": ".dmg drag & drop",
   "install.macos.desc": "First launch needs <strong>right-click → Open</strong> (not double-click) to clear Gatekeeper. Only the first time.",
   "install.macos.cta": "Download .dmg",
-  "install.macos.requirement": "Apple Silicon only",
+  "install.macos.requirement": "Apple Silicon · Intel",
   "install.linux_note": "Linux user? <span class=\"text-gray-500\">Not on the roadmap yet — Keeply ships Windows and macOS today.</span>",
   "install.first_project.heading": "After install: drop in your first project",
   "install.first_project.sub": "Installed isn't done. First project being protected the same day is done.",
@@ -691,5 +691,6 @@
   "about.cta.button": "Download Keeply (macOS / Windows)",
   "about.cta.footnote": "30-day money-back guarantee · run by one person",
   "index.download.cta.mac.intel": "Download for Mac (Intel)",
-  "index.download.note.mac.intel": "Intel Mac"
+  "index.download.note.mac.intel": "Intel Mac",
+  "install.macos.cta.intel": "Need the Intel build?"
 }

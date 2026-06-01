@@ -75,8 +75,8 @@
   <meta name="twitter:image" content="https://keeply.work/og-image.png" />
   <meta name="twitter:image:alt" content="Installa Keeply su Windows o macOS in 30 secondi — Keeply" />
 
-  <link rel="preload" href="../style.css" as="style" integrity="sha384-HsfGfWXXyC2Rl9pRHVwai/05ZxiyGUhElAyf7pjFgEZTbQT7JuZIUozhyjoYAKeB" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../style.css" integrity="sha384-HsfGfWXXyC2Rl9pRHVwai/05ZxiyGUhElAyf7pjFgEZTbQT7JuZIUozhyjoYAKeB" crossorigin="anonymous" />
+  <link rel="preload" href="../style.css" as="style" integrity="sha384-S4JTdDgn53fBmq+fg04X+lSHE7K+7Zuat0s7i2uj7+lTTQ5kky76smN90qmWiXPM" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../style.css" integrity="sha384-S4JTdDgn53fBmq+fg04X+lSHE7K+7Zuat0s7i2uj7+lTTQ5kky76smN90qmWiXPM" crossorigin="anonymous" />
 
   <!-- M PLUS Rounded 1c font preload (eliminates CLS from late font discovery) -->
   <link rel="preload" href="../fonts/MPLUSRounded1c-Regular-v2.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
@@ -129,7 +129,7 @@
     <span data-i18n="install.cta.detected_win.label">Sono su Windows — usa winget</span>
     <span data-i18n="install.cta.detected_win.note">Rilevato Windows. winget salta completamente l'avviso SmartScreen.</span>
     <span data-i18n="install.cta.unknown_os.label">Scegli il tuo metodo di installazione</span>
-    <span data-i18n="install.cta.unknown_os.note">Non è stato possibile rilevare automaticamente il tuo sistema operativo. Keeply funziona su Windows 10+ e Mac con Apple Silicon.</span>
+    <span data-i18n="install.cta.unknown_os.note">Impossibile rilevare il tuo sistema operativo. Keeply supporta Windows 10+ e macOS (Apple Silicon · Intel).</span>
     <span data-i18n="install.cta.secondary.win_to_mac">Su Mac invece</span>
     <span data-i18n="install.cta.secondary.mac_to_win">Su Windows invece</span>
   </div>
@@ -212,7 +212,12 @@
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
             <span data-i18n="install.macos.cta">Scarica .dmg</span>
           </a>
-          <p class="text-xs text-gray-400 mt-3" data-i18n="install.macos.requirement">Solo Apple Silicon</p>
+          <a id="download-btn-mac-intel"
+             href="https://github.com/boy1690/keeply-releases/releases/download/v1.0.13/Keeply_1.0.13_x64.dmg"
+             class="block mt-2 text-xs text-gray-500 hover:text-gray-900 underline">
+            <span data-i18n="install.macos.cta.intel">Versione Intel</span>
+          </a>
+          <p class="text-xs text-gray-400 mt-3" data-i18n="install.macos.requirement">Apple Silicon · Intel</p>
         </div>
 
       </div>
@@ -331,6 +336,6 @@
   <script src="../components.c05ee0a2f9.js" defer integrity="sha384-vXwUAahowQXWmPuWdSGpRhbPEYL9ALaSYTZc/ecE89PTkK4ZVdyifqSVEsISVMQi" crossorigin="anonymous"></script>
   <script src="../cookie-banner.8a90f5095a.js" defer integrity="sha384-FkrIUHI4EiKuF7c0lI0I+k/SpAC6SN6GAiU3tqGZBNs1nvMH4R/g+hpuVB/UGk63" crossorigin="anonymous"></script>
   <script src="../ga4-loader.359df0e8a7.js" defer integrity="sha384-gyx7he9QurH3GoSkfkbiWJCVC2RYlzVMBwyolFNVDEjLCjX1oUw1XG+WLOEBLSQJ" crossorigin="anonymous"></script>
-  <script src="../i18n-loader.80e4e4a6ba.js" defer integrity="sha384-jfFCp3FyrJ2/mCRLofOm274sHPUoRL0jZkXQQCjw8elarIn+WMlUkI9MtziMbMoH" crossorigin="anonymous"></script>
+  <script src="../i18n-loader.51aca3fb9e.js" defer integrity="sha384-8w3PKrPzoQh3MGjiMXNZDFlPqj+Wc4nUM7nZWdJze1cHopa0YSN65p7ejy/yYR1b" crossorigin="anonymous"></script>
 </body>
 </html>
