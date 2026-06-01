@@ -104,7 +104,11 @@ function main() {
       process.exit(1);
     }
     copyRaw(srcAbs, path.join(LEGAL_DIR, dest));
-    published.push({ dest, url: `${BASE_URL}/${dest.replace(/\.md$/, '')}`, raw_url: `${BASE_URL}/${dest}` });
+    // Only the `.md` (raw_url) is actually served — CF Pages has no rewrite for
+    // extensionless clean URLs, so a clean `/legal/<doc>` 404s. The registry
+    // therefore advertises raw_url only (honest), not a clean url that 404s.
+    // (Bug report option B; option A = add a CF _redirects 200-rewrite later.)
+    published.push({ dest, raw_url: `${BASE_URL}/${dest}` });
     console.log(`  copied  ${src}  →  legal/${dest}`);
   }
 
@@ -148,7 +152,7 @@ function main() {
       },
     },
     controller,
-    documents_published: published.map((p) => ({ file: p.dest, url: p.url, raw_url: p.raw_url })),
+    documents_published: published.map((p) => ({ file: p.dest, raw_url: p.raw_url })),
   };
 
   fs.writeFileSync(path.join(LEGAL_DIR, 'registry.json'), JSON.stringify(registry, null, 2) + '\n', 'utf8');
