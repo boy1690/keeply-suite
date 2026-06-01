@@ -258,7 +258,7 @@
 
         <section id="website-data">
           <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="privacy.website.title">我們網站上收集的資料</h2>
-          <p class="text-gray-600 leading-relaxed" data-i18n="privacy.website.p1">Keeply 行銷網站（keeply.work）的語言偵測完全在您的瀏覽器本地執行——我們不會為此目的將您的 IP 位址傳送給任何第三方。只有在您從語言選單手動選擇語言、或開啟含語系路徑的連結（例如 keeply.work/zh-TW/）時，您的語言偏好才會儲存至瀏覽器的 local storage。</p>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.website.p1">Keeply 行銷網站（keeply.work）的語言偵測完全在您的瀏覽器本地執行——我們不會為此目的將您的 IP 位址傳送給任何第三方。只有在您從語言選單手動選擇語言、或開啟含語系路徑的連結（例如 keeply.work/zh-TW/）時，您的語言偏好才會儲存至瀏覽器的 local storage。（歷史背景：2026-04-23 之前曾透過第三方 IP 地理服務判斷語言；相關決策、替代方案評估與移除時程見 <a href="https://keeply.work/legal/governance/2026-04-23-remove-ipapi-geolocation.md" target="_blank" rel="noopener noreferrer" class="text-brand-600 hover:underline">Keeply 治理文件</a>。）</p>
           <p class="text-gray-600 leading-relaxed mt-3" data-i18n="privacy.website.p2">如果你透過電子郵件聯繫我們，我們會保留通訊內容以回覆你的詢問。除非你明確選擇加入，否則不會將你加入行銷名單。</p>
         </section>
 
@@ -266,7 +266,7 @@
           <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="privacy.telemetry.title">使用統計</h2>
           <p class="text-gray-600 leading-relaxed" data-i18n="privacy.telemetry.intro">Keeply 分兩個獨立層級蒐集少量使用統計，以了解安裝來源與使用方式，藉此改善產品。</p>
           <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="privacy.telemetry.tier1.title">第一層：匿名安裝來源計數（不蒐集個人資料）</h3>
-          <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.telemetry.tier1.body">單一一個值：你的安裝來源（winget、直接下載、Homebrew 或未知）。無識別碼、無作業系統或裝置資訊、無時間戳。我們自架的 Cloudflare Worker 僅累加聚合計數，絕不儲存個別記錄或你的 IP 位址。此計數經設計為不可識別，因此視為非個人資料。<strong>無論你下方如何選擇，這筆計數都會送出</strong>——你可在「設定 → 使用狀況回報」關閉它。</p>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.telemetry.tier1.body">單一一個值：你的安裝來源（winget、直接下載、Homebrew 或未知）。無識別碼、無作業系統或裝置資訊、無時間戳。我們自架的 Cloudflare Worker 僅累加聚合計數，絕不儲存個別記錄或你的 IP 位址。此計數經設計為不可識別，因此視為非個人資料（完整技術細節見 <a href="https://keeply.work/legal/governance/2026-05-26-telemetry-two-tier-consent.md" target="_blank" rel="noopener noreferrer" class="text-brand-600 hover:underline">Keeply 治理文件</a>）。<strong>無論你下方如何選擇，這筆計數都會送出</strong>——你可在「設定 → 使用狀況回報」關閉它。</p>
           <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="privacy.telemetry.tier2.title">第二層：使用統計（僅在你同意後）</h3>
           <p class="text-gray-600 leading-relaxed" data-i18n-html="privacy.telemetry.tier2.body">僅在你選擇加入後送出。包含：作業系統與主要版本、處理器架構、介面語言、app 版本；低頻活躍訊號（最多每日一次，以週／月彙總）；以及一個每日輪替的隨機識別碼（無姓名、email、檔名或檔案內容）。法律基礎：你的同意（GDPR 第 6(1)(a) 條）。此資料由 Cloudflare 處理與儲存，保留 12 個月。你可隨時在「設定 → 使用狀況回報」撤回，撤回和給予同意一樣容易。</p>
         </section>
@@ -383,6 +383,6 @@
   <script src="../cookie-banner.8a90f5095a.js" defer integrity="sha384-FkrIUHI4EiKuF7c0lI0I+k/SpAC6SN6GAiU3tqGZBNs1nvMH4R/g+hpuVB/UGk63" crossorigin="anonymous"></script>
   <script src="../ga4-loader.359df0e8a7.js" defer integrity="sha384-gyx7he9QurH3GoSkfkbiWJCVC2RYlzVMBwyolFNVDEjLCjX1oUw1XG+WLOEBLSQJ" crossorigin="anonymous"></script>
   <script src="../clarity-loader.60a9a5160f.js" defer integrity="sha384-rdROtDi/pws+RrJtXaeyRY20mP1RJMaVL3DuCPi4UU7tkWHea6vyx01XW/4tbkL/" crossorigin="anonymous"></script>
-  <script src="../i18n-loader.cb3ce0cade.js" defer integrity="sha384-JdnjBkbL6PbtepXSRZHrL5FUnDwP3vs+fQgoU38nHXldWwcsnbA+2yGyDnsXo9fk" crossorigin="anonymous"></script>
+  <script src="../i18n-loader.758957255b.js" defer integrity="sha384-NBcIeaIHZeynv2q5WjVt+K9hE58SydOs7YoAGN4aU3Fdl/51eVACYdB1aQCO6TRZ" crossorigin="anonymous"></script>
 </body>
 </html>
