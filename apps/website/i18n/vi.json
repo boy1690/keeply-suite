@@ -91,7 +91,7 @@
   "index.download.allversions": "Xem tất cả bản phát hành",
   "index.download.cta.mac": "Tải miễn phí cho macOS",
   "index.download.cta.win": "Tải miễn phí cho Windows",
-  "index.download.note.mac": "Chỉ dành cho Apple Silicon",
+  "index.download.note.mac": "Apple Silicon",
   "index.download.verify.label": "🔐 Xác minh tính toàn vẹn của bản tải",
   "index.download.verify.cmdLabel.win": "Lệnh xác minh trên PowerShell",
   "index.download.verify.cmdLabel.mac": "Lệnh xác minh trên Terminal",
@@ -689,5 +689,7 @@
   "about.s4.card3.body": "Mang dữ liệu của bạn theo bất cứ khi nào bạn rời đi",
   "about.cta.text": "Nếu bạn cũng giống tôi và đã chán ngán cảnh ngày nào cũng tranh chấp một thư mục dùng chung — dữ liệu bị chẳng-biết-ai thay đổi, đội ngũ ngoài công trường lấy nhầm phiên bản, mọi thứ một mớ bòng bong — hãy thử một cách khác.",
   "about.cta.button": "Tải Keeply (macOS / Windows)",
-  "about.cta.footnote": "Bảo đảm hoàn tiền trong 30 ngày · do một người vận hành"
+  "about.cta.footnote": "Bảo đảm hoàn tiền trong 30 ngày · do một người vận hành",
+  "index.download.cta.mac.intel": "Tải về cho Mac (Intel)",
+  "index.download.note.mac.intel": "Intel Mac"
 }

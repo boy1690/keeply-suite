@@ -77,7 +77,7 @@
   "index.download.allversions": "Összes kiadás megtekintése",
   "index.download.cta.mac": "Ingyenes letöltés macOS-re",
   "index.download.cta.win": "Ingyenes letöltés Windowsra",
-  "index.download.note.mac": "Csak Apple Silicon",
+  "index.download.note.mac": "Apple Silicon",
   "index.download.verify.label": "🔐 Letöltés hitelességének ellenőrzése",
   "index.download.verify.cmdLabel.win": "PowerShell-ellenőrző parancs",
   "index.download.verify.cmdLabel.mac": "Terminál-ellenőrző parancs",
@@ -689,5 +689,7 @@
   "install.deep_dive.kicker": "Kéred a hosszú verziót?",
   "install.deep_dive.title": "Miért jelenik meg a SmartScreen, és hogyan kerüld meg tisztán",
   "install.deep_dive.body": "Teljes végigvezetés a blogon — kitér rá, miért létezik a SmartScreen, miért kerüli meg a winget, a Gatekeeper kerülőútjára macOS-en, és 5 gyakori hibára.",
-  "install.deep_dive.cta": "Olvasd el a részletes cikket"
+  "install.deep_dive.cta": "Olvasd el a részletes cikket",
+  "index.download.cta.mac.intel": "Letöltés Mac (Intel) verzióhoz",
+  "index.download.note.mac.intel": "Intel Mac"
 }

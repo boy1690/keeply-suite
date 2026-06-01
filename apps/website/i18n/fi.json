@@ -78,7 +78,7 @@
   "index.download.allversions": "Näytä kaikki versiot",
   "index.download.cta.mac": "Lataa ilmaiseksi macOS:lle",
   "index.download.cta.win": "Lataa ilmaiseksi Windowsille",
-  "index.download.note.mac": "Vain Apple Silicon",
+  "index.download.note.mac": "Apple Silicon",
   "index.download.verify.label": "🔐 Tarkista latauksen eheys",
   "index.download.verify.cmdLabel.win": "PowerShell-tarkistuskomento",
   "index.download.verify.cmdLabel.mac": "Terminaalin tarkistuskomento",
@@ -689,5 +689,7 @@
   "install.deep_dive.kicker": "Haluatko pitkän version?",
   "install.deep_dive.title": "Miksi SmartScreen ilmestyy ja miten ohitat sen siististi",
   "install.deep_dive.body": "Täydellinen läpikäynti blogissa — käsittelee miksi SmartScreen on olemassa, miksi winget ohittaa sen, Gatekeeper-kierroksen macOSissa ja 5 yleistä virhettä.",
-  "install.deep_dive.cta": "Lue perusteellinen artikkeli"
+  "install.deep_dive.cta": "Lue perusteellinen artikkeli",
+  "index.download.cta.mac.intel": "Lataa Mac (Intel)",
+  "index.download.note.mac.intel": "Intel Mac"
 }

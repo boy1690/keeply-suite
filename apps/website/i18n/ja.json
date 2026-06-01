@@ -77,7 +77,7 @@
   "index.download.allversions": "すべてのリリースを見る",
   "index.download.cta.mac": "macOS版を無料ダウンロード",
   "index.download.cta.win": "Windows版を無料ダウンロード",
-  "index.download.note.mac": "Apple Silicon のみ対応",
+  "index.download.note.mac": "Apple Silicon",
   "index.download.verify.label": "🔐 ダウンロードの整合性を検証",
   "index.download.verify.cmdLabel.win": "PowerShell 検証コマンド",
   "index.download.verify.cmdLabel.mac": "Terminal 検証コマンド",
@@ -689,5 +689,7 @@
   "about.s4.card3.body": "離れたいときはいつでもデータを持ち出せます",
   "about.cta.text": "もしあなたも私と同じで、毎日の共有フォルダーの取り合いにうんざりしているなら——データが誰に変えられたのか分からない、現場の職人さんが間違ったバージョンを受け取る、とにかく全部がぐちゃぐちゃ——そろそろ別のやり方を試してみませんか。",
   "about.cta.button": "Keeply をダウンロード（macOS / Windows）",
-  "about.cta.footnote": "30 日間返金保証 · 一人で運営"
+  "about.cta.footnote": "30 日間返金保証 · 一人で運営",
+  "index.download.cta.mac.intel": "Mac (Intel) を無料ダウンロード",
+  "index.download.note.mac.intel": "Intel Mac"
 }

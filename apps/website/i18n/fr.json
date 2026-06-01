@@ -77,7 +77,7 @@
   "index.download.allversions": "Voir toutes les versions",
   "index.download.cta.mac": "Téléchargement gratuit pour macOS",
   "index.download.cta.win": "Téléchargement gratuit pour Windows",
-  "index.download.note.mac": "Apple Silicon uniquement",
+  "index.download.note.mac": "Apple Silicon",
   "index.download.verify.label": "🔐 Vérifier l'intégrité du téléchargement",
   "index.download.verify.cmdLabel.win": "Commande PowerShell de vérification",
   "index.download.verify.cmdLabel.mac": "Commande Terminal de vérification",
@@ -689,5 +689,7 @@
   "install.deep_dive.kicker": "Vous voulez la version longue ?",
   "install.deep_dive.title": "Pourquoi SmartScreen apparaît et comment le contourner proprement",
   "install.deep_dive.body": "Guide complet sur le blog — explique pourquoi SmartScreen existe, pourquoi winget le contourne, le détour par Gatekeeper sur macOS et 5 erreurs fréquentes.",
-  "install.deep_dive.cta": "Lire l'article détaillé"
+  "install.deep_dive.cta": "Lire l'article détaillé",
+  "index.download.cta.mac.intel": "Télécharger pour Mac (Intel)",
+  "index.download.note.mac.intel": "Intel Mac"
 }

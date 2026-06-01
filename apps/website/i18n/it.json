@@ -77,7 +77,7 @@
   "index.download.allversions": "Vedi tutte le versioni",
   "index.download.cta.mac": "Download Gratuito per macOS",
   "index.download.cta.win": "Download Gratuito per Windows",
-  "index.download.note.mac": "Solo Apple Silicon",
+  "index.download.note.mac": "Apple Silicon",
   "index.download.verify.label": "🔐 Verifica l'integrità del download",
   "index.download.verify.cmdLabel.win": "Comando PowerShell di verifica",
   "index.download.verify.cmdLabel.mac": "Comando Terminal di verifica",
@@ -689,5 +689,7 @@
   "about.s4.card3.body": "Porta via i tuoi dati ogni volta che vuoi andartene",
   "about.cta.text": "Se sei come me e sei stufo di litigare ogni giorno su una cartella condivisa — dati cambiati da chissà chi, gli operai in cantiere che ricevono la versione sbagliata, il tutto un caos — prova un modo diverso.",
   "about.cta.button": "Scarica Keeply (macOS / Windows)",
-  "about.cta.footnote": "Garanzia di rimborso di 30 giorni · gestito da una sola persona"
+  "about.cta.footnote": "Garanzia di rimborso di 30 giorni · gestito da una sola persona",
+  "index.download.cta.mac.intel": "Scarica per Mac (Intel)",
+  "index.download.note.mac.intel": "Intel Mac"
 }

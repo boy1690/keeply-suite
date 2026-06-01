@@ -112,8 +112,10 @@ function applyVersionSubstitution(html, cfg) {
     .replace(/\{\{VERSION_TAG\}\}/g, cfg.versionTag)
     .replace(/\{\{SHA256_WIN\}\}/g, checksums.WIN || '')
     .replace(/\{\{SHA256_MAC\}\}/g, checksums.MAC || '')
+    .replace(/\{\{SHA256_MAC_INTEL\}\}/g, checksums.MAC_INTEL || '')
     .replace(/\{\{SHA256_MSI\}\}/g, checksums.MSI || '')
     .replace(/\{\{SHA256_APPTAR\}\}/g, checksums.APPTAR || '')
+    .replace(/\{\{SHA256_APPTAR_INTEL\}\}/g, checksums.APPTAR_INTEL || '')
     .replace(/\{\{VERSION\}\}/g, cfg.version);
 }
 

@@ -77,7 +77,7 @@
   "index.download.allversions": "Tüm sürümleri göster",
   "index.download.cta.mac": "macOS için ücretsiz indir",
   "index.download.cta.win": "Windows için ücretsiz indir",
-  "index.download.note.mac": "Yalnızca Apple Silicon",
+  "index.download.note.mac": "Apple Silicon",
   "index.download.verify.label": "🔐 İndirme bütünlüğünü doğrula",
   "index.download.verify.cmdLabel.win": "PowerShell doğrulama komutu",
   "index.download.verify.cmdLabel.mac": "Terminal doğrulama komutu",
@@ -689,5 +689,7 @@
   "install.deep_dive.kicker": "Uzun sürümünü ister misiniz?",
   "install.deep_dive.title": "SmartScreen neden çıkar ve nasıl temizce geçilir",
   "install.deep_dive.body": "Blogda tam anlatım — SmartScreen'in neden var olduğunu, winget'in onu neden atladığını, macOS'taki Gatekeeper sapmasını ve 5 yaygın hatayı ele alır.",
-  "install.deep_dive.cta": "Ayrıntılı yazıyı okuyun"
+  "install.deep_dive.cta": "Ayrıntılı yazıyı okuyun",
+  "index.download.cta.mac.intel": "Mac (Intel) için indir",
+  "index.download.note.mac.intel": "Intel Mac"
 }

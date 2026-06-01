@@ -91,7 +91,7 @@
   "index.download.allversions": "查看所有版本",
   "index.download.cta.mac": "免費下載 macOS 版",
   "index.download.cta.win": "免費下載 Windows 版",
-  "index.download.note.mac": "僅支援 Apple Silicon",
+  "index.download.note.mac": "Apple Silicon",
   "index.download.verify.label": "🔐 驗證下載檔案完整性",
   "index.download.verify.cmdLabel.win": "PowerShell 驗證指令",
   "index.download.verify.cmdLabel.mac": "Terminal 驗證指令",
@@ -689,5 +689,7 @@
   "about.s4.card3.body": "想離開隨時可帶走資料",
   "about.cta.text": "如果你跟我一樣，受夠每天在共用資料夾打架——資料不知道被誰改、現場師傅拿到錯的版本、整個就是一團糟——試試看別的方式。",
   "about.cta.button": "下載 Keeply（macOS / Windows）",
-  "about.cta.footnote": "30 天退款保證 · 一人營運"
+  "about.cta.footnote": "30 天退款保證 · 一人營運",
+  "index.download.cta.mac.intel": "免費下載 Mac (Intel)",
+  "index.download.note.mac.intel": "Intel Mac"
 }

@@ -32,12 +32,17 @@ const API = `https://api.github.com/repos/${REPO}/releases/latest`;
 
 // Map of asset-filename-pattern → placeholder key.
 // Patterns use {{VERSION}} substitution so they match across release versions.
+// MAC = Apple Silicon (aarch64), MAC_INTEL = Intel x86_64. Same for APPTAR (auto-updater).
 const ASSET_MAP = {
-  WIN:     'Keeply_{version}_x64-setup.exe',
-  MAC:     'Keeply_{version}_aarch64.dmg',
-  MSI:     'Keeply_{version}_x64_en-US.msi',
-  APPTAR:  'Keeply_aarch64.app.tar.gz'
+  WIN:          'Keeply_{version}_x64-setup.exe',
+  MAC:          'Keeply_{version}_aarch64.dmg',
+  MAC_INTEL:    'Keeply_{version}_x64.dmg',
+  MSI:          'Keeply_{version}_x64_en-US.msi',
+  APPTAR:       'Keeply_aarch64.app.tar.gz',
+  APPTAR_INTEL: 'Keeply_x64.app.tar.gz'
 };
+
+const KEYS = Object.keys(ASSET_MAP);
 
 function loadConfig() {
   const raw = fs.readFileSync(CONFIG_PATH, 'utf8');
@@ -84,7 +89,7 @@ async function main() {
 
   // Ensure a checksums object exists so substitute never sees undefined.
   if (!cfg.checksums || typeof cfg.checksums !== 'object') {
-    cfg.checksums = { WIN: '', MAC: '', MSI: '', APPTAR: '' };
+    cfg.checksums = Object.fromEntries(KEYS.map(k => [k, '']));
   }
 
   let release;
@@ -130,9 +135,9 @@ async function main() {
   saveConfig(cfg);
   const changed = JSON.stringify(cfg.checksums) !== before;
   console.log(`[build-checksums] ${changed ? 'updated' : 'no changes'} for release ${release.tag_name}`);
-  for (const key of ['WIN', 'MAC', 'MSI', 'APPTAR']) {
+  for (const key of KEYS) {
     const v = cfg.checksums[key];
-    console.log(`  ${key.padEnd(8)} ${v ? v.slice(0, 16) + '…' + v.slice(-8) : '(empty)'}`);
+    console.log(`  ${key.padEnd(12)} ${v ? v.slice(0, 16) + '…' + v.slice(-8) : '(empty)'}`);
   }
 }
 

@@ -77,7 +77,7 @@
   "index.download.allversions": "모든 릴리스 보기",
   "index.download.cta.mac": "macOS용 무료 다운로드",
   "index.download.cta.win": "Windows용 무료 다운로드",
-  "index.download.note.mac": "Apple Silicon 전용",
+  "index.download.note.mac": "Apple Silicon",
   "index.download.verify.label": "🔐 다운로드 무결성 확인",
   "index.download.verify.cmdLabel.win": "PowerShell 확인 명령",
   "index.download.verify.cmdLabel.mac": "Terminal 확인 명령",
@@ -689,5 +689,7 @@
   "about.s4.card3.body": "떠나고 싶을 때 언제든 데이터를 가져갈 수 있음",
   "about.cta.text": "당신도 저처럼 매일 공유 폴더를 두고 씨름하는 데 지쳤다면——누가 바꿨는지 모를 데이터, 잘못된 버전을 받아 가는 현장 작업자, 그냥 다 엉망인 상황——이제 다른 방식을 한번 시도해 보세요.",
   "about.cta.button": "Keeply 다운로드 (macOS / Windows)",
-  "about.cta.footnote": "30일 환불 보장 · 1인 운영"
+  "about.cta.footnote": "30일 환불 보장 · 1인 운영",
+  "index.download.cta.mac.intel": "Mac (Intel) 무료 다운로드",
+  "index.download.note.mac.intel": "Intel Mac"
 }

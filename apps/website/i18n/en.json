@@ -91,7 +91,7 @@
   "index.download.allversions": "View all releases",
   "index.download.cta.mac": "Free Download for macOS",
   "index.download.cta.win": "Free Download for Windows",
-  "index.download.note.mac": "Apple Silicon only",
+  "index.download.note.mac": "Apple Silicon",
   "index.download.verify.label": "🔐 Verify download integrity",
   "index.download.verify.cmdLabel.win": "PowerShell verify command",
   "index.download.verify.cmdLabel.mac": "Terminal verify command",
@@ -689,5 +689,7 @@
   "about.s4.card3.body": "Take your data with you whenever you leave",
   "about.cta.text": "If you’re like me and you’re fed up with fighting over a shared folder every day — data changed by who-knows-who, the crew on site getting the wrong version, the whole thing a mess — try a different way.",
   "about.cta.button": "Download Keeply (macOS / Windows)",
-  "about.cta.footnote": "30-day money-back guarantee · run by one person"
+  "about.cta.footnote": "30-day money-back guarantee · run by one person",
+  "index.download.cta.mac.intel": "Download for Mac (Intel)",
+  "index.download.note.mac.intel": "Intel Mac"
 }

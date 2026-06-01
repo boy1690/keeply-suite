@@ -91,7 +91,7 @@
   "index.download.allversions": "ดูเวอร์ชันทั้งหมด",
   "index.download.cta.mac": "ดาวน์โหลดฟรีสำหรับ macOS",
   "index.download.cta.win": "ดาวน์โหลดฟรีสำหรับ Windows",
-  "index.download.note.mac": "รองรับเฉพาะ Apple Silicon",
+  "index.download.note.mac": "Apple Silicon",
   "index.download.verify.label": "🔐 ตรวจสอบความสมบูรณ์ของไฟล์ที่ดาวน์โหลด",
   "index.download.verify.cmdLabel.win": "คำสั่งตรวจสอบใน PowerShell",
   "index.download.verify.cmdLabel.mac": "คำสั่งตรวจสอบใน Terminal",
@@ -689,5 +689,7 @@
   "about.s4.card3.body": "เอาข้อมูลของคุณไปด้วยได้ทุกเมื่อที่คุณจากไป",
   "about.cta.text": "ถ้าคุณเป็นเหมือนผมและเบื่อหน่ายกับการแย่งกันใช้โฟลเดอร์ที่แชร์กันทุกวัน — ข้อมูลถูกเปลี่ยนโดยใครก็ไม่รู้ ทีมที่หน้างานได้เวอร์ชันผิด ทั้งหมดยุ่งเหยิงไปหมด — ลองวิธีที่ต่างออกไปดู",
   "about.cta.button": "ดาวน์โหลด Keeply (macOS / Windows)",
-  "about.cta.footnote": "รับประกันคืนเงินภายใน 30 วัน · ดำเนินการโดยคนเพียงคนเดียว"
+  "about.cta.footnote": "รับประกันคืนเงินภายใน 30 วัน · ดำเนินการโดยคนเพียงคนเดียว",
+  "index.download.cta.mac.intel": "ดาวน์โหลด Mac (Intel)",
+  "index.download.note.mac.intel": "Intel Mac"
 }

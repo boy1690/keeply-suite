@@ -78,7 +78,7 @@
   "index.download.allversions": "Zobrazit všechna vydání",
   "index.download.cta.mac": "Stáhnout zdarma pro macOS",
   "index.download.cta.win": "Stáhnout zdarma pro Windows",
-  "index.download.note.mac": "Pouze Apple Silicon",
+  "index.download.note.mac": "Apple Silicon",
   "index.download.verify.label": "🔐 Ověřit integritu stahování",
   "index.download.verify.cmdLabel.win": "Ověřovací příkaz PowerShell",
   "index.download.verify.cmdLabel.mac": "Ověřovací příkaz Terminálu",
@@ -689,5 +689,7 @@
   "install.deep_dive.kicker": "Chcete delší verzi?",
   "install.deep_dive.title": "Proč se SmartScreen objevuje a jak ho čistě obejít",
   "install.deep_dive.body": "Kompletní návod na blogu — vysvětluje, proč SmartScreen existuje, proč ho winget obchází, oklika přes Gatekeeper na macOS a 5 častých chyb.",
-  "install.deep_dive.cta": "Přečíst podrobný článek"
+  "install.deep_dive.cta": "Přečíst podrobný článek",
+  "index.download.cta.mac.intel": "Stáhnout pro Mac (Intel)",
+  "index.download.note.mac.intel": "Intel Mac"
 }

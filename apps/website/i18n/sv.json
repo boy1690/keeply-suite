@@ -78,7 +78,7 @@
   "index.download.allversions": "Visa alla versioner",
   "index.download.cta.mac": "Ladda ner gratis för macOS",
   "index.download.cta.win": "Ladda ner gratis för Windows",
-  "index.download.note.mac": "Endast Apple Silicon",
+  "index.download.note.mac": "Apple Silicon",
   "index.download.verify.label": "🔐 Verifiera nedladdningens integritet",
   "index.download.verify.cmdLabel.win": "PowerShell-verifieringskommando",
   "index.download.verify.cmdLabel.mac": "Terminal-verifieringskommando",
@@ -689,5 +689,7 @@
   "install.deep_dive.kicker": "Vill du ha den långa versionen?",
   "install.deep_dive.title": "Varför SmartScreen dyker upp och hur du tar dig förbi den snyggt",
   "install.deep_dive.body": "Fullständig genomgång på bloggen — täcker varför SmartScreen finns, varför winget kringgår den, Gatekeeper-omvägen på macOS och 5 vanliga fel.",
-  "install.deep_dive.cta": "Läs den utförliga artikeln"
+  "install.deep_dive.cta": "Läs den utförliga artikeln",
+  "index.download.cta.mac.intel": "Ladda ner för Mac (Intel)",
+  "index.download.note.mac.intel": "Intel Mac"
 }
