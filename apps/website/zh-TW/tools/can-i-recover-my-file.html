@@ -42,8 +42,8 @@
   <meta name="twitter:image" content="https://keeply.work/og-image.png" />
 
   <!-- Tailwind CSS (compiled) -->
-  <link rel="preload" href="../../style.css" as="style" integrity="sha384-0XdV1k31WoxilLslCyQ6ObYwoAErwm7KXkKzWMFEnL1tLTVvRnJ+NyL3duvjwHs0" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../../style.css" integrity="sha384-0XdV1k31WoxilLslCyQ6ObYwoAErwm7KXkKzWMFEnL1tLTVvRnJ+NyL3duvjwHs0" crossorigin="anonymous" />
+  <link rel="preload" href="../../style.css" as="style" integrity="sha384-sKSeEDvr+4AY3qbRoQSvHksfQuDvMuGqI+gG57Awa7JkX1fHXp3r/vBmOV4OAUS2" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../../style.css" integrity="sha384-sKSeEDvr+4AY3qbRoQSvHksfQuDvMuGqI+gG57Awa7JkX1fHXp3r/vBmOV4OAUS2" crossorigin="anonymous" />
 
   <!-- M PLUS Rounded 1c font preload -->
   <link rel="preload" href="../../fonts/MPLUSRounded1c-Regular-v2.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
@@ -69,17 +69,24 @@
         ]
       },
       {
+        "@type": "WebSite",
+        "@id": "https://keeply.work/#website",
+        "url": "https://keeply.work/",
+        "name": "Keeply",
+        "publisher": { "@id": "https://keeply.work/#organization" }
+      },
+      {
         "@type": "WebPage",
-        "@id": "https://keeply.work/zh-TW/tools/can-i-recover-my-file.html#webpage",
-        "url": "https://keeply.work/zh-TW/tools/can-i-recover-my-file.html",
+        "@id": "https://keeply.work/zh-TW/tools/can-i-recover-my-file#webpage",
+        "url": "https://keeply.work/zh-TW/tools/can-i-recover-my-file",
         "name": "我的檔案被覆蓋或刪除了，救得回嗎？",
         "description": "依檔案存放位置，誠實判斷被覆蓋或刪除的檔案救不救得回的 3 題檢測工具。",
         "inLanguage": "zh-Hant",
-        "isPartOf": { "@id": "https://keeply.work/#organization" }
+        "isPartOf": { "@id": "https://keeply.work/#website" }
       },
       {
         "@type": "FAQPage",
-        "@id": "https://keeply.work/zh-TW/tools/can-i-recover-my-file.html#faq",
+        "@id": "https://keeply.work/zh-TW/tools/can-i-recover-my-file#faq",
         "mainEntity": [
           {
             "@type": "Question",
@@ -191,6 +198,18 @@
           </summary>
           <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed">完全取決於事先有沒有開快照。如果 NAS 或 IT 有開資料夾快照，就從改動前的那個快照還原。如果當初沒開快照，被覆蓋的版本就沒了——雲端的版本歷史，罩不到放在 NAS 或本機的檔案。</div>
         </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related / outgoing links (static; crawler-visible without JS — RC-8) -->
+  <section class="py-12 border-t border-gray-100">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <p class="text-gray-600 leading-relaxed mb-6 max-w-2xl mx-auto">真正誠實的解法，是讓檔案在被覆蓋<em>之前</em>就能救回——替你實際在用的檔案自動留版本歷史。這正是 <strong class="text-gray-900">Keeply</strong> 在做的事。</p>
+      <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm font-semibold">
+        <a href="/zh-TW/" class="text-brand-600 hover:underline">Keeply 是什麼？</a>
+        <a href="/zh-TW/install" class="text-brand-600 hover:underline">安裝指南</a>
+        <a href="https://blog.keeply.work/zh-tw/" class="text-brand-600 hover:underline">看部落格</a>
       </div>
     </div>
   </section>

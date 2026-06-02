@@ -187,18 +187,21 @@ function replaceHreflangTags(html, locale, page) {
   // Remove all existing hreflang link tags
   html = html.replace(/\s*<link\s+rel="alternate"\s+hreflang="[^"]*"\s+href="[^"]*"\s*\/?\s*>\s*/g, '\n');
 
-  // Build new hreflang tags
+  // Build new hreflang tags.
+  // x-default is page-specific (the no-locale root of THIS page), not always the
+  // home — so every cluster (home / install / buy / …) is a self-consistent,
+  // reciprocal set: 21 per-locale + x-default→page-root. (Ahrefs RC-9.)
   let hreflangTags = '';
   for (const loc of LOCALES) {
     const url = `${BASE_URL}/${loc}/${pagePath}`;
     hreflangTags += `  <link rel="alternate" hreflang="${loc}" href="${url}" />\n`;
   }
-  hreflangTags += `  <link rel="alternate" hreflang="x-default" href="${BASE_URL}/" />\n`;
+  hreflangTags += `  <link rel="alternate" hreflang="x-default" href="${BASE_URL}/${pagePath}" />\n`;
 
   // Insert after canonical
   html = html.replace(
     /(<link\s+rel="canonical"[^>]*>)\n*/,
-    `$1\n\n  <!-- Hreflang (19 languages + x-default) -->\n${hreflangTags}`
+    `$1\n\n  <!-- Hreflang (21 languages + x-default) -->\n${hreflangTags}`
   );
 
   return html;
@@ -508,7 +511,9 @@ function generateInstallSitemapEntries(today) {
 // (mirrors the build-comparisons.js bilingual scope; P0.4 exception, en+zh-TW only).
 function generateToolsSitemapEntries(today) {
   const TOOL_LOCALES = ['en', 'zh-TW'];
-  const toolPath = 'can-i-recover-my-file.html';
+  // RC-6: clean URL (no `.html`) — CF 308-redirects the `.html` form, so a
+  // `.html` <loc> shows up as "3XX redirect in sitemap".
+  const toolPath = 'can-i-recover-my-file';
   const urlFor = (locale) => locale === 'en'
     ? `${BASE_URL}/tools/${toolPath}`
     : `${BASE_URL}/${locale}/tools/${toolPath}`;
@@ -606,6 +611,11 @@ function main() {
     rootHtml = applyVersionSubstitution(rootHtml, releaseConfig);
     rootHtml = replaceDataI18n(rootHtml, translations, ROOT_LOCALE);
     rootHtml = rootHtml.replace(/__COMPARE_PATH__/g, '/compare');
+    // RC-9: root no-locale pages must carry the SAME 21-locale + x-default→self
+    // hreflang set as their per-locale siblings, else the cluster is asymmetric
+    // ("missing reciprocal hreflang"). The root template's stale hreflang is
+    // stripped + rebuilt here (canonical stays the root URL — not replaced).
+    rootHtml = replaceHreflangTags(rootHtml, ROOT_LOCALE, page);
     fs.writeFileSync(path.join(OUTPUT_DIR, page), rootHtml, 'utf8');
   }
   console.log(`Copied ${PAGES.length} templates to root (${ROOT_LOCALE} i18n applied, EN compare path)`);

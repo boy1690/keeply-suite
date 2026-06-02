@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Clean-URL + hreflang normalizer for STATIC per-locale pages
- * (Ahrefs RC-3 Phase 1b + RC-5).
+ * (Ahrefs RC-3 Phase 1b + RC-9).
  *
  * buy.html / refund.html / activate.html are hand-maintained static per-locale
  * copies that build.js does NOT regenerate. Two problems this step fixes in the
@@ -9,18 +9,22 @@
  *
  *  (1) RC-3 Phase 1b — <head> hard-codes the `.html` form
  *      (https://keeply.work/en/buy.html) that Cloudflare 308-redirects. Strip the
- *      `.html` off absolute keeply.work URLs inside <link rel="canonical">,
- *      <meta property="og:url">, and <link rel="alternate" hreflang=…>.
+ *      `.html` off absolute keeply.work URLs inside <link rel="canonical"> and
+ *      <meta property="og:url">.
  *
- *  (2) RC-5 — the 19 older locale copies omit vi + th from their hreflang set,
- *      while the (later-added) vi/th copies list all 21 → "missing reciprocal
- *      hreflang (no return-tag)". Inject vi + th alternates (before x-default) on
- *      any static page whose hreflang block lacks them, so every copy lists the
- *      full set and reciprocates.
+ *  (2) RC-9 — hreflang reciprocity. The root copies listed every locale pointing
+ *      at themselves (all → /buy), the locale copies omitted vi/th and pinned
+ *      x-default to the home (`/`) instead of the page root. Both broke the
+ *      cluster → "missing reciprocal hreflang (no return-tag)". This step
+ *      REBUILDS the whole hreflang block on every static copy to the canonical,
+ *      self-consistent set — 21 per-locale + x-default→page-root — identical to
+ *      what build.js emits for the template-driven pages. Every member of a
+ *      cluster then carries the same set and reciprocates.
  *
- * Deliberately scoped to those head tags only — body links are handled by
- * build:clean-links. Idempotent. Run after build:pages / build:comparisons,
- * before build:schema. Spec: specs/114-clean-url-canonical-sitemap.md
+ * Deliberately scoped to head tags only — body links are handled by
+ * build:clean-links, body mailto by build:clean-email. Idempotent. Run after
+ * build:pages / build:comparisons, before build:schema.
+ * Spec: specs/115-ahrefs-hreflang-tool-email-fixes.md (was 114 for RC-3).
  */
 'use strict';
 
@@ -28,10 +32,21 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
+const BASE = 'https://keeply.work';
 const STATIC_PAGES = ['buy.html', 'refund.html', 'activate.html'];
 
-const HEAD_TAG_RE = /rel="canonical"|property="og:url"|hreflang=/;
+// Must mirror build.js LOCALES (21 build locales).
+const LOCALES = [
+  'zh-TW', 'zh-CN', 'en', 'ja', 'ko',
+  'de', 'fr', 'es', 'pt', 'it',
+  'nl', 'pl', 'cs', 'hu', 'tr',
+  'fi', 'sv', 'no', 'da',
+  'vi', 'th'
+];
+
+const HEAD_TAG_RE = /rel="canonical"|property="og:url"/;
 const URL_HTML_RE = /(https:\/\/keeply\.work\/[^"']*?)\.html(["'])/g;
+const HREFLANG_LINE_RE = /<link\s+rel="alternate"\s+hreflang=/;
 
 function collectFiles() {
   const files = [];
@@ -49,45 +64,61 @@ function collectFiles() {
   return files;
 }
 
-// (1) strip .html off canonical/og/hreflang absolute URLs (line-scoped).
+// (1) strip .html off canonical/og absolute URLs (line-scoped).
 function stripHtml(html, counter) {
   return html
     .split('\n')
     .map((line) => {
       if (!HEAD_TAG_RE.test(line)) return line;
       return line.replace(URL_HTML_RE, (_m, base, quote) => {
-        counter.n++;
+        counter.stripped++;
         return base + quote;
       });
     })
     .join('\n');
 }
 
-// (2) ensure vi + th hreflang alternates exist (inject before x-default).
-function ensureViTh(html, page, counter) {
-  if (/hreflang="vi"/.test(html) || !/hreflang="x-default"/.test(html)) return html;
-  counter.injected++;
-  return html.replace(
-    /( *)(<link rel="alternate" hreflang="x-default")/,
-    `$1<link rel="alternate" hreflang="vi" href="https://keeply.work/vi/${page}" />\n` +
-      `$1<link rel="alternate" hreflang="th" href="https://keeply.work/th/${page}" />\n` +
-      `$1$2`
-  );
+// (2) rebuild the hreflang block to the canonical reciprocal set for `page`.
+function hreflangBlock(page, indent) {
+  let out = '';
+  for (const loc of LOCALES) {
+    out += `${indent}<link rel="alternate" hreflang="${loc}" href="${BASE}/${loc}/${page}" />\n`;
+  }
+  out += `${indent}<link rel="alternate" hreflang="x-default" href="${BASE}/${page}" />`;
+  return out;
 }
 
-console.log('=== build:clean-static (RC-3 Phase 1b + RC-5) ===');
-const counter = { n: 0, injected: 0 };
+function rebuildHreflang(html, page, counter) {
+  const lines = html.split('\n');
+  let first = -1;
+  let last = -1;
+  for (let i = 0; i < lines.length; i++) {
+    if (HREFLANG_LINE_RE.test(lines[i])) {
+      if (first === -1) first = i;
+      last = i;
+    }
+  }
+  if (first === -1) return html; // no hreflang block to normalize
+  const indent = (lines[first].match(/^(\s*)/) || [, '  '])[1];
+  const block = hreflangBlock(page, indent);
+  const rebuilt = lines.slice(0, first).concat(block.split('\n')).concat(lines.slice(last + 1)).join('\n');
+  if (rebuilt !== html) counter.rebuilt++;
+  return rebuilt;
+}
+
+console.log('=== build:clean-static (RC-3 Phase 1b + RC-9) ===');
+const counter = { stripped: 0, rebuilt: 0 };
 let changedFiles = 0;
 for (const file of collectFiles()) {
   const before = fs.readFileSync(file, 'utf8');
   const page = path.basename(file, '.html'); // buy | refund | activate
   let out = stripHtml(before, counter);
-  out = ensureViTh(out, page, counter);
+  out = rebuildHreflang(out, page, counter);
   if (out !== before) {
     fs.writeFileSync(file, out, 'utf8');
     changedFiles++;
   }
 }
 console.log(
-  `[clean-static] normalized ${counter.n} canonical/og/hreflang ref(s) + injected vi/th hreflang on ${counter.injected} page(s) across ${changedFiles} file(s)`
+  `[clean-static] stripped ${counter.stripped} .html ref(s) + rebuilt hreflang on ${counter.rebuilt} page(s) across ${changedFiles} file(s)`
 );

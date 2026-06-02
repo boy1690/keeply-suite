@@ -42,8 +42,8 @@
   <meta name="twitter:image" content="https://keeply.work/og-image.png" />
 
   <!-- Tailwind CSS (compiled) -->
-  <link rel="preload" href="../style.css" as="style" integrity="sha384-0XdV1k31WoxilLslCyQ6ObYwoAErwm7KXkKzWMFEnL1tLTVvRnJ+NyL3duvjwHs0" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../style.css" integrity="sha384-0XdV1k31WoxilLslCyQ6ObYwoAErwm7KXkKzWMFEnL1tLTVvRnJ+NyL3duvjwHs0" crossorigin="anonymous" />
+  <link rel="preload" href="../style.css" as="style" integrity="sha384-sKSeEDvr+4AY3qbRoQSvHksfQuDvMuGqI+gG57Awa7JkX1fHXp3r/vBmOV4OAUS2" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../style.css" integrity="sha384-sKSeEDvr+4AY3qbRoQSvHksfQuDvMuGqI+gG57Awa7JkX1fHXp3r/vBmOV4OAUS2" crossorigin="anonymous" />
 
   <!-- M PLUS Rounded 1c font preload -->
   <link rel="preload" href="../fonts/MPLUSRounded1c-Regular-v2.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
@@ -69,17 +69,24 @@
         ]
       },
       {
+        "@type": "WebSite",
+        "@id": "https://keeply.work/#website",
+        "url": "https://keeply.work/",
+        "name": "Keeply",
+        "publisher": { "@id": "https://keeply.work/#organization" }
+      },
+      {
         "@type": "WebPage",
-        "@id": "https://keeply.work/tools/can-i-recover-my-file.html#webpage",
-        "url": "https://keeply.work/tools/can-i-recover-my-file.html",
+        "@id": "https://keeply.work/tools/can-i-recover-my-file#webpage",
+        "url": "https://keeply.work/tools/can-i-recover-my-file",
         "name": "Can I recover my overwritten or deleted file?",
         "description": "An honest 3-question checker for whether an overwritten or deleted file can be recovered, based on where it lived.",
         "inLanguage": "en",
-        "isPartOf": { "@id": "https://keeply.work/#organization" }
+        "isPartOf": { "@id": "https://keeply.work/#website" }
       },
       {
         "@type": "FAQPage",
-        "@id": "https://keeply.work/tools/can-i-recover-my-file.html#faq",
+        "@id": "https://keeply.work/tools/can-i-recover-my-file#faq",
         "mainEntity": [
           {
             "@type": "Question",
@@ -191,6 +198,18 @@
           </summary>
           <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed">It depends entirely on whether snapshots were turned on beforehand. If your NAS or IT enabled folder snapshots, restore the file from the snapshot taken before the change. If no snapshot existed, the overwritten version is gone — the cloud's version history does not reach files that live on a NAS or a local disk.</div>
         </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related / outgoing links (static; crawler-visible without JS — RC-8) -->
+  <section class="py-12 border-t border-gray-100">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <p class="text-gray-600 leading-relaxed mb-6 max-w-2xl mx-auto">The honest fix is to make overwrites recoverable <em>before</em> they happen — automatic version history for the files you actually work on. That's what <strong class="text-gray-900">Keeply</strong> is built for.</p>
+      <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm font-semibold">
+        <a href="/" class="text-brand-600 hover:underline">What is Keeply?</a>
+        <a href="/install" class="text-brand-600 hover:underline">Install guide</a>
+        <a href="https://blog.keeply.work/en/" class="text-brand-600 hover:underline">Read the blog</a>
       </div>
     </div>
   </section>
