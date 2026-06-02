@@ -349,6 +349,7 @@ function fixResourcePaths(html) {
   html = html.replace(/(src=")team-notify\.js(")/g, '$1../team-notify.js$2');       // spec 031
   html = html.replace(/(src=")paddle-checkout\.js(")/g, '$1../paddle-checkout.js$2'); // spec 031
   html = html.replace(/(src=")activate-license\.js(")/g, '$1../activate-license.js$2'); // spec 031
+  html = html.replace(/(src=")demo-modal\.js(")/g, '$1../demo-modal.js$2'); // spec 119
 
   // Fix favicon links
   html = html.replace(/(href=")favicon\.ico(")/g, '$1../favicon.ico$2');

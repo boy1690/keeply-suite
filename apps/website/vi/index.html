@@ -104,8 +104,8 @@
   <meta name="twitter:image:alt" content="Keeply — Cỗ máy thời gian cho tập tin của bạn" />
 
   <!-- Tailwind CSS (compiled) -->
-  <link rel="preload" href="../style.css" as="style" integrity="sha384-hTZGjyhFQ8KKNzS+Tci3QAMHuQk8Y3U01uzmfo5u4zvJ8aGcC/hplt4Nf/TjpRiF" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../style.css" integrity="sha384-hTZGjyhFQ8KKNzS+Tci3QAMHuQk8Y3U01uzmfo5u4zvJ8aGcC/hplt4Nf/TjpRiF" crossorigin="anonymous" />
+  <link rel="preload" href="../style.css" as="style" integrity="sha384-0XdV1k31WoxilLslCyQ6ObYwoAErwm7KXkKzWMFEnL1tLTVvRnJ+NyL3duvjwHs0" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../style.css" integrity="sha384-0XdV1k31WoxilLslCyQ6ObYwoAErwm7KXkKzWMFEnL1tLTVvRnJ+NyL3duvjwHs0" crossorigin="anonymous" />
 
   <!-- M PLUS Rounded 1c font preload (eliminates CLS from late font discovery) -->
   <link rel="preload" href="../fonts/MPLUSRounded1c-Regular-v2.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
@@ -324,10 +324,10 @@
           <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
           <span data-i18n="index.hero.cta">Tải miễn phí</span>
         </a>
-        <a href="/demo/s/keeply-promo" class="text-base font-medium text-brand-600 hover:text-brand-700 underline-offset-4 hover:underline transition-colors flex items-center gap-1.5">
+        <button type="button" data-demo-modal-open class="text-base font-medium text-brand-600 hover:text-brand-700 underline-offset-4 hover:underline transition-colors flex items-center gap-1.5 bg-transparent border-0 cursor-pointer p-0">
           <span data-i18n="index.hero.cta.demo">Xem demo 30 giây</span>
           <span aria-hidden="true">→</span>
-        </a>
+        </button>
       </div>
       <p class="text-sm text-gray-400 mt-4" data-i18n="index.hero.cta.note">Bắt đầu trong 30 giây, không cần tài khoản</p>
 
@@ -891,6 +891,17 @@
   <!-- Footer (injected by components.js) -->
   <div id="footer-root"></div>
 
+  <!-- Demo modal (opened from hero CTA) -->
+  <div id="demo-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4 sm:p-6 md:p-10" role="dialog" aria-modal="true" aria-labelledby="demo-modal-title">
+    <h2 id="demo-modal-title" class="sr-only" data-i18n="index.hero.cta.demo">Xem demo 30 giây</h2>
+    <div class="relative w-full max-w-6xl bg-black rounded-2xl shadow-2xl ring-1 ring-white/10 overflow-hidden" style="aspect-ratio:16/9; max-height:calc(100vh - 4rem);">
+      <button type="button" data-demo-modal-close aria-label="Close" class="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-black/60 hover:bg-black/85 text-white/85 hover:text-white grid place-items-center transition cursor-pointer border-0">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <iframe data-demo-modal-iframe src="about:blank" loading="lazy" allow="fullscreen" referrerpolicy="same-origin" class="w-full h-full border-0 block" title="Keeply demo deck"></iframe>
+    </div>
+  </div>
+
   <!-- Shared components + i18n + consent (spec 023) -->
   <script src="../consent-api.b29ceadb9e.js" defer integrity="sha384-AgMsIGCbo9mV0oP2ebvR5aNCzNPtSkIGXG5v29yY6A+vEktkTMAOZtlK0WiKSEUR" crossorigin="anonymous"></script>
   <script src="../components.c05ee0a2f9.js" defer integrity="sha384-vXwUAahowQXWmPuWdSGpRhbPEYL9ALaSYTZc/ecE89PTkK4ZVdyifqSVEsISVMQi" crossorigin="anonymous"></script>
@@ -899,6 +910,7 @@
   <script src="../clarity-loader.60a9a5160f.js" defer integrity="sha384-rdROtDi/pws+RrJtXaeyRY20mP1RJMaVL3DuCPi4UU7tkWHea6vyx01XW/4tbkL/" crossorigin="anonymous"></script>
   <script src="../i18n-loader.dcb81e108b.js" defer integrity="sha384-g1hAXN5a4iesZCtHD9uARkhE0NPqThbWyghAfZFyjhJ9OBnJBCeNfECm3dtLvYg4" crossorigin="anonymous"></script>
   <script src="../team-notify.73d70ab047.js" defer integrity="sha384-kQUIeDWtAKHyIrSPoncROrE3SSvzakx5e3Ll8GT1Zjgqqr7nAyhVHZ7qyXYC+wVU" crossorigin="anonymous"></script>
+  <script src="../demo-modal.0b9dcfa6ee.js" defer></script>
 
 
 </body>
