@@ -30,7 +30,7 @@
          crawlers + Google can discover all 19 locales from the root. */ -}}
   {{- /* Skip de/es/fr/pl/tr — their locale home 301-redirects to /en/, so an
          hreflang to it is "hreflang to redirect" (Ahrefs RC-10). */ -}}
-  {{- $redirectHomes := slice "de" "es" "fr" "pl" "tr" -}}
+  {{- $redirectHomes := slice "de" "es" "fr" "pl" "tr" "th" "vi" -}}
   {{- range .Site.Languages -}}
     {{- if not (in $redirectHomes .Lang) -}}
       <link rel="alternate" hreflang="{{ .Lang }}" href="{{ $.Site.BaseURL }}{{ .Lang }}/">

@@ -135,7 +135,7 @@ Keeply खोलिए, **New project** पर क्लिक कीजिए, 
 | Win 11 कहता है "needs administrator" | PowerShell को **Run as administrator** से दोबारा खोलिए |
 | Mac कहता है "cannot be opened because it is from an unidentified developer" | Right-click → Open (डबल-क्लिक नहीं)। ऊपर macOS सेक्शन देखिए |
 | कंपनी का नेटवर्क डाउनलोड ब्लॉक करता है | winget कमांड इस्तेमाल कीजिए — यह Microsoft के CDN से जाता है और आम तौर पर निकल जाता है |
-| इंस्टॉल हो गया पर खुलता नहीं | एक बार रीस्टार्ट कीजिए। फिर भी नहीं? [support@keeply.work](mailto:support@keeply.work) पर ईमेल कीजिए |
+| इंस्टॉल हो गया पर खुलता नहीं | एक बार रीस्टार्ट कीजिए। फिर भी नहीं? [keeply.work/contact](https://keeply.work/contact) पर ईमेल कीजिए |
 
 ## याद रखने वाली एक बात
 

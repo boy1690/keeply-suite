@@ -137,7 +137,7 @@ Mensen die het eerste project op de installatiedag gebruiken blijven veel vaker 
 | Win 11 zegt „heeft beheerder nodig" | Heropen PowerShell met **Als administrator uitvoeren** |
 | Mac zegt „kan niet worden geopend omdat het van een niet-geïdentificeerde ontwikkelaar is" | Rechtsklik → Open (niet dubbelklikken). Zie macOS-sectie hierboven |
 | Bedrijfsnetwerk blokkeert de download | Gebruik in plaats daarvan het winget-commando — het gaat via Microsofts CDN en komt meestal door |
-| Geïnstalleerd maar wil niet openen | Herstart één keer. Nog steeds niets? Mail [support@keeply.work](mailto:support@keeply.work) |
+| Geïnstalleerd maar wil niet openen | Herstart één keer. Nog steeds niets? Mail [keeply.work/contact](https://keeply.work/contact) |
 
 ## Het ene ding om te onthouden
 

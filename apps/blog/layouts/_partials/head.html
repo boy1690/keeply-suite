@@ -104,7 +104,7 @@
        the CF edge) so the home cluster never points hreflang at a redirect
        ("Hreflang to redirect or broken page", Ahrefs RC-10). Per-post
        translations are real 200 pages and stay unaffected. */ -}}
-{{- $redirectHomes := slice "de" "es" "fr" "pl" "tr" -}}
+{{- $redirectHomes := slice "de" "es" "fr" "pl" "tr" "th" "vi" -}}
 {{- if .IsTranslated -}}
   {{- range .AllTranslations -}}
     {{- if not (and $.IsHome (in $redirectHomes .Lang)) -}}

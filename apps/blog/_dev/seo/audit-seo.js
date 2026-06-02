@@ -19,7 +19,7 @@ const fs = require('fs');
 const path = require('path');
 
 const PUBLIC = path.resolve(__dirname, '..', '..', 'public');
-const REDIRECT_LOCALES = ['de', 'es', 'fr', 'pl', 'tr'];
+const REDIRECT_LOCALES = ['de', 'es', 'fr', 'pl', 'tr', 'th', 'vi'];
 
 const errors = [];
 

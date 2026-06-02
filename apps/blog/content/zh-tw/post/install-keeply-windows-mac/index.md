@@ -180,7 +180,7 @@ Mac 不會跳藍屏。但首次打開不能雙擊。雙擊會被 [macOS Gatekeep
 | Win 11 跳「需要管理員」 | 用「**以系統管理員身分**」重開 PowerShell |
 | Mac「無法打開因為無法驗證開發者」 | 右鍵 → 打開（不是雙擊），見上面 macOS 段 |
 | 公司網路擋下載 | 改用 winget 指令，走 Microsoft CDN，多半放行 |
-| 裝完打不開 | 重啟一次；仍不行寄 [support@keeply.work](mailto:support@keeply.work) |
+| 裝完打不開 | 重啟一次；仍不行寄 [keeply.work/contact](https://keeply.work/contact) |
 
 ## 唯一要記住的一件事
 

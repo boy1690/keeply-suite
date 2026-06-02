@@ -135,7 +135,7 @@ winget install Boy1690.Keeply
 | Win 11 يقول «يحتاج مدير» | أعد فتح PowerShell بـ **Run as administrator** |
 | Mac يقول «لا يمكن فتحه لأنه من مطوّر غير معروف» | زر أيمن ← Open (لا نقرة مزدوجة). انظر قسم macOS أعلاه |
 | شبكة الشركة تحجب التنزيل | استخدم أمر winget بدلاً منه — يمرّ عبر CDN الخاص بـ Microsoft وعادةً ينفذ |
-| ثُبِّت لكنه لا يفتح | أعد التشغيل مرة. لا شيء؟ راسل [support@keeply.work](mailto:support@keeply.work) |
+| ثُبِّت لكنه لا يفتح | أعد التشغيل مرة. لا شيء؟ راسل [keeply.work/contact](https://keeply.work/contact) |
 
 ## الشيء الواحد الذي تتذكّره
 

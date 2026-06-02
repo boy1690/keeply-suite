@@ -180,7 +180,7 @@ Keeply를 열고, **새 프로젝트** 버튼을 누르고, 지금 작업 중인
 | Win 11에서 「관리자 권한 필요」라고 나옴 | PowerShell을 **관리자 권한으로 실행**으로 다시 열기 |
 | Mac에서 「확인되지 않은 개발자라 열 수 없습니다」 | 우클릭 → 열기 (더블클릭 말고). 위 macOS 섹션 참조 |
 | 회사 네트워크가 다운로드를 막음 | winget 명령어를 쓰세요 ,  Microsoft CDN을 통해서 보통 통과해요 |
-| 설치는 됐는데 안 열림 | 한 번 재시작. 그래도 안 되면 [support@keeply.work](mailto:support@keeply.work) 로 메일 |
+| 설치는 됐는데 안 열림 | 한 번 재시작. 그래도 안 되면 [keeply.work/contact](https://keeply.work/contact) 로 메일 |
 
 ## 한 가지만 기억한다면
 

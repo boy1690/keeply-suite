@@ -137,7 +137,7 @@ Orang yang menggunakan proyek pertama di hari install bertahan jauh lebih lama d
 | Win 11 bilang "needs administrator" | Buka ulang PowerShell dengan **Run as administrator** |
 | Mac bilang "cannot be opened because it is from an unidentified developer" | Klik kanan → Open (bukan double-click). Lihat bagian macOS di atas |
 | Jaringan kantor memblokir download | Pakai perintah winget — ia melalui CDN Microsoft dan biasanya tembus |
-| Sudah install tapi tidak mau buka | Restart sekali. Masih tidak ada? Email [support@keeply.work](mailto:support@keeply.work) |
+| Sudah install tapi tidak mau buka | Restart sekali. Masih tidak ada? Email [keeply.work/contact](https://keeply.work/contact) |
 
 ## Satu hal untuk diingat
 

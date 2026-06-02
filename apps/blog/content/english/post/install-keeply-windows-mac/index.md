@@ -180,7 +180,7 @@ People who use the first project on install day stick around far more than peopl
 | Win 11 says "needs administrator" | Reopen PowerShell with **Run as administrator** |
 | Mac says "cannot be opened because it is from an unidentified developer" | Right-click → Open (not double-click). See macOS section above |
 | Company network blocks the download | Use the winget command instead. It goes through Microsoft's CDN and usually gets through |
-| Installed but won't open | Restart once. Still nothing? Email [support@keeply.work](mailto:support@keeply.work) |
+| Installed but won't open | Restart once. Still nothing? Email [keeply.work/contact](https://keeply.work/contact) |
 
 ## The one thing to remember
 

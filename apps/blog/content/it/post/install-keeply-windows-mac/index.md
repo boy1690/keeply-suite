@@ -180,7 +180,7 @@ Le persone che usano il primo progetto nel giorno dell'installazione restano mol
 | Win 11 dice "richiede l'amministratore" | Riapri PowerShell con **Esegui come amministratore** |
 | Mac dice "non può essere aperto perché proviene da uno sviluppatore non identificato" | Tasto destro → Apri (non doppio click). Vedi sezione macOS sopra |
 | La rete aziendale blocca il download | Usa il comando winget. Passa per la CDN di Microsoft e di solito riesce a passare |
-| Installato ma non si apre | Riavvia una volta. Ancora niente? Scrivi a [support@keeply.work](mailto:support@keeply.work) |
+| Installato ma non si apre | Riavvia una volta. Ancora niente? Scrivi a [keeply.work/contact](https://keeply.work/contact) |
 
 ## L'unica cosa da ricordare
 
