@@ -5,7 +5,11 @@
 (function () {
   'use strict';
 
-  var DEMO_URL = '/demo/s/keeply-promo/';
+  // Per-page-session cache-bust so browsers don't reuse a stale response
+  // captured before a CSP / header policy update on /demo/*. Browser still
+  // caches normally within one page view (same query); next page load gets
+  // a fresh ts, forcing a re-validate.
+  var DEMO_URL = '/demo/s/keeply-promo/?v=' + Date.now();
   var modal = document.getElementById('demo-modal');
   if (!modal) return;
   var iframe = modal.querySelector('[data-demo-modal-iframe]');
