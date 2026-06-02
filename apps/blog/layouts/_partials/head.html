@@ -99,10 +99,17 @@
 {{- end }}
 {{- end }}
 
-{{- /* Hreflang for all languages */ -}}
+{{- /* Hreflang for all languages. Skip locales whose HOME 301-redirects to /en/
+       (de/es/fr/pl/tr — their locale home has no _index.md and is redirected at
+       the CF edge) so the home cluster never points hreflang at a redirect
+       ("Hreflang to redirect or broken page", Ahrefs RC-10). Per-post
+       translations are real 200 pages and stay unaffected. */ -}}
+{{- $redirectHomes := slice "de" "es" "fr" "pl" "tr" -}}
 {{- if .IsTranslated -}}
   {{- range .AllTranslations -}}
-    <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}" />
+    {{- if not (and $.IsHome (in $redirectHomes .Lang)) -}}
+      <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}" />
+    {{- end -}}
   {{- end -}}
   <link rel="alternate" hreflang="x-default" href="{{ (index .AllTranslations 0).Permalink }}" />
 {{- end -}}

@@ -28,8 +28,13 @@
 
   {{- /* Hreflang — point each language to its localized homepage so AI
          crawlers + Google can discover all 19 locales from the root. */ -}}
+  {{- /* Skip de/es/fr/pl/tr — their locale home 301-redirects to /en/, so an
+         hreflang to it is "hreflang to redirect" (Ahrefs RC-10). */ -}}
+  {{- $redirectHomes := slice "de" "es" "fr" "pl" "tr" -}}
   {{- range .Site.Languages -}}
-    <link rel="alternate" hreflang="{{ .Lang }}" href="{{ $.Site.BaseURL }}{{ .Lang }}/">
+    {{- if not (in $redirectHomes .Lang) -}}
+      <link rel="alternate" hreflang="{{ .Lang }}" href="{{ $.Site.BaseURL }}{{ .Lang }}/">
+    {{- end -}}
   {{- end -}}
   <link rel="alternate" hreflang="x-default" href="{{ .Site.BaseURL }}en/">
 
