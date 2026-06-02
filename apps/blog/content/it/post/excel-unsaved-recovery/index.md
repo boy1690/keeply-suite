@@ -58,7 +58,7 @@ Quello che inganna è che "ho perso il file Excel non salvato" sono in realtà d
 
 > Hai lavorato al report di fine mese tutta la mattina senza salvare, l'hai chiuso alle 12:40 di corsa per la riunione. Il file è ancora lì sul disco, intatto. Ma le tre ore di stamattina no.
 
-Il Problema B ha qualche parente, e la cache non ne raggiunge nessuno: hai aperto il file su un **computer diverso**, dove quella cache locale non esiste; oppure il Salvataggio automatico di OneDrive ha sovrascritto in silenzio la copia sincronizzata (una trappola a sé, con una sua soluzione: vedi [quando i dati di un Excel co-modificato spariscono](/it/post/excel-data-vanished-postmortem/)). Superficie diversa, stessa radice: ciò che doveva salvarti era temporaneo, locale, o tutti e due.
+Il Problema B ha qualche parente, e la cache non ne raggiunge nessuno: hai aperto il file su un **computer diverso**, dove quella cache locale non esiste; oppure il Salvataggio automatico di OneDrive ha sovrascritto in silenzio la copia sincronizzata. Superficie diversa, stessa radice: ciò che doveva salvarti era temporaneo, locale, o tutti e due.
 
 Una cache costruita per sopravvivere a un crash non è mai stata costruita per essere la storia del tuo file.
 
@@ -118,7 +118,6 @@ Il [Salvataggio automatico](https://support.microsoft.com/it-it/office/what-is-a
 - [La guida completa alla gestione delle versioni dei file](/it/post/file-version-management-complete-guide/) (pilastro)
 - [Recuperare un documento Word non salvato. E i 5 casi in cui il ripristino automatico non aiuta](/it/post/word-unsaved-recovery/)
 - [Cronologia versioni di Excel: i limiti Microsoft che nessuno cita](/it/post/excel-version-history-limits/)
-- [Quando i dati di un Excel co-modificato spariscono](/it/post/excel-data-vanished-postmortem/)
 
 ---
 *Di Ting-Wei Tsao, fondatore di Keeply ,  [LinkedIn](https://www.linkedin.com/in/ting-wei-tsao-b57480152)*

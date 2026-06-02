@@ -58,7 +58,7 @@ draft: false
 
 具体想象一下。`Q2_report.xlsx` 在 `/Finance/2026/` 里躺了好几周。今天上午你把数字对平了、加了两个工作表、一路弄到十一点多。然后顺手一关，提示框看都没看就点过去了。Excel 重开。文件就在那儿，最后保存是昨天 5:14。这一上午是*从*那份保存过的副本打开的，再没存回去。丢的只有你今天真正做的那部分。
 
-问题 B 还有几个表亲，缓存一个都够不着：你在**另一台电脑**上打开了这个文件，那台机器上根本没有这份本地缓存；或者 OneDrive 的自动保存悄悄盖掉了同步的那份（这是另一个坑，有它自己的解法。见[多人共编时 Excel 数据消失了怎么办](/zh-cn/post/excel-data-vanished-postmortem/)）。表面不一样，根子是同一个：本该救你的那个东西，要么是临时的，要么是本地的，要么两样都占。
+问题 B 还有几个表亲，缓存一个都够不着：你在**另一台电脑**上打开了这个文件，那台机器上根本没有这份本地缓存；或者 OneDrive 的自动保存悄悄盖掉了同步的那份。表面不一样，根子是同一个：本该救你的那个东西，要么是临时的，要么是本地的，要么两样都占。
 
 一个为了扛崩溃而生的缓存，从来就不是用来当你文件的历史的。
 
@@ -118,7 +118,6 @@ draft: false
 - [文件版本管理完整指南](/zh-cn/post/file-version-management-complete-guide/)（支柱文）
 - [恢复未保存的 Word 文档。以及自动恢复救不了的 5 种情况](/zh-cn/post/word-unsaved-recovery/)
 - [Excel 版本历史：没人提的微软限制](/zh-cn/post/excel-version-history-limits/)
-- [多人共编时 Excel 数据消失了怎么办](/zh-cn/post/excel-data-vanished-postmortem/)
 
 ---
 *作者 Ting-Wei Tsao（曹庭维），Keeply 创始人。[LinkedIn](https://www.linkedin.com/in/ting-wei-tsao-b57480152)*
