@@ -1,4 +1,13 @@
 /**
+ * ⚠️ NOT DEPLOYED — DO NOT EDIT EXPECTING LIVE EFFECT (verified 2026-06-02, spec 120).
+ *   The live keeply.work edge security headers are set by the Cloudflare dashboard
+ *   Response-Header Transform Rule "Keeply Security Headers" (the "Path 1" option
+ *   below), NOT by this Worker. This file is the un-chosen "Path 2" alternative and
+ *   is additionally stale: it (a) names origin "GitHub Pages" (pre-CF-Pages migration)
+ *   and (b) only decorates text/html, whereas the live rule covers all paths except
+ *   /demo/. To change a live header → edit the dashboard rule. See EDGE-RULES.md
+ *   (source of truth) in this directory.
+ *
  * Keeply — Cloudflare Worker for Security Headers (spec 022 / audit #8 + #11)
  *
  * Sits between Cloudflare edge and origin (GitHub Pages). Passes through
