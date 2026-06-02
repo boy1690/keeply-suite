@@ -48,15 +48,27 @@ jobs:
           # fetches it at runtime to apply SRI to dynamically-injected i18n
           # packs. fingerprint-manifest.json IS build-only (inlined into
           # i18n-loader at build time) so it stays excluded.
+          # SECURITY (root-cause fix 2026-06-02): this stage was a DENYLIST
+          # (default-allow) — anything not explicitly excluded shipped to prod.
+          # That leaked /CNAME, /docs/*.md, and internal infra PDFs/txt
+          # (cloudflare-setup, email-security-setup, registrar-hardening,
+          # dnssec-values, HTTP-Observatory reports). Hardened to exclude the
+          # whole internal-doc surface by CLASS, not by hand-listed filename:
+          #   - docs/        → entire internal runbook/baseline tree (md+pdf+txt+ics)
+          #   - *.md         → ALL markdown (handover/spec/legal/CLAUDE/KEEPLY/RELEASE);
+          #                    no page on this vanilla-HTML site is served as .md
+          #   - CNAME        → dead GitHub-Pages relic (ignored by CF Pages)
+          # robots.txt / sitemap.xml / *.json (sri-manifest) / the IndexNow
+          # key .txt stay shipped — they are intentionally public.
           rsync -a \
             --exclude='node_modules' \
             --exclude='_dev' \
+            --exclude='docs/' \
             --exclude='cloudflare/' \
             --exclude='package*.json' \
             --exclude='fingerprint-manifest.json' \
-            --exclude='CLAUDE.md' \
-            --exclude='KEEPLY_*.md' \
-            --exclude='RELEASE_*.md' \
+            --exclude='*.md' \
+            --exclude='CNAME' \
             --exclude='.git*' \
             apps/website/ _stage_website/
 

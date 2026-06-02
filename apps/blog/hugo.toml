@@ -67,7 +67,8 @@ disableKinds = ["taxonomy", "term"]
   mainSections = ["post"]
   featuredImageField = "image"
   rssFullContent = true
-  clarityProjectID = "wknecyjli8"
+  # clarityProjectID removed 2026-06-02 — Microsoft Clarity's 3rd-party cookies
+  # were the only thing failing Lighthouse best-practices (budget breach 77<80).
   # Site-wide fallback meta description — used when a page (notably the
   # homepage / list pages) has no own `.Description` or `.Summary`. Added
   # 2026-05-17 after av8d-levelup scan revealed homepage shipped without
