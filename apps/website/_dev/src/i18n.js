@@ -321,8 +321,17 @@
     var relPath = getLogicalPath();
     var targetUrl = getLocalizedUrlFor(lang, relPath);
     var currentUrl = location.pathname;
-    // 已在目標 locale 對應的 URL → 不導航，做 in-page 替換（root + zh-TW 互通的 edge case 也算）
-    var alreadyAtTarget = (urlLocale === lang) || (currentUrl === targetUrl);
+    // 已在目標 locale 對應的 URL → 不導航，做 in-page 替換（root + zh-TW 互通的 edge case 也算）。
+    // PERF/Ahrefs RC: root "/" 直接 serve <html lang> 那個 locale（build ROOT_LOCALE=zh-TW）
+    // 的內容，URL 卻沒有 locale prefix。init() 在 root 會 setLang(pageLang)，若不把
+    // 「root / 對應它自己 serve 的 locale」算成 already-at-target，就會 client-side 自我
+    // 重導 / → /zh-TW/（同內容、純多一跳），Lighthouse 量到 ~2.9s LCP 成本。第一次到訪
+    // （含 Googlebot、無 cookie）每次都中。只有「使用者主動切到別的 locale」才該真的導航。
+    var atRoot = (currentUrl === '/' || currentUrl === '/index.html');
+    var rootServedLang = htmlLangToCode(document.documentElement.lang);
+    var alreadyAtTarget = (urlLocale === lang) ||
+      (currentUrl === targetUrl) ||
+      (atRoot && lang === rootServedLang);
     if (!alreadyAtTarget) {
       window.location.href = targetUrl;
       return;
