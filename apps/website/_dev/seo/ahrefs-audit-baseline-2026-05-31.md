@@ -22,9 +22,13 @@
 - Warnings: meta description too long/short (138/79), title too long/short (83/27), Multiple H1 (148, hero+section by design), low word count (6).
 - Notices: IndexNow queue (291), indexable-not-in-sitemap (226, mostly compare/legal/tool variants), title/desc "changed" (diff noise).
 
-## Unresolved / flagged for follow-up
-- **de/es core-locale home 301→/en/**: de/es are documented core locales (hand-written articles) yet their homes redirect — likely a STALE rule from the auto-translate-removal era. RC-10 defensively stops hreflang pointing at them, but the proper fix is to un-redirect de/es homes (CF dashboard Redirect Rule, not in repo) so they serve 200, then re-add their hreflang. Needs CF-dashboard Playwright + product intent. fr/pl/tr pilot homes may legitimately redirect.
-- RC-4 cdn-cgi residual: if any mailto exists outside the build:clean-email scan scope (it scans root + 21 locale dirs), re-crawl will surface it.
+## Resolved follow-ups
+- **de/es home 301→/en/ — investigated 2026-06-02: INTENTIONAL, not a bug.** The de/es/fr/pl/tr (and pt-br) locale homes are thin `noindex` pages (1-2 posts each); 301→/en/ is a sensible consolidation of thin noindex homes. "core locale" = has hand-written *articles* (real indexable pages) ≠ home should be 200. RC-10 (hreflang skip on `.IsHome`) is the correct fix; no CF change. See memory `reference_blog_pilot_locale_homes_noindex_redirect_intentional`.
+- RC-4 cdn-cgi residual: build:clean-email scans root + 21 locale dirs; `npm run audit:seo` now guards 0-mailto every build.
+
+## Prevention added (spec 115 follow-up)
+- `apps/website` `npm run audit:seo` (wired into `npm run build`) — fails the build on .html-in-sitemap / mailto / hreflang-asymmetry / tool-page schema+outlink regressions.
+- `apps/blog` `_dev/seo/audit-seo.js` (wired into deploy-blog.yml) — fails the deploy if a home hreflangs at a redirecting locale (RC-10).
 
 ## Post-push checklist
 1. `npm run seo:purge` (website) + confirm CF deploy headSha matches the pushed commit (don't trust "latest run green").
