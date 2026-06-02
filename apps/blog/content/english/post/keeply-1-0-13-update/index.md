@@ -33,13 +33,13 @@ Click an entry and the right side expands like a time machine into the file tree
 
 Check the files you want (you can select everything that round deleted at once), hit "Restore N selected files," pick a folder to drop them in (Desktop by default), and Keeply restores them in their original folder structure. If a filename collides, it adds a `_restored` suffix by default so nothing of yours gets overwritten.
 
-![Deletion time machine: the left side lists what each round deleted by date, the right side shows the time-machine file tree with deleted files marked, and a single click restores your selection (interface shown in Chinese)](deletion-time-machine.png)
+![Deletion time machine: the left side lists what each round deleted by date, the right side shows the time-machine file tree with deleted files marked, and a single click restores your selection](deletion-time-machine.png)
 
 ### Click a file to see just its version history
 
 The timeline has always shown versions for the whole folder. But often you just want to know "this one file — which versions did it actually change in?" Now you can single-click that file and the main timeline on the left narrows to just that file's history. When you're done, click "Back to all versions" to return to the full timeline.
 
-![Single-click a file and the main timeline automatically shows just that file's version history (interface shown in Chinese)](file-timeline.png)
+![Single-click a file and the main timeline automatically shows just that file's version history](file-timeline.png)
 
 ### A file explorer that's easier on the eyes and easier to use
 
@@ -59,7 +59,7 @@ Here's what's coming:
 - **A "metro map" of team activity**: a diagram like a subway map, where the trunk line is the main version and each member's working copy branches off — so you can see at a glance who's active, which branches have merged, and which are still in review.
 - **Turn an existing folder into a "team original"**: any folder you're already managing in Keeply can be set as the team original, and members inherit access when they join — no need for everyone to buy in separately.
 
-![Team collaboration sneak peek: a metro map of team activity, with the main version as the trunk line and each member's working copy as a branch, showing merge and review status (feature not yet available, interface shown in Chinese)](team-metro-map.png)
+![Team collaboration sneak peek: a metro map of team activity, with the main version as the trunk line and each member's working copy as a branch, showing merge and review status (feature not yet available)](team-metro-map.png)
 
 We haven't set a release date yet, and we'll let you know when it's ready. If team collaboration is exactly what you've been waiting for, use "Report a problem" to tell us which part you want first.
 

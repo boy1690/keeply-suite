@@ -33,13 +33,13 @@ Clicchi una voce e, sulla destra, si apre come in una time machine l'albero dei 
 
 Spunti i file che ti servono (puoi selezionare in un colpo solo tutti quelli eliminati in quella versione), premi "Ripristina gli N file selezionati", scegli una cartella di destinazione (per impostazione predefinita il desktop) e Keeply li ripristina rispettando la struttura di cartelle originale. In caso di nomi in conflitto, viene aggiunto in automatico il suffisso `_restored`, così non sovrascrivi i file che hai già.
 
-![La time machine delle eliminazioni: a sinistra l'elenco per data di cosa è stato eliminato in ogni versione, a destra l'albero dei file della time machine con i file cancellati evidenziati, da ripristinare con un clic dopo la selezione (interfaccia in cinese)](deletion-time-machine.png)
+![La time machine delle eliminazioni: a sinistra l'elenco per data di cosa è stato eliminato in ogni versione, a destra l'albero dei file della time machine con i file cancellati evidenziati, da ripristinare con un clic dopo la selezione](deletion-time-machine.png)
 
 ### Clicca un file e vedi solo la sua cronologia versione
 
 Finora la linea temporale ha sempre mostrato le versioni dell'intera cartella. Ma spesso vuoi sapere solo una cosa: "questo singolo file, quante volte è stato modificato?". Ora basta un clic sul file e la linea temporale principale a sinistra mostra solo la storia di quel file; quando hai finito, premi "Torna a tutte le versioni" e torni alla linea temporale completa.
 
-![Un clic su un file e la linea temporale principale mostra in automatico solo la cronologia versione di quel file (interfaccia in cinese)](file-timeline.png)
+![Un clic su un file e la linea temporale principale mostra in automatico solo la cronologia versione di quel file](file-timeline.png)
 
 ### Un explorer più bello e più pratico
 
@@ -59,7 +59,7 @@ Ecco cosa arriverà:
 - **La "mappa della metropolitana" dell'attività di team**: un grafico simile a una mappa delle linee metro, con la linea principale che rappresenta la versione master e la copia di lavoro di ciascun membro come una diramazione; vedi a colpo d'occhio chi sta lavorando, quali rami sono già stati uniti e quali sono ancora in revisione.
 - **Trasforma una cartella esistente in "originale di team"**: una cartella che già gestisci con Keeply può diventare direttamente l'originale del team, e i membri ereditano i permessi quando entrano, senza che ognuno debba acquistare di nuovo.
 
-![Anteprima della collaborazione di team: la mappa della metropolitana dell'attività di team, con la linea principale come versione master e le copie di lavoro dei membri come diramazioni, con lo stato di unione e revisione (funzione non ancora disponibile, interfaccia in cinese)](team-metro-map.png)
+![Anteprima della collaborazione di team: la mappa della metropolitana dell'attività di team, con la linea principale come versione master e le copie di lavoro dei membri come diramazioni, con lo stato di unione e revisione (funzione non ancora disponibile)](team-metro-map.png)
 
 Non abbiamo ancora fissato una data di apertura: ti avviseremo quando tutto sarà pronto. Se è proprio la collaborazione di team quello che stai aspettando, dicci da "Segnala un problema" quale parte vorresti avere per prima.
 
