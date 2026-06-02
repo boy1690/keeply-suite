@@ -438,13 +438,18 @@ function generateSitemap() {
       xml += `    <changefreq>${changefreq}</changefreq>\n`;
       xml += `    <priority>${priority}</priority>\n`;
 
-      // Hreflang cross-references for all locales
+      // Hreflang cross-references for all locales.
+      // MUST be byte-identical to the on-page hreflang (replaceHreflangTags):
+      // 21 per-locale + x-default→page-root. A page-vs-sitemap mismatch (esp.
+      // x-default) triggers Ahrefs "Missing reciprocal hreflang" + "More than
+      // one page for same language". (RC-11: sitemap x-default was hard-coded to
+      // home `/` while pages point at the page-root → conflict on every cluster.)
       for (const altLocale of LOCALES) {
         const altPath = page === 'index.html' ? '' : page.replace(/\.html$/, '');
         const altUrl = `${BASE_URL}/${altLocale}/${altPath}`;
         xml += `    <xhtml:link rel="alternate" hreflang="${altLocale}" href="${altUrl}" />\n`;
       }
-      xml += `    <xhtml:link rel="alternate" hreflang="x-default" href="${BASE_URL}/" />\n`;
+      xml += `    <xhtml:link rel="alternate" hreflang="x-default" href="${BASE_URL}/${pagePath}" />\n`;
 
       xml += '  </url>\n';
     }
@@ -461,8 +466,10 @@ function generateSitemap() {
   // Spec 028: compare hub + sub-pages (en + zh-TW).
   xml += generateCompareSitemapEntries(today);
 
-  // Spec 042: install pages (Stage 1 = root + en only, expand later).
-  xml += generateInstallSitemapEntries(today);
+  // RC-11: install is already emitted by the main loop above for all 21 locales
+  // (PAGES includes install.html). The old generateInstallSitemapEntries() added
+  // a SECOND, conflicting 6-locale set (x-default→/install) on top → 28 install
+  // <loc>s + a cluster definition that disagreed with the 21-locale one. Removed.
 
   // Spec 052: free diagnostic tool — /tools/can-i-recover-my-file (en + zh-TW).
   xml += generateToolsSitemapEntries(today);
@@ -471,41 +478,10 @@ function generateSitemap() {
   return xml;
 }
 
-// Spec 043 D (Stage 2): install.html template-driven + 6 core locale 翻譯。
-// 其他 13 locale 透過 components.js INSTALL_LOCALES fallback 到 /en/install.html。
-function generateInstallSitemapEntries(today) {
-  const installLocales = ['en', 'zh-TW', 'zh-CN', 'ja', 'ko', 'it'];
-  const rootUrl = `${BASE_URL}/install`;
-
-  // Cross-ref block shared by root + each locale entry.
-  const altLinks = installLocales.map(loc =>
-    `    <xhtml:link rel="alternate" hreflang="${loc}" href="${BASE_URL}/${loc}/install" />`
-  ).join('\n') +
-    `\n    <xhtml:link rel="alternate" hreflang="x-default" href="${rootUrl}" />\n`;
-
-  let xml = '';
-  // Root install page (x-default).
-  xml += '  <url>\n';
-  xml += `    <loc>${rootUrl}</loc>\n`;
-  xml += `    <lastmod>${today}</lastmod>\n`;
-  xml += '    <changefreq>monthly</changefreq>\n';
-  xml += '    <priority>0.7</priority>\n';
-  xml += altLinks;
-  xml += '  </url>\n';
-
-  // Per-locale install pages.
-  for (const loc of installLocales) {
-    xml += '  <url>\n';
-    xml += `    <loc>${BASE_URL}/${loc}/install</loc>\n`;
-    xml += `    <lastmod>${today}</lastmod>\n`;
-    xml += '    <changefreq>monthly</changefreq>\n';
-    xml += '    <priority>0.7</priority>\n';
-    xml += altLinks;
-    xml += '  </url>\n';
-  }
-
-  return xml;
-}
+// RC-11: generateInstallSitemapEntries() removed — install is covered by the
+// main generateSitemap() loop (PAGES includes install.html) for all 21 locales
+// with the canonical hreflang set. The old function emitted a conflicting
+// 6-locale subset that disagreed with the 21-locale cluster.
 
 // Spec 052: free diagnostic tool pages. English at /tools/, zh-TW at /zh-TW/tools/
 // (mirrors the build-comparisons.js bilingual scope; P0.4 exception, en+zh-TW only).

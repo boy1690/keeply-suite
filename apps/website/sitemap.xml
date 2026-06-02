@@ -615,7 +615,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/privacy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/privacy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/privacy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/privacy" />
   </url>
   <url>
     <loc>https://keeply.work/zh-CN/privacy</loc>
@@ -643,7 +643,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/privacy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/privacy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/privacy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/privacy" />
   </url>
   <url>
     <loc>https://keeply.work/en/privacy</loc>
@@ -671,7 +671,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/privacy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/privacy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/privacy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/privacy" />
   </url>
   <url>
     <loc>https://keeply.work/ja/privacy</loc>
@@ -699,7 +699,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/privacy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/privacy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/privacy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/privacy" />
   </url>
   <url>
     <loc>https://keeply.work/ko/privacy</loc>
@@ -727,7 +727,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/privacy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/privacy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/privacy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/privacy" />
   </url>
   <url>
     <loc>https://keeply.work/de/privacy</loc>
@@ -755,7 +755,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/privacy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/privacy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/privacy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/privacy" />
   </url>
   <url>
     <loc>https://keeply.work/fr/privacy</loc>
@@ -783,7 +783,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/privacy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/privacy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/privacy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/privacy" />
   </url>
   <url>
     <loc>https://keeply.work/es/privacy</loc>
@@ -811,7 +811,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/privacy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/privacy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/privacy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/privacy" />
   </url>
   <url>
     <loc>https://keeply.work/pt/privacy</loc>
@@ -839,7 +839,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/privacy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/privacy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/privacy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/privacy" />
   </url>
   <url>
     <loc>https://keeply.work/it/privacy</loc>
@@ -867,7 +867,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/privacy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/privacy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/privacy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/privacy" />
   </url>
   <url>
     <loc>https://keeply.work/nl/privacy</loc>
@@ -895,7 +895,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/privacy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/privacy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/privacy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/privacy" />
   </url>
   <url>
     <loc>https://keeply.work/pl/privacy</loc>
@@ -923,7 +923,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/privacy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/privacy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/privacy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/privacy" />
   </url>
   <url>
     <loc>https://keeply.work/cs/privacy</loc>
@@ -951,7 +951,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/privacy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/privacy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/privacy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/privacy" />
   </url>
   <url>
     <loc>https://keeply.work/hu/privacy</loc>
@@ -979,7 +979,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/privacy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/privacy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/privacy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/privacy" />
   </url>
   <url>
     <loc>https://keeply.work/tr/privacy</loc>
@@ -1007,7 +1007,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/privacy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/privacy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/privacy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/privacy" />
   </url>
   <url>
     <loc>https://keeply.work/fi/privacy</loc>
@@ -1035,7 +1035,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/privacy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/privacy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/privacy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/privacy" />
   </url>
   <url>
     <loc>https://keeply.work/sv/privacy</loc>
@@ -1063,7 +1063,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/privacy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/privacy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/privacy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/privacy" />
   </url>
   <url>
     <loc>https://keeply.work/no/privacy</loc>
@@ -1091,7 +1091,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/privacy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/privacy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/privacy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/privacy" />
   </url>
   <url>
     <loc>https://keeply.work/da/privacy</loc>
@@ -1119,7 +1119,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/privacy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/privacy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/privacy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/privacy" />
   </url>
   <url>
     <loc>https://keeply.work/vi/privacy</loc>
@@ -1147,7 +1147,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/privacy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/privacy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/privacy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/privacy" />
   </url>
   <url>
     <loc>https://keeply.work/th/privacy</loc>
@@ -1175,7 +1175,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/privacy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/privacy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/privacy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/privacy" />
   </url>
   <url>
     <loc>https://keeply.work/zh-TW/terms</loc>
@@ -1203,7 +1203,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/terms" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/terms" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/terms" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/terms" />
   </url>
   <url>
     <loc>https://keeply.work/zh-CN/terms</loc>
@@ -1231,7 +1231,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/terms" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/terms" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/terms" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/terms" />
   </url>
   <url>
     <loc>https://keeply.work/en/terms</loc>
@@ -1259,7 +1259,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/terms" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/terms" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/terms" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/terms" />
   </url>
   <url>
     <loc>https://keeply.work/ja/terms</loc>
@@ -1287,7 +1287,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/terms" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/terms" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/terms" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/terms" />
   </url>
   <url>
     <loc>https://keeply.work/ko/terms</loc>
@@ -1315,7 +1315,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/terms" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/terms" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/terms" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/terms" />
   </url>
   <url>
     <loc>https://keeply.work/de/terms</loc>
@@ -1343,7 +1343,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/terms" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/terms" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/terms" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/terms" />
   </url>
   <url>
     <loc>https://keeply.work/fr/terms</loc>
@@ -1371,7 +1371,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/terms" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/terms" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/terms" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/terms" />
   </url>
   <url>
     <loc>https://keeply.work/es/terms</loc>
@@ -1399,7 +1399,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/terms" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/terms" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/terms" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/terms" />
   </url>
   <url>
     <loc>https://keeply.work/pt/terms</loc>
@@ -1427,7 +1427,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/terms" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/terms" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/terms" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/terms" />
   </url>
   <url>
     <loc>https://keeply.work/it/terms</loc>
@@ -1455,7 +1455,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/terms" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/terms" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/terms" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/terms" />
   </url>
   <url>
     <loc>https://keeply.work/nl/terms</loc>
@@ -1483,7 +1483,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/terms" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/terms" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/terms" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/terms" />
   </url>
   <url>
     <loc>https://keeply.work/pl/terms</loc>
@@ -1511,7 +1511,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/terms" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/terms" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/terms" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/terms" />
   </url>
   <url>
     <loc>https://keeply.work/cs/terms</loc>
@@ -1539,7 +1539,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/terms" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/terms" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/terms" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/terms" />
   </url>
   <url>
     <loc>https://keeply.work/hu/terms</loc>
@@ -1567,7 +1567,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/terms" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/terms" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/terms" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/terms" />
   </url>
   <url>
     <loc>https://keeply.work/tr/terms</loc>
@@ -1595,7 +1595,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/terms" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/terms" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/terms" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/terms" />
   </url>
   <url>
     <loc>https://keeply.work/fi/terms</loc>
@@ -1623,7 +1623,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/terms" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/terms" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/terms" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/terms" />
   </url>
   <url>
     <loc>https://keeply.work/sv/terms</loc>
@@ -1651,7 +1651,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/terms" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/terms" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/terms" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/terms" />
   </url>
   <url>
     <loc>https://keeply.work/no/terms</loc>
@@ -1679,7 +1679,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/terms" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/terms" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/terms" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/terms" />
   </url>
   <url>
     <loc>https://keeply.work/da/terms</loc>
@@ -1707,7 +1707,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/terms" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/terms" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/terms" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/terms" />
   </url>
   <url>
     <loc>https://keeply.work/vi/terms</loc>
@@ -1735,7 +1735,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/terms" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/terms" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/terms" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/terms" />
   </url>
   <url>
     <loc>https://keeply.work/th/terms</loc>
@@ -1763,7 +1763,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/terms" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/terms" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/terms" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/terms" />
   </url>
   <url>
     <loc>https://keeply.work/zh-TW/contact</loc>
@@ -1791,7 +1791,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/contact" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/contact" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/contact" />
   </url>
   <url>
     <loc>https://keeply.work/zh-CN/contact</loc>
@@ -1819,7 +1819,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/contact" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/contact" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/contact" />
   </url>
   <url>
     <loc>https://keeply.work/en/contact</loc>
@@ -1847,7 +1847,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/contact" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/contact" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/contact" />
   </url>
   <url>
     <loc>https://keeply.work/ja/contact</loc>
@@ -1875,7 +1875,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/contact" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/contact" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/contact" />
   </url>
   <url>
     <loc>https://keeply.work/ko/contact</loc>
@@ -1903,7 +1903,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/contact" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/contact" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/contact" />
   </url>
   <url>
     <loc>https://keeply.work/de/contact</loc>
@@ -1931,7 +1931,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/contact" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/contact" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/contact" />
   </url>
   <url>
     <loc>https://keeply.work/fr/contact</loc>
@@ -1959,7 +1959,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/contact" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/contact" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/contact" />
   </url>
   <url>
     <loc>https://keeply.work/es/contact</loc>
@@ -1987,7 +1987,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/contact" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/contact" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/contact" />
   </url>
   <url>
     <loc>https://keeply.work/pt/contact</loc>
@@ -2015,7 +2015,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/contact" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/contact" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/contact" />
   </url>
   <url>
     <loc>https://keeply.work/it/contact</loc>
@@ -2043,7 +2043,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/contact" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/contact" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/contact" />
   </url>
   <url>
     <loc>https://keeply.work/nl/contact</loc>
@@ -2071,7 +2071,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/contact" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/contact" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/contact" />
   </url>
   <url>
     <loc>https://keeply.work/pl/contact</loc>
@@ -2099,7 +2099,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/contact" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/contact" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/contact" />
   </url>
   <url>
     <loc>https://keeply.work/cs/contact</loc>
@@ -2127,7 +2127,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/contact" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/contact" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/contact" />
   </url>
   <url>
     <loc>https://keeply.work/hu/contact</loc>
@@ -2155,7 +2155,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/contact" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/contact" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/contact" />
   </url>
   <url>
     <loc>https://keeply.work/tr/contact</loc>
@@ -2183,7 +2183,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/contact" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/contact" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/contact" />
   </url>
   <url>
     <loc>https://keeply.work/fi/contact</loc>
@@ -2211,7 +2211,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/contact" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/contact" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/contact" />
   </url>
   <url>
     <loc>https://keeply.work/sv/contact</loc>
@@ -2239,7 +2239,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/contact" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/contact" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/contact" />
   </url>
   <url>
     <loc>https://keeply.work/no/contact</loc>
@@ -2267,7 +2267,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/contact" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/contact" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/contact" />
   </url>
   <url>
     <loc>https://keeply.work/da/contact</loc>
@@ -2295,7 +2295,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/contact" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/contact" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/contact" />
   </url>
   <url>
     <loc>https://keeply.work/vi/contact</loc>
@@ -2323,7 +2323,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/contact" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/contact" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/contact" />
   </url>
   <url>
     <loc>https://keeply.work/th/contact</loc>
@@ -2351,7 +2351,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/contact" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/contact" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/contact" />
   </url>
   <url>
     <loc>https://keeply.work/zh-TW/install</loc>
@@ -2379,7 +2379,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/install" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/install" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/install" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/install" />
   </url>
   <url>
     <loc>https://keeply.work/zh-CN/install</loc>
@@ -2407,7 +2407,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/install" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/install" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/install" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/install" />
   </url>
   <url>
     <loc>https://keeply.work/en/install</loc>
@@ -2435,7 +2435,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/install" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/install" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/install" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/install" />
   </url>
   <url>
     <loc>https://keeply.work/ja/install</loc>
@@ -2463,7 +2463,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/install" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/install" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/install" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/install" />
   </url>
   <url>
     <loc>https://keeply.work/ko/install</loc>
@@ -2491,7 +2491,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/install" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/install" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/install" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/install" />
   </url>
   <url>
     <loc>https://keeply.work/de/install</loc>
@@ -2519,7 +2519,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/install" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/install" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/install" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/install" />
   </url>
   <url>
     <loc>https://keeply.work/fr/install</loc>
@@ -2547,7 +2547,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/install" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/install" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/install" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/install" />
   </url>
   <url>
     <loc>https://keeply.work/es/install</loc>
@@ -2575,7 +2575,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/install" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/install" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/install" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/install" />
   </url>
   <url>
     <loc>https://keeply.work/pt/install</loc>
@@ -2603,7 +2603,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/install" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/install" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/install" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/install" />
   </url>
   <url>
     <loc>https://keeply.work/it/install</loc>
@@ -2631,7 +2631,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/install" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/install" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/install" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/install" />
   </url>
   <url>
     <loc>https://keeply.work/nl/install</loc>
@@ -2659,7 +2659,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/install" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/install" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/install" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/install" />
   </url>
   <url>
     <loc>https://keeply.work/pl/install</loc>
@@ -2687,7 +2687,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/install" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/install" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/install" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/install" />
   </url>
   <url>
     <loc>https://keeply.work/cs/install</loc>
@@ -2715,7 +2715,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/install" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/install" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/install" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/install" />
   </url>
   <url>
     <loc>https://keeply.work/hu/install</loc>
@@ -2743,7 +2743,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/install" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/install" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/install" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/install" />
   </url>
   <url>
     <loc>https://keeply.work/tr/install</loc>
@@ -2771,7 +2771,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/install" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/install" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/install" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/install" />
   </url>
   <url>
     <loc>https://keeply.work/fi/install</loc>
@@ -2799,7 +2799,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/install" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/install" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/install" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/install" />
   </url>
   <url>
     <loc>https://keeply.work/sv/install</loc>
@@ -2827,7 +2827,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/install" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/install" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/install" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/install" />
   </url>
   <url>
     <loc>https://keeply.work/no/install</loc>
@@ -2855,7 +2855,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/install" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/install" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/install" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/install" />
   </url>
   <url>
     <loc>https://keeply.work/da/install</loc>
@@ -2883,7 +2883,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/install" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/install" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/install" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/install" />
   </url>
   <url>
     <loc>https://keeply.work/vi/install</loc>
@@ -2911,7 +2911,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/install" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/install" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/install" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/install" />
   </url>
   <url>
     <loc>https://keeply.work/th/install</loc>
@@ -2939,7 +2939,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/install" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/install" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/install" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/install" />
   </url>
   <url>
     <loc>https://keeply.work/zh-TW/about</loc>
@@ -2967,7 +2967,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/about" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/about" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/about" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/about" />
   </url>
   <url>
     <loc>https://keeply.work/zh-CN/about</loc>
@@ -2995,7 +2995,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/about" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/about" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/about" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/about" />
   </url>
   <url>
     <loc>https://keeply.work/en/about</loc>
@@ -3023,7 +3023,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/about" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/about" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/about" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/about" />
   </url>
   <url>
     <loc>https://keeply.work/ja/about</loc>
@@ -3051,7 +3051,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/about" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/about" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/about" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/about" />
   </url>
   <url>
     <loc>https://keeply.work/ko/about</loc>
@@ -3079,7 +3079,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/about" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/about" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/about" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/about" />
   </url>
   <url>
     <loc>https://keeply.work/de/about</loc>
@@ -3107,7 +3107,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/about" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/about" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/about" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/about" />
   </url>
   <url>
     <loc>https://keeply.work/fr/about</loc>
@@ -3135,7 +3135,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/about" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/about" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/about" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/about" />
   </url>
   <url>
     <loc>https://keeply.work/es/about</loc>
@@ -3163,7 +3163,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/about" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/about" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/about" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/about" />
   </url>
   <url>
     <loc>https://keeply.work/pt/about</loc>
@@ -3191,7 +3191,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/about" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/about" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/about" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/about" />
   </url>
   <url>
     <loc>https://keeply.work/it/about</loc>
@@ -3219,7 +3219,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/about" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/about" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/about" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/about" />
   </url>
   <url>
     <loc>https://keeply.work/nl/about</loc>
@@ -3247,7 +3247,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/about" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/about" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/about" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/about" />
   </url>
   <url>
     <loc>https://keeply.work/pl/about</loc>
@@ -3275,7 +3275,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/about" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/about" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/about" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/about" />
   </url>
   <url>
     <loc>https://keeply.work/cs/about</loc>
@@ -3303,7 +3303,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/about" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/about" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/about" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/about" />
   </url>
   <url>
     <loc>https://keeply.work/hu/about</loc>
@@ -3331,7 +3331,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/about" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/about" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/about" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/about" />
   </url>
   <url>
     <loc>https://keeply.work/tr/about</loc>
@@ -3359,7 +3359,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/about" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/about" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/about" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/about" />
   </url>
   <url>
     <loc>https://keeply.work/fi/about</loc>
@@ -3387,7 +3387,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/about" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/about" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/about" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/about" />
   </url>
   <url>
     <loc>https://keeply.work/sv/about</loc>
@@ -3415,7 +3415,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/about" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/about" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/about" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/about" />
   </url>
   <url>
     <loc>https://keeply.work/no/about</loc>
@@ -3443,7 +3443,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/about" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/about" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/about" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/about" />
   </url>
   <url>
     <loc>https://keeply.work/da/about</loc>
@@ -3471,7 +3471,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/about" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/about" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/about" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/about" />
   </url>
   <url>
     <loc>https://keeply.work/vi/about</loc>
@@ -3499,7 +3499,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/about" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/about" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/about" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/about" />
   </url>
   <url>
     <loc>https://keeply.work/th/about</loc>
@@ -3527,7 +3527,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/about" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/about" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/about" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/about" />
   </url>
   <url>
     <loc>https://keeply.work/zh-TW/buy</loc>
@@ -3555,7 +3555,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/buy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/buy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/buy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/buy" />
   </url>
   <url>
     <loc>https://keeply.work/zh-CN/buy</loc>
@@ -3583,7 +3583,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/buy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/buy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/buy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/buy" />
   </url>
   <url>
     <loc>https://keeply.work/en/buy</loc>
@@ -3611,7 +3611,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/buy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/buy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/buy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/buy" />
   </url>
   <url>
     <loc>https://keeply.work/ja/buy</loc>
@@ -3639,7 +3639,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/buy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/buy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/buy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/buy" />
   </url>
   <url>
     <loc>https://keeply.work/ko/buy</loc>
@@ -3667,7 +3667,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/buy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/buy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/buy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/buy" />
   </url>
   <url>
     <loc>https://keeply.work/de/buy</loc>
@@ -3695,7 +3695,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/buy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/buy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/buy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/buy" />
   </url>
   <url>
     <loc>https://keeply.work/fr/buy</loc>
@@ -3723,7 +3723,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/buy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/buy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/buy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/buy" />
   </url>
   <url>
     <loc>https://keeply.work/es/buy</loc>
@@ -3751,7 +3751,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/buy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/buy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/buy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/buy" />
   </url>
   <url>
     <loc>https://keeply.work/pt/buy</loc>
@@ -3779,7 +3779,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/buy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/buy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/buy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/buy" />
   </url>
   <url>
     <loc>https://keeply.work/it/buy</loc>
@@ -3807,7 +3807,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/buy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/buy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/buy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/buy" />
   </url>
   <url>
     <loc>https://keeply.work/nl/buy</loc>
@@ -3835,7 +3835,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/buy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/buy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/buy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/buy" />
   </url>
   <url>
     <loc>https://keeply.work/pl/buy</loc>
@@ -3863,7 +3863,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/buy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/buy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/buy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/buy" />
   </url>
   <url>
     <loc>https://keeply.work/cs/buy</loc>
@@ -3891,7 +3891,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/buy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/buy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/buy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/buy" />
   </url>
   <url>
     <loc>https://keeply.work/hu/buy</loc>
@@ -3919,7 +3919,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/buy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/buy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/buy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/buy" />
   </url>
   <url>
     <loc>https://keeply.work/tr/buy</loc>
@@ -3947,7 +3947,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/buy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/buy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/buy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/buy" />
   </url>
   <url>
     <loc>https://keeply.work/fi/buy</loc>
@@ -3975,7 +3975,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/buy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/buy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/buy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/buy" />
   </url>
   <url>
     <loc>https://keeply.work/sv/buy</loc>
@@ -4003,7 +4003,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/buy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/buy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/buy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/buy" />
   </url>
   <url>
     <loc>https://keeply.work/no/buy</loc>
@@ -4031,7 +4031,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/buy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/buy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/buy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/buy" />
   </url>
   <url>
     <loc>https://keeply.work/da/buy</loc>
@@ -4059,7 +4059,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/buy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/buy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/buy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/buy" />
   </url>
   <url>
     <loc>https://keeply.work/vi/buy</loc>
@@ -4087,7 +4087,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/buy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/buy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/buy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/buy" />
   </url>
   <url>
     <loc>https://keeply.work/th/buy</loc>
@@ -4115,7 +4115,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/buy" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/buy" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/buy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/buy" />
   </url>
   <url>
     <loc>https://keeply.work/zh-TW/refund</loc>
@@ -4143,7 +4143,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/refund" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/refund" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/refund" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/refund" />
   </url>
   <url>
     <loc>https://keeply.work/zh-CN/refund</loc>
@@ -4171,7 +4171,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/refund" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/refund" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/refund" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/refund" />
   </url>
   <url>
     <loc>https://keeply.work/en/refund</loc>
@@ -4199,7 +4199,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/refund" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/refund" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/refund" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/refund" />
   </url>
   <url>
     <loc>https://keeply.work/ja/refund</loc>
@@ -4227,7 +4227,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/refund" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/refund" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/refund" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/refund" />
   </url>
   <url>
     <loc>https://keeply.work/ko/refund</loc>
@@ -4255,7 +4255,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/refund" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/refund" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/refund" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/refund" />
   </url>
   <url>
     <loc>https://keeply.work/de/refund</loc>
@@ -4283,7 +4283,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/refund" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/refund" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/refund" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/refund" />
   </url>
   <url>
     <loc>https://keeply.work/fr/refund</loc>
@@ -4311,7 +4311,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/refund" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/refund" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/refund" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/refund" />
   </url>
   <url>
     <loc>https://keeply.work/es/refund</loc>
@@ -4339,7 +4339,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/refund" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/refund" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/refund" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/refund" />
   </url>
   <url>
     <loc>https://keeply.work/pt/refund</loc>
@@ -4367,7 +4367,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/refund" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/refund" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/refund" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/refund" />
   </url>
   <url>
     <loc>https://keeply.work/it/refund</loc>
@@ -4395,7 +4395,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/refund" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/refund" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/refund" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/refund" />
   </url>
   <url>
     <loc>https://keeply.work/nl/refund</loc>
@@ -4423,7 +4423,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/refund" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/refund" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/refund" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/refund" />
   </url>
   <url>
     <loc>https://keeply.work/pl/refund</loc>
@@ -4451,7 +4451,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/refund" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/refund" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/refund" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/refund" />
   </url>
   <url>
     <loc>https://keeply.work/cs/refund</loc>
@@ -4479,7 +4479,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/refund" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/refund" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/refund" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/refund" />
   </url>
   <url>
     <loc>https://keeply.work/hu/refund</loc>
@@ -4507,7 +4507,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/refund" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/refund" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/refund" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/refund" />
   </url>
   <url>
     <loc>https://keeply.work/tr/refund</loc>
@@ -4535,7 +4535,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/refund" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/refund" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/refund" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/refund" />
   </url>
   <url>
     <loc>https://keeply.work/fi/refund</loc>
@@ -4563,7 +4563,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/refund" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/refund" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/refund" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/refund" />
   </url>
   <url>
     <loc>https://keeply.work/sv/refund</loc>
@@ -4591,7 +4591,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/refund" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/refund" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/refund" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/refund" />
   </url>
   <url>
     <loc>https://keeply.work/no/refund</loc>
@@ -4619,7 +4619,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/refund" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/refund" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/refund" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/refund" />
   </url>
   <url>
     <loc>https://keeply.work/da/refund</loc>
@@ -4647,7 +4647,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/refund" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/refund" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/refund" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/refund" />
   </url>
   <url>
     <loc>https://keeply.work/vi/refund</loc>
@@ -4675,7 +4675,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/refund" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/refund" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/refund" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/refund" />
   </url>
   <url>
     <loc>https://keeply.work/th/refund</loc>
@@ -4703,7 +4703,7 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://keeply.work/da/refund" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://keeply.work/vi/refund" />
     <xhtml:link rel="alternate" hreflang="th" href="https://keeply.work/th/refund" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/refund" />
   </url>
   <url>
     <loc>https://keeply.work/</loc>
@@ -4836,97 +4836,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://keeply.work/compare/time-machine" />
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://keeply.work/zh-TW/compare/time-machine" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/compare/time-machine" />
-  </url>
-  <url>
-    <loc>https://keeply.work/install</loc>
-    <lastmod>2026-06-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://keeply.work/en/install" />
-    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://keeply.work/zh-TW/install" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://keeply.work/zh-CN/install" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://keeply.work/ja/install" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://keeply.work/ko/install" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://keeply.work/it/install" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/install" />
-  </url>
-  <url>
-    <loc>https://keeply.work/en/install</loc>
-    <lastmod>2026-06-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://keeply.work/en/install" />
-    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://keeply.work/zh-TW/install" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://keeply.work/zh-CN/install" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://keeply.work/ja/install" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://keeply.work/ko/install" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://keeply.work/it/install" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/install" />
-  </url>
-  <url>
-    <loc>https://keeply.work/zh-TW/install</loc>
-    <lastmod>2026-06-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://keeply.work/en/install" />
-    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://keeply.work/zh-TW/install" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://keeply.work/zh-CN/install" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://keeply.work/ja/install" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://keeply.work/ko/install" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://keeply.work/it/install" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/install" />
-  </url>
-  <url>
-    <loc>https://keeply.work/zh-CN/install</loc>
-    <lastmod>2026-06-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://keeply.work/en/install" />
-    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://keeply.work/zh-TW/install" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://keeply.work/zh-CN/install" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://keeply.work/ja/install" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://keeply.work/ko/install" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://keeply.work/it/install" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/install" />
-  </url>
-  <url>
-    <loc>https://keeply.work/ja/install</loc>
-    <lastmod>2026-06-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://keeply.work/en/install" />
-    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://keeply.work/zh-TW/install" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://keeply.work/zh-CN/install" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://keeply.work/ja/install" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://keeply.work/ko/install" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://keeply.work/it/install" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/install" />
-  </url>
-  <url>
-    <loc>https://keeply.work/ko/install</loc>
-    <lastmod>2026-06-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://keeply.work/en/install" />
-    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://keeply.work/zh-TW/install" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://keeply.work/zh-CN/install" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://keeply.work/ja/install" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://keeply.work/ko/install" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://keeply.work/it/install" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/install" />
-  </url>
-  <url>
-    <loc>https://keeply.work/it/install</loc>
-    <lastmod>2026-06-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://keeply.work/en/install" />
-    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://keeply.work/zh-TW/install" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://keeply.work/zh-CN/install" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://keeply.work/ja/install" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://keeply.work/ko/install" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://keeply.work/it/install" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://keeply.work/install" />
   </url>
   <url>
     <loc>https://keeply.work/tools/can-i-recover-my-file</loc>

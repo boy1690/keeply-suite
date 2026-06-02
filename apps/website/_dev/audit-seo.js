@@ -102,6 +102,35 @@ for (const rel of TOOL_GLOBS) {
   if (staticLinks.length === 0) fail(`RC-8: ${rel} has 0 static <a href> (crawlers see "no outgoing links"; JS-injected nav doesn't count)`);
 }
 
+// ── 5. sitemap hreflang == page hreflang + no duplicate <loc> ────────────────
+// RC-11: a page-vs-sitemap hreflang mismatch (esp. x-default) triggers BOTH
+// "Missing reciprocal hreflang" and "More than one page for same language".
+// Each standard URL's sitemap hreflang must equal the canonical on-page set.
+if (sitemap) {
+  const locRe = new RegExp('^' + BASE.replace(/[.]/g, '\\.') + '/([a-zA-Z-]+)/(.*)$');
+  const seenLoc = new Map();
+  for (const blk of sitemap.split('<url>').slice(1)) {
+    const loc = (blk.match(/<loc>([^<]+)<\/loc>/) || [])[1];
+    if (!loc) continue;
+    seenLoc.set(loc, (seenLoc.get(loc) || 0) + 1);
+    const set = [];
+    const hl = /hreflang="([^"]+)"\s+href="([^"]+)"/g;
+    let m;
+    while ((m = hl.exec(blk))) set.push(`${m[1]}|${m[2]}`);
+    if (set.length === 0) continue; // entries without hreflang (bare /) are fine
+    const mm = loc.match(locRe);
+    if (!mm || !LOCALES.includes(mm[1])) continue;
+    const pagePath = mm[2];
+    const type = pagePath === '' ? 'index' : pagePath;
+    if (!STANDARD_PAGES.includes(type)) continue; // compare/tools have own clusters
+    if (set.sort().join('\n') !== canonicalSet(pagePath).join('\n')) {
+      fail(`RC-11: sitemap hreflang for ${loc} != on-page canonical set (page↔sitemap mismatch)`);
+    }
+  }
+  const dups = [...seenLoc.entries()].filter(([, n]) => n > 1);
+  if (dups.length) fail(`RC-11: ${dups.length} duplicated <loc> in sitemap (conflicting double-listed cluster): ${dups.slice(0, 3).map(([u]) => u).join(', ')}`);
+}
+
 // ── report ───────────────────────────────────────────────────────────────────
 console.log('=== audit:seo (Ahrefs RC guard) ===');
 if (errors.length) {
