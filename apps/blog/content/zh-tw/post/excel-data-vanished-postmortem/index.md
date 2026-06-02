@@ -6,7 +6,7 @@ slug: excel-data-vanished-postmortem
 tags: ["檔案還原", "操作失誤", "雲端同步", "工具比較"]
 categories: ["使用案例"]
 primary_keyword: "excel 資料 復原"
-locales: [ja, en, zh-TW, ko]
+locales: [ja, en, zh-TW, ko, it, zh-CN]
 role: cluster
 pillar_parent: file-version-management-complete-guide
 image: cover.svg

@@ -6,7 +6,7 @@ slug: excel-data-vanished-postmortem
 tags: ["파일 복구", "작업 오류", "클라우드 동기화", "도구 비교"]
 categories: ["사용 사례"]
 primary_keyword: "엑셀 데이터 복구"
-locales: [ja, en, zh-TW, ko]
+locales: [ja, en, zh-TW, ko, it, zh-CN]
 role: cluster
 pillar_parent: file-version-management-complete-guide
 image: cover.svg

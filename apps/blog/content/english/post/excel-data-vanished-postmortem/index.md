@@ -6,7 +6,7 @@ slug: excel-data-vanished-postmortem
 tags: ["file recovery", "operator error", "cloud sync", "tool comparison"]
 categories: ["Use cases"]
 primary_keyword: "excel data recovery collaborative edit"
-locales: [ja, en, zh-TW, ko]
+locales: [ja, en, zh-TW, ko, it, zh-CN]
 role: cluster
 pillar_parent: file-version-management-complete-guide
 image: cover.svg
