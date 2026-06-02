@@ -15,3 +15,11 @@
 
 /legal/*
   X-Robots-Tag: noindex
+
+# Demo deck — embedded in the homepage hero modal (spec 119). Override the
+# zone-level CSP `frame-ancestors 'none'` + `X-Frame-Options: DENY` so the
+# /demo/* subtree can be iframed from same-origin pages on keeply.work.
+# Same-origin only — cross-origin embedding is still blocked.
+/demo/*
+  X-Frame-Options: SAMEORIGIN
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://analytics.ahrefs.com https://www.googletagmanager.com https://static.cloudflareinsights.com https://*.clarity.ms https://cdn.paddle.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com https://*.clarity.ms https://c.bing.com; font-src 'self' data:; connect-src 'self' https://analytics.ahrefs.com https://docs.google.com https://*.google-analytics.com https://*.analytics.google.com https://cloudflareinsights.com https://*.clarity.ms; form-action 'self' https://docs.google.com; frame-ancestors 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests
