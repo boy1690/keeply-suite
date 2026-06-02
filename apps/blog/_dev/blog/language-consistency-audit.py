@@ -93,6 +93,8 @@ ALLOWLIST_TERMS = {
 # SharePoint admin / SaaS / generic tech vocabulary.
 BLACKLIST: dict[str, dict[str, str]] = {
     "ja": {
+        # v5 (2026-06-02): Office co-authoring / forensic vocab
+        "collaborative editing": "共同編集",
         # Microsoft / Office terms
         "AutoRecover": "自動回復",
         "Recycle Bin": "ごみ箱",
@@ -182,6 +184,8 @@ BLACKLIST: dict[str, dict[str, str]] = {
         # "site" alone NOT auto-translated (避免 domain name 衝突)
     },
     "ko": {
+        # v5 (2026-06-02): Office co-authoring / forensic vocab
+        "collaborative editing": "공동 편집",
         "AutoRecover": "자동 복구",
         "Recycle Bin": "휴지통",
         "auto-delete": "자동 삭제",
@@ -250,6 +254,8 @@ BLACKLIST: dict[str, dict[str, str]] = {
         "Deadline": "마감일",
     },
     "it": {
+        # v5 (2026-06-02): Office co-authoring / forensic vocab
+        "collaborative editing": "editing collaborativo",
         "AutoRecover": "Salvataggio automatico",
         "Recycle Bin": "Cestino",
         "auto-delete": "eliminazione automatica",
@@ -331,6 +337,8 @@ BLACKLIST: dict[str, dict[str, str]] = {
         "Deadline": "Scadenza",
     },
     "zh-tw": {
+        # v5 (2026-06-02): Office co-authoring / forensic vocab
+        "collaborative editing": "共同編輯",
         "AutoRecover": "自動回復",
         "Recycle Bin": "資源回收筒",
         "auto-delete": "自動刪除",
@@ -423,6 +431,31 @@ BLACKLIST: dict[str, dict[str, str]] = {
         "Deadline": "截止日",
     },
     "zh-cn": {
+        # v5 (2026-06-02): Office co-authoring / forensic vocab
+        "collaborative editing": "协同编辑",
+        # v5 (2026-06-02): TC->SC vocab-leak guard. Keys carry traditional-only
+        # characters / Taiwan-only vocab, so they only match a genuine zh-TW leak
+        # (a correctly-simplified article never matches these keys).
+        "自動儲存": "自动保存",
+        "儲存版本": "保存版本",
+        "未儲存": "未保存",
+        "儲存": "保存",
+        "還原": "还原",
+        "復原": "恢复",
+        "檔案": "文件",
+        "資料夾": "文件夹",
+        "資料": "资料",
+        "網路": "网络",
+        "雲端": "云端",
+        "保管庫": "保管库",
+        "共同編輯": "协同编辑",
+        "預設": "默认",
+        "設定": "设置",
+        "程式": "程序",
+        "硬碟": "硬盘",
+        "滑鼠": "鼠标",
+        "複製": "复制",
+        "貼上": "粘贴",
         "AutoRecover": "自动恢复",
         "Recycle Bin": "回收站",
         "auto-delete": "自动删除",
