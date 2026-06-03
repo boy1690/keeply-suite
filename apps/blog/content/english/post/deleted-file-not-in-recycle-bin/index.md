@@ -38,7 +38,7 @@ You delete a file, open the Recycle Bin — and it's not there.
 
 Take a breath. In most cases, the file is still on the disk. "Gone from the Recycle Bin" and "gone forever" are two different stories. The real issue is that Windows, macOS, and OneDrive each have a different way of producing a "skipped-the-bin" deletion — and once you've pinpointed which one bit you, the odds of getting the file back are actually pretty good.
 
-But before you do anything, there are four things you absolutely must not do. Identify which of the five causes below applies to you, then move on to the recovery methods. The order matters.
+But before you do anything, there are four things you absolutely must not do. Identify which of the five causes below applies to you, then move on to the recovery methods. The order matters. (If you'd rather not read the whole thing, a free [three-question "can I recover my file?" check](https://keeply.work/tools/can-i-recover-my-file) gives you a quick read on your odds first.)
 
 ## 5 reasons your deleted file isn't in the Recycle Bin
 
