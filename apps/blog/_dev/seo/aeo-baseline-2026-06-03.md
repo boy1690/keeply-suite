@@ -34,6 +34,15 @@
 - **不買 Brand Radar（$199–699/月)**:會去追「瑞典家電的 Keeply」或追到零。免費 checker 已把買不買的 gate 用數據關掉。
 - AEO 是**內容/品牌權威 + 實體消歧**工程(讓 AI 把「Keeply」綁定到檔案管理,而非熱水壺;靠 Organization schema/sameAs + 被權威站引用),不是買工具能解。
 
+## 3b. Site Explorer 佐證(blog.keeply.work,Ahrefs 索引,2026-06-03)
+
+第三個獨立來源再次證實 0 AI 訊號 + 揭露真正瓶頸:
+- **AI citations 全平台 = 0**（AI Overviews / ChatGPT / Perplexity / Gemini / Copilot / Grok 全 0)。
+- **Domain Rating = 0;Backlinks = 0;Referring domains = 0。** ← 結構性瓶頸:**0 連結 = 0 權威**。
+- Organic keywords = 2（Ahrefs 估值;**Ahrefs 對小/新站嚴重低估**,GSC 的 765 已索引/33 點擊才是真相)。
+- 推論（grounded）:**瓶頸不是內容量（765 頁已存在），是 authority/能見度**。765 頁 vs 33 點擊 = 內容換不到能見度;DR 0/0 backlink 是排名與 AI 引用上不去的根因。在 0 連結站上加內容 ≈ 多產不排名的頁。→ 槓桿 = 建 backlink/被引用 + 內容打「低 DR 也贏得了」的需求,不是「再多寫」。
+- **斷鏈回收 = N/A**（0 backlink,無斷鏈可回收）;**page-2 near-win** 要用 GSC（Ahrefs 低估）。
+
 ## 4. 下次對照
 - 重跑時機:做完一輪 entity/authority 工作後,或 ~季度。
 - 看:GA4 是否首次出現 AI referral(>0);AI Visibility Checker 的 topics 是否開始出現「file / version / backup」類(脫離家電碰撞)。
