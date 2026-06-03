@@ -693,5 +693,10 @@
   "index.download.cta.mac.intel": "Mac (Intel) kostenlos herunterladen",
   "index.download.note.mac.intel": "Intel Mac",
   "install.macos.cta.intel": "Stattdessen Intel-Version",
-  "index.hero.cta.demo": "30-Sekunden-Demo ansehen"
+  "index.hero.cta.demo": "30-Sekunden-Demo ansehen",
+  "install.advanced.summary": "Fortgeschritten / Entwickler: Installation über einen Paketmanager",
+  "install.advanced.intro": "Du nutzt bereits einen Paketmanager? Wähle einfach aus.",
+  "install.advanced.winget.label": "Windows · winget",
+  "install.advanced.scoop.label": "Windows · Scoop",
+  "install.advanced.brew.label": "macOS · Homebrew"
 }

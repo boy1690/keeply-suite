@@ -693,5 +693,10 @@
   "index.download.cta.mac.intel": "Stáhnout pro Mac (Intel)",
   "index.download.note.mac.intel": "Intel Mac",
   "install.macos.cta.intel": "Verze pro Intel",
-  "index.hero.cta.demo": "Podívat se na 30s demo"
+  "index.hero.cta.demo": "Podívat se na 30s demo",
+  "install.advanced.summary": "Pokročilé / pro vývojáře: instalace přes správce balíčků",
+  "install.advanced.intro": "Už používáte správce balíčků? Vyberte si.",
+  "install.advanced.winget.label": "Windows · winget",
+  "install.advanced.scoop.label": "Windows · Scoop",
+  "install.advanced.brew.label": "macOS · Homebrew"
 }

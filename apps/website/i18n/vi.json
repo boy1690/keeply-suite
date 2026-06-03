@@ -693,5 +693,10 @@
   "index.download.cta.mac.intel": "Tải về cho Mac (Intel)",
   "index.download.note.mac.intel": "Intel Mac",
   "install.macos.cta.intel": "Phiên bản Intel",
-  "index.hero.cta.demo": "Xem demo 30 giây"
+  "index.hero.cta.demo": "Xem demo 30 giây",
+  "install.advanced.summary": "Nâng cao / nhà phát triển: cài đặt bằng trình quản lý gói",
+  "install.advanced.intro": "Đã dùng trình quản lý gói? Chọn một cái bạn thích.",
+  "install.advanced.winget.label": "Windows · winget",
+  "install.advanced.scoop.label": "Windows · Scoop",
+  "install.advanced.brew.label": "macOS · Homebrew"
 }

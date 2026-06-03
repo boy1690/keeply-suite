@@ -693,5 +693,10 @@
   "index.download.cta.mac.intel": "Mac (Intel) を無料ダウンロード",
   "index.download.note.mac.intel": "Intel Mac",
   "install.macos.cta.intel": "Intel 版に切り替え",
-  "index.hero.cta.demo": "30 秒のデモを見る"
+  "index.hero.cta.demo": "30 秒のデモを見る",
+  "install.advanced.summary": "上級者・開発者向け：パッケージマネージャーでインストール",
+  "install.advanced.intro": "すでにパッケージマネージャーをお使いですか？お好きなものをどうぞ。",
+  "install.advanced.winget.label": "Windows · winget",
+  "install.advanced.scoop.label": "Windows · Scoop",
+  "install.advanced.brew.label": "macOS · Homebrew"
 }

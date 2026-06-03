@@ -693,5 +693,10 @@
   "index.download.cta.mac.intel": "ดาวน์โหลด Mac (Intel)",
   "index.download.note.mac.intel": "Intel Mac",
   "install.macos.cta.intel": "เวอร์ชัน Intel",
-  "index.hero.cta.demo": "ดูเดโม 30 วินาที"
+  "index.hero.cta.demo": "ดูเดโม 30 วินาที",
+  "install.advanced.summary": "ขั้นสูง / นักพัฒนา: ติดตั้งด้วยตัวจัดการแพ็กเกจ",
+  "install.advanced.intro": "ใช้ตัวจัดการแพ็กเกจอยู่แล้ว? เลือกได้เลย",
+  "install.advanced.winget.label": "Windows · winget",
+  "install.advanced.scoop.label": "Windows · Scoop",
+  "install.advanced.brew.label": "macOS · Homebrew"
 }

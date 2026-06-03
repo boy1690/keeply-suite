@@ -75,8 +75,8 @@
   <meta name="twitter:image" content="https://keeply.work/og-image.png" />
   <meta name="twitter:image:alt" content="Telepítsd a Keeplyt Windowsra vagy macOS-re 30 másodperc alatt — Keeply" />
 
-  <link rel="preload" href="../style.css" as="style" integrity="sha384-sKSeEDvr+4AY3qbRoQSvHksfQuDvMuGqI+gG57Awa7JkX1fHXp3r/vBmOV4OAUS2" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../style.css" integrity="sha384-sKSeEDvr+4AY3qbRoQSvHksfQuDvMuGqI+gG57Awa7JkX1fHXp3r/vBmOV4OAUS2" crossorigin="anonymous" />
+  <link rel="preload" href="../style.css" as="style" integrity="sha384-s94BQDTeXS4ICZFgNIMHOJfCAlXJbebXmKkamGiGKOMUWX2HGg7R6ErFGI5XPuj7" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../style.css" integrity="sha384-s94BQDTeXS4ICZFgNIMHOJfCAlXJbebXmKkamGiGKOMUWX2HGg7R6ErFGI5XPuj7" crossorigin="anonymous" />
 
   <!-- M PLUS Rounded 1c font preload (eliminates CLS from late font discovery) -->
   <link rel="preload" href="../fonts/MPLUSRounded1c-Regular-v2.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
@@ -223,6 +223,32 @@
       </div>
 
       <p class="text-center text-xs text-gray-400 mt-8" data-i18n-html="install.linux_note">Linux-felhasználó? <span class="text-gray-500">Még nincs a tervekben — a Keeply ma Windowsra és macOS-re érhető el.</span></p>
+
+      <!-- ADVANCED / DEVELOPER INSTALL (collapsed) — spec keeply-download-page-pkg-managers. Commands are literal (not i18n). -->
+      <details class="max-w-2xl mx-auto mt-10 bg-white border border-gray-100 rounded-2xl px-6 py-4">
+        <summary class="cursor-pointer text-sm font-medium text-gray-700 hover:text-brand-600 select-none" data-i18n="install.advanced.summary">Haladó / fejlesztői: telepítés csomagkezelővel</summary>
+        <p class="text-sm text-gray-500 mt-3 mb-4 leading-relaxed" data-i18n="install.advanced.intro">Már használsz csomagkezelőt? Válassz egyet.</p>
+        <div class="space-y-4">
+          <div>
+            <p class="text-xs font-bold text-gray-600 mb-1" data-i18n="install.advanced.winget.label">Windows · winget</p>
+            <div class="bg-gray-900 text-gray-100 text-xs font-mono px-3 py-2 rounded-lg overflow-x-auto">winget install Boy1690.Keeply</div>
+          </div>
+          <div>
+            <p class="text-xs font-bold text-gray-600 mb-1" data-i18n="install.advanced.scoop.label">Windows · Scoop</p>
+            <div class="bg-gray-900 text-gray-100 text-xs font-mono px-3 py-2 rounded-lg overflow-x-auto leading-relaxed">scoop bucket add keeply https://github.com/boy1690/keeply-releases<br>scoop install keeply</div>
+          </div>
+          <div>
+            <p class="text-xs font-bold text-gray-600 mb-1" data-i18n="install.advanced.brew.label">macOS · Homebrew</p>
+            <div class="bg-gray-900 text-gray-100 text-xs font-mono px-3 py-2 rounded-lg overflow-x-auto leading-relaxed">brew tap boy1690/keeply<br>brew install --cask keeply</div>
+          </div>
+          <!-- Chocolatey: uncomment + add install.advanced.choco.label (21 locale) after moderation approves (curl -sI https://community.chocolatey.org/packages/keeply => 200)
+          <div>
+            <p class="text-xs font-bold text-gray-600 mb-1" data-i18n="install.advanced.choco.label">Windows · Chocolatey</p>
+            <div class="bg-gray-900 text-gray-100 text-xs font-mono px-3 py-2 rounded-lg overflow-x-auto">choco install keeply</div>
+          </div>
+          -->
+        </div>
+      </details>
     </div>
   </section>
 
@@ -336,6 +362,6 @@
   <script src="../components.c05ee0a2f9.js" defer integrity="sha384-vXwUAahowQXWmPuWdSGpRhbPEYL9ALaSYTZc/ecE89PTkK4ZVdyifqSVEsISVMQi" crossorigin="anonymous"></script>
   <script src="../cookie-banner.8a90f5095a.js" defer integrity="sha384-FkrIUHI4EiKuF7c0lI0I+k/SpAC6SN6GAiU3tqGZBNs1nvMH4R/g+hpuVB/UGk63" crossorigin="anonymous"></script>
   <script src="../ga4-loader.359df0e8a7.js" defer integrity="sha384-gyx7he9QurH3GoSkfkbiWJCVC2RYlzVMBwyolFNVDEjLCjX1oUw1XG+WLOEBLSQJ" crossorigin="anonymous"></script>
-  <script src="../i18n-loader.426d738ff6.js" defer integrity="sha384-syUjSXhLJ/PaqxFHe6KWihChGqf3cKxLwFvjS23mer6cjERPZ2IBe+LDzAESIL5B" crossorigin="anonymous"></script>
+  <script src="../i18n-loader.f095cfe27a.js" defer integrity="sha384-p8NxPM/W+woxplSR5Usbp+olkkLrzyYLOmoiVql4ZalDO9G/1JtoSEhBnV6dIC1i" crossorigin="anonymous"></script>
 </body>
 </html>

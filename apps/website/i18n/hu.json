@@ -693,5 +693,10 @@
   "index.download.cta.mac.intel": "Letöltés Mac (Intel) verzióhoz",
   "index.download.note.mac.intel": "Intel Mac",
   "install.macos.cta.intel": "Intel verzió",
-  "index.hero.cta.demo": "30 másodperces demó megnézése"
+  "index.hero.cta.demo": "30 másodperces demó megnézése",
+  "install.advanced.summary": "Haladó / fejlesztői: telepítés csomagkezelővel",
+  "install.advanced.intro": "Már használsz csomagkezelőt? Válassz egyet.",
+  "install.advanced.winget.label": "Windows · winget",
+  "install.advanced.scoop.label": "Windows · Scoop",
+  "install.advanced.brew.label": "macOS · Homebrew"
 }

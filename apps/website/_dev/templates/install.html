@@ -182,6 +182,32 @@
       </div>
 
       <p class="text-center text-xs text-gray-400 mt-8" data-i18n-html="install.linux_note">Linux 用戶？<span class="text-gray-500">還沒在 roadmap 上——Keeply 目前只出 Windows 與 macOS 版。</span></p>
+
+      <!-- ADVANCED / DEVELOPER INSTALL (collapsed) — spec keeply-download-page-pkg-managers. Commands are literal (not i18n). -->
+      <details class="max-w-2xl mx-auto mt-10 bg-white border border-gray-100 rounded-2xl px-6 py-4">
+        <summary class="cursor-pointer text-sm font-medium text-gray-700 hover:text-brand-600 select-none" data-i18n="install.advanced.summary">進階 / 開發者：用套件管理器安裝</summary>
+        <p class="text-sm text-gray-500 mt-3 mb-4 leading-relaxed" data-i18n="install.advanced.intro">已經在用套件管理器？任挑一個。</p>
+        <div class="space-y-4">
+          <div>
+            <p class="text-xs font-bold text-gray-600 mb-1" data-i18n="install.advanced.winget.label">Windows · winget</p>
+            <div class="bg-gray-900 text-gray-100 text-xs font-mono px-3 py-2 rounded-lg overflow-x-auto">winget install Boy1690.Keeply</div>
+          </div>
+          <div>
+            <p class="text-xs font-bold text-gray-600 mb-1" data-i18n="install.advanced.scoop.label">Windows · Scoop</p>
+            <div class="bg-gray-900 text-gray-100 text-xs font-mono px-3 py-2 rounded-lg overflow-x-auto leading-relaxed">scoop bucket add keeply https://github.com/boy1690/keeply-releases<br>scoop install keeply</div>
+          </div>
+          <div>
+            <p class="text-xs font-bold text-gray-600 mb-1" data-i18n="install.advanced.brew.label">macOS · Homebrew</p>
+            <div class="bg-gray-900 text-gray-100 text-xs font-mono px-3 py-2 rounded-lg overflow-x-auto leading-relaxed">brew tap boy1690/keeply<br>brew install --cask keeply</div>
+          </div>
+          <!-- Chocolatey: uncomment + add install.advanced.choco.label (21 locale) after moderation approves (curl -sI https://community.chocolatey.org/packages/keeply => 200)
+          <div>
+            <p class="text-xs font-bold text-gray-600 mb-1" data-i18n="install.advanced.choco.label">Windows · Chocolatey</p>
+            <div class="bg-gray-900 text-gray-100 text-xs font-mono px-3 py-2 rounded-lg overflow-x-auto">choco install keeply</div>
+          </div>
+          -->
+        </div>
+      </details>
     </div>
   </section>
 

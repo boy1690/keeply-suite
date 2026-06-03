@@ -693,5 +693,10 @@
   "index.download.cta.mac.intel": "Mac (Intel) için indir",
   "index.download.note.mac.intel": "Intel Mac",
   "install.macos.cta.intel": "Intel sürümü",
-  "index.hero.cta.demo": "30 saniyelik demoyu izle"
+  "index.hero.cta.demo": "30 saniyelik demoyu izle",
+  "install.advanced.summary": "Gelişmiş / geliştirici: paket yöneticisiyle kurun",
+  "install.advanced.intro": "Zaten bir paket yöneticisi mi kullanıyorsunuz? Birini seçin.",
+  "install.advanced.winget.label": "Windows · winget",
+  "install.advanced.scoop.label": "Windows · Scoop",
+  "install.advanced.brew.label": "macOS · Homebrew"
 }

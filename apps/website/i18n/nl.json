@@ -693,5 +693,10 @@
   "index.download.cta.mac.intel": "Downloaden voor Mac (Intel)",
   "index.download.note.mac.intel": "Intel Mac",
   "install.macos.cta.intel": "Intel-versie nodig?",
-  "index.hero.cta.demo": "Bekijk de 30-seconden demo"
+  "index.hero.cta.demo": "Bekijk de 30-seconden demo",
+  "install.advanced.summary": "Geavanceerd / ontwikkelaar: installeren met een packagemanager",
+  "install.advanced.intro": "Gebruik je al een packagemanager? Maak je keuze.",
+  "install.advanced.winget.label": "Windows · winget",
+  "install.advanced.scoop.label": "Windows · Scoop",
+  "install.advanced.brew.label": "macOS · Homebrew"
 }

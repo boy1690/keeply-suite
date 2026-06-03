@@ -693,5 +693,10 @@
   "index.download.cta.mac.intel": "免費下載 Mac (Intel)",
   "index.download.note.mac.intel": "Intel Mac",
   "install.macos.cta.intel": "改下載 Intel Mac 版",
-  "index.hero.cta.demo": "看 30 秒互動 demo"
+  "index.hero.cta.demo": "看 30 秒互動 demo",
+  "install.advanced.summary": "進階 / 開發者：用套件管理器安裝",
+  "install.advanced.intro": "已經在用套件管理器？任挑一個。",
+  "install.advanced.winget.label": "Windows · winget",
+  "install.advanced.scoop.label": "Windows · Scoop",
+  "install.advanced.brew.label": "macOS · Homebrew"
 }

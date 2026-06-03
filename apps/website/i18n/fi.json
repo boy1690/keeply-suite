@@ -693,5 +693,10 @@
   "index.download.cta.mac.intel": "Lataa Mac (Intel)",
   "index.download.note.mac.intel": "Intel Mac",
   "install.macos.cta.intel": "Intel-versio",
-  "index.hero.cta.demo": "Katso 30 sekunnin demo"
+  "index.hero.cta.demo": "Katso 30 sekunnin demo",
+  "install.advanced.summary": "Edistynyt / kehittäjä: asenna paketinhallinnalla",
+  "install.advanced.intro": "Käytätkö jo paketinhallintaa? Valitse mikä tahansa.",
+  "install.advanced.winget.label": "Windows · winget",
+  "install.advanced.scoop.label": "Windows · Scoop",
+  "install.advanced.brew.label": "macOS · Homebrew"
 }

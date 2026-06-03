@@ -693,5 +693,10 @@
   "index.download.cta.mac.intel": "Ladda ner för Mac (Intel)",
   "index.download.note.mac.intel": "Intel Mac",
   "install.macos.cta.intel": "Intel-version",
-  "index.hero.cta.demo": "Se 30-sekunders demo"
+  "index.hero.cta.demo": "Se 30-sekunders demo",
+  "install.advanced.summary": "Avancerat / utvecklare: installera med en pakethanterare",
+  "install.advanced.intro": "Använder du redan en pakethanterare? Välj en.",
+  "install.advanced.winget.label": "Windows · winget",
+  "install.advanced.scoop.label": "Windows · Scoop",
+  "install.advanced.brew.label": "macOS · Homebrew"
 }

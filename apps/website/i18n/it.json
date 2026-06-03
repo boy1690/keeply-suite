@@ -693,5 +693,10 @@
   "index.download.cta.mac.intel": "Scarica per Mac (Intel)",
   "index.download.note.mac.intel": "Intel Mac",
   "install.macos.cta.intel": "Versione Intel",
-  "index.hero.cta.demo": "Guarda la demo di 30 s"
+  "index.hero.cta.demo": "Guarda la demo di 30 s",
+  "install.advanced.summary": "Avanzato / sviluppatore: installa con un gestore di pacchetti",
+  "install.advanced.intro": "Usi già un gestore di pacchetti? Scegli quello che preferisci.",
+  "install.advanced.winget.label": "Windows · winget",
+  "install.advanced.scoop.label": "Windows · Scoop",
+  "install.advanced.brew.label": "macOS · Homebrew"
 }
