@@ -104,8 +104,8 @@
   <meta name="twitter:image:alt" content="Keeply — 你的文件时光机，一键找回任何旧版" />
 
   <!-- Tailwind CSS (compiled) -->
-  <link rel="preload" href="../style.css" as="style" integrity="sha384-s94BQDTeXS4ICZFgNIMHOJfCAlXJbebXmKkamGiGKOMUWX2HGg7R6ErFGI5XPuj7" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../style.css" integrity="sha384-s94BQDTeXS4ICZFgNIMHOJfCAlXJbebXmKkamGiGKOMUWX2HGg7R6ErFGI5XPuj7" crossorigin="anonymous" />
+  <link rel="preload" href="../style.css" as="style" integrity="sha384-d7GV0OjQujAXoinqaNqPRxBSfvGHMyv7jspmsBPuah1vCqOOF6YEuFkO/rENao3I" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../style.css" integrity="sha384-d7GV0OjQujAXoinqaNqPRxBSfvGHMyv7jspmsBPuah1vCqOOF6YEuFkO/rENao3I" crossorigin="anonymous" />
 
   <!-- M PLUS Rounded 1c font preload (eliminates CLS from late font discovery) -->
   <link rel="preload" href="../fonts/MPLUSRounded1c-Regular-v2.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
@@ -225,7 +225,7 @@
             "name": "Keeply 可以离线使用吗？",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "可以。Keeply 是完全本地的软件——不用云端、不用账号、不依赖网络。你的项目文件、版本历史、笔记全部留在你的硬盘或 NAS 上。你可以在飞行模式、地下室、或完全离网的电脑上使用 Keeply。唯一会联网的时机是检查 App 更新，而这个你也可以关掉。"
+              "text": "可以。Keeply 的版本管理完全在本地运行——不用云端、不用账号。你的项目文件、版本历史和笔记全部留在你的硬盘或 NAS 上，飞行模式或物理隔离的电脑都能用。默认情况下，应用只在许可证验证和检查更新（可关闭）时联网。唯一的例外是可选的 AI 助手（默认关闭）：如果你启用它并选择文件，那些内容会由你的电脑直接发送至你选择的 AI 服务商——或者改用本地模型，完全不联网。"
             }
           },
           {
@@ -274,6 +274,38 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "一次性付费、永久授权，限定前 500 位买家。你永久拥有 Keeply 目前所有功能，加上 Team 方案上线后自动取得所有 Team 功能。没有订阅周期性扣款，没有未来涨价的惊喜。对比每月 $25 美元 × 24 个月 = $600 美元——Founding Member 不到两年就回本，而且继续用。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "为什么不能用我的 ChatGPT Plus / Claude Pro 订阅接入 AI 助手？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "各家服务条款禁止把消费级订阅账号交给第三方应用自动使用，已有用户因此被无预警封号且不退款。使用官方 API 密钥才是安全的做法——它正是为此设计的，而且只按实际用量计费。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "我的 AI 密钥放在 Keeply 里安全吗？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "你的密钥只存储在你电脑的系统安全凭据库中（Windows 凭据管理器 / macOS 钥匙串）。Keeply 不上传、不留存、也看不到它——请求由你的电脑直接发送至你选择的服务商。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "用 AI 助手会很贵吗？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "费用由你直接支付给 AI 服务商、按实际用量计费——处理一份文档通常只要几美分。Keeply 不经手费用、不加价；精确账单在你的 AI 服务商后台。如果使用本地模型，则完全没有 API 费用。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "可以完全离线使用 AI 吗？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "可以——在本地模式下，Keeply 可以搭配在你自己电脑上运行的模型（例如通过 Ollama 运行 Gemma 或 Llama）。文件完全不离开你的电脑，也没有任何 API 费用。"
             }
           }
         ]
@@ -698,7 +730,7 @@
           <p class="text-sm font-bold text-brand-600 mb-1" data-i18n="index.teamvault.tagline">一个保管库。一个团队。完全掌控。</p>
           <h3 class="text-lg font-bold text-gray-900 mb-3" data-i18n="index.teamvault.title">什么是&quot;团队保管库&quot;？</h3>
           <p class="text-sm text-gray-600 leading-relaxed mb-3" data-i18n="index.teamvault.desc">团队保管库采用「1 个正本 + 1 个共享镜像」拓扑：正本是项目版本的真实来源（NAS、共享文件夹或外接硬盘任选其一）；共享镜像是从正本同步的完整快照，供团队任何成员快速获取最新版。每位成员另有自己的工作副本。数据形式可选标准模式（直接浏览和编辑文件）或保护模式（防止破坏性历史变更）。</p>
-          <p class="text-sm text-brand-600 font-medium mb-3" data-i18n="index.teamvault.highlight">不被云端绑架、不按人头收费，数据留在你的硬件上。</p>
+          <p class="text-sm text-brand-600 font-medium mb-3" data-i18n="index.teamvault.highlight">不被云端绑架、不按人头收费，数据放在你自己的硬件上、由你掌控。</p>
           <div class="grid md:grid-cols-2 gap-3 mt-3">
             <div class="bg-white rounded-lg px-4 py-3 border border-gray-100">
               <p class="text-xs font-bold text-gray-500 mb-1">Free</p>
@@ -839,7 +871,7 @@
             <span data-i18n="index.faq.1.q">Keeply 可以离线使用吗？</span>
             <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
           </summary>
-          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.1.a">可以。Keeply 是完全本地的软件——不用云端、不用账号、不依赖网络。你的项目文件、版本历史、笔记全部留在你的硬盘或 NAS 上。你可以在飞行模式、地下室、或完全离网的电脑上使用 Keeply。唯一会联网的时机是检查 App 更新，而这个你也可以关掉。</div>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.1.a">可以。Keeply 的版本管理完全在本地运行——不用云端、不用账号。你的项目文件、版本历史和笔记全部留在你的硬盘或 NAS 上，飞行模式或物理隔离的电脑都能用。默认情况下，应用只在许可证验证和检查更新（可关闭）时联网。唯一的例外是可选的 AI 助手（默认关闭）：如果你启用它并选择文件，那些内容会由你的电脑直接发送至你选择的 AI 服务商——或者改用本地模型，完全不联网。</div>
         </details>
         <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
           <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
@@ -883,6 +915,34 @@
           </summary>
           <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.7.a">一次性付费、永久授权，限定前 500 位买家。你永久拥有 Keeply 目前所有功能，加上 Team 方案上线后自动取得所有 Team 功能。没有订阅周期性扣款，没有未来涨价的惊喜。对比每月 $25 美元 × 24 个月 = $600 美元——Founding Member 不到两年就回本，而且继续用。</div>
         </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.8.q">为什么不能用我的 ChatGPT Plus / Claude Pro 订阅接入 AI 助手？</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.8.a">各家服务条款禁止把消费级订阅账号交给第三方应用自动使用，已有用户因此被无预警封号且不退款。使用官方 API 密钥才是安全的做法——它正是为此设计的，而且只按实际用量计费。</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.9.q">我的 AI 密钥放在 Keeply 里安全吗？</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.9.a">你的密钥只存储在你电脑的系统安全凭据库中（Windows 凭据管理器 / macOS 钥匙串）。Keeply 不上传、不留存、也看不到它——请求由你的电脑直接发送至你选择的服务商。</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.10.q">用 AI 助手会很贵吗？</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.10.a">费用由你直接支付给 AI 服务商、按实际用量计费——处理一份文档通常只要几美分。Keeply 不经手费用、不加价；精确账单在你的 AI 服务商后台。如果使用本地模型，则完全没有 API 费用。</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.11.q">可以完全离线使用 AI 吗？</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.11.a">可以——在本地模式下，Keeply 可以搭配在你自己电脑上运行的模型（例如通过 Ollama 运行 Gemma 或 Llama）。文件完全不离开你的电脑，也没有任何 API 费用。</div>
+        </details>
       </div>
     </div>
   </section>
@@ -907,7 +967,7 @@
   <script src="../cookie-banner.8a90f5095a.js" defer integrity="sha384-FkrIUHI4EiKuF7c0lI0I+k/SpAC6SN6GAiU3tqGZBNs1nvMH4R/g+hpuVB/UGk63" crossorigin="anonymous"></script>
   <script src="../ga4-loader.359df0e8a7.js" defer integrity="sha384-gyx7he9QurH3GoSkfkbiWJCVC2RYlzVMBwyolFNVDEjLCjX1oUw1XG+WLOEBLSQJ" crossorigin="anonymous"></script>
   <script src="../clarity-loader.60a9a5160f.js" defer integrity="sha384-rdROtDi/pws+RrJtXaeyRY20mP1RJMaVL3DuCPi4UU7tkWHea6vyx01XW/4tbkL/" crossorigin="anonymous"></script>
-  <script src="../i18n-loader.a2f1451692.js" defer integrity="sha384-LoZWBMYGWr8o3JefxKWAVdNN3Hp4FLPOBAl247DtfxBkChg5zIcCJggNH01QzOCh" crossorigin="anonymous"></script>
+  <script src="../i18n-loader.ee49db2a57.js" defer integrity="sha384-q/AMERCpwO52FWIuoo7y9RxCSLSUkKkL373+I5xTz82ZtFrqFkK9EBa0yPgUJZhc" crossorigin="anonymous"></script>
   <script src="../team-notify.73d70ab047.js" defer integrity="sha384-kQUIeDWtAKHyIrSPoncROrE3SSvzakx5e3Ll8GT1Zjgqqr7nAyhVHZ7qyXYC+wVU" crossorigin="anonymous"></script>
   <script src="../demo-modal.8ccdc347ea.js" defer></script>
 

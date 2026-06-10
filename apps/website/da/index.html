@@ -104,8 +104,8 @@
   <meta name="twitter:image:alt" content="Keeply — Tidsmaskinen til dine filer" />
 
   <!-- Tailwind CSS (compiled) -->
-  <link rel="preload" href="../style.css" as="style" integrity="sha384-s94BQDTeXS4ICZFgNIMHOJfCAlXJbebXmKkamGiGKOMUWX2HGg7R6ErFGI5XPuj7" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../style.css" integrity="sha384-s94BQDTeXS4ICZFgNIMHOJfCAlXJbebXmKkamGiGKOMUWX2HGg7R6ErFGI5XPuj7" crossorigin="anonymous" />
+  <link rel="preload" href="../style.css" as="style" integrity="sha384-d7GV0OjQujAXoinqaNqPRxBSfvGHMyv7jspmsBPuah1vCqOOF6YEuFkO/rENao3I" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../style.css" integrity="sha384-d7GV0OjQujAXoinqaNqPRxBSfvGHMyv7jspmsBPuah1vCqOOF6YEuFkO/rENao3I" crossorigin="anonymous" />
 
   <!-- M PLUS Rounded 1c font preload (eliminates CLS from late font discovery) -->
   <link rel="preload" href="../fonts/MPLUSRounded1c-Regular-v2.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
@@ -225,7 +225,7 @@
             "name": "Virker Keeply offline?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Ja. Keeply er fuldt lokal software — ingen sky, ingen konto, ingen netværksafhængighed. Dine projektfiler, versionshistorik og noter bliver alle på din harddisk eller NAS. Du kan bruge Keeply i flytilstand, i en kælder eller på en helt netværksisoleret maskine. Det eneste tidspunkt, hvor Keeply rører netværket, er, når du tjekker efter App-opdateringer, og det kan du slå fra."
+              "text": "Ja. Keeplys versionsstyring kører helt lokalt — ingen sky, ingen konto. Dine projektfiler, din versionshistorik og dine noter bliver alle på din harddisk eller NAS, og du kan arbejde i flytilstand eller på en helt netværksisoleret maskine. Som standard rører appen kun netværket ved licensverificering og opdateringstjek (som du kan slå fra). Den eneste undtagelse er den valgfri AI-assistent (slået fra som standard): hvis du aktiverer den og vælger filer, sendes det indhold fra din maskine direkte til den AI-udbyder, du vælger — eller brug en lokal model og forbliv helt offline."
             }
           },
           {
@@ -274,6 +274,38 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "En engangsbetaling for en evig licens, begrænset til de første 500 købere. Du får Keeplys nuværende funktioner for altid, plus alle Team plan-funktioner automatisk, når Team plan lanceres. Ingen tilbagevendende fakturering, ingen overraskelsesprisstigninger. Til sammenligning: $25/month i 24 måneder bliver $600 — Founding Member betaler sig selv tilbage på under to år og fortsætter derefter."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hvorfor kan jeg ikke bruge mit ChatGPT Plus- / Claude Pro-abonnement med AI-assistenten?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Vilkårene for forbrugerabonnementer forbyder tredjepartsapps at automatisere disse konti, og brugere er blevet suspenderet uden varsel eller refusion for at gøre det. Officielle API-nøgler er den sikre måde at gøre det på — de er designet til præcis dette, og du betaler kun for det, du faktisk bruger."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Er min AI-API-nøgle sikker i Keeply?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Din nøgle gemmes kun i operativsystemets sikre nøgleboks på din computer (Windows Credential Manager / macOS Keychain). Keeply uploader, beholder eller ser den aldrig — anmodninger sendes fra din maskine direkte til den udbyder, du har valgt."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hvad koster det at bruge AI-assistenten?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Du betaler din AI-udbyder direkte efter faktisk forbrug — at behandle et dokument koster typisk kun nogle få cent (USD). Keeply håndterer aldrig pengene og lægger ikke noget oveni; din præcise regning findes hos din AI-udbyder. Med en lokal model er der slet ingen API-gebyrer."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kan jeg bruge AI-assistenten helt offline?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja — i lokal tilstand fungerer Keeply med modeller, der kører på din egen maskine (for eksempel Gemma eller Llama via Ollama). Dine filer forlader aldrig din computer, og der er ingen API-gebyrer."
             }
           }
         ]
@@ -461,7 +493,7 @@
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900" data-i18n-html="index.usecases.title">Hvem bruger Keeply, og hvilke job er det bygget til?</h2>
-        <p class="mt-4 text-gray-500 text-lg max-w-2xl mx-auto" data-i18n="index.usecases.answer">Projektledere, designere, jurister, akademikere, ingeniører og fjernhold — alle, hvis arbejde kræver langvarig versionshistorik, beslutningskontekst eller flugt fra &quot;final_v3&quot;-filnavnkaos. Filerne bliver på din disk under din kontrol, aldrig på en leverandørserver.</p>
+        <p class="mt-4 text-gray-500 text-lg max-w-2xl mx-auto" data-i18n="index.usecases.answer">Projektledere, designere, jurister, akademikere, ingeniører og fjernhold — alle, hvis arbejde kræver langvarig versionshistorik, beslutningskontekst eller flugt fra &quot;final_v3&quot;-filnavnkaos. Filerne bliver på din disk under din kontrol — intet sendes nogen steder hen, medmindre du udtrykkeligt vælger at sende det.</p>
       </div>
 
       <div class="grid md:grid-cols-2 gap-6">
@@ -698,7 +730,7 @@
           <p class="text-sm font-bold text-brand-600 mb-1" data-i18n="index.teamvault.tagline">Ét boks. Ét team. Fuld kontrol.</p>
           <h3 class="text-lg font-bold text-gray-900 mb-3" data-i18n="index.teamvault.title">Hvad er en &quot;Teamboks&quot;?</h3>
           <p class="text-sm text-gray-600 leading-relaxed mb-3" data-i18n="index.teamvault.desc">Team Vault bruger en &quot;1 Canonical + 1 Shared Mirror&quot;-topologi: Canonical er sandhedskilden for projektversioner (NAS, delt mappe eller ekstern disk); Shared Mirror er et fuldt øjebliksbillede synkroniseret fra Canonical, så ethvert teammedlem hurtigt kan hente den nyeste version. Hvert medlem har også sin egen arbejdskopi. Dataformatet kan være standardtilstand (gennemse og redigere filer direkte) eller beskyttet tilstand (forhindrer destruktive historikændringer).</p>
-          <p class="text-sm text-brand-600 font-medium mb-3" data-i18n="index.teamvault.highlight">Ingen cloud-afhængighed. Ingen omkostninger per bruger. Dine data forbliver på dit eget hardware.</p>
+          <p class="text-sm text-brand-600 font-medium mb-3" data-i18n="index.teamvault.highlight">Ingen cloud-afhængighed. Ingen omkostninger per bruger. Dine data ligger på dit eget hardware, under din kontrol.</p>
           <div class="grid md:grid-cols-2 gap-3 mt-3">
             <div class="bg-white rounded-lg px-4 py-3 border border-gray-100">
               <p class="text-xs font-bold text-gray-500 mb-1">Free</p>
@@ -839,7 +871,7 @@
             <span data-i18n="index.faq.1.q">Virker Keeply offline?</span>
             <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
           </summary>
-          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.1.a">Ja. Keeply er fuldt lokal software — ingen sky, ingen konto, ingen netværksafhængighed. Dine projektfiler, versionshistorik og noter bliver alle på din harddisk eller NAS. Du kan bruge Keeply i flytilstand, i en kælder eller på en helt netværksisoleret maskine. Det eneste tidspunkt, hvor Keeply rører netværket, er, når du tjekker efter App-opdateringer, og det kan du slå fra.</div>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.1.a">Ja. Keeplys versionsstyring kører helt lokalt — ingen sky, ingen konto. Dine projektfiler, din versionshistorik og dine noter bliver alle på din harddisk eller NAS, og du kan arbejde i flytilstand eller på en helt netværksisoleret maskine. Som standard rører appen kun netværket ved licensverificering og opdateringstjek (som du kan slå fra). Den eneste undtagelse er den valgfri AI-assistent (slået fra som standard): hvis du aktiverer den og vælger filer, sendes det indhold fra din maskine direkte til den AI-udbyder, du vælger — eller brug en lokal model og forbliv helt offline.</div>
         </details>
         <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
           <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
@@ -883,6 +915,34 @@
           </summary>
           <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.7.a">En engangsbetaling for en evig licens, begrænset til de første 500 købere. Du får Keeplys nuværende funktioner for altid, plus alle Team plan-funktioner automatisk, når Team plan lanceres. Ingen tilbagevendende fakturering, ingen overraskelsesprisstigninger. Til sammenligning: $25/month i 24 måneder bliver $600 — Founding Member betaler sig selv tilbage på under to år og fortsætter derefter.</div>
         </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.8.q">Hvorfor kan jeg ikke bruge mit ChatGPT Plus- / Claude Pro-abonnement med AI-assistenten?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.8.a">Vilkårene for forbrugerabonnementer forbyder tredjepartsapps at automatisere disse konti, og brugere er blevet suspenderet uden varsel eller refusion for at gøre det. Officielle API-nøgler er den sikre måde at gøre det på — de er designet til præcis dette, og du betaler kun for det, du faktisk bruger.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.9.q">Er min AI-API-nøgle sikker i Keeply?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.9.a">Din nøgle gemmes kun i operativsystemets sikre nøgleboks på din computer (Windows Credential Manager / macOS Keychain). Keeply uploader, beholder eller ser den aldrig — anmodninger sendes fra din maskine direkte til den udbyder, du har valgt.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.10.q">Hvad koster det at bruge AI-assistenten?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.10.a">Du betaler din AI-udbyder direkte efter faktisk forbrug — at behandle et dokument koster typisk kun nogle få cent (USD). Keeply håndterer aldrig pengene og lægger ikke noget oveni; din præcise regning findes hos din AI-udbyder. Med en lokal model er der slet ingen API-gebyrer.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.11.q">Kan jeg bruge AI-assistenten helt offline?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.11.a">Ja — i lokal tilstand fungerer Keeply med modeller, der kører på din egen maskine (for eksempel Gemma eller Llama via Ollama). Dine filer forlader aldrig din computer, og der er ingen API-gebyrer.</div>
+        </details>
       </div>
     </div>
   </section>
@@ -907,7 +967,7 @@
   <script src="../cookie-banner.8a90f5095a.js" defer integrity="sha384-FkrIUHI4EiKuF7c0lI0I+k/SpAC6SN6GAiU3tqGZBNs1nvMH4R/g+hpuVB/UGk63" crossorigin="anonymous"></script>
   <script src="../ga4-loader.359df0e8a7.js" defer integrity="sha384-gyx7he9QurH3GoSkfkbiWJCVC2RYlzVMBwyolFNVDEjLCjX1oUw1XG+WLOEBLSQJ" crossorigin="anonymous"></script>
   <script src="../clarity-loader.60a9a5160f.js" defer integrity="sha384-rdROtDi/pws+RrJtXaeyRY20mP1RJMaVL3DuCPi4UU7tkWHea6vyx01XW/4tbkL/" crossorigin="anonymous"></script>
-  <script src="../i18n-loader.a2f1451692.js" defer integrity="sha384-LoZWBMYGWr8o3JefxKWAVdNN3Hp4FLPOBAl247DtfxBkChg5zIcCJggNH01QzOCh" crossorigin="anonymous"></script>
+  <script src="../i18n-loader.ee49db2a57.js" defer integrity="sha384-q/AMERCpwO52FWIuoo7y9RxCSLSUkKkL373+I5xTz82ZtFrqFkK9EBa0yPgUJZhc" crossorigin="anonymous"></script>
   <script src="../team-notify.73d70ab047.js" defer integrity="sha384-kQUIeDWtAKHyIrSPoncROrE3SSvzakx5e3Ll8GT1Zjgqqr7nAyhVHZ7qyXYC+wVU" crossorigin="anonymous"></script>
   <script src="../demo-modal.8ccdc347ea.js" defer></script>
 

@@ -104,8 +104,8 @@
   <meta name="twitter:image:alt" content="Keeply — ファイルのタイムマシン。ワンクリックで旧版を復元" />
 
   <!-- Tailwind CSS (compiled) -->
-  <link rel="preload" href="../style.css" as="style" integrity="sha384-s94BQDTeXS4ICZFgNIMHOJfCAlXJbebXmKkamGiGKOMUWX2HGg7R6ErFGI5XPuj7" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../style.css" integrity="sha384-s94BQDTeXS4ICZFgNIMHOJfCAlXJbebXmKkamGiGKOMUWX2HGg7R6ErFGI5XPuj7" crossorigin="anonymous" />
+  <link rel="preload" href="../style.css" as="style" integrity="sha384-d7GV0OjQujAXoinqaNqPRxBSfvGHMyv7jspmsBPuah1vCqOOF6YEuFkO/rENao3I" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../style.css" integrity="sha384-d7GV0OjQujAXoinqaNqPRxBSfvGHMyv7jspmsBPuah1vCqOOF6YEuFkO/rENao3I" crossorigin="anonymous" />
 
   <!-- M PLUS Rounded 1c font preload (eliminates CLS from late font discovery) -->
   <link rel="preload" href="../fonts/MPLUSRounded1c-Regular-v2.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
@@ -225,7 +225,7 @@
             "name": "Keeply はオフラインで使えますか？",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "使えます。Keeply は完全ローカルのソフトウェアです——クラウドもアカウントも不要、ネットワーク依存もありません。プロジェクトファイル、バージョン履歴、メモはすべてハードディスクや NAS に残ります。機内モードでも、地下室でも、完全にネットから切り離されたマシンでも Keeply は使えます。ネットに接続するのは App のアップデート確認のときだけで、それも無効化できます。"
+              "text": "使えます。Keeply のバージョン管理は完全にローカルで動作します——クラウドもアカウントも不要です。プロジェクトファイル、バージョン履歴、メモはすべてハードディスクや NAS に残り、機内モードでも、ネットから完全に切り離されたマシンでも使えます。初期設定でネットに接続するのは、ライセンス認証とアップデート確認（無効化できます）のときだけです。唯一の例外はオプションの AI アシスタント（初期設定ではオフ）です。これを有効にしてファイルを選択した場合、その内容はあなたのコンピュータから、あなたが選んだ AI サービス提供元へ直接送信されます——あるいはローカルモデルを使えば、完全オフラインのまま使えます。"
             }
           },
           {
@@ -274,6 +274,38 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "永久ライセンスの一括払いで、先着 500 名限定です。Keeply の現行機能を永久に使えるうえに、Team プランがリリースされたら自動ですべての Team プラン機能も手に入ります。継続課金もなく、将来の値上げに驚かされることもありません。比較すると、月額 $25 × 24 か月 = $600——Founding Member は 2 年経たずに元が取れて、その後もずっと使えます。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "なぜ ChatGPT Plus や Claude Pro のサブスクリプションを AI アシスタントに使えないのですか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "各サービスの利用規約は、消費者向けサブスクリプションアカウントをサードパーティ製アプリで自動利用することを禁じており、実際にこれが原因で予告なくアカウントを停止され、返金もされなかったユーザーがいます。公式の API キーを使うのが安全な方法です——API キーはまさにこの用途のために設計されており、実際に使った分だけの課金になります。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "AI の API キーを Keeply に保存しても安全ですか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "あなたのキーは、コンピュータのシステム資格情報保管庫（Windows 資格情報マネージャー／macOS キーチェーン）にのみ保存されます。Keeply がキーをアップロードしたり、保持したり、見たりすることはありません——リクエストはあなたのコンピュータから、あなたが選んだ提供元へ直接送信されます。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "AI アシスタントの利用にはどのくらい費用がかかりますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "料金は AI サービス提供元へ直接、実際の使用量に応じて支払います——文書 1 件の処理にかかるのは通常、数セント（米ドル）程度です。Keeply が金銭を扱うことも、上乗せすることもありません。正確な請求額は、ご利用の提供元の管理画面で確認できます。ローカルモデルを使う場合、API 費用は一切かかりません。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "AI アシスタントは完全オフラインで使えますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "使えます——ローカルモードでは、Keeply はあなたのコンピュータ上で動作するモデル（例えば Ollama 経由の Gemma や Llama）と連携します。ファイルがコンピュータの外に出ることはなく、API 費用も一切かかりません。"
             }
           }
         ]
@@ -698,7 +730,7 @@
           <p class="text-sm font-bold text-brand-600 mb-1" data-i18n="index.teamvault.tagline">1 つのボールト。1 つのチーム。完全なコントロール。</p>
           <h3 class="text-lg font-bold text-gray-900 mb-3" data-i18n="index.teamvault.title">「チームボールト」とは？</h3>
           <p class="text-sm text-gray-600 leading-relaxed mb-3" data-i18n="index.teamvault.desc">チームボールトは「1 つの Canonical + 1 つの Shared Mirror」のトポロジを採用しています。Canonical はプロジェクトバージョンの正本（NAS、共有フォルダ、または外付けドライブのいずれか一つ）；Shared Mirror は Canonical から同期されたフルスナップショットで、チームメンバーが最新版をすばやく取得できます。各メンバーは自分のワークコピーも保持します。データ形式は、標準モード（ファイルを直接閲覧・編集）または保護モード（破壊的な履歴変更を防止）から選択できます。</p>
-          <p class="text-sm text-brand-600 font-medium mb-3" data-i18n="index.teamvault.highlight">クラウドに縛られない。ユーザーごとの課金なし。データは自分のハードウェアに残ります。</p>
+          <p class="text-sm text-brand-600 font-medium mb-3" data-i18n="index.teamvault.highlight">クラウドに縛られない。ユーザーごとの課金なし。データは自分のハードウェアに置かれ、あなたが管理します。</p>
           <div class="grid md:grid-cols-2 gap-3 mt-3">
             <div class="bg-white rounded-lg px-4 py-3 border border-gray-100">
               <p class="text-xs font-bold text-gray-500 mb-1">Free</p>
@@ -839,7 +871,7 @@
             <span data-i18n="index.faq.1.q">Keeply はオフラインで使えますか？</span>
             <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
           </summary>
-          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.1.a">使えます。Keeply は完全ローカルのソフトウェアです——クラウドもアカウントも不要、ネットワーク依存もありません。プロジェクトファイル、バージョン履歴、メモはすべてハードディスクや NAS に残ります。機内モードでも、地下室でも、完全にネットから切り離されたマシンでも Keeply は使えます。ネットに接続するのは App のアップデート確認のときだけで、それも無効化できます。</div>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.1.a">使えます。Keeply のバージョン管理は完全にローカルで動作します——クラウドもアカウントも不要です。プロジェクトファイル、バージョン履歴、メモはすべてハードディスクや NAS に残り、機内モードでも、ネットから完全に切り離されたマシンでも使えます。初期設定でネットに接続するのは、ライセンス認証とアップデート確認（無効化できます）のときだけです。唯一の例外はオプションの AI アシスタント（初期設定ではオフ）です。これを有効にしてファイルを選択した場合、その内容はあなたのコンピュータから、あなたが選んだ AI サービス提供元へ直接送信されます——あるいはローカルモデルを使えば、完全オフラインのまま使えます。</div>
         </details>
         <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
           <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
@@ -883,6 +915,34 @@
           </summary>
           <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.7.a">永久ライセンスの一括払いで、先着 500 名限定です。Keeply の現行機能を永久に使えるうえに、Team プランがリリースされたら自動ですべての Team プラン機能も手に入ります。継続課金もなく、将来の値上げに驚かされることもありません。比較すると、月額 $25 × 24 か月 = $600——Founding Member は 2 年経たずに元が取れて、その後もずっと使えます。</div>
         </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.8.q">なぜ ChatGPT Plus や Claude Pro のサブスクリプションを AI アシスタントに使えないのですか？</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.8.a">各サービスの利用規約は、消費者向けサブスクリプションアカウントをサードパーティ製アプリで自動利用することを禁じており、実際にこれが原因で予告なくアカウントを停止され、返金もされなかったユーザーがいます。公式の API キーを使うのが安全な方法です——API キーはまさにこの用途のために設計されており、実際に使った分だけの課金になります。</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.9.q">AI の API キーを Keeply に保存しても安全ですか？</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.9.a">あなたのキーは、コンピュータのシステム資格情報保管庫（Windows 資格情報マネージャー／macOS キーチェーン）にのみ保存されます。Keeply がキーをアップロードしたり、保持したり、見たりすることはありません——リクエストはあなたのコンピュータから、あなたが選んだ提供元へ直接送信されます。</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.10.q">AI アシスタントの利用にはどのくらい費用がかかりますか？</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.10.a">料金は AI サービス提供元へ直接、実際の使用量に応じて支払います——文書 1 件の処理にかかるのは通常、数セント（米ドル）程度です。Keeply が金銭を扱うことも、上乗せすることもありません。正確な請求額は、ご利用の提供元の管理画面で確認できます。ローカルモデルを使う場合、API 費用は一切かかりません。</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.11.q">AI アシスタントは完全オフラインで使えますか？</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.11.a">使えます——ローカルモードでは、Keeply はあなたのコンピュータ上で動作するモデル（例えば Ollama 経由の Gemma や Llama）と連携します。ファイルがコンピュータの外に出ることはなく、API 費用も一切かかりません。</div>
+        </details>
       </div>
     </div>
   </section>
@@ -907,7 +967,7 @@
   <script src="../cookie-banner.8a90f5095a.js" defer integrity="sha384-FkrIUHI4EiKuF7c0lI0I+k/SpAC6SN6GAiU3tqGZBNs1nvMH4R/g+hpuVB/UGk63" crossorigin="anonymous"></script>
   <script src="../ga4-loader.359df0e8a7.js" defer integrity="sha384-gyx7he9QurH3GoSkfkbiWJCVC2RYlzVMBwyolFNVDEjLCjX1oUw1XG+WLOEBLSQJ" crossorigin="anonymous"></script>
   <script src="../clarity-loader.60a9a5160f.js" defer integrity="sha384-rdROtDi/pws+RrJtXaeyRY20mP1RJMaVL3DuCPi4UU7tkWHea6vyx01XW/4tbkL/" crossorigin="anonymous"></script>
-  <script src="../i18n-loader.a2f1451692.js" defer integrity="sha384-LoZWBMYGWr8o3JefxKWAVdNN3Hp4FLPOBAl247DtfxBkChg5zIcCJggNH01QzOCh" crossorigin="anonymous"></script>
+  <script src="../i18n-loader.ee49db2a57.js" defer integrity="sha384-q/AMERCpwO52FWIuoo7y9RxCSLSUkKkL373+I5xTz82ZtFrqFkK9EBa0yPgUJZhc" crossorigin="anonymous"></script>
   <script src="../team-notify.73d70ab047.js" defer integrity="sha384-kQUIeDWtAKHyIrSPoncROrE3SSvzakx5e3Ll8GT1Zjgqqr7nAyhVHZ7qyXYC+wVU" crossorigin="anonymous"></script>
   <script src="../demo-modal.8ccdc347ea.js" defer></script>
 

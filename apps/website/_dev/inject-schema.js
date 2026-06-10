@@ -226,7 +226,7 @@ function buildHowToNode({ canonicalUrl, locale, translations }) {
 // Spec 029: homepage FAQ — 7 Q&A keys read from i18n, with English fallback
 // when a locale lacks native translations (build.js applies the same fallback
 // in rendered HTML, so JSON-LD matches on-page content).
-const FAQ_COUNT = 7;
+const FAQ_COUNT = 11;
 
 function buildFaqPageNode({ canonicalUrl, htmlLang, locale, translations }) {
   const mainEntity = [];

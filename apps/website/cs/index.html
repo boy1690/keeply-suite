@@ -104,8 +104,8 @@
   <meta name="twitter:image:alt" content="Keeply — Stroj času pro vaše soubory" />
 
   <!-- Tailwind CSS (compiled) -->
-  <link rel="preload" href="../style.css" as="style" integrity="sha384-s94BQDTeXS4ICZFgNIMHOJfCAlXJbebXmKkamGiGKOMUWX2HGg7R6ErFGI5XPuj7" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../style.css" integrity="sha384-s94BQDTeXS4ICZFgNIMHOJfCAlXJbebXmKkamGiGKOMUWX2HGg7R6ErFGI5XPuj7" crossorigin="anonymous" />
+  <link rel="preload" href="../style.css" as="style" integrity="sha384-d7GV0OjQujAXoinqaNqPRxBSfvGHMyv7jspmsBPuah1vCqOOF6YEuFkO/rENao3I" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../style.css" integrity="sha384-d7GV0OjQujAXoinqaNqPRxBSfvGHMyv7jspmsBPuah1vCqOOF6YEuFkO/rENao3I" crossorigin="anonymous" />
 
   <!-- M PLUS Rounded 1c font preload (eliminates CLS from late font discovery) -->
   <link rel="preload" href="../fonts/MPLUSRounded1c-Regular-v2.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
@@ -225,7 +225,7 @@
             "name": "Funguje Keeply offline?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Ano. Keeply je plně lokální software — žádný cloud, žádný účet, žádná závislost na síti. Tvoje soubory projektů, historie verzí i poznámky zůstávají na tvém pevném disku nebo NAS. Keeply můžeš používat v režimu letadlo, ve sklepě nebo na počítači úplně odpojeném od sítě. Jediná chvíle, kdy se Keeply připojí k síti, je kontrola aktualizací App — a tu si můžeš vypnout."
+              "text": "Ano. Správa verzí v Keeply běží plně lokálně — žádný cloud, žádný účet. Tvoje soubory projektů, historie verzí i poznámky zůstávají na tvém pevném disku nebo NAS a pracovat můžeš v režimu letadlo i na počítači úplně odpojeném od sítě. Ve výchozím nastavení se aplikace připojuje k síti jen kvůli ověření licence a kontrole aktualizací (tu si můžeš vypnout). Jedinou výjimkou je volitelný AI asistent (ve výchozím nastavení vypnutý): pokud ho zapneš a vybereš soubory, putuje jejich obsah z tvého počítače přímo k poskytovateli AI, kterého si zvolíš — nebo použij lokální model a zůstaň úplně offline."
             }
           },
           {
@@ -274,6 +274,38 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Jednorázová platba za doživotní licenci, omezená na prvních 500 kupujících. Dostaneš současné funkce Keeply navždy a všechny funkce Team plan automaticky, jakmile Team plan vyjde. Žádné opakované platby, žádné překvapivé zdražování. Pro srovnání: $25/month po 24 měsíců dělá $600 — Founding Member se zaplatí za necelé dva roky a běží dál."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Proč nemůžu s AI asistentem použít své předplatné ChatGPT Plus / Claude Pro?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Podmínky spotřebitelských předplatných zakazují, aby tyto účty automatizovaně používaly aplikace třetích stran — a uživatelům za to už byly účty bez varování a bez vrácení peněz pozastaveny. Bezpečná cesta je oficiální API klíč: je přesně k tomuhle určený a platíš jen za to, co skutečně využiješ."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Je můj AI API klíč v Keeply v bezpečí?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tvůj klíč je uložen pouze v systémovém zabezpečeném úložišti pověření tvého počítače (Správce pověření ve Windows / Klíčenka v macOS). Keeply ho nikdy nenahrává, neuchovává a ani ho nevidí — požadavky jdou z tvého počítače přímo k poskytovateli, kterého sis zvolil."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kolik stojí používání AI asistenta?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Platíš přímo svému poskytovateli AI podle skutečné spotřeby — zpracování jednoho dokumentu obvykle stojí jen pár centů (USD). Keeply s penězi nepřichází do styku a neúčtuje žádnou přirážku; přesné vyúčtování najdeš v administraci svého poskytovatele. S lokálním modelem nejsou žádné poplatky za API."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Můžu AI asistenta používat úplně offline?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ano — v lokálním režimu Keeply funguje s modely běžícími na tvém vlastním počítači (například Gemma nebo Llama přes Ollama). Tvoje soubory nikdy neopustí tvůj počítač a neplatíš žádné poplatky za API."
             }
           }
         ]
@@ -461,7 +493,7 @@
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900" data-i18n-html="index.usecases.title">Kdo používá Keeply a pro jakou práci je určen?</h2>
-        <p class="mt-4 text-gray-500 text-lg max-w-2xl mx-auto" data-i18n="index.usecases.answer">Projektoví manažeři, designéři, právníci, akademici, inženýři a vzdálené týmy — kdokoliv, jehož práce vyžaduje dlouhodobou historii verzí, kontext rozhodnutí nebo únik z chaosu názvů „final_v3&quot;. Soubory zůstávají na vašem disku, pod vaší kontrolou, nikdy na serveru poskytovatele.</p>
+        <p class="mt-4 text-gray-500 text-lg max-w-2xl mx-auto" data-i18n="index.usecases.answer">Projektoví manažeři, designéři, právníci, akademici, inženýři a vzdálené týmy — kdokoliv, jehož práce vyžaduje dlouhodobou historii verzí, kontext rozhodnutí nebo únik z chaosu názvů „final_v3“. Soubory zůstávají na vašem disku, pod vaší kontrolou — nic se nikam neodesílá, pokud se sami výslovně nerozhodnete to odeslat.</p>
       </div>
 
       <div class="grid md:grid-cols-2 gap-6">
@@ -698,7 +730,7 @@
           <p class="text-sm font-bold text-brand-600 mb-1" data-i18n="index.teamvault.tagline">Jeden trezor. Jeden tým. Plná kontrola.</p>
           <h3 class="text-lg font-bold text-gray-900 mb-3" data-i18n="index.teamvault.title">Co je &quot;Týmový trezor&quot;?</h3>
           <p class="text-sm text-gray-600 leading-relaxed mb-3" data-i18n="index.teamvault.desc">Team Vault používá topologii „1 Canonical + 1 Shared Mirror&quot;: Canonical je zdrojem pravdy pro verze projektu (NAS, sdílená složka nebo externí disk); Shared Mirror je úplný snímek synchronizovaný z Canonical, takže každý člen týmu může rychle získat nejnovější verzi. Každý člen má také vlastní pracovní kopii. Formát dat může být ve Standardním režimu (procházení a úprava souborů přímo) nebo v Chráněném režimu (zabraňuje destruktivním změnám historie).</p>
-          <p class="text-sm text-brand-600 font-medium mb-3" data-i18n="index.teamvault.highlight">Žádná závislost na cloudu. Žádné poplatky za uživatele. Vaše data zůstávají na vašem vlastním hardwaru.</p>
+          <p class="text-sm text-brand-600 font-medium mb-3" data-i18n="index.teamvault.highlight">Žádná závislost na cloudu. Žádné poplatky za uživatele. Vaše data zůstávají na vašem vlastním hardwaru, pod vaší kontrolou.</p>
           <div class="grid md:grid-cols-2 gap-3 mt-3">
             <div class="bg-white rounded-lg px-4 py-3 border border-gray-100">
               <p class="text-xs font-bold text-gray-500 mb-1">Free</p>
@@ -839,7 +871,7 @@
             <span data-i18n="index.faq.1.q">Funguje Keeply offline?</span>
             <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
           </summary>
-          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.1.a">Ano. Keeply je plně lokální software — žádný cloud, žádný účet, žádná závislost na síti. Tvoje soubory projektů, historie verzí i poznámky zůstávají na tvém pevném disku nebo NAS. Keeply můžeš používat v režimu letadlo, ve sklepě nebo na počítači úplně odpojeném od sítě. Jediná chvíle, kdy se Keeply připojí k síti, je kontrola aktualizací App — a tu si můžeš vypnout.</div>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.1.a">Ano. Správa verzí v Keeply běží plně lokálně — žádný cloud, žádný účet. Tvoje soubory projektů, historie verzí i poznámky zůstávají na tvém pevném disku nebo NAS a pracovat můžeš v režimu letadlo i na počítači úplně odpojeném od sítě. Ve výchozím nastavení se aplikace připojuje k síti jen kvůli ověření licence a kontrole aktualizací (tu si můžeš vypnout). Jedinou výjimkou je volitelný AI asistent (ve výchozím nastavení vypnutý): pokud ho zapneš a vybereš soubory, putuje jejich obsah z tvého počítače přímo k poskytovateli AI, kterého si zvolíš — nebo použij lokální model a zůstaň úplně offline.</div>
         </details>
         <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
           <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
@@ -883,6 +915,34 @@
           </summary>
           <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.7.a">Jednorázová platba za doživotní licenci, omezená na prvních 500 kupujících. Dostaneš současné funkce Keeply navždy a všechny funkce Team plan automaticky, jakmile Team plan vyjde. Žádné opakované platby, žádné překvapivé zdražování. Pro srovnání: $25/month po 24 měsíců dělá $600 — Founding Member se zaplatí za necelé dva roky a běží dál.</div>
         </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.8.q">Proč nemůžu s AI asistentem použít své předplatné ChatGPT Plus / Claude Pro?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.8.a">Podmínky spotřebitelských předplatných zakazují, aby tyto účty automatizovaně používaly aplikace třetích stran — a uživatelům za to už byly účty bez varování a bez vrácení peněz pozastaveny. Bezpečná cesta je oficiální API klíč: je přesně k tomuhle určený a platíš jen za to, co skutečně využiješ.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.9.q">Je můj AI API klíč v Keeply v bezpečí?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.9.a">Tvůj klíč je uložen pouze v systémovém zabezpečeném úložišti pověření tvého počítače (Správce pověření ve Windows / Klíčenka v macOS). Keeply ho nikdy nenahrává, neuchovává a ani ho nevidí — požadavky jdou z tvého počítače přímo k poskytovateli, kterého sis zvolil.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.10.q">Kolik stojí používání AI asistenta?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.10.a">Platíš přímo svému poskytovateli AI podle skutečné spotřeby — zpracování jednoho dokumentu obvykle stojí jen pár centů (USD). Keeply s penězi nepřichází do styku a neúčtuje žádnou přirážku; přesné vyúčtování najdeš v administraci svého poskytovatele. S lokálním modelem nejsou žádné poplatky za API.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.11.q">Můžu AI asistenta používat úplně offline?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.11.a">Ano — v lokálním režimu Keeply funguje s modely běžícími na tvém vlastním počítači (například Gemma nebo Llama přes Ollama). Tvoje soubory nikdy neopustí tvůj počítač a neplatíš žádné poplatky za API.</div>
+        </details>
       </div>
     </div>
   </section>
@@ -907,7 +967,7 @@
   <script src="../cookie-banner.8a90f5095a.js" defer integrity="sha384-FkrIUHI4EiKuF7c0lI0I+k/SpAC6SN6GAiU3tqGZBNs1nvMH4R/g+hpuVB/UGk63" crossorigin="anonymous"></script>
   <script src="../ga4-loader.359df0e8a7.js" defer integrity="sha384-gyx7he9QurH3GoSkfkbiWJCVC2RYlzVMBwyolFNVDEjLCjX1oUw1XG+WLOEBLSQJ" crossorigin="anonymous"></script>
   <script src="../clarity-loader.60a9a5160f.js" defer integrity="sha384-rdROtDi/pws+RrJtXaeyRY20mP1RJMaVL3DuCPi4UU7tkWHea6vyx01XW/4tbkL/" crossorigin="anonymous"></script>
-  <script src="../i18n-loader.a2f1451692.js" defer integrity="sha384-LoZWBMYGWr8o3JefxKWAVdNN3Hp4FLPOBAl247DtfxBkChg5zIcCJggNH01QzOCh" crossorigin="anonymous"></script>
+  <script src="../i18n-loader.ee49db2a57.js" defer integrity="sha384-q/AMERCpwO52FWIuoo7y9RxCSLSUkKkL373+I5xTz82ZtFrqFkK9EBa0yPgUJZhc" crossorigin="anonymous"></script>
   <script src="../team-notify.73d70ab047.js" defer integrity="sha384-kQUIeDWtAKHyIrSPoncROrE3SSvzakx5e3Ll8GT1Zjgqqr7nAyhVHZ7qyXYC+wVU" crossorigin="anonymous"></script>
   <script src="../demo-modal.8ccdc347ea.js" defer></script>
 

@@ -104,8 +104,8 @@
   <meta name="twitter:image:alt" content="Keeply — Időgép a fájljaidhoz" />
 
   <!-- Tailwind CSS (compiled) -->
-  <link rel="preload" href="../style.css" as="style" integrity="sha384-s94BQDTeXS4ICZFgNIMHOJfCAlXJbebXmKkamGiGKOMUWX2HGg7R6ErFGI5XPuj7" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../style.css" integrity="sha384-s94BQDTeXS4ICZFgNIMHOJfCAlXJbebXmKkamGiGKOMUWX2HGg7R6ErFGI5XPuj7" crossorigin="anonymous" />
+  <link rel="preload" href="../style.css" as="style" integrity="sha384-d7GV0OjQujAXoinqaNqPRxBSfvGHMyv7jspmsBPuah1vCqOOF6YEuFkO/rENao3I" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../style.css" integrity="sha384-d7GV0OjQujAXoinqaNqPRxBSfvGHMyv7jspmsBPuah1vCqOOF6YEuFkO/rENao3I" crossorigin="anonymous" />
 
   <!-- M PLUS Rounded 1c font preload (eliminates CLS from late font discovery) -->
   <link rel="preload" href="../fonts/MPLUSRounded1c-Regular-v2.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
@@ -225,7 +225,7 @@
             "name": "Működik a Keeply offline?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Igen. A Keeply teljesen helyi szoftver — nincs felhő, nincs fiók, nincs hálózati függőség. A projektfájljaid, verziótörténeted és jegyzeteid mind a merevlemezeden vagy NAS-on maradnak. Használhatod a Keeply-t repülő üzemmódban, pincében vagy hálózatról teljesen leválasztott gépen. Az egyetlen alkalom, amikor a Keeply hálózathoz nyúl, az App-frissítések ellenőrzése — és ezt is kikapcsolhatod."
+              "text": "Igen. A Keeply verziókezelése teljes egészében helyben fut — nincs felhő, nincs fiók. A projektfájljaid, a verziótörténeted és a jegyzeteid mind a merevlemezeden vagy a NAS-odon maradnak, és dolgozhatsz repülő üzemmódban vagy a hálózatról teljesen leválasztott gépen is. Alapértelmezés szerint az alkalmazás csak licencellenőrzéskor és a frissítések keresésekor nyúl a hálózathoz (ez utóbbi kikapcsolható). Az egyetlen kivétel az opcionális AI-asszisztens (alapértelmezés szerint kikapcsolva): ha bekapcsolod és fájlokat választasz ki, az a tartalom a gépedről közvetlenül az általad választott AI-szolgáltatóhoz kerül — vagy használj helyi modellt, és maradj teljesen offline."
             }
           },
           {
@@ -274,6 +274,38 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Egyszeri fizetés örökös licencért, az első 500 vásárlóra korlátozva. Örökre megkapod a jelenlegi Keeply-funkciókat, plusz minden Team plan funkciót automatikusan, amint a Team plan elindul. Nincs ismétlődő számlázás, nincs meglepetésszerű árdrágulás. Összehasonlításul: $25/month 24 hónapon át $600 — a Founding Member két évnél hamarabb megtérül, és utána is megy tovább."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Miért nem használhatom a ChatGPT Plus / Claude Pro előfizetésemet az AI-asszisztenssel?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A fogyasztói előfizetések feltételei tiltják, hogy harmadik féltől származó alkalmazások automatizálják ezeket a fiókokat, és előfordult már, hogy emiatt felhasználókat figyelmeztetés és visszatérítés nélkül felfüggesztettek. A hivatalos API-kulcs a biztonságos megoldás — pontosan erre tervezték, és csak a tényleges használat után fizetsz."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Biztonságban van az AI API-kulcsom a Keeplyben?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A kulcsod kizárólag a számítógéped rendszerszintű hitelesítőadat-tárolójában van tárolva (Windows Hitelesítőadat-kezelő / macOS Kulcskarika). A Keeply soha nem tölti fel, nem őrzi meg, és nem is látja — a kérések a gépedről közvetlenül az általad választott szolgáltatóhoz mennek."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Mennyibe kerül az AI-asszisztens használata?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Közvetlenül az AI-szolgáltatódnak fizetsz, a tényleges használat alapján — egy dokumentum feldolgozása jellemzően csak néhány centbe (USD) kerül. A Keeply nem kezeli a pénzt, és nem számít fel felárat; a pontos számlád a szolgáltatód felületén található. Helyi modell esetén egyáltalán nincsenek API-díjak."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Használhatom az AI-asszisztenst teljesen offline?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Igen — helyi módban a Keeply a saját gépeden futó modellekkel működik (például Gemma vagy Llama az Ollama segítségével). A fájljaid soha nem hagyják el a számítógépedet, és API-díjak sincsenek."
             }
           }
         ]
@@ -461,7 +493,7 @@
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900" data-i18n-html="index.usecases.title">Ki használja a Keeply-t, és milyen munkákra való?</h2>
-        <p class="mt-4 text-gray-500 text-lg max-w-2xl mx-auto" data-i18n="index.usecases.answer">Projektmenedzserek, tervezők, jogászok, akadémikusok, mérnökök és távoli csapatok — bárki, akinek hosszú távú verziótörténetre, döntési kontextusra vagy a „final_v3&quot; fájlnévkáoszból való menekülésre van szüksége. A fájlok a saját lemezeden maradnak, a te irányításod alatt, soha nem egy szolgáltató szerverén.</p>
+        <p class="mt-4 text-gray-500 text-lg max-w-2xl mx-auto" data-i18n="index.usecases.answer">Projektmenedzserek, tervezők, jogászok, akadémikusok, mérnökök és távoli csapatok — bárki, akinek hosszú távú verziótörténetre, döntési kontextusra vagy a „final_v3” fájlnévkáoszból való menekülésre van szüksége. A fájlok a saját lemezeden maradnak, a te irányításod alatt — semmi nem kerül elküldésre sehová, hacsak nem döntesz kifejezetten úgy, hogy elküldöd.</p>
       </div>
 
       <div class="grid md:grid-cols-2 gap-6">
@@ -698,7 +730,7 @@
           <p class="text-sm font-bold text-brand-600 mb-1" data-i18n="index.teamvault.tagline">Egy széf. Egy csapat. Teljes kontroll.</p>
           <h3 class="text-lg font-bold text-gray-900 mb-3" data-i18n="index.teamvault.title">Mi az a &quot;Csapat Széf&quot;?</h3>
           <p class="text-sm text-gray-600 leading-relaxed mb-3" data-i18n="index.teamvault.desc">A Team Vault „1 Canonical + 1 Shared Mirror&quot; topológiát használ: a Canonical a projektverziók igazságforrása (NAS, megosztott mappa vagy külső meghajtó); a Shared Mirror egy teljes pillanatkép, amelyet a Canonical szinkronizál, így bármely csapattag gyorsan elérheti a legújabb verziót. Minden tag rendelkezik saját munkamásolattal is. Az adatformátum lehet Standard mód (fájlok közvetlen böngészése és szerkesztése) vagy Védett mód (megakadályozza a destruktív előzményváltozásokat).</p>
-          <p class="text-sm text-brand-600 font-medium mb-3" data-i18n="index.teamvault.highlight">Nincs felhőfüggőség. Nincs felhasználónkénti díj. Az adatai a saját hardverén maradnak.</p>
+          <p class="text-sm text-brand-600 font-medium mb-3" data-i18n="index.teamvault.highlight">Nincs felhőfüggőség. Nincs felhasználónkénti díj. Az adataid a saját hardvereden maradnak, a te irányításod alatt.</p>
           <div class="grid md:grid-cols-2 gap-3 mt-3">
             <div class="bg-white rounded-lg px-4 py-3 border border-gray-100">
               <p class="text-xs font-bold text-gray-500 mb-1">Free</p>
@@ -839,7 +871,7 @@
             <span data-i18n="index.faq.1.q">Működik a Keeply offline?</span>
             <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
           </summary>
-          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.1.a">Igen. A Keeply teljesen helyi szoftver — nincs felhő, nincs fiók, nincs hálózati függőség. A projektfájljaid, verziótörténeted és jegyzeteid mind a merevlemezeden vagy NAS-on maradnak. Használhatod a Keeply-t repülő üzemmódban, pincében vagy hálózatról teljesen leválasztott gépen. Az egyetlen alkalom, amikor a Keeply hálózathoz nyúl, az App-frissítések ellenőrzése — és ezt is kikapcsolhatod.</div>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.1.a">Igen. A Keeply verziókezelése teljes egészében helyben fut — nincs felhő, nincs fiók. A projektfájljaid, a verziótörténeted és a jegyzeteid mind a merevlemezeden vagy a NAS-odon maradnak, és dolgozhatsz repülő üzemmódban vagy a hálózatról teljesen leválasztott gépen is. Alapértelmezés szerint az alkalmazás csak licencellenőrzéskor és a frissítések keresésekor nyúl a hálózathoz (ez utóbbi kikapcsolható). Az egyetlen kivétel az opcionális AI-asszisztens (alapértelmezés szerint kikapcsolva): ha bekapcsolod és fájlokat választasz ki, az a tartalom a gépedről közvetlenül az általad választott AI-szolgáltatóhoz kerül — vagy használj helyi modellt, és maradj teljesen offline.</div>
         </details>
         <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
           <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
@@ -883,6 +915,34 @@
           </summary>
           <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.7.a">Egyszeri fizetés örökös licencért, az első 500 vásárlóra korlátozva. Örökre megkapod a jelenlegi Keeply-funkciókat, plusz minden Team plan funkciót automatikusan, amint a Team plan elindul. Nincs ismétlődő számlázás, nincs meglepetésszerű árdrágulás. Összehasonlításul: $25/month 24 hónapon át $600 — a Founding Member két évnél hamarabb megtérül, és utána is megy tovább.</div>
         </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.8.q">Miért nem használhatom a ChatGPT Plus / Claude Pro előfizetésemet az AI-asszisztenssel?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.8.a">A fogyasztói előfizetések feltételei tiltják, hogy harmadik féltől származó alkalmazások automatizálják ezeket a fiókokat, és előfordult már, hogy emiatt felhasználókat figyelmeztetés és visszatérítés nélkül felfüggesztettek. A hivatalos API-kulcs a biztonságos megoldás — pontosan erre tervezték, és csak a tényleges használat után fizetsz.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.9.q">Biztonságban van az AI API-kulcsom a Keeplyben?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.9.a">A kulcsod kizárólag a számítógéped rendszerszintű hitelesítőadat-tárolójában van tárolva (Windows Hitelesítőadat-kezelő / macOS Kulcskarika). A Keeply soha nem tölti fel, nem őrzi meg, és nem is látja — a kérések a gépedről közvetlenül az általad választott szolgáltatóhoz mennek.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.10.q">Mennyibe kerül az AI-asszisztens használata?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.10.a">Közvetlenül az AI-szolgáltatódnak fizetsz, a tényleges használat alapján — egy dokumentum feldolgozása jellemzően csak néhány centbe (USD) kerül. A Keeply nem kezeli a pénzt, és nem számít fel felárat; a pontos számlád a szolgáltatód felületén található. Helyi modell esetén egyáltalán nincsenek API-díjak.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.11.q">Használhatom az AI-asszisztenst teljesen offline?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.11.a">Igen — helyi módban a Keeply a saját gépeden futó modellekkel működik (például Gemma vagy Llama az Ollama segítségével). A fájljaid soha nem hagyják el a számítógépedet, és API-díjak sincsenek.</div>
+        </details>
       </div>
     </div>
   </section>
@@ -907,7 +967,7 @@
   <script src="../cookie-banner.8a90f5095a.js" defer integrity="sha384-FkrIUHI4EiKuF7c0lI0I+k/SpAC6SN6GAiU3tqGZBNs1nvMH4R/g+hpuVB/UGk63" crossorigin="anonymous"></script>
   <script src="../ga4-loader.359df0e8a7.js" defer integrity="sha384-gyx7he9QurH3GoSkfkbiWJCVC2RYlzVMBwyolFNVDEjLCjX1oUw1XG+WLOEBLSQJ" crossorigin="anonymous"></script>
   <script src="../clarity-loader.60a9a5160f.js" defer integrity="sha384-rdROtDi/pws+RrJtXaeyRY20mP1RJMaVL3DuCPi4UU7tkWHea6vyx01XW/4tbkL/" crossorigin="anonymous"></script>
-  <script src="../i18n-loader.a2f1451692.js" defer integrity="sha384-LoZWBMYGWr8o3JefxKWAVdNN3Hp4FLPOBAl247DtfxBkChg5zIcCJggNH01QzOCh" crossorigin="anonymous"></script>
+  <script src="../i18n-loader.ee49db2a57.js" defer integrity="sha384-q/AMERCpwO52FWIuoo7y9RxCSLSUkKkL373+I5xTz82ZtFrqFkK9EBa0yPgUJZhc" crossorigin="anonymous"></script>
   <script src="../team-notify.73d70ab047.js" defer integrity="sha384-kQUIeDWtAKHyIrSPoncROrE3SSvzakx5e3Ll8GT1Zjgqqr7nAyhVHZ7qyXYC+wVU" crossorigin="anonymous"></script>
   <script src="../demo-modal.8ccdc347ea.js" defer></script>
 

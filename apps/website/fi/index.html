@@ -104,8 +104,8 @@
   <meta name="twitter:image:alt" content="Keeply — Aikakone tiedostoillesi" />
 
   <!-- Tailwind CSS (compiled) -->
-  <link rel="preload" href="../style.css" as="style" integrity="sha384-s94BQDTeXS4ICZFgNIMHOJfCAlXJbebXmKkamGiGKOMUWX2HGg7R6ErFGI5XPuj7" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../style.css" integrity="sha384-s94BQDTeXS4ICZFgNIMHOJfCAlXJbebXmKkamGiGKOMUWX2HGg7R6ErFGI5XPuj7" crossorigin="anonymous" />
+  <link rel="preload" href="../style.css" as="style" integrity="sha384-d7GV0OjQujAXoinqaNqPRxBSfvGHMyv7jspmsBPuah1vCqOOF6YEuFkO/rENao3I" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../style.css" integrity="sha384-d7GV0OjQujAXoinqaNqPRxBSfvGHMyv7jspmsBPuah1vCqOOF6YEuFkO/rENao3I" crossorigin="anonymous" />
 
   <!-- M PLUS Rounded 1c font preload (eliminates CLS from late font discovery) -->
   <link rel="preload" href="../fonts/MPLUSRounded1c-Regular-v2.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
@@ -225,7 +225,7 @@
             "name": "Toimiiko Keeply offline-tilassa?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Kyllä. Keeply on täysin paikallinen ohjelmisto — ei pilveä, ei tiliä, ei verkkoriippuvuutta. Projektitiedostosi, versiohistoriasi ja muistiinpanosi pysyvät kovalevylläsi tai NAS-laitteessasi. Voit käyttää Keeplyä lentokonetilassa, kellarissa tai täysin verkosta eristetyllä koneella. Ainoa hetki, jolloin Keeply ottaa yhteyttä verkkoon, on App-päivitysten tarkistus, ja senkin voit kytkeä pois päältä."
+              "text": "Kyllä. Keeplyn versionhallinta toimii täysin paikallisesti — ei pilveä, ei tiliä. Projektitiedostosi, versiohistoriasi ja muistiinpanosi pysyvät kovalevylläsi tai NAS-laitteessasi, ja voit työskennellä lentokonetilassa tai täysin verkosta eristetyllä koneella. Oletusarvoisesti sovellus käyttää verkkoa vain lisenssin tarkistukseen ja päivitysten tarkistukseen (jotka voit kytkeä pois päältä). Ainoa poikkeus on valinnainen tekoälyavustaja (oletuksena pois päältä): jos otat sen käyttöön ja valitset tiedostoja, niiden sisältö siirtyy koneeltasi suoraan valitsemallesi tekoälypalveluntarjoajalle — tai voit käyttää paikallista mallia ja pysyä täysin offline-tilassa."
             }
           },
           {
@@ -274,6 +274,38 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Kertamaksu pysyvästä lisenssistä, rajattuna 500 ensimmäiselle ostajalle. Saat Keeplyn nykyiset ominaisuudet ikuisesti, plus kaikki Team plan -ominaisuudet automaattisesti, kun Team plan julkaistaan. Ei toistuvaa laskutusta, ei yllätyshinnankorotuksia. Vertailun vuoksi: $25/month 24 kuukauden ajalta on $600 — Founding Member maksaa itsensä takaisin alle kahdessa vuodessa ja jatkaa siitä eteenpäin."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Miksi en voi käyttää ChatGPT Plus- tai Claude Pro -tilaustani tekoälyavustajan kanssa?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Kuluttajatilausten ehdot kieltävät kolmannen osapuolen sovelluksia automatisoimasta näitä tilejä, ja käyttäjien tilejä on suljettu tämän vuoksi ilman varoitusta ja ilman hyvitystä. Viralliset API-avaimet ovat turvallinen tapa — ne on suunniteltu juuri tähän, ja maksat vain todellisesta käytöstä."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Onko tekoälypalvelun API-avaimeni turvassa Keeplyssä?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Avaimesi tallennetaan ainoastaan tietokoneesi järjestelmän suojattuun tunnistetietosäilöön (Windowsin tunnistetietojen hallinta / macOS:n avainnippu). Keeply ei koskaan lataa, säilytä tai edes näe sitä — pyynnöt kulkevat koneeltasi suoraan valitsemallesi palveluntarjoajalle."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kuinka paljon tekoälyavustajan käyttö maksaa?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Maksat tekoälypalveluntarjoajallesi suoraan, todellisen käytön mukaan — yhden dokumentin käsittely maksaa tyypillisesti muutaman sentin (USD). Keeply ei koskaan käsittele rahaa eikä lisää hintaan mitään; tarkka laskusi näkyy palveluntarjoajasi hallintapaneelissa. Paikallista mallia käytettäessä API-maksuja ei ole lainkaan."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Voinko käyttää tekoälyavustajaa täysin offline-tilassa?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Kyllä — paikallisessa tilassa Keeply toimii omalla koneellasi ajettavien mallien kanssa (esimerkiksi Gemma tai Llama Ollaman kautta). Tiedostosi eivät koskaan poistu tietokoneeltasi, eikä API-maksuja ole."
             }
           }
         ]
@@ -461,7 +493,7 @@
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900" data-i18n-html="index.usecases.title">Kuka käyttää Keeplyä, ja mihin töihin se on tarkoitettu?</h2>
-        <p class="mt-4 text-gray-500 text-lg max-w-2xl mx-auto" data-i18n="index.usecases.answer">Projektipäälliköt, suunnittelijat, juristit, tutkijat, insinöörit ja etätiimit — kuka tahansa, jonka työ vaatii pitkäaikaista versiohistoriaa, päätösten kontekstia tai pakoa &quot;final_v3&quot;-tiedostonimien kaaoksesta. Tiedostot pysyvät levylläsi, sinun hallinnassasi, eivät koskaan toimittajan palvelimella.</p>
+        <p class="mt-4 text-gray-500 text-lg max-w-2xl mx-auto" data-i18n="index.usecases.answer">Projektipäälliköt, suunnittelijat, juristit, tutkijat, insinöörit ja etätiimit — kuka tahansa, jonka työ vaatii pitkäaikaista versiohistoriaa, päätösten kontekstia tai pakoa &quot;final_v3&quot;-tiedostonimien kaaoksesta. Tiedostot pysyvät levylläsi, sinun hallinnassasi — mitään ei lähetetä minnekään, ellet itse nimenomaisesti päätä lähettää sitä.</p>
       </div>
 
       <div class="grid md:grid-cols-2 gap-6">
@@ -698,7 +730,7 @@
           <p class="text-sm font-bold text-brand-600 mb-1" data-i18n="index.teamvault.tagline">Yksi holvi. Yksi tiimi. Täysi hallinta.</p>
           <h3 class="text-lg font-bold text-gray-900 mb-3" data-i18n="index.teamvault.title">Mikä on &quot;Tiimiholvi&quot;?</h3>
           <p class="text-sm text-gray-600 leading-relaxed mb-3" data-i18n="index.teamvault.desc">Team Vault käyttää &quot;1 Canonical + 1 Shared Mirror&quot; -topologiaa: Canonical on projektin versioiden tiedon lähde (NAS, jaettu kansio tai ulkoinen asema); Shared Mirror on Canonicalista synkronoitu täysi tilannevedos, joten kuka tahansa tiimin jäsen voi nopeasti hakea uusimman version. Jokaisella jäsenellä on myös oma työkopionsa. Datamuoto voi olla Standard-tila (tiedostojen suora selaaminen ja muokkaaminen) tai Suojattu tila (estää tuhoavat historiamuutokset).</p>
-          <p class="text-sm text-brand-600 font-medium mb-3" data-i18n="index.teamvault.highlight">Ei pilvilukitusta. Ei käyttäjäkohtaisia maksuja. Tietosi pysyvät omassa laitteistossasi.</p>
+          <p class="text-sm text-brand-600 font-medium mb-3" data-i18n="index.teamvault.highlight">Ei pilvilukitusta. Ei käyttäjäkohtaisia maksuja. Tietosi pysyvät omassa laitteistossasi, sinun hallinnassasi.</p>
           <div class="grid md:grid-cols-2 gap-3 mt-3">
             <div class="bg-white rounded-lg px-4 py-3 border border-gray-100">
               <p class="text-xs font-bold text-gray-500 mb-1">Free</p>
@@ -839,7 +871,7 @@
             <span data-i18n="index.faq.1.q">Toimiiko Keeply offline-tilassa?</span>
             <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
           </summary>
-          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.1.a">Kyllä. Keeply on täysin paikallinen ohjelmisto — ei pilveä, ei tiliä, ei verkkoriippuvuutta. Projektitiedostosi, versiohistoriasi ja muistiinpanosi pysyvät kovalevylläsi tai NAS-laitteessasi. Voit käyttää Keeplyä lentokonetilassa, kellarissa tai täysin verkosta eristetyllä koneella. Ainoa hetki, jolloin Keeply ottaa yhteyttä verkkoon, on App-päivitysten tarkistus, ja senkin voit kytkeä pois päältä.</div>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.1.a">Kyllä. Keeplyn versionhallinta toimii täysin paikallisesti — ei pilveä, ei tiliä. Projektitiedostosi, versiohistoriasi ja muistiinpanosi pysyvät kovalevylläsi tai NAS-laitteessasi, ja voit työskennellä lentokonetilassa tai täysin verkosta eristetyllä koneella. Oletusarvoisesti sovellus käyttää verkkoa vain lisenssin tarkistukseen ja päivitysten tarkistukseen (jotka voit kytkeä pois päältä). Ainoa poikkeus on valinnainen tekoälyavustaja (oletuksena pois päältä): jos otat sen käyttöön ja valitset tiedostoja, niiden sisältö siirtyy koneeltasi suoraan valitsemallesi tekoälypalveluntarjoajalle — tai voit käyttää paikallista mallia ja pysyä täysin offline-tilassa.</div>
         </details>
         <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
           <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
@@ -883,6 +915,34 @@
           </summary>
           <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.7.a">Kertamaksu pysyvästä lisenssistä, rajattuna 500 ensimmäiselle ostajalle. Saat Keeplyn nykyiset ominaisuudet ikuisesti, plus kaikki Team plan -ominaisuudet automaattisesti, kun Team plan julkaistaan. Ei toistuvaa laskutusta, ei yllätyshinnankorotuksia. Vertailun vuoksi: $25/month 24 kuukauden ajalta on $600 — Founding Member maksaa itsensä takaisin alle kahdessa vuodessa ja jatkaa siitä eteenpäin.</div>
         </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.8.q">Miksi en voi käyttää ChatGPT Plus- tai Claude Pro -tilaustani tekoälyavustajan kanssa?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.8.a">Kuluttajatilausten ehdot kieltävät kolmannen osapuolen sovelluksia automatisoimasta näitä tilejä, ja käyttäjien tilejä on suljettu tämän vuoksi ilman varoitusta ja ilman hyvitystä. Viralliset API-avaimet ovat turvallinen tapa — ne on suunniteltu juuri tähän, ja maksat vain todellisesta käytöstä.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.9.q">Onko tekoälypalvelun API-avaimeni turvassa Keeplyssä?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.9.a">Avaimesi tallennetaan ainoastaan tietokoneesi järjestelmän suojattuun tunnistetietosäilöön (Windowsin tunnistetietojen hallinta / macOS:n avainnippu). Keeply ei koskaan lataa, säilytä tai edes näe sitä — pyynnöt kulkevat koneeltasi suoraan valitsemallesi palveluntarjoajalle.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.10.q">Kuinka paljon tekoälyavustajan käyttö maksaa?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.10.a">Maksat tekoälypalveluntarjoajallesi suoraan, todellisen käytön mukaan — yhden dokumentin käsittely maksaa tyypillisesti muutaman sentin (USD). Keeply ei koskaan käsittele rahaa eikä lisää hintaan mitään; tarkka laskusi näkyy palveluntarjoajasi hallintapaneelissa. Paikallista mallia käytettäessä API-maksuja ei ole lainkaan.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.11.q">Voinko käyttää tekoälyavustajaa täysin offline-tilassa?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.11.a">Kyllä — paikallisessa tilassa Keeply toimii omalla koneellasi ajettavien mallien kanssa (esimerkiksi Gemma tai Llama Ollaman kautta). Tiedostosi eivät koskaan poistu tietokoneeltasi, eikä API-maksuja ole.</div>
+        </details>
       </div>
     </div>
   </section>
@@ -907,7 +967,7 @@
   <script src="../cookie-banner.8a90f5095a.js" defer integrity="sha384-FkrIUHI4EiKuF7c0lI0I+k/SpAC6SN6GAiU3tqGZBNs1nvMH4R/g+hpuVB/UGk63" crossorigin="anonymous"></script>
   <script src="../ga4-loader.359df0e8a7.js" defer integrity="sha384-gyx7he9QurH3GoSkfkbiWJCVC2RYlzVMBwyolFNVDEjLCjX1oUw1XG+WLOEBLSQJ" crossorigin="anonymous"></script>
   <script src="../clarity-loader.60a9a5160f.js" defer integrity="sha384-rdROtDi/pws+RrJtXaeyRY20mP1RJMaVL3DuCPi4UU7tkWHea6vyx01XW/4tbkL/" crossorigin="anonymous"></script>
-  <script src="../i18n-loader.a2f1451692.js" defer integrity="sha384-LoZWBMYGWr8o3JefxKWAVdNN3Hp4FLPOBAl247DtfxBkChg5zIcCJggNH01QzOCh" crossorigin="anonymous"></script>
+  <script src="../i18n-loader.ee49db2a57.js" defer integrity="sha384-q/AMERCpwO52FWIuoo7y9RxCSLSUkKkL373+I5xTz82ZtFrqFkK9EBa0yPgUJZhc" crossorigin="anonymous"></script>
   <script src="../team-notify.73d70ab047.js" defer integrity="sha384-kQUIeDWtAKHyIrSPoncROrE3SSvzakx5e3Ll8GT1Zjgqqr7nAyhVHZ7qyXYC+wVU" crossorigin="anonymous"></script>
   <script src="../demo-modal.8ccdc347ea.js" defer></script>
 

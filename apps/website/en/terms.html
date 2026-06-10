@@ -104,8 +104,8 @@
   <meta name="twitter:image:alt" content="Terms of Service — Keeply" />
 
   <!-- Tailwind CSS (compiled) -->
-  <link rel="preload" href="../style.css" as="style" integrity="sha384-s94BQDTeXS4ICZFgNIMHOJfCAlXJbebXmKkamGiGKOMUWX2HGg7R6ErFGI5XPuj7" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../style.css" integrity="sha384-s94BQDTeXS4ICZFgNIMHOJfCAlXJbebXmKkamGiGKOMUWX2HGg7R6ErFGI5XPuj7" crossorigin="anonymous" />
+  <link rel="preload" href="../style.css" as="style" integrity="sha384-d7GV0OjQujAXoinqaNqPRxBSfvGHMyv7jspmsBPuah1vCqOOF6YEuFkO/rENao3I" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../style.css" integrity="sha384-d7GV0OjQujAXoinqaNqPRxBSfvGHMyv7jspmsBPuah1vCqOOF6YEuFkO/rENao3I" crossorigin="anonymous" />
 
   <!-- M PLUS Rounded 1c font preload (eliminates CLS from late font discovery) -->
   <link rel="preload" href="../fonts/MPLUSRounded1c-Regular-v2.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
@@ -172,7 +172,7 @@
           <span class="text-gray-600" data-i18n="terms.breadcrumb">Terms of Service</span>
         </nav>
         <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3" data-i18n="terms.title">Terms of Service</h1>
-        <p class="text-sm text-gray-400" data-i18n="terms.updated">Last updated: April 29, 2026</p>
+        <p class="text-sm text-gray-400" data-i18n="terms.updated">Last updated: June 10, 2026</p>
       </div>
 
       <div class="bg-amber-50 border border-amber-100 rounded-2xl p-6 mb-10">
@@ -200,6 +200,7 @@
           <a href="#s3-6" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="terms.toc.s3b">3.5 Vault Location Rules</a>
           <a href="#s3-7" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="terms.toc.s3c">3.6 License Scope</a>
           <a href="#s3-8" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="terms.toc.s3d">3.7 Fair Use</a>
+          <a href="#s14" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="terms.toc.s14">14. AI Assistant (Bring Your Own Key)</a>
         </div>
       </div>
 
@@ -345,7 +346,7 @@
 
         <section id="s7">
           <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="terms.s7.title">7. Data Privacy and Activity Logs</h2>
-          <p class="text-gray-600 leading-relaxed" data-i18n-html="terms.s7.p1">你對本軟體的使用亦受我們的<a href="privacy" class="text-brand-600 hover:underline">隱私權政策</a>約束。<strong>我們不存取、收集、儲存或傳輸你的專案檔案或其內容。</strong></p>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="terms.s7.p1">Your use of the Software is also governed by our <a href="privacy" class="text-brand-600 hover:underline">Privacy Policy</a>. <strong>We do not access, collect, store, or transmit your project files or their contents.</strong> The only exception is the optional AI assistant (<a href="#s14" class="text-brand-600 hover:underline">Section 14</a>): when you enable it and explicitly select content, that content is sent from your device directly to the AI provider you chose — still never through any Keeply server.</p>
         </section>
 
         <section id="s8">
@@ -363,7 +364,7 @@
           <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="terms.s10.title">10. Term &amp; Termination</h2>
           <p class="text-gray-600 leading-relaxed" data-i18n="terms.s10.p1">This Agreement takes effect from your first use of the Software and continues until terminated. You may terminate this Agreement at any time by deactivating the software license and removing all local Keeply data (including but not limited to project repositories, activity logs, shadow backups, and license files). Deactivation methods include: (a) using the &quot;Deactivate License and Remove Local Data&quot; function within the Keeply application; or (b) uninstalling Keeply from your system and manually deleting the local Keeply data directory.</p>
           <p class="text-gray-600 leading-relaxed mt-3" data-i18n="terms.s10.p2">We may revoke your license if you breach this Agreement. Upon termination, Perpetual License holders retain the right to use their version, but will no longer receive updates.</p>
-          <p class="text-gray-600 leading-relaxed mt-3" data-i18n="terms.s10.p3">Sections 5, 6, 8, 9, 11, and 12 survive termination.</p>
+          <p class="text-gray-600 leading-relaxed mt-3" data-i18n="terms.s10.p3">Sections 5, 6, 8, 9, 11, 12, and 14 survive termination.</p>
         </section>
 
         <section id="s11">
@@ -386,6 +387,29 @@
           <p class="text-gray-600 leading-relaxed" data-i18n-html="terms.s13.website">Website: <a href="https://keeply.work" class="text-brand-600 hover:underline">keeply.work</a></p>
         </section>
 
+        <section id="s14">
+          <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="terms.s14.title">14. AI Assistant (Bring Your Own Key)</h2>
+          <p class="text-gray-600 leading-relaxed" data-i18n="terms.s14.intro">Keeply includes an optional AI assistant, off by default. To use it, you must connect an AI service yourself — by entering your own API key, or by running a local model on your own machine. This section governs your use of the AI assistant; for how data flows, see “When you choose to use the AI assistant” in the Privacy Policy.</p>
+
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="terms.s14.1.title">14.1 Ownership of and Responsibility for Your AI Keys</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="terms.s14.1.body">The AI service keys you enter in Keeply are used solely to send requests to the corresponding AI provider <strong>on your own behalf</strong>. All usage and fees are settled directly between you and that provider; Keeply <strong>does not hold, host, or resell</strong> your keys.</p>
+
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="terms.s14.2.title">14.2 Lawful Source</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n="terms.s14.2.body">Enter only keys that you or your organization obtained lawfully. Do not enter keys of unknown origin, or keys that were bought, shared, or transferred from someone else; account risks arising from violating an AI provider's terms are borne by you.</p>
+
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="terms.s14.3.title">14.3 No Subscription Login</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n="terms.s14.3.body">Keeply does not support — and will not help you set up — automated access through consumer subscription accounts (such as ChatGPT Plus, Claude Pro/Max, or Gemini Advanced), to protect your account from violating those services' terms.</p>
+
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="terms.s14.4.title">14.4 AI Output and Limitation of Liability</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="terms.s14.4.body">AI-generated content (suggested edits, summaries, answers) may be incorrect, incomplete, or unsuitable for your situation. <strong>You are responsible for reviewing any AI suggestion before applying it.</strong> Keeply's built-in safeguard: every AI edit is presented as a proposal first, applied only after you confirm it, and reversible at any time with one click from version history. To the maximum extent permitted by applicable law, Keeply is not liable for losses caused by AI-generated content; any liability is subject to the limitation of liability in Section 9.</p>
+
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="terms.s14.5.title">14.5 Deletion Limits for Content Already Sent</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="terms.s14.5.body">Once content reaches the AI provider you selected, its retention and deletion are governed by that provider's terms and applicable law. Keeply keeps no server-side copy and <strong>cannot delete</strong> already-sent content on your behalf. To request deletion, contact your provider directly (the privacy pages of <a href="https://privacy.openai.com/" class="text-brand-600 hover:underline" target="_blank" rel="noopener noreferrer">OpenAI</a>, <a href="https://privacy.anthropic.com/" class="text-brand-600 hover:underline" target="_blank" rel="noopener noreferrer">Anthropic</a>, and <a href="https://policies.google.com/privacy" class="text-brand-600 hover:underline" target="_blank" rel="noopener noreferrer">Google</a> offer deletion-request entry points). In local mode, content never left your computer, so this does not arise.</p>
+
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="terms.s14.6.title">14.6 Labeling of AI Edits</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n="terms.s14.6.body">Edits produced by the AI assistant and applied by you are labeled as AI-assistant edits in Keeply's version history.</p>
+        </section>
+
       </div>
 
       <div class="mt-12 pt-8 border-t border-gray-100">
@@ -404,6 +428,6 @@
   <script src="../cookie-banner.8a90f5095a.js" defer integrity="sha384-FkrIUHI4EiKuF7c0lI0I+k/SpAC6SN6GAiU3tqGZBNs1nvMH4R/g+hpuVB/UGk63" crossorigin="anonymous"></script>
   <script src="../ga4-loader.359df0e8a7.js" defer integrity="sha384-gyx7he9QurH3GoSkfkbiWJCVC2RYlzVMBwyolFNVDEjLCjX1oUw1XG+WLOEBLSQJ" crossorigin="anonymous"></script>
   <script src="../clarity-loader.60a9a5160f.js" defer integrity="sha384-rdROtDi/pws+RrJtXaeyRY20mP1RJMaVL3DuCPi4UU7tkWHea6vyx01XW/4tbkL/" crossorigin="anonymous"></script>
-  <script src="../i18n-loader.a2f1451692.js" defer integrity="sha384-LoZWBMYGWr8o3JefxKWAVdNN3Hp4FLPOBAl247DtfxBkChg5zIcCJggNH01QzOCh" crossorigin="anonymous"></script>
+  <script src="../i18n-loader.ee49db2a57.js" defer integrity="sha384-q/AMERCpwO52FWIuoo7y9RxCSLSUkKkL373+I5xTz82ZtFrqFkK9EBa0yPgUJZhc" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -104,8 +104,8 @@
   <meta name="twitter:image:alt" content="服务条款 — Keeply" />
 
   <!-- Tailwind CSS (compiled) -->
-  <link rel="preload" href="../style.css" as="style" integrity="sha384-s94BQDTeXS4ICZFgNIMHOJfCAlXJbebXmKkamGiGKOMUWX2HGg7R6ErFGI5XPuj7" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../style.css" integrity="sha384-s94BQDTeXS4ICZFgNIMHOJfCAlXJbebXmKkamGiGKOMUWX2HGg7R6ErFGI5XPuj7" crossorigin="anonymous" />
+  <link rel="preload" href="../style.css" as="style" integrity="sha384-d7GV0OjQujAXoinqaNqPRxBSfvGHMyv7jspmsBPuah1vCqOOF6YEuFkO/rENao3I" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../style.css" integrity="sha384-d7GV0OjQujAXoinqaNqPRxBSfvGHMyv7jspmsBPuah1vCqOOF6YEuFkO/rENao3I" crossorigin="anonymous" />
 
   <!-- M PLUS Rounded 1c font preload (eliminates CLS from late font discovery) -->
   <link rel="preload" href="../fonts/MPLUSRounded1c-Regular-v2.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
@@ -172,7 +172,7 @@
           <span class="text-gray-600" data-i18n="terms.breadcrumb">服务条款</span>
         </nav>
         <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3" data-i18n="terms.title">服务条款</h1>
-        <p class="text-sm text-gray-400" data-i18n="terms.updated">Last updated: April 29, 2026</p>
+        <p class="text-sm text-gray-400" data-i18n="terms.updated">最后更新：2026 年 6 月 10 日</p>
       </div>
 
       <div class="bg-amber-50 border border-amber-100 rounded-2xl p-6 mb-10">
@@ -200,6 +200,7 @@
           <a href="#s3-6" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="terms.toc.s3b">3.5 保管库位置规则</a>
           <a href="#s3-7" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="terms.toc.s3c">3.6 License Scope</a>
           <a href="#s3-8" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="terms.toc.s3d">3.7 合理使用</a>
+          <a href="#s14" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="terms.toc.s14">14. AI 助手（自带密钥）</a>
         </div>
       </div>
 
@@ -345,7 +346,7 @@
 
         <section id="s7">
           <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="terms.s7.title">7. Data Privacy and Activity Logs</h2>
-          <p class="text-gray-600 leading-relaxed" data-i18n-html="terms.s7.p1">你對本軟體的使用亦受我們的<a href="privacy" class="text-brand-600 hover:underline">隱私權政策</a>約束。<strong>我們不存取、收集、儲存或傳輸你的專案檔案或其內容。</strong></p>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="terms.s7.p1">你对本软件的使用同时受我们的<a href="privacy" class="text-brand-600 hover:underline">隐私政策</a>约束。<strong>我们不访问、收集、存储或传输你的项目文件或其内容。</strong>唯一的例外是可选的 AI 助手（<a href="#s14" class="text-brand-600 hover:underline">第 14 条</a>）：当你启用它并明确选择内容时，该内容由你的设备直接发送至你选择的 AI 服务商——仍然不经过 Keeply 的任何服务器。</p>
         </section>
 
         <section id="s8">
@@ -363,7 +364,7 @@
           <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="terms.s10.title">10. 期限与终止</h2>
           <p class="text-gray-600 leading-relaxed" data-i18n="terms.s10.p1">This Agreement takes effect from your first use of the Software and continues until terminated. You may terminate this Agreement at any time by deactivating the software license and removing all local Keeply data (including but not limited to project repositories, activity logs, shadow backups, and license files). Deactivation methods include: (a) using the &quot;Deactivate License and Remove Local Data&quot; function within the Keeply application; or (b) uninstalling Keeply from your system and manually deleting the local Keeply data directory.</p>
           <p class="text-gray-600 leading-relaxed mt-3" data-i18n="terms.s10.p2">We may revoke your license if you breach this Agreement. Upon termination, Perpetual License holders retain the right to use their version, but will no longer receive updates.</p>
-          <p class="text-gray-600 leading-relaxed mt-3" data-i18n="terms.s10.p3">第 5、6、8、9、11 和 12 条在终止后继续有效。</p>
+          <p class="text-gray-600 leading-relaxed mt-3" data-i18n="terms.s10.p3">第 5、6、8、9、11、12 和 14 条在终止后继续有效。</p>
         </section>
 
         <section id="s11">
@@ -386,6 +387,29 @@
           <p class="text-gray-600 leading-relaxed" data-i18n-html="terms.s13.website">网站：<a href="https://keeply.work" class="text-brand-600 hover:underline">keeply.work</a></p>
         </section>
 
+        <section id="s14">
+          <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="terms.s14.title">14. AI 助手（自带密钥）</h2>
+          <p class="text-gray-600 leading-relaxed" data-i18n="terms.s14.intro">Keeply 内置可选的 AI 助手，默认关闭。要使用它，你必须自行连接 AI 服务——填入你自己的 API 密钥，或在自己的电脑上运行本地模型。本条规范你使用 AI 助手时的权利义务；数据流向见隐私政策中的「当你选择使用 AI 助手时」。</p>
+
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="terms.s14.1.title">14.1 AI 密钥的所有权与责任</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="terms.s14.1.body">你在 Keeply 中填入的 AI 服务密钥，仅用于<strong>代表你本人</strong>向对应的 AI 服务商发送请求。所有用量与费用由你与该服务商直接结算；Keeply <strong>不持有、不代管、不转售</strong>你的密钥。</p>
+
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="terms.s14.2.title">14.2 合法来源</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n="terms.s14.2.body">请仅填入你本人或你的组织合法取得的密钥。请勿填入来路不明、购买、共享或他人转让的密钥；因违反 AI 服务商条款而产生的账号风险，由你自行承担。</p>
+
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="terms.s14.3.title">14.3 不支持订阅登录</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n="terms.s14.3.body">Keeply 不支持、也不会协助你以消费级订阅账号（如 ChatGPT Plus、Claude Pro/Max、Gemini Advanced）进行自动化访问，以保护你的账号不违反各家服务条款。</p>
+
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="terms.s14.4.title">14.4 AI 输出与责任限制</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="terms.s14.4.body">AI 生成的内容（建议的修改、摘要、回答）可能不正确、不完整或不适用于你的情况。<strong>应用任何 AI 建议前，你有责任自行审阅。</strong>Keeply 的配套保护是：每一次 AI 修改都先以提议的形式呈现、经你确认后才应用，并可随时从版本历史一键还原。在适用法律允许的最大范围内，Keeply 对 AI 生成内容造成的损失不承担责任；任何责任均受第 9 条责任限制的约束。</p>
+
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="terms.s14.5.title">14.5 已发送内容的删除限制</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="terms.s14.5.body">内容一经送达你选择的 AI 服务商，其保留与删除即受该服务商的条款及适用法律管辖。Keeply 没有服务器端副本，<strong>无法代你删除</strong>已发送的内容。如需请求删除，请直接联系你的服务商（例如 <a href="https://privacy.openai.com/" class="text-brand-600 hover:underline" target="_blank" rel="noopener noreferrer">OpenAI</a>、<a href="https://privacy.anthropic.com/" class="text-brand-600 hover:underline" target="_blank" rel="noopener noreferrer">Anthropic</a>、<a href="https://policies.google.com/privacy" class="text-brand-600 hover:underline" target="_blank" rel="noopener noreferrer">Google</a> 的隐私页面提供删除请求入口）。如果你使用本地模式，内容从未离开你的电脑，不涉及此问题。</p>
+
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="terms.s14.6.title">14.6 AI 编辑的标记</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n="terms.s14.6.body">由 AI 助手生成并经你应用的修改，会在 Keeply 的版本历史中标记为 AI 助手的编辑。</p>
+        </section>
+
       </div>
 
       <div class="mt-12 pt-8 border-t border-gray-100">
@@ -404,6 +428,6 @@
   <script src="../cookie-banner.8a90f5095a.js" defer integrity="sha384-FkrIUHI4EiKuF7c0lI0I+k/SpAC6SN6GAiU3tqGZBNs1nvMH4R/g+hpuVB/UGk63" crossorigin="anonymous"></script>
   <script src="../ga4-loader.359df0e8a7.js" defer integrity="sha384-gyx7he9QurH3GoSkfkbiWJCVC2RYlzVMBwyolFNVDEjLCjX1oUw1XG+WLOEBLSQJ" crossorigin="anonymous"></script>
   <script src="../clarity-loader.60a9a5160f.js" defer integrity="sha384-rdROtDi/pws+RrJtXaeyRY20mP1RJMaVL3DuCPi4UU7tkWHea6vyx01XW/4tbkL/" crossorigin="anonymous"></script>
-  <script src="../i18n-loader.a2f1451692.js" defer integrity="sha384-LoZWBMYGWr8o3JefxKWAVdNN3Hp4FLPOBAl247DtfxBkChg5zIcCJggNH01QzOCh" crossorigin="anonymous"></script>
+  <script src="../i18n-loader.ee49db2a57.js" defer integrity="sha384-q/AMERCpwO52FWIuoo7y9RxCSLSUkKkL373+I5xTz82ZtFrqFkK9EBa0yPgUJZhc" crossorigin="anonymous"></script>
 </body>
 </html>

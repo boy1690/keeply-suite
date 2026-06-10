@@ -104,8 +104,8 @@
   <meta name="twitter:image:alt" content="Keeply — ไทม์แมชชีนสำหรับไฟล์ของคุณ" />
 
   <!-- Tailwind CSS (compiled) -->
-  <link rel="preload" href="../style.css" as="style" integrity="sha384-s94BQDTeXS4ICZFgNIMHOJfCAlXJbebXmKkamGiGKOMUWX2HGg7R6ErFGI5XPuj7" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../style.css" integrity="sha384-s94BQDTeXS4ICZFgNIMHOJfCAlXJbebXmKkamGiGKOMUWX2HGg7R6ErFGI5XPuj7" crossorigin="anonymous" />
+  <link rel="preload" href="../style.css" as="style" integrity="sha384-d7GV0OjQujAXoinqaNqPRxBSfvGHMyv7jspmsBPuah1vCqOOF6YEuFkO/rENao3I" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../style.css" integrity="sha384-d7GV0OjQujAXoinqaNqPRxBSfvGHMyv7jspmsBPuah1vCqOOF6YEuFkO/rENao3I" crossorigin="anonymous" />
 
   <!-- M PLUS Rounded 1c font preload (eliminates CLS from late font discovery) -->
   <link rel="preload" href="../fonts/MPLUSRounded1c-Regular-v2.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
@@ -225,7 +225,7 @@
             "name": "Keeply ใช้งานแบบออฟไลน์ได้ไหม?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "ได้ Keeply เป็นซอฟต์แวร์ที่ทำงานบนเครื่องคุณทั้งหมด — ไม่ต้องใช้คลาวด์ ไม่ต้องมีบัญชี ไม่พึ่งพาเครือข่าย ไฟล์โปรเจกต์ ประวัติเวอร์ชัน และบันทึกของคุณทั้งหมดอยู่บนฮาร์ดดิสก์หรือ NAS ของคุณ คุณใช้ Keeply ได้ในโหมดเครื่องบิน ในห้องใต้ดิน หรือบนเครื่องที่ตัดขาดจากอินเทอร์เน็ต Keeply จะแตะเครือข่ายก็ต่อเมื่อตรวจหาอัปเดตของแอปเท่านั้น ซึ่งคุณปิดได้"
+              "text": "ได้ การจัดการเวอร์ชันของ Keeply ทำงานบนเครื่องทั้งหมด — ไม่ต้องใช้คลาวด์ ไม่ต้องมีบัญชี ไฟล์โปรเจกต์ ประวัติเวอร์ชัน และบันทึกของคุณทั้งหมดอยู่บนฮาร์ดดิสก์หรือ NAS ของคุณ และคุณใช้งานได้ในโหมดเครื่องบินหรือบนเครื่องที่ตัดขาดจากอินเทอร์เน็ต โดยค่าเริ่มต้น แอปจะแตะเครือข่ายเฉพาะเพื่อตรวจสอบไลเซนส์และตรวจหาอัปเดตเท่านั้น (ซึ่งคุณปิดได้) ข้อยกเว้นหนึ่งเดียวคือ AI assistant แบบเสริม (ปิดอยู่โดยค่าเริ่มต้น): หากคุณเปิดใช้และเลือกไฟล์ เนื้อหานั้นจะถูกส่งจากเครื่องของคุณตรงไปยังผู้ให้บริการ AI ที่คุณเลือก — หรือใช้โมเดลในเครื่องและทำงานออฟไลน์ได้อย่างสมบูรณ์"
             }
           },
           {
@@ -274,6 +274,38 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "เป็นการจ่ายครั้งเดียวเพื่อรับไลเซนส์ถาวร จำกัดเฉพาะผู้ซื้อ 500 รายแรก คุณจะได้ใช้ฟีเจอร์ปัจจุบันของ Keeply ตลอดไป พร้อมรับฟีเจอร์ทั้งหมดของแพ็กเกจ Team โดยอัตโนมัติเมื่อแพ็กเกจ Team เปิดตัว ไม่มีการเรียกเก็บเงินซ้ำ ไม่มีการขึ้นราคาแบบเซอร์ไพรส์ เปรียบเทียบให้เห็นภาพ: $25/เดือน เป็นเวลา 24 เดือน เท่ากับ $600 — Founding Member คุ้มทุนภายในไม่ถึงสองปีและใช้ต่อได้เรื่อย ๆ"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "ทำไมฉันถึงใช้บัญชีสมัครสมาชิก ChatGPT Plus / Claude Pro กับ AI assistant ไม่ได้?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ข้อกำหนดของบัญชีสมัครสมาชิกระดับผู้บริโภคห้ามไม่ให้แอปของบุคคลภายนอกเข้าใช้บัญชีเหล่านั้นแบบอัตโนมัติ และมีผู้ใช้ถูกระงับบัญชีโดยไม่มีการเตือนหรือคืนเงินเพราะทำเช่นนั้น การใช้ API key อย่างเป็นทางการเป็นวิธีที่ปลอดภัย — มันถูกออกแบบมาเพื่อสิ่งนี้โดยเฉพาะ และคุณจ่ายเฉพาะตามที่คุณใช้จริงเท่านั้น"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "AI API key ของฉันปลอดภัยใน Keeply ไหม?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "key ของคุณถูกเก็บไว้เฉพาะในที่จัดเก็บข้อมูลรับรองของระบบในคอมพิวเตอร์ของคุณ (Windows Credential Manager / macOS Keychain) Keeply ไม่เคยอัปโหลด ไม่เก็บไว้ และมองไม่เห็นมันด้วยซ้ำ — คำขอถูกส่งจากเครื่องของคุณตรงไปยังผู้ให้บริการที่คุณเลือก"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "การใช้ AI assistant มีค่าใช้จ่ายเท่าไหร่?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "คุณจ่ายให้ผู้ให้บริการ AI ของคุณโดยตรง ตามการใช้งานจริง — การประมวลผลเอกสารหนึ่งฉบับมักมีค่าใช้จ่ายเพียงไม่กี่เซนต์ (ดอลลาร์สหรัฐ) Keeply ไม่เคยจัดการเรื่องเงินและไม่บวกเพิ่มราคา; ใบเรียกเก็บเงินที่แน่นอนของคุณอยู่ในแดชบอร์ดของผู้ให้บริการของคุณ หากใช้โมเดลในเครื่อง ก็ไม่มีค่าธรรมเนียม API เลย"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "ฉันใช้ AI assistant แบบออฟไลน์ทั้งหมดได้ไหม?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ได้ — ในโหมดในเครื่อง Keeply ทำงานร่วมกับโมเดลที่รันบนเครื่องของคุณเอง (เช่น Gemma หรือ Llama ผ่าน Ollama) ไฟล์ของคุณไม่ออกจากคอมพิวเตอร์ของคุณเลย และไม่มีค่าธรรมเนียม API"
             }
           }
         ]
@@ -461,7 +493,7 @@
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900" data-i18n-html="index.usecases.title">ใครใช้ Keeply และมันถูกสร้างมาเพื่องานแบบไหน?</h2>
-        <p class="mt-4 text-gray-500 text-lg max-w-2xl mx-auto" data-i18n="index.usecases.answer">ผู้จัดการโปรเจกต์ ดีไซเนอร์ นักกฎหมาย นักวิชาการ วิศวกร และทีมรีโมต — ใครก็ตามที่งานต้องการประวัติเวอร์ชันที่อยู่ได้นาน บริบทของการตัดสินใจ หรือต้องการหลุดพ้นจากความวุ่นวายของชื่อไฟล์แบบ &quot;final_v3&quot; ไฟล์อยู่บนดิสก์ของคุณภายใต้การควบคุมของคุณ ไม่เคยอยู่บนเซิร์ฟเวอร์ของผู้ให้บริการ</p>
+        <p class="mt-4 text-gray-500 text-lg max-w-2xl mx-auto" data-i18n="index.usecases.answer">ผู้จัดการโปรเจกต์ ดีไซเนอร์ นักกฎหมาย นักวิชาการ วิศวกร และทีมรีโมต — ใครก็ตามที่งานต้องการประวัติเวอร์ชันที่อยู่ได้นาน บริบทของการตัดสินใจ หรือต้องการหลุดพ้นจากความวุ่นวายของชื่อไฟล์แบบ &quot;final_v3&quot; ไฟล์อยู่บนดิสก์ของคุณภายใต้การควบคุมของคุณ — ไม่มีอะไรถูกส่งไปที่ใดเว้นแต่คุณจะเลือกส่งมันอย่างชัดเจน</p>
       </div>
 
       <div class="grid md:grid-cols-2 gap-6">
@@ -698,7 +730,7 @@
           <p class="text-sm font-bold text-brand-600 mb-1" data-i18n="index.teamvault.tagline">ห้องนิรภัยเดียว ทีมเดียว ควบคุมเต็มที่</p>
           <h3 class="text-lg font-bold text-gray-900 mb-3" data-i18n="index.teamvault.title">&quot;ห้องนิรภัยของทีม&quot; คืออะไร?</h3>
           <p class="text-sm text-gray-600 leading-relaxed mb-3" data-i18n="index.teamvault.desc">ห้องนิรภัยของทีมใช้โครงสร้าง &quot;ต้นฉบับหลัก 1 + มิเรอร์ที่แชร์ 1&quot;: ต้นฉบับหลักเป็นแหล่งความจริงสำหรับเวอร์ชันของโปรเจกต์ (NAS โฟลเดอร์ที่แชร์ หรือไดรฟ์ภายนอก); มิเรอร์ที่แชร์เป็นสแนปช็อตฉบับสมบูรณ์ซิงค์มาจากต้นฉบับหลัก เพื่อให้สมาชิกในทีมคนใดก็ได้รับเวอร์ชันล่าสุดได้อย่างรวดเร็ว สมาชิกแต่ละคนยังมีสำเนางานของตนเอง รูปแบบข้อมูลอาจเป็นโหมดมาตรฐาน (เรียกดูและแก้ไขไฟล์ได้โดยตรง) หรือโหมดป้องกัน (ป้องกันการเปลี่ยนแปลงประวัติที่ทำลาย)</p>
-          <p class="text-sm text-brand-600 font-medium mb-3" data-i18n="index.teamvault.highlight">ไม่ถูกผูกมัดกับคลาวด์ ไม่คิดค่าธรรมเนียมต่อหัว ข้อมูลของคุณอยู่บนฮาร์ดแวร์ของคุณเอง</p>
+          <p class="text-sm text-brand-600 font-medium mb-3" data-i18n="index.teamvault.highlight">ไม่ถูกผูกมัดกับคลาวด์ ไม่คิดค่าธรรมเนียมต่อหัว ข้อมูลของคุณอยู่บนฮาร์ดแวร์ของคุณเอง ภายใต้การควบคุมของคุณ</p>
           <div class="grid md:grid-cols-2 gap-3 mt-3">
             <div class="bg-white rounded-lg px-4 py-3 border border-gray-100">
               <p class="text-xs font-bold text-gray-500 mb-1">Free</p>
@@ -839,7 +871,7 @@
             <span data-i18n="index.faq.1.q">Keeply ใช้งานแบบออฟไลน์ได้ไหม?</span>
             <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
           </summary>
-          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.1.a">ได้ Keeply เป็นซอฟต์แวร์ที่ทำงานบนเครื่องคุณทั้งหมด — ไม่ต้องใช้คลาวด์ ไม่ต้องมีบัญชี ไม่พึ่งพาเครือข่าย ไฟล์โปรเจกต์ ประวัติเวอร์ชัน และบันทึกของคุณทั้งหมดอยู่บนฮาร์ดดิสก์หรือ NAS ของคุณ คุณใช้ Keeply ได้ในโหมดเครื่องบิน ในห้องใต้ดิน หรือบนเครื่องที่ตัดขาดจากอินเทอร์เน็ต Keeply จะแตะเครือข่ายก็ต่อเมื่อตรวจหาอัปเดตของแอปเท่านั้น ซึ่งคุณปิดได้</div>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.1.a">ได้ การจัดการเวอร์ชันของ Keeply ทำงานบนเครื่องทั้งหมด — ไม่ต้องใช้คลาวด์ ไม่ต้องมีบัญชี ไฟล์โปรเจกต์ ประวัติเวอร์ชัน และบันทึกของคุณทั้งหมดอยู่บนฮาร์ดดิสก์หรือ NAS ของคุณ และคุณใช้งานได้ในโหมดเครื่องบินหรือบนเครื่องที่ตัดขาดจากอินเทอร์เน็ต โดยค่าเริ่มต้น แอปจะแตะเครือข่ายเฉพาะเพื่อตรวจสอบไลเซนส์และตรวจหาอัปเดตเท่านั้น (ซึ่งคุณปิดได้) ข้อยกเว้นหนึ่งเดียวคือ AI assistant แบบเสริม (ปิดอยู่โดยค่าเริ่มต้น): หากคุณเปิดใช้และเลือกไฟล์ เนื้อหานั้นจะถูกส่งจากเครื่องของคุณตรงไปยังผู้ให้บริการ AI ที่คุณเลือก — หรือใช้โมเดลในเครื่องและทำงานออฟไลน์ได้อย่างสมบูรณ์</div>
         </details>
         <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
           <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
@@ -883,6 +915,34 @@
           </summary>
           <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.7.a">เป็นการจ่ายครั้งเดียวเพื่อรับไลเซนส์ถาวร จำกัดเฉพาะผู้ซื้อ 500 รายแรก คุณจะได้ใช้ฟีเจอร์ปัจจุบันของ Keeply ตลอดไป พร้อมรับฟีเจอร์ทั้งหมดของแพ็กเกจ Team โดยอัตโนมัติเมื่อแพ็กเกจ Team เปิดตัว ไม่มีการเรียกเก็บเงินซ้ำ ไม่มีการขึ้นราคาแบบเซอร์ไพรส์ เปรียบเทียบให้เห็นภาพ: $25/เดือน เป็นเวลา 24 เดือน เท่ากับ $600 — Founding Member คุ้มทุนภายในไม่ถึงสองปีและใช้ต่อได้เรื่อย ๆ</div>
         </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.8.q">ทำไมฉันถึงใช้บัญชีสมัครสมาชิก ChatGPT Plus / Claude Pro กับ AI assistant ไม่ได้?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.8.a">ข้อกำหนดของบัญชีสมัครสมาชิกระดับผู้บริโภคห้ามไม่ให้แอปของบุคคลภายนอกเข้าใช้บัญชีเหล่านั้นแบบอัตโนมัติ และมีผู้ใช้ถูกระงับบัญชีโดยไม่มีการเตือนหรือคืนเงินเพราะทำเช่นนั้น การใช้ API key อย่างเป็นทางการเป็นวิธีที่ปลอดภัย — มันถูกออกแบบมาเพื่อสิ่งนี้โดยเฉพาะ และคุณจ่ายเฉพาะตามที่คุณใช้จริงเท่านั้น</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.9.q">AI API key ของฉันปลอดภัยใน Keeply ไหม?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.9.a">key ของคุณถูกเก็บไว้เฉพาะในที่จัดเก็บข้อมูลรับรองของระบบในคอมพิวเตอร์ของคุณ (Windows Credential Manager / macOS Keychain) Keeply ไม่เคยอัปโหลด ไม่เก็บไว้ และมองไม่เห็นมันด้วยซ้ำ — คำขอถูกส่งจากเครื่องของคุณตรงไปยังผู้ให้บริการที่คุณเลือก</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.10.q">การใช้ AI assistant มีค่าใช้จ่ายเท่าไหร่?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.10.a">คุณจ่ายให้ผู้ให้บริการ AI ของคุณโดยตรง ตามการใช้งานจริง — การประมวลผลเอกสารหนึ่งฉบับมักมีค่าใช้จ่ายเพียงไม่กี่เซนต์ (ดอลลาร์สหรัฐ) Keeply ไม่เคยจัดการเรื่องเงินและไม่บวกเพิ่มราคา; ใบเรียกเก็บเงินที่แน่นอนของคุณอยู่ในแดชบอร์ดของผู้ให้บริการของคุณ หากใช้โมเดลในเครื่อง ก็ไม่มีค่าธรรมเนียม API เลย</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.11.q">ฉันใช้ AI assistant แบบออฟไลน์ทั้งหมดได้ไหม?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.11.a">ได้ — ในโหมดในเครื่อง Keeply ทำงานร่วมกับโมเดลที่รันบนเครื่องของคุณเอง (เช่น Gemma หรือ Llama ผ่าน Ollama) ไฟล์ของคุณไม่ออกจากคอมพิวเตอร์ของคุณเลย และไม่มีค่าธรรมเนียม API</div>
+        </details>
       </div>
     </div>
   </section>
@@ -907,7 +967,7 @@
   <script src="../cookie-banner.8a90f5095a.js" defer integrity="sha384-FkrIUHI4EiKuF7c0lI0I+k/SpAC6SN6GAiU3tqGZBNs1nvMH4R/g+hpuVB/UGk63" crossorigin="anonymous"></script>
   <script src="../ga4-loader.359df0e8a7.js" defer integrity="sha384-gyx7he9QurH3GoSkfkbiWJCVC2RYlzVMBwyolFNVDEjLCjX1oUw1XG+WLOEBLSQJ" crossorigin="anonymous"></script>
   <script src="../clarity-loader.60a9a5160f.js" defer integrity="sha384-rdROtDi/pws+RrJtXaeyRY20mP1RJMaVL3DuCPi4UU7tkWHea6vyx01XW/4tbkL/" crossorigin="anonymous"></script>
-  <script src="../i18n-loader.a2f1451692.js" defer integrity="sha384-LoZWBMYGWr8o3JefxKWAVdNN3Hp4FLPOBAl247DtfxBkChg5zIcCJggNH01QzOCh" crossorigin="anonymous"></script>
+  <script src="../i18n-loader.ee49db2a57.js" defer integrity="sha384-q/AMERCpwO52FWIuoo7y9RxCSLSUkKkL373+I5xTz82ZtFrqFkK9EBa0yPgUJZhc" crossorigin="anonymous"></script>
   <script src="../team-notify.73d70ab047.js" defer integrity="sha384-kQUIeDWtAKHyIrSPoncROrE3SSvzakx5e3Ll8GT1Zjgqqr7nAyhVHZ7qyXYC+wVU" crossorigin="anonymous"></script>
   <script src="../demo-modal.8ccdc347ea.js" defer></script>
 

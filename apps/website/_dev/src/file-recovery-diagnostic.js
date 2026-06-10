@@ -94,7 +94,7 @@
         body: 'The panic comes from one gap: files on your computer and on the NAS have no automatic version safety net — the cloud’s version history doesn’t reach here, and relying on people to back up by hand eventually fails. Keeply fills exactly that gap: it keeps versions of your local and NAS files automatically, so every save is a restore point — no technical know-how needed.',
         button: 'Try Keeply free'
       },
-      faded: 'Your answers stay in your browser. Nothing is uploaded.'
+      faded: 'Your answers are processed right in your browser.'
     },
 
     'zh-TW': {
@@ -158,7 +158,7 @@
         body: '慌張來自一個缺口：本機和 NAS 上的檔案，根本沒有一張自動版本安全網——雲端的版本歷史罩不到這裡，而靠人記得手動備份，遲早會破功。Keeply 就是補這塊：自動幫你本機和 NAS 的檔案留版本，存檔就是一個還原點，不用懂任何工程術語。',
         button: '免費試用 Keeply'
       },
-      faded: '你的作答只留在瀏覽器裡，不會上傳。'
+      faded: '你的作答就在你的瀏覽器裡處理。'
     }
   };
 

@@ -104,8 +104,8 @@
   <meta name="twitter:image:alt" content="Warunki korzystania — Keeply" />
 
   <!-- Tailwind CSS (compiled) -->
-  <link rel="preload" href="../style.css" as="style" integrity="sha384-s94BQDTeXS4ICZFgNIMHOJfCAlXJbebXmKkamGiGKOMUWX2HGg7R6ErFGI5XPuj7" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../style.css" integrity="sha384-s94BQDTeXS4ICZFgNIMHOJfCAlXJbebXmKkamGiGKOMUWX2HGg7R6ErFGI5XPuj7" crossorigin="anonymous" />
+  <link rel="preload" href="../style.css" as="style" integrity="sha384-d7GV0OjQujAXoinqaNqPRxBSfvGHMyv7jspmsBPuah1vCqOOF6YEuFkO/rENao3I" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../style.css" integrity="sha384-d7GV0OjQujAXoinqaNqPRxBSfvGHMyv7jspmsBPuah1vCqOOF6YEuFkO/rENao3I" crossorigin="anonymous" />
 
   <!-- M PLUS Rounded 1c font preload (eliminates CLS from late font discovery) -->
   <link rel="preload" href="../fonts/MPLUSRounded1c-Regular-v2.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
@@ -172,7 +172,7 @@
           <span class="text-gray-600" data-i18n="terms.breadcrumb">Warunki korzystania</span>
         </nav>
         <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3" data-i18n="terms.title">Warunki korzystania</h1>
-        <p class="text-sm text-gray-400" data-i18n="terms.updated">Last updated: April 29, 2026</p>
+        <p class="text-sm text-gray-400" data-i18n="terms.updated">Last updated: June 10, 2026</p>
       </div>
 
       <div class="bg-amber-50 border border-amber-100 rounded-2xl p-6 mb-10">
@@ -200,6 +200,7 @@
           <a href="#s3-6" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="terms.toc.s3b">3.5 Zasady lokalizacji sejfu</a>
           <a href="#s3-7" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="terms.toc.s3c">3.6 License Scope</a>
           <a href="#s3-8" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="terms.toc.s3d">3.7 Uczciwe użytkowanie</a>
+          <a href="#s14" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="terms.toc.s14">14. Asystent AI (własny klucz API)</a>
         </div>
       </div>
 
@@ -345,7 +346,7 @@
 
         <section id="s7">
           <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="terms.s7.title">7. Data Privacy and Activity Logs</h2>
-          <p class="text-gray-600 leading-relaxed" data-i18n-html="terms.s7.p1">你對本軟體的使用亦受我們的<a href="privacy" class="text-brand-600 hover:underline">隱私權政策</a>約束。<strong>我們不存取、收集、儲存或傳輸你的專案檔案或其內容。</strong></p>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="terms.s7.p1">Korzystanie z Oprogramowania podlega również naszej <a href="privacy" class="text-brand-600 hover:underline">Polityce prywatności</a>. <strong>Nie uzyskujemy dostępu do Twoich plików projektowych ani ich zawartości, nie zbieramy ich, nie przechowujemy ani nie przesyłamy.</strong> Jedynym wyjątkiem jest opcjonalny asystent AI (<a href="#s14" class="text-brand-600 hover:underline">Sekcja 14</a>): gdy go włączysz i wyraźnie wybierzesz treści, treści te są wysyłane z Twojego urządzenia bezpośrednio do wybranego przez Ciebie dostawcy AI — nadal nigdy przez żaden serwer Keeply.</p>
         </section>
 
         <section id="s8">
@@ -363,7 +364,7 @@
           <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="terms.s10.title">10. Okres obowiązywania i rozwiązanie</h2>
           <p class="text-gray-600 leading-relaxed" data-i18n="terms.s10.p1">This Agreement takes effect from your first use of the Software and continues until terminated. You may terminate this Agreement at any time by deactivating the software license and removing all local Keeply data (including but not limited to project repositories, activity logs, shadow backups, and license files). Deactivation methods include: (a) using the &quot;Deactivate License and Remove Local Data&quot; function within the Keeply application; or (b) uninstalling Keeply from your system and manually deleting the local Keeply data directory.</p>
           <p class="text-gray-600 leading-relaxed mt-3" data-i18n="terms.s10.p2">We may revoke your license if you breach this Agreement. Upon termination, Perpetual License holders retain the right to use their version, but will no longer receive updates.</p>
-          <p class="text-gray-600 leading-relaxed mt-3" data-i18n="terms.s10.p3">Sekcje 5, 6, 8, 9, 11 i 12 zachowują moc po rozwiązaniu.</p>
+          <p class="text-gray-600 leading-relaxed mt-3" data-i18n="terms.s10.p3">Sekcje 5, 6, 8, 9, 11, 12 i 14 zachowują moc po rozwiązaniu.</p>
         </section>
 
         <section id="s11">
@@ -386,6 +387,29 @@
           <p class="text-gray-600 leading-relaxed" data-i18n-html="terms.s13.website">Strona: <a href="https://keeply.work" class="text-brand-600 hover:underline">keeply.work</a></p>
         </section>
 
+        <section id="s14">
+          <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="terms.s14.title">14. Asystent AI (własny klucz API)</h2>
+          <p class="text-gray-600 leading-relaxed" data-i18n="terms.s14.intro">Keeply zawiera opcjonalnego asystenta AI, domyślnie wyłączonego. Aby z niego korzystać, musisz samodzielnie połączyć usługę AI — wpisując własny klucz API lub uruchamiając model lokalny na własnym komputerze. Niniejsza sekcja reguluje korzystanie z asystenta AI; informacje o przepływie danych znajdziesz w sekcji „Gdy zdecydujesz się korzystać z asystenta AI&quot; w Polityce prywatności.</p>
+
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="terms.s14.1.title">14.1 Własność kluczy AI i odpowiedzialność za nie</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="terms.s14.1.body">Klucze usług AI, które wpisujesz w Keeply, służą wyłącznie do wysyłania żądań do odpowiedniego dostawcy AI <strong>w Twoim własnym imieniu</strong>. Całe zużycie i wszystkie opłaty rozliczasz bezpośrednio z tym dostawcą; Keeply <strong>nie przechowuje, nie hostuje ani nie odsprzedaje</strong> Twoich kluczy.</p>
+
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="terms.s14.2.title">14.2 Legalne pochodzenie</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n="terms.s14.2.body">Wpisuj wyłącznie klucze uzyskane legalnie przez Ciebie lub Twoją organizację. Nie wpisuj kluczy niewiadomego pochodzenia ani kluczy kupionych, współdzielonych lub przekazanych przez kogoś innego; ryzyko dla konta wynikające z naruszenia warunków dostawcy AI ponosisz Ty.</p>
+
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="terms.s14.3.title">14.3 Brak logowania kontem subskrypcyjnym</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n="terms.s14.3.body">Keeply nie obsługuje — i nie pomoże Ci skonfigurować — zautomatyzowanego dostępu przez konsumenckie konta subskrypcyjne (takie jak ChatGPT Plus, Claude Pro/Max czy Gemini Advanced), aby chronić Twoje konto przed naruszeniem warunków tych usług.</p>
+
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="terms.s14.4.title">14.4 Treści generowane przez AI i ograniczenie odpowiedzialności</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="terms.s14.4.body">Treści generowane przez AI (proponowane zmiany, podsumowania, odpowiedzi) mogą być nieprawidłowe, niekompletne lub nieodpowiednie dla Twojej sytuacji. <strong>Ponosisz odpowiedzialność za sprawdzenie każdej sugestii AI przed jej zastosowaniem.</strong> Wbudowane zabezpieczenie Keeply: każda zmiana wprowadzana przez AI jest najpierw przedstawiana jako propozycja, stosowana dopiero po Twoim potwierdzeniu i w każdej chwili odwracalna jednym kliknięciem z poziomu historii wersji. W maksymalnym zakresie dozwolonym przez obowiązujące prawo Keeply nie ponosi odpowiedzialności za straty spowodowane treściami generowanymi przez AI; wszelka odpowiedzialność podlega ograniczeniu odpowiedzialności z Sekcji 9.</p>
+
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="terms.s14.5.title">14.5 Ograniczenia usuwania już wysłanych treści</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="terms.s14.5.body">Gdy treść dotrze do wybranego przez Ciebie dostawcy AI, jej przechowywanie i usuwanie podlegają warunkom tego dostawcy oraz obowiązującemu prawu. Keeply nie posiada kopii po stronie serwera i <strong>nie może usunąć</strong> w Twoim imieniu już wysłanych treści. Aby zażądać usunięcia, skontaktuj się bezpośrednio ze swoim dostawcą (strony prywatności <a href="https://privacy.openai.com/" class="text-brand-600 hover:underline" target="_blank" rel="noopener noreferrer">OpenAI</a>, <a href="https://privacy.anthropic.com/" class="text-brand-600 hover:underline" target="_blank" rel="noopener noreferrer">Anthropic</a> i <a href="https://policies.google.com/privacy" class="text-brand-600 hover:underline" target="_blank" rel="noopener noreferrer">Google</a> udostępniają możliwość złożenia żądania usunięcia). W trybie lokalnym treść nigdy nie opuściła Twojego komputera, więc problem ten nie występuje.</p>
+
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="terms.s14.6.title">14.6 Oznaczanie edycji AI</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n="terms.s14.6.body">Zmiany wygenerowane przez asystenta AI i zastosowane przez Ciebie są w historii wersji Keeply oznaczane jako edycje asystenta AI.</p>
+        </section>
+
       </div>
 
       <div class="mt-12 pt-8 border-t border-gray-100">
@@ -404,6 +428,6 @@
   <script src="../cookie-banner.8a90f5095a.js" defer integrity="sha384-FkrIUHI4EiKuF7c0lI0I+k/SpAC6SN6GAiU3tqGZBNs1nvMH4R/g+hpuVB/UGk63" crossorigin="anonymous"></script>
   <script src="../ga4-loader.359df0e8a7.js" defer integrity="sha384-gyx7he9QurH3GoSkfkbiWJCVC2RYlzVMBwyolFNVDEjLCjX1oUw1XG+WLOEBLSQJ" crossorigin="anonymous"></script>
   <script src="../clarity-loader.60a9a5160f.js" defer integrity="sha384-rdROtDi/pws+RrJtXaeyRY20mP1RJMaVL3DuCPi4UU7tkWHea6vyx01XW/4tbkL/" crossorigin="anonymous"></script>
-  <script src="../i18n-loader.a2f1451692.js" defer integrity="sha384-LoZWBMYGWr8o3JefxKWAVdNN3Hp4FLPOBAl247DtfxBkChg5zIcCJggNH01QzOCh" crossorigin="anonymous"></script>
+  <script src="../i18n-loader.ee49db2a57.js" defer integrity="sha384-q/AMERCpwO52FWIuoo7y9RxCSLSUkKkL373+I5xTz82ZtFrqFkK9EBa0yPgUJZhc" crossorigin="anonymous"></script>
 </body>
 </html>

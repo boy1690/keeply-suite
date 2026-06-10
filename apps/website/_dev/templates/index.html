@@ -558,7 +558,7 @@
           <p class="text-sm text-gray-600 leading-relaxed mb-3" data-i18n="index.teamvault.desc">
             團隊保管庫採「1 正本 + 1 共用備援」拓撲：正本是專案的版本來源（NAS、共用資料夾或外接硬碟擇一）；共用備援自正本同步整包複製，供團隊任何成員快速取得最新版。每位成員另有自己的工作副本。資料形式可選一般模式（檔案直接編輯）或保護模式（防止破壞性歷史變更）。
           </p>
-          <p class="text-sm text-brand-600 font-medium mb-3" data-i18n="index.teamvault.highlight">不被雲端綁架、不按人頭收費、資料留在你的硬體上。</p>
+          <p class="text-sm text-brand-600 font-medium mb-3" data-i18n="index.teamvault.highlight">不被雲端綁架、不按人頭收費，資料放在你自己的硬體上、由你掌控。</p>
           <div class="grid md:grid-cols-2 gap-3 mt-3">
             <div class="bg-white rounded-lg px-4 py-3 border border-gray-100">
               <p class="text-xs font-bold text-gray-500 mb-1">Free</p>
@@ -703,7 +703,7 @@
             <span data-i18n="index.faq.1.q">Does Keeply work offline?</span>
             <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
           </summary>
-          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.1.a">Yes. Keeply is fully local software — no cloud, no account, no network dependency. Your project files, version history, and notes all stay on your hard drive or NAS. You can use Keeply in airplane mode, in a basement, or on an air-gapped machine. The only time Keeply touches the network is when you check for app updates, which you can disable.</div>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.1.a">Yes. Keeply's version management runs fully locally — no cloud, no account. Your project files, version history, and notes all stay on your hard drive or NAS, and you can work in airplane mode or on an air-gapped machine. By default the app touches the network only for license verification and update checks (which you can disable). The one exception is the optional AI assistant (off by default): if you enable it and select files, that content goes from your machine directly to the AI provider you choose — or use a local model and stay fully offline.</div>
         </details>
         <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
           <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
@@ -746,6 +746,34 @@
             <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
           </summary>
           <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.7.a">A one-time payment for a perpetual license, limited to the first 500 buyers. You get current Keeply features forever, plus all Team plan features automatically when the Team plan ships. No recurring billing, no surprise price hikes. For comparison, $25/month for 24 months equals $600 — Founding Member pays for itself in under two years and keeps going.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.8.q">Why can't I use my ChatGPT Plus / Claude Pro subscription with the AI assistant?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.8.a">Consumer subscription terms prohibit third-party apps from automating those accounts, and users have been suspended without warning or refund for doing so. Official API keys are the safe way to do this — they are designed for exactly this, and you pay only for what you actually use.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.9.q">Is my AI API key safe in Keeply?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.9.a">Your key is stored only in your computer's system credential vault (Windows Credential Manager / macOS Keychain). Keeply never uploads, retains, or even sees it — requests go from your machine directly to the provider you chose.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.10.q">How much does the AI assistant cost to use?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.10.a">You pay your AI provider directly, by actual usage — processing a document typically costs a few cents (USD). Keeply never handles the money and adds no markup; your exact bill is in your provider's dashboard. With a local model, there are no API fees at all.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.11.q">Can I use the AI assistant completely offline?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.11.a">Yes — in local mode, Keeply works with models running on your own machine (for example Gemma or Llama via Ollama). Your files never leave your computer, and there are no API fees.</div>
         </details>
       </div>
     </div>

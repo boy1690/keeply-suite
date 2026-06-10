@@ -104,8 +104,8 @@
   <meta name="twitter:image:alt" content="Keeply — A máquina do tempo dos seus ficheiros" />
 
   <!-- Tailwind CSS (compiled) -->
-  <link rel="preload" href="../style.css" as="style" integrity="sha384-s94BQDTeXS4ICZFgNIMHOJfCAlXJbebXmKkamGiGKOMUWX2HGg7R6ErFGI5XPuj7" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../style.css" integrity="sha384-s94BQDTeXS4ICZFgNIMHOJfCAlXJbebXmKkamGiGKOMUWX2HGg7R6ErFGI5XPuj7" crossorigin="anonymous" />
+  <link rel="preload" href="../style.css" as="style" integrity="sha384-d7GV0OjQujAXoinqaNqPRxBSfvGHMyv7jspmsBPuah1vCqOOF6YEuFkO/rENao3I" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../style.css" integrity="sha384-d7GV0OjQujAXoinqaNqPRxBSfvGHMyv7jspmsBPuah1vCqOOF6YEuFkO/rENao3I" crossorigin="anonymous" />
 
   <!-- M PLUS Rounded 1c font preload (eliminates CLS from late font discovery) -->
   <link rel="preload" href="../fonts/MPLUSRounded1c-Regular-v2.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
@@ -225,7 +225,7 @@
             "name": "O Keeply funciona offline?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Sim. O Keeply é software totalmente local — sem nuvem, sem conta, sem dependência de rede. Os teus ficheiros de projeto, o histórico de versões e as notas ficam todos no teu disco rígido ou NAS. Podes usar o Keeply em modo de avião, numa cave, ou num computador totalmente isolado da rede. A única altura em que o Keeply toca na rede é quando procura atualizações da App, e isso podes desativar."
+              "text": "Sim. A gestão de versões do Keeply funciona de forma totalmente local — sem nuvem, sem conta. Os teus ficheiros de projeto, o histórico de versões e as notas ficam todos no teu disco rígido ou NAS, e podes trabalhar em modo de avião ou num computador totalmente isolado da rede. Por predefinição, a aplicação só toca na rede para a verificação da licença e para procurar atualizações (que podes desativar). A única exceção é o assistente de IA opcional (desativado por predefinição): se o ativares e selecionares ficheiros, esse conteúdo vai do teu computador diretamente para o fornecedor de IA que escolheres — ou usa um modelo local e mantém-te totalmente offline."
             }
           },
           {
@@ -274,6 +274,38 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Um pagamento único por uma licença perpétua, limitado aos primeiros 500 compradores. Ficas com as funcionalidades atuais do Keeply para sempre, mais todas as funcionalidades do Team plan automaticamente quando este for lançado. Sem cobranças recorrentes, sem subidas de preço inesperadas. Para comparar, $25/month durante 24 meses dá $600 — o Founding Member paga-se a si próprio em menos de dois anos e continua a render depois disso."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Porque é que não posso usar a minha subscrição ChatGPT Plus / Claude Pro com o assistente de IA?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Os termos das subscrições de consumidor proíbem que aplicações de terceiros automatizem essas contas, e há utilizadores que foram suspensos sem aviso nem reembolso por o fazerem. As chaves de API oficiais são a forma segura de o fazer — foram concebidas exatamente para isto, e só pagas o que realmente usares."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "A minha chave de API de IA está segura no Keeply?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A tua chave é armazenada apenas no cofre de credenciais do sistema do teu computador (Gestor de Credenciais do Windows / Porta-chaves do macOS). O Keeply nunca a carrega, nunca a retém, nem sequer a vê — os pedidos vão do teu computador diretamente para o fornecedor que escolheste."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quanto custa usar o assistente de IA?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pagas diretamente ao teu fornecedor de IA, pela utilização real — processar um documento custa normalmente alguns cêntimos (USD). O Keeply nunca lida com o dinheiro nem acrescenta qualquer margem; a fatura exata está no painel do teu fornecedor. Com um modelo local, não há quaisquer custos de API."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Posso usar o assistente de IA completamente offline?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim — no modo local, o Keeply funciona com modelos em execução no teu próprio computador (por exemplo, Gemma ou Llama via Ollama). Os teus ficheiros nunca saem do teu computador, e não há quaisquer custos de API."
             }
           }
         ]
@@ -461,7 +493,7 @@
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900" data-i18n-html="index.usecases.title">Quem usa o Keeply e para quais trabalhos foi feito?</h2>
-        <p class="mt-4 text-gray-500 text-lg max-w-2xl mx-auto" data-i18n="index.usecases.answer">Gerentes de projeto, designers, advogados, acadêmicos, engenheiros e equipes remotas — qualquer um cujo trabalho precise de histórico de versões de longa duração, contexto de decisões ou fuga do caos dos nomes &quot;final_v3&quot;. Os arquivos ficam no seu disco, sob seu controle, nunca no servidor de um fornecedor.</p>
+        <p class="mt-4 text-gray-500 text-lg max-w-2xl mx-auto" data-i18n="index.usecases.answer">Gestores de projeto, designers, advogados, académicos, engenheiros e equipas remotas — qualquer pessoa cujo trabalho precise de um histórico de versões de longa duração, de contexto de decisões ou de escapar ao caos dos nomes &quot;final_v3&quot;. Os ficheiros ficam no teu disco, sob o teu controlo — nada é enviado para lado nenhum, a menos que escolhas explicitamente enviá-lo.</p>
       </div>
 
       <div class="grid md:grid-cols-2 gap-6">
@@ -698,7 +730,7 @@
           <p class="text-sm font-bold text-brand-600 mb-1" data-i18n="index.teamvault.tagline">Um cofre. Uma equipa. Controlo total.</p>
           <h3 class="text-lg font-bold text-gray-900 mb-3" data-i18n="index.teamvault.title">O que é um &quot;Cofre de Equipa&quot;?</h3>
           <p class="text-sm text-gray-600 leading-relaxed mb-3" data-i18n="index.teamvault.desc">O Team Vault utiliza uma topologia &quot;1 Canonical + 1 Shared Mirror&quot;: o Canonical é a fonte da verdade para as versões do projeto (NAS, pasta compartilhada ou disco externo); o Shared Mirror é um snapshot completo sincronizado a partir do Canonical, para que qualquer membro da equipe possa obter rapidamente a versão mais recente. Cada membro também tem sua própria cópia de trabalho. O formato dos dados pode ser modo Padrão (navegar e editar arquivos diretamente) ou modo Protegido (impedir alterações destrutivas no histórico).</p>
-          <p class="text-sm text-brand-600 font-medium mb-3" data-i18n="index.teamvault.highlight">Sem dependência da nuvem. Sem taxas por utilizador. Os seus dados ficam no seu próprio hardware.</p>
+          <p class="text-sm text-brand-600 font-medium mb-3" data-i18n="index.teamvault.highlight">Sem dependência da nuvem. Sem taxas por utilizador. Os seus dados ficam no seu próprio hardware, sob o seu controlo.</p>
           <div class="grid md:grid-cols-2 gap-3 mt-3">
             <div class="bg-white rounded-lg px-4 py-3 border border-gray-100">
               <p class="text-xs font-bold text-gray-500 mb-1">Free</p>
@@ -839,7 +871,7 @@
             <span data-i18n="index.faq.1.q">O Keeply funciona offline?</span>
             <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
           </summary>
-          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.1.a">Sim. O Keeply é software totalmente local — sem nuvem, sem conta, sem dependência de rede. Os teus ficheiros de projeto, o histórico de versões e as notas ficam todos no teu disco rígido ou NAS. Podes usar o Keeply em modo de avião, numa cave, ou num computador totalmente isolado da rede. A única altura em que o Keeply toca na rede é quando procura atualizações da App, e isso podes desativar.</div>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.1.a">Sim. A gestão de versões do Keeply funciona de forma totalmente local — sem nuvem, sem conta. Os teus ficheiros de projeto, o histórico de versões e as notas ficam todos no teu disco rígido ou NAS, e podes trabalhar em modo de avião ou num computador totalmente isolado da rede. Por predefinição, a aplicação só toca na rede para a verificação da licença e para procurar atualizações (que podes desativar). A única exceção é o assistente de IA opcional (desativado por predefinição): se o ativares e selecionares ficheiros, esse conteúdo vai do teu computador diretamente para o fornecedor de IA que escolheres — ou usa um modelo local e mantém-te totalmente offline.</div>
         </details>
         <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
           <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
@@ -883,6 +915,34 @@
           </summary>
           <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.7.a">Um pagamento único por uma licença perpétua, limitado aos primeiros 500 compradores. Ficas com as funcionalidades atuais do Keeply para sempre, mais todas as funcionalidades do Team plan automaticamente quando este for lançado. Sem cobranças recorrentes, sem subidas de preço inesperadas. Para comparar, $25/month durante 24 meses dá $600 — o Founding Member paga-se a si próprio em menos de dois anos e continua a render depois disso.</div>
         </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.8.q">Porque é que não posso usar a minha subscrição ChatGPT Plus / Claude Pro com o assistente de IA?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.8.a">Os termos das subscrições de consumidor proíbem que aplicações de terceiros automatizem essas contas, e há utilizadores que foram suspensos sem aviso nem reembolso por o fazerem. As chaves de API oficiais são a forma segura de o fazer — foram concebidas exatamente para isto, e só pagas o que realmente usares.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.9.q">A minha chave de API de IA está segura no Keeply?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.9.a">A tua chave é armazenada apenas no cofre de credenciais do sistema do teu computador (Gestor de Credenciais do Windows / Porta-chaves do macOS). O Keeply nunca a carrega, nunca a retém, nem sequer a vê — os pedidos vão do teu computador diretamente para o fornecedor que escolheste.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.10.q">Quanto custa usar o assistente de IA?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.10.a">Pagas diretamente ao teu fornecedor de IA, pela utilização real — processar um documento custa normalmente alguns cêntimos (USD). O Keeply nunca lida com o dinheiro nem acrescenta qualquer margem; a fatura exata está no painel do teu fornecedor. Com um modelo local, não há quaisquer custos de API.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.11.q">Posso usar o assistente de IA completamente offline?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.11.a">Sim — no modo local, o Keeply funciona com modelos em execução no teu próprio computador (por exemplo, Gemma ou Llama via Ollama). Os teus ficheiros nunca saem do teu computador, e não há quaisquer custos de API.</div>
+        </details>
       </div>
     </div>
   </section>
@@ -907,7 +967,7 @@
   <script src="../cookie-banner.8a90f5095a.js" defer integrity="sha384-FkrIUHI4EiKuF7c0lI0I+k/SpAC6SN6GAiU3tqGZBNs1nvMH4R/g+hpuVB/UGk63" crossorigin="anonymous"></script>
   <script src="../ga4-loader.359df0e8a7.js" defer integrity="sha384-gyx7he9QurH3GoSkfkbiWJCVC2RYlzVMBwyolFNVDEjLCjX1oUw1XG+WLOEBLSQJ" crossorigin="anonymous"></script>
   <script src="../clarity-loader.60a9a5160f.js" defer integrity="sha384-rdROtDi/pws+RrJtXaeyRY20mP1RJMaVL3DuCPi4UU7tkWHea6vyx01XW/4tbkL/" crossorigin="anonymous"></script>
-  <script src="../i18n-loader.a2f1451692.js" defer integrity="sha384-LoZWBMYGWr8o3JefxKWAVdNN3Hp4FLPOBAl247DtfxBkChg5zIcCJggNH01QzOCh" crossorigin="anonymous"></script>
+  <script src="../i18n-loader.ee49db2a57.js" defer integrity="sha384-q/AMERCpwO52FWIuoo7y9RxCSLSUkKkL373+I5xTz82ZtFrqFkK9EBa0yPgUJZhc" crossorigin="anonymous"></script>
   <script src="../team-notify.73d70ab047.js" defer integrity="sha384-kQUIeDWtAKHyIrSPoncROrE3SSvzakx5e3Ll8GT1Zjgqqr7nAyhVHZ7qyXYC+wVU" crossorigin="anonymous"></script>
   <script src="../demo-modal.8ccdc347ea.js" defer></script>
 

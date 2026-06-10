@@ -104,8 +104,8 @@
   <meta name="twitter:image:alt" content="Keeply — Cỗ máy thời gian cho tập tin của bạn" />
 
   <!-- Tailwind CSS (compiled) -->
-  <link rel="preload" href="../style.css" as="style" integrity="sha384-s94BQDTeXS4ICZFgNIMHOJfCAlXJbebXmKkamGiGKOMUWX2HGg7R6ErFGI5XPuj7" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../style.css" integrity="sha384-s94BQDTeXS4ICZFgNIMHOJfCAlXJbebXmKkamGiGKOMUWX2HGg7R6ErFGI5XPuj7" crossorigin="anonymous" />
+  <link rel="preload" href="../style.css" as="style" integrity="sha384-d7GV0OjQujAXoinqaNqPRxBSfvGHMyv7jspmsBPuah1vCqOOF6YEuFkO/rENao3I" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../style.css" integrity="sha384-d7GV0OjQujAXoinqaNqPRxBSfvGHMyv7jspmsBPuah1vCqOOF6YEuFkO/rENao3I" crossorigin="anonymous" />
 
   <!-- M PLUS Rounded 1c font preload (eliminates CLS from late font discovery) -->
   <link rel="preload" href="../fonts/MPLUSRounded1c-Regular-v2.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
@@ -225,7 +225,7 @@
             "name": "Keeply có hoạt động khi ngoại tuyến không?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Có. Keeply là phần mềm hoàn toàn cục bộ — không đám mây, không tài khoản, không phụ thuộc mạng. Tập tin dự án, lịch sử phiên bản và ghi chú của bạn đều nằm trên ổ cứng hoặc NAS của bạn. Bạn có thể dùng Keeply ở chế độ máy bay, dưới tầng hầm, hay trên một máy hoàn toàn cách ly mạng. Lần duy nhất Keeply chạm tới mạng là khi kiểm tra cập nhật ứng dụng, mà bạn có thể tắt đi."
+              "text": "Có. Việc quản lý phiên bản của Keeply chạy hoàn toàn cục bộ — không đám mây, không tài khoản. Tập tin dự án, lịch sử phiên bản và ghi chú của bạn đều nằm trên ổ cứng hoặc NAS của bạn, và bạn có thể làm việc ở chế độ máy bay hay trên một máy hoàn toàn cách ly mạng. Theo mặc định, ứng dụng chỉ chạm tới mạng khi xác minh giấy phép và kiểm tra cập nhật (bạn có thể tắt đi). Ngoại lệ duy nhất là trợ lý AI tùy chọn (tắt theo mặc định): nếu bạn bật nó và chọn tập tin, nội dung đó sẽ được gửi từ máy của bạn trực tiếp đến nhà cung cấp AI mà bạn chọn — hoặc dùng một mô hình cục bộ và giữ trạng thái hoàn toàn ngoại tuyến."
             }
           },
           {
@@ -274,6 +274,38 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Một khoản thanh toán một lần cho giấy phép vĩnh viễn, giới hạn 500 người mua đầu tiên. Bạn có trọn đời các tính năng Keeply hiện tại, cộng thêm tất cả tính năng của gói Nhóm một cách tự động khi gói Nhóm ra mắt. Không thanh toán định kỳ, không tăng giá bất ngờ. Để so sánh, 25 USD/tháng trong 24 tháng là 600 USD — Founding Member tự hoàn vốn trong chưa đầy hai năm và vẫn tiếp tục dùng được."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Vì sao tôi không thể dùng thuê bao ChatGPT Plus / Claude Pro của mình với trợ lý AI?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Điều khoản của các thuê bao dành cho người dùng cá nhân cấm ứng dụng bên thứ ba tự động hóa các tài khoản đó, và đã có người dùng bị khóa tài khoản không báo trước và không được hoàn tiền vì làm vậy. Khóa API chính thức là cách làm an toàn — chúng được thiết kế cho đúng mục đích này, và bạn chỉ trả cho phần bạn thực sự dùng."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Khóa API AI của tôi có an toàn trong Keeply không?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Khóa của bạn chỉ được lưu trong kho thông tin xác thực an toàn của hệ thống trên máy tính của bạn (Windows Credential Manager / macOS Keychain). Keeply không bao giờ tải lên, lưu giữ hay thậm chí thấy được nó — các yêu cầu được gửi từ máy của bạn trực tiếp đến nhà cung cấp mà bạn đã chọn."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Dùng trợ lý AI có tốn kém không?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Bạn trả tiền trực tiếp cho nhà cung cấp AI của mình, theo mức sử dụng thực tế — xử lý một tài liệu thường chỉ tốn vài xu (USD). Keeply không đụng tới khoản tiền nào và không cộng thêm phí; hóa đơn chính xác nằm trong bảng điều khiển của nhà cung cấp của bạn. Với mô hình cục bộ, hoàn toàn không có phí API."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Tôi có thể dùng trợ lý AI hoàn toàn ngoại tuyến không?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Có — ở chế độ cục bộ, Keeply hoạt động với các mô hình chạy ngay trên máy của bạn (ví dụ Gemma hay Llama thông qua Ollama). Tập tin của bạn không bao giờ rời khỏi máy tính của bạn, và không có bất kỳ phí API nào."
             }
           }
         ]
@@ -461,7 +493,7 @@
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900" data-i18n-html="index.usecases.title">Ai dùng Keeply, và nó được tạo ra cho những công việc nào?</h2>
-        <p class="mt-4 text-gray-500 text-lg max-w-2xl mx-auto" data-i18n="index.usecases.answer">Quản lý dự án, nhà thiết kế, luật sư, nhà nghiên cứu, kỹ sư và các nhóm làm việc từ xa — bất kỳ ai có công việc cần lịch sử phiên bản tồn tại lâu dài, bối cảnh của quyết định, hay muốn thoát khỏi mớ hỗn loạn tên tập tin &quot;final_v3&quot;. Tập tin ở lại trên ổ đĩa của bạn dưới sự kiểm soát của bạn, không bao giờ trên máy chủ của nhà cung cấp.</p>
+        <p class="mt-4 text-gray-500 text-lg max-w-2xl mx-auto" data-i18n="index.usecases.answer">Quản lý dự án, nhà thiết kế, luật sư, nhà nghiên cứu, kỹ sư và các nhóm làm việc từ xa — bất kỳ ai có công việc cần lịch sử phiên bản tồn tại lâu dài, bối cảnh của quyết định, hay muốn thoát khỏi mớ hỗn loạn tên tập tin &quot;final_v3&quot;. Tập tin ở lại trên ổ đĩa của bạn dưới sự kiểm soát của bạn — không gì được gửi đi bất cứ đâu trừ khi bạn chủ động chọn gửi.</p>
       </div>
 
       <div class="grid md:grid-cols-2 gap-6">
@@ -698,7 +730,7 @@
           <p class="text-sm font-bold text-brand-600 mb-1" data-i18n="index.teamvault.tagline">Một kho lưu trữ. Một nhóm. Toàn quyền kiểm soát.</p>
           <h3 class="text-lg font-bold text-gray-900 mb-3" data-i18n="index.teamvault.title">&quot;Kho lưu trữ nhóm&quot; là gì?</h3>
           <p class="text-sm text-gray-600 leading-relaxed mb-3" data-i18n="index.teamvault.desc">Kho lưu trữ nhóm sử dụng cấu trúc &quot;1 Bản gốc + 1 Bản sao chia sẻ&quot;: Bản gốc là nguồn chính xác cho các phiên bản dự án (NAS, thư mục dùng chung hoặc ổ cứng ngoài); Bản sao chia sẻ là bản chụp toàn phần được đồng bộ từ Bản gốc để bất kỳ thành viên nào cũng nhanh chóng lấy được bản mới nhất. Mỗi thành viên còn có Bản sao làm việc riêng. Hình thức dữ liệu có thể là Chế độ Tiêu chuẩn (duyệt và chỉnh sửa tập tin trực tiếp) hoặc Chế độ Bảo vệ (ngăn các thay đổi lịch sử mang tính phá hủy).</p>
-          <p class="text-sm text-brand-600 font-medium mb-3" data-i18n="index.teamvault.highlight">Không bị khóa vào đám mây. Không phí theo đầu người. Dữ liệu của bạn ở lại trên chính phần cứng của bạn.</p>
+          <p class="text-sm text-brand-600 font-medium mb-3" data-i18n="index.teamvault.highlight">Không bị khóa vào đám mây. Không phí theo đầu người. Dữ liệu của bạn nằm trên chính phần cứng của bạn, dưới sự kiểm soát của bạn.</p>
           <div class="grid md:grid-cols-2 gap-3 mt-3">
             <div class="bg-white rounded-lg px-4 py-3 border border-gray-100">
               <p class="text-xs font-bold text-gray-500 mb-1">Free</p>
@@ -839,7 +871,7 @@
             <span data-i18n="index.faq.1.q">Keeply có hoạt động khi ngoại tuyến không?</span>
             <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
           </summary>
-          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.1.a">Có. Keeply là phần mềm hoàn toàn cục bộ — không đám mây, không tài khoản, không phụ thuộc mạng. Tập tin dự án, lịch sử phiên bản và ghi chú của bạn đều nằm trên ổ cứng hoặc NAS của bạn. Bạn có thể dùng Keeply ở chế độ máy bay, dưới tầng hầm, hay trên một máy hoàn toàn cách ly mạng. Lần duy nhất Keeply chạm tới mạng là khi kiểm tra cập nhật ứng dụng, mà bạn có thể tắt đi.</div>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.1.a">Có. Việc quản lý phiên bản của Keeply chạy hoàn toàn cục bộ — không đám mây, không tài khoản. Tập tin dự án, lịch sử phiên bản và ghi chú của bạn đều nằm trên ổ cứng hoặc NAS của bạn, và bạn có thể làm việc ở chế độ máy bay hay trên một máy hoàn toàn cách ly mạng. Theo mặc định, ứng dụng chỉ chạm tới mạng khi xác minh giấy phép và kiểm tra cập nhật (bạn có thể tắt đi). Ngoại lệ duy nhất là trợ lý AI tùy chọn (tắt theo mặc định): nếu bạn bật nó và chọn tập tin, nội dung đó sẽ được gửi từ máy của bạn trực tiếp đến nhà cung cấp AI mà bạn chọn — hoặc dùng một mô hình cục bộ và giữ trạng thái hoàn toàn ngoại tuyến.</div>
         </details>
         <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
           <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
@@ -883,6 +915,34 @@
           </summary>
           <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.7.a">Một khoản thanh toán một lần cho giấy phép vĩnh viễn, giới hạn 500 người mua đầu tiên. Bạn có trọn đời các tính năng Keeply hiện tại, cộng thêm tất cả tính năng của gói Nhóm một cách tự động khi gói Nhóm ra mắt. Không thanh toán định kỳ, không tăng giá bất ngờ. Để so sánh, 25 USD/tháng trong 24 tháng là 600 USD — Founding Member tự hoàn vốn trong chưa đầy hai năm và vẫn tiếp tục dùng được.</div>
         </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.8.q">Vì sao tôi không thể dùng thuê bao ChatGPT Plus / Claude Pro của mình với trợ lý AI?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.8.a">Điều khoản của các thuê bao dành cho người dùng cá nhân cấm ứng dụng bên thứ ba tự động hóa các tài khoản đó, và đã có người dùng bị khóa tài khoản không báo trước và không được hoàn tiền vì làm vậy. Khóa API chính thức là cách làm an toàn — chúng được thiết kế cho đúng mục đích này, và bạn chỉ trả cho phần bạn thực sự dùng.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.9.q">Khóa API AI của tôi có an toàn trong Keeply không?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.9.a">Khóa của bạn chỉ được lưu trong kho thông tin xác thực an toàn của hệ thống trên máy tính của bạn (Windows Credential Manager / macOS Keychain). Keeply không bao giờ tải lên, lưu giữ hay thậm chí thấy được nó — các yêu cầu được gửi từ máy của bạn trực tiếp đến nhà cung cấp mà bạn đã chọn.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.10.q">Dùng trợ lý AI có tốn kém không?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.10.a">Bạn trả tiền trực tiếp cho nhà cung cấp AI của mình, theo mức sử dụng thực tế — xử lý một tài liệu thường chỉ tốn vài xu (USD). Keeply không đụng tới khoản tiền nào và không cộng thêm phí; hóa đơn chính xác nằm trong bảng điều khiển của nhà cung cấp của bạn. Với mô hình cục bộ, hoàn toàn không có phí API.</div>
+        </details>
+        <details class="group bg-white rounded-lg overflow-hidden border border-gray-200">
+          <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 list-none flex justify-between items-center">
+            <span data-i18n="index.faq.11.q">Tôi có thể dùng trợ lý AI hoàn toàn ngoại tuyến không?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▼</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-gray-700 leading-relaxed" data-i18n="index.faq.11.a">Có — ở chế độ cục bộ, Keeply hoạt động với các mô hình chạy ngay trên máy của bạn (ví dụ Gemma hay Llama thông qua Ollama). Tập tin của bạn không bao giờ rời khỏi máy tính của bạn, và không có bất kỳ phí API nào.</div>
+        </details>
       </div>
     </div>
   </section>
@@ -907,7 +967,7 @@
   <script src="../cookie-banner.8a90f5095a.js" defer integrity="sha384-FkrIUHI4EiKuF7c0lI0I+k/SpAC6SN6GAiU3tqGZBNs1nvMH4R/g+hpuVB/UGk63" crossorigin="anonymous"></script>
   <script src="../ga4-loader.359df0e8a7.js" defer integrity="sha384-gyx7he9QurH3GoSkfkbiWJCVC2RYlzVMBwyolFNVDEjLCjX1oUw1XG+WLOEBLSQJ" crossorigin="anonymous"></script>
   <script src="../clarity-loader.60a9a5160f.js" defer integrity="sha384-rdROtDi/pws+RrJtXaeyRY20mP1RJMaVL3DuCPi4UU7tkWHea6vyx01XW/4tbkL/" crossorigin="anonymous"></script>
-  <script src="../i18n-loader.a2f1451692.js" defer integrity="sha384-LoZWBMYGWr8o3JefxKWAVdNN3Hp4FLPOBAl247DtfxBkChg5zIcCJggNH01QzOCh" crossorigin="anonymous"></script>
+  <script src="../i18n-loader.ee49db2a57.js" defer integrity="sha384-q/AMERCpwO52FWIuoo7y9RxCSLSUkKkL373+I5xTz82ZtFrqFkK9EBa0yPgUJZhc" crossorigin="anonymous"></script>
   <script src="../team-notify.73d70ab047.js" defer integrity="sha384-kQUIeDWtAKHyIrSPoncROrE3SSvzakx5e3Ll8GT1Zjgqqr7nAyhVHZ7qyXYC+wVU" crossorigin="anonymous"></script>
   <script src="../demo-modal.8ccdc347ea.js" defer></script>
 

@@ -104,8 +104,8 @@
   <meta name="twitter:image:alt" content="Käyttöehdot — Keeply" />
 
   <!-- Tailwind CSS (compiled) -->
-  <link rel="preload" href="../style.css" as="style" integrity="sha384-s94BQDTeXS4ICZFgNIMHOJfCAlXJbebXmKkamGiGKOMUWX2HGg7R6ErFGI5XPuj7" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../style.css" integrity="sha384-s94BQDTeXS4ICZFgNIMHOJfCAlXJbebXmKkamGiGKOMUWX2HGg7R6ErFGI5XPuj7" crossorigin="anonymous" />
+  <link rel="preload" href="../style.css" as="style" integrity="sha384-d7GV0OjQujAXoinqaNqPRxBSfvGHMyv7jspmsBPuah1vCqOOF6YEuFkO/rENao3I" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../style.css" integrity="sha384-d7GV0OjQujAXoinqaNqPRxBSfvGHMyv7jspmsBPuah1vCqOOF6YEuFkO/rENao3I" crossorigin="anonymous" />
 
   <!-- M PLUS Rounded 1c font preload (eliminates CLS from late font discovery) -->
   <link rel="preload" href="../fonts/MPLUSRounded1c-Regular-v2.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
@@ -172,7 +172,7 @@
           <span class="text-gray-600" data-i18n="terms.breadcrumb">Käyttöehdot</span>
         </nav>
         <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3" data-i18n="terms.title">Käyttöehdot</h1>
-        <p class="text-sm text-gray-400" data-i18n="terms.updated">Last updated: April 29, 2026</p>
+        <p class="text-sm text-gray-400" data-i18n="terms.updated">Viimeksi päivitetty: 10. kesäkuuta 2026</p>
       </div>
 
       <div class="bg-amber-50 border border-amber-100 rounded-2xl p-6 mb-10">
@@ -200,6 +200,7 @@
           <a href="#s3-6" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="terms.toc.s3b">3.5 Holvisijainnin säännöt</a>
           <a href="#s3-7" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="terms.toc.s3c">3.6 License Scope</a>
           <a href="#s3-8" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="terms.toc.s3d">3.7 Kohtuullinen käyttö</a>
+          <a href="#s14" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="terms.toc.s14">14. Tekoälyavustaja (oma API-avain)</a>
         </div>
       </div>
 
@@ -345,7 +346,7 @@
 
         <section id="s7">
           <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="terms.s7.title">7. Data Privacy and Activity Logs</h2>
-          <p class="text-gray-600 leading-relaxed" data-i18n-html="terms.s7.p1">你對本軟體的使用亦受我們的<a href="privacy" class="text-brand-600 hover:underline">隱私權政策</a>約束。<strong>我們不存取、收集、儲存或傳輸你的專案檔案或其內容。</strong></p>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="terms.s7.p1">Ohjelmiston käyttöäsi säätelee myös <a href="privacy" class="text-brand-600 hover:underline">Tietosuojakäytäntömme</a>. <strong>Emme käytä, kerää, tallenna emmekä siirrä projektitiedostojasi tai niiden sisältöä.</strong> Ainoa poikkeus on valinnainen tekoälyavustaja (<a href="#s14" class="text-brand-600 hover:underline">Osio 14</a>): kun otat sen käyttöön ja valitset sisällön nimenomaisesti, kyseinen sisältö lähetetään laitteeltasi suoraan valitsemallesi tekoälypalveluntarjoajalle — ei silloinkaan minkään Keeply-palvelimen kautta.</p>
         </section>
 
         <section id="s8">
@@ -363,7 +364,7 @@
           <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="terms.s10.title">10. Voimassaolo ja päättyminen</h2>
           <p class="text-gray-600 leading-relaxed" data-i18n="terms.s10.p1">This Agreement takes effect from your first use of the Software and continues until terminated. You may terminate this Agreement at any time by deactivating the software license and removing all local Keeply data (including but not limited to project repositories, activity logs, shadow backups, and license files). Deactivation methods include: (a) using the &quot;Deactivate License and Remove Local Data&quot; function within the Keeply application; or (b) uninstalling Keeply from your system and manually deleting the local Keeply data directory.</p>
           <p class="text-gray-600 leading-relaxed mt-3" data-i18n="terms.s10.p2">We may revoke your license if you breach this Agreement. Upon termination, Perpetual License holders retain the right to use their version, but will no longer receive updates.</p>
-          <p class="text-gray-600 leading-relaxed mt-3" data-i18n="terms.s10.p3">Osiot 5, 6, 8, 9, 11 ja 12 jäävät voimaan päättymisen jälkeen.</p>
+          <p class="text-gray-600 leading-relaxed mt-3" data-i18n="terms.s10.p3">Osiot 5, 6, 8, 9, 11, 12 ja 14 jäävät voimaan päättymisen jälkeen.</p>
         </section>
 
         <section id="s11">
@@ -386,6 +387,29 @@
           <p class="text-gray-600 leading-relaxed" data-i18n-html="terms.s13.website">Verkkosivusto: <a href="https://keeply.work" class="text-brand-600 hover:underline">keeply.work</a></p>
         </section>
 
+        <section id="s14">
+          <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="terms.s14.title">14. Tekoälyavustaja (oma API-avain)</h2>
+          <p class="text-gray-600 leading-relaxed" data-i18n="terms.s14.intro">Keeply sisältää valinnaisen tekoälyavustajan, joka on oletuksena pois päältä. Käyttääksesi sitä sinun on yhdistettävä tekoälypalvelu itse — syöttämällä oma API-avaimesi tai ajamalla paikallista mallia omalla koneellasi. Tämä osio säätelee tekoälyavustajan käyttöäsi; tietojen kulku on kuvattu Tietosuojakäytännön kohdassa ”Kun päätät käyttää tekoälyavustajaa”.</p>
+
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="terms.s14.1.title">14.1 Tekoälyavaintesi omistus ja vastuu niistä</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="terms.s14.1.body">Keeplyyn syöttämiäsi tekoälypalveluavaimia käytetään ainoastaan pyyntöjen lähettämiseen kyseiselle tekoälypalveluntarjoajalle <strong>sinun puolestasi</strong>. Kaikki käyttö ja maksut tilitetään suoraan sinun ja kyseisen palveluntarjoajan välillä; Keeply <strong>ei pidä hallussaan, ei isännöi eikä jälleenmyy</strong> avaimiasi.</p>
+
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="terms.s14.2.title">14.2 Laillinen alkuperä</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n="terms.s14.2.body">Syötä vain avaimia, jotka sinä tai organisaatiosi olette hankkineet laillisesti. Älä syötä alkuperältään tuntemattomia, ostettuja, jaettuja tai toiselta henkilöltä siirrettyjä avaimia; tekoälypalveluntarjoajan ehtojen rikkomisesta aiheutuvat tiliriskit ovat sinun vastuullasi.</p>
+
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="terms.s14.3.title">14.3 Ei tilauskirjautumista</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n="terms.s14.3.body">Keeply ei tue — eikä auta sinua määrittämään — automatisoitua käyttöä kuluttajatilausten tileillä (kuten ChatGPT Plus, Claude Pro/Max tai Gemini Advanced), jotta tilisi ei rikkoisi kyseisten palveluiden ehtoja.</p>
+
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="terms.s14.4.title">14.4 Tekoälyn tuotokset ja vastuunrajoitus</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="terms.s14.4.body">Tekoälyn tuottama sisältö (ehdotetut muokkaukset, tiivistelmät, vastaukset) voi olla virheellistä, puutteellista tai tilanteeseesi sopimatonta. <strong>Olet vastuussa jokaisen tekoälyehdotuksen tarkistamisesta ennen sen käyttöönottoa.</strong> Keeplyn sisäänrakennettu suojakeino: jokainen tekoälyn muokkaus esitetään ensin ehdotuksena, otetaan käyttöön vasta vahvistuksesi jälkeen ja on milloin tahansa palautettavissa yhdellä napsautuksella versiohistoriasta. Sovellettavan lain sallimissa enimmäisrajoissa Keeply ei ole vastuussa tekoälyn tuottaman sisällön aiheuttamista menetyksistä; kaikkeen vastuuseen sovelletaan Osion 9 vastuunrajoitusta.</p>
+
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="terms.s14.5.title">14.5 Jo lähetetyn sisällön poistamisen rajoitukset</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="terms.s14.5.body">Kun sisältö on saapunut valitsemallesi tekoälypalveluntarjoajalle, sen säilyttämistä ja poistamista säätelevät kyseisen palveluntarjoajan ehdot ja sovellettava laki. Keeply ei säilytä palvelimillaan kopiota, eikä se <strong>voi poistaa</strong> jo lähetettyä sisältöä puolestasi. Pyytääksesi poistoa ota yhteyttä suoraan palveluntarjoajaasi (palveluiden <a href="https://privacy.openai.com/" class="text-brand-600 hover:underline" target="_blank" rel="noopener noreferrer">OpenAI</a>, <a href="https://privacy.anthropic.com/" class="text-brand-600 hover:underline" target="_blank" rel="noopener noreferrer">Anthropic</a> ja <a href="https://policies.google.com/privacy" class="text-brand-600 hover:underline" target="_blank" rel="noopener noreferrer">Google</a> tietosuojasivuilla on poistopyyntöjen lähetyskanavat). Paikallisessa tilassa sisältö ei koskaan poistunut tietokoneeltasi, joten tätä kysymystä ei synny.</p>
+
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="terms.s14.6.title">14.6 Tekoälymuokkausten merkitseminen</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n="terms.s14.6.body">Tekoälyavustajan tuottamat ja sinun käyttöön ottamasi muokkaukset merkitään Keeplyn versiohistoriassa tekoälyavustajan muokkauksiksi.</p>
+        </section>
+
       </div>
 
       <div class="mt-12 pt-8 border-t border-gray-100">
@@ -404,6 +428,6 @@
   <script src="../cookie-banner.8a90f5095a.js" defer integrity="sha384-FkrIUHI4EiKuF7c0lI0I+k/SpAC6SN6GAiU3tqGZBNs1nvMH4R/g+hpuVB/UGk63" crossorigin="anonymous"></script>
   <script src="../ga4-loader.359df0e8a7.js" defer integrity="sha384-gyx7he9QurH3GoSkfkbiWJCVC2RYlzVMBwyolFNVDEjLCjX1oUw1XG+WLOEBLSQJ" crossorigin="anonymous"></script>
   <script src="../clarity-loader.60a9a5160f.js" defer integrity="sha384-rdROtDi/pws+RrJtXaeyRY20mP1RJMaVL3DuCPi4UU7tkWHea6vyx01XW/4tbkL/" crossorigin="anonymous"></script>
-  <script src="../i18n-loader.a2f1451692.js" defer integrity="sha384-LoZWBMYGWr8o3JefxKWAVdNN3Hp4FLPOBAl247DtfxBkChg5zIcCJggNH01QzOCh" crossorigin="anonymous"></script>
+  <script src="../i18n-loader.ee49db2a57.js" defer integrity="sha384-q/AMERCpwO52FWIuoo7y9RxCSLSUkKkL373+I5xTz82ZtFrqFkK9EBa0yPgUJZhc" crossorigin="anonymous"></script>
 </body>
 </html>

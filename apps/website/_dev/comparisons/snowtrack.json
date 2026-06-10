@@ -53,7 +53,7 @@
         { "q": "Do I need Git knowledge to use Keeply?", "a": "No. Keeply is designed specifically for creators who don't want to think about Git — it's a firm product principle that zero Git terminology appears in the interface. Actions use office-friendly language: Save a version, Browse history, Restore to this point, Compare versions. No commits, branches, or merges to learn." },
         { "q": "Can Keeply handle large files like 3D, video, or Blender projects?", "a": "Yes, and you don't configure anything. Keeply automatically detects 38 binary file formats (Blender, PSD, video, 3D, archives) plus any file over 10 MB, then routes them through large-file storage silently. Repository sizes stay manageable; you never see the Git LFS setup dance that other tools expose." },
         { "q": "What file types get visual side-by-side diff?", "a": "Keeply renders true visual diffs for Microsoft Office documents (Word .docx, Excel .xlsx, PowerPoint .pptx), PDFs, and raster images (PNG / JPG / WebP). You see two versions side by side with highlighted changes — not just a list of modified bytes. For all other file types, Keeply tracks the version and lets you restore any point." },
-        { "q": "Where does my data actually live?", "a": "Your project files stay on your computer, and backup copies go to one of five self-hosted locations you choose: a local folder, USB drive, NAS (SMB path), self-hosted Gitea, or a GitHub repository. Keeply runs no servers that touch your project data — we only receive a hashed device identifier during license validation." }
+        { "q": "Where does my data actually live?", "a": "Your project files stay on your computer, and backup copies go to one of five self-hosted locations you choose: a local folder, USB drive, NAS (SMB path), self-hosted Gitea, or a GitHub repository. Keeply runs no servers that touch your project data; during license validation we receive only a hashed device identifier. (If you enable the optional AI assistant, content you select goes directly from your machine to the AI provider you choose — never through Keeply.)" }
       ]
     },
     "zh-TW": {
@@ -106,7 +106,7 @@
         { "q": "使用 Keeply 需要懂 Git 嗎？", "a": "不需要。Keeply 專為不想碰 Git 的創作者設計——「介面零 Git 術語」是我們堅守的產品原則。操作名稱用辦公室語言：儲存版本、瀏覽歷史、回復到此版本、比較版本。沒有 commit、branch、merge 要學。" },
         { "q": "Keeply 能處理大檔案嗎？像 3D、影片、Blender 專案？", "a": "可以，而且完全不用設定。Keeply 自動偵測 38 種二進位格式（Blender、PSD、影片、3D、壓縮檔等）加上任何超過 10 MB 的檔案，把它們靜默轉到大檔儲存通道。repo 不會膨脹；也不會看到別的工具讓你搞 LFS 設定那一套。" },
         { "q": "哪些檔案類型能看到並排視覺比對？", "a": "Keeply 對 Microsoft Office 文件（Word .docx、Excel .xlsx、PowerPoint .pptx）、PDF、點陣圖（PNG / JPG / WebP）都能產生真正的視覺比對。你會看到兩個版本並排、差異高亮——不是只看一串改過的 byte。其他檔案類型仍可追蹤版本，隨時回復任一時間點。" },
-        { "q": "我的資料實際存放在哪裡？", "a": "你的專案檔案留在你的電腦上，備份副本可選 5 種自我託管位置：本機資料夾、隨身碟、NAS（SMB 路徑）、自架 Gitea、或 GitHub repo。Keeply 自家伺服器完全不接觸你的專案資料——只在授權驗證時收到雜湊過的裝置識別碼。" }
+        { "q": "我的資料實際存放在哪裡？", "a": "你的專案檔案留在你的電腦上，備份副本可選 5 種自我託管位置：本機資料夾、隨身碟、NAS（SMB 路徑）、自架 Gitea、或 GitHub repo。Keeply 自家伺服器完全不接觸你的專案資料；授權驗證時我們只收到雜湊過的裝置識別碼。（若你啟用選用的 AI 助理，你選擇的內容會由你的電腦直接送往你選的 AI 服務商——不經過 Keeply。）" }
       ]
     }
   }

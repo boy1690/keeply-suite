@@ -104,8 +104,8 @@
   <meta name="twitter:image:alt" content="Servicevilkår — Keeply" />
 
   <!-- Tailwind CSS (compiled) -->
-  <link rel="preload" href="../style.css" as="style" integrity="sha384-s94BQDTeXS4ICZFgNIMHOJfCAlXJbebXmKkamGiGKOMUWX2HGg7R6ErFGI5XPuj7" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../style.css" integrity="sha384-s94BQDTeXS4ICZFgNIMHOJfCAlXJbebXmKkamGiGKOMUWX2HGg7R6ErFGI5XPuj7" crossorigin="anonymous" />
+  <link rel="preload" href="../style.css" as="style" integrity="sha384-d7GV0OjQujAXoinqaNqPRxBSfvGHMyv7jspmsBPuah1vCqOOF6YEuFkO/rENao3I" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../style.css" integrity="sha384-d7GV0OjQujAXoinqaNqPRxBSfvGHMyv7jspmsBPuah1vCqOOF6YEuFkO/rENao3I" crossorigin="anonymous" />
 
   <!-- M PLUS Rounded 1c font preload (eliminates CLS from late font discovery) -->
   <link rel="preload" href="../fonts/MPLUSRounded1c-Regular-v2.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
@@ -172,7 +172,7 @@
           <span class="text-gray-600" data-i18n="terms.breadcrumb">Servicevilkår</span>
         </nav>
         <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3" data-i18n="terms.title">Servicevilkår</h1>
-        <p class="text-sm text-gray-400" data-i18n="terms.updated">Last updated: April 29, 2026</p>
+        <p class="text-sm text-gray-400" data-i18n="terms.updated">Last updated: June 10, 2026</p>
       </div>
 
       <div class="bg-amber-50 border border-amber-100 rounded-2xl p-6 mb-10">
@@ -200,6 +200,7 @@
           <a href="#s3-6" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="terms.toc.s3b">3.5 Regler for boksplacering</a>
           <a href="#s3-7" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="terms.toc.s3c">3.6 License Scope</a>
           <a href="#s3-8" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="terms.toc.s3d">3.7 Rimelig brug</a>
+          <a href="#s14" class="text-brand-600 hover:text-brand-800 transition-colors" data-i18n="terms.toc.s14">14. AI-assistent (medbring din egen nøgle)</a>
         </div>
       </div>
 
@@ -345,7 +346,7 @@
 
         <section id="s7">
           <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="terms.s7.title">7. Data Privacy and Activity Logs</h2>
-          <p class="text-gray-600 leading-relaxed" data-i18n-html="terms.s7.p1">你對本軟體的使用亦受我們的<a href="privacy" class="text-brand-600 hover:underline">隱私權政策</a>約束。<strong>我們不存取、收集、儲存或傳輸你的專案檔案或其內容。</strong></p>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="terms.s7.p1">Din brug af softwaren er også underlagt vores <a href="privacy" class="text-brand-600 hover:underline">privatlivspolitik</a>. <strong>Vi tilgår, indsamler, gemmer eller overfører ikke dine projektfiler eller deres indhold.</strong> Den eneste undtagelse er den valgfri AI-assistent (<a href="#s14" class="text-brand-600 hover:underline">sektion 14</a>): Når du aktiverer den og udtrykkeligt vælger indhold, sendes det indhold fra din enhed direkte til den AI-udbyder, du har valgt — stadig aldrig gennem nogen Keeply-server.</p>
         </section>
 
         <section id="s8">
@@ -363,7 +364,7 @@
           <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="terms.s10.title">10. Varighed og opsigelse</h2>
           <p class="text-gray-600 leading-relaxed" data-i18n="terms.s10.p1">This Agreement takes effect from your first use of the Software and continues until terminated. You may terminate this Agreement at any time by deactivating the software license and removing all local Keeply data (including but not limited to project repositories, activity logs, shadow backups, and license files). Deactivation methods include: (a) using the &quot;Deactivate License and Remove Local Data&quot; function within the Keeply application; or (b) uninstalling Keeply from your system and manually deleting the local Keeply data directory.</p>
           <p class="text-gray-600 leading-relaxed mt-3" data-i18n="terms.s10.p2">We may revoke your license if you breach this Agreement. Upon termination, Perpetual License holders retain the right to use their version, but will no longer receive updates.</p>
-          <p class="text-gray-600 leading-relaxed mt-3" data-i18n="terms.s10.p3">Sektionerne 5, 6, 8, 9, 11 og 12 overlever opsigelse.</p>
+          <p class="text-gray-600 leading-relaxed mt-3" data-i18n="terms.s10.p3">Sektionerne 5, 6, 8, 9, 11, 12 og 14 overlever opsigelse.</p>
         </section>
 
         <section id="s11">
@@ -386,6 +387,29 @@
           <p class="text-gray-600 leading-relaxed" data-i18n-html="terms.s13.website">Hjemmeside: <a href="https://keeply.work" class="text-brand-600 hover:underline">keeply.work</a></p>
         </section>
 
+        <section id="s14">
+          <h2 class="text-xl font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4" data-i18n="terms.s14.title">14. AI-assistent (medbring din egen nøgle)</h2>
+          <p class="text-gray-600 leading-relaxed" data-i18n="terms.s14.intro">Keeply indeholder en valgfri AI-assistent, der er slået fra som standard. For at bruge den skal du selv forbinde en AI-tjeneste — ved at indtaste din egen API-nøgle eller ved at køre en lokal model på din egen maskine. Denne sektion regulerer din brug af AI-assistenten; for hvordan data flyder, se “Når du vælger at bruge AI-assistenten” i privatlivspolitikken.</p>
+
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="terms.s14.1.title">14.1 Ejerskab af og ansvar for dine AI-nøgler</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="terms.s14.1.body">De AI-tjenestenøgler, du indtaster i Keeply, bruges udelukkende til at sende anmodninger til den tilsvarende AI-udbyder <strong>på dine egne vegne</strong>. Alt forbrug og alle gebyrer afregnes direkte mellem dig og den pågældende udbyder; Keeply <strong>hverken opbevarer, hoster eller videresælger</strong> dine nøgler.</p>
+
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="terms.s14.2.title">14.2 Lovlig oprindelse</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n="terms.s14.2.body">Indtast kun nøgler, som du eller din organisation har erhvervet lovligt. Indtast ikke nøgler af ukendt oprindelse eller nøgler, der er købt, delt eller overdraget fra andre; risici for din konto, der opstår ved overtrædelse af en AI-udbyders vilkår, bærer du selv.</p>
+
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="terms.s14.3.title">14.3 Ingen abonnementslogin</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n="terms.s14.3.body">Keeply understøtter ikke — og hjælper dig ikke med at opsætte — automatiseret adgang via forbrugerabonnementskonti (såsom ChatGPT Plus, Claude Pro/Max eller Gemini Advanced) for at beskytte din konto mod at overtræde disse tjenesters vilkår.</p>
+
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="terms.s14.4.title">14.4 AI-output og ansvarsbegrænsning</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="terms.s14.4.body">AI-genereret indhold (foreslåede ændringer, opsummeringer, svar) kan være forkert, ufuldstændigt eller uegnet til din situation. <strong>Du er ansvarlig for at gennemgå ethvert AI-forslag, før du anvender det.</strong> Keeplys indbyggede sikring: Enhver AI-ændring præsenteres først som et forslag, anvendes først efter din bekræftelse og kan til enhver tid fortrydes med ét klik fra versionshistorikken. I det maksimale omfang, gældende lov tillader, er Keeply ikke ansvarlig for tab forårsaget af AI-genereret indhold; ethvert ansvar er underlagt ansvarsbegrænsningen i sektion 9.</p>
+
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="terms.s14.5.title">14.5 Begrænsninger for sletning af allerede sendt indhold</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n-html="terms.s14.5.body">Når indholdet først er nået frem til den AI-udbyder, du har valgt, er dets opbevaring og sletning underlagt den pågældende udbyders vilkår og gældende lov. Keeply opbevarer ingen serverkopi og <strong>kan ikke slette</strong> allerede sendt indhold på dine vegne. For at anmode om sletning skal du kontakte din udbyder direkte (privatlivssiderne hos <a href="https://privacy.openai.com/" class="text-brand-600 hover:underline" target="_blank" rel="noopener noreferrer">OpenAI</a>, <a href="https://privacy.anthropic.com/" class="text-brand-600 hover:underline" target="_blank" rel="noopener noreferrer">Anthropic</a> og <a href="https://policies.google.com/privacy" class="text-brand-600 hover:underline" target="_blank" rel="noopener noreferrer">Google</a> tilbyder indgange til sletningsanmodninger). I lokal tilstand har indholdet aldrig forladt din computer, så dette er ikke aktuelt.</p>
+
+          <h3 class="text-base font-semibold text-gray-800 mt-5 mb-2" data-i18n="terms.s14.6.title">14.6 Markering af AI-redigeringer</h3>
+          <p class="text-gray-600 leading-relaxed" data-i18n="terms.s14.6.body">Ændringer, der er genereret af AI-assistenten og anvendt af dig, markeres som redigeringer foretaget af AI-assistenten i Keeplys versionshistorik.</p>
+        </section>
+
       </div>
 
       <div class="mt-12 pt-8 border-t border-gray-100">
@@ -404,6 +428,6 @@
   <script src="../cookie-banner.8a90f5095a.js" defer integrity="sha384-FkrIUHI4EiKuF7c0lI0I+k/SpAC6SN6GAiU3tqGZBNs1nvMH4R/g+hpuVB/UGk63" crossorigin="anonymous"></script>
   <script src="../ga4-loader.359df0e8a7.js" defer integrity="sha384-gyx7he9QurH3GoSkfkbiWJCVC2RYlzVMBwyolFNVDEjLCjX1oUw1XG+WLOEBLSQJ" crossorigin="anonymous"></script>
   <script src="../clarity-loader.60a9a5160f.js" defer integrity="sha384-rdROtDi/pws+RrJtXaeyRY20mP1RJMaVL3DuCPi4UU7tkWHea6vyx01XW/4tbkL/" crossorigin="anonymous"></script>
-  <script src="../i18n-loader.a2f1451692.js" defer integrity="sha384-LoZWBMYGWr8o3JefxKWAVdNN3Hp4FLPOBAl247DtfxBkChg5zIcCJggNH01QzOCh" crossorigin="anonymous"></script>
+  <script src="../i18n-loader.ee49db2a57.js" defer integrity="sha384-q/AMERCpwO52FWIuoo7y9RxCSLSUkKkL373+I5xTz82ZtFrqFkK9EBa0yPgUJZhc" crossorigin="anonymous"></script>
 </body>
 </html>
